@@ -138,6 +138,45 @@ npm run build
 
 ---
 
+## 困ったときのリンク集
+
+分からないところがあれば、まずここから該当するページに飛んで確認します。
+
+### このリポジトリ内の資料
+
+| 分からないこと | 見るページ |
+|---|---|
+| 環境構築、起動方法、ビルド確認 | [環境構築手順](./docs/environment-setup.md) |
+| 何から実装すればよいか | [実装計画](./docs/implementation-plan.md) |
+| アプリの仕様を確認したい | [仕様要約](./docs/specification-summary.md) |
+| GitHub Education に応募したい | [GitHub Education 申請手順](./docs/github-education-application.md) |
+
+### 技術ごとの公式ドキュメント
+
+| 分からないこと | 見るページ |
+|---|---|
+| React の基本、コンポーネント、Hooks | [React 公式ドキュメント](https://react.dev/) |
+| TypeScript の型、interface、type | [TypeScript Handbook](https://www.typescriptlang.org/docs/handbook/intro.html) |
+| Vite の開発サーバー、ビルド設定 | [Vite 公式ガイド](https://vite.dev/guide/) |
+| Tailwind CSS のクラス名や書き方 | [Tailwind CSS 公式ドキュメント](https://tailwindcss.com/docs) |
+| React Router の画面遷移 | [React Router 公式ドキュメント](https://reactrouter.com/) |
+| npm コマンド、package.json | [npm 公式ドキュメント](https://docs.npmjs.com/) |
+| GitHub の基本操作 | [GitHub Docs](https://docs.github.com/) |
+| Vercel へのデプロイ | [Vercel Docs](https://vercel.com/docs) |
+
+### よくある確認先
+
+| 状況 | 確認すること |
+|---|---|
+| `npm install` で失敗する | Node.js のバージョン、`package.json`、エラーメッセージ |
+| `npm run dev` で起動しない | 依存関係のインストール、ポート番号、Vite のログ |
+| 画面が真っ白になる | ブラウザの開発者ツール、Console のエラー |
+| Tailwind CSS が効かない | `index.css`、Tailwind の読み込み、クラス名の typo |
+| 画面遷移しない | React Router の設定、`router.tsx`、パス指定 |
+| デプロイで失敗する | Vercel の Build Logs、`npm run build` の結果 |
+
+---
+
 ## 実装順序
 
 1. React + TypeScript + Vite の基本構成を作る
