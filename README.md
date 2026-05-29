@@ -81,6 +81,7 @@ yorimitiBiyori/
 ├─ README.md
 ├─ docs/
 │  ├─ environment-setup.md
+│  ├─ github-education-application.md
 │  ├─ implementation-plan.md
 │  └─ specification-summary.md
 ├─ public/
@@ -154,6 +155,7 @@ npm run build
 
 - [実装計画](./docs/implementation-plan.md)
 - [仕様要約](./docs/specification-summary.md)
+- [GitHub Education 申請手順](./docs/github-education-application.md)
 
 ---
 
