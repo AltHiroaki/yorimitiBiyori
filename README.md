@@ -80,6 +80,9 @@
 yorimitiBiyori/
 ├─ README.md
 ├─ docs/
+│  ├─ AGENTS.md
+│  ├─ SKILL.md
+│  ├─ coding-rules-guide.md
 │  ├─ environment-setup.md
 │  ├─ github-education-application.md
 │  ├─ implementation-plan.md
@@ -138,6 +141,21 @@ npm run build
 
 ---
 
+## 開発ルール
+
+このリポジトリでは、AI agent 向けの指示と、開発者向けの説明を分けて管理します。
+
+| 用途 | 見るページ |
+|---|---|
+| AI agent に読ませる汎用コーディング規則 | [General Coding Skill](./docs/SKILL.md) |
+| AI agent に読ませるよりみち日和専用規則 | [AI Agent Rules](./docs/AGENTS.md) |
+| 開発者向けのコーディング規則の説明 | [コーディング規則の考え方](./docs/coding-rules-guide.md) |
+
+`docs/SKILL.md` と `docs/AGENTS.md` は、AI agent に渡しやすいよう英語で記述しています。  
+日本語で理由や背景を確認したい場合は、`docs/coding-rules-guide.md` を参照してください。
+
+---
+
 ## 困ったときのリンク集
 
 分からないところがあれば、まずここから該当するページに飛んで確認します。
@@ -149,6 +167,8 @@ npm run build
 | 環境構築、起動方法、ビルド確認 | [環境構築手順](./docs/environment-setup.md) |
 | 何から実装すればよいか | [実装計画](./docs/implementation-plan.md) |
 | アプリの仕様を確認したい | [仕様要約](./docs/specification-summary.md) |
+| コーディング規則の理由を確認したい | [コーディング規則の考え方](./docs/coding-rules-guide.md) |
+| AI agent に守らせる規則を確認したい | [AI Agent Rules](./docs/AGENTS.md) |
 | GitHub Education に応募したい | [GitHub Education 申請手順](./docs/github-education-application.md) |
 
 ### 技術ごとの公式ドキュメント
