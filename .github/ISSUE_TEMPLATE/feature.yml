@@ -1,0 +1,100 @@
+name: Feature
+description: 新しい画面や機能を追加するための Issue
+title: "[Feature] "
+labels:
+  - type:feature
+body:
+  - type: markdown
+    attributes:
+      value: |
+        新しい画面や機能を追加するための Issue です。
+        MVP 範囲に含まれるかを確認してから作成してください。
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: 概要
+      description: 何を作る Issue かを書いてください。
+      placeholder: 例：履歴画面で実施済み・スキップ済みの記録を一覧表示する。
+    validations:
+      required: true
+
+  - type: textarea
+    id: reason
+    attributes:
+      label: なぜ必要か
+      description: この機能が必要な理由を書いてください。
+      placeholder: 例：ユーザーが過去の行動を確認できるようにするため。
+    validations:
+      required: true
+
+  - type: textarea
+    id: tasks
+    attributes:
+      label: やること
+      description: 実装する作業を箇条書きで書いてください。
+      value: |
+        - [ ] 
+        - [ ] 
+        - [ ] 
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: 完了条件
+      description: 何ができれば完了かを書いてください。
+      value: |
+        - [ ] 画面に正しく表示される
+        - [ ] エラーが出ない
+        - [ ] `npm run build` が通る
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: 対象領域
+      description: 主にどの領域の作業かを選んでください。
+      options:
+        - home
+        - suggest
+        - history
+        - settings
+        - recommendation
+        - records
+        - data
+        - ui
+        - docs
+        - setup
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: 優先度
+      description: MVP 完成への影響を基準に選んでください。
+      options:
+        - high
+        - medium
+        - low
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: scope
+    attributes:
+      label: MVP 範囲の確認
+      options:
+        - label: MVP に含まれる作業である
+          required: true
+        - label: Google API / Firebase / Maps API / 位置情報などの発展機能を含まない
+          required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: 補足
+      description: 気になる点や相談したいことがあれば書いてください。
