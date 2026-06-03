@@ -86,6 +86,7 @@ yorimitiBiyori/
 │  ├─ environment-setup.md
 │  ├─ file-separation-guide.md
 │  ├─ github-education-application.md
+│  ├─ github-workflow-guide.md
 │  ├─ implementation-plan.md
 │  ├─ specification-summary.md
 │  └─ vscode-git-guide.md
@@ -153,6 +154,7 @@ npm run build
 | AI agent に読ませるよりみち日和専用規則 | [AI Agent Rules](./docs/AGENTS.md) |
 | 開発者向けのコーディング規則の説明 | [コーディング規則の考え方](./docs/coding-rules-guide.md) |
 | ファイル分けを行う理由の説明 | [ファイル分けを行う理由](./docs/file-separation-guide.md) |
+| Issue・Branch・Pull Request を使う理由 | [GitHub 開発フロー](./docs/github-workflow-guide.md) |
 | VS Code で Git を操作する方法 | [VS Code Git 操作ガイド](./docs/vscode-git-guide.md) |
 
 `docs/SKILL.md` と `docs/AGENTS.md` は、AI agent に渡しやすいよう英語で記述しています。  
@@ -173,6 +175,7 @@ npm run build
 | アプリの仕様を確認したい | [仕様要約](./docs/specification-summary.md) |
 | コーディング規則の理由を確認したい | [コーディング規則の考え方](./docs/coding-rules-guide.md) |
 | ファイル分けの理由を確認したい | [ファイル分けを行う理由](./docs/file-separation-guide.md) |
+| Issue・Branch・Pull Request の理由を確認したい | [GitHub 開発フロー](./docs/github-workflow-guide.md) |
 | VS Code で Git 操作をしたい | [VS Code Git 操作ガイド](./docs/vscode-git-guide.md) |
 | AI agent に守らせる規則を確認したい | [AI Agent Rules](./docs/AGENTS.md) |
 | GitHub Education に応募したい | [GitHub Education 申請手順](./docs/github-education-application.md) |
