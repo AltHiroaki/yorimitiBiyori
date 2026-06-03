@@ -1,0 +1,97 @@
+name: Bug
+description: 不具合を報告するための Issue
+title: "[Bug] "
+labels:
+  - type:bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        不具合を報告するための Issue です。
+        できるだけ再現手順と期待する動作を書いてください。
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: 起きている問題
+      description: 何が起きているかを書いてください。
+      placeholder: 例：履歴画面を開くと画面が真っ白になる。
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期待する動作
+      description: 本来どう動いてほしいかを書いてください。
+      placeholder: 例：履歴がない場合は「まだ記録がありません」と表示される。
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: 再現手順
+      description: 問題を再現する手順を書いてください。
+      value: |
+        1. 
+        2. 
+        3. 
+    validations:
+      required: true
+
+  - type: textarea
+    id: error
+    attributes:
+      label: エラーメッセージ
+      description: Console やターミナルに出ているエラーがあれば貼ってください。
+      render: text
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: 発生領域
+      description: 主にどこで発生している問題かを選んでください。
+      options:
+        - home
+        - suggest
+        - history
+        - settings
+        - recommendation
+        - records
+        - data
+        - ui
+        - routing
+        - setup
+        - unknown
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: 優先度
+      description: 作業への影響を基準に選んでください。
+      options:
+        - high
+        - medium
+        - low
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: 環境
+      description: 分かる範囲で環境を書いてください。
+      value: |
+        - OS:
+        - Browser:
+        - Node.js version:
+        - npm version:
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: 補足
+      description: スクリーンショットや気になる点があれば書いてください。
