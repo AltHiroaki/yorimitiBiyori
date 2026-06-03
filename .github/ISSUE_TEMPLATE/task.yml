@@ -1,0 +1,96 @@
+name: Task
+description: 機能追加やバグ修正以外の作業を管理するための Issue
+title: "[Task] "
+labels:
+  - type:chore
+body:
+  - type: markdown
+    attributes:
+      value: |
+        設定変更、整理、調査、リファクタリングなどの作業用 Issue です。
+        機能追加は Feature、不具合は Bug、ドキュメントは Docs を使ってください。
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: 作業内容
+      description: 何をする作業かを書いてください。
+      placeholder: 例：共通 UI コンポーネントの置き場所を整理する。
+    validations:
+      required: true
+
+  - type: textarea
+    id: purpose
+    attributes:
+      label: 目的
+      description: なぜこの作業が必要かを書いてください。
+      placeholder: 例：画面ごとのボタン実装の重複を減らすため。
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: 影響範囲
+      description: 変更が影響しそうなファイルや機能を書いてください。
+      placeholder: 例：src/components/ui/, src/pages/HomePage.tsx
+    validations:
+      required: true
+
+  - type: textarea
+    id: tasks
+    attributes:
+      label: やること
+      value: |
+        - [ ] 
+        - [ ] 
+        - [ ] 
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: 完了条件
+      value: |
+        - [ ] 作業目的に合う変更が完了している
+        - [ ] 関係ない変更が混ざっていない
+        - [ ] `npm run build` が通る、または未確認であることを明記している
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: 対象領域
+      options:
+        - home
+        - suggest
+        - history
+        - settings
+        - recommendation
+        - records
+        - data
+        - ui
+        - docs
+        - setup
+        - repository
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: 優先度
+      options:
+        - high
+        - medium
+        - low
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: 注意点・補足
+      description: 作業時に気をつけることがあれば書いてください。
