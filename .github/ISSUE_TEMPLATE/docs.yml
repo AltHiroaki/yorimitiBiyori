@@ -1,0 +1,78 @@
+name: Docs
+description: README や docs を修正・追加するための Issue
+title: "[Docs] "
+labels:
+  - type:docs
+  - area:docs
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ドキュメントの修正・追加用 Issue です。
+        README、docs、開発手順、説明資料などの変更に使います。
+
+  - type: input
+    id: target
+    attributes:
+      label: 対象ドキュメント
+      description: 修正・追加したいファイルを書いてください。
+      placeholder: 例：README.md, docs/environment-setup.md
+    validations:
+      required: true
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: 修正内容
+      description: 何を修正・追加したいかを書いてください。
+      placeholder: 例：VS Code で Git を操作する方法を追加する。
+    validations:
+      required: true
+
+  - type: textarea
+    id: reason
+    attributes:
+      label: なぜ必要か
+      description: このドキュメント変更が必要な理由を書いてください。
+      placeholder: 例：Git コマンドに慣れていないメンバーでも作業しやすくするため。
+    validations:
+      required: true
+
+  - type: textarea
+    id: tasks
+    attributes:
+      label: やること
+      value: |
+        - [ ] 
+        - [ ] 
+        - [ ] 
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: 完了条件
+      value: |
+        - [ ] 必要な説明が追加されている
+        - [ ] README など必要な場所からリンクされている
+        - [ ] 誤字脱字やリンク切れがない
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: 優先度
+      options:
+        - high
+        - medium
+        - low
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: 補足
+      description: 参考資料や関連する Issue があれば書いてください。
