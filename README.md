@@ -87,7 +87,8 @@ yorimitiBiyori/
 │  ├─ file-separation-guide.md
 │  ├─ github-education-application.md
 │  ├─ implementation-plan.md
-│  └─ specification-summary.md
+│  ├─ specification-summary.md
+│  └─ vscode-git-guide.md
 ├─ public/
 ├─ src/
 │  ├─ app/
@@ -152,6 +153,7 @@ npm run build
 | AI agent に読ませるよりみち日和専用規則 | [AI Agent Rules](./docs/AGENTS.md) |
 | 開発者向けのコーディング規則の説明 | [コーディング規則の考え方](./docs/coding-rules-guide.md) |
 | ファイル分けを行う理由の説明 | [ファイル分けを行う理由](./docs/file-separation-guide.md) |
+| VS Code で Git を操作する方法 | [VS Code Git 操作ガイド](./docs/vscode-git-guide.md) |
 
 `docs/SKILL.md` と `docs/AGENTS.md` は、AI agent に渡しやすいよう英語で記述しています。  
 日本語で理由や背景を確認したい場合は、`docs/coding-rules-guide.md` と `docs/file-separation-guide.md` を参照してください。
@@ -171,6 +173,7 @@ npm run build
 | アプリの仕様を確認したい | [仕様要約](./docs/specification-summary.md) |
 | コーディング規則の理由を確認したい | [コーディング規則の考え方](./docs/coding-rules-guide.md) |
 | ファイル分けの理由を確認したい | [ファイル分けを行う理由](./docs/file-separation-guide.md) |
+| VS Code で Git 操作をしたい | [VS Code Git 操作ガイド](./docs/vscode-git-guide.md) |
 | AI agent に守らせる規則を確認したい | [AI Agent Rules](./docs/AGENTS.md) |
 | GitHub Education に応募したい | [GitHub Education 申請手順](./docs/github-education-application.md) |
 
@@ -185,6 +188,7 @@ npm run build
 | React Router の画面遷移 | [React Router 公式ドキュメント](https://reactrouter.com/) |
 | npm コマンド、package.json | [npm 公式ドキュメント](https://docs.npmjs.com/) |
 | GitHub の基本操作 | [GitHub Docs](https://docs.github.com/) |
+| VS Code の Source Control | [VS Code Source Control](https://code.visualstudio.com/docs/sourcecontrol/overview) |
 | Vercel へのデプロイ | [Vercel Docs](https://vercel.com/docs) |
 
 ### よくある確認先
