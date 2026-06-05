@@ -79,6 +79,7 @@
 詳細は以下を参照してください。
 
 - [Flutter 技術解説](./docs/flutter-technology-guide.md)
+- [デザイン参考サイト集](./docs/design-references.md)
 
 ---
 
@@ -119,6 +120,7 @@ yorimitiBiyori/
 │  ├─ AGENTS.md
 │  ├─ SKILL.md
 │  ├─ coding-rules-guide.md
+│  ├─ design-references.md
 │  ├─ environment-setup.md
 │  ├─ file-separation-guide.md
 │  ├─ flutter-technology-guide.md
@@ -180,6 +182,7 @@ flutter test
 | AI agent に読ませる汎用コーディング規則 | [General Coding Skill](./docs/SKILL.md) |
 | AI agent に読ませるよりみち日和専用規則 | [AI Agent Rules](./docs/AGENTS.md) |
 | Flutter 技術構成と選定理由 | [Flutter 技術解説](./docs/flutter-technology-guide.md) |
+| Material 3 やスマホ UI の参考例 | [デザイン参考サイト集](./docs/design-references.md) |
 | 開発者向けのコーディング規則の説明 | [コーディング規則の考え方](./docs/coding-rules-guide.md) |
 | ファイル分けを行う理由の説明 | [ファイル分けを行う理由](./docs/file-separation-guide.md) |
 | Issue・Branch・Pull Request を使う理由 | [GitHub 開発フロー](./docs/github-workflow-guide.md) |
@@ -197,6 +200,7 @@ flutter test
 | 何から実装すればよいか | [実装計画](./docs/implementation-plan.md) |
 | アプリの仕様を確認したい | [仕様要約](./docs/specification-summary.md) |
 | Flutter を選ぶ理由や技術構成を確認したい | [Flutter 技術解説](./docs/flutter-technology-guide.md) |
+| Material 3 やスマホ UI の参考サイトを確認したい | [デザイン参考サイト集](./docs/design-references.md) |
 | コーディング規則の理由を確認したい | [コーディング規則の考え方](./docs/coding-rules-guide.md) |
 | ファイル分けの理由を確認したい | [ファイル分けを行う理由](./docs/file-separation-guide.md) |
 | Issue・Branch・Pull Request の理由を確認したい | [GitHub 開発フロー](./docs/github-workflow-guide.md) |
