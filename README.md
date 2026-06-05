@@ -2,7 +2,7 @@
 
 > 空いた時間に、興味の中からちょっと新しい体験を。
 
-よりみち日和は、ユーザーが登録した興味カテゴリをもとに、短い空き時間でできる行動やコンテンツを提案する **iOS / Android 向け Flutter アプリ**です。
+よりみち日和は、ユーザーが登録した興味カテゴリをもとに、短い空き時間でできる行動やコンテンツを提案する **Flutter アプリ**です。
 
 当初は Web アプリとして検討していましたが、空き時間にユーザーが自分からアプリを開くよりも、スマホ通知をきっかけに使える体験の方がアプリの目的に合うため、Flutter によるネイティブアプリ開発へ方針を変更します。
 
@@ -62,6 +62,23 @@
 
 ---
 
+## iOS 確認環境に関する懸念
+
+現時点では、チーム内に macOS 環境がありません。
+
+そのため、MVP 初期段階では **Android を主な検証環境** とします。
+
+- Android は Windows PC + Android Emulator / Android 実機で確認する
+- iOS Simulator は macOS / Xcode が必要なため、現状では使えない
+- iPhone 実機はあるが、通常の iOS ビルド・実機投入には macOS / Xcode / 署名環境が必要
+- iOS 確認は、Mac の一時借用またはクラウドビルド + TestFlight を後続タスクとして検討する
+
+詳細は以下を参照してください。
+
+- [iOS 確認環境に関する懸念](./docs/ios-testing-risk.md)
+
+---
+
 ## 技術構成
 
 | 分類 | 使用技術 | 用途 |
@@ -69,7 +86,7 @@
 | アプリフレームワーク | Flutter | iOS / Android を 1 つのコードベースで開発する |
 | 言語 | Dart | Flutter アプリの実装に使う |
 | UI | Material 3 | スマホ向けの画面・ボタン・ナビゲーションを構築する |
-| 通知 | flutter_local_notifications | ローカル通知と通知アクションを扱う |
+| 通知 | flutter_local_notifications 予定 | ローカル通知と通知アクションを扱う |
 | 画面遷移 | Flutter 標準 / 将来的に go_router | ホーム・提案・履歴・設定画面を切り替える |
 | 状態管理 | 初期は StatefulWidget、必要に応じて Riverpod | MVP では複雑化を避ける |
 | 提案データ | `assets/data/suggestions.json` | 提案候補を管理する |
@@ -124,6 +141,7 @@ yorimitiBiyori/
 │  ├─ environment-setup.md
 │  ├─ file-separation-guide.md
 │  ├─ flutter-technology-guide.md
+│  ├─ ios-testing-risk.md
 │  ├─ github-education-application.md
 │  ├─ github-workflow-guide.md
 │  ├─ implementation-plan.md
@@ -133,18 +151,23 @@ yorimitiBiyori/
 │  └─ vscode-git-guide.md
 ├─ archive/
 │  └─ old-web-version/
-│     ├─ README.md
-│     ├─ src/
-│     └─ docs/
 └─ .github/
    ├─ ISSUE_TEMPLATE/
    └─ pull_request_template.md
 ```
 
-`android/` と `ios/` は Flutter の生成ファイルが多いため、開発環境で以下を実行して生成します。
+`android/` と `ios/` は Flutter の生成ファイルが多いため、開発環境で生成します。
+
+Android を主検証環境にする場合：
 
 ```bash
-flutter create --platforms=android,ios .
+flutter create --platforms=android .
+```
+
+iOS 確認環境が確保できた場合：
+
+```bash
+flutter create --platforms=ios .
 ```
 
 旧Web版の `src/` やGoogle Calendar前提の古い要件書は、現在のFlutter版と混ざらないように `archive/old-web-version/` へ移動しています。通常の開発では、リポジトリ直下の `lib/`、`assets/`、`docs/` を見ます。
@@ -182,6 +205,7 @@ flutter test
 | AI agent に読ませる汎用コーディング規則 | [General Coding Skill](./docs/SKILL.md) |
 | AI agent に読ませるよりみち日和専用規則 | [AI Agent Rules](./docs/AGENTS.md) |
 | Flutter 技術構成と選定理由 | [Flutter 技術解説](./docs/flutter-technology-guide.md) |
+| iOS 確認環境の懸念 | [iOS 確認環境に関する懸念](./docs/ios-testing-risk.md) |
 | Material 3 やスマホ UI の参考例 | [デザイン参考サイト集](./docs/design-references.md) |
 | 開発者向けのコーディング規則の説明 | [コーディング規則の考え方](./docs/coding-rules-guide.md) |
 | ファイル分けを行う理由の説明 | [ファイル分けを行う理由](./docs/file-separation-guide.md) |
@@ -192,14 +216,13 @@ flutter test
 
 ## 困ったときのリンク集
 
-### このリポジトリ内の資料
-
 | 分からないこと | 見るページ |
 |---|---|
 | 環境構築、起動方法、エミュレータ確認 | [環境構築手順](./docs/environment-setup.md) |
 | 何から実装すればよいか | [実装計画](./docs/implementation-plan.md) |
 | アプリの仕様を確認したい | [仕様要約](./docs/specification-summary.md) |
 | Flutter を選ぶ理由や技術構成を確認したい | [Flutter 技術解説](./docs/flutter-technology-guide.md) |
+| iOS 確認環境のリスクを確認したい | [iOS 確認環境に関する懸念](./docs/ios-testing-risk.md) |
 | Material 3 やスマホ UI の参考サイトを確認したい | [デザイン参考サイト集](./docs/design-references.md) |
 | コーディング規則の理由を確認したい | [コーディング規則の考え方](./docs/coding-rules-guide.md) |
 | ファイル分けの理由を確認したい | [ファイル分けを行う理由](./docs/file-separation-guide.md) |
@@ -207,18 +230,6 @@ flutter test
 | VS Code で Git 操作をしたい | [VS Code Git 操作ガイド](./docs/vscode-git-guide.md) |
 | AI agent に守らせる規則を確認したい | [AI Agent Rules](./docs/AGENTS.md) |
 | GitHub Education に応募したい | [GitHub Education 申請手順](./docs/github-education-application.md) |
-
-### 技術ごとの公式ドキュメント
-
-| 分からないこと | 見るページ |
-|---|---|
-| Flutter の基本 | [Flutter Docs](https://docs.flutter.dev/) |
-| Dart の文法 | [Dart Docs](https://dart.dev/guides) |
-| Flutter のテスト | [Flutter Testing](https://docs.flutter.dev/testing) |
-| Android Studio / Emulator | [Android Studio](https://developer.android.com/studio) |
-| iOS Simulator / Xcode | [Xcode](https://developer.apple.com/xcode/) |
-| GitHub の基本操作 | [GitHub Docs](https://docs.github.com/) |
-| VS Code の Source Control | [VS Code Source Control](https://code.visualstudio.com/docs/sourcecontrol/overview) |
 
 ---
 
@@ -230,17 +241,18 @@ flutter test
 4. `suggestions.json` の提案データを増やす
 5. 選択時間に合う提案を抽出する
 6. ランダム提案を実装する
-7. 通知時刻設定を作る
-8. ローカル通知を実装する
-9. 通知アクションから提案画面へ遷移する
+7. Android で通知時刻設定を作る
+8. Android でローカル通知を実装する
+9. Android で通知アクションから提案画面へ遷移する
 10. 実施・スキップ履歴を保存する
-11. Android Emulator / iOS Simulator / 実機で確認する
+11. iOS 確認環境を確保できた段階で iPhone 実機確認を行う
 
 詳細は以下を参照してください。
 
 - [実装計画](./docs/implementation-plan.md)
 - [仕様要約](./docs/specification-summary.md)
 - [Flutter 技術解説](./docs/flutter-technology-guide.md)
+- [iOS 確認環境に関する懸念](./docs/ios-testing-risk.md)
 
 ---
 
@@ -248,6 +260,7 @@ flutter test
 
 MVP 完成後、余裕があれば以下を検討します。
 
+- iOS 実機確認の自動化または TestFlight 配布
 - AI API による提案候補生成
 - YouTube API 連携
 - 音楽サービス連携
@@ -273,3 +286,5 @@ MVP 完成後、余裕があれば以下を検討します。
 
 このリポジトリでは、まず MVP を完成させることを優先します。  
 AI API、YouTube、音楽連携、位置情報は魅力的ですが、初期段階では実装難度が高いため、中心機能である「興味登録 → 通知 → 時間選択 → 提案 → 履歴保存」を先に安定させます。
+
+iOS については、チーム内に macOS 環境がないため、Android で MVP を先に成立させたうえで後続確認します。
