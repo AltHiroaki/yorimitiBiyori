@@ -20,6 +20,21 @@ MVP の中心体験は以下です。
 
 ---
 
+## 検証環境に関する前提
+
+チーム内に macOS 環境がないため、MVP 初期段階では Android を主な検証環境とします。
+
+- Android は Windows PC + Android Emulator / Android 実機で確認する
+- iOS Simulator は macOS / Xcode が必要なため、現状では使えない
+- iPhone 実機はあるが、通常の iOS ビルド・実機投入には macOS / Xcode / 署名環境が必要
+- iOS 確認は、Mac の一時借用またはクラウドビルド + TestFlight を後続タスクとして検討する
+
+詳細は以下を参照します。
+
+- [iOS 確認環境に関する懸念](./ios-testing-risk.md)
+
+---
+
 ## Phase 0: Flutter 方針への移行
 
 - [x] README.md を Flutter / ネイティブアプリ方針に更新する
@@ -28,7 +43,9 @@ MVP の中心体験は以下です。
 - [x] `lib/main.dart` を追加する
 - [x] Flutter の画面雛形を追加する
 - [x] Flutter 技術解説ドキュメントを追加する
-- [ ] 開発環境で `flutter create --platforms=android,ios .` を実行し、`android/` と `ios/` を生成する
+- [x] iOS 確認環境の懸念ドキュメントを追加する
+- [ ] 開発環境で `flutter create --platforms=android .` を実行し、Android 用 platform ファイルを生成する
+- [ ] iOS 確認環境が確保できた段階で `flutter create --platforms=ios .` を実行する
 - [ ] `flutter pub get` を実行する
 - [ ] `flutter analyze` を通す
 - [ ] `flutter test` を通す
@@ -133,6 +150,8 @@ MVP の提案データは静的 JSON で管理します。
 
 Android では通知アクションの表示数に制約があるため、MVP では 15分 / 30分 / 60分 の3つを基本にします。
 
+MVP 初期段階では Android で通知機能を完成させ、iOS 通知確認は後続タスクとして扱います。
+
 ---
 
 ## Phase 8: UI 調整
@@ -154,11 +173,13 @@ Android では通知アクションの表示数に制約があるため、MVP �
 - [ ] `flutter analyze` を通す
 - [ ] `flutter test` を通す
 - [ ] Android Emulator で起動確認する
-- [ ] iOS Simulator で起動確認する
 - [ ] Android 実機で通知確認する
+- [ ] iOS 確認方法を決める
+- [ ] Mac を一時的に借りる、またはクラウドビルド環境を用意する
 - [ ] iPhone 実機で通知確認する
 
-通知は OS 依存が大きいため、最終的には実機確認が必要です。
+通知は OS 依存が大きいため、最終的には実機確認が必要です。  
+ただし、macOS 環境がないため、iOS 実機確認は MVP 初期段階の必須条件ではなく、後続確認タスクとして扱います。
 
 ---
 
@@ -168,6 +189,8 @@ Android では通知アクションの表示数に制約があるため、MVP �
 - [ ] 画面スクリーンショットを用意する
 - [ ] ネイティブアプリ化した理由を説明できるようにする
 - [ ] Flutter を選んだ理由を説明できるようにする
+- [ ] Android を主検証環境にする理由を説明できるようにする
+- [ ] iOS 確認環境の懸念と対応方針を説明できるようにする
 - [ ] MVP と発展機能の境界を説明できるようにする
 
 ---
@@ -202,4 +225,6 @@ MVP 完成後に検討します。
 - MVP では AI API を必須にしない
 - まずは動くものを優先する
 - 通知より先に、アプリ内で提案が動く状態を作る
+- MVP 初期検証は Android を主対象にする
+- iOS 確認は環境確保後の後続タスクとして扱う
 - 仕様変更があったら、このファイルも更新する
