@@ -17,59 +17,64 @@ For general coding quality rules, also follow `docs/SKILL.md`.
 
 ## Product Goal
 
-`yorimitiBiyori` is a web application that suggests small actions users can do during short free-time gaps.
+`yorimitiBiyori` is a Flutter mobile app for iOS and Android.
 
-The app uses:
+The app helps users turn short free-time gaps into small actions or content discoveries based on their registered interests.
 
-- available time
-- activity intensity
-- location
-- budget
+The core experience is:
 
-to suggest an activity that can be done immediately.
-
-The first target users are university students who have 15 to 60 minutes between classes, part-time work, or club activities.
+1. The user registers interest categories.
+2. The app sends a local notification.
+3. The notification offers time actions such as 15, 30, and 60 minutes.
+4. The user taps a time action.
+5. The app opens the suggestion screen and shows one matching suggestion.
+6. The user records whether they tried or skipped it.
 
 ## Highest Priority
 
 Prioritize completing the MVP.
 
-Do not add advanced features before the MVP is stable.
+Do not add advanced integrations before the MVP is stable.
 
-The core flow is:
+The MVP flow is:
 
-1. Enter available time, intensity, location, and budget.
-2. Suggest an activity that matches the conditions.
-3. Record whether the user did or skipped the activity.
-4. Show history and completion rate.
+1. Register interests.
+2. Select available time in the app or from a notification action.
+3. Suggest an item that matches the selected time and interests.
+4. Record done or skipped.
+5. Show history.
 
 ## MVP Features
 
 The MVP includes only:
 
-- manual available-time input
-- intensity selection
-- location selection
-- budget selection
-- activity suggestion based on conditions
+- interest category registration
+- local notification setup
+- notification time actions
+  - 15 minutes
+  - 30 minutes
+  - 60 minutes
+- suggestion based on selected time and interests
 - re-suggestion
 - done record
 - skipped record
 - history display
-- completion rate display
+- basic settings screen
 
 ## Out of Scope Before MVP Completion
 
 Do not implement the following unless explicitly requested:
 
-- Google login
+- user login
 - Google Calendar API
 - Firebase Authentication
 - Firestore
 - Google Maps API
 - Places API
 - geolocation
-- automatic free-time detection between calendar events
+- YouTube API
+- music service integrations
+- AI API calls
 - cloud storage per user
 - account-based synchronization
 
@@ -77,220 +82,196 @@ These are future features, not MVP requirements.
 
 ## Technical Stack
 
-Use the existing stack:
+Use the Flutter stack:
 
-- React
-- TypeScript
-- Vite
-- Tailwind CSS
-- React Router
-- localStorage
-- JSON data
+- Flutter
+- Dart
+- Material 3
+- JSON asset data
+- local device storage for MVP settings and records
+- local notifications for MVP notification flow
+- flutter_test for tests
 
-Do not add new external libraries unless explicitly requested or clearly necessary.
+Do not use the old React / Vite / Tailwind / React Router stack for new implementation work.
 
-Prefer standard TypeScript, React, and browser APIs for simple logic.
+Do not add new external packages unless explicitly requested or clearly necessary.
 
 ## Directory Responsibilities
 
 Follow this project structure.
 
-- `src/app/`
+- `lib/main.dart`
+  - application entry point
+
+- `lib/src/app/`
   - application-level setup
-  - routing
-  - example: `router.tsx`
+  - root app widget
+  - navigation shell
 
-- `src/pages/`
-  - page-level components
-  - examples: `HomePage.tsx`, `SuggestPage.tsx`, `HistoryPage.tsx`, `SettingsPage.tsx`
+- `lib/src/pages/`
+  - page-level widgets
+  - examples: `home_page.dart`, `suggestion_page.dart`, `history_page.dart`, `settings_page.dart`
 
-- `src/components/`
-  - reusable UI components
-  - layout components
-  - shared buttons, cards, forms, and UI parts
+- `lib/src/widgets/`
+  - reusable UI widgets
+  - cards, buttons, layout parts, empty states
 
-- `src/features/`
-  - feature-specific logic and components
-  - examples: `activities`, `recommendation`, `records`
+- `lib/src/features/`
+  - feature-specific logic and widgets
+  - expected future examples: `interests`, `notifications`, `recommendation`, `records`, `settings`
 
-- `src/data/`
-  - static application data
-  - activity candidates should be managed in `activities.json`
+- `lib/src/models/`
+  - shared Dart data models
 
-- `src/types/`
-  - shared TypeScript types
+- `lib/src/repositories/`
+  - data access and persistence logic
 
-- `src/utils/`
-  - generic utility functions
+- `assets/data/`
+  - static suggestion data
+  - suggestion candidates should be managed in `assets/data/suggestions.json`
 
 Do not make large directory-structure changes without a clear reason.
 
-## TypeScript Rules
+## Dart and Flutter Rules
 
-- Avoid `any`.
-- Define explicit types for activity data, suggestion conditions, and activity records.
-- Put shared types in `src/types/`.
-- Small page-local types may stay in the same file.
-- Handle nullable values before using them.
-- Keep TypeScript types aligned with `activities.json`.
-
-Representative type examples:
-
-```ts
-type Intensity = "low" | "medium" | "high";
-
-type Activity = {
-  id: string;
-  title: string;
-  description: string;
-  durationMinutes: number;
-  intensity: Intensity;
-  location: string;
-  budgetYen: number;
-};
-
-type ActivityRecord = {
-  id: string;
-  activityId: string;
-  status: "done" | "skipped";
-  createdAt: string;
-};
-```
-
-Adjust actual types to match the real data structure.
-
-## React Rules
-
-- Use function components.
-- Type component props.
-- Keep page components responsible for page composition.
-- Move reusable UI into `src/components/`.
-- Move growing business logic into `src/features/` or `src/utils/`.
-- Avoid putting complex filtering, mapping, or conditionals directly inside JSX.
+- Avoid `dynamic` unless there is a clear reason.
+- Define explicit models for suggestions, user settings, and records.
+- Keep nullable values safe before using them.
+- Prefer immutable model objects where practical.
+- Keep build methods readable.
+- Avoid putting complex filtering or random selection directly inside widgets.
+- Use `const` constructors where possible.
+- Keep page widgets responsible for page composition, not business logic.
 
 ## UI and Logic Separation
 
-React components should mainly handle rendering and user interaction.
+Flutter widgets should mainly handle rendering and user interaction.
 
-Move these operations out of page components when they grow:
+Move these operations out of page widgets when they grow:
 
-- filtering activity candidates
+- loading suggestion JSON
+- filtering suggestions
 - selecting a random suggestion
 - calculating completion rate
-- reading from localStorage
-- writing to localStorage
-- converting form input values
+- reading device storage
+- writing device storage
+- parsing notification action IDs
 - formatting dates or times
 
-## Activity Data
+## Suggestion Data
 
-Manage activity candidates in `src/data/activities.json`.
+Manage suggestion candidates in `assets/data/suggestions.json`.
 
-When editing activity data:
+When editing suggestion data:
 
-- each activity must have a stable unique `id`
+- each suggestion must have a stable unique `id`
 - titles should be short and understandable
 - descriptions should be useful to the user
-- fields required for filtering must not be missing
-- update TypeScript types when the JSON structure changes
+- required fields must not be missing
+- `duration_minutes` must be a positive number
+- `interest_tags` should match known interest category names
+- update Dart models when the JSON structure changes
+
+Representative data shape:
+
+```json
+{
+  "id": "music_new_genre_15",
+  "title": "普段聴かないジャンルを1曲だけ聴く",
+  "description": "好きな音楽ジャンルに近いけれど、まだ触れていないジャンルを1曲だけ聴いてみる。",
+  "category": "音楽",
+  "interest_tags": ["音楽", "発見", "気分転換"],
+  "duration_minutes": 15
+}
+```
 
 ## Suggestion Logic
 
 The suggestion logic should use:
 
-- available time
-- intensity
-- location
-- budget
+- selected available minutes
+- registered interest categories
 
 Rules:
 
-- Filter activities from `activities.json`.
-- Keep suggestion logic separate from UI components.
-- Handle the case where no activity matches.
+- Load suggestions from `assets/data/suggestions.json`.
+- Filter suggestions where `duration_minutes <= selectedMinutes`.
+- Prefer suggestions whose `interest_tags` overlap with user interests.
+- Select one random suggestion from matching candidates.
+- Handle the case where no suggestion matches.
 - Keep the first implementation simple.
-- Avoid over-engineering repeat-prevention logic before the base suggestion flow works.
+- Avoid over-engineering ranking or AI generation before the base flow works.
 
-## Records and localStorage
+## Records and Local Storage
 
-Use localStorage for MVP history storage.
+Use local device storage for MVP history and settings.
 
 Rules:
 
 - Define storage keys as constants.
-- Keep localStorage read/write logic in dedicated functions.
-- Treat `JSON.parse` as fallible.
+- Keep storage read/write logic in dedicated functions.
+- Treat decoded data as fallible.
 - Handle missing, invalid, or old stored data safely.
 - Be careful when changing the saved data shape.
 - Make history deletion behavior clear to the user.
 
-Suggested storage key:
+Suggested storage keys:
 
-```ts
-const STORAGE_KEY = "yorimiti-biyori-records";
+```dart
+const recordsStorageKey = 'yorimiti_biyori_records';
+const settingsStorageKey = 'yorimiti_biyori_settings';
 ```
 
-## Completion Rate
+## Notification Flow
 
-Calculate completion rate from records.
+The notification flow is central to the mobile app concept.
 
-Suggested definition:
+MVP notification actions should be:
 
-```text
-done count / (done count + skipped count)
-```
+- 15 minutes
+- 30 minutes
+- 60 minutes
 
-If there are no records, avoid division by zero. Show either `0%` or an empty-state message.
+Do not add 45 minutes to notification actions in the MVP because notification action limits and platform behavior should be kept simple.
 
-## Styling
+45 minutes may be added later as an in-app time option.
 
-Use Tailwind CSS as the default styling method.
+Notification implementation order:
 
-- Prefer mobile-first UI.
-- Reuse common button, card, and layout components.
-- Keep spacing, border radius, shadows, and colors consistent.
-- Avoid repeating long class-name groups across many files.
-- Keep the UI lightweight and easy to understand for university students using the app during short breaks.
+1. Make in-app time selection work.
+2. Show a basic local notification.
+3. Open the app from a notification tap.
+4. Add notification actions.
+5. Pass the selected minutes to the suggestion screen.
 
-## Routing
+## Testing
 
-Keep routing configuration in `src/app/router.tsx`.
-
-Use these basic routes:
-
-```text
-/
-/suggest
-/history
-/settings
-```
-
-Place route page components in `src/pages/`.
-
-## Build Check
-
-After code changes, run this when possible:
+After code changes, run these when possible:
 
 ```bash
-npm run build
+flutter analyze
+flutter test
 ```
 
-If the build fails, fix the error when it is within the task scope.
+For notification work, also test on Android Emulator and iOS Simulator when available.
 
-If the build cannot be run, state that clearly.
+Final notification behavior should be checked on real Android and iPhone devices when possible.
+
+If tests cannot be run, state that clearly.
 
 ## Prohibited Changes
 
 Do not do the following unless explicitly requested:
 
-- add new external dependencies
-- implement features outside the MVP scope
+- reintroduce the React / Vite web stack
+- add AI API calls
 - add Google APIs
 - add Firebase
 - add Maps or Places APIs
 - add geolocation
+- add YouTube or music service integrations
+- add login or account synchronization
 - make large directory-structure changes
-- use `any` broadly
 - mix UI and business logic heavily
 - contradict README or docs
 - mix unrelated refactoring into feature work
