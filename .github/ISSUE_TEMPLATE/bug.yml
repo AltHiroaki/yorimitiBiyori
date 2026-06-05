@@ -86,9 +86,9 @@ body:
       description: 分かる範囲で環境を書いてください。
       value: |
         - OS:
-        - Browser:
-        - Node.js version:
-        - npm version:
+        - Device / Emulator:
+        - Flutter version:
+        - Dart version:
 
   - type: textarea
     id: notes

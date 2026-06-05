@@ -48,7 +48,8 @@ body:
       value: |
         - [ ] 画面に正しく表示される
         - [ ] エラーが出ない
-        - [ ] `npm run build` が通る
+        - [ ] `flutter analyze` が通る、または未確認であることを明記している
+        - [ ] `flutter test` が通る、または未確認であることを明記している
     validations:
       required: true
 

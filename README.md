@@ -125,8 +125,15 @@ yorimitiBiyori/
 │  ├─ github-education-application.md
 │  ├─ github-workflow-guide.md
 │  ├─ implementation-plan.md
+│  ├─ requirements.md
 │  ├─ specification-summary.md
+│  ├─ 企画書.md
 │  └─ vscode-git-guide.md
+├─ archive/
+│  └─ old-web-version/
+│     ├─ README.md
+│     ├─ src/
+│     └─ docs/
 └─ .github/
    ├─ ISSUE_TEMPLATE/
    └─ pull_request_template.md
@@ -137,6 +144,8 @@ yorimitiBiyori/
 ```bash
 flutter create --platforms=android,ios .
 ```
+
+旧Web版の `src/` やGoogle Calendar前提の古い要件書は、現在のFlutter版と混ざらないように `archive/old-web-version/` へ移動しています。通常の開発では、リポジトリ直下の `lib/`、`assets/`、`docs/` を見ます。
 
 ---
 

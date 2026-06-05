@@ -33,7 +33,7 @@ body:
     attributes:
       label: 影響範囲
       description: 変更が影響しそうなファイルや機能を書いてください。
-      placeholder: 例：src/components/ui/, src/pages/HomePage.tsx
+      placeholder: 例：lib/src/widgets/, lib/src/pages/home_page.dart
     validations:
       required: true
 
@@ -55,7 +55,8 @@ body:
       value: |
         - [ ] 作業目的に合う変更が完了している
         - [ ] 関係ない変更が混ざっていない
-        - [ ] `npm run build` が通る、または未確認であることを明記している
+        - [ ] `flutter analyze` が通る、または未確認であることを明記している
+        - [ ] `flutter test` が通る、または未確認であることを明記している
     validations:
       required: true
 

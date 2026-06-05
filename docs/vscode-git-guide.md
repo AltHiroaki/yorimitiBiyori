@@ -81,7 +81,7 @@ VS Code では、Source Control を開くだけで変更されたファイルが
 Changes
 ├─ README.md
 ├─ docs/vscode-git-guide.md
-└─ src/pages/HomePage.tsx
+└─ lib/src/pages/home_page.dart
 ```
 
 ファイル名の横には、変更の種類を表す記号が付くことがあります。
@@ -142,7 +142,7 @@ Staged Changes
 └─ README.md
 
 Changes
-└─ src/pages/HomePage.tsx
+└─ lib/src/pages/home_page.dart
 ```
 
 この状態では、`README.md` だけが次の commit に含まれます。  
@@ -374,7 +374,7 @@ VS Code では、commit に含めたいファイルだけを stage できます�
 Changes
 ├─ README.md
 ├─ docs/vscode-git-guide.md
-└─ src/pages/HomePage.tsx
+└─ lib/src/pages/home_page.dart
 ```
 
 このうち、ドキュメントだけ commit したい場合は、次の2つだけ stage します。
@@ -385,7 +385,7 @@ Staged Changes
 └─ docs/vscode-git-guide.md
 
 Changes
-└─ src/pages/HomePage.tsx
+└─ lib/src/pages/home_page.dart
 ```
 
 この状態で commit すると、`HomePage.tsx` の変更は commit に含まれません。
