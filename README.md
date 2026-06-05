@@ -96,7 +96,41 @@
 詳細は以下を参照してください。
 
 - [Flutter 技術解説](./docs/flutter-technology-guide.md)
+- [AI・バックエンド・データベース導入ガイド](./docs/ai-backend-phase-guide.md)
 - [デザイン参考サイト集](./docs/design-references.md)
+
+---
+
+## フロントエンド・バックエンド・データベースの考え方
+
+MVP では、Flutter アプリ内で完結させます。
+
+```text
+フロントエンド: Flutter アプリ
+バックエンド: なし
+データベース: 端末内保存
+初期提案データ: assets/data/suggestions.json
+```
+
+AI 提案を入れる発展 Phase では、以下の構成を検討します。
+
+```text
+Flutter アプリ
+↓
+Firebase Authentication
+↓
+Cloud Functions for Firebase
+↓
+OpenAI API
+↓
+Cloud Firestore
+```
+
+AI API キーを Flutter アプリに直接入れないため、OpenAI API は Cloud Functions から呼びます。
+
+詳細は以下を参照してください。
+
+- [AI・バックエンド・データベース導入ガイド](./docs/ai-backend-phase-guide.md)
 
 ---
 
@@ -136,6 +170,7 @@ yorimitiBiyori/
 ├─ docs/
 │  ├─ AGENTS.md
 │  ├─ SKILL.md
+│  ├─ ai-backend-phase-guide.md
 │  ├─ coding-rules-guide.md
 │  ├─ design-references.md
 │  ├─ environment-setup.md
@@ -205,6 +240,7 @@ flutter test
 | AI agent に読ませる汎用コーディング規則 | [General Coding Skill](./docs/SKILL.md) |
 | AI agent に読ませるよりみち日和専用規則 | [AI Agent Rules](./docs/AGENTS.md) |
 | Flutter 技術構成と選定理由 | [Flutter 技術解説](./docs/flutter-technology-guide.md) |
+| AI・バックエンド・DB導入方針 | [AI・バックエンド・データベース導入ガイド](./docs/ai-backend-phase-guide.md) |
 | iOS 確認環境の懸念 | [iOS 確認環境に関する懸念](./docs/ios-testing-risk.md) |
 | Material 3 やスマホ UI の参考例 | [デザイン参考サイト集](./docs/design-references.md) |
 | 開発者向けのコーディング規則の説明 | [コーディング規則の考え方](./docs/coding-rules-guide.md) |
@@ -222,6 +258,7 @@ flutter test
 | 何から実装すればよいか | [実装計画](./docs/implementation-plan.md) |
 | アプリの仕様を確認したい | [仕様要約](./docs/specification-summary.md) |
 | Flutter を選ぶ理由や技術構成を確認したい | [Flutter 技術解説](./docs/flutter-technology-guide.md) |
+| AI・バックエンド・データベース構成を確認したい | [AI・バックエンド・データベース導入ガイド](./docs/ai-backend-phase-guide.md) |
 | iOS 確認環境のリスクを確認したい | [iOS 確認環境に関する懸念](./docs/ios-testing-risk.md) |
 | Material 3 やスマホ UI の参考サイトを確認したい | [デザイン参考サイト集](./docs/design-references.md) |
 | コーディング規則の理由を確認したい | [コーディング規則の考え方](./docs/coding-rules-guide.md) |
@@ -252,6 +289,7 @@ flutter test
 - [実装計画](./docs/implementation-plan.md)
 - [仕様要約](./docs/specification-summary.md)
 - [Flutter 技術解説](./docs/flutter-technology-guide.md)
+- [AI・バックエンド・データベース導入ガイド](./docs/ai-backend-phase-guide.md)
 - [iOS 確認環境に関する懸念](./docs/ios-testing-risk.md)
 
 ---
@@ -260,13 +298,15 @@ flutter test
 
 MVP 完成後、余裕があれば以下を検討します。
 
-- iOS 実機確認の自動化または TestFlight 配布
 - AI API による提案候補生成
+- Firebase Authentication によるユーザー識別
+- Cloud Functions によるバックエンド処理
+- Cloud Firestore によるクラウド保存
+- iOS 実機確認の自動化または TestFlight 配布
 - YouTube API 連携
 - 音楽サービス連携
 - Google Calendar 連携
 - 予定間の空き時間自動検出
-- Firestore によるユーザー別履歴保存
 - 位置情報や周辺スポット提案
 
 ---
@@ -288,3 +328,5 @@ MVP 完成後、余裕があれば以下を検討します。
 AI API、YouTube、音楽連携、位置情報は魅力的ですが、初期段階では実装難度が高いため、中心機能である「興味登録 → 通知 → 時間選択 → 提案 → 履歴保存」を先に安定させます。
 
 iOS については、チーム内に macOS 環境がないため、Android で MVP を先に成立させたうえで後続確認します。
+
+AI 提案を導入する場合も、通知時に毎回 AI を呼ぶのではなく、AI で提案候補をまとめて生成して保存し、通知時は保存済み候補からランダムに表示する方針にします。
