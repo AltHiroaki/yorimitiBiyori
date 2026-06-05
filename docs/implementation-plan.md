@@ -18,6 +18,10 @@ MVP の中心体験は以下です。
 通知 → 15分 / 30分 / 60分 → 即提案
 ```
 
+AI、バックエンド、クラウドデータベースは MVP 完成後の発展 Phase として扱います。
+
+- [AI・バックエンド・データベース導入ガイド](./ai-backend-phase-guide.md)
+
 ---
 
 ## 検証環境に関する前提
@@ -44,6 +48,7 @@ MVP の中心体験は以下です。
 - [x] Flutter の画面雛形を追加する
 - [x] Flutter 技術解説ドキュメントを追加する
 - [x] iOS 確認環境の懸念ドキュメントを追加する
+- [x] AI・バックエンド・データベース導入ガイドを追加する
 - [ ] 開発環境で `flutter create --platforms=android .` を実行し、Android 用 platform ファイルを生成する
 - [ ] iOS 確認環境が確保できた段階で `flutter create --platforms=ios .` を実行する
 - [ ] `flutter pub get` を実行する
@@ -98,6 +103,8 @@ MVP の提案データは静的 JSON で管理します。
 ---
 
 ## Phase 4: 興味カテゴリ登録
+
+この Phase 4 は MVP 内の「興味カテゴリ登録」を指します。AI・バックエンド・クラウドDBを導入する発展 Phase とは別です。
 
 - [ ] 設定画面で興味カテゴリを選べるようにする
 - [ ] 複数選択できる UI を作る
@@ -206,11 +213,36 @@ MVP 完成後に検討します。
 
 ---
 
-## 発展 Phase 2: 外部サービス連携
+## 発展 Phase 2: AI・バックエンド・クラウドDB導入
 
 MVP 完成後に検討します。
 
-- [ ] AI API による提案候補生成
+詳細は以下を参照します。
+
+- [AI・バックエンド・データベース導入ガイド](./ai-backend-phase-guide.md)
+
+主な技術候補：
+
+- Firebase Authentication
+- Cloud Functions for Firebase
+- OpenAI API
+- Cloud Firestore
+- Firebase Security Rules
+- Firebase App Check
+
+基本方針：
+
+```text
+AIで毎回提案するのではなく、AIで提案候補をまとめて生成して保存する。
+通知時は保存済み候補からランダムに表示する。
+```
+
+---
+
+## 発展 Phase 3: 外部サービス連携
+
+AI バックエンド導入後に検討します。
+
 - [ ] YouTube API 連携
 - [ ] 音楽サービス連携
 - [ ] Google Calendar 連携
@@ -227,4 +259,6 @@ MVP 完成後に検討します。
 - 通知より先に、アプリ内で提案が動く状態を作る
 - MVP 初期検証は Android を主対象にする
 - iOS 確認は環境確保後の後続タスクとして扱う
+- AI API キーを Flutter アプリに直接入れない
+- AI バックエンドは MVP 完成後の発展機能として扱う
 - 仕様変更があったら、このファイルも更新する
