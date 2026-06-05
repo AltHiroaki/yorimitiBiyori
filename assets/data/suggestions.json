@@ -1,0 +1,42 @@
+[
+  {
+    "id": "music_new_genre_15",
+    "title": "普段聴かないジャンルを1曲だけ聴く",
+    "description": "好きな音楽ジャンルに近いけれど、まだ触れていないジャンルを1曲だけ聴いてみる。合わなければすぐにスキップしてよい。",
+    "category": "音楽",
+    "interest_tags": ["音楽", "発見", "気分転換"],
+    "duration_minutes": 15
+  },
+  {
+    "id": "youtube_channel_discovery_30",
+    "title": "気になる分野の新しいチャンネルを1つ探す",
+    "description": "普段見ている分野に近いキーワードで検索し、まだ見たことのないチャンネルを1つだけ開いてみる。",
+    "category": "YouTube",
+    "interest_tags": ["YouTube", "動画", "発見"],
+    "duration_minutes": 30
+  },
+  {
+    "id": "short_reading_15",
+    "title": "気になるテーマの記事を1本読む",
+    "description": "登録した興味に関係する短い記事を1本だけ読む。全部理解しようとせず、気になった点を1つ残せばよい。",
+    "category": "読書",
+    "interest_tags": ["読書", "学習", "知識"],
+    "duration_minutes": 15
+  },
+  {
+    "id": "walk_with_theme_30",
+    "title": "テーマを1つ決めて散歩する",
+    "description": "建物、空、音、看板など、観察するテーマを1つ決めて30分以内で歩く。いつもの道でも視点を変えることを目的にする。",
+    "category": "散歩",
+    "interest_tags": ["散歩", "観察", "気分転換"],
+    "duration_minutes": 30
+  },
+  {
+    "id": "mini_study_60",
+    "title": "気になる分野を60分だけ調べる",
+    "description": "登録した興味の中から1つ選び、入門記事や動画で60分だけ調べる。最後に分かったことを3行でメモする。",
+    "category": "学習",
+    "interest_tags": ["学習", "知識", "調査"],
+    "duration_minutes": 60
+  }
+]
