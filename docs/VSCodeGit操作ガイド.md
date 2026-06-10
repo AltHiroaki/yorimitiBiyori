@@ -80,7 +80,7 @@ VS Code では、Source Control を開くだけで変更されたファイルが
 ```text
 Changes
 ├─ README.md
-├─ docs/vscode-git-guide.md
+├─ docs/vscode-Git使い方メモ.md
 └─ lib/src/pages/home_page.dart
 ```
 
@@ -373,7 +373,7 @@ VS Code では、commit に含めたいファイルだけを stage できます�
 ```text
 Changes
 ├─ README.md
-├─ docs/vscode-git-guide.md
+├─ docs/vscode-Git使い方メモ.md
 └─ lib/src/pages/home_page.dart
 ```
 
@@ -382,7 +382,7 @@ Changes
 ```text
 Staged Changes
 ├─ README.md
-└─ docs/vscode-git-guide.md
+└─ docs/vscode-Git使い方メモ.md
 
 Changes
 └─ lib/src/pages/home_page.dart

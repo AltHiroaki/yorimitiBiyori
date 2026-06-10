@@ -230,7 +230,7 @@ update/readme-docs
 | `feature/` | 新機能追加 | `feature/history-page` |
 | `fix/` | バグ修正 | `fix/build-error` |
 | `update/` | 既存内容の更新 | `update/readme-docs` |
-| `docs/` | ドキュメント変更 | `docs/github-workflow-guide` |
+| `docs/` | ドキュメント変更 | `docs/GitHub開発フロー` |
 
 避けたい名前:
 
