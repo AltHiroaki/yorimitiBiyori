@@ -17,7 +17,7 @@ For general coding quality rules, also follow `docs/SKILL.md`.
 
 ## Product Goal
 
-`yorimitiBiyori` is a Flutter mobile app for iOS and Android.
+`yorimitiBiyori` is a Flutter mobile app. The MVP targets Android only; iOS support is a post-MVP advanced phase.
 
 The app helps users turn short free-time gaps into small actions or content discoveries based on their registered interests.
 
@@ -35,6 +35,8 @@ The core experience is:
 Prioritize completing the MVP.
 
 Do not add advanced integrations before the MVP is stable.
+
+Do not implement or generate iOS platform files for the MVP unless explicitly requested. Keep iOS work in the advanced phase.
 
 The MVP flow is:
 
@@ -79,6 +81,8 @@ Do not implement the following unless explicitly requested:
 - account-based synchronization
 
 These are future features, not MVP requirements.
+
+iOS implementation, iOS notification behavior, TestFlight distribution, and iPhone device verification are also post-MVP advanced-phase work.
 
 ## Technical Stack
 
@@ -253,9 +257,9 @@ flutter analyze
 flutter test
 ```
 
-For notification work, also test on Android Emulator and iOS Simulator when available.
+For MVP notification work, test on Android Emulator and a real Android device when possible.
 
-Final notification behavior should be checked on real Android and iPhone devices when possible.
+iOS Simulator and iPhone device verification should be done in the post-MVP iOS phase.
 
 If tests cannot be run, state that clearly.
 

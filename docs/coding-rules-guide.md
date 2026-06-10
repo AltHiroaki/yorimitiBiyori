@@ -21,7 +21,7 @@ MVPでは、端末内の設定と静的JSONデータだけで中心体験を作�
 
 ## 2. 技術スタックをFlutterに固定する理由
 
-現在のよりみち日和は、iOS / Android向けのFlutterアプリとして開発します。
+現在のよりみち日和は、MVP では Android 向けの Flutter アプリとして開発します。iOS は MVP 完成後の発展版で導入します。
 
 通知を使ってユーザーに提案を届ける体験が中心になるため、Webアプリよりもスマートフォンアプリのほうが合っています。
 
@@ -102,6 +102,6 @@ flutter analyze
 flutter test
 ```
 
-通知機能を触った場合は、Android Emulator、iOS Simulator、実機での確認も必要です。
+通知機能を触った場合は、MVP では Android Emulator と Android 実機での確認が必要です。iOS Simulator と iPhone 実機での確認は、発展版で iOS を導入するときに行います。
 
 確認できなかった場合は、何が未確認かを明記します。

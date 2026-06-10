@@ -26,16 +26,15 @@ AI、バックエンド、クラウドデータベースは MVP 完成後の発�
 
 ## 検証環境に関する前提
 
-チーム内に macOS 環境がないため、MVP 初期段階では Android を主な検証環境とします。
+チーム内に macOS 環境がないため、MVP では Android のみを実装・検証対象とします。
 
 - Android は Windows PC + Android Emulator / Android 実機で確認する
-- iOS Simulator は macOS / Xcode が必要なため、現状では使えない
-- iPhone 実機はあるが、通常の iOS ビルド・実機投入には macOS / Xcode / 署名環境が必要
-- iOS 確認は、Mac の一時借用またはクラウドビルド + TestFlight を後続タスクとして検討する
+- iOS は MVP には含めない
+- iOS 導入は、MVP 完成後の発展 Phase として扱う
 
 詳細は以下を参照します。
 
-- [iOS 確認環境に関する懸念](./ios-testing-risk.md)
+- [iOS 導入方針と確認環境に関する懸念](./ios-testing-risk.md)
 
 ---
 
@@ -47,15 +46,14 @@ AI、バックエンド、クラウドデータベースは MVP 完成後の発�
 - [x] `lib/main.dart` を追加する
 - [x] Flutter の画面雛形を追加する
 - [x] Flutter 技術解説ドキュメントを追加する
-- [x] iOS 確認環境の懸念ドキュメントを追加する
+- [x] iOS 導入方針と確認環境の懸念ドキュメントを追加する
 - [x] AI・バックエンド・データベース導入ガイドを追加する
 - [ ] 開発環境で `flutter create --platforms=android .` を実行し、Android 用 platform ファイルを生成する
-- [ ] iOS 確認環境が確保できた段階で `flutter create --platforms=ios .` を実行する
 - [ ] `flutter pub get` を実行する
 - [ ] `flutter analyze` を通す
 - [ ] `flutter test` を通す
 
-`android/` と `ios/` は生成ファイルが多いため、リポジトリ上で手動作成せず、Flutter SDK で生成します。
+`android/` と `ios/` は生成ファイルが多いため、リポジトリ上で手動作成せず、Flutter SDK で生成します。MVP では `android/` のみを生成し、`ios/` は発展版で iOS を導入するときに生成します。
 
 ---
 
@@ -157,7 +155,7 @@ MVP の提案データは静的 JSON で管理します。
 
 Android では通知アクションの表示数に制約があるため、MVP では 15分 / 30分 / 60分 の3つを基本にします。
 
-MVP 初期段階では Android で通知機能を完成させ、iOS 通知確認は後続タスクとして扱います。
+MVP では Android で通知機能を完成させます。iOS 通知対応は発展 Phase のタスクとして扱います。
 
 ---
 
@@ -181,12 +179,8 @@ MVP 初期段階では Android で通知機能を完成させ、iOS 通知確認
 - [ ] `flutter test` を通す
 - [ ] Android Emulator で起動確認する
 - [ ] Android 実機で通知確認する
-- [ ] iOS 確認方法を決める
-- [ ] Mac を一時的に借りる、またはクラウドビルド環境を用意する
-- [ ] iPhone 実機で通知確認する
 
-通知は OS 依存が大きいため、最終的には実機確認が必要です。  
-ただし、macOS 環境がないため、iOS 実機確認は MVP 初期段階の必須条件ではなく、後続確認タスクとして扱います。
+通知は OS 依存が大きいため、Android 版 MVP では Android 実機確認を重視します。iOS 実機確認は発展 Phase で行います。
 
 ---
 
@@ -196,8 +190,8 @@ MVP 初期段階では Android で通知機能を完成させ、iOS 通知確認
 - [ ] 画面スクリーンショットを用意する
 - [ ] ネイティブアプリ化した理由を説明できるようにする
 - [ ] Flutter を選んだ理由を説明できるようにする
-- [ ] Android を主検証環境にする理由を説明できるようにする
-- [ ] iOS 確認環境の懸念と対応方針を説明できるようにする
+- [ ] MVP を Android のみに絞る理由を説明できるようにする
+- [ ] iOS を発展版で導入する方針を説明できるようにする
 - [ ] MVP と発展機能の境界を説明できるようにする
 
 ---
@@ -213,7 +207,19 @@ MVP 完成後に検討します。
 
 ---
 
-## 発展 Phase 2: AI・バックエンド・クラウドDB導入
+## 発展 Phase 2: iOS 版導入
+
+Android 版 MVP が完成した後に検討します。
+
+- [ ] Mac を一時的に借りる、またはクラウドビルド環境を用意する
+- [ ] `flutter create --platforms=ios .` を実行し、iOS 用 platform ファイルを生成する
+- [ ] iOS Simulator または iPhone 実機で起動確認する
+- [ ] iOS の通知許可、ローカル通知、通知アクションを確認する
+- [ ] 必要に応じて TestFlight 配布を検討する
+
+---
+
+## 発展 Phase 3: AI・バックエンド・クラウドDB導入
 
 MVP 完成後に検討します。
 
@@ -239,7 +245,7 @@ AIで毎回提案するのではなく、AIで提案候補をまとめて生成�
 
 ---
 
-## 発展 Phase 3: 外部サービス連携
+## 発展 Phase 4: 外部サービス連携
 
 AI バックエンド導入後に検討します。
 
@@ -257,8 +263,8 @@ AI バックエンド導入後に検討します。
 - MVP では AI API を必須にしない
 - まずは動くものを優先する
 - 通知より先に、アプリ内で提案が動く状態を作る
-- MVP 初期検証は Android を主対象にする
-- iOS 確認は環境確保後の後続タスクとして扱う
+- MVP は Android のみを対象にする
+- iOS 導入は MVP 完成後の発展 Phase として扱う
 - AI API キーを Flutter アプリに直接入れない
 - AI バックエンドは MVP 完成後の発展機能として扱う
 - 仕様変更があったら、このファイルも更新する

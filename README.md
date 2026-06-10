@@ -6,6 +6,8 @@
 
 当初は Web アプリとして検討していましたが、空き時間にユーザーが自分からアプリを開くよりも、スマホ通知をきっかけに使える体験の方がアプリの目的に合うため、Flutter によるネイティブアプリ開発へ方針を変更します。
 
+MVP では **Android 版のみ**を実装・検証対象にします。iOS は MVP 完成後の発展版で導入します。
+
 ---
 
 ## 企画の位置づけ
@@ -28,7 +30,7 @@
 
 ## 初期実装版 MVP
 
-授業内で確実に完成させるため、MVP では機能を絞ります。
+授業内で確実に完成させるため、MVP では機能と対象プラットフォームを絞ります。MVP の対象は **Android のみ**です。
 
 ### 初期実装で入れるもの
 
@@ -62,20 +64,19 @@
 
 ---
 
-## iOS 確認環境に関する懸念
+## MVP 対象プラットフォーム
 
 現時点では、チーム内に macOS 環境がありません。
 
-そのため、MVP 初期段階では **Android を主な検証環境** とします。
+そのため、MVP では **Android のみを実装・検証対象** とします。
 
 - Android は Windows PC + Android Emulator / Android 実機で確認する
-- iOS Simulator は macOS / Xcode が必要なため、現状では使えない
-- iPhone 実機はあるが、通常の iOS ビルド・実機投入には macOS / Xcode / 署名環境が必要
-- iOS 確認は、Mac の一時借用またはクラウドビルド + TestFlight を後続タスクとして検討する
+- iOS は MVP には含めない
+- iOS 導入は、Mac の一時借用またはクラウドビルド + TestFlight を使う発展版タスクとして扱う
 
 詳細は以下を参照してください。
 
-- [iOS 確認環境に関する懸念](./docs/ios-testing-risk.md)
+- [iOS 導入方針と確認環境に関する懸念](./docs/ios-testing-risk.md)
 
 ---
 
@@ -83,7 +84,7 @@
 
 | 分類 | 使用技術 | 用途 |
 |---|---|---|
-| アプリフレームワーク | Flutter | iOS / Android を 1 つのコードベースで開発する |
+| アプリフレームワーク | Flutter | MVP では Android 版を実装し、発展版で iOS に展開しやすくする |
 | 言語 | Dart | Flutter アプリの実装に使う |
 | UI | Material 3 | スマホ向けの画面・ボタン・ナビゲーションを構築する |
 | 通知 | flutter_local_notifications 予定 | ローカル通知と通知アクションを扱う |
@@ -193,13 +194,13 @@ yorimitiBiyori/
 
 `android/` と `ios/` は Flutter の生成ファイルが多いため、開発環境で生成します。
 
-Android を主検証環境にする場合：
+MVP では Android 用 platform ファイルだけを生成します。
 
 ```bash
 flutter create --platforms=android .
 ```
 
-iOS 確認環境が確保できた場合：
+発展版で iOS を導入する段階になったら、iOS 用 platform ファイルを追加生成します。
 
 ```bash
 flutter create --platforms=ios .
@@ -241,7 +242,7 @@ flutter test
 | AI agent に読ませるよりみち日和専用規則 | [AI Agent Rules](./docs/AGENTS.md) |
 | Flutter 技術構成と選定理由 | [Flutter 技術解説](./docs/flutter-technology-guide.md) |
 | AI・バックエンド・DB導入方針 | [AI・バックエンド・データベース導入ガイド](./docs/ai-backend-phase-guide.md) |
-| iOS 確認環境の懸念 | [iOS 確認環境に関する懸念](./docs/ios-testing-risk.md) |
+| iOS 導入方針と確認環境の懸念 | [iOS 導入方針と確認環境に関する懸念](./docs/ios-testing-risk.md) |
 | Material 3 やスマホ UI の参考例 | [デザイン参考サイト集](./docs/design-references.md) |
 | 開発者向けのコーディング規則の説明 | [コーディング規則の考え方](./docs/coding-rules-guide.md) |
 | ファイル分けを行う理由の説明 | [ファイル分けを行う理由](./docs/file-separation-guide.md) |
@@ -259,7 +260,7 @@ flutter test
 | アプリの仕様を確認したい | [仕様要約](./docs/specification-summary.md) |
 | Flutter を選ぶ理由や技術構成を確認したい | [Flutter 技術解説](./docs/flutter-technology-guide.md) |
 | AI・バックエンド・データベース構成を確認したい | [AI・バックエンド・データベース導入ガイド](./docs/ai-backend-phase-guide.md) |
-| iOS 確認環境のリスクを確認したい | [iOS 確認環境に関する懸念](./docs/ios-testing-risk.md) |
+| iOS 導入方針と確認環境のリスクを確認したい | [iOS 導入方針と確認環境に関する懸念](./docs/ios-testing-risk.md) |
 | Material 3 やスマホ UI の参考サイトを確認したい | [デザイン参考サイト集](./docs/design-references.md) |
 | コーディング規則の理由を確認したい | [コーディング規則の考え方](./docs/coding-rules-guide.md) |
 | ファイル分けの理由を確認したい | [ファイル分けを行う理由](./docs/file-separation-guide.md) |
@@ -282,7 +283,7 @@ flutter test
 8. Android でローカル通知を実装する
 9. Android で通知アクションから提案画面へ遷移する
 10. 実施・スキップ履歴を保存する
-11. iOS 確認環境を確保できた段階で iPhone 実機確認を行う
+11. Android 版 MVP として動作確認する
 
 詳細は以下を参照してください。
 
@@ -290,7 +291,7 @@ flutter test
 - [仕様要約](./docs/specification-summary.md)
 - [Flutter 技術解説](./docs/flutter-technology-guide.md)
 - [AI・バックエンド・データベース導入ガイド](./docs/ai-backend-phase-guide.md)
-- [iOS 確認環境に関する懸念](./docs/ios-testing-risk.md)
+- [iOS 導入方針と確認環境に関する懸念](./docs/ios-testing-risk.md)
 
 ---
 
@@ -298,11 +299,13 @@ flutter test
 
 MVP 完成後、余裕があれば以下を検討します。
 
+- iOS 版の platform ファイル生成、ビルド、実機確認
+- iOS 通知許可・ローカル通知・通知アクション対応
+- iOS 実機確認の自動化または TestFlight 配布
 - AI API による提案候補生成
 - Firebase Authentication によるユーザー識別
 - Cloud Functions によるバックエンド処理
 - Cloud Firestore によるクラウド保存
-- iOS 実機確認の自動化または TestFlight 配布
 - YouTube API 連携
 - 音楽サービス連携
 - Google Calendar 連携
@@ -327,6 +330,6 @@ MVP 完成後、余裕があれば以下を検討します。
 このリポジトリでは、まず MVP を完成させることを優先します。  
 AI API、YouTube、音楽連携、位置情報は魅力的ですが、初期段階では実装難度が高いため、中心機能である「興味登録 → 通知 → 時間選択 → 提案 → 履歴保存」を先に安定させます。
 
-iOS については、チーム内に macOS 環境がないため、Android で MVP を先に成立させたうえで後続確認します。
+iOS については、チーム内に macOS 環境がないため、MVP には含めず、Android 版 MVP が成立した後の発展版で導入します。
 
 AI 提案を導入する場合も、通知時に毎回 AI を呼ぶのではなく、AI で提案候補をまとめて生成して保存し、通知時は保存済み候補からランダムに表示する方針にします。

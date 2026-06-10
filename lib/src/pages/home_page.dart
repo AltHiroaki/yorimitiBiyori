@@ -22,7 +22,7 @@ class HomePage extends StatelessWidget {
         SizedBox(height: 24),
         SectionCard(
           title: 'MVP 方針',
-          description: '興味カテゴリを登録し、通知から 15分 / 30分 / 60分 を選ぶと、その時間に合う提案を表示します。',
+          description: 'Android版MVPでは、興味カテゴリを登録し、通知から 15分 / 30分 / 60分 を選ぶと、その時間に合う提案を表示します。',
         ),
         SizedBox(height: 12),
         SectionCard(

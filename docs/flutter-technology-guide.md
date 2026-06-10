@@ -1,6 +1,6 @@
 # Flutter 技術解説
 
-このドキュメントは、`よりみち日和` を Web アプリではなく Flutter による iOS / Android アプリとして作る理由と、使う技術の役割を説明するものです。
+このドキュメントは、`よりみち日和` を Web アプリではなく Flutter による Android アプリとして作る理由と、使う技術の役割を説明するものです。iOS は MVP 完成後の発展版で導入します。
 
 ---
 
@@ -10,7 +10,7 @@
 
 この体験は、ユーザーが自分から Web サイトを開くよりも、スマホ通知を起点にした方が自然です。
 
-そのため、MVP では Flutter を使って iOS / Android 向けのネイティブアプリとして開発します。
+そのため、MVP では Flutter を使って Android 向けのネイティブアプリとして開発します。
 
 ---
 
@@ -32,17 +32,17 @@ Web アプリでも画面表示や提案ロジックは作れます。
 
 しかし、通知アクションやローカル通知を主機能にする場合、スマホ OS の通知機能と自然に連携できるネイティブアプリの方が向いています。
 
-Flutter なら、iOS / Android のアプリとして作りつつ、1つのコードベースで画面やロジックを共有できます。
+Flutter なら、MVP では Android 版を先に作りつつ、発展版で iOS に展開するときも画面やロジックを共有できます。
 
 ---
 
 ## Flutter を選ぶ理由
 
-### 1. iOS / Android を1つのコードベースで作れる
+### 1. 発展版で iOS に展開しやすい
 
 完全ネイティブ開発では、iOS は Swift、Android は Kotlin で別々に実装する必要があります。
 
-Flutter では、Dart で書いたコードから iOS / Android の両方に対応できます。
+Flutter では、Dart で書いたコードをもとに Android と iOS の両方へ展開できます。MVP では Android のみを対象にし、iOS は発展版で追加します。
 
 これにより、以下を共通化しやすくなります。
 
@@ -65,7 +65,7 @@ MVP では、ローカル通知を使ってユーザーに空き時間を選ん�
 
 Flutter では通知用パッケージを使うことで、ローカル通知や通知アクションを扱えます。
 
-ただし、通知は iOS / Android の OS 機能に依存するため、実装後は Emulator / Simulator だけでなく、実機確認も行うべきです。
+ただし、通知は OS 機能に依存するため、MVP では Android Emulator と Android 実機で確認します。iOS の通知確認は発展版で行います。
 
 ### 3. UI を整理しやすい
 
@@ -108,7 +108,7 @@ Flutter では、以下のようにテストを分けられます。
 
 | 技術 | 役割 |
 |---|---|
-| Flutter | iOS / Android アプリの UI とロジックを作る |
+| Flutter | Android アプリの UI とロジックを作り、発展版で iOS に展開しやすくする |
 | Dart | Flutter アプリを書く言語 |
 | Material 3 | スマホ向け UI コンポーネントの基盤 |
 | flutter_local_notifications | ローカル通知と通知アクションを扱う候補 |
@@ -233,7 +233,7 @@ Windows / macOS / Linux で利用できます。
 
 ### iOS
 
-iOS Simulator は macOS の Xcode に含まれるため、Mac が必要です。
+iOS は MVP では対象にしません。発展版で導入する段階では、macOS と Xcode が必要です。
 
 Windows だけでは iOS Simulator は使えません。
 
@@ -241,7 +241,7 @@ Windows だけでは iOS Simulator は使えません。
 
 通知は端末設定、ロック画面、バッテリー制御、OS バージョンの影響を受けます。
 
-そのため、最終確認は Android 実機と iPhone 実機で行うのが望ましいです。
+そのため、MVP では Android 実機確認を行い、発展版で iOS を導入するときに iPhone 実機確認を行います。
 
 ---
 
@@ -249,6 +249,8 @@ Windows だけでは iOS Simulator は使えません。
 
 以下は MVP 完成後に検討します。
 
+- iOS 版の生成、ビルド、実機確認
+- iOS 通知許可・ローカル通知・通知アクション対応
 - AI による提案候補生成
 - YouTube 連携
 - 音楽サービス連携

@@ -15,7 +15,7 @@ MVP では、最初から独自デザインを作り込むのではなく、Mate
 | Material Design 3 for Flutter | 公式 Flutter 向け説明 | Flutter で Material 3 を使う前提を確認する | https://m3.material.io/develop/flutter |
 | Flutter Material widgets | Flutter 公式 | Flutter で使える Material 系 Widget を確認する | https://docs.flutter.dev/ui/widgets/material |
 | Android Design & Plan | Android 公式 | Android アプリとして自然な UI 設計を確認する | https://developer.android.com/design |
-| Apple Human Interface Guidelines | Apple 公式 | iOS アプリとして違和感が少ない画面設計を確認する | https://developer.apple.com/design/human-interface-guidelines |
+| Apple Human Interface Guidelines | Apple 公式 | 発展版で iOS を導入するときに、iOS アプリとして違和感が少ない画面設計を確認する | https://developer.apple.com/design/human-interface-guidelines |
 | Mobbin | 実アプリの UI 事例集 | 実在するスマホアプリの画面、一覧、設定、オンボーディングなどを参考にする | https://mobbin.com/explore/mobile |
 | Pttrns | モバイル UI パターン集 | ログイン、設定、一覧、詳細画面などの典型パターンを確認する | https://app.pttrns.com/ |
 | Page Flows | UX フロー事例集 | 画面単体ではなく、ユーザーがどう遷移するかを参考にする | https://pageflows.com/ |
@@ -101,7 +101,7 @@ MVP では、最初から独自デザインを作り込むのではなく、Mate
 1. Material 3 Components で、ボタン・カード・ナビゲーションの見た目を確認する
 2. Flutter Material widgets で、実装に使う Widget 名を確認する
 3. Mobbin で、似たアプリの画面構成を探す
-4. Apple Human Interface Guidelines で、iOS でも違和感が出ないか確認する
+4. 発展版で iOS を導入するときは、Apple Human Interface Guidelines で違和感が出ないか確認する
 
 ---
 
@@ -128,7 +128,7 @@ MVP では、最初から独自デザインを作り込むのではなく、Mate
 - 色は `ColorScheme.fromSeed` で統一する。
 - 独自 UI を増やしすぎない。
 - 画面ごとの余白、角丸、ボタンの種類を揃える。
-- iOS / Android の両方で大きく崩れないシンプルな構成にする。
+- MVP では Android で自然に使えるシンプルな構成にする。iOS 対応は発展版で調整する。
 - 実装が難しいアニメーションや複雑な装飾は、MVP 完成後に検討する。
 
 ---

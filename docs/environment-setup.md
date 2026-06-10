@@ -10,7 +10,7 @@
 
 このファイルは、**よりみち日和を Flutter アプリとして自分の PC で動かせる状態にするまでの手順**をまとめたものです。
 
-現在の `よりみち日和` は、Web アプリではなく iOS / Android 向けの Flutter アプリとして開発します。
+現在の `よりみち日和` は、Web アプリではなく Flutter アプリとして開発します。MVP では Android のみを対象にし、iOS は発展版で導入します。
 
 ---
 
@@ -18,7 +18,9 @@
 
 MVP では以下の方針で作ります。
 
-- Flutter で iOS / Android アプリとして作る
+- Flutter で Android アプリとして作る
+- MVP の実装・検証対象は Android のみにする
+- iOS は MVP 完成後の発展版で導入する
 - ログイン機能は入れない
 - Google Calendar API は最初から入れない
 - Firebase / Firestore は最初から入れない
@@ -41,9 +43,9 @@ MVP では以下の方針で作ります。
 | GitHub | コードを置く場所 | チームで共有できるため |
 | Flutter SDK | Flutter アプリを作る本体 | Dart / Flutter のビルド・実行に必要なため |
 | Android Studio | Android Emulator と Android SDK の管理 | Android 仮想端末で確認するため |
-| Xcode | iOS Simulator と iOS ビルド | iOS 確認に必要。macOS のみ |
+| Xcode | iOS Simulator と iOS ビルド | 発展版で iOS を導入するときに必要。macOS のみ |
 | Android Emulator | 仮想 Android 端末 | PC 上で Android アプリを確認するため |
-| iOS Simulator | 仮想 iPhone 端末 | Mac 上で iOS アプリを確認するため |
+| iOS Simulator | 仮想 iPhone 端末 | 発展版で iOS を確認するため |
 
 ---
 
@@ -158,7 +160,7 @@ flutter run
 
 ## 9. Xcode と iOS Simulator
 
-iOS を確認するには macOS と Xcode が必要です。
+iOS を確認するには macOS と Xcode が必要です。MVP では iOS を対象にしないため、この章は発展版で iOS を導入するときに参照します。
 
 Xcode：
 
@@ -204,10 +206,10 @@ cd yorimitiBiyori
 
 ## 11. Flutter の platform ディレクトリを生成する
 
-このリポジトリでは、`android/` と `ios/` は Flutter SDK で生成する前提にしています。
+このリポジトリでは、`android/` と `ios/` は Flutter SDK で生成する前提にしています。MVP では `android/` のみを生成します。
 
 ```bash
-flutter create --platforms=android,ios .
+flutter create --platforms=android .
 ```
 
 すでに `lib/` や `pubspec.yaml` がある状態で実行しても、Flutter の不足している platform ファイルを補えます。
@@ -216,7 +218,12 @@ flutter create --platforms=android,ios .
 
 ```text
 android/
-ios/
+```
+
+発展版で iOS を導入する段階になったら、以下を実行して `ios/` を追加生成します。
+
+```bash
+flutter create --platforms=ios .
 ```
 
 ---
@@ -292,7 +299,8 @@ MVP では、まず以下をテスト対象にします。
 最終的には以下で確認するのが望ましいです。
 
 - Android 実機
-- iPhone 実機
+
+iOS は発展版で導入するため、その段階で iPhone 実機確認を行います。
 
 ---
 
@@ -301,7 +309,7 @@ MVP では、まず以下をテスト対象にします。
 | 状況 | 確認すること |
 |---|---|
 | `flutter` コマンドが見つからない | Flutter SDK の PATH 設定 |
-| `flutter doctor` でエラーが出る | Android Studio / Xcode / SDK の設定 |
+| `flutter doctor` でエラーが出る | Android Studio / SDK の設定。iOS 導入時は Xcode も確認 |
 | Android Emulator が出ない | Android Studio の Device Manager |
 | iOS Simulator が使えない | macOS かどうか、Xcode が入っているか |
 | `flutter pub get` で失敗する | `pubspec.yaml` のインデント、ネットワーク |
