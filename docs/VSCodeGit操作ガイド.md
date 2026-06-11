@@ -336,12 +336,16 @@ VS Code では、左下のブランチ名をクリックし、`Create new branch
 ブランチ名の例:
 
 ```text
-feature/history-page
-feature/activity-filter
-fix/build-error
+issue-12-history-screen
+issue-13-activity-filter
+issue-14-fix-build-error
 ```
 
-ブランチ名は、何の作業か分かる名前にします。
+このプロジェクトでは、Issue に対応する作業ブランチは `issue-<Issue番号>-<短い内容>` の形式にします。
+
+例: `issue-12-history-screen`
+
+Issue 番号は Issue を作成したあとに決まるため、まず Issue を作成してからブランチを作ります。
 
 ---
 

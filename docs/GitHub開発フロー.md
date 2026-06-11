@@ -155,13 +155,13 @@ Branch は、`main` とは別に作業するための場所です。
 例えば、履歴画面を作るなら次のようなブランチを作ります。
 
 ```text
-feature/history-page
+issue-12-history-screen
 ```
 
 ビルドエラーを直すなら、次のような名前にします。
 
 ```text
-fix/build-error
+issue-13-fix-build-error
 ```
 
 ---
@@ -206,31 +206,28 @@ A さんが履歴画面を作り、B さんが設定画面を作っていると�
 
 ブランチ名は、何の作業か分かる名前にします。
 
-おすすめの形式:
+このプロジェクトでは、Issue に対応する作業ブランチは次の形式にします。
 
 ```text
-種類/作業内容
+issue-<Issue番号>-<短い内容>
 ```
 
 例:
 
 ```text
-feature/home-page
-feature/history-page
-feature/activity-filter
-fix/build-error
-fix/history-storage
-update/readme-docs
+issue-12-history-screen
+issue-13-fix-build-error
+issue-14-docs-readme-scope
+issue-15-cleanup-widgets
 ```
 
-よく使う prefix:
+ポイント:
 
-| prefix | 用途 | 例 |
-|---|---|---|
-| `feature/` | 新機能追加 | `feature/history-page` |
-| `fix/` | バグ修正 | `fix/build-error` |
-| `update/` | 既存内容の更新 | `update/readme-docs` |
-| `docs/` | ドキュメント変更 | `docs/GitHub開発フロー` |
+- 先頭に `issue-<Issue番号>` を置く
+- 最後に作業内容を英小文字と `-` で短く書く
+- Issue 番号は、Issue を作成したあとに決まる
+
+Issue 作成前に仮で作業する場合は、あとで対応する Issue 番号に合わせてブランチ名を直します。
 
 避けたい名前:
 
@@ -404,7 +401,7 @@ Issue #12
 ↓
 
 Branch
-feature/history-page
+issue-12-history-screen
 
 ↓
 
@@ -503,8 +500,8 @@ new
 良い例:
 
 ```text
-feature/suggest-page
-fix/local-storage-parse
+issue-12-suggest-screen
+issue-13-fix-local-storage-parse
 ```
 
 ### Pull Request が大きすぎる

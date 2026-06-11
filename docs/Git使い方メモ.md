@@ -33,7 +33,7 @@ git pull origin main
 2. 作業ブランチを切る
 
 ```bash
-git switch -c feature/add-login-ui
+git switch -c issue-12-add-login-ui
 ```
 
 3. 変更を確認する
@@ -53,7 +53,7 @@ git commit -m "ログインUIを追加"
 5. リモートへpushする
 
 ```bash
-git push -u origin feature/add-login-ui
+git push -u origin issue-12-add-login-ui
 ```
 
 6. GitHubでPull Requestを作成する
@@ -128,6 +128,7 @@ git restore <file>
 
 - `main` に直接コミットしない
 - 1タスク1ブランチで作業する
+- Issue に対応するブランチ名は `issue-<Issue番号>-<短い内容>` にする
 - コミットメッセージは「何をしたか」を短く明確に書く
 - Pull Requestの説明に「目的」「変更点」「確認方法」を書く
 
@@ -137,12 +138,12 @@ git restore <file>
 git switch main
 git fetch origin
 git pull origin main
-git switch -c feature/add-calendar-sync
+git switch -c issue-12-add-calendar-sync
 # 実装
 # 動作確認
 git add .
 git commit -m "カレンダー同期処理を追加"
-git push -u origin feature/add-calendar-sync
+git push -u origin issue-12-add-calendar-sync
 ```
 
 以上。
