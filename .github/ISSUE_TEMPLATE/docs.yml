@@ -11,6 +11,11 @@ body:
         ドキュメントの修正・追加用 Issue です。
         README、docs、開発手順、説明資料などの変更に使います。
 
+        Issue 作成後は、次の形式でブランチを作成してください。
+        `issue-<Issue番号>-<短い内容>`
+
+        例：`issue-12-docs-readme-scope`
+
   - type: input
     id: target
     attributes:

@@ -10,6 +10,11 @@ body:
         不具合を報告するための Issue です。
         できるだけ再現手順と期待する動作を書いてください。
 
+        Issue 作成後は、次の形式でブランチを作成してください。
+        `issue-<Issue番号>-<短い内容>`
+
+        例：`issue-12-fix-empty-history`
+
   - type: textarea
     id: problem
     attributes:

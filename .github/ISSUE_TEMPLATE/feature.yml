@@ -10,6 +10,11 @@ body:
         新しい画面や機能を追加するための Issue です。
         MVP 範囲に含まれるかを確認してから作成してください。
 
+        Issue 作成後は、次の形式でブランチを作成してください。
+        `issue-<Issue番号>-<短い内容>`
+
+        例：`issue-12-history-screen`
+
   - type: textarea
     id: summary
     attributes:

@@ -10,6 +10,11 @@ body:
         設定変更、整理、調査、リファクタリングなどの作業用 Issue です。
         機能追加は Feature、不具合は Bug、ドキュメントは Docs を使ってください。
 
+        Issue 作成後は、次の形式でブランチを作成してください。
+        `issue-<Issue番号>-<短い内容>`
+
+        例：`issue-12-cleanup-widgets`
+
   - type: textarea
     id: summary
     attributes:
