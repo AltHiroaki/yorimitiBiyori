@@ -216,6 +216,8 @@ flutter create --platforms=ios .
 
 - [環境構築手順](./docs/環境構築手順.md)
 
+Flutter 公式サイトが見にくい場合は、まず上の環境構築手順にある「Windows + VS Code で入れる最短手順」だけ確認してください。このリポジトリの MVP では Android 開発に必要な内容へ絞っています。
+
 基本的な起動手順は以下です。
 
 ```bash
