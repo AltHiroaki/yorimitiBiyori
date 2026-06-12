@@ -102,6 +102,7 @@ Do not implement the following unless explicitly requested:
 - AI API calls (Claude API detail generation is advanced Phase 1)
 - cloud storage per user
 - account-based synchronization
+- random notification time within a user-selected time range
 
 iOS implementation, iOS notification behavior, TestFlight distribution, and iPhone device verification are also post-MVP advanced-phase work.
 
@@ -274,6 +275,8 @@ MVP notification actions should be:
 - 60 minutes
 
 Do not add 5 minutes (or any other duration) to notification actions in the MVP because notification action limits and platform behavior should be kept simple. 5 minutes is an in-app option only.
+
+For the MVP, schedule notifications at the configured fixed time (default 17:30). Random notification timing within a user-selected time range is an advanced feature after the fixed-time notification flow is stable. If implemented later, use a bounded range such as 17:00-21:00 and re-schedule the next notification after each delivery instead of using a daily repeating fixed notification.
 
 Tapping the notification body opens the suggestion screen.
 
