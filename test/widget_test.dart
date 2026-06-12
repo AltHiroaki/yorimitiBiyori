@@ -1,30 +1,32 @@
-// This is a basic Flutter widget test.
-//
-// To perform an interaction with a widget in your test, use the WidgetTester
-// utility in the flutter_test package. For example, you can send tap and scroll
-// gestures. You can also use WidgetTester to find child widgets in the widget
-// tree, read text, and verify that the values of widget properties are correct.
-
-import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:yorimiti_biyori/main.dart';
+import 'package:yorimiti_biyori/src/app/yorimiti_biyori_app.dart';
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
-    await tester.pumpWidget(const MyApp());
+  testWidgets('アプリが起動して提案タブが表示される', (WidgetTester tester) async {
+    await tester.pumpWidget(const YorimitiBiyoriApp());
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
+    // 提案タブ（トップ画面）の内容
+    expect(find.text('よりみち日和'), findsOneWidget);
+    expect(find.text('空いた時間に、小さなよりみちを。'), findsOneWidget);
+    expect(find.text('やってみる'), findsOneWidget);
+    expect(find.text('別の提案'), findsOneWidget);
+  });
 
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
-    await tester.pump();
+  testWidgets('ボトムナビゲーションは提案・履歴・設定の3タブ', (WidgetTester tester) async {
+    await tester.pumpWidget(const YorimitiBiyoriApp());
 
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
+    expect(find.text('提案'), findsOneWidget);
+    expect(find.text('履歴'), findsOneWidget);
+    expect(find.text('設定'), findsOneWidget);
+  });
+
+  testWidgets('履歴タブに切り替えると空状態が表示される', (WidgetTester tester) async {
+    await tester.pumpWidget(const YorimitiBiyoriApp());
+
+    await tester.tap(find.text('履歴'));
+    await tester.pumpAndSettle();
+
+    expect(find.text('まだ履歴はありません'), findsOneWidget);
   });
 }

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import '../pages/history_page.dart';
-import '../pages/home_page.dart';
 import '../pages/settings_page.dart';
 import '../pages/suggestion_page.dart';
 
@@ -14,7 +13,8 @@ class YorimitiBiyoriApp extends StatelessWidget {
       title: 'よりみち日和',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF0F6B4F)),
+        // UI プロトタイプのグリーン基調（primary #3F6F44）に合わせる。
+        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF3F6F44)),
         useMaterial3: true,
       ),
       home: const AppShell(),
@@ -22,6 +22,7 @@ class YorimitiBiyoriApp extends StatelessWidget {
   }
 }
 
+/// UI プロトタイプどおりの 3 タブ構成。ホーム画面は持たず、提案タブをトップにする。
 class AppShell extends StatefulWidget {
   const AppShell({super.key});
 
@@ -33,7 +34,6 @@ class _AppShellState extends State<AppShell> {
   int _currentIndex = 0;
 
   static const _pages = <Widget>[
-    HomePage(),
     SuggestionPage(),
     HistoryPage(),
     SettingsPage(),
@@ -49,11 +49,6 @@ class _AppShellState extends State<AppShell> {
           setState(() => _currentIndex = index);
         },
         destinations: const [
-          NavigationDestination(
-            icon: Icon(Icons.home_outlined),
-            selectedIcon: Icon(Icons.home),
-            label: 'ホーム',
-          ),
           NavigationDestination(
             icon: Icon(Icons.lightbulb_outline),
             selectedIcon: Icon(Icons.lightbulb),
