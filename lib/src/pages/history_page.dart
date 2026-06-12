@@ -10,8 +10,8 @@ class HistoryPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const ListView(
-      padding: EdgeInsets.all(20),
+    return ListView(
+      padding: const EdgeInsets.all(20),
       children: [
         Text(
           '履歴',
