@@ -200,15 +200,15 @@ yorimitiBiyori/
 │  │  └─ 要件定義.md
 │  ├─ planning/
 │  │  ├─ 実装計画.md
-│  │  └─ これからやること.md
+│  │  ├─ これからやること.md
+│  │  └─ 工程計画.md
 │  ├─ setup/
 │  │  ├─ 環境構築手順.md
 │  │  └─ GitHubEducation申請手順.md
 │  ├─ git/
 │  │  ├─ GitHub開発フロー.md
-│  │  ├─ Git使い方メモ.md
-│  │  ├─ Gitの動作理由メモ.md
-│  │  └─ VSCodeGit操作ガイド.md
+│  │  ├─ Git操作ガイド.md
+│  │  └─ Gitの動作理由メモ.md
 │  └─ tech/
 │     ├─ Flutter技術解説.md
 │     ├─ AI・バックエンド・データベース導入ガイド.md
@@ -282,7 +282,7 @@ flutter test
 | 開発者向けのコーディング規則の説明 | [コーディング規則の考え方](./docs/rules/コーディング規則の考え方.md) |
 | ファイル分けを行う理由の説明 | [ファイル分けを行う理由](./docs/rules/ファイル分けを行う理由.md) |
 | Issue・Branch・Pull Request を使う理由 | [GitHub 開発フロー](./docs/git/GitHub開発フロー.md) |
-| VS Code で Git を操作する方法 | [VS Code Git 操作ガイド](./docs/git/VSCodeGit操作ガイド.md) |
+| VS Code で Git を操作する方法 | [Git 操作ガイド](./docs/git/Git操作ガイド.md) |
 
 ---
 
@@ -293,6 +293,7 @@ flutter test
 | 環境構築、起動方法、エミュレータ確認 | [環境構築手順](./docs/setup/環境構築手順.md) |
 | 次に何をやるか知りたい | [これからやること](./docs/planning/これからやること.md) |
 | 何から実装すればよいか | [実装計画](./docs/planning/実装計画.md) |
+| Issue をどの順番で立てればよいか | [工程計画](./docs/planning/工程計画.md) |
 | アプリの仕様を確認したい | [仕様書](./docs/spec/仕様書.md)（詳細）/ [仕様要約](./docs/spec/仕様要約.md)（短縮版） |
 | 要件を確認したい | [要件定義](./docs/spec/要件定義.md) |
 | Flutter を選ぶ理由や技術構成を確認したい | [Flutter 技術解説](./docs/tech/Flutter技術解説.md) |
@@ -302,8 +303,8 @@ flutter test
 | コーディング規則の理由を確認したい | [コーディング規則の考え方](./docs/rules/コーディング規則の考え方.md) |
 | ファイル分けの理由を確認したい | [ファイル分けを行う理由](./docs/rules/ファイル分けを行う理由.md) |
 | Issue・Branch・Pull Request の理由を確認したい | [GitHub 開発フロー](./docs/git/GitHub開発フロー.md) |
-| Git のコマンドを確認したい | [Git 使い方メモ](./docs/git/Git使い方メモ.md) / [Git の動作理由メモ](./docs/git/Gitの動作理由メモ.md) |
-| VS Code で Git 操作をしたい | [VS Code Git 操作ガイド](./docs/git/VSCodeGit操作ガイド.md) |
+| Git のコマンドを確認したい | [Git 操作ガイド](./docs/git/Git操作ガイド.md) / [Git の動作理由メモ](./docs/git/Gitの動作理由メモ.md) |
+| VS Code で Git 操作をしたい | [Git 操作ガイド](./docs/git/Git操作ガイド.md) |
 | AI agent に守らせる規則を確認したい | [AI Agent Rules](./docs/rules/AGENTS.md) |
 | GitHub Education に応募したい | [GitHub Education 申請手順](./docs/setup/GitHubEducation申請手順.md) |
 
@@ -327,6 +328,7 @@ flutter test
 
 - [これからやること](./docs/planning/これからやること.md)
 - [実装計画](./docs/planning/実装計画.md)
+- [工程計画（Issue 化用ロードマップ）](./docs/planning/工程計画.md)
 - [仕様書](./docs/spec/仕様書.md)
 
 ---

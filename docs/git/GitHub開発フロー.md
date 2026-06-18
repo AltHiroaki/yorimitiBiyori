@@ -431,17 +431,7 @@ Close #12
 10. 問題なければ merge する
 ```
 
-VS Code を使う場合は、次の操作に対応します。
-
-| 手順 | VS Code / GitHub での操作 |
-|---|---|
-| main を最新にする | VS Code で Pull / Sync Changes |
-| branch を作る | 左下のブランチ名 → Create new branch |
-| 差分を見る | Source Control で変更ファイルをクリック |
-| stage する | ファイル横の `+` |
-| commit する | message を書いて Commit |
-| push する | Push / Sync Changes |
-| Pull Request を作る | GitHub 上で Compare & pull request |
+コマンドと VS Code 操作の対応は [Git 操作ガイド](./Git操作ガイド.md) にまとめています。
 
 ---
 
