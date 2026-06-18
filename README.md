@@ -18,10 +18,10 @@ MVP では **Android 版のみ**を実装・検証対象にします。iOS は M
 
 | 正本 | 担当する内容 |
 |---|---|
-| 企画書（[docs/企画書.md](./docs/企画書.md)・提出版 PDF） | コンセプト、データ設計（行動カタログ）、処理フロー、発展方針 |
+| 企画書（[docs/spec/企画書.md](./docs/spec/企画書.md)・提出版 PDF） | コンセプト、データ設計（行動カタログ）、処理フロー、発展方針 |
 | [よりみち日和 UIプロトタイプ/](./よりみち日和%20UIプロトタイプ/) | 画面構成、UI 文言、操作フロー（Figma 書き出しの React プロトタイプ。**参照専用**） |
 
-実装者向けの要約は [仕様要約](./docs/仕様要約.md) にまとめています。
+実装者向けの要約は [仕様要約](./docs/spec/仕様要約.md) にまとめています。
 
 ---
 
@@ -89,7 +89,7 @@ MVP では **Android 版のみ**を実装・検証対象にします。iOS は M
 
 詳細は以下を参照してください。
 
-- [iOS 導入方針と確認環境に関する懸念](./docs/iOS導入方針と確認環境の懸念.md)
+- [iOS 導入方針と確認環境に関する懸念](./docs/tech/iOS導入方針と確認環境の懸念.md)
 
 ---
 
@@ -109,9 +109,9 @@ MVP では **Android 版のみ**を実装・検証対象にします。iOS は M
 
 詳細は以下を参照してください。
 
-- [Flutter 技術解説](./docs/Flutter技術解説.md)
-- [AI・バックエンド・データベース導入ガイド](./docs/AI・バックエンド・データベース導入ガイド.md)
-- [デザイン参考サイト集](./docs/デザイン参考サイト集.md)
+- [Flutter 技術解説](./docs/tech/Flutter技術解説.md)
+- [AI・バックエンド・データベース導入ガイド](./docs/tech/AI・バックエンド・データベース導入ガイド.md)
+- [デザイン参考サイト集](./docs/tech/デザイン参考サイト集.md)
 
 ---
 
@@ -144,7 +144,7 @@ AI API キーを Flutter アプリに直接入れないため、Claude API は C
 
 詳細は以下を参照してください。
 
-- [AI・バックエンド・データベース導入ガイド](./docs/AI・バックエンド・データベース導入ガイド.md)
+- [AI・バックエンド・データベース導入ガイド](./docs/tech/AI・バックエンド・データベース導入ガイド.md)
 
 ---
 
@@ -168,7 +168,7 @@ UI プロトタイプ（`よりみち日和 UIプロトタイプ/`）の 3 タ�
 ```text
 yorimitiBiyori/
 ├─ README.md
-├─ CLAUDE.md                  ← AI agent 向けの入口（docs/AGENTS.md へ誘導）
+├─ CLAUDE.md                  ← AI agent 向けの入口（docs/rules/AGENTS.md へ誘導）
 ├─ pubspec.yaml
 ├─ analysis_options.yaml
 ├─ assets/
@@ -188,26 +188,32 @@ yorimitiBiyori/
 ├─ test/
 │  └─ widget_test.dart
 ├─ docs/
-│  ├─ AGENTS.md
-│  ├─ SKILL.md
-│  ├─ 仕様書.md
-│  ├─ 仕様要約.md
-│  ├─ 要件定義.md
-│  ├─ 実装計画.md
-│  ├─ これからやること.md
-│  ├─ 企画書.md
-│  ├─ 環境構築手順.md
-│  ├─ Flutter技術解説.md
-│  ├─ AI・バックエンド・データベース導入ガイド.md
-│  ├─ iOS導入方針と確認環境の懸念.md
-│  ├─ コーディング規則の考え方.md
-│  ├─ ファイル分けを行う理由.md
-│  ├─ デザイン参考サイト集.md
-│  ├─ GitHub開発フロー.md
-│  ├─ GitHubEducation申請手順.md
-│  ├─ Git使い方メモ.md
-│  ├─ Gitの動作理由メモ.md
-│  └─ VSCodeGit操作ガイド.md
+│  ├─ rules/
+│  │  ├─ AGENTS.md
+│  │  ├─ SKILL.md
+│  │  ├─ コーディング規則の考え方.md
+│  │  └─ ファイル分けを行う理由.md
+│  ├─ spec/
+│  │  ├─ 企画書.md
+│  │  ├─ 仕様書.md
+│  │  ├─ 仕様要約.md
+│  │  └─ 要件定義.md
+│  ├─ planning/
+│  │  ├─ 実装計画.md
+│  │  └─ これからやること.md
+│  ├─ setup/
+│  │  ├─ 環境構築手順.md
+│  │  └─ GitHubEducation申請手順.md
+│  ├─ git/
+│  │  ├─ GitHub開発フロー.md
+│  │  ├─ Git使い方メモ.md
+│  │  ├─ Gitの動作理由メモ.md
+│  │  └─ VSCodeGit操作ガイド.md
+│  └─ tech/
+│     ├─ Flutter技術解説.md
+│     ├─ AI・バックエンド・データベース導入ガイド.md
+│     ├─ iOS導入方針と確認環境の懸念.md
+│     └─ デザイン参考サイト集.md
 ├─ よりみち日和 UIプロトタイプ/   ← Figma 書き出しの React プロトタイプ（参照専用）
 ├─ android/                      ← flutter create --platforms=android . で生成
 ├─ archive/
@@ -241,7 +247,7 @@ flutter create --platforms=ios .
 
 詳しい手順は以下を参照してください。
 
-- [環境構築手順](./docs/環境構築手順.md)
+- [環境構築手順](./docs/setup/環境構築手順.md)
 
 Flutter 公式サイトが見にくい場合は、まず上の環境構築手順にある「Windows + VS Code で入れる最短手順」だけ確認してください。このリポジトリの MVP では Android 開発に必要な内容へ絞っています。
 
@@ -267,16 +273,16 @@ flutter test
 
 | 用途 | 見るページ |
 |---|---|
-| AI agent に読ませる汎用コーディング規則 | [General Coding Skill](./docs/SKILL.md) |
-| AI agent に読ませるよりみち日和専用規則 | [AI Agent Rules](./docs/AGENTS.md) |
-| Flutter 技術構成と選定理由 | [Flutter 技術解説](./docs/Flutter技術解説.md) |
-| AI・バックエンド・DB導入方針 | [AI・バックエンド・データベース導入ガイド](./docs/AI・バックエンド・データベース導入ガイド.md) |
-| iOS 導入方針と確認環境の懸念 | [iOS 導入方針と確認環境に関する懸念](./docs/iOS導入方針と確認環境の懸念.md) |
-| Material 3 やスマホ UI の参考例 | [デザイン参考サイト集](./docs/デザイン参考サイト集.md) |
-| 開発者向けのコーディング規則の説明 | [コーディング規則の考え方](./docs/コーディング規則の考え方.md) |
-| ファイル分けを行う理由の説明 | [ファイル分けを行う理由](./docs/ファイル分けを行う理由.md) |
-| Issue・Branch・Pull Request を使う理由 | [GitHub 開発フロー](./docs/GitHub開発フロー.md) |
-| VS Code で Git を操作する方法 | [VS Code Git 操作ガイド](./docs/VSCodeGit操作ガイド.md) |
+| AI agent に読ませる汎用コーディング規則 | [General Coding Skill](./docs/rules/SKILL.md) |
+| AI agent に読ませるよりみち日和専用規則 | [AI Agent Rules](./docs/rules/AGENTS.md) |
+| Flutter 技術構成と選定理由 | [Flutter 技術解説](./docs/tech/Flutter技術解説.md) |
+| AI・バックエンド・DB導入方針 | [AI・バックエンド・データベース導入ガイド](./docs/tech/AI・バックエンド・データベース導入ガイド.md) |
+| iOS 導入方針と確認環境の懸念 | [iOS 導入方針と確認環境に関する懸念](./docs/tech/iOS導入方針と確認環境の懸念.md) |
+| Material 3 やスマホ UI の参考例 | [デザイン参考サイト集](./docs/tech/デザイン参考サイト集.md) |
+| 開発者向けのコーディング規則の説明 | [コーディング規則の考え方](./docs/rules/コーディング規則の考え方.md) |
+| ファイル分けを行う理由の説明 | [ファイル分けを行う理由](./docs/rules/ファイル分けを行う理由.md) |
+| Issue・Branch・Pull Request を使う理由 | [GitHub 開発フロー](./docs/git/GitHub開発フロー.md) |
+| VS Code で Git を操作する方法 | [VS Code Git 操作ガイド](./docs/git/VSCodeGit操作ガイド.md) |
 
 ---
 
@@ -284,22 +290,22 @@ flutter test
 
 | 分からないこと | 見るページ |
 |---|---|
-| 環境構築、起動方法、エミュレータ確認 | [環境構築手順](./docs/環境構築手順.md) |
-| 次に何をやるか知りたい | [これからやること](./docs/これからやること.md) |
-| 何から実装すればよいか | [実装計画](./docs/実装計画.md) |
-| アプリの仕様を確認したい | [仕様書](./docs/仕様書.md)（詳細）/ [仕様要約](./docs/仕様要約.md)（短縮版） |
-| 要件を確認したい | [要件定義](./docs/要件定義.md) |
-| Flutter を選ぶ理由や技術構成を確認したい | [Flutter 技術解説](./docs/Flutter技術解説.md) |
-| AI・バックエンド・データベース構成を確認したい | [AI・バックエンド・データベース導入ガイド](./docs/AI・バックエンド・データベース導入ガイド.md) |
-| iOS 導入方針と確認環境のリスクを確認したい | [iOS 導入方針と確認環境に関する懸念](./docs/iOS導入方針と確認環境の懸念.md) |
-| Material 3 やスマホ UI の参考サイトを確認したい | [デザイン参考サイト集](./docs/デザイン参考サイト集.md) |
-| コーディング規則の理由を確認したい | [コーディング規則の考え方](./docs/コーディング規則の考え方.md) |
-| ファイル分けの理由を確認したい | [ファイル分けを行う理由](./docs/ファイル分けを行う理由.md) |
-| Issue・Branch・Pull Request の理由を確認したい | [GitHub 開発フロー](./docs/GitHub開発フロー.md) |
-| Git のコマンドを確認したい | [Git 使い方メモ](./docs/Git使い方メモ.md) / [Git の動作理由メモ](./docs/Gitの動作理由メモ.md) |
-| VS Code で Git 操作をしたい | [VS Code Git 操作ガイド](./docs/VSCodeGit操作ガイド.md) |
-| AI agent に守らせる規則を確認したい | [AI Agent Rules](./docs/AGENTS.md) |
-| GitHub Education に応募したい | [GitHub Education 申請手順](./docs/GitHubEducation申請手順.md) |
+| 環境構築、起動方法、エミュレータ確認 | [環境構築手順](./docs/setup/環境構築手順.md) |
+| 次に何をやるか知りたい | [これからやること](./docs/planning/これからやること.md) |
+| 何から実装すればよいか | [実装計画](./docs/planning/実装計画.md) |
+| アプリの仕様を確認したい | [仕様書](./docs/spec/仕様書.md)（詳細）/ [仕様要約](./docs/spec/仕様要約.md)（短縮版） |
+| 要件を確認したい | [要件定義](./docs/spec/要件定義.md) |
+| Flutter を選ぶ理由や技術構成を確認したい | [Flutter 技術解説](./docs/tech/Flutter技術解説.md) |
+| AI・バックエンド・データベース構成を確認したい | [AI・バックエンド・データベース導入ガイド](./docs/tech/AI・バックエンド・データベース導入ガイド.md) |
+| iOS 導入方針と確認環境のリスクを確認したい | [iOS 導入方針と確認環境に関する懸念](./docs/tech/iOS導入方針と確認環境の懸念.md) |
+| Material 3 やスマホ UI の参考サイトを確認したい | [デザイン参考サイト集](./docs/tech/デザイン参考サイト集.md) |
+| コーディング規則の理由を確認したい | [コーディング規則の考え方](./docs/rules/コーディング規則の考え方.md) |
+| ファイル分けの理由を確認したい | [ファイル分けを行う理由](./docs/rules/ファイル分けを行う理由.md) |
+| Issue・Branch・Pull Request の理由を確認したい | [GitHub 開発フロー](./docs/git/GitHub開発フロー.md) |
+| Git のコマンドを確認したい | [Git 使い方メモ](./docs/git/Git使い方メモ.md) / [Git の動作理由メモ](./docs/git/Gitの動作理由メモ.md) |
+| VS Code で Git 操作をしたい | [VS Code Git 操作ガイド](./docs/git/VSCodeGit操作ガイド.md) |
+| AI agent に守らせる規則を確認したい | [AI Agent Rules](./docs/rules/AGENTS.md) |
+| GitHub Education に応募したい | [GitHub Education 申請手順](./docs/setup/GitHubEducation申請手順.md) |
 
 ---
 
@@ -319,9 +325,9 @@ flutter test
 
 詳細は以下を参照してください。
 
-- [これからやること](./docs/これからやること.md)
-- [実装計画](./docs/実装計画.md)
-- [仕様書](./docs/仕様書.md)
+- [これからやること](./docs/planning/これからやること.md)
+- [実装計画](./docs/planning/実装計画.md)
+- [仕様書](./docs/spec/仕様書.md)
 
 ---
 

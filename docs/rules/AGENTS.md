@@ -13,16 +13,16 @@ The rules below are written in English so they can be copied directly into AI ag
 
 This file defines project-specific rules for `yorimitiBiyori`.
 
-For general coding quality rules, also follow `docs/SKILL.md`.
+For general coding quality rules, also follow `docs/rules/SKILL.md`.
 
 ## Source of Truth
 
 The specification source of truth is:
 
-1. The project proposal (企画書, `docs/企画書.md` and the submitted PDF) — concept, data catalog design, processing flow, future phases.
+1. The project proposal (企画書, `docs/spec/企画書.md` and the submitted PDF) — concept, data catalog design, processing flow, future phases.
 2. The UI prototype in `よりみち日和 UIプロトタイプ/` — screen structure, UI copy, interaction flow. It is a Figma-exported React project and is **reference only**. Never copy React code or dependencies into the Flutter app.
 
-When they conflict, follow the prototype for screens and UI text, and the proposal for data and logic. The implementer summary is `docs/仕様要約.md`.
+When they conflict, follow the prototype for screens and UI text, and the proposal for data and logic. The implementer summary is `docs/spec/仕様要約.md`.
 
 ## Product Goal
 
