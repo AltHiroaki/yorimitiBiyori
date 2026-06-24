@@ -63,12 +63,12 @@ Bottom NavigationBar with exactly 3 tabs. There is **no home screen**; the sugge
 
 There is **no difficulty selection UI**. Per the proposal, the weight of an action is expressed through the time choice.
 
-- Time: 5 / 15 / 30 / 60 minutes (FilterChip, single select). Notification actions offer only 15 / 30 / 60; 5 minutes is in-app only.
-- Budget: 0円 / 500円以内 / 1000円以内 / 指定なし
-- Distance: その場でできる / 徒歩5分以内 / 徒歩15分以内 / 少し遠くてもよい
+- Time: 指定なし / 5 / 15 / 30 / 60 minutes (dropdown, single select). Notification actions offer only 15 / 30 / 60; 5 minutes is in-app only.
+- Budget: 指定なし / 0円 / 500円以内 / 1000円以内 (dropdown, single select)
+- Distance: 指定なし / その場でできる / 徒歩5分以内 / 徒歩15分以内 / 少し遠くてもよい (dropdown, single select)
 - Interest categories (multi-select, 10): 散歩, 音楽, 読書, 学習, カフェ, 写真, 整理, 休憩, 運動, 買い物
 
-Default conditions: 15分, 500円以内, 徒歩15分以内, categories [散歩, カフェ, 読書].
+Default display: time, budget, and distance are 指定なし until the user opens a dropdown and selects another value. Unspecified conditions must be shown as 指定なし in the condition card and must not filter candidates. Default categories are [散歩, カフェ, 読書].
 
 Time selected from a notification action is a temporary condition for that session; it must not overwrite the saved suggestion settings.
 
@@ -232,9 +232,9 @@ The suggestion logic should use:
 Rules:
 
 - Load suggestions from `assets/data/suggestions.json`.
-- Filter: `min_minutes <= selectedMinutes`.
-- Filter: `budget_yen <=` the budget cap (no cap for 指定なし).
-- Filter: `location_type` within the selected distance (inclusion order: spot ⊂ walk5 ⊂ walk15 ⊂ far).
+- Filter: if time is specified, `min_minutes <= selectedMinutes`; if time is 指定なし, do not filter by time.
+- Filter: if budget is specified, `budget_yen <=` the budget cap; if budget is 指定なし, do not filter by budget.
+- Filter: if distance is specified, `location_type` must be within the selected distance (inclusion order: spot ⊂ walk5 ⊂ walk15 ⊂ far); if distance is 指定なし, do not filter by distance.
 - Filter: `category` or `tags` overlap with the user's selected categories.
 - Exclude the last 3 shown suggestion ids (`recent_suggestion_ids`).
 - Select one suggestion by weighted random (`weight`).
