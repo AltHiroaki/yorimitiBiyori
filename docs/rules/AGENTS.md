@@ -19,24 +19,26 @@ For general coding quality rules, also follow `docs/rules/SKILL.md`.
 
 The specification source of truth is:
 
-1. The project proposal (企画書, `docs/spec/企画書.md` and the submitted PDF) — concept, data catalog design, processing flow, future phases.
+1. The project proposal (企画書 ver5, `docs/spec/企画書.md` and the submitted PDF) — concept, **two-stage model (category → per-category detail settings)**, data catalog design, processing flow, future phases.
 2. The UI prototype in `よりみち日和 UIプロトタイプ/` — screen structure, UI copy, interaction flow. It is a Figma-exported React project and is **reference only**. Never copy React code or dependencies into the Flutter app.
 
-When they conflict, follow the prototype for screens and UI text, and the proposal for data and logic. The implementer summary is `docs/spec/仕様要約.md`.
+When they conflict, follow the proposal for the suggestion-conditions model (two-stage), data, and logic, and the prototype for other screens and UI text. The implementation spec is `docs/spec/仕様書.md` and the summary is `docs/spec/仕様要約.md`.
+
+**Note:** the prototype's `SuggestSettingsScreen.tsx` still uses the old universal model (time / budget / distance) and must be updated to the two-stage model; follow `docs/spec/仕様書.md` §3.4, not the old prototype screen.
 
 ## Product Goal
 
 `yorimitiBiyori` is a Flutter mobile app. The MVP targets Android only; iOS support is a post-MVP advanced phase.
 
-The app suggests one small "yorimichi" (detour) action that fits the user's interest categories and current conditions (time, budget, travel distance) during short free-time gaps.
+The app suggests one small "yorimichi" (detour) action that fits the user's interest categories and per-category detail settings during short free-time gaps. The model is **two-stage**: the user picks categories, then refines each with category-specific detail settings (genre, mood, time, budget, source, etc.).
 
 The core experience is:
 
 1. On first launch the user completes onboarding: welcome modal → interest category selection → notification permission.
-2. The app sends a daily local notification at the configured time (default 17:30).
-3. The notification offers time actions: 15, 30, and 60 minutes.
-4. The user taps a time action (or the notification body), which opens the suggestion screen.
-5. The suggestion screen shows one matching suggestion with title, description, tags, and time.
+2. In 提案設定, the user picks categories, then sets each category's detail settings.
+3. The app sends a daily local notification at the configured time (default 17:30). The wording is a soft invitation that does NOT name a duration (e.g. "暇な時間って存在しますか？"). There are no time-selection notification actions.
+4. The user taps the notification body, which opens the suggestion screen (suggestion produced from the saved category + detail settings).
+5. The suggestion screen shows one matching suggestion with title, description, tags, where-to-try, and budget.
 6. "やってみる" opens a completion modal with feedback chips (よかった / 普通 / 合わなかった) and saves a done record.
 7. "別の提案" records the current suggestion as skipped and re-draws with the same conditions.
 
@@ -52,35 +54,36 @@ Do not implement or generate iOS platform files for the MVP unless explicitly re
 
 Bottom NavigationBar with exactly 3 tabs. There is **no home screen**; the suggestion tab is the top screen.
 
-- Tab 1 提案 (suggestion): current-conditions card + "今日のよりみち" suggestion card + info card
+- Tab 1 提案 (suggestion): current-conditions card (selected categories + active detail settings) + "今日のよりみち" suggestion card (title, description, tags, where-to-try, budget) + info card
 - Tab 2 履歴 (history): summary (done count / skipped count / total minutes) + recent records list; empty state with CTA to the suggestion tab
 - Tab 3 設定 (settings): Google account row (advanced phase, show as 未連携), suggestion settings row, interest categories, notification time, notification toggle, history deletion with inline confirm, about
-- Sub screen 提案設定 (suggestion settings): time / budget / distance / categories editor with AppBar back button, reachable from both the suggestion tab and the settings tab
+- Sub screen 提案設定 (suggestion settings): **two-stage** editor — stage 1 category multi-select, stage 2 per-category detail-setting groups — with AppBar back button, reachable from both the suggestion tab and the settings tab
 - Onboarding (first launch only): welcome modal → category selection (3-step progress indicator) → notification permission dialog (allow / later)
 - Completion modal: ModalBottomSheet after "やってみる" with 3 feedback choices and "履歴に保存"
 
-## Suggestion Conditions
+## Suggestion Conditions (two-stage)
 
-There is **no difficulty selection UI**. Per the proposal, the weight of an action is expressed through the time choice.
+There is **no difficulty selection UI, no universal time condition, and no travel-distance condition** (all removed from the old model). Conditions are set in two stages:
 
-- Time: 指定なし / 5 / 15 / 30 / 60 minutes (dropdown, single select). Notification actions offer only 15 / 30 / 60; 5 minutes is in-app only.
-- Budget: 指定なし / 0円 / 500円以内 / 1000円以内 (dropdown, single select)
-- Distance: 指定なし / その場でできる / 徒歩5分以内 / 徒歩15分以内 / 少し遠くてもよい (dropdown, single select)
-- Interest categories (multi-select, 10): 散歩, 音楽, 読書, 学習, カフェ, 写真, 整理, 休憩, 運動, 買い物
+1. **Stage 1 — category selection** (multi-select, 5 categories): music 音楽 / cook 料理 / read 読書 / movie 映画 / walk 散歩
+2. **Stage 2 — per-category detail settings** (each group is multi-select; unselected = 指定なし = no filtering):
+   - 音楽: 気分(作業向け/リラックス/盛り上がりたい) ・ ジャンル(ポップス/ジャズ/クラシック/洋楽) ・ 費用(有料/無料/問わない)
+   - 料理: 栄養・ダイエット(高タンパク/低糖質/野菜多め/カロリーオフ) ・ ジャンル(和食/洋食/中華/イタリアン/アジアン/丼/作り置き/ガッツリ)
+   - 読書: ジャンル(エッセイ/小説/ノンフィクション/詩集) ・ 読書時間(10分以内/30分/じっくり) ・ 入手・予算(図書館/電子書籍/〜500円/〜1000円)
+   - 映画: 気分(泣ける/笑える/考えさせる) ・ 上映時間(90分以内/問わない) ・ 視聴先(Netflix/Amazon Prime/問わない)
+   - 散歩 (supplemented; not specified in the proposal): 目的(気分転換/運動/発見) ・ 時間(15分以内/30分/たっぷり)
 
-Default display: time, budget, and distance are 指定なし until the user opens a dropdown and selects another value. Unspecified conditions must be shown as 指定なし in the condition card and must not filter candidates. Default categories are [散歩, カフェ, 読書].
-
-Time selected from a notification action is a temporary condition for that session; it must not overwrite the saved suggestion settings.
+See `docs/spec/仕様書.md` §3.4 for the master table. Default categories are [music, read, walk]; detail settings default to all-unselected (指定なし). Categories and detail-setting groups must be driven from a master definition so more can be added later (運動, 芸術, etc.).
 
 ## MVP Features
 
 The MVP includes only:
 
 - onboarding flow (welcome → categories → notification permission)
-- interest category registration (10 categories, multi-select)
-- suggestion settings screen (time / budget / distance / categories)
-- local notification at a configured time, with 15 / 30 / 60 minute actions
-- suggestion display matching the conditions
+- interest category registration (5 categories, multi-select)
+- suggestion settings screen (two-stage: category selection → per-category detail settings)
+- local notification at a configured time, soft wording without naming a duration, no time-selection actions
+- suggestion display matching the category + detail-setting conditions (card shows where-to-try and budget)
 - re-suggestion ("別の提案", records the shown suggestion as skipped)
 - completion modal with feedback (good / normal / bad) saving a done record
 - history display (done count, skipped count, total minutes, recent list, empty state)
@@ -186,7 +189,9 @@ Move these operations out of page widgets when they grow:
 
 ## Suggestion Data
 
-Manage suggestion candidates in `assets/data/suggestions.json`. Target 50+ entries at initial release (per the proposal).
+Manage suggestion candidates in `assets/data/suggestions.json`. Grow toward 50+ entries per category as an advanced goal.
+
+> The current `assets/data/suggestions.json` is still on the OLD schema (10 categories, min/max_minutes, intensity, location_type). It must be migrated to the new schema below.
 
 When editing suggestion data:
 
@@ -194,29 +199,27 @@ When editing suggestion data:
 - titles should be short and understandable
 - descriptions should be useful to the user
 - required fields must not be missing
-- `min_minutes` must be a positive number and `min_minutes <= max_minutes`
-- `category` must be one of the 10 known category display names
-- `location_type` must be one of `spot` / `walk5` / `walk15` / `far`
+- `category` must be one of the 5 known category ids (`music` / `cook` / `read` / `movie` / `walk`)
+- `tags` holds the values that correspond to the category's detail-setting options (this is what the filter matches against)
 - `budget_yen` must be a non-negative number (0 means free)
+- `estimated_minutes` is the rough duration used for history total-minutes aggregation
+- there is **no** `min_minutes` / `max_minutes` / `intensity` / `location_type`
 - update Dart models when the JSON structure changes
 
-Representative data shape (per the proposal's action catalog design):
+Representative data shape:
 
 ```json
 {
-  "id": "walk_theme_15",
-  "title": "近くを15分だけ散歩する",
-  "description": "スマホをしまって、いつも通らない道を少しだけ歩いてみる。気分転換に向いた軽いよりみちです。",
-  "detail": "出発前に「今日は建物を見る」などテーマを1つ決めると、いつもの道でも発見が増えます。",
-  "category": "散歩",
-  "tags": ["気分転換", "散歩"],
-  "min_minutes": 10,
-  "max_minutes": 15,
-  "intensity": "light",
-  "location_type": "walk5",
+  "id": "music_jazz_focus",
+  "title": "作業用にジャズを1曲だけ流す",
+  "description": "歌詞のないジャズを1曲、作業や勉強のBGMにしてみる。集中したいときに向いた軽いよりみちです。",
+  "detail": "配信サービスの「作業用ジャズ」プレイリストから1曲選ぶだけでOK。",
+  "category": "music",
+  "tags": ["ジャズ", "作業向け", "無料"],
   "budget_yen": 0,
-  "where_to_try": "自宅や職場の周りで、普段曲がらない角を1つ曲がってみる。",
-  "weight": 1.0
+  "where_to_try": "音楽配信アプリで「作業用 ジャズ」と検索してプレイリストを開く。",
+  "estimated_minutes": 5,
+  "weight": 1.2
 }
 ```
 
@@ -224,18 +227,15 @@ Representative data shape (per the proposal's action catalog design):
 
 The suggestion logic should use:
 
-- selected available minutes (time)
-- budget option
-- distance option
-- registered interest categories
+- selected interest categories
+- per-category detail settings (`detail_settings`)
 
 Rules:
 
 - Load suggestions from `assets/data/suggestions.json`.
-- Filter: if time is specified, `min_minutes <= selectedMinutes`; if time is 指定なし, do not filter by time.
-- Filter: if budget is specified, `budget_yen <=` the budget cap; if budget is 指定なし, do not filter by budget.
-- Filter: if distance is specified, `location_type` must be within the selected distance (inclusion order: spot ⊂ walk5 ⊂ walk15 ⊂ far); if distance is 指定なし, do not filter by distance.
-- Filter: `category` or `tags` overlap with the user's selected categories.
+- Filter: `category` must be one of the user's selected categories.
+- Filter: for the matched category, for each detail-setting group the user has selected values in, at least one selected value must be in the suggestion's `tags` (OR within a group, AND across groups). Unselected groups do not filter. Across categories the match is OR.
+- Filter: if a budget detail-setting is selected, also apply `budget_yen <=` the cap.
 - Exclude the last 3 shown suggestion ids (`recent_suggestion_ids`).
 - Select one suggestion by weighted random (`weight`).
 - If no candidates remain, temporarily lift the recent-exclusion (still avoid showing the same suggestion twice in a row).
@@ -266,27 +266,19 @@ const settingsStorageKey = 'yorimiti_biyori_settings';
 
 ## Notification Flow
 
-The notification flow is central to the mobile app concept.
+The notification is the entry point that nudges the user to open the app. The suggestion itself is produced from the saved category + detail settings.
 
-MVP notification actions should be:
-
-- 15 minutes
-- 30 minutes
-- 60 minutes
-
-Do not add 5 minutes (or any other duration) to notification actions in the MVP because notification action limits and platform behavior should be kept simple. 5 minutes is an in-app option only.
+- The notification wording is a soft invitation that does NOT name a duration, e.g. "暇な時間って存在しますか？" / "ちょっとした空き時間、ありませんか？".
+- There are **no time-selection notification actions** (the old 15 / 30 / 60 minute actions are removed, because time is no longer a universal condition).
+- Tapping the notification body opens the suggestion screen.
 
 For the MVP, schedule notifications at the configured fixed time (default 17:30). Random notification timing within a user-selected time range is an advanced feature after the fixed-time notification flow is stable. If implemented later, use a bounded range such as 17:00-21:00 and re-schedule the next notification after each delivery instead of using a daily repeating fixed notification.
 
-Tapping the notification body opens the suggestion screen.
-
 Notification implementation order:
 
-1. Make in-app condition selection work (suggestion settings screen).
-2. Show a basic local notification.
-3. Open the suggestion screen from a notification tap.
-4. Add notification actions.
-5. Pass the selected minutes to the suggestion screen as a temporary condition.
+1. Make in-app condition selection work (two-stage suggestion settings screen).
+2. Show a basic local notification (soft, no duration in the text).
+3. Open the suggestion screen from a notification tap (using the saved conditions).
 
 If notification permission is denied, the app must remain fully usable with manual suggestions.
 
