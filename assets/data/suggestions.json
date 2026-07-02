@@ -7,6 +7,7 @@
     "category": "music",
     "tags": ["ジャズ", "作業向け", "無料"],
     "budget_yen": 0,
+    "difficulty": "やさしい",
     "where_to_try": "音楽配信アプリで「作業用 ジャズ」と検索してプレイリストを開く。",
     "estimated_minutes": 5,
     "weight": 1.2
@@ -19,6 +20,7 @@
     "category": "music",
     "tags": ["クラシック", "リラックス", "無料"],
     "budget_yen": 0,
+    "difficulty": "やさしい",
     "where_to_try": "音楽アプリで「クラシック 短い 名曲」と検索して1曲再生する。",
     "estimated_minutes": 6,
     "weight": 1.0
@@ -31,6 +33,7 @@
     "category": "music",
     "tags": ["ポップス", "盛り上がりたい", "無料"],
     "budget_yen": 0,
+    "difficulty": "やさしい",
     "where_to_try": "音楽アプリのランキングやおすすめから、知らないポップスを1曲選ぶ。",
     "estimated_minutes": 5,
     "weight": 1.0
@@ -43,6 +46,7 @@
     "category": "cook",
     "tags": ["高タンパク", "丼", "和食"],
     "budget_yen": 400,
+    "difficulty": "ふつう",
     "where_to_try": "冷蔵庫の卵・豆腐・鶏むね肉のどれかを使い、丼にまとめる。",
     "estimated_minutes": 20,
     "weight": 1.1
@@ -55,6 +59,7 @@
     "category": "cook",
     "tags": ["野菜多め", "洋食", "作り置き"],
     "budget_yen": 300,
+    "difficulty": "ふつう",
     "where_to_try": "冷蔵庫の半端な野菜を2種類選び、鍋で煮る。",
     "estimated_minutes": 25,
     "weight": 1.0
@@ -67,6 +72,7 @@
     "category": "cook",
     "tags": ["低糖質", "中華", "ガッツリ"],
     "budget_yen": 600,
+    "difficulty": "ふつう",
     "where_to_try": "卵、豚肉、キャベツなどをフライパンで炒め、塩こしょうと少しの醤油で整える。",
     "estimated_minutes": 20,
     "weight": 1.0
@@ -79,6 +85,7 @@
     "category": "read",
     "tags": ["エッセイ", "10分以内", "電子書籍", "無料"],
     "budget_yen": 0,
+    "difficulty": "やさしい",
     "where_to_try": "電子書籍アプリで気になるエッセイを開き、無料サンプルを読む。",
     "estimated_minutes": 10,
     "weight": 1.2
@@ -91,6 +98,7 @@
     "category": "read",
     "tags": ["ノンフィクション", "30分", "図書館", "無料"],
     "budget_yen": 0,
+    "difficulty": "ふつう",
     "where_to_try": "最寄りの図書館で、普段行かない棚から1冊手に取る。",
     "estimated_minutes": 30,
     "weight": 1.0
@@ -103,6 +111,7 @@
     "category": "read",
     "tags": ["詩集", "10分以内", "〜500円"],
     "budget_yen": 500,
+    "difficulty": "やさしい",
     "where_to_try": "手元の詩集、青空文庫、電子書籍のサンプルから1編選ぶ。",
     "estimated_minutes": 5,
     "weight": 0.9
@@ -115,6 +124,7 @@
     "category": "movie",
     "tags": ["笑える", "90分以内", "Netflix"],
     "budget_yen": 0,
+    "difficulty": "やさしい",
     "where_to_try": "Netflixで「コメディ」カテゴリを開き、90分以内の作品を1本保存する。",
     "estimated_minutes": 10,
     "weight": 1.0
@@ -127,6 +137,7 @@
     "category": "movie",
     "tags": ["考えさせる", "問わない", "Amazon Prime"],
     "budget_yen": 0,
+    "difficulty": "やさしい",
     "where_to_try": "Amazon Prime Videoで評価の高い作品の予告編を1本再生する。",
     "estimated_minutes": 5,
     "weight": 1.0
@@ -139,6 +150,7 @@
     "category": "movie",
     "tags": ["泣ける", "問わない", "問わない"],
     "budget_yen": 0,
+    "difficulty": "やさしい",
     "where_to_try": "配信アプリや映画レビューサイトで「泣ける 映画」と検索する。",
     "estimated_minutes": 10,
     "weight": 0.9
@@ -151,6 +163,7 @@
     "category": "walk",
     "tags": ["気分転換", "発見", "15分以内"],
     "budget_yen": 0,
+    "difficulty": "やさしい",
     "where_to_try": "自宅や学校の周りで、普段曲がらない角を1つ選ぶ。",
     "estimated_minutes": 15,
     "weight": 1.2
@@ -163,6 +176,7 @@
     "category": "walk",
     "tags": ["発見", "30分"],
     "budget_yen": 0,
+    "difficulty": "やさしい",
     "where_to_try": "通学路や駅までの道で「青いものを探す」などテーマを決める。",
     "estimated_minutes": 30,
     "weight": 1.0
@@ -175,6 +189,7 @@
     "category": "walk",
     "tags": ["運動", "15分以内"],
     "budget_yen": 0,
+    "difficulty": "ふつう",
     "where_to_try": "建物の外に出て、タイマーを15分にセットして歩く。",
     "estimated_minutes": 15,
     "weight": 1.0

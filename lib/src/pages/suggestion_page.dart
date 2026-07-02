@@ -25,12 +25,12 @@ class SuggestionPage extends StatelessWidget {
         const SizedBox(height: 16),
         const SectionCard(
           title: '現在の提案条件',
-          description: '15分 / 500円以内 / 徒歩15分以内 / 散歩・カフェ・読書。今後ここに保存済みの条件を表示し、「提案設定」画面から変更できるようにします。',
+          description: '音楽・読書・映画 / ジャンル：ジャズ。今後ここに保存済みのカテゴリと詳細設定を表示し、「提案設定」画面から変更できるようにします。',
         ),
         const SizedBox(height: 12),
         const SectionCard(
           title: '今日のよりみち',
-          description: '近くを15分だけ散歩する — スマホをしまって、いつも通らない道を少しだけ歩いてみる。今後ここに条件に合う提案を1件表示します。',
+          description: '作業用にジャズを1曲だけ流す — いつもの曲から少しだけ角度を変えてみる。今後ここに条件に合う提案を1件表示します。',
         ),
         const SizedBox(height: 16),
         FilledButton(
@@ -45,7 +45,7 @@ class SuggestionPage extends StatelessWidget {
         const SizedBox(height: 16),
         const SectionCard(
           title: '使い方',
-          description: '通知をタップすると選んだ時間の提案が表示されます。条件を変えたいときは「提案設定」から調整できます。',
+          description: '通知をタップすると保存した条件のよりみちが表示されます。条件を変えたいときは「提案設定」から調整できます。',
         ),
       ],
     );

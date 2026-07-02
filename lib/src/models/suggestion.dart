@@ -8,6 +8,7 @@ class Suggestion {
     required this.category,
     required this.tags,
     required this.budgetYen,
+    required this.difficulty,
     required this.whereToTry,
     required this.estimatedMinutes,
     required this.weight,
@@ -20,6 +21,9 @@ class Suggestion {
   final String category;
   final List<String> tags;
   final int budgetYen;
+
+  /// 難易度の目安（企画書 ver6 の行動カタログ項目）。例：`やさしい` / `ふつう` / `しっかり`。
+  final String difficulty;
   final String whereToTry;
   final int estimatedMinutes;
   final double weight;
@@ -38,6 +42,7 @@ class Suggestion {
             .map((tag) => tag as String)
             .toList(),
         budgetYen: (json['budget_yen'] as num).toInt(),
+        difficulty: json['difficulty'] as String,
         whereToTry: json['where_to_try'] as String,
         estimatedMinutes: (json['estimated_minutes'] as num).toInt(),
         weight: (json['weight'] as num).toDouble(),
@@ -56,6 +61,7 @@ class Suggestion {
       'category': category,
       'tags': tags,
       'budget_yen': budgetYen,
+      'difficulty': difficulty,
       'where_to_try': whereToTry,
       'estimated_minutes': estimatedMinutes,
       'weight': weight,

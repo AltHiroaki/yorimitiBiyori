@@ -1,5 +1,6 @@
 /// 初回起動時・保存データが壊れているときに使うデフォルトの選択カテゴリ。
-const List<String> defaultSelectedCategoryIds = ['music', 'read', 'walk'];
+/// 企画書 ver6 の MVP コアカテゴリ（音楽・料理・読書・映画）から選ぶ。
+const List<String> defaultSelectedCategoryIds = ['music', 'read', 'movie'];
 
 const String defaultNotificationTime = '17:30';
 
