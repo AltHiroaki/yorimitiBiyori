@@ -26,12 +26,17 @@ class InterestCategory {
   final List<DetailSettingGroup> detailSettingGroups;
 }
 
-/// 5カテゴリとカテゴリ別詳細設定のマスター定義（仕様書 3.4 の表を正とする）。
+/// MVP カテゴリとカテゴリ別詳細設定のマスター定義（仕様書 3.4 の表を正とする）。
+///
+/// 企画書 ver6 に合わせ、MVP のコアカテゴリは音楽・料理・読書・映画の4種類とし、
+/// 各カテゴリの詳細設定は「ジャンル（映画は気分）」1グループのみに絞る。
+/// 言語・気分・栄養素・時間・予算・視聴先などの複数項目での絞り込みは発展機能とする。
 ///
 /// カテゴリを増やす場合はこのリストに追加するだけでよい。
 class InterestCategories {
   InterestCategories._();
 
+  /// MVP のコアカテゴリ（提案設定・オンボーディングの選択肢はこれを正とする）。
   static const List<InterestCategory> all = [
     InterestCategory(
       id: 'music',
@@ -39,19 +44,9 @@ class InterestCategories {
       emoji: '🎵',
       detailSettingGroups: [
         DetailSettingGroup(
-          id: 'mood',
-          label: '気分',
-          options: ['作業向け', 'リラックス', '盛り上がりたい'],
-        ),
-        DetailSettingGroup(
           id: 'genre',
           label: 'ジャンル',
           options: ['ポップス', 'ジャズ', 'クラシック', '洋楽'],
-        ),
-        DetailSettingGroup(
-          id: 'cost',
-          label: '費用',
-          options: ['有料', '無料', '問わない'],
         ),
       ],
     ),
@@ -61,14 +56,9 @@ class InterestCategories {
       emoji: '🍳',
       detailSettingGroups: [
         DetailSettingGroup(
-          id: 'nutrition',
-          label: '栄養・ダイエット',
-          options: ['高タンパク', '低糖質', '野菜多め', 'カロリーオフ'],
-        ),
-        DetailSettingGroup(
           id: 'genre',
-          label: 'ジャンル',
-          options: ['和食', '洋食', '中華', 'イタリアン', 'アジアン', '丼', '作り置き', 'ガッツリ'],
+          label: '味覚・ジャンル',
+          options: ['和食', '洋食', '中華', 'イタリアン', 'アジア風', '激辛', 'さっぱり', 'ガッツリ'],
         ),
       ],
     ),
@@ -82,16 +72,6 @@ class InterestCategories {
           label: 'ジャンル',
           options: ['エッセイ', '小説', 'ノンフィクション', '詩集'],
         ),
-        DetailSettingGroup(
-          id: 'time',
-          label: '読書時間',
-          options: ['10分以内', '30分', 'じっくり'],
-        ),
-        DetailSettingGroup(
-          id: 'budget',
-          label: '入手・予算',
-          options: ['図書館', '電子書籍', '〜500円', '〜1000円'],
-        ),
       ],
     ),
     InterestCategory(
@@ -104,18 +84,15 @@ class InterestCategories {
           label: '気分',
           options: ['泣ける', '笑える', '考えさせる'],
         ),
-        DetailSettingGroup(
-          id: 'time',
-          label: '上映時間',
-          options: ['90分以内', '問わない'],
-        ),
-        DetailSettingGroup(
-          id: 'source',
-          label: '視聴先',
-          options: ['Netflix', 'Amazon Prime', '問わない'],
-        ),
       ],
     ),
+  ];
+
+  /// 発展で追加するカテゴリ例（企画書 ver6 では MVP コアに含めない）。
+  ///
+  /// 定義・提案データは残しておき、発展段階で `all` に移して有効化する。
+  /// `findById` はここも探索するため、既存の散歩データの表示名解決は維持される。
+  static const List<InterestCategory> developmentCategories = [
     InterestCategory(
       id: 'walk',
       label: '散歩',
@@ -126,18 +103,13 @@ class InterestCategories {
           label: '目的',
           options: ['気分転換', '運動', '発見'],
         ),
-        DetailSettingGroup(
-          id: 'time',
-          label: '時間',
-          options: ['15分以内', '30分', 'たっぷり'],
-        ),
       ],
     ),
   ];
 
-  /// 該当するカテゴリがなければ null を返す。
+  /// MVP・発展を通して該当するカテゴリがなければ null を返す。
   static InterestCategory? findById(String id) {
-    for (final category in all) {
+    for (final category in [...all, ...developmentCategories]) {
       if (category.id == id) {
         return category;
       }

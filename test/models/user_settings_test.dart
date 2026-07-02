@@ -3,10 +3,10 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:yorimiti_biyori/src/models/user_settings.dart';
 
 void main() {
-  test('デフォルト値がカテゴリ [music, read, walk] ・詳細設定は指定なしになる', () {
+  test('デフォルト値がカテゴリ [music, read, movie] ・詳細設定は指定なしになる', () {
     const settings = UserSettings();
 
-    expect(settings.selectedCategories, ['music', 'read', 'walk']);
+    expect(settings.selectedCategories, ['music', 'read', 'movie']);
     expect(settings.detailSettings, isEmpty);
     expect(settings.notificationEnabled, isTrue);
     expect(settings.notificationTime, '17:30');
@@ -55,7 +55,7 @@ void main() {
   test('完全に不正な JSON（空 Map）でもクラッシュせずデフォルト値になる', () {
     final settings = UserSettings.fromJson(<String, dynamic>{});
 
-    expect(settings.selectedCategories, ['music', 'read', 'walk']);
+    expect(settings.selectedCategories, ['music', 'read', 'movie']);
   });
 
   test('copyWith で一部フィールドだけ変更できる', () {

@@ -19,7 +19,7 @@ For general coding quality rules, also follow `docs/rules/SKILL.md`.
 
 The specification source of truth is:
 
-1. The project proposal (企画書 ver5, `docs/spec/企画書.md` and the submitted PDF) — concept, **two-stage model (category → per-category detail settings)**, data catalog design, processing flow, future phases.
+1. The project proposal (企画書 ver6, `docs/spec/企画書.md` and the submitted PDF) — concept, **two-stage model (category → per-category detail settings)**, data catalog design, processing flow, future phases. In ver6 the MVP core categories are 音楽/料理/読書/映画 (4), and each MVP detail setting is a single "genre" group (movie uses 気分). The ver6 PDF lists a `difficulty` catalog field, but this project does not use it (difficulty is not implemented).
 2. The UI prototype in `よりみち日和 UIプロトタイプ/` — screen structure, UI copy, interaction flow. It is a Figma-exported React project and is **reference only**. Never copy React code or dependencies into the Flutter app.
 
 When they conflict, follow the proposal for the suggestion-conditions model (two-stage), data, and logic, and the prototype for other screens and UI text. The implementation spec is `docs/spec/仕様書.md` and the summary is `docs/spec/仕様要約.md`.
@@ -30,7 +30,7 @@ When they conflict, follow the proposal for the suggestion-conditions model (two
 
 `yorimitiBiyori` is a Flutter mobile app. The MVP targets Android only; iOS support is a post-MVP advanced phase.
 
-The app suggests one small "yorimichi" (detour) action that fits the user's interest categories and per-category detail settings during short free-time gaps. The model is **two-stage**: the user picks categories, then refines each with category-specific detail settings (genre, mood, time, budget, source, etc.).
+The app suggests one small "yorimichi" (detour) action that fits the user's interest categories and per-category detail settings during short free-time gaps. The model is **two-stage**: the user picks categories, then refines each with a category-specific detail setting. In the MVP each category exposes a single "genre" group (movie uses 気分); multiple detail-setting groups (language, mood, time, budget, source, etc.) are an advanced-phase extension.
 
 The core experience is:
 
@@ -63,25 +63,27 @@ Bottom NavigationBar with exactly 3 tabs. There is **no home screen**; the sugge
 
 ## Suggestion Conditions (two-stage)
 
-There is **no difficulty selection UI, no universal time condition, and no travel-distance condition** (all removed from the old model). Conditions are set in two stages:
+There is **no difficulty, no universal time condition, and no travel-distance condition** (removed from the old model; the ver6 PDF `difficulty` field is not implemented in this project). Conditions are set in two stages:
 
-1. **Stage 1 — category selection** (multi-select, 5 categories): music 音楽 / cook 料理 / read 読書 / movie 映画 / walk 散歩
-2. **Stage 2 — per-category detail settings** (each group is multi-select; unselected = 指定なし = no filtering):
-   - 音楽: 気分(作業向け/リラックス/盛り上がりたい) ・ ジャンル(ポップス/ジャズ/クラシック/洋楽) ・ 費用(有料/無料/問わない)
-   - 料理: 栄養・ダイエット(高タンパク/低糖質/野菜多め/カロリーオフ) ・ ジャンル(和食/洋食/中華/イタリアン/アジアン/丼/作り置き/ガッツリ)
-   - 読書: ジャンル(エッセイ/小説/ノンフィクション/詩集) ・ 読書時間(10分以内/30分/じっくり) ・ 入手・予算(図書館/電子書籍/〜500円/〜1000円)
-   - 映画: 気分(泣ける/笑える/考えさせる) ・ 上映時間(90分以内/問わない) ・ 視聴先(Netflix/Amazon Prime/問わない)
-   - 散歩 (supplemented; not specified in the proposal): 目的(気分転換/運動/発見) ・ 時間(15分以内/30分/たっぷり)
+1. **Stage 1 — category selection** (multi-select, MVP 4 categories): music 音楽 / cook 料理 / read 読書 / movie 映画. walk 散歩 is an advanced-phase category (definition + data retained in `InterestCategories.developmentCategories`).
+2. **Stage 2 — per-category detail settings** (each group is multi-select; unselected = 指定なし = no filtering). **In the MVP each category exposes a single "genre" group (movie uses 気分):**
+   - 音楽: ジャンル(ポップス/ジャズ/クラシック/洋楽)
+   - 料理: 味覚・ジャンル(和食/洋食/中華/イタリアン/アジア風/激辛/さっぱり/ガッツリ)
+   - 読書: ジャンル(エッセイ/小説/ノンフィクション/詩集)
+   - 映画: 気分(泣ける/笑える/考えさせる)
+   - 散歩 (advanced): 目的(気分転換/運動/発見)
 
-See `docs/spec/仕様書.md` §3.4 for the master table. Default categories are [music, read, walk]; detail settings default to all-unselected (指定なし). Categories and detail-setting groups must be driven from a master definition so more can be added later (運動, 芸術, etc.).
+   Advanced-phase detail settings (企画書 ver6 表3 "発展版で追加"): 音楽=言語・気分, 料理=栄養素・ダイエット, 読書=読書時間・入手予算, 映画=上映時間・視聴先.
+
+See `docs/spec/仕様書.md` §3.4 for the master table. Default categories are [music, read, movie]; detail settings default to all-unselected (指定なし). Categories and detail-setting groups must be driven from a master definition so more can be added later (散歩, 運動, 芸術, etc.).
 
 ## MVP Features
 
 The MVP includes only:
 
 - onboarding flow (welcome → categories → notification permission)
-- interest category registration (5 categories, multi-select)
-- suggestion settings screen (two-stage: category selection → per-category detail settings)
+- interest category registration (MVP 4 categories, multi-select)
+- suggestion settings screen (two-stage: category selection → per-category detail settings; MVP is one "genre" group per category)
 - local notification at a configured time, soft wording without naming a duration, no time-selection actions
 - suggestion display matching the category + detail-setting conditions (card shows where-to-try and budget)
 - re-suggestion ("別の提案", records the shown suggestion as skipped)
@@ -191,7 +193,7 @@ Move these operations out of page widgets when they grow:
 
 Manage suggestion candidates in `assets/data/suggestions.json`. Grow toward 50+ entries per category as an advanced goal.
 
-> The current `assets/data/suggestions.json` is still on the OLD schema (10 categories, min/max_minutes, intensity, location_type). It must be migrated to the new schema below.
+> `assets/data/suggestions.json` is on the ver6 schema (per-category ids, `tags` = detail-setting values, `budget_yen`, `estimated_minutes`, `weight`). It no longer uses `min_minutes` / `max_minutes` / `intensity` / `location_type`. The ver6 PDF `difficulty` field is not used in this project.
 
 When editing suggestion data:
 
@@ -199,7 +201,7 @@ When editing suggestion data:
 - titles should be short and understandable
 - descriptions should be useful to the user
 - required fields must not be missing
-- `category` must be one of the 5 known category ids (`music` / `cook` / `read` / `movie` / `walk`)
+- `category` must be one of the known category ids (`music` / `cook` / `read` / `movie`; `walk` is retained as an advanced-phase category)
 - `tags` holds the values that correspond to the category's detail-setting options (this is what the filter matches against)
 - `budget_yen` must be a non-negative number (0 means free)
 - `estimated_minutes` is the rough duration used for history total-minutes aggregation

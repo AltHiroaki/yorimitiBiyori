@@ -3,15 +3,22 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:yorimiti_biyori/src/models/interest_category.dart';
 
 void main() {
-  test('5カテゴリが定義されている', () {
+  test('MVP コアカテゴリは音楽・料理・読書・映画の4種類', () {
     final categoryIds = InterestCategories.all.map((category) => category.id);
 
-    expect(categoryIds, ['music', 'cook', 'read', 'movie', 'walk']);
+    expect(categoryIds, ['music', 'cook', 'read', 'movie']);
   });
 
-  test('各カテゴリに詳細設定グループが1つ以上ある', () {
+  test('散歩は発展カテゴリとして定義を残す', () {
+    final developmentIds =
+        InterestCategories.developmentCategories.map((category) => category.id);
+
+    expect(developmentIds, ['walk']);
+  });
+
+  test('MVP の各カテゴリの詳細設定はジャンル1グループに絞る', () {
     for (final category in InterestCategories.all) {
-      expect(category.detailSettingGroups, isNotEmpty);
+      expect(category.detailSettingGroups, hasLength(1));
     }
   });
 
@@ -23,14 +30,21 @@ void main() {
     expect(music.emoji, '🎵');
   });
 
+  test('findById は発展カテゴリの散歩も解決できる', () {
+    final walk = InterestCategories.findById('walk');
+
+    expect(walk, isNotNull);
+    expect(walk!.label, '散歩');
+  });
+
   test('findById は存在しない id で null を返す', () {
     expect(InterestCategories.findById('unknown'), isNull);
   });
 
-  test('音楽カテゴリの詳細設定グループが仕様どおり', () {
+  test('音楽カテゴリの MVP 詳細設定はジャンルのみ', () {
     final music = InterestCategories.findById('music')!;
     final groupIds = music.detailSettingGroups.map((group) => group.id);
 
-    expect(groupIds, ['mood', 'genre', 'cost']);
+    expect(groupIds, ['genre']);
   });
 }
