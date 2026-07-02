@@ -1,53 +1,358 @@
+import 'dart:async';
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
+import '../features/recommendation/suggestion_picker.dart';
+import '../models/interest_category.dart';
+import '../models/suggestion.dart';
+import '../models/user_settings.dart';
+import '../repositories/settings_repository.dart';
+import '../repositories/suggestion_repository.dart';
 import '../widgets/section_card.dart';
+import 'suggestion_settings_page.dart';
 
-/// 提案タブ（トップ画面）。
-/// UI プロトタイプの「01 提案」に対応する。
-/// 現在は骨格のみで、提案ロジック・提案設定画面との接続は今後の Phase で実装する。
-class SuggestionPage extends StatelessWidget {
-  const SuggestionPage({super.key});
+enum _LoadStatus { loading, loaded, error }
+
+/// 提案タブ（トップ画面）。仕様書 3.1 に対応する。
+/// 現在の提案条件カードと「今日のよりみち」カードを表示し、
+/// 「別の提案」で再抽選、「提案設定 >」で提案設定画面へ遷移する。
+class SuggestionPage extends StatefulWidget {
+  const SuggestionPage({
+    super.key,
+    this.suggestionRepository,
+    this.settingsRepository,
+    this.random,
+  });
+
+  /// テスト用に差し替え可能。null なら通常の repository・乱数を使う。
+  final SuggestionRepository? suggestionRepository;
+  final SettingsRepository? settingsRepository;
+  final Random? random;
+
+  @override
+  State<SuggestionPage> createState() => _SuggestionPageState();
+}
+
+class _SuggestionPageState extends State<SuggestionPage> {
+  late final SuggestionRepository _suggestionRepository;
+  late final SettingsRepository _settingsRepository;
+  late final Random _random;
+
+  _LoadStatus _status = _LoadStatus.loading;
+  List<Suggestion> _allSuggestions = const [];
+  UserSettings _settings = const UserSettings();
+
+  /// 表示中の提案。null は「条件に合う候補なし」を表す。
+  Suggestion? _currentSuggestion;
+
+  @override
+  void initState() {
+    super.initState();
+    _suggestionRepository =
+        widget.suggestionRepository ?? SuggestionRepository();
+    _settingsRepository = widget.settingsRepository ?? SettingsRepository();
+    _random = widget.random ?? Random();
+    _initialize();
+  }
+
+  Future<void> _initialize() async {
+    // 設定の読込は repository 側でデフォルトへフォールバックするため失敗しない。
+    // エラー扱いにするのは提案データ（suggestions.json）の読込失敗のみ。
+    final settings = await _settingsRepository.loadSettings();
+    try {
+      final suggestions = await _suggestionRepository.loadSuggestions();
+      if (!mounted) {
+        return;
+      }
+      setState(() {
+        _allSuggestions = suggestions;
+        _settings = settings;
+        _status = _LoadStatus.loaded;
+        _drawSuggestion();
+      });
+    } catch (_) {
+      if (!mounted) {
+        return;
+      }
+      setState(() {
+        _status = _LoadStatus.error;
+      });
+    }
+  }
+
+  /// 現在の設定で候補を絞り込み、weight 付きランダムで 1 件選ぶ。
+  void _drawSuggestion() {
+    final candidates = excludeRecent(
+      filterSuggestions(_allSuggestions, _settings),
+      _settings.recentSuggestionIds,
+    );
+    final picked = pickWeightedRandom(candidates, _random);
+    _currentSuggestion = picked;
+    if (picked != null) {
+      _recordRecent(picked.id);
+    }
+  }
+
+  /// 表示した提案 ID を直近リストへ追加する（重複は寄せ、3件を超えたら古い順に削除）。
+  /// 永続化の失敗で UI を止めないため、保存は待たずに実行する。
+  void _recordRecent(String suggestionId) {
+    final recentIds = [
+      for (final id in _settings.recentSuggestionIds)
+        if (id != suggestionId) id,
+      suggestionId,
+    ];
+    if (recentIds.length > recentSuggestionLimit) {
+      recentIds.removeRange(0, recentIds.length - recentSuggestionLimit);
+    }
+    _settings = _settings.copyWith(recentSuggestionIds: recentIds);
+    unawaited(
+      _settingsRepository.saveSettings(_settings).catchError((_) {}),
+    );
+  }
+
+  /// 別の提案：同条件で再抽選する。
+  /// スキップの記録（status = skipped）は履歴機能（Issue 2-2）で対応する。
+  void _onAnotherSuggestion() {
+    setState(_drawSuggestion);
+  }
+
+  Future<void> _openSuggestionSettings() async {
+    await Navigator.of(context).push(
+      MaterialPageRoute<void>(
+        builder: (_) =>
+            SuggestionSettingsPage(settingsRepository: _settingsRepository),
+      ),
+    );
+    if (!mounted) {
+      return;
+    }
+    // 保存の有無にかかわらず設定を読み直し、最新の条件で再抽選する。
+    final settings = await _settingsRepository.loadSettings();
+    if (!mounted) {
+      return;
+    }
+    setState(() {
+      _settings = settings;
+      _drawSuggestion();
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
-    return ListView(
-      padding: const EdgeInsets.all(20),
-      children: [
-        const Text(
-          'よりみち日和',
-          style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold),
+    switch (_status) {
+      case _LoadStatus.loading:
+        return const Center(child: CircularProgressIndicator());
+      case _LoadStatus.error:
+        return const Center(
+          child: Padding(
+            padding: EdgeInsets.all(20),
+            child: Text('データの読み込みに失敗しました。再起動してください。'),
+          ),
+        );
+      case _LoadStatus.loaded:
+        return ListView(
+          padding: const EdgeInsets.all(20),
+          children: [
+            const Text(
+              'よりみち日和',
+              style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 4),
+            const Text(
+              '空いた時間に、小さなよりみちを。',
+              style: TextStyle(fontSize: 13),
+            ),
+            const SizedBox(height: 16),
+            _buildConditionCard(),
+            const SizedBox(height: 12),
+            if (_currentSuggestion case final Suggestion suggestion)
+              _buildSuggestionCard(suggestion)
+            else
+              _buildEmptyCard(),
+            const SizedBox(height: 16),
+            const SectionCard(
+              title: '使い方',
+              description:
+                  'カテゴリと詳細設定を変えたいときは「提案設定」から調整できます。通知をタップすると、保存した条件のよりみちが表示されます。',
+            ),
+          ],
+        );
+    }
+  }
+
+  /// 現在の提案条件カード：選択カテゴリのチップ＋有効な詳細設定の要約。
+  Widget _buildConditionCard() {
+    final selectedCategories = <InterestCategory>[
+      for (final categoryId in _settings.selectedCategories)
+        if (InterestCategories.findById(categoryId) case final InterestCategory
+            category)
+          category,
+    ];
+    final detailSummary = _buildDetailSummary();
+
+    return Card(
+      elevation: 0,
+      color: Theme.of(context).colorScheme.surfaceContainerHighest,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+      child: Padding(
+        padding: const EdgeInsets.fromLTRB(20, 8, 8, 20),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                const Text(
+                  '現在の提案条件',
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                ),
+                TextButton(
+                  onPressed: _openSuggestionSettings,
+                  child: const Text('提案設定 >'),
+                ),
+              ],
+            ),
+            if (selectedCategories.isEmpty)
+              const Text('カテゴリが選ばれていません')
+            else ...[
+              Wrap(
+                spacing: 8,
+                runSpacing: 8,
+                children: [
+                  for (final category in selectedCategories)
+                    Chip(label: Text('${category.emoji} ${category.label}')),
+                ],
+              ),
+              const SizedBox(height: 8),
+              Text(
+                detailSummary.isEmpty ? '詳細設定：指定なし' : '詳細設定：$detailSummary',
+                style: const TextStyle(fontSize: 13),
+              ),
+            ],
+          ],
         ),
-        const SizedBox(height: 4),
-        const Text(
-          '空いた時間に、小さなよりみちを。',
-          style: TextStyle(fontSize: 13),
+      ),
+    );
+  }
+
+  /// 有効な詳細設定の選択値を「／」で連結した要約（例：ジャズ／作業向け）。
+  String _buildDetailSummary() {
+    final selectedValues = <String>[];
+    for (final categoryId in _settings.selectedCategories) {
+      final groups = _settings.detailSettings[categoryId];
+      if (groups == null) {
+        continue;
+      }
+      for (final values in groups.values) {
+        selectedValues.addAll(values);
+      }
+    }
+    return selectedValues.join('／');
+  }
+
+  /// 今日のよりみちカード。
+  Widget _buildSuggestionCard(Suggestion suggestion) {
+    final colorScheme = Theme.of(context).colorScheme;
+
+    return Card(
+      elevation: 0,
+      color: colorScheme.surfaceContainerHighest,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+      child: Padding(
+        padding: const EdgeInsets.all(20),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              '今日のよりみち',
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                color: colorScheme.primary,
+              ),
+            ),
+            const SizedBox(height: 8),
+            Text(
+              suggestion.title,
+              maxLines: 2,
+              overflow: TextOverflow.ellipsis,
+              style:
+                  const TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 8),
+            Text(suggestion.description),
+            const SizedBox(height: 12),
+            Wrap(
+              spacing: 8,
+              runSpacing: 8,
+              children: [
+                for (final tag in suggestion.tags) Chip(label: Text(tag)),
+                Chip(label: Text('約${suggestion.estimatedMinutes}分')),
+              ],
+            ),
+            const SizedBox(height: 12),
+            Text('入手先：${suggestion.whereToTry}'),
+            const SizedBox(height: 4),
+            Text(
+              '予算：${suggestion.budgetYen == 0 ? '無料' : '¥${suggestion.budgetYen}'}',
+            ),
+            const SizedBox(height: 16),
+            Row(
+              children: [
+                Expanded(
+                  child: FilledButton(
+                    // 実施の記録（完了モーダル）は Issue 2-2 で実装する。
+                    onPressed: () {},
+                    child: const Text('やってみる'),
+                  ),
+                ),
+                const SizedBox(width: 8),
+                Expanded(
+                  child: OutlinedButton(
+                    onPressed: _onAnotherSuggestion,
+                    child: const Text('別の提案'),
+                  ),
+                ),
+              ],
+            ),
+          ],
         ),
-        const SizedBox(height: 16),
-        const SectionCard(
-          title: '現在の提案条件',
-          description: '音楽・読書・映画 / ジャンル：ジャズ。今後ここに保存済みのカテゴリと詳細設定を表示し、「提案設定」画面から変更できるようにします。',
+      ),
+    );
+  }
+
+  /// 候補なし時のカード（仕様書 6.3）。条件の自動緩和は行わない。
+  Widget _buildEmptyCard() {
+    final isCategoryEmpty = _settings.selectedCategories.isEmpty;
+
+    return Card(
+      elevation: 0,
+      color: Theme.of(context).colorScheme.surfaceContainerHighest,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+      child: Padding(
+        padding: const EdgeInsets.all(20),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              isCategoryEmpty ? 'カテゴリが選ばれていません' : '条件に合う提案が見つかりませんでした',
+              style:
+                  const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 8),
+            Text(
+              isCategoryEmpty
+                  ? '提案設定から、興味のあるカテゴリを選んでみてください。'
+                  : 'カテゴリを増やすか、詳細設定を緩めてみてください。',
+            ),
+            const SizedBox(height: 16),
+            FilledButton(
+              onPressed: _openSuggestionSettings,
+              child: const Text('提案設定を開く'),
+            ),
+          ],
         ),
-        const SizedBox(height: 12),
-        const SectionCard(
-          title: '今日のよりみち',
-          description: '作業用にジャズを1曲だけ流す — いつもの曲から少しだけ角度を変えてみる。今後ここに条件に合う提案を1件表示します。',
-        ),
-        const SizedBox(height: 16),
-        FilledButton(
-          onPressed: () {},
-          child: const Text('やってみる'),
-        ),
-        const SizedBox(height: 8),
-        OutlinedButton(
-          onPressed: () {},
-          child: const Text('別の提案'),
-        ),
-        const SizedBox(height: 16),
-        const SectionCard(
-          title: '使い方',
-          description: '通知をタップすると保存した条件のよりみちが表示されます。条件を変えたいときは「提案設定」から調整できます。',
-        ),
-      ],
+      ),
     );
   }
 }

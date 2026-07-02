@@ -1,0 +1,213 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_test/flutter_test.dart';
+import 'package:yorimiti_biyori/src/models/user_settings.dart';
+import 'package:yorimiti_biyori/src/pages/suggestion_settings_page.dart';
+import 'package:yorimiti_biyori/src/repositories/settings_repository.dart';
+
+/// 保存された設定を記録するテスト用フェイク。
+class _FakeSettingsRepository implements SettingsRepository {
+  _FakeSettingsRepository(this._settings);
+
+  UserSettings _settings;
+  final List<UserSettings> savedSettingsLog = [];
+
+  @override
+  Future<UserSettings> loadSettings() async => _settings;
+
+  @override
+  Future<void> saveSettings(UserSettings settings) async {
+    _settings = settings;
+    savedSettingsLog.add(settings);
+  }
+}
+
+/// ListView の遅延構築で下部セクションが画面外にならないよう、縦長の画面で描画する。
+void _useTallViewport(WidgetTester tester) {
+  tester.view.physicalSize = const Size(800, 2400);
+  tester.view.devicePixelRatio = 1.0;
+  addTearDown(tester.view.reset);
+}
+
+Future<_FakeSettingsRepository> _pumpPage(
+  WidgetTester tester,
+  UserSettings initialSettings,
+) async {
+  _useTallViewport(tester);
+  final repository = _FakeSettingsRepository(initialSettings);
+  await tester.pumpWidget(
+    MaterialApp(home: SuggestionSettingsPage(settingsRepository: repository)),
+  );
+  await tester.pumpAndSettle();
+  return repository;
+}
+
+void main() {
+  testWidgets('保存済み設定が初期表示に反映される', (tester) async {
+    await _pumpPage(
+      tester,
+      const UserSettings(
+        selectedCategories: ['music'],
+        detailSettings: {
+          'music': {
+            'genre': ['ジャズ'],
+          },
+        },
+      ),
+    );
+
+    expect(find.text('提案設定'), findsOneWidget);
+    expect(find.text('よりみちの条件を調整できます。'), findsOneWidget);
+    expect(find.text('1つ選択中'), findsOneWidget);
+
+    // 5カテゴリすべてのチップが表示され、music だけ選択されている。
+    expect(find.widgetWithText(FilterChip, '🎵 音楽'), findsOneWidget);
+    expect(find.widgetWithText(FilterChip, '🍳 料理'), findsOneWidget);
+    expect(find.widgetWithText(FilterChip, '📖 読書'), findsOneWidget);
+    expect(find.widgetWithText(FilterChip, '🎬 映画'), findsOneWidget);
+    expect(find.widgetWithText(FilterChip, '🚶 散歩'), findsOneWidget);
+
+    // 選択中カテゴリの詳細設定セクションと、保存済みの選択が反映される。
+    expect(find.text('🎵 音楽の詳細設定'), findsOneWidget);
+    final jazzChip = tester.widget<FilterChip>(
+      find.widgetWithText(FilterChip, 'ジャズ'),
+    );
+    expect(jazzChip.selected, isTrue);
+  });
+
+  testWidgets('カテゴリの選択で詳細設定セクションが出現・消滅する', (tester) async {
+    await _pumpPage(
+      tester,
+      const UserSettings(selectedCategories: ['music']),
+    );
+
+    expect(find.text('🍳 料理の詳細設定'), findsNothing);
+
+    await tester.tap(find.widgetWithText(FilterChip, '🍳 料理'));
+    await tester.pumpAndSettle();
+    expect(find.text('2つ選択中'), findsOneWidget);
+    expect(find.text('🍳 料理の詳細設定'), findsOneWidget);
+
+    await tester.tap(find.widgetWithText(FilterChip, '🍳 料理'));
+    await tester.pumpAndSettle();
+    expect(find.text('1つ選択中'), findsOneWidget);
+    expect(find.text('🍳 料理の詳細設定'), findsNothing);
+  });
+
+  testWidgets('詳細設定を選んで保存すると選択内容だけが保存される', (tester) async {
+    final repository = await _pumpPage(
+      tester,
+      const UserSettings(
+        selectedCategories: ['music'],
+        notificationEnabled: false,
+        notificationTime: '12:15',
+        firstLaunchCompleted: true,
+        recentSuggestionIds: ['music_jazz_focus'],
+      ),
+    );
+
+    await tester.tap(find.widgetWithText(FilterChip, 'ジャズ'));
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('この条件で保存'));
+    await tester.pumpAndSettle();
+
+    final savedSettings = repository.savedSettingsLog.single;
+    expect(savedSettings.selectedCategories, ['music']);
+    // 値を選んだグループだけが保存され、未選択グループは含まれない（指定なし）。
+    expect(savedSettings.detailSettings, {
+      'music': {
+        'genre': ['ジャズ'],
+      },
+    });
+    // この画面で編集しないフィールドは温存される。
+    expect(savedSettings.notificationEnabled, isFalse);
+    expect(savedSettings.notificationTime, '12:15');
+    expect(savedSettings.firstLaunchCompleted, isTrue);
+    expect(savedSettings.recentSuggestionIds, ['music_jazz_focus']);
+  });
+
+  testWidgets('選択を外したカテゴリの詳細設定は保存時に刈り込まれる', (tester) async {
+    final repository = await _pumpPage(
+      tester,
+      const UserSettings(
+        selectedCategories: ['music', 'walk'],
+        detailSettings: {
+          'music': {
+            'genre': ['ジャズ'],
+          },
+          'walk': {
+            'time': ['15分以内'],
+          },
+        },
+      ),
+    );
+
+    await tester.tap(find.widgetWithText(FilterChip, '🚶 散歩'));
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('この条件で保存'));
+    await tester.pumpAndSettle();
+
+    final savedSettings = repository.savedSettingsLog.single;
+    expect(savedSettings.selectedCategories, ['music']);
+    expect(savedSettings.detailSettings.containsKey('walk'), isFalse);
+  });
+
+  testWidgets('初期設定に戻すとカテゴリが初期値・詳細設定が全解除になる', (tester) async {
+    final repository = await _pumpPage(
+      tester,
+      const UserSettings(
+        selectedCategories: ['music', 'cook'],
+        detailSettings: {
+          'music': {
+            'genre': ['ジャズ'],
+          },
+        },
+      ),
+    );
+
+    await tester.tap(find.text('初期設定に戻す'));
+    await tester.pumpAndSettle();
+
+    expect(find.text('3つ選択中'), findsOneWidget);
+    final jazzChip = tester.widget<FilterChip>(
+      find.widgetWithText(FilterChip, 'ジャズ'),
+    );
+    expect(jazzChip.selected, isFalse);
+    // リセットだけでは保存されない。
+    expect(repository.savedSettingsLog, isEmpty);
+  });
+
+  testWidgets('保存すると画面が閉じる', (tester) async {
+    _useTallViewport(tester);
+    final repository = _FakeSettingsRepository(const UserSettings());
+    await tester.pumpWidget(
+      MaterialApp(
+        home: Builder(
+          builder: (context) => Scaffold(
+            body: TextButton(
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute<void>(
+                    builder: (_) => SuggestionSettingsPage(
+                      settingsRepository: repository,
+                    ),
+                  ),
+                );
+              },
+              child: const Text('開く'),
+            ),
+          ),
+        ),
+      ),
+    );
+
+    await tester.tap(find.text('開く'));
+    await tester.pumpAndSettle();
+    expect(find.byType(SuggestionSettingsPage), findsOneWidget);
+
+    await tester.tap(find.text('この条件で保存'));
+    await tester.pumpAndSettle();
+
+    expect(find.byType(SuggestionSettingsPage), findsNothing);
+    expect(repository.savedSettingsLog, hasLength(1));
+  });
+}
