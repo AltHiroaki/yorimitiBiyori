@@ -11,7 +11,6 @@ void main() {
     'category': 'music',
     'tags': ['ジャズ', '作業向け', '無料'],
     'budget_yen': 0,
-    'difficulty': 'やさしい',
     'where_to_try': '音楽配信アプリで「作業用 ジャズ」と検索してプレイリストを開く。',
     'estimated_minutes': 5,
     'weight': 1.2,

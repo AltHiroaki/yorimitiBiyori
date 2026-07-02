@@ -192,7 +192,6 @@ Suggestion _suggestion({
     category: category,
     tags: tags,
     budgetYen: budgetYen,
-    difficulty: 'やさしい',
     whereToTry: 'whereToTry',
     estimatedMinutes: 10,
     weight: weight,
