@@ -6,9 +6,12 @@ import 'package:flutter/material.dart';
 import '../features/recommendation/suggestion_picker.dart';
 import '../models/interest_category.dart';
 import '../models/suggestion.dart';
+import '../models/suggestion_record.dart';
 import '../models/user_settings.dart';
+import '../repositories/records_repository.dart';
 import '../repositories/settings_repository.dart';
 import '../repositories/suggestion_repository.dart';
+import '../widgets/completion_modal.dart';
 import '../widgets/section_card.dart';
 import 'suggestion_settings_page.dart';
 
@@ -22,12 +25,14 @@ class SuggestionPage extends StatefulWidget {
     super.key,
     this.suggestionRepository,
     this.settingsRepository,
+    this.recordsRepository,
     this.random,
   });
 
   /// テスト用に差し替え可能。null なら通常の repository・乱数を使う。
   final SuggestionRepository? suggestionRepository;
   final SettingsRepository? settingsRepository;
+  final RecordsRepository? recordsRepository;
   final Random? random;
 
   @override
@@ -37,6 +42,7 @@ class SuggestionPage extends StatefulWidget {
 class _SuggestionPageState extends State<SuggestionPage> {
   late final SuggestionRepository _suggestionRepository;
   late final SettingsRepository _settingsRepository;
+  late final RecordsRepository _recordsRepository;
   late final Random _random;
 
   _LoadStatus _status = _LoadStatus.loading;
@@ -52,6 +58,7 @@ class _SuggestionPageState extends State<SuggestionPage> {
     _suggestionRepository =
         widget.suggestionRepository ?? SuggestionRepository();
     _settingsRepository = widget.settingsRepository ?? SettingsRepository();
+    _recordsRepository = widget.recordsRepository ?? RecordsRepository();
     _random = widget.random ?? Random();
     _initialize();
   }
@@ -111,10 +118,53 @@ class _SuggestionPageState extends State<SuggestionPage> {
     );
   }
 
-  /// 別の提案：同条件で再抽選する。
-  /// スキップの記録（status = skipped）は履歴機能（Issue 2-2）で対応する。
+  /// やってみる：完了モーダルでフィードバックを聞き、done として履歴に保存する。
+  /// モーダルを閉じただけ（フィードバック未確定）の場合は保存しない。
+  Future<void> _onTrySuggestion(Suggestion suggestion) async {
+    final feedback = await showCompletionModal(context);
+    if (feedback == null) {
+      return;
+    }
+    await _saveRecord(
+      suggestion,
+      status: SuggestionRecordStatus.done,
+      feedback: feedback,
+    );
+  }
+
+  /// 別の提案：表示中の提案を skipped として履歴に保存し、同条件で再抽選する（仕様書 6.4）。
   void _onAnotherSuggestion() {
+    if (_currentSuggestion case final Suggestion suggestion) {
+      unawaited(
+        _saveRecord(
+          suggestion,
+          status: SuggestionRecordStatus.skipped,
+          feedback: null,
+        ),
+      );
+    }
     setState(_drawSuggestion);
+  }
+
+  /// 表示中の提案から履歴レコードを組み立てて保存する。
+  /// タイトル等は提案データ更新後も履歴表示が壊れないよう非正規化して保持する。
+  Future<void> _saveRecord(
+    Suggestion suggestion, {
+    required SuggestionRecordStatus status,
+    required SuggestionFeedback? feedback,
+  }) async {
+    final now = DateTime.now();
+    final record = SuggestionRecord(
+      id: 'record_${now.microsecondsSinceEpoch}',
+      suggestionId: suggestion.id,
+      suggestionTitle: suggestion.title,
+      category: suggestion.category,
+      estimatedMinutes: suggestion.estimatedMinutes,
+      status: status,
+      feedback: feedback,
+      createdAt: now,
+    );
+    await _recordsRepository.addRecord(record);
   }
 
   Future<void> _openSuggestionSettings() async {
@@ -301,8 +351,7 @@ class _SuggestionPageState extends State<SuggestionPage> {
               children: [
                 Expanded(
                   child: FilledButton(
-                    // 実施の記録（完了モーダル）は Issue 2-2 で実装する。
-                    onPressed: () {},
+                    onPressed: () => _onTrySuggestion(suggestion),
                     child: const Text('やってみる'),
                   ),
                 ),
