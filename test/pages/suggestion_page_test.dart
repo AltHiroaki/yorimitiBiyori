@@ -4,9 +4,11 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:yorimiti_biyori/src/models/suggestion_record.dart';
 import 'package:yorimiti_biyori/src/models/user_settings.dart';
 import 'package:yorimiti_biyori/src/pages/suggestion_page.dart';
 import 'package:yorimiti_biyori/src/pages/suggestion_settings_page.dart';
+import 'package:yorimiti_biyori/src/repositories/records_repository.dart';
 import 'package:yorimiti_biyori/src/repositories/settings_repository.dart';
 import 'package:yorimiti_biyori/src/repositories/suggestion_repository.dart';
 
@@ -24,6 +26,24 @@ class _FakeSettingsRepository implements SettingsRepository {
   Future<void> saveSettings(UserSettings settings) async {
     this.settings = settings;
     savedSettingsLog.add(settings);
+  }
+}
+
+/// 追加されたレコードをメモリ上に記録するテスト用フェイク。
+class _FakeRecordsRepository implements RecordsRepository {
+  final List<SuggestionRecord> addedRecords = [];
+
+  @override
+  Future<List<SuggestionRecord>> loadRecords() async => addedRecords;
+
+  @override
+  Future<void> addRecord(SuggestionRecord record) async {
+    addedRecords.add(record);
+  }
+
+  @override
+  Future<void> deleteAllRecords() async {
+    addedRecords.clear();
   }
 }
 
@@ -79,6 +99,7 @@ Future<_FakeSettingsRepository> _pumpPage(
   required List<Map<String, dynamic>> suggestions,
   required UserSettings settings,
   bool failAssetLoad = false,
+  _FakeRecordsRepository? recordsRepository,
 }) async {
   // ListView の下部（案内カード等）まで描画されるよう縦長の画面にする。
   tester.view.physicalSize = const Size(800, 2400);
@@ -96,6 +117,7 @@ Future<_FakeSettingsRepository> _pumpPage(
         body: SuggestionPage(
           suggestionRepository: suggestionRepository,
           settingsRepository: settingsRepository,
+          recordsRepository: recordsRepository ?? _FakeRecordsRepository(),
           random: Random(0),
         ),
       ),
@@ -255,6 +277,80 @@ void main() {
     );
 
     expect(find.text('データの読み込みに失敗しました。再起動してください。'), findsOneWidget);
+  });
+
+  testWidgets('やってみる→履歴に保存で done レコードが保存される', (tester) async {
+    final recordsRepository = _FakeRecordsRepository();
+    await _pumpPage(
+      tester,
+      suggestions: [
+        _suggestionJson(id: 'music_a', title: 'ジャズを1曲流す', tags: ['ジャズ']),
+      ],
+      settings: const UserSettings(selectedCategories: ['music']),
+      recordsRepository: recordsRepository,
+    );
+
+    await tester.tap(find.text('やってみる'));
+    await tester.pumpAndSettle();
+    expect(find.text('おつかれさまです'), findsOneWidget);
+
+    await tester.tap(find.text('🙂 普通'));
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('履歴に保存'));
+    await tester.pumpAndSettle();
+
+    expect(recordsRepository.addedRecords, hasLength(1));
+    final savedRecord = recordsRepository.addedRecords.single;
+    expect(savedRecord.suggestionId, 'music_a');
+    expect(savedRecord.suggestionTitle, 'ジャズを1曲流す');
+    expect(savedRecord.category, 'music');
+    expect(savedRecord.estimatedMinutes, 5);
+    expect(savedRecord.status, SuggestionRecordStatus.done);
+    expect(savedRecord.feedback, SuggestionFeedback.normal);
+  });
+
+  testWidgets('完了モーダルを保存せず閉じると履歴は保存されない', (tester) async {
+    final recordsRepository = _FakeRecordsRepository();
+    await _pumpPage(
+      tester,
+      suggestions: [
+        _suggestionJson(id: 'music_a', title: 'ジャズを1曲流す', tags: ['ジャズ']),
+      ],
+      settings: const UserSettings(selectedCategories: ['music']),
+      recordsRepository: recordsRepository,
+    );
+
+    await tester.tap(find.text('やってみる'));
+    await tester.pumpAndSettle();
+    // モーダル外（背景）をタップして閉じる。
+    await tester.tapAt(const Offset(400, 20));
+    await tester.pumpAndSettle();
+
+    expect(recordsRepository.addedRecords, isEmpty);
+  });
+
+  testWidgets('別の提案でスキップが記録されてから再抽選される', (tester) async {
+    final recordsRepository = _FakeRecordsRepository();
+    await _pumpPage(
+      tester,
+      suggestions: [
+        _suggestionJson(id: 'music_a', title: 'ジャズを1曲流す', tags: ['ジャズ']),
+        _suggestionJson(id: 'music_b', title: 'ポップスを1曲流す', tags: ['ポップス']),
+      ],
+      settings: const UserSettings(selectedCategories: ['music']),
+      recordsRepository: recordsRepository,
+    );
+
+    final firstWasA = find.text('ジャズを1曲流す').evaluate().isNotEmpty;
+
+    await tester.tap(find.text('別の提案'));
+    await tester.pumpAndSettle();
+
+    expect(recordsRepository.addedRecords, hasLength(1));
+    final skippedRecord = recordsRepository.addedRecords.single;
+    expect(skippedRecord.suggestionId, firstWasA ? 'music_a' : 'music_b');
+    expect(skippedRecord.status, SuggestionRecordStatus.skipped);
+    expect(skippedRecord.feedback, isNull);
   });
 
   testWidgets('提案設定から戻ると条件が再読込されて表示に反映される', (tester) async {
