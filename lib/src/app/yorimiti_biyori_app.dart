@@ -33,16 +33,20 @@ class AppShell extends StatefulWidget {
 class _AppShellState extends State<AppShell> {
   int _currentIndex = 0;
 
-  static const _pages = <Widget>[
-    SuggestionPage(),
-    HistoryPage(),
-    SettingsPage(),
-  ];
-
   @override
   Widget build(BuildContext context) {
+    // 履歴の空状態から提案タブへ切り替えられるようコールバックを渡すため、
+    // ページはビルド時に組み立てる（タブ切替時に再生成され履歴も読み直される）。
+    final pages = <Widget>[
+      const SuggestionPage(),
+      HistoryPage(
+        onGoToSuggestions: () => setState(() => _currentIndex = 0),
+      ),
+      const SettingsPage(),
+    ];
+
     return Scaffold(
-      body: SafeArea(child: _pages[_currentIndex]),
+      body: SafeArea(child: pages[_currentIndex]),
       bottomNavigationBar: NavigationBar(
         selectedIndex: _currentIndex,
         onDestinationSelected: (index) {
