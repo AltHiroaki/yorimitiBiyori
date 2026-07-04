@@ -1,11 +1,19 @@
 import 'package:flutter/material.dart';
 
+import '../features/onboarding/category_select_page.dart';
+import '../features/onboarding/notification_permission_dialog.dart';
+import '../features/onboarding/welcome_modal.dart';
+import '../models/user_settings.dart';
 import '../pages/history_page.dart';
 import '../pages/settings_page.dart';
 import '../pages/suggestion_page.dart';
+import '../repositories/settings_repository.dart';
 
 class YorimitiBiyoriApp extends StatelessWidget {
-  const YorimitiBiyoriApp({super.key});
+  const YorimitiBiyoriApp({super.key, this.settingsRepository});
+
+  /// テスト用に差し替え可能。null なら通常の [SettingsRepository] を使う。
+  final SettingsRepository? settingsRepository;
 
   @override
   Widget build(BuildContext context) {
@@ -17,8 +25,139 @@ class YorimitiBiyoriApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF3F6F44)),
         useMaterial3: true,
       ),
-      home: const AppShell(),
+      home: OnboardingGate(
+        settingsRepository: settingsRepository ?? SettingsRepository(),
+      ),
     );
+  }
+}
+
+class OnboardingGate extends StatefulWidget {
+  const OnboardingGate({super.key, required this.settingsRepository});
+
+  final SettingsRepository settingsRepository;
+
+  @override
+  State<OnboardingGate> createState() => _OnboardingGateState();
+}
+
+class _OnboardingGateState extends State<OnboardingGate> {
+  UserSettings? _settings;
+
+  @override
+  void initState() {
+    super.initState();
+    _loadSettings();
+  }
+
+  Future<void> _loadSettings() async {
+    final settings = await widget.settingsRepository.loadSettings();
+    if (!mounted) {
+      return;
+    }
+    setState(() {
+      _settings = settings;
+    });
+  }
+
+  void _handleOnboardingCompleted(UserSettings settings) {
+    setState(() {
+      _settings = settings;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final settings = _settings;
+    if (settings == null) {
+      return const Scaffold(
+        body: Center(child: CircularProgressIndicator()),
+      );
+    }
+
+    if (!settings.firstLaunchCompleted) {
+      return OnboardingFlow(
+        initialSettings: settings,
+        settingsRepository: widget.settingsRepository,
+        onCompleted: _handleOnboardingCompleted,
+      );
+    }
+
+    return const AppShell();
+  }
+}
+
+class OnboardingFlow extends StatefulWidget {
+  const OnboardingFlow({
+    super.key,
+    required this.initialSettings,
+    required this.settingsRepository,
+    required this.onCompleted,
+  });
+
+  final UserSettings initialSettings;
+  final SettingsRepository settingsRepository;
+  final ValueChanged<UserSettings> onCompleted;
+
+  @override
+  State<OnboardingFlow> createState() => _OnboardingFlowState();
+}
+
+enum _OnboardingStep { welcome, category, notification }
+
+class _OnboardingFlowState extends State<OnboardingFlow> {
+  _OnboardingStep _step = _OnboardingStep.welcome;
+  List<String> _selectedCategoryIds = const [];
+
+  @override
+  void initState() {
+    super.initState();
+    _selectedCategoryIds = widget.initialSettings.selectedCategories;
+  }
+
+  Future<void> _complete(NotificationPermissionChoice choice) async {
+    final completedSettings = widget.initialSettings.copyWith(
+      selectedCategories: _selectedCategoryIds,
+      detailSettings: const {},
+      notificationEnabled: choice == NotificationPermissionChoice.allow,
+      firstLaunchCompleted: true,
+    );
+    await widget.settingsRepository.saveSettings(completedSettings);
+    widget.onCompleted(completedSettings);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    switch (_step) {
+      case _OnboardingStep.welcome:
+        return Scaffold(
+          body: Center(
+            child: WelcomeModal(
+              onStart: () {
+                setState(() {
+                  _step = _OnboardingStep.category;
+                });
+              },
+            ),
+          ),
+        );
+      case _OnboardingStep.category:
+        return CategorySelectPage(
+          initialSelectedCategoryIds: _selectedCategoryIds,
+          onNext: (selectedCategoryIds) {
+            setState(() {
+              _selectedCategoryIds = selectedCategoryIds;
+              _step = _OnboardingStep.notification;
+            });
+          },
+        );
+      case _OnboardingStep.notification:
+        return Scaffold(
+          body: Center(
+            child: NotificationPermissionDialog(onSelected: _complete),
+          ),
+        );
+    }
   }
 }
 

@@ -1,13 +1,21 @@
+import 'dart:convert';
+
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'package:yorimiti_biyori/src/app/yorimiti_biyori_app.dart';
+import 'package:yorimiti_biyori/src/models/user_settings.dart';
+import 'package:yorimiti_biyori/src/repositories/settings_repository.dart';
 
 void main() {
   setUp(() {
     // 提案タブが設定を読み込むため、shared_preferences をモックしておく。
-    SharedPreferences.setMockInitialValues({});
+    SharedPreferences.setMockInitialValues({
+      settingsPreferenceKey: jsonEncode(
+        const UserSettings(firstLaunchCompleted: true).toJson(),
+      ),
+    });
     // rootBundle は読み込んだアセットの Future をキャッシュする。前のテストの
     // ゾーンに紐づいた Future を await すると完了しないため、テストごとに捨てる。
     rootBundle.clear();

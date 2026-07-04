@@ -59,12 +59,12 @@ void main() {
     expect(find.text('よりみちの条件を調整できます。'), findsOneWidget);
     expect(find.text('1つ選択中'), findsOneWidget);
 
-    // 5カテゴリすべてのチップが表示され、music だけ選択されている。
+    // MVP 4カテゴリすべてのチップが表示され、music だけ選択されている。
     expect(find.widgetWithText(FilterChip, '🎵 音楽'), findsOneWidget);
     expect(find.widgetWithText(FilterChip, '🍳 料理'), findsOneWidget);
     expect(find.widgetWithText(FilterChip, '📖 読書'), findsOneWidget);
     expect(find.widgetWithText(FilterChip, '🎬 映画'), findsOneWidget);
-    expect(find.widgetWithText(FilterChip, '🚶 散歩'), findsOneWidget);
+    expect(find.byType(FilterChip), findsNWidgets(8));
 
     // 選択中カテゴリの詳細設定セクションと、保存済みの選択が反映される。
     expect(find.text('🎵 音楽の詳細設定'), findsOneWidget);
@@ -129,26 +129,26 @@ void main() {
     final repository = await _pumpPage(
       tester,
       const UserSettings(
-        selectedCategories: ['music', 'walk'],
+        selectedCategories: ['music', 'movie'],
         detailSettings: {
           'music': {
             'genre': ['ジャズ'],
           },
-          'walk': {
-            'time': ['15分以内'],
+          'movie': {
+            'mood': ['泣ける'],
           },
         },
       ),
     );
 
-    await tester.tap(find.widgetWithText(FilterChip, '🚶 散歩'));
+    await tester.tap(find.widgetWithText(FilterChip, '🎬 映画'));
     await tester.pumpAndSettle();
     await tester.tap(find.text('この条件で保存'));
     await tester.pumpAndSettle();
 
     final savedSettings = repository.savedSettingsLog.single;
     expect(savedSettings.selectedCategories, ['music']);
-    expect(savedSettings.detailSettings.containsKey('walk'), isFalse);
+    expect(savedSettings.detailSettings.containsKey('movie'), isFalse);
   });
 
   testWidgets('初期設定に戻すとカテゴリが初期値・詳細設定が全解除になる', (tester) async {
