@@ -1,16 +1,32 @@
 import 'package:flutter/material.dart';
 
+import '../features/notifications/notification_service.dart';
+import '../models/user_settings.dart';
 import '../repositories/records_repository.dart';
+import '../repositories/settings_repository.dart';
 import '../widgets/section_card.dart';
+
+typedef NotificationTimePicker = Future<TimeOfDay?> Function(
+  BuildContext context,
+  TimeOfDay initialTime,
+);
 
 /// 設定タブ。
 /// UI プロトタイプの「03 設定」に対応する。
-/// 履歴削除以外の項目は骨格のみで、各項目の編集・保存は今後の Phase で実装する。
 class SettingsPage extends StatefulWidget {
-  const SettingsPage({super.key, this.recordsRepository});
+  const SettingsPage({
+    super.key,
+    this.recordsRepository,
+    this.settingsRepository,
+    this.notificationController,
+    this.notificationTimePicker,
+  });
 
   /// テスト用に差し替え可能。null なら通常の repository を使う。
   final RecordsRepository? recordsRepository;
+  final SettingsRepository? settingsRepository;
+  final NotificationController? notificationController;
+  final NotificationTimePicker? notificationTimePicker;
 
   @override
   State<SettingsPage> createState() => _SettingsPageState();
@@ -18,14 +34,32 @@ class SettingsPage extends StatefulWidget {
 
 class _SettingsPageState extends State<SettingsPage> {
   late final RecordsRepository _recordsRepository;
+  late final SettingsRepository _settingsRepository;
+  late final NotificationController _notificationController;
 
   /// 履歴削除のインライン確認を表示中かどうか（仕様書 3.3）。
   bool _showDeleteConfirm = false;
+  bool _isNotificationSaving = false;
+  UserSettings _settings = const UserSettings();
 
   @override
   void initState() {
     super.initState();
     _recordsRepository = widget.recordsRepository ?? RecordsRepository();
+    _settingsRepository = widget.settingsRepository ?? SettingsRepository();
+    _notificationController =
+        widget.notificationController ?? NotificationService();
+    _loadSettings();
+  }
+
+  Future<void> _loadSettings() async {
+    final settings = await _settingsRepository.loadSettings();
+    if (!mounted) {
+      return;
+    }
+    setState(() {
+      _settings = settings;
+    });
   }
 
   /// 履歴削除を実行し、確認を閉じてから完了を SnackBar で知らせる。
@@ -68,15 +102,155 @@ class _SettingsPageState extends State<SettingsPage> {
           description: '音楽、料理、読書、映画から複数選択できるようにします。',
         ),
         const SizedBox(height: 12),
-        const SectionCard(
-          title: '通知',
-          description:
-              '通知のON/OFFと通知時刻（デフォルト 17:30）を設定できるようにします。通知をタップすると提案画面を開きます。',
-        ),
+        _buildNotificationCard(),
         const SizedBox(height: 12),
         _buildDeleteHistoryCard(),
       ],
     );
+  }
+
+  Widget _buildNotificationCard() {
+    final colorScheme = Theme.of(context).colorScheme;
+
+    return Card(
+      elevation: 0,
+      color: colorScheme.surfaceContainerHighest,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+      child: Padding(
+        padding: const EdgeInsets.all(20),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              children: [
+                const Expanded(
+                  child: Text(
+                    '通知',
+                    style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+                  ),
+                ),
+                Switch(
+                  value: _settings.notificationEnabled,
+                  onChanged:
+                      _isNotificationSaving ? null : _updateNotificationEnabled,
+                ),
+              ],
+            ),
+            const SizedBox(height: 4),
+            Text(
+              '毎日 ${_settings.notificationTime} によりみちのきっかけを届けます。',
+              style: TextStyle(
+                fontSize: 13,
+                color: colorScheme.onSurfaceVariant,
+              ),
+            ),
+            const SizedBox(height: 12),
+            Row(
+              children: [
+                Expanded(
+                  child: Text(
+                    '通知時刻：${_settings.notificationTime}',
+                    style: const TextStyle(fontWeight: FontWeight.w600),
+                  ),
+                ),
+                OutlinedButton(
+                  onPressed:
+                      _isNotificationSaving ? null : _pickNotificationTime,
+                  child: const Text('変更'),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Future<void> _updateNotificationEnabled(bool isEnabled) async {
+    var nextSettings = _settings.copyWith(notificationEnabled: isEnabled);
+    if (isEnabled) {
+      final isGranted = await _notificationController.requestPermission();
+      nextSettings = nextSettings.copyWith(notificationEnabled: isGranted);
+      if (!isGranted && mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text('通知を有効にするには、端末の通知許可が必要です')),
+        );
+      }
+    }
+    await _saveNotificationSettings(nextSettings);
+  }
+
+  Future<void> _pickNotificationTime() async {
+    final initialTime = _parseTimeOfDay(_settings.notificationTime);
+    final picker = widget.notificationTimePicker ?? _showNotificationTimePicker;
+    final pickedTime = await picker(context, initialTime);
+    if (pickedTime == null) {
+      return;
+    }
+
+    await _saveNotificationSettings(
+      _settings.copyWith(notificationTime: _formatTimeOfDay(pickedTime)),
+    );
+  }
+
+  Future<TimeOfDay?> _showNotificationTimePicker(
+    BuildContext context,
+    TimeOfDay initialTime,
+  ) {
+    return showTimePicker(
+      context: context,
+      initialTime: initialTime,
+      helpText: '通知時刻',
+      cancelText: 'キャンセル',
+      confirmText: '決定',
+    );
+  }
+
+  Future<void> _saveNotificationSettings(UserSettings settings) async {
+    setState(() {
+      _isNotificationSaving = true;
+    });
+
+    try {
+      await _settingsRepository.saveSettings(settings);
+      await _notificationController.applySettings(settings);
+    } catch (_) {
+      if (!mounted) {
+        return;
+      }
+      setState(() {
+        _isNotificationSaving = false;
+      });
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('通知設定を保存できませんでした')),
+      );
+      return;
+    }
+
+    if (!mounted) {
+      return;
+    }
+    setState(() {
+      _settings = settings;
+      _isNotificationSaving = false;
+    });
+    ScaffoldMessenger.of(context).showSnackBar(
+      const SnackBar(content: Text('通知設定を保存しました')),
+    );
+  }
+
+  TimeOfDay _parseTimeOfDay(String source) {
+    final notificationTime = parseNotificationTime(source);
+    return TimeOfDay(
+      hour: notificationTime.hour,
+      minute: notificationTime.minute,
+    );
+  }
+
+  String _formatTimeOfDay(TimeOfDay time) {
+    final hour = time.hour.toString().padLeft(2, '0');
+    final minute = time.minute.toString().padLeft(2, '0');
+    return '$hour:$minute';
   }
 
   /// 履歴削除カード：通常時は「削除」ボタン、タップするとインライン確認に切り替わる。

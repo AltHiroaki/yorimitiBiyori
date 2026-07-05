@@ -231,7 +231,7 @@ class _AppShellState extends State<AppShell> {
       HistoryPage(
         onGoToSuggestions: () => setState(() => _currentIndex = 0),
       ),
-      const SettingsPage(),
+      SettingsPage(notificationController: _notificationController),
     ];
 
     return Scaffold(
