@@ -1,5 +1,8 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 
+import '../features/notifications/notification_service.dart';
 import '../features/onboarding/category_select_page.dart';
 import '../features/onboarding/notification_permission_dialog.dart';
 import '../features/onboarding/welcome_modal.dart';
@@ -10,10 +13,15 @@ import '../pages/suggestion_page.dart';
 import '../repositories/settings_repository.dart';
 
 class YorimitiBiyoriApp extends StatelessWidget {
-  const YorimitiBiyoriApp({super.key, this.settingsRepository});
+  const YorimitiBiyoriApp({
+    super.key,
+    this.settingsRepository,
+    this.notificationController,
+  });
 
   /// テスト用に差し替え可能。null なら通常の [SettingsRepository] を使う。
   final SettingsRepository? settingsRepository;
+  final NotificationController? notificationController;
 
   @override
   Widget build(BuildContext context) {
@@ -27,15 +35,21 @@ class YorimitiBiyoriApp extends StatelessWidget {
       ),
       home: OnboardingGate(
         settingsRepository: settingsRepository ?? SettingsRepository(),
+        notificationController: notificationController ?? NotificationService(),
       ),
     );
   }
 }
 
 class OnboardingGate extends StatefulWidget {
-  const OnboardingGate({super.key, required this.settingsRepository});
+  const OnboardingGate({
+    super.key,
+    required this.settingsRepository,
+    required this.notificationController,
+  });
 
   final SettingsRepository settingsRepository;
+  final NotificationController notificationController;
 
   @override
   State<OnboardingGate> createState() => _OnboardingGateState();
@@ -79,11 +93,12 @@ class _OnboardingGateState extends State<OnboardingGate> {
       return OnboardingFlow(
         initialSettings: settings,
         settingsRepository: widget.settingsRepository,
+        notificationController: widget.notificationController,
         onCompleted: _handleOnboardingCompleted,
       );
     }
 
-    return const AppShell();
+    return AppShell(notificationController: widget.notificationController);
   }
 }
 
@@ -92,11 +107,13 @@ class OnboardingFlow extends StatefulWidget {
     super.key,
     required this.initialSettings,
     required this.settingsRepository,
+    required this.notificationController,
     required this.onCompleted,
   });
 
   final UserSettings initialSettings;
   final SettingsRepository settingsRepository;
+  final NotificationController notificationController;
   final ValueChanged<UserSettings> onCompleted;
 
   @override
@@ -116,13 +133,20 @@ class _OnboardingFlowState extends State<OnboardingFlow> {
   }
 
   Future<void> _complete(NotificationPermissionChoice choice) async {
+    var isNotificationEnabled = false;
+    if (choice == NotificationPermissionChoice.allow) {
+      isNotificationEnabled =
+          await widget.notificationController.requestPermission();
+    }
+
     final completedSettings = widget.initialSettings.copyWith(
       selectedCategories: _selectedCategoryIds,
       detailSettings: const {},
-      notificationEnabled: choice == NotificationPermissionChoice.allow,
+      notificationEnabled: isNotificationEnabled,
       firstLaunchCompleted: true,
     );
     await widget.settingsRepository.saveSettings(completedSettings);
+    await widget.notificationController.applySettings(completedSettings);
     widget.onCompleted(completedSettings);
   }
 
@@ -163,14 +187,40 @@ class _OnboardingFlowState extends State<OnboardingFlow> {
 
 /// UI プロトタイプどおりの 3 タブ構成。ホーム画面は持たず、提案タブをトップにする。
 class AppShell extends StatefulWidget {
-  const AppShell({super.key});
+  const AppShell({super.key, this.notificationController});
+
+  final NotificationController? notificationController;
 
   @override
   State<AppShell> createState() => _AppShellState();
 }
 
 class _AppShellState extends State<AppShell> {
+  late final NotificationController _notificationController;
   int _currentIndex = 0;
+
+  @override
+  void initState() {
+    super.initState();
+    _notificationController =
+        widget.notificationController ?? NotificationService();
+    unawaited(_initializeNotifications());
+  }
+
+  Future<void> _initializeNotifications() async {
+    await _notificationController.initialize(
+      onNotificationTap: (_) {
+        if (!mounted) {
+          return;
+        }
+        setState(() {
+          _currentIndex = 0;
+        });
+      },
+    );
+    final settings = await SettingsRepository().loadSettings();
+    await _notificationController.applySettings(settings);
+  }
 
   @override
   Widget build(BuildContext context) {

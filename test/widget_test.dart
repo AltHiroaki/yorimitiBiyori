@@ -5,10 +5,39 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'package:yorimiti_biyori/src/app/yorimiti_biyori_app.dart';
+import 'package:yorimiti_biyori/src/features/notifications/notification_service.dart';
 import 'package:yorimiti_biyori/src/models/suggestion_record.dart';
 import 'package:yorimiti_biyori/src/models/user_settings.dart';
 import 'package:yorimiti_biyori/src/repositories/records_repository.dart';
 import 'package:yorimiti_biyori/src/repositories/settings_repository.dart';
+
+class _FakeNotificationController implements NotificationController {
+  NotificationTapCallback? onNotificationTap;
+
+  void tapNotification() {
+    onNotificationTap?.call(notificationPayloadSuggestion);
+  }
+
+  @override
+  Future<void> initialize({NotificationTapCallback? onNotificationTap}) async {
+    this.onNotificationTap = onNotificationTap;
+  }
+
+  @override
+  Future<bool> requestPermission() async => true;
+
+  @override
+  Future<void> applySettings(UserSettings settings) async {}
+
+  @override
+  Future<void> showInvitationNotification() async {}
+
+  @override
+  Future<void> scheduleDailyNotification(String notificationTime) async {}
+
+  @override
+  Future<void> cancelDailyNotification() async {}
+}
 
 void main() {
   setUp(() {
@@ -96,5 +125,24 @@ void main() {
     await tester.pumpAndSettle();
 
     expect(find.text('まだ履歴はありません'), findsOneWidget);
+  });
+
+  testWidgets('通知タップ時は提案タブへ戻る', (WidgetTester tester) async {
+    final notificationController = _FakeNotificationController();
+
+    await tester.pumpWidget(
+      YorimitiBiyoriApp(notificationController: notificationController),
+    );
+    await tester.pumpAndSettle();
+
+    await tester.tap(find.text('設定'));
+    await tester.pumpAndSettle();
+
+    expect(find.text('興味カテゴリ、通知時刻、履歴を管理します。'), findsOneWidget);
+
+    notificationController.tapNotification();
+    await tester.pumpAndSettle();
+
+    expect(find.text('空いた時間に、小さなよりみちを。'), findsOneWidget);
   });
 }

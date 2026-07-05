@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 /// 通知許可ステップの結果。
 enum NotificationPermissionChoice { allow, later }
 
-/// M4 の通知基盤実装まで、OS 権限リクエストは行わず選択結果だけを返す。
+/// OS 権限リクエスト自体は呼び出し側で行い、この widget は選択結果だけを返す。
 class NotificationPermissionDialog extends StatelessWidget {
   const NotificationPermissionDialog({
     super.key,

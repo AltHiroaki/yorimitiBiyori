@@ -60,17 +60,18 @@ class _SettingsPageState extends State<SettingsPage> {
         const SizedBox(height: 16),
         const SectionCard(
           title: '提案設定',
-          description: '時間（5分 / 15分 / 30分 / 60分）・予算・移動距離を調整できるようにします。',
+          description: '興味カテゴリとカテゴリ別の詳細設定を調整できるようにします。',
         ),
         const SizedBox(height: 12),
         const SectionCard(
           title: '興味カテゴリ',
-          description: '散歩、音楽、読書、学習、カフェ、写真、整理、休憩、運動、買い物の10種から複数選択できるようにします。',
+          description: '音楽、料理、読書、映画から複数選択できるようにします。',
         ),
         const SizedBox(height: 12),
         const SectionCard(
           title: '通知',
-          description: '通知のON/OFFと通知時刻（デフォルト 17:30）を設定できるようにします。通知では 15分 / 30分 / 60分 を選べます。',
+          description:
+              '通知のON/OFFと通知時刻（デフォルト 17:30）を設定できるようにします。通知をタップすると提案画面を開きます。',
         ),
         const SizedBox(height: 12),
         _buildDeleteHistoryCard(),
