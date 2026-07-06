@@ -235,7 +235,15 @@ class _AppShellState extends State<AppShell> {
     ];
 
     return Scaffold(
-      body: SafeArea(child: pages[_currentIndex]),
+      body: SafeArea(
+        child: AnimatedSwitcher(
+          duration: const Duration(milliseconds: 200),
+          child: KeyedSubtree(
+            key: ValueKey(_currentIndex),
+            child: pages[_currentIndex],
+          ),
+        ),
+      ),
       bottomNavigationBar: NavigationBar(
         selectedIndex: _currentIndex,
         onDestinationSelected: (index) {
