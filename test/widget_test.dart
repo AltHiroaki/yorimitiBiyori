@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -71,6 +72,29 @@ void main() {
     expect(find.text('提案'), findsOneWidget);
     expect(find.text('履歴'), findsOneWidget);
     expect(find.text('設定'), findsOneWidget);
+  });
+
+  testWidgets('タブ切替は200msのフェードで表示を切り替える', (WidgetTester tester) async {
+    await tester.pumpWidget(const YorimitiBiyoriApp());
+    await tester.pumpAndSettle();
+
+    final appShellSwitcher = find.byWidgetPredicate((widget) {
+      return widget is AnimatedSwitcher && widget.child is KeyedSubtree;
+    });
+
+    final animatedSwitcher = tester.widget<AnimatedSwitcher>(
+      appShellSwitcher,
+    );
+    expect(animatedSwitcher.duration, const Duration(milliseconds: 200));
+    expect(find.byKey(const ValueKey<int>(0)), findsOneWidget);
+
+    await tester.tap(find.text('履歴'));
+    await tester.pump();
+
+    expect(find.byType(FadeTransition), findsWidgets);
+
+    await tester.pumpAndSettle();
+    expect(find.byKey(const ValueKey<int>(1)), findsOneWidget);
   });
 
   testWidgets('履歴タブに切り替えると空状態が表示される', (WidgetTester tester) async {
