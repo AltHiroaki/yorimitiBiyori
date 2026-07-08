@@ -7,6 +7,7 @@ import 'package:yorimiti_biyori/src/features/notifications/notification_service.
 import 'package:yorimiti_biyori/src/models/suggestion_record.dart';
 import 'package:yorimiti_biyori/src/models/user_settings.dart';
 import 'package:yorimiti_biyori/src/pages/settings_page.dart';
+import 'package:yorimiti_biyori/src/pages/suggestion_settings_page.dart';
 import 'package:yorimiti_biyori/src/repositories/records_repository.dart';
 import 'package:yorimiti_biyori/src/repositories/settings_repository.dart';
 
@@ -91,6 +92,17 @@ void main() {
     expect(find.text('履歴削除'), findsOneWidget);
     expect(find.text('端末内に保存した履歴を削除'), findsOneWidget);
     expect(find.text('削除'), findsOneWidget);
+  });
+
+  testWidgets('提案設定を開くとカテゴリ変更画面へ遷移できる', (tester) async {
+    await _pumpPage(tester);
+
+    await tester.tap(find.text('提案設定を開く'));
+    await tester.pumpAndSettle();
+
+    expect(find.byType(SuggestionSettingsPage), findsOneWidget);
+    expect(find.widgetWithText(FilterChip, '🎵 音楽'), findsOneWidget);
+    expect(find.text('この条件で保存'), findsOneWidget);
   });
 
   testWidgets('「削除」をタップするとインライン確認が表示される', (tester) async {
