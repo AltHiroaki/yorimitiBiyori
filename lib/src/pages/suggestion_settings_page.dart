@@ -129,7 +129,7 @@ class _SuggestionSettingsPageState extends State<SuggestionSettingsPage> {
       body: _loadedSettings == null
           ? const Center(child: CircularProgressIndicator())
           : ListView(
-              padding: const EdgeInsets.all(20),
+              padding: const EdgeInsets.all(24),
               children: [
                 const Text('よりみちの条件を調整できます。'),
                 const SizedBox(height: 16),
@@ -143,7 +143,7 @@ class _SuggestionSettingsPageState extends State<SuggestionSettingsPage> {
             ),
       bottomNavigationBar: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.fromLTRB(20, 8, 20, 12),
+          padding: const EdgeInsets.fromLTRB(24, 8, 24, 12),
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
@@ -168,9 +168,6 @@ class _SuggestionSettingsPageState extends State<SuggestionSettingsPage> {
   /// 第 1 段階：興味カテゴリの複数選択。
   Widget _buildCategoryCard() {
     return Card(
-      elevation: 0,
-      color: Theme.of(context).colorScheme.surfaceContainerHighest,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
       child: Padding(
         padding: const EdgeInsets.all(20),
         child: Column(
@@ -206,9 +203,6 @@ class _SuggestionSettingsPageState extends State<SuggestionSettingsPage> {
     final categorySelections = _detailSelections[category.id] ?? const {};
 
     return Card(
-      elevation: 0,
-      color: Theme.of(context).colorScheme.surfaceContainerHighest,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
       child: Padding(
         padding: const EdgeInsets.all(20),
         child: Column(

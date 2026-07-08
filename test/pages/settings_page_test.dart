@@ -46,6 +46,11 @@ Future<void> _pumpPage(
   NotificationController? notificationController,
   NotificationTimePicker? notificationTimePicker,
 }) async {
+  // ListView 下部（履歴削除の確認ボタン等）まで描画されるよう縦長の画面にする。
+  tester.view.physicalSize = const Size(800, 2400);
+  tester.view.devicePixelRatio = 1.0;
+  addTearDown(tester.view.reset);
+
   await tester.pumpWidget(
     MaterialApp(
       home: Scaffold(

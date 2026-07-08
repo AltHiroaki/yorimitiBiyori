@@ -80,7 +80,7 @@ class _SettingsPageState extends State<SettingsPage> {
   @override
   Widget build(BuildContext context) {
     return ListView(
-      padding: const EdgeInsets.all(20),
+      padding: const EdgeInsets.all(24),
       children: [
         const Text(
           '設定',
@@ -89,7 +89,7 @@ class _SettingsPageState extends State<SettingsPage> {
         const SizedBox(height: 4),
         const Text(
           '興味カテゴリ、通知時刻、履歴を管理します。',
-          style: TextStyle(fontSize: 13),
+          style: TextStyle(fontSize: 14),
         ),
         const SizedBox(height: 16),
         const SectionCard(
@@ -113,9 +113,6 @@ class _SettingsPageState extends State<SettingsPage> {
     final colorScheme = Theme.of(context).colorScheme;
 
     return Card(
-      elevation: 0,
-      color: colorScheme.surfaceContainerHighest,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
       child: Padding(
         padding: const EdgeInsets.all(20),
         child: Column(
@@ -258,9 +255,6 @@ class _SettingsPageState extends State<SettingsPage> {
     final colorScheme = Theme.of(context).colorScheme;
 
     return Card(
-      elevation: 0,
-      color: colorScheme.surfaceContainerHighest,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
       child: Padding(
         padding: const EdgeInsets.all(20),
         child: _showDeleteConfirm

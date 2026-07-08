@@ -196,22 +196,22 @@ class _SuggestionPageState extends State<SuggestionPage> {
       case _LoadStatus.error:
         return const Center(
           child: Padding(
-            padding: EdgeInsets.all(20),
+            padding: EdgeInsets.all(24),
             child: Text('データの読み込みに失敗しました。再起動してください。'),
           ),
         );
       case _LoadStatus.loaded:
         return ListView(
-          padding: const EdgeInsets.all(20),
+          padding: const EdgeInsets.all(24),
           children: [
             const Text(
               'よりみち日和',
-              style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold),
+              style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 4),
             const Text(
               '空いた時間に、小さなよりみちを。',
-              style: TextStyle(fontSize: 13),
+              style: TextStyle(fontSize: 14),
             ),
             const SizedBox(height: 16),
             _buildConditionCard(),
@@ -242,9 +242,6 @@ class _SuggestionPageState extends State<SuggestionPage> {
     final detailSummary = _buildDetailSummary();
 
     return Card(
-      elevation: 0,
-      color: Theme.of(context).colorScheme.surfaceContainerHighest,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
       child: Padding(
         padding: const EdgeInsets.fromLTRB(20, 8, 8, 20),
         child: Column(
@@ -306,9 +303,6 @@ class _SuggestionPageState extends State<SuggestionPage> {
     final colorScheme = Theme.of(context).colorScheme;
 
     return Card(
-      elevation: 0,
-      color: colorScheme.surfaceContainerHighest,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
       child: Padding(
         padding: const EdgeInsets.all(20),
         child: Column(
@@ -375,9 +369,6 @@ class _SuggestionPageState extends State<SuggestionPage> {
     final isCategoryEmpty = _settings.selectedCategories.isEmpty;
 
     return Card(
-      elevation: 0,
-      color: Theme.of(context).colorScheme.surfaceContainerHighest,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
       child: Padding(
         padding: const EdgeInsets.all(20),
         child: Column(

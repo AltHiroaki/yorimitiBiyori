@@ -63,7 +63,7 @@ class _HistoryPageState extends State<HistoryPage> {
     }
 
     return ListView(
-      padding: const EdgeInsets.all(20),
+      padding: const EdgeInsets.all(24),
       children: [
         const Text(
           '履歴',
@@ -72,7 +72,7 @@ class _HistoryPageState extends State<HistoryPage> {
         const SizedBox(height: 4),
         const Text(
           '実施したよりみちと、スキップした提案を確認します。',
-          style: TextStyle(fontSize: 13),
+          style: TextStyle(fontSize: 14),
         ),
         const SizedBox(height: 16),
         _buildSummaryCard(),
@@ -99,9 +99,6 @@ class _HistoryPageState extends State<HistoryPage> {
     final colorScheme = Theme.of(context).colorScheme;
 
     return Card(
-      elevation: 0,
-      color: colorScheme.surfaceContainerHighest,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
       child: Padding(
         padding: const EdgeInsets.symmetric(vertical: 20),
         child: Row(
@@ -163,9 +160,6 @@ class _HistoryPageState extends State<HistoryPage> {
         InterestCategories.findById(record.category)?.label ?? record.category;
 
     return Card(
-      elevation: 0,
-      color: colorScheme.surfaceContainerHighest,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
       child: Padding(
         padding: const EdgeInsets.all(16),
         child: Row(
@@ -232,9 +226,6 @@ class _HistoryPageState extends State<HistoryPage> {
   /// 空状態：サマリーは 0 表示のまま、提案タブへの導線を出す（仕様書 3.2）。
   Widget _buildEmptyState() {
     return Card(
-      elevation: 0,
-      color: Theme.of(context).colorScheme.surfaceContainerHighest,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
       child: Padding(
         padding: const EdgeInsets.all(20),
         child: Column(

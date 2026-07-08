@@ -12,6 +12,35 @@ import '../pages/settings_page.dart';
 import '../pages/suggestion_page.dart';
 import '../repositories/settings_repository.dart';
 
+/// UI プロトタイプのカラーパレット（`よりみち日和 UIプロトタイプ/` の定数 C に対応）。
+const Color _primarySeedColor = Color(0xFF3F6F44);
+const Color _pageBackgroundColor = Color(0xFFF8FBF3);
+const Color _cardOutlineColor = Color(0xFFDFE6D9);
+
+/// プロトタイプのカードは角丸 20〜28px。代表値として大きめの 24 に揃える。
+const double _cardCornerRadius = 24;
+
+/// アプリ全体のテーマ。カードの見た目（白地・薄縁・角丸）はここに集約し、
+/// 各画面の Card では個別指定しない。
+ThemeData buildYorimitiBiyoriTheme() {
+  return ThemeData(
+    colorScheme: ColorScheme.fromSeed(seedColor: _primarySeedColor),
+    useMaterial3: true,
+    scaffoldBackgroundColor: _pageBackgroundColor,
+    cardTheme: CardThemeData(
+      elevation: 0,
+      color: Colors.white,
+      surfaceTintColor: Colors.transparent,
+      // 画面側は SizedBox で間隔を管理しているため、既定の外側余白は持たせない。
+      margin: EdgeInsets.zero,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(_cardCornerRadius),
+        side: const BorderSide(color: _cardOutlineColor),
+      ),
+    ),
+  );
+}
+
 class YorimitiBiyoriApp extends StatelessWidget {
   const YorimitiBiyoriApp({
     super.key,
@@ -28,11 +57,7 @@ class YorimitiBiyoriApp extends StatelessWidget {
     return MaterialApp(
       title: 'よりみち日和',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        // UI プロトタイプのグリーン基調（primary #3F6F44）に合わせる。
-        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF3F6F44)),
-        useMaterial3: true,
-      ),
+      theme: buildYorimitiBiyoriTheme(),
       home: OnboardingGate(
         settingsRepository: settingsRepository ?? SettingsRepository(),
         notificationController: notificationController ?? NotificationService(),
