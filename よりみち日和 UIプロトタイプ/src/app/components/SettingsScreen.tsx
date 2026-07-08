@@ -1,18 +1,6 @@
 import { useState } from "react";
 import { NavigationBar } from "./NavigationBar";
-
-const C = {
-  bg: "#F8FBF3",
-  surface: "#FFFFFF",
-  surfaceVariant: "#EEF5E8",
-  primary: "#3F6F44",
-  primaryContainer: "#C2E8C0",
-  text: "#1A1C18",
-  muted: "#5D6358",
-  tagText: "#596E57",
-  outline: "#DFE6D9",
-  danger: "#BA1A1A",
-};
+import { useDesignTheme } from "../theme";
 
 interface SettingsScreenProps {
   activeTab?: number;
@@ -20,6 +8,7 @@ interface SettingsScreenProps {
 }
 
 function Divider() {
+  const { colors: C } = useDesignTheme();
   return <div style={{ height: "1px", background: C.outline, margin: "0 4px" }} />;
 }
 
@@ -32,6 +21,7 @@ interface RowProps {
 }
 
 function SettingsRow({ label, sub, action, danger: isDanger, right }: RowProps) {
+  const { colors: C } = useDesignTheme();
   return (
     <div style={{ padding: "14px 20px", display: "flex", alignItems: "center", justifyContent: "space-between", gap: "12px" }}>
       <div style={{ flex: 1, minWidth: 0 }}>
@@ -83,6 +73,7 @@ function SettingsRow({ label, sub, action, danger: isDanger, right }: RowProps) 
 }
 
 function Toggle({ on, onChange }: { on: boolean; onChange: (v: boolean) => void }) {
+  const { colors: C } = useDesignTheme();
   return (
     <button
       onClick={() => onChange(!on)}
@@ -116,11 +107,12 @@ function Toggle({ on, onChange }: { on: boolean; onChange: (v: boolean) => void 
 }
 
 export function SettingsScreen({ activeTab = 2, onTabChange }: SettingsScreenProps) {
+  const { colors: C, shape: SH, effects: E } = useDesignTheme();
   const [notificationsOn, setNotificationsOn] = useState(true);
   const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
 
   return (
-    <div style={{ display: "flex", flexDirection: "column", height: "100%", background: C.bg, overflowY: "auto" }}>
+    <div style={{ display: "flex", flexDirection: "column", height: "100%", background: C.screenBackground, overflowY: "auto" }}>
       <div style={{ flex: 1, padding: "24px 24px 16px" }}>
         {/* Title */}
         <div style={{ marginBottom: "24px" }}>
@@ -164,8 +156,10 @@ export function SettingsScreen({ activeTab = 2, onTabChange }: SettingsScreenPro
         <div
           style={{
             background: C.surface,
-            borderRadius: "24px",
-            border: `1px solid ${C.outline}`,
+            borderRadius: SH.panelRadius,
+            border: E.cardBorder,
+            boxShadow: E.cardShadow,
+            backdropFilter: E.surfaceBlur,
             overflow: "hidden",
             marginBottom: "20px",
           }}
@@ -254,8 +248,10 @@ export function SettingsScreen({ activeTab = 2, onTabChange }: SettingsScreenPro
         <div
           style={{
             background: C.surface,
-            borderRadius: "24px",
-            border: `1px solid ${C.outline}`,
+            borderRadius: SH.panelRadius,
+            border: E.cardBorder,
+            boxShadow: E.cardShadow,
+            backdropFilter: E.surfaceBlur,
             overflow: "hidden",
             marginBottom: "16px",
           }}
@@ -278,7 +274,7 @@ export function SettingsScreen({ activeTab = 2, onTabChange }: SettingsScreenPro
                   style={{
                     flex: 1,
                     height: "40px",
-                    borderRadius: "20px",
+                    borderRadius: SH.buttonRadius,
                     background: C.surfaceVariant,
                     border: "none",
                     fontSize: "14px",
@@ -295,7 +291,7 @@ export function SettingsScreen({ activeTab = 2, onTabChange }: SettingsScreenPro
                   style={{
                     flex: 1,
                     height: "40px",
-                    borderRadius: "20px",
+                    borderRadius: SH.buttonRadius,
                     background: C.danger,
                     border: "none",
                     fontSize: "14px",
@@ -363,7 +359,8 @@ export function SettingsScreen({ activeTab = 2, onTabChange }: SettingsScreenPro
         <div
           style={{
             background: C.surfaceVariant,
-            borderRadius: "18px",
+            borderRadius: SH.cardRadius,
+            boxShadow: E.chipShadow,
             padding: "14px 16px",
           }}
         >

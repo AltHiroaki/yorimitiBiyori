@@ -18,6 +18,12 @@ ios/Flutter/flutter_export_environment.sh
 .vscode/
 *.iml
 
+# Node (UI プロトタイプ)
+node_modules/
+
+# Claude Code ローカル設定
+.claude/
+
 # OS
 .DS_Store
 

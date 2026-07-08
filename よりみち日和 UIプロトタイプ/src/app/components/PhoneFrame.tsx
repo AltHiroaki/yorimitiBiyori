@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import { useDesignTheme } from "../theme";
 
 interface PhoneFrameProps {
   label: string;
@@ -6,14 +7,16 @@ interface PhoneFrameProps {
   statusBg?: string;
 }
 
-export function PhoneFrame({ label, children, statusBg = "#F8FBF3" }: PhoneFrameProps) {
+export function PhoneFrame({ label, children, statusBg }: PhoneFrameProps) {
+  const { colors } = useDesignTheme();
+  const statusBackground = statusBg ?? colors.bg;
   return (
     <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "12px" }}>
       <div
         style={{
           width: "375px",
           height: "812px",
-          background: "#F8FBF3",
+          background: colors.bg,
           borderRadius: "48px",
           border: "1px solid #E2E7DB",
           overflow: "hidden",
@@ -28,7 +31,7 @@ export function PhoneFrame({ label, children, statusBg = "#F8FBF3" }: PhoneFrame
         <div
           style={{
             height: "44px",
-            background: statusBg,
+            background: statusBackground,
             display: "flex",
             alignItems: "center",
             justifyContent: "space-between",

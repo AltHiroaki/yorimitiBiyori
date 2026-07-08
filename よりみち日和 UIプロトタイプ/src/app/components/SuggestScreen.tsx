@@ -1,18 +1,6 @@
 import { useState } from "react";
 import { NavigationBar } from "./NavigationBar";
-
-const C = {
-  bg: "#F8FBF3",
-  surface: "#FFFFFF",
-  surfaceVariant: "#EEF5E8",
-  primary: "#3F6F44",
-  primaryContainer: "#C2E8C0",
-  primaryDark: "#0B2A10",
-  text: "#1A1C18",
-  muted: "#5D6358",
-  tagText: "#596E57",
-  outline: "#DFE6D9",
-};
+import { useDesignTheme } from "../theme";
 
 // Default stored conditions (would come from local storage in real app)
 const DEFAULT_CONDITIONS = {
@@ -75,12 +63,13 @@ const SUGGESTIONS: Record<string, SuggestContent[]> = {
 };
 
 function ConditionPill({ label }: { label: string }) {
+  const { colors: C, shape } = useDesignTheme();
   return (
     <span
       style={{
         padding: "3px 10px",
         background: C.primaryContainer,
-        borderRadius: "10px",
+        borderRadius: shape.pillRadius,
         fontSize: "12px",
         fontWeight: 600,
         color: C.primaryDark,
@@ -100,6 +89,7 @@ export interface SuggestScreenProps {
 }
 
 export function SuggestScreen({ activeTab = 0, onTabChange, fromNotification }: SuggestScreenProps) {
+  const { colors: C, shape: SH, effects: E } = useDesignTheme();
   const timeKey = fromNotification ? String(fromNotification) : "15";
   const suggestions = SUGGESTIONS[timeKey] || SUGGESTIONS["15"];
   const [suggestionIndex, setSuggestionIndex] = useState(0);
@@ -116,7 +106,7 @@ export function SuggestScreen({ activeTab = 0, onTabChange, fromNotification }: 
   };
 
   return (
-    <div style={{ display: "flex", flexDirection: "column", height: "100%", background: C.bg, overflowY: "auto" }}>
+    <div style={{ display: "flex", flexDirection: "column", height: "100%", background: C.screenBackground, overflowY: "auto" }}>
       <div style={{ flex: 1, padding: "24px 20px 12px" }}>
 
         {/* App title */}
@@ -133,8 +123,10 @@ export function SuggestScreen({ activeTab = 0, onTabChange, fromNotification }: 
         <div
           style={{
             background: C.surface,
-            borderRadius: "20px",
-            border: `1px solid ${C.outline}`,
+            borderRadius: SH.cardRadius,
+            border: E.cardBorder,
+            boxShadow: E.cardShadow,
+            backdropFilter: E.surfaceBlur,
             padding: "14px 16px",
             marginBottom: "16px",
           }}
@@ -206,8 +198,10 @@ export function SuggestScreen({ activeTab = 0, onTabChange, fromNotification }: 
         <div
           style={{
             background: C.surface,
-            borderRadius: "28px",
-            border: `1px solid ${C.outline}`,
+            borderRadius: SH.heroRadius,
+            border: E.cardBorder,
+            boxShadow: E.heroShadow,
+            backdropFilter: E.surfaceBlur,
             padding: "20px",
             marginBottom: "14px",
           }}
@@ -273,7 +267,8 @@ export function SuggestScreen({ activeTab = 0, onTabChange, fromNotification }: 
                 style={{
                   padding: "5px 14px",
                   background: C.surfaceVariant,
-                  borderRadius: "14px",
+                  borderRadius: SH.chipRadius,
+                  boxShadow: E.chipShadow,
                   fontSize: "12px",
                   fontWeight: 500,
                   color: C.tagText,
@@ -287,7 +282,8 @@ export function SuggestScreen({ activeTab = 0, onTabChange, fromNotification }: 
               style={{
                 padding: "5px 14px",
                 background: C.surfaceVariant,
-                borderRadius: "14px",
+                borderRadius: SH.chipRadius,
+                boxShadow: E.chipShadow,
                 fontSize: "12px",
                 fontWeight: 500,
                 color: C.tagText,
@@ -305,8 +301,9 @@ export function SuggestScreen({ activeTab = 0, onTabChange, fromNotification }: 
               style={{
                 flex: 1,
                 height: "48px",
-                borderRadius: "24px",
-                background: done ? "#2a5230" : C.primary,
+                borderRadius: SH.buttonRadius,
+                background: done ? C.primaryDone : C.primary,
+                boxShadow: E.primaryBtnShadow,
                 border: "none",
                 fontSize: "15px",
                 fontWeight: 700,
@@ -322,9 +319,10 @@ export function SuggestScreen({ activeTab = 0, onTabChange, fromNotification }: 
               style={{
                 flex: 1,
                 height: "48px",
-                borderRadius: "24px",
+                borderRadius: SH.buttonRadius,
                 background: C.surface,
-                border: `1.5px solid ${C.outline}`,
+                border: E.secondaryBtnBorder,
+                boxShadow: E.secondaryBtnShadow,
                 fontSize: "15px",
                 fontWeight: 700,
                 color: C.primary,
@@ -338,7 +336,7 @@ export function SuggestScreen({ activeTab = 0, onTabChange, fromNotification }: 
         </div>
 
         {/* Info card */}
-        <div style={{ background: C.surfaceVariant, borderRadius: "16px", padding: "12px 14px" }}>
+        <div style={{ background: C.surfaceVariant, borderRadius: SH.cardRadius, boxShadow: E.chipShadow, padding: "12px 14px" }}>
           <p style={{ fontSize: "12px", color: C.muted, margin: 0, lineHeight: 1.65, fontFamily: "'Noto Sans JP', sans-serif" }}>
             通知をタップすると選んだ時間の提案が表示されます。
             条件を変えたいときは「提案設定」から調整できます。

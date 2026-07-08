@@ -1,18 +1,5 @@
 import { NavigationBar } from "./NavigationBar";
-
-const C = {
-  bg: "#F8FBF3",
-  surface: "#FFFFFF",
-  surfaceVariant: "#EEF5E8",
-  primary: "#3F6F44",
-  primaryContainer: "#C2E8C0",
-  primaryDark: "#0B2A10",
-  text: "#1A1C18",
-  muted: "#5D6358",
-  outline: "#DFE6D9",
-  skipBg: "#F2E8A2",
-  skipText: "#7B6F00",
-};
+import { useDesignTheme } from "../theme";
 
 interface HistoryItem {
   id: number;
@@ -36,8 +23,9 @@ interface HistoryScreenProps {
 }
 
 export function HistoryScreen({ activeTab = 1, onTabChange }: HistoryScreenProps) {
+  const { colors: C, shape: SH, effects: E } = useDesignTheme();
   return (
-    <div style={{ display: "flex", flexDirection: "column", height: "100%", background: C.bg, overflowY: "auto" }}>
+    <div style={{ display: "flex", flexDirection: "column", height: "100%", background: C.screenBackground, overflowY: "auto" }}>
       <div style={{ flex: 1, padding: "24px 24px 16px" }}>
         {/* Title */}
         <div style={{ marginBottom: "20px" }}>
@@ -70,8 +58,10 @@ export function HistoryScreen({ activeTab = 1, onTabChange }: HistoryScreenProps
         <div
           style={{
             background: C.surface,
-            borderRadius: "24px",
-            border: `1px solid ${C.outline}`,
+            borderRadius: SH.panelRadius,
+            border: E.cardBorder,
+            boxShadow: E.cardShadow,
+            backdropFilter: E.surfaceBlur,
             padding: "20px",
             marginBottom: "24px",
             display: "flex",
@@ -177,8 +167,10 @@ export function HistoryScreen({ activeTab = 1, onTabChange }: HistoryScreenProps
               key={item.id}
               style={{
                 background: C.surface,
-                borderRadius: "20px",
-                border: `1px solid ${C.outline}`,
+                borderRadius: SH.cardRadius,
+                border: E.cardBorder,
+                boxShadow: E.cardShadow,
+                backdropFilter: E.surfaceBlur,
                 padding: "16px",
                 display: "flex",
                 alignItems: "center",
@@ -252,7 +244,7 @@ export function HistoryScreen({ activeTab = 1, onTabChange }: HistoryScreenProps
                   color: item.done ? C.primary : C.skipText,
                   background: item.done ? C.primaryContainer : C.skipBg,
                   padding: "4px 10px",
-                  borderRadius: "10px",
+                  borderRadius: SH.pillRadius,
                   flexShrink: 0,
                   fontFamily: "'Noto Sans JP', sans-serif",
                 }}

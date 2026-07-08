@@ -10,6 +10,7 @@ import { NotificationPermissionScreen } from "./components/NotificationPermissio
 import { NotificationCardScreen } from "./components/NotificationCardScreen";
 import { CompletionModalScreen } from "./components/CompletionModalScreen";
 import { EmptyHistoryScreen } from "./components/EmptyHistoryScreen";
+import { THEMES, DesignThemeProvider } from "./theme";
 
 const FONT = "'Noto Sans JP', 'Hiragino Sans', 'Yu Gothic', sans-serif";
 const C = {
@@ -87,6 +88,94 @@ function InteractivePhone({ label, initialTab }: { label: string; initialTab: nu
   return <PhoneFrame label={label}>{screens[tab]}</PhoneFrame>;
 }
 
+/* ─── デザイン案比較セクション (Issue #53) ────────── */
+
+function DesignCompareSection() {
+  const [themeId, setThemeId] = useState(THEMES[0].id);
+  const selected = THEMES.find((t) => t.id === themeId) ?? THEMES[0];
+
+  return (
+    <Section>
+      <SectionHeader
+        index="★ — デザイン案比較"
+        title="6つのデザインスタイルで見比べる（Issue #53）"
+        sub="機能・画面フロー・文言は同一のまま、見た目のトークンだけを切り替え。チップでスタイルを選ぶと下の3画面に反映されます。"
+      />
+
+      {/* スタイル切替チップ */}
+      <div style={{ display: "flex", flexWrap: "wrap", gap: "8px", marginBottom: "14px" }}>
+        {THEMES.map((t) => {
+          const active = t.id === themeId;
+          return (
+            <button
+              key={t.id}
+              onClick={() => setThemeId(t.id)}
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "flex-start",
+                gap: "1px",
+                padding: "8px 14px",
+                borderRadius: "14px",
+                border: active ? `1.5px solid ${C.primary}` : `1px solid ${C.outline}`,
+                background: active ? "#C2E8C0" : "#FFFFFF",
+                cursor: "pointer",
+                fontFamily: FONT,
+              }}
+            >
+              <span style={{ fontSize: "13px", fontWeight: 700, color: active ? "#0B2A10" : C.text }}>
+                {t.nameJa}
+              </span>
+              <span style={{ fontSize: "10px", color: C.muted }}>{t.nameEn}</span>
+            </button>
+          );
+        })}
+      </div>
+
+      {/* 選択中スタイルの説明 */}
+      <div
+        style={{
+          background: C.tagBg,
+          borderRadius: "14px",
+          padding: "12px 16px",
+          marginBottom: "20px",
+          maxWidth: "820px",
+        }}
+      >
+        <p style={{ fontSize: "13px", fontWeight: 700, color: C.primary, margin: "0 0 4px", fontFamily: FONT }}>
+          {selected.nameJa}（{selected.nameEn}）
+        </p>
+        <p style={{ fontSize: "12px", color: C.muted, margin: 0, lineHeight: 1.7, fontFamily: FONT }}>
+          {selected.description}
+        </p>
+      </div>
+
+      {/* 選択スタイルで主要3画面を操作 */}
+      <DesignThemeProvider theme={selected}>
+        <PhoneRow>
+          <InteractivePhone label={`提案 — ${selected.nameJa}`} initialTab={0} />
+          <InteractivePhone label={`履歴 — ${selected.nameJa}`} initialTab={1} />
+          <InteractivePhone label={`設定 — ${selected.nameJa}`} initialTab={2} />
+        </PhoneRow>
+      </DesignThemeProvider>
+
+      {/* 全案の横並び比較（提案画面） */}
+      <p style={{ fontSize: "14px", fontWeight: 700, color: C.text, margin: "28px 0 12px", fontFamily: FONT }}>
+        全6案ならべて比較（提案画面）
+      </p>
+      <PhoneRow>
+        {THEMES.map((t) => (
+          <DesignThemeProvider key={t.id} theme={t}>
+            <PhoneFrame label={`${t.nameJa} / ${t.nameEn}`}>
+              <SuggestScreen />
+            </PhoneFrame>
+          </DesignThemeProvider>
+        ))}
+      </PhoneRow>
+    </Section>
+  );
+}
+
 /* ─── Main App ───────────────────────────────────── */
 
 export default function App() {
@@ -113,6 +202,11 @@ export default function App() {
           </p>
         </div>
       </div>
+
+      {/* ═══════════════════════════════════════════ */}
+      {/* SECTION ★: デザイン案比較 (Issue #53)       */}
+      {/* ═══════════════════════════════════════════ */}
+      <DesignCompareSection />
 
       {/* ═══════════════════════════════════════════ */}
       {/* SECTION A: メインの3画面                   */}

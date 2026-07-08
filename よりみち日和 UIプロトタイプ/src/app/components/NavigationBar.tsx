@@ -1,11 +1,4 @@
-const C = {
-  primary: "#3F6F44",
-  primaryContainer: "#C2E8C0",
-  text: "#1A1C18",
-  muted: "#5D6358",
-  surface: "#FFFFFF",
-  outline: "#DFE6D9",
-};
+import { useDesignTheme } from "../theme";
 
 interface NavigationBarProps {
   activeTab: number;
@@ -13,6 +6,7 @@ interface NavigationBarProps {
 }
 
 function SuggestIcon({ active }: { active: boolean }) {
+  const { colors: C } = useDesignTheme();
   return (
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
       <path
@@ -29,6 +23,7 @@ function SuggestIcon({ active }: { active: boolean }) {
 }
 
 function HistoryIcon({ active }: { active: boolean }) {
+  const { colors: C } = useDesignTheme();
   return (
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
       <circle cx="12" cy="12" r="9" stroke={active ? C.primary : C.muted} strokeWidth="1.8" fill={active ? C.primaryContainer : "none"} />
@@ -38,6 +33,7 @@ function HistoryIcon({ active }: { active: boolean }) {
 }
 
 function SettingsIcon({ active }: { active: boolean }) {
+  const { colors: C } = useDesignTheme();
   return (
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
       <path
@@ -57,6 +53,7 @@ function SettingsIcon({ active }: { active: boolean }) {
 }
 
 export function NavigationBar({ activeTab, onTabChange }: NavigationBarProps) {
+  const { colors: C, effects: E } = useDesignTheme();
   const tabs = [
     { label: "提案", icon: SuggestIcon },
     { label: "履歴", icon: HistoryIcon },
@@ -67,12 +64,16 @@ export function NavigationBar({ activeTab, onTabChange }: NavigationBarProps) {
     <div
       style={{
         height: "80px",
-        background: C.surface,
-        borderTop: `1px solid ${C.outline}`,
+        background: C.navBg,
+        borderTop: E.navBorderTop,
+        boxShadow: E.navShadow,
+        backdropFilter: E.surfaceBlur,
         display: "flex",
         alignItems: "center",
         flexShrink: 0,
         paddingBottom: "8px",
+        position: "relative",
+        zIndex: 1,
       }}
     >
       {tabs.map((tab, i) => {
@@ -100,6 +101,7 @@ export function NavigationBar({ activeTab, onTabChange }: NavigationBarProps) {
                 height: "32px",
                 borderRadius: "16px",
                 background: active ? C.primaryContainer : "transparent",
+                boxShadow: active ? E.pillActiveShadow : "none",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
