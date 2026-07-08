@@ -23,7 +23,7 @@ interface HistoryScreenProps {
 }
 
 export function HistoryScreen({ activeTab = 1, onTabChange }: HistoryScreenProps) {
-  const { colors: C, shape: SH, effects: E } = useDesignTheme();
+  const { colors: C, shape: SH, effects: E, font: F } = useDesignTheme();
   return (
     <div style={{ display: "flex", flexDirection: "column", height: "100%", background: C.screenBackground, overflowY: "auto" }}>
       <div style={{ flex: 1, padding: "24px 24px 16px" }}>
@@ -36,7 +36,7 @@ export function HistoryScreen({ activeTab = 1, onTabChange }: HistoryScreenProps
               color: C.text,
               margin: 0,
               lineHeight: 1.2,
-              fontFamily: "'Noto Sans JP', sans-serif",
+              fontFamily: F,
             }}
           >
             履歴
@@ -47,7 +47,7 @@ export function HistoryScreen({ activeTab = 1, onTabChange }: HistoryScreenProps
               color: C.muted,
               margin: "6px 0 0",
               lineHeight: 1.5,
-              fontFamily: "'Noto Sans JP', sans-serif",
+              fontFamily: F,
             }}
           >
             実施したよりみちと、スキップした提案を確認します。
@@ -76,7 +76,7 @@ export function HistoryScreen({ activeTab = 1, onTabChange }: HistoryScreenProps
                 fontWeight: 800,
                 color: C.primary,
                 margin: 0,
-                fontFamily: "'Noto Sans JP', sans-serif",
+                fontFamily: F,
               }}
             >
               8
@@ -86,7 +86,7 @@ export function HistoryScreen({ activeTab = 1, onTabChange }: HistoryScreenProps
                 fontSize: "12px",
                 color: C.muted,
                 margin: "4px 0 0",
-                fontFamily: "'Noto Sans JP', sans-serif",
+                fontFamily: F,
               }}
             >
               実施
@@ -103,7 +103,7 @@ export function HistoryScreen({ activeTab = 1, onTabChange }: HistoryScreenProps
                 fontWeight: 800,
                 color: C.skipText,
                 margin: 0,
-                fontFamily: "'Noto Sans JP', sans-serif",
+                fontFamily: F,
               }}
             >
               3
@@ -113,7 +113,7 @@ export function HistoryScreen({ activeTab = 1, onTabChange }: HistoryScreenProps
                 fontSize: "12px",
                 color: C.muted,
                 margin: "4px 0 0",
-                fontFamily: "'Noto Sans JP', sans-serif",
+                fontFamily: F,
               }}
             >
               スキップ
@@ -130,7 +130,7 @@ export function HistoryScreen({ activeTab = 1, onTabChange }: HistoryScreenProps
                 fontWeight: 800,
                 color: C.text,
                 margin: 0,
-                fontFamily: "'Noto Sans JP', sans-serif",
+                fontFamily: F,
               }}
             >
               120
@@ -140,7 +140,7 @@ export function HistoryScreen({ activeTab = 1, onTabChange }: HistoryScreenProps
                 fontSize: "12px",
                 color: C.muted,
                 margin: "4px 0 0",
-                fontFamily: "'Noto Sans JP', sans-serif",
+                fontFamily: F,
               }}
             >
               分
@@ -155,7 +155,7 @@ export function HistoryScreen({ activeTab = 1, onTabChange }: HistoryScreenProps
             fontWeight: 700,
             color: C.text,
             margin: "0 0 12px",
-            fontFamily: "'Noto Sans JP', sans-serif",
+            fontFamily: F,
           }}
         >
           最近の履歴
@@ -216,7 +216,7 @@ export function HistoryScreen({ activeTab = 1, onTabChange }: HistoryScreenProps
                     fontWeight: 700,
                     color: C.text,
                     margin: 0,
-                    fontFamily: "'Noto Sans JP', sans-serif",
+                    fontFamily: F,
                     overflow: "hidden",
                     textOverflow: "ellipsis",
                     whiteSpace: "nowrap",
@@ -229,7 +229,7 @@ export function HistoryScreen({ activeTab = 1, onTabChange }: HistoryScreenProps
                     fontSize: "13px",
                     color: C.muted,
                     margin: "4px 0 0",
-                    fontFamily: "'Noto Sans JP', sans-serif",
+                    fontFamily: F,
                   }}
                 >
                   {item.date}　{item.tag}・{item.duration}
@@ -246,7 +246,7 @@ export function HistoryScreen({ activeTab = 1, onTabChange }: HistoryScreenProps
                   padding: "4px 10px",
                   borderRadius: SH.pillRadius,
                   flexShrink: 0,
-                  fontFamily: "'Noto Sans JP', sans-serif",
+                  fontFamily: F,
                 }}
               >
                 {item.done ? "実施" : "スキップ"}

@@ -8,7 +8,7 @@ interface PhoneFrameProps {
 }
 
 export function PhoneFrame({ label, children, statusBg }: PhoneFrameProps) {
-  const { colors } = useDesignTheme();
+  const { colors, font } = useDesignTheme();
   const statusBackground = statusBg ?? colors.bg;
   return (
     <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "12px" }}>
@@ -23,7 +23,7 @@ export function PhoneFrame({ label, children, statusBg }: PhoneFrameProps) {
           display: "flex",
           flexDirection: "column",
           boxShadow: "0 24px 48px rgba(34,51,34,0.12)",
-          fontFamily: "'Noto Sans JP', 'Hiragino Sans', 'Yu Gothic', sans-serif",
+          fontFamily: font,
           position: "relative",
         }}
       >

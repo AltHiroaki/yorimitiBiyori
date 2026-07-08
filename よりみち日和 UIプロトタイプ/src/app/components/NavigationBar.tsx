@@ -53,7 +53,7 @@ function SettingsIcon({ active }: { active: boolean }) {
 }
 
 export function NavigationBar({ activeTab, onTabChange }: NavigationBarProps) {
-  const { colors: C, effects: E } = useDesignTheme();
+  const { colors: C, effects: E, font: F } = useDesignTheme();
   const tabs = [
     { label: "提案", icon: SuggestIcon },
     { label: "履歴", icon: HistoryIcon },
@@ -114,7 +114,7 @@ export function NavigationBar({ activeTab, onTabChange }: NavigationBarProps) {
                 fontSize: "12px",
                 fontWeight: active ? 700 : 500,
                 color: active ? C.primary : C.muted,
-                fontFamily: "'Noto Sans JP', sans-serif",
+                fontFamily: F,
               }}
             >
               {tab.label}

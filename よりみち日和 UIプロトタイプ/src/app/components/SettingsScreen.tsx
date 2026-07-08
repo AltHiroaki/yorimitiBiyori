@@ -21,7 +21,7 @@ interface RowProps {
 }
 
 function SettingsRow({ label, sub, action, danger: isDanger, right }: RowProps) {
-  const { colors: C } = useDesignTheme();
+  const { colors: C, font: F } = useDesignTheme();
   return (
     <div style={{ padding: "14px 20px", display: "flex", alignItems: "center", justifyContent: "space-between", gap: "12px" }}>
       <div style={{ flex: 1, minWidth: 0 }}>
@@ -31,7 +31,7 @@ function SettingsRow({ label, sub, action, danger: isDanger, right }: RowProps) 
             fontWeight: 700,
             color: isDanger ? C.danger : C.text,
             margin: 0,
-            fontFamily: "'Noto Sans JP', sans-serif",
+            fontFamily: F,
           }}
         >
           {label}
@@ -42,7 +42,7 @@ function SettingsRow({ label, sub, action, danger: isDanger, right }: RowProps) 
               fontSize: "12px",
               color: C.muted,
               margin: "3px 0 0",
-              fontFamily: "'Noto Sans JP', sans-serif",
+              fontFamily: F,
             }}
           >
             {sub}
@@ -61,7 +61,7 @@ function SettingsRow({ label, sub, action, danger: isDanger, right }: RowProps) 
             color: isDanger ? C.danger : C.primary,
             cursor: "pointer",
             padding: "4px 8px",
-            fontFamily: "'Noto Sans JP', sans-serif",
+            fontFamily: F,
             flexShrink: 0,
           }}
         >
@@ -107,7 +107,7 @@ function Toggle({ on, onChange }: { on: boolean; onChange: (v: boolean) => void 
 }
 
 export function SettingsScreen({ activeTab = 2, onTabChange }: SettingsScreenProps) {
-  const { colors: C, shape: SH, effects: E } = useDesignTheme();
+  const { colors: C, shape: SH, effects: E, font: F } = useDesignTheme();
   const [notificationsOn, setNotificationsOn] = useState(true);
   const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
 
@@ -123,7 +123,7 @@ export function SettingsScreen({ activeTab = 2, onTabChange }: SettingsScreenPro
               color: C.text,
               margin: 0,
               lineHeight: 1.2,
-              fontFamily: "'Noto Sans JP', sans-serif",
+              fontFamily: F,
             }}
           >
             設定
@@ -133,7 +133,7 @@ export function SettingsScreen({ activeTab = 2, onTabChange }: SettingsScreenPro
               fontSize: "14px",
               color: C.muted,
               margin: "6px 0 0",
-              fontFamily: "'Noto Sans JP', sans-serif",
+              fontFamily: F,
             }}
           >
             興味カテゴリ、通知時刻、アカウント、履歴を管理します。
@@ -147,7 +147,7 @@ export function SettingsScreen({ activeTab = 2, onTabChange }: SettingsScreenPro
             fontWeight: 700,
             color: C.text,
             margin: "0 0 10px",
-            fontFamily: "'Noto Sans JP', sans-serif",
+            fontFamily: F,
           }}
         >
           基本設定
@@ -177,11 +177,11 @@ export function SettingsScreen({ activeTab = 2, onTabChange }: SettingsScreenPro
                 </svg>
               </div>
               <div>
-                <p style={{ fontSize: "15px", fontWeight: 700, color: C.text, margin: 0, fontFamily: "'Noto Sans JP', sans-serif" }}>Googleアカウント</p>
-                <p style={{ fontSize: "12px", color: C.muted, margin: "3px 0 0", fontFamily: "'Noto Sans JP', sans-serif" }}>未連携</p>
+                <p style={{ fontSize: "15px", fontWeight: 700, color: C.text, margin: 0, fontFamily: F }}>Googleアカウント</p>
+                <p style={{ fontSize: "12px", color: C.muted, margin: "3px 0 0", fontFamily: F }}>未連携</p>
               </div>
             </div>
-            <button style={{ background: "none", border: "none", fontSize: "13px", fontWeight: 500, color: C.primary, cursor: "pointer", padding: "4px 8px", fontFamily: "'Noto Sans JP', sans-serif", flexShrink: 0 }}>連携</button>
+            <button style={{ background: "none", border: "none", fontSize: "13px", fontWeight: 500, color: C.primary, cursor: "pointer", padding: "4px 8px", fontFamily: F, flexShrink: 0 }}>連携</button>
           </div>
           <Divider />
           {/* 提案設定 row */}
@@ -193,11 +193,11 @@ export function SettingsScreen({ activeTab = 2, onTabChange }: SettingsScreenPro
                 </svg>
               </div>
               <div>
-                <p style={{ fontSize: "15px", fontWeight: 700, color: C.text, margin: 0, fontFamily: "'Noto Sans JP', sans-serif" }}>提案設定</p>
-                <p style={{ fontSize: "12px", color: C.muted, margin: "3px 0 0", fontFamily: "'Noto Sans JP', sans-serif" }}>時間・予算・移動距離を調整</p>
+                <p style={{ fontSize: "15px", fontWeight: 700, color: C.text, margin: 0, fontFamily: F }}>提案設定</p>
+                <p style={{ fontSize: "12px", color: C.muted, margin: "3px 0 0", fontFamily: F }}>時間・予算・移動距離を調整</p>
               </div>
             </div>
-            <button style={{ background: "none", border: "none", fontSize: "13px", fontWeight: 500, color: C.primary, cursor: "pointer", padding: "4px 8px", fontFamily: "'Noto Sans JP', sans-serif", flexShrink: 0 }}>変更</button>
+            <button style={{ background: "none", border: "none", fontSize: "13px", fontWeight: 500, color: C.primary, cursor: "pointer", padding: "4px 8px", fontFamily: F, flexShrink: 0 }}>変更</button>
           </div>
           <Divider />
           <SettingsRow label="興味カテゴリ" sub="散歩・音楽・読書・学習" action="編集" />
@@ -212,7 +212,7 @@ export function SettingsScreen({ activeTab = 2, onTabChange }: SettingsScreenPro
                   fontWeight: 700,
                   color: C.text,
                   margin: 0,
-                  fontFamily: "'Noto Sans JP', sans-serif",
+                  fontFamily: F,
                 }}
               >
                 通知
@@ -222,7 +222,7 @@ export function SettingsScreen({ activeTab = 2, onTabChange }: SettingsScreenPro
                   fontSize: "12px",
                   color: C.muted,
                   margin: "3px 0 0",
-                  fontFamily: "'Noto Sans JP', sans-serif",
+                  fontFamily: F,
                 }}
               >
                 空き時間のきっかけを受け取る
@@ -239,7 +239,7 @@ export function SettingsScreen({ activeTab = 2, onTabChange }: SettingsScreenPro
             fontWeight: 700,
             color: C.text,
             margin: "0 0 10px",
-            fontFamily: "'Noto Sans JP', sans-serif",
+            fontFamily: F,
           }}
         >
           データ
@@ -263,7 +263,7 @@ export function SettingsScreen({ activeTab = 2, onTabChange }: SettingsScreenPro
                   fontSize: "14px",
                   color: C.text,
                   margin: "0 0 12px",
-                  fontFamily: "'Noto Sans JP', sans-serif",
+                  fontFamily: F,
                 }}
               >
                 本当に削除しますか？この操作は取り消せません。
@@ -281,7 +281,7 @@ export function SettingsScreen({ activeTab = 2, onTabChange }: SettingsScreenPro
                     fontWeight: 700,
                     color: C.muted,
                     cursor: "pointer",
-                    fontFamily: "'Noto Sans JP', sans-serif",
+                    fontFamily: F,
                   }}
                 >
                   キャンセル
@@ -298,7 +298,7 @@ export function SettingsScreen({ activeTab = 2, onTabChange }: SettingsScreenPro
                     fontWeight: 700,
                     color: "#FFFFFF",
                     cursor: "pointer",
-                    fontFamily: "'Noto Sans JP', sans-serif",
+                    fontFamily: F,
                   }}
                 >
                   削除する
@@ -317,7 +317,7 @@ export function SettingsScreen({ activeTab = 2, onTabChange }: SettingsScreenPro
                       fontWeight: 700,
                       color: C.danger,
                       margin: 0,
-                      fontFamily: "'Noto Sans JP', sans-serif",
+                      fontFamily: F,
                     }}
                   >
                     履歴削除
@@ -327,7 +327,7 @@ export function SettingsScreen({ activeTab = 2, onTabChange }: SettingsScreenPro
                       fontSize: "12px",
                       color: C.muted,
                       margin: "3px 0 0",
-                      fontFamily: "'Noto Sans JP', sans-serif",
+                      fontFamily: F,
                     }}
                   >
                     端末内に保存した履歴を削除
@@ -343,7 +343,7 @@ export function SettingsScreen({ activeTab = 2, onTabChange }: SettingsScreenPro
                     color: C.danger,
                     cursor: "pointer",
                     padding: "4px 8px",
-                    fontFamily: "'Noto Sans JP', sans-serif",
+                    fontFamily: F,
                   }}
                 >
                   削除
@@ -370,7 +370,7 @@ export function SettingsScreen({ activeTab = 2, onTabChange }: SettingsScreenPro
               color: C.muted,
               margin: 0,
               lineHeight: 1.6,
-              fontFamily: "'Noto Sans JP', sans-serif",
+              fontFamily: F,
             }}
           >
             MVPではログインなしでも利用できます。Googleアカウント連携は、バックアップや将来のカレンダー連携に使います。

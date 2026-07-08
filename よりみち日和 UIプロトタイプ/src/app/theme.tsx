@@ -11,6 +11,7 @@ export interface DesignTheme {
   nameJa: string;
   nameEn: string;
   description: string;
+  font: string; // 画面内テキストの fontFamily
   colors: {
     bg: string;               // 画面のベース色（PhoneFrame・ステータスバー）
     screenBackground: string; // 画面の background（単色 or グラデーション）
@@ -100,7 +101,8 @@ const material3: DesignTheme = {
   nameJa: "マテリアルデザイン 3",
   nameEn: "Material Design 3 / Material You",
   description:
-    "Google 公式のデザインシステム。トーナルカラーと大きめの角丸、控えめな境界線で構成。Flutter 標準（useMaterial3）と親和性が最も高く、実装コストが最小。現行デザインはこれをベースにしている。",
+    "Google 公式のデザインシステム。トーナルカラーと大きめの角丸、控えめな境界線で構成。Flutter 標準（useMaterial3）と親和性が最も高く、実装コストが最小。現行デザインはこれをベースにしている。フォントは標準的な Noto Sans JP。",
+  font: "'Noto Sans JP', sans-serif",
   colors: { ...BASE_COLORS },
   shape: { ...BASE_SHAPE },
   effects: { ...NO_EFFECTS },
@@ -112,7 +114,8 @@ const neumorphism: DesignTheme = {
   nameJa: "ニューモーフィズム",
   nameEn: "Neumorphism",
   description:
-    "背景と同色の面に、左上の光と右下の影の 2 方向シャドウで凹凸を表現する。柔らかく触りたくなる質感が特徴。コントラストが低くなりやすく、アクセシビリティには注意が必要。",
+    "背景と同色の面に、左上の光と右下の影の 2 方向シャドウで凹凸を表現する。柔らかく触りたくなる質感が特徴。フォントも丸ゴシック（Zen Maru Gothic）で柔らかさを揃える。コントラストが低くなりやすく、アクセシビリティには注意が必要。",
+  font: "'Zen Maru Gothic', 'Noto Sans JP', sans-serif",
   colors: {
     ...BASE_COLORS,
     surface: "#F8FBF3", // 背景と同色にすることでニューモーフィズムが成立する
@@ -144,7 +147,8 @@ const glassmorphism: DesignTheme = {
   nameJa: "グラスモーフィズム",
   nameEn: "Glassmorphism",
   description:
-    "すりガラスのような半透明レイヤーと背景ぼかしで奥行きを出す。iOS や Windows 11 で採用されている今風のスタイル。背景にグラデーションや写真があると映える。",
+    "すりガラスのような半透明レイヤーと背景ぼかしで奥行きを出す。iOS や Windows 11 で採用されている今風のスタイル。フォントはすっきりした Zen Kaku Gothic New。背景にグラデーションや写真があると映える。",
+  font: "'Zen Kaku Gothic New', 'Noto Sans JP', sans-serif",
   colors: {
     ...BASE_COLORS,
     bg: "#DFF2E4",
@@ -176,7 +180,8 @@ const flat: DesignTheme = {
   nameJa: "フラットデザイン / ミニマル",
   nameEn: "Flat Design 2.0",
   description:
-    "影や質感の装飾を排し、余白・タイポグラフィ・はっきりした線と色面だけで情報を主役にする。読みやすく軽いが、単調に見えないよう配色にメリハリが要る。",
+    "影や質感の装飾を排し、余白・タイポグラフィ・はっきりした線と色面だけで情報を主役にする。フォントは硬質で機能的な IBM Plex Sans JP。読みやすく軽いが、単調に見えないよう配色にメリハリが要る。",
+  font: "'IBM Plex Sans JP', 'Noto Sans JP', sans-serif",
   colors: {
     ...BASE_COLORS,
     bg: "#FCFDFA",
@@ -207,7 +212,8 @@ const claymorphism: DesignTheme = {
   nameJa: "クレイモーフィズム",
   nameEn: "Claymorphism",
   description:
-    "粘土のようにぷっくりした立体感。太い角丸に、外側の落ち影と内側のハイライト・シェードを重ねる。パステル配色と相性が良く、かわいい・癒し系の世界観に合う。",
+    "粘土のようにぷっくりした立体感。太い角丸に、外側の落ち影と内側のハイライト・シェードを重ねる。フォントも丸文字（M PLUS Rounded 1c）で統一。パステル配色と相性が良く、かわいい・癒し系の世界観に合う。",
+  font: "'M PLUS Rounded 1c', 'Noto Sans JP', sans-serif",
   colors: {
     ...BASE_COLORS,
     bg: "#EAF6E7",
@@ -251,7 +257,8 @@ const skeuomorphism: DesignTheme = {
   nameJa: "スキューモーフィズム",
   nameEn: "Skeuomorphism",
   description:
-    "紙や革など実物の質感を模す古典的スタイル。グラデーションと立体的なボタンで「手帳・スタンプ帳」のような演出ができる。作り込みの工数は最も大きい（参考枠）。",
+    "紙や革など実物の質感を模す古典的スタイル。グラデーションと立体的なボタン、明朝体（Shippori Mincho）で「手帳・スタンプ帳」のような演出ができる。作り込みの工数は最も大きい（参考枠）。",
+  font: "'Shippori Mincho', 'Noto Serif JP', serif",
   colors: {
     ...BASE_COLORS,
     bg: "#F1EBDB",

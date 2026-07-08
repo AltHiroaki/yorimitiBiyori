@@ -63,7 +63,7 @@ const SUGGESTIONS: Record<string, SuggestContent[]> = {
 };
 
 function ConditionPill({ label }: { label: string }) {
-  const { colors: C, shape } = useDesignTheme();
+  const { colors: C, shape, font: F } = useDesignTheme();
   return (
     <span
       style={{
@@ -73,7 +73,7 @@ function ConditionPill({ label }: { label: string }) {
         fontSize: "12px",
         fontWeight: 600,
         color: C.primaryDark,
-        fontFamily: "'Noto Sans JP', sans-serif",
+        fontFamily: F,
         whiteSpace: "nowrap",
       }}
     >
@@ -89,7 +89,7 @@ export interface SuggestScreenProps {
 }
 
 export function SuggestScreen({ activeTab = 0, onTabChange, fromNotification }: SuggestScreenProps) {
-  const { colors: C, shape: SH, effects: E } = useDesignTheme();
+  const { colors: C, shape: SH, effects: E, font: F } = useDesignTheme();
   const timeKey = fromNotification ? String(fromNotification) : "15";
   const suggestions = SUGGESTIONS[timeKey] || SUGGESTIONS["15"];
   const [suggestionIndex, setSuggestionIndex] = useState(0);
@@ -111,10 +111,10 @@ export function SuggestScreen({ activeTab = 0, onTabChange, fromNotification }: 
 
         {/* App title */}
         <div style={{ marginBottom: "18px" }}>
-          <h1 style={{ fontSize: "26px", fontWeight: 800, color: C.text, margin: 0, lineHeight: 1.2, fontFamily: "'Noto Sans JP', sans-serif" }}>
+          <h1 style={{ fontSize: "26px", fontWeight: 800, color: C.text, margin: 0, lineHeight: 1.2, fontFamily: F }}>
             よりみち日和
           </h1>
-          <p style={{ fontSize: "13px", color: C.muted, margin: "5px 0 0", fontFamily: "'Noto Sans JP', sans-serif" }}>
+          <p style={{ fontSize: "13px", color: C.muted, margin: "5px 0 0", fontFamily: F }}>
             空いた時間に、小さなよりみちを。
           </p>
         </div>
@@ -133,7 +133,7 @@ export function SuggestScreen({ activeTab = 0, onTabChange, fromNotification }: 
         >
           {/* Header row */}
           <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "10px" }}>
-            <span style={{ fontSize: "12px", fontWeight: 700, color: C.muted, fontFamily: "'Noto Sans JP', sans-serif" }}>
+            <span style={{ fontSize: "12px", fontWeight: 700, color: C.muted, fontFamily: F }}>
               現在の提案条件
             </span>
             <button
@@ -145,7 +145,7 @@ export function SuggestScreen({ activeTab = 0, onTabChange, fromNotification }: 
                 color: C.primary,
                 cursor: "pointer",
                 padding: "2px 0",
-                fontFamily: "'Noto Sans JP', sans-serif",
+                fontFamily: F,
                 display: "flex",
                 alignItems: "center",
                 gap: "2px",
@@ -177,7 +177,7 @@ export function SuggestScreen({ activeTab = 0, onTabChange, fromNotification }: 
                 <rect x="5" y="3" width="1" height="3" rx="0.5" fill="white" />
                 <circle cx="5.5" cy="7.5" r="0.5" fill="white" />
               </svg>
-              <span style={{ fontSize: "11px", fontWeight: 600, color: "#E65100", fontFamily: "'Noto Sans JP', sans-serif" }}>
+              <span style={{ fontSize: "11px", fontWeight: 600, color: "#E65100", fontFamily: F }}>
                 通知から選択: {fromNotification}分
               </span>
             </div>
@@ -188,7 +188,7 @@ export function SuggestScreen({ activeTab = 0, onTabChange, fromNotification }: 
             <ConditionPill label={`⏱ ${conditions.time}`} />
             <ConditionPill label={`¥ ${conditions.budget}`} />
             <ConditionPill label={`📍 ${conditions.distance}`} />
-            <span style={{ fontSize: "12px", color: C.muted, fontFamily: "'Noto Sans JP', sans-serif" }}>
+            <span style={{ fontSize: "12px", color: C.muted, fontFamily: F }}>
               {conditions.categories.join("・")}
             </span>
           </div>
@@ -226,10 +226,10 @@ export function SuggestScreen({ activeTab = 0, onTabChange, fromNotification }: 
               </svg>
             </div>
             <div>
-              <p style={{ fontSize: "13px", fontWeight: 700, color: C.primary, margin: 0, fontFamily: "'Noto Sans JP', sans-serif" }}>
+              <p style={{ fontSize: "13px", fontWeight: 700, color: C.primary, margin: 0, fontFamily: F }}>
                 今日のよりみち
               </p>
-              <p style={{ fontSize: "12px", color: C.muted, margin: "2px 0 0", fontFamily: "'Noto Sans JP', sans-serif" }}>
+              <p style={{ fontSize: "12px", color: C.muted, margin: "2px 0 0", fontFamily: F }}>
                 {currentSuggestion.time}でできる
               </p>
             </div>
@@ -243,7 +243,7 @@ export function SuggestScreen({ activeTab = 0, onTabChange, fromNotification }: 
               color: C.text,
               margin: "0 0 10px",
               lineHeight: 1.35,
-              fontFamily: "'Noto Sans JP', sans-serif",
+              fontFamily: F,
             }}
           >
             {currentSuggestion.title}
@@ -255,7 +255,7 @@ export function SuggestScreen({ activeTab = 0, onTabChange, fromNotification }: 
             )}
           </h2>
 
-          <p style={{ fontSize: "13px", color: C.muted, margin: "0 0 14px", lineHeight: 1.65, fontFamily: "'Noto Sans JP', sans-serif" }}>
+          <p style={{ fontSize: "13px", color: C.muted, margin: "0 0 14px", lineHeight: 1.65, fontFamily: F }}>
             {currentSuggestion.body}
           </p>
 
@@ -272,7 +272,7 @@ export function SuggestScreen({ activeTab = 0, onTabChange, fromNotification }: 
                   fontSize: "12px",
                   fontWeight: 500,
                   color: C.tagText,
-                  fontFamily: "'Noto Sans JP', sans-serif",
+                  fontFamily: F,
                 }}
               >
                 {tag}
@@ -287,7 +287,7 @@ export function SuggestScreen({ activeTab = 0, onTabChange, fromNotification }: 
                 fontSize: "12px",
                 fontWeight: 500,
                 color: C.tagText,
-                fontFamily: "'Noto Sans JP', sans-serif",
+                fontFamily: F,
               }}
             >
               {currentSuggestion.time}
@@ -309,7 +309,7 @@ export function SuggestScreen({ activeTab = 0, onTabChange, fromNotification }: 
                 fontWeight: 700,
                 color: "#FFFFFF",
                 cursor: "pointer",
-                fontFamily: "'Noto Sans JP', sans-serif",
+                fontFamily: F,
               }}
             >
               {done ? "✓ やった！" : "やってみる"}
@@ -327,7 +327,7 @@ export function SuggestScreen({ activeTab = 0, onTabChange, fromNotification }: 
                 fontWeight: 700,
                 color: C.primary,
                 cursor: "pointer",
-                fontFamily: "'Noto Sans JP', sans-serif",
+                fontFamily: F,
               }}
             >
               別の提案
@@ -337,7 +337,7 @@ export function SuggestScreen({ activeTab = 0, onTabChange, fromNotification }: 
 
         {/* Info card */}
         <div style={{ background: C.surfaceVariant, borderRadius: SH.cardRadius, boxShadow: E.chipShadow, padding: "12px 14px" }}>
-          <p style={{ fontSize: "12px", color: C.muted, margin: 0, lineHeight: 1.65, fontFamily: "'Noto Sans JP', sans-serif" }}>
+          <p style={{ fontSize: "12px", color: C.muted, margin: 0, lineHeight: 1.65, fontFamily: F }}>
             通知をタップすると選んだ時間の提案が表示されます。
             条件を変えたいときは「提案設定」から調整できます。
           </p>
