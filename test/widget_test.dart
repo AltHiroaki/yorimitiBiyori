@@ -138,7 +138,7 @@ void main() {
     await tester.tap(find.text('設定'));
     await tester.pumpAndSettle();
 
-    await tester.ensureVisible(find.text('削除'));
+    await tester.scrollUntilVisible(find.text('削除'), 200);
     await tester.pumpAndSettle();
     await tester.tap(find.text('削除'));
     await tester.pumpAndSettle();

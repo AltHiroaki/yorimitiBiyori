@@ -1,5 +1,6 @@
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:yorimiti_biyori/src/models/interest_category.dart';
 import 'package:yorimiti_biyori/src/repositories/suggestion_repository.dart';
 
 void main() {
@@ -43,11 +44,38 @@ void main() {
     final source = await rootBundle.loadString(suggestionsAssetPath);
 
     final suggestions = parseSuggestionsJson(source);
+    final knownCategoryIds = [
+      ...InterestCategories.all,
+      ...InterestCategories.developmentCategories,
+    ].map((category) => category.id).toSet();
+    final suggestionIds =
+        suggestions.map((suggestion) => suggestion.id).toList();
 
     expect(suggestions, isNotEmpty);
+    expect(suggestionIds.toSet(), hasLength(suggestionIds.length));
     expect(
       suggestions.map((suggestion) => suggestion.category).toSet(),
       containsAll(['music', 'cook', 'read', 'movie', 'walk']),
+    );
+    expect(
+      suggestions.every((suggestion) {
+        return knownCategoryIds.contains(suggestion.category);
+      }),
+      isTrue,
+    );
+    expect(
+      suggestions.every((suggestion) {
+        return suggestion.title.isNotEmpty &&
+            suggestion.description.isNotEmpty &&
+            suggestion.detail.isNotEmpty &&
+            suggestion.whereToTry.isNotEmpty &&
+            suggestion.tags.isNotEmpty;
+      }),
+      isTrue,
+    );
+    expect(
+      suggestions.every((suggestion) => suggestion.budgetYen >= 0),
+      isTrue,
     );
     expect(
       suggestions.every((suggestion) => suggestion.estimatedMinutes > 0),

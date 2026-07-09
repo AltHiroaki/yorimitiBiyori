@@ -5,6 +5,7 @@ import '../models/user_settings.dart';
 import '../repositories/records_repository.dart';
 import '../repositories/settings_repository.dart';
 import '../widgets/section_card.dart';
+import 'suggestion_settings_page.dart';
 
 typedef NotificationTimePicker = Future<TimeOfDay?> Function(
   BuildContext context,
@@ -92,10 +93,7 @@ class _SettingsPageState extends State<SettingsPage> {
           style: TextStyle(fontSize: 14),
         ),
         const SizedBox(height: 16),
-        const SectionCard(
-          title: '提案設定',
-          description: '興味カテゴリとカテゴリ別の詳細設定を調整できるようにします。',
-        ),
+        _buildSuggestionSettingsCard(),
         const SizedBox(height: 12),
         const SectionCard(
           title: '興味カテゴリ',
@@ -107,6 +105,47 @@ class _SettingsPageState extends State<SettingsPage> {
         _buildDeleteHistoryCard(),
       ],
     );
+  }
+
+  Widget _buildSuggestionSettingsCard() {
+    return Card(
+      child: Padding(
+        padding: const EdgeInsets.all(20),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const Text(
+              '提案設定',
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 8),
+            const Text('興味カテゴリとカテゴリ別の詳細設定を調整できます。'),
+            const SizedBox(height: 12),
+            Align(
+              alignment: Alignment.centerRight,
+              child: OutlinedButton(
+                onPressed: _openSuggestionSettings,
+                child: const Text('提案設定を開く'),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Future<void> _openSuggestionSettings() async {
+    await Navigator.of(context).push(
+      MaterialPageRoute<void>(
+        builder: (_) => SuggestionSettingsPage(
+          settingsRepository: _settingsRepository,
+        ),
+      ),
+    );
+    if (!mounted) {
+      return;
+    }
+    await _loadSettings();
   }
 
   Widget _buildNotificationCard() {

@@ -115,6 +115,49 @@ void main() {
         'under_budget',
       ]);
     });
+
+    test('複数カテゴリ選択時はカテゴリごとの詳細設定を OR で扱う', () {
+      final suggestions = [
+        _suggestion(
+          id: 'music_match',
+          category: 'music',
+          tags: ['ジャズ'],
+        ),
+        _suggestion(
+          id: 'movie_match',
+          category: 'movie',
+          tags: ['笑える'],
+        ),
+        _suggestion(
+          id: 'music_wrong_detail',
+          category: 'music',
+          tags: ['ポップス'],
+        ),
+        _suggestion(
+          id: 'cook_unselected',
+          category: 'cook',
+          tags: ['和食'],
+        ),
+      ];
+      const settings = UserSettings(
+        selectedCategories: ['music', 'movie'],
+        detailSettings: {
+          'music': {
+            'genre': ['ジャズ'],
+          },
+          'movie': {
+            'mood': ['笑える'],
+          },
+        },
+      );
+
+      final filteredSuggestions = filterSuggestions(suggestions, settings);
+
+      expect(filteredSuggestions.map((suggestion) => suggestion.id), [
+        'music_match',
+        'movie_match',
+      ]);
+    });
   });
 
   group('excludeRecent', () {
@@ -173,6 +216,20 @@ void main() {
 
       expect(firstSelected?.id, 'small');
       expect(secondSelected?.id, 'large');
+    });
+
+    test('weight が正の候補がないときは null を返す', () {
+      final suggestions = [
+        _suggestion(id: 'zero', weight: 0),
+        _suggestion(id: 'negative', weight: -1),
+      ];
+
+      final selectedSuggestion = pickWeightedRandom(
+        suggestions,
+        _FixedRandom(0),
+      );
+
+      expect(selectedSuggestion, isNull);
     });
   });
 }
