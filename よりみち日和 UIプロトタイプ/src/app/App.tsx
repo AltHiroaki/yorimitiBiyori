@@ -10,7 +10,7 @@ import { NotificationPermissionScreen } from "./components/NotificationPermissio
 import { NotificationCardScreen } from "./components/NotificationCardScreen";
 import { CompletionModalScreen } from "./components/CompletionModalScreen";
 import { EmptyHistoryScreen } from "./components/EmptyHistoryScreen";
-import { THEMES, DesignThemeProvider } from "./theme";
+import { THEMES, EXAGGERATED_THEMES, DesignThemeProvider } from "./theme";
 
 const FONT = "'Noto Sans JP', 'Hiragino Sans', 'Yu Gothic', sans-serif";
 const C = {
@@ -92,14 +92,17 @@ function InteractivePhone({ label, initialTab }: { label: string; initialTab: nu
 
 function DesignCompareSection() {
   const [themeId, setThemeId] = useState(THEMES[0].id);
-  const selected = THEMES.find((t) => t.id === themeId) ?? THEMES[0];
+  const [exaggerated, setExaggerated] = useState(false);
+  const pool = exaggerated ? EXAGGERATED_THEMES : THEMES;
+  const selected = pool.find((t) => t.id === themeId) ?? pool[0];
+  const variantLabel = exaggerated ? "誇張版" : "標準版";
 
   return (
     <Section>
       <SectionHeader
         index="★ — デザイン案比較"
-        title="6つのデザインスタイルで見比べる（Issue #53）"
-        sub="機能・画面フロー・文言は同一のまま、見た目のトークンだけを切り替え。チップでスタイルを選ぶと下の3画面に反映されます。"
+        title="8つのデザインスタイルで見比べる（Issue #53）"
+        sub="機能・画面フロー・文言は同一のまま、見た目のトークンだけを切り替え。チップでスタイルを、その右のトグルで「標準版 / 誇張版」を選ぶと下の3画面に反映されます。"
       />
 
       {/* スタイル切替チップ */}
@@ -132,6 +135,35 @@ function DesignCompareSection() {
         })}
       </div>
 
+      {/* 標準 / 誇張 トグル */}
+      <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "14px" }}>
+        {([
+          [false, "標準版"],
+          [true, "誇張版（特徴を強く出した見本）"],
+        ] as const).map(([value, label]) => {
+          const active = exaggerated === value;
+          return (
+            <button
+              key={label}
+              onClick={() => setExaggerated(value)}
+              style={{
+                padding: "7px 16px",
+                borderRadius: "18px",
+                border: active ? `1.5px solid ${C.primary}` : `1px solid ${C.outline}`,
+                background: active ? C.primary : "#FFFFFF",
+                color: active ? "#FFFFFF" : C.muted,
+                fontSize: "12px",
+                fontWeight: 700,
+                cursor: "pointer",
+                fontFamily: FONT,
+              }}
+            >
+              {label}
+            </button>
+          );
+        })}
+      </div>
+
       {/* 選択中スタイルの説明 */}
       <div
         style={{
@@ -143,7 +175,7 @@ function DesignCompareSection() {
         }}
       >
         <p style={{ fontSize: "13px", fontWeight: 700, color: C.primary, margin: "0 0 4px", fontFamily: FONT }}>
-          {selected.nameJa}（{selected.nameEn}）
+          {selected.nameJa}（{selected.nameEn}）— {variantLabel}
         </p>
         <p style={{ fontSize: "12px", color: C.muted, margin: 0, lineHeight: 1.7, fontFamily: FONT }}>
           {selected.description}
@@ -153,20 +185,33 @@ function DesignCompareSection() {
       {/* 選択スタイルで主要3画面を操作 */}
       <DesignThemeProvider theme={selected}>
         <PhoneRow>
-          <InteractivePhone label={`提案 — ${selected.nameJa}`} initialTab={0} />
-          <InteractivePhone label={`履歴 — ${selected.nameJa}`} initialTab={1} />
-          <InteractivePhone label={`設定 — ${selected.nameJa}`} initialTab={2} />
+          <InteractivePhone label={`提案 — ${selected.nameJa}（${variantLabel}）`} initialTab={0} />
+          <InteractivePhone label={`履歴 — ${selected.nameJa}（${variantLabel}）`} initialTab={1} />
+          <InteractivePhone label={`設定 — ${selected.nameJa}（${variantLabel}）`} initialTab={2} />
         </PhoneRow>
       </DesignThemeProvider>
 
-      {/* 全案の横並び比較（提案画面） */}
+      {/* 全案の横並び比較（提案画面）: 標準版と誇張版の2列 */}
       <p style={{ fontSize: "14px", fontWeight: 700, color: C.text, margin: "28px 0 12px", fontFamily: FONT }}>
-        全6案ならべて比較（提案画面）
+        全8案ならべて比較 — 標準版（提案画面）
       </p>
       <PhoneRow>
         {THEMES.map((t) => (
           <DesignThemeProvider key={t.id} theme={t}>
             <PhoneFrame label={`${t.nameJa} / ${t.nameEn}`}>
+              <SuggestScreen />
+            </PhoneFrame>
+          </DesignThemeProvider>
+        ))}
+      </PhoneRow>
+
+      <p style={{ fontSize: "14px", fontWeight: 700, color: C.text, margin: "28px 0 12px", fontFamily: FONT }}>
+        全8案ならべて比較 — 誇張版（提案画面）
+      </p>
+      <PhoneRow>
+        {EXAGGERATED_THEMES.map((t) => (
+          <DesignThemeProvider key={t.id} theme={t}>
+            <PhoneFrame label={`${t.nameJa}・誇張 / ${t.nameEn}`}>
               <SuggestScreen />
             </PhoneFrame>
           </DesignThemeProvider>
