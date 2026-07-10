@@ -1,7 +1,7 @@
 import { NavigationBar } from "./NavigationBar";
 import { useDesignTheme } from "../theme";
 
-interface HistoryItem {
+export interface HistoryItem {
   id: number;
   title: string;
   date: string;
@@ -20,9 +20,13 @@ const historyItems: HistoryItem[] = [
 interface HistoryScreenProps {
   activeTab?: number;
   onTabChange?: (tab: number) => void;
+  /** 表示する履歴。未指定なら従来の固定データ */
+  items?: HistoryItem[];
+  /** スキップ済み行のタップ操作（Issue #46）。未指定なら従来どおりタップ不可 */
+  onSkippedItemClick?: (item: HistoryItem) => void;
 }
 
-export function HistoryScreen({ activeTab = 1, onTabChange }: HistoryScreenProps) {
+export function HistoryScreen({ activeTab = 1, onTabChange, items = historyItems, onSkippedItemClick }: HistoryScreenProps) {
   const { colors: C, shape: SH, effects: E, font: F } = useDesignTheme();
   return (
     <div style={{ display: "flex", flexDirection: "column", height: "100%", background: C.screenBackground, overflowY: "auto" }}>
@@ -162,9 +166,13 @@ export function HistoryScreen({ activeTab = 1, onTabChange }: HistoryScreenProps
         </p>
 
         <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
-          {historyItems.map((item) => (
+          {items.map((item) => {
+            const tappable = !item.done && onSkippedItemClick != null;
+            return (
             <div
               key={item.id}
+              onClick={tappable ? () => onSkippedItemClick(item) : undefined}
+              role={tappable ? "button" : undefined}
               style={{
                 background: C.surface,
                 borderRadius: SH.cardRadius,
@@ -175,6 +183,7 @@ export function HistoryScreen({ activeTab = 1, onTabChange }: HistoryScreenProps
                 display: "flex",
                 alignItems: "center",
                 gap: "14px",
+                cursor: tappable ? "pointer" : undefined,
               }}
             >
               {/* Status icon */}
@@ -251,8 +260,16 @@ export function HistoryScreen({ activeTab = 1, onTabChange }: HistoryScreenProps
               >
                 {item.done ? "実施" : "スキップ"}
               </span>
+
+              {/* タップ可能なスキップ行の示唆（Issue #46） */}
+              {tappable && (
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" style={{ flexShrink: 0 }}>
+                  <path d="M5 3L9 7L5 11" stroke={C.muted} strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              )}
             </div>
-          ))}
+            );
+          })}
         </div>
       </div>
 

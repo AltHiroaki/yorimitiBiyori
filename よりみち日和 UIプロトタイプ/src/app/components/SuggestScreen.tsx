@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { NavigationBar } from "./NavigationBar";
 import { useDesignTheme } from "../theme";
+import { ActiveSuggestionCard } from "./revive/ActiveSuggestionCard";
+import { ReviveSuggestion } from "./revive/reviveMockData";
 
 // Default stored conditions (would come from local storage in real app)
 const DEFAULT_CONDITIONS = {
@@ -86,9 +88,11 @@ export interface SuggestScreenProps {
   activeTab?: number;
   onTabChange?: (tab: number) => void;
   fromNotification?: number; // pre-selected time in minutes from notification
+  /** 実施中の提案（Issue #46/#48）。指定時は「今日のよりみち」カードの代わりに実施中カードを表示 */
+  activeSuggestion?: ReviveSuggestion;
 }
 
-export function SuggestScreen({ activeTab = 0, onTabChange, fromNotification }: SuggestScreenProps) {
+export function SuggestScreen({ activeTab = 0, onTabChange, fromNotification, activeSuggestion }: SuggestScreenProps) {
   const { colors: C, shape: SH, effects: E, font: F } = useDesignTheme();
   const timeKey = fromNotification ? String(fromNotification) : "15";
   const suggestions = SUGGESTIONS[timeKey] || SUGGESTIONS["15"];
@@ -194,7 +198,10 @@ export function SuggestScreen({ activeTab = 0, onTabChange, fromNotification }: 
           </div>
         </div>
 
-        {/* ── 今日のよりみちカード ── */}
+        {/* ── 今日のよりみちカード（実施中の提案があれば実施中カード） ── */}
+        {activeSuggestion ? (
+        <ActiveSuggestionCard suggestion={activeSuggestion} />
+        ) : (
         <div
           style={{
             background: C.surface,
@@ -334,6 +341,7 @@ export function SuggestScreen({ activeTab = 0, onTabChange, fromNotification }: 
             </button>
           </div>
         </div>
+        )}
 
         {/* Info card */}
         <div style={{ background: C.surfaceVariant, borderRadius: SH.cardRadius, boxShadow: E.chipShadow, padding: "12px 14px" }}>

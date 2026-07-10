@@ -11,6 +11,7 @@ import { NotificationCardScreen } from "./components/NotificationCardScreen";
 import { CompletionModalScreen } from "./components/CompletionModalScreen";
 import { EmptyHistoryScreen } from "./components/EmptyHistoryScreen";
 import { THEMES, EXAGGERATED_THEMES, DesignThemeProvider } from "./theme";
+import { ReviveFlowMock } from "./components/revive/ReviveFlowMock";
 
 const FONT = "'Noto Sans JP', 'Hiragino Sans', 'Yu Gothic', sans-serif";
 const C = {
@@ -88,23 +89,22 @@ function InteractivePhone({ label, initialTab }: { label: string; initialTab: nu
   return <PhoneFrame label={label}>{screens[tab]}</PhoneFrame>;
 }
 
-/* ─── デザイン案比較セクション (Issue #53) ────────── */
+/* ─── テーマ選択UI（★・★2セクション共用） ────────── */
 
-function DesignCompareSection() {
-  const [themeId, setThemeId] = useState(THEMES[0].id);
-  const [exaggerated, setExaggerated] = useState(false);
+interface ThemePickerProps {
+  themeId: string;
+  onThemeChange: (id: string) => void;
+  exaggerated: boolean;
+  onExaggeratedChange: (value: boolean) => void;
+}
+
+function ThemePicker({ themeId, onThemeChange, exaggerated, onExaggeratedChange }: ThemePickerProps) {
   const pool = exaggerated ? EXAGGERATED_THEMES : THEMES;
   const selected = pool.find((t) => t.id === themeId) ?? pool[0];
   const variantLabel = exaggerated ? "誇張版" : "標準版";
 
   return (
-    <Section>
-      <SectionHeader
-        index="★ — デザイン案比較"
-        title="8つのデザインスタイルで見比べる（Issue #53）"
-        sub="機能・画面フロー・文言は同一のまま、見た目のトークンだけを切り替え。チップでスタイルを、その右のトグルで「標準版 / 誇張版」を選ぶと下の3画面に反映されます。"
-      />
-
+    <>
       {/* スタイル切替チップ */}
       <div style={{ display: "flex", flexWrap: "wrap", gap: "8px", marginBottom: "14px" }}>
         {THEMES.map((t) => {
@@ -112,7 +112,7 @@ function DesignCompareSection() {
           return (
             <button
               key={t.id}
-              onClick={() => setThemeId(t.id)}
+              onClick={() => onThemeChange(t.id)}
               style={{
                 display: "flex",
                 flexDirection: "column",
@@ -145,7 +145,7 @@ function DesignCompareSection() {
           return (
             <button
               key={label}
-              onClick={() => setExaggerated(value)}
+              onClick={() => onExaggeratedChange(value)}
               style={{
                 padding: "7px 16px",
                 borderRadius: "18px",
@@ -181,6 +181,28 @@ function DesignCompareSection() {
           {selected.description}
         </p>
       </div>
+    </>
+  );
+}
+
+/* ─── デザイン案比較セクション (Issue #53) ────────── */
+
+function DesignCompareSection() {
+  const [themeId, setThemeId] = useState(THEMES[0].id);
+  const [exaggerated, setExaggerated] = useState(false);
+  const pool = exaggerated ? EXAGGERATED_THEMES : THEMES;
+  const selected = pool.find((t) => t.id === themeId) ?? pool[0];
+  const variantLabel = exaggerated ? "誇張版" : "標準版";
+
+  return (
+    <Section>
+      <SectionHeader
+        index="★ — デザイン案比較"
+        title="8つのデザインスタイルで見比べる（Issue #53）"
+        sub="機能・画面フロー・文言は同一のまま、見た目のトークンだけを切り替え。チップでスタイルを、その右のトグルで「標準版 / 誇張版」を選ぶと下の3画面に反映されます。"
+      />
+
+      <ThemePicker themeId={themeId} onThemeChange={setThemeId} exaggerated={exaggerated} onExaggeratedChange={setExaggerated} />
 
       {/* 選択スタイルで主要3画面を操作 */}
       <DesignThemeProvider theme={selected}>
@@ -221,6 +243,31 @@ function DesignCompareSection() {
   );
 }
 
+/* ─── スキップ復活フローセクション (Issue #46) ────── */
+
+function ReviveFlowSection() {
+  const [themeId, setThemeId] = useState(THEMES[0].id);
+  const [exaggerated, setExaggerated] = useState(false);
+  const pool = exaggerated ? EXAGGERATED_THEMES : THEMES;
+  const selected = pool.find((t) => t.id === themeId) ?? pool[0];
+
+  return (
+    <Section>
+      <SectionHeader
+        index="★2 — スキップ復活フロー"
+        title="スキップした提案を履歴から復活する（Issue #46）"
+        sub="履歴タブの「スキップ」行（›付き）をタップ → 提案詳細モーダル → やってみる → 確認 → 提案タブに切り替わり実施中カード（Issue #48 相当）を表示。実施中の状態で別のスキップ行から復活すると「置き換わります」の確認になります。「窓の外を眺めて休憩する」は提案データから削除済みの復活不可ケースです。デザインは上のチップで切り替えられます。"
+      />
+
+      <ThemePicker themeId={themeId} onThemeChange={setThemeId} exaggerated={exaggerated} onExaggeratedChange={setExaggerated} />
+
+      <DesignThemeProvider theme={selected}>
+        <ReviveFlowMock />
+      </DesignThemeProvider>
+    </Section>
+  );
+}
+
 /* ─── Main App ───────────────────────────────────── */
 
 export default function App() {
@@ -252,6 +299,11 @@ export default function App() {
       {/* SECTION ★: デザイン案比較 (Issue #53)       */}
       {/* ═══════════════════════════════════════════ */}
       <DesignCompareSection />
+
+      {/* ═══════════════════════════════════════════ */}
+      {/* SECTION ★2: スキップ復活フロー (Issue #46)  */}
+      {/* ═══════════════════════════════════════════ */}
+      <ReviveFlowSection />
 
       {/* ═══════════════════════════════════════════ */}
       {/* SECTION A: メインの3画面                   */}

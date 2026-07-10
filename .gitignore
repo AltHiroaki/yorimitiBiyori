@@ -20,6 +20,7 @@ ios/Flutter/flutter_export_environment.sh
 
 # Node (UI プロトタイプ)
 node_modules/
+よりみち日和 UIプロトタイプ/dist/
 
 # Claude Code ローカル設定
 .claude/
