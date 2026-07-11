@@ -65,6 +65,81 @@ void main() {
     expect(find.text('別の提案'), findsOneWidget);
   });
 
+  testWidgets('OS のダークモード設定に追従して darkTheme が使われる', (tester) async {
+    tester.platformDispatcher.platformBrightnessTestValue = Brightness.dark;
+    addTearDown(tester.platformDispatcher.clearPlatformBrightnessTestValue);
+
+    await tester.pumpWidget(const YorimitiBiyoriApp());
+    await tester.pumpAndSettle();
+
+    final materialApp = tester.widget<MaterialApp>(find.byType(MaterialApp));
+    expect(materialApp.darkTheme, isNotNull);
+    expect(materialApp.themeMode, ThemeMode.system);
+
+    final appShellContext = tester.element(find.byType(AppShell));
+    expect(Theme.of(appShellContext).brightness, Brightness.dark);
+    expect(Theme.of(appShellContext).colorScheme.brightness, Brightness.dark);
+  });
+
+  testWidgets('ダークモードでも主要画面と完了モーダルを描画できる', (tester) async {
+    tester.view.physicalSize = const Size(800, 2400);
+    tester.view.devicePixelRatio = 1.0;
+    addTearDown(tester.view.reset);
+    tester.platformDispatcher.platformBrightnessTestValue = Brightness.dark;
+    addTearDown(tester.platformDispatcher.clearPlatformBrightnessTestValue);
+
+    await tester.pumpWidget(const YorimitiBiyoriApp());
+    await tester.pumpAndSettle();
+
+    expect(find.text('空いた時間に、小さなよりみちを。'), findsOneWidget);
+
+    final tryButton = find.widgetWithText(FilledButton, 'やってみる');
+    await tester.scrollUntilVisible(tryButton, 100);
+    await tester.tap(tryButton);
+    await tester.pumpAndSettle();
+    expect(find.text('おつかれさまです'), findsOneWidget);
+
+    await tester.tapAt(const Offset(400, 20));
+    await tester.pumpAndSettle();
+
+    await tester.tap(find.text('履歴'));
+    await tester.pumpAndSettle();
+    expect(find.text('まだ履歴はありません'), findsOneWidget);
+
+    await tester.tap(find.text('設定'));
+    await tester.pumpAndSettle();
+    expect(find.text('興味カテゴリ、通知時刻、履歴を管理します。'), findsOneWidget);
+
+    await tester.scrollUntilVisible(find.text('提案設定を開く'), 200);
+    await tester.tap(find.text('提案設定を開く'));
+    await tester.pumpAndSettle();
+    expect(find.text('この条件で保存'), findsOneWidget);
+  });
+
+  testWidgets('ダークモードでもオンボーディングを描画できる', (tester) async {
+    tester.platformDispatcher.platformBrightnessTestValue = Brightness.dark;
+    addTearDown(tester.platformDispatcher.clearPlatformBrightnessTestValue);
+    SharedPreferences.setMockInitialValues({
+      settingsPreferenceKey: jsonEncode(
+        const UserSettings(firstLaunchCompleted: false).toJson(),
+      ),
+    });
+    rootBundle.clear();
+
+    await tester.pumpWidget(const YorimitiBiyoriApp());
+    await tester.pumpAndSettle();
+
+    expect(find.text('よりみち日和へようこそ'), findsOneWidget);
+
+    await tester.tap(find.text('はじめる'));
+    await tester.pumpAndSettle();
+    expect(find.text('興味のあるよりみちを選んでください'), findsOneWidget);
+
+    await tester.tap(find.text('次へ'));
+    await tester.pumpAndSettle();
+    expect(find.text('よりみちのきっかけを通知します'), findsOneWidget);
+  });
+
   testWidgets('ボトムナビゲーションは提案・履歴・設定の3タブ', (WidgetTester tester) async {
     await tester.pumpWidget(const YorimitiBiyoriApp());
     await tester.pumpAndSettle();

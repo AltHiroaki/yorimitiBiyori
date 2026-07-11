@@ -22,20 +22,34 @@ const double _cardCornerRadius = 24;
 
 /// アプリ全体のテーマ。カードの見た目（白地・薄縁・角丸）はここに集約し、
 /// 各画面の Card では個別指定しない。
-ThemeData buildYorimitiBiyoriTheme() {
+ThemeData buildYorimitiBiyoriTheme({
+  Brightness brightness = Brightness.light,
+}) {
+  final colorScheme = ColorScheme.fromSeed(
+    seedColor: _primarySeedColor,
+    brightness: brightness,
+  );
+  final isDark = brightness == Brightness.dark;
+  final scaffoldBackgroundColor =
+      isDark ? colorScheme.surface : _pageBackgroundColor;
+  final cardBackgroundColor =
+      isDark ? colorScheme.surfaceContainerLow : Colors.white;
+  final cardOutlineColor =
+      isDark ? colorScheme.outlineVariant : _cardOutlineColor;
+
   return ThemeData(
-    colorScheme: ColorScheme.fromSeed(seedColor: _primarySeedColor),
+    colorScheme: colorScheme,
     useMaterial3: true,
-    scaffoldBackgroundColor: _pageBackgroundColor,
+    scaffoldBackgroundColor: scaffoldBackgroundColor,
     cardTheme: CardThemeData(
       elevation: 0,
-      color: Colors.white,
+      color: cardBackgroundColor,
       surfaceTintColor: Colors.transparent,
       // 画面側は SizedBox で間隔を管理しているため、既定の外側余白は持たせない。
       margin: EdgeInsets.zero,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(_cardCornerRadius),
-        side: const BorderSide(color: _cardOutlineColor),
+        side: BorderSide(color: cardOutlineColor),
       ),
     ),
   );
@@ -58,6 +72,8 @@ class YorimitiBiyoriApp extends StatelessWidget {
       title: 'よりみち日和',
       debugShowCheckedModeBanner: false,
       theme: buildYorimitiBiyoriTheme(),
+      darkTheme: buildYorimitiBiyoriTheme(brightness: Brightness.dark),
+      themeMode: ThemeMode.system,
       home: OnboardingGate(
         settingsRepository: settingsRepository ?? SettingsRepository(),
         notificationController: notificationController ?? NotificationService(),
