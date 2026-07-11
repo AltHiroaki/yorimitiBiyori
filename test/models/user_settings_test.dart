@@ -12,6 +12,7 @@ void main() {
     expect(settings.notificationTime, '17:30');
     expect(settings.firstLaunchCompleted, isFalse);
     expect(settings.recentSuggestionIds, isEmpty);
+    expect(settings.themeMode, ThemeModeSetting.system);
   });
 
   test('fromJson/toJson が往復する', () {
@@ -27,6 +28,7 @@ void main() {
       'notification_time': '20:00',
       'first_launch_completed': true,
       'recent_suggestion_ids': ['music_jazz_focus'],
+      'theme_mode': 'dark',
     };
 
     final settings = UserSettings.fromJson(json);
@@ -42,6 +44,7 @@ void main() {
       'notification_time': 999,
       'first_launch_completed': null,
       'recent_suggestion_ids': null,
+      'theme_mode': 'midnight',
     });
 
     expect(settings.selectedCategories, ['music']);
@@ -50,6 +53,7 @@ void main() {
     expect(settings.notificationTime, '17:30');
     expect(settings.firstLaunchCompleted, isFalse);
     expect(settings.recentSuggestionIds, isEmpty);
+    expect(settings.themeMode, ThemeModeSetting.system);
   });
 
   test('完全に不正な JSON（空 Map）でもクラッシュせずデフォルト値になる', () {
@@ -65,5 +69,14 @@ void main() {
 
     expect(updated.notificationEnabled, isFalse);
     expect(updated.selectedCategories, settings.selectedCategories);
+  });
+
+  test('copyWith でテーマモードだけ変更できる', () {
+    const settings = UserSettings();
+
+    final updated = settings.copyWith(themeMode: ThemeModeSetting.dark);
+
+    expect(updated.themeMode, ThemeModeSetting.dark);
+    expect(updated.notificationEnabled, settings.notificationEnabled);
   });
 }

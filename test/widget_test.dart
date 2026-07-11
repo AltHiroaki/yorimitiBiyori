@@ -116,6 +116,57 @@ void main() {
     expect(find.text('この条件で保存'), findsOneWidget);
   });
 
+  testWidgets('設定画面で「ダーク」を選ぶとアプリ全体がダークテーマに切り替わる', (tester) async {
+    tester.view.physicalSize = const Size(800, 2400);
+    tester.view.devicePixelRatio = 1.0;
+    addTearDown(tester.view.reset);
+
+    await tester.pumpWidget(const YorimitiBiyoriApp());
+    await tester.pumpAndSettle();
+
+    await tester.tap(find.text('設定'));
+    await tester.pumpAndSettle();
+
+    await tester.tap(find.text('ダーク'));
+    await tester.pumpAndSettle();
+
+    final materialApp = tester.widget<MaterialApp>(find.byType(MaterialApp));
+    expect(materialApp.themeMode, ThemeMode.dark);
+
+    final appShellContext = tester.element(find.byType(AppShell));
+    expect(Theme.of(appShellContext).brightness, Brightness.dark);
+
+    // 「ライト」へ戻すと OS 設定によらずライトテーマになる。
+    await tester.tap(find.text('ライト'));
+    await tester.pumpAndSettle();
+
+    expect(
+      tester.widget<MaterialApp>(find.byType(MaterialApp)).themeMode,
+      ThemeMode.light,
+    );
+  });
+
+  testWidgets('保存済みのテーマモード（ダーク）で起動できる', (tester) async {
+    SharedPreferences.setMockInitialValues({
+      settingsPreferenceKey: jsonEncode(
+        const UserSettings(
+          firstLaunchCompleted: true,
+          themeMode: ThemeModeSetting.dark,
+        ).toJson(),
+      ),
+    });
+    rootBundle.clear();
+
+    await tester.pumpWidget(const YorimitiBiyoriApp());
+    await tester.pumpAndSettle();
+
+    final materialApp = tester.widget<MaterialApp>(find.byType(MaterialApp));
+    expect(materialApp.themeMode, ThemeMode.dark);
+
+    final appShellContext = tester.element(find.byType(AppShell));
+    expect(Theme.of(appShellContext).brightness, Brightness.dark);
+  });
+
   testWidgets('ダークモードでもオンボーディングを描画できる', (tester) async {
     tester.platformDispatcher.platformBrightnessTestValue = Brightness.dark;
     addTearDown(tester.platformDispatcher.clearPlatformBrightnessTestValue);

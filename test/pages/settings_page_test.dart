@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:yorimiti_biyori/src/app/theme_mode_scope.dart';
 import 'package:yorimiti_biyori/src/features/notifications/notification_service.dart';
 import 'package:yorimiti_biyori/src/models/suggestion_record.dart';
 import 'package:yorimiti_biyori/src/models/user_settings.dart';
@@ -46,19 +47,28 @@ Future<void> _pumpPage(
   WidgetTester tester, {
   NotificationController? notificationController,
   NotificationTimePicker? notificationTimePicker,
+  ValueChanged<ThemeModeSetting>? onThemeModeSettingChanged,
 }) async {
   // ListView 下部（履歴削除の確認ボタン等）まで描画されるよう縦長の画面にする。
   tester.view.physicalSize = const Size(800, 2400);
   tester.view.devicePixelRatio = 1.0;
   addTearDown(tester.view.reset);
 
+  final page = SettingsPage(
+    notificationController: notificationController,
+    notificationTimePicker: notificationTimePicker,
+  );
+
   await tester.pumpWidget(
     MaterialApp(
       home: Scaffold(
-        body: SettingsPage(
-          notificationController: notificationController,
-          notificationTimePicker: notificationTimePicker,
-        ),
+        body: onThemeModeSettingChanged == null
+            ? page
+            : ThemeModeScope(
+                themeModeSetting: ThemeModeSetting.system,
+                onThemeModeSettingChanged: onThemeModeSettingChanged,
+                child: page,
+              ),
       ),
     ),
   );
@@ -144,6 +154,47 @@ void main() {
 
     final loadedRecords = await RecordsRepository().loadRecords();
     expect(loadedRecords, isEmpty);
+  });
+
+  testWidgets('テーマカード（システム／ライト／ダーク）が表示される', (tester) async {
+    await _pumpPage(tester);
+
+    expect(find.text('テーマ'), findsOneWidget);
+    expect(find.text('システム'), findsOneWidget);
+    expect(find.text('ライト'), findsOneWidget);
+    expect(find.text('ダーク'), findsOneWidget);
+  });
+
+  testWidgets('「ダーク」を選ぶと設定を保存し、ThemeModeScope へ通知する', (tester) async {
+    final changedSettings = <ThemeModeSetting>[];
+
+    await _pumpPage(
+      tester,
+      onThemeModeSettingChanged: changedSettings.add,
+    );
+
+    await tester.tap(find.text('ダーク'));
+    await tester.pumpAndSettle();
+
+    final savedSettings = await SettingsRepository().loadSettings();
+    expect(savedSettings.themeMode, ThemeModeSetting.dark);
+    expect(changedSettings, [ThemeModeSetting.dark]);
+  });
+
+  testWidgets('ThemeModeScope が無くても「ライト」への切り替えで保存できる', (tester) async {
+    SharedPreferences.setMockInitialValues({
+      settingsPreferenceKey: jsonEncode(
+        const UserSettings(themeMode: ThemeModeSetting.dark).toJson(),
+      ),
+    });
+
+    await _pumpPage(tester);
+
+    await tester.tap(find.text('ライト'));
+    await tester.pumpAndSettle();
+
+    final savedSettings = await SettingsRepository().loadSettings();
+    expect(savedSettings.themeMode, ThemeModeSetting.light);
   });
 
   testWidgets('通知トグルをOFFにすると設定を保存し、通知サービスへ反映する', (tester) async {
