@@ -99,7 +99,8 @@ void main() {
       const UserSettings(
         selectedCategories: ['music'],
         notificationEnabled: false,
-        notificationTime: '12:15',
+        notificationStartTime: '12:15',
+        notificationEndTime: '18:45',
         firstLaunchCompleted: true,
         recentSuggestionIds: ['music_jazz_focus'],
       ),
@@ -120,7 +121,8 @@ void main() {
     });
     // この画面で編集しないフィールドは温存される。
     expect(savedSettings.notificationEnabled, isFalse);
-    expect(savedSettings.notificationTime, '12:15');
+    expect(savedSettings.notificationStartTime, '12:15');
+    expect(savedSettings.notificationEndTime, '18:45');
     expect(savedSettings.firstLaunchCompleted, isTrue);
     expect(savedSettings.recentSuggestionIds, ['music_jazz_focus']);
   });

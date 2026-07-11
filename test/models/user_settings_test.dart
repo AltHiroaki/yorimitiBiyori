@@ -9,7 +9,8 @@ void main() {
     expect(settings.selectedCategories, ['music', 'read', 'movie']);
     expect(settings.detailSettings, isEmpty);
     expect(settings.notificationEnabled, isTrue);
-    expect(settings.notificationTime, '17:30');
+    expect(settings.notificationStartTime, '17:00');
+    expect(settings.notificationEndTime, '21:00');
     expect(settings.firstLaunchCompleted, isFalse);
     expect(settings.recentSuggestionIds, isEmpty);
     expect(settings.themeMode, ThemeModeSetting.system);
@@ -25,7 +26,8 @@ void main() {
         },
       },
       'notification_enabled': false,
-      'notification_time': '20:00',
+      'notification_start_time': '18:00',
+      'notification_end_time': '20:30',
       'first_launch_completed': true,
       'recent_suggestion_ids': ['music_jazz_focus'],
       'theme_mode': 'dark',
@@ -36,12 +38,78 @@ void main() {
     expect(settings.toJson(), json);
   });
 
+  test('toJson は旧キー notification_time を出力しない', () {
+    const settings = UserSettings();
+
+    expect(settings.toJson().containsKey('notification_time'), isFalse);
+  });
+
+  test('旧形式（notification_time のみ）は開始＝終了の縮退範囲として引き継ぐ', () {
+    final settings = UserSettings.fromJson({
+      'notification_time': '12:15',
+    });
+
+    expect(settings.notificationStartTime, '12:15');
+    expect(settings.notificationEndTime, '12:15');
+  });
+
+  test('旧形式の notification_time が不正ならデフォルト範囲になる', () {
+    final settings = UserSettings.fromJson({
+      'notification_time': '25:99',
+    });
+
+    expect(settings.notificationStartTime, '17:00');
+    expect(settings.notificationEndTime, '21:00');
+  });
+
+  test('新キーがあれば旧キーより優先される', () {
+    final settings = UserSettings.fromJson({
+      'notification_time': '12:15',
+      'notification_start_time': '18:00',
+      'notification_end_time': '22:00',
+    });
+
+    expect(settings.notificationStartTime, '18:00');
+    expect(settings.notificationEndTime, '22:00');
+  });
+
+  test('新キーの片方が壊れていればそのフィールドだけデフォルトになる', () {
+    final settings = UserSettings.fromJson({
+      'notification_start_time': '18:30',
+      'notification_end_time': 999,
+    });
+
+    expect(settings.notificationStartTime, '18:30');
+    expect(settings.notificationEndTime, '21:00');
+  });
+
+  test('開始 > 終了の範囲は両方デフォルトへ戻す', () {
+    final settings = UserSettings.fromJson({
+      'notification_start_time': '22:00',
+      'notification_end_time': '18:00',
+    });
+
+    expect(settings.notificationStartTime, '17:00');
+    expect(settings.notificationEndTime, '21:00');
+  });
+
+  test('開始 == 終了は正当な値として保持される', () {
+    final settings = UserSettings.fromJson({
+      'notification_start_time': '19:00',
+      'notification_end_time': '19:00',
+    });
+
+    expect(settings.notificationStartTime, '19:00');
+    expect(settings.notificationEndTime, '19:00');
+  });
+
   test('壊れたデータ（Map ではない detail_settings）でもクラッシュせずデフォルトにフォールバックする', () {
     final settings = UserSettings.fromJson({
       'selected_categories': ['music'],
       'detail_settings': '指定なし',
       'notification_enabled': 'yes',
-      'notification_time': 999,
+      'notification_start_time': 999,
+      'notification_end_time': null,
       'first_launch_completed': null,
       'recent_suggestion_ids': null,
       'theme_mode': 'midnight',
@@ -50,7 +118,8 @@ void main() {
     expect(settings.selectedCategories, ['music']);
     expect(settings.detailSettings, isEmpty);
     expect(settings.notificationEnabled, isTrue);
-    expect(settings.notificationTime, '17:30');
+    expect(settings.notificationStartTime, '17:00');
+    expect(settings.notificationEndTime, '21:00');
     expect(settings.firstLaunchCompleted, isFalse);
     expect(settings.recentSuggestionIds, isEmpty);
     expect(settings.themeMode, ThemeModeSetting.system);
@@ -60,6 +129,8 @@ void main() {
     final settings = UserSettings.fromJson(<String, dynamic>{});
 
     expect(settings.selectedCategories, ['music', 'read', 'movie']);
+    expect(settings.notificationStartTime, '17:00');
+    expect(settings.notificationEndTime, '21:00');
   });
 
   test('copyWith で一部フィールドだけ変更できる', () {
@@ -69,6 +140,19 @@ void main() {
 
     expect(updated.notificationEnabled, isFalse);
     expect(updated.selectedCategories, settings.selectedCategories);
+  });
+
+  test('copyWith で通知時間帯だけ変更できる', () {
+    const settings = UserSettings();
+
+    final updated = settings.copyWith(
+      notificationStartTime: '18:00',
+      notificationEndTime: '22:00',
+    );
+
+    expect(updated.notificationStartTime, '18:00');
+    expect(updated.notificationEndTime, '22:00');
+    expect(updated.notificationEnabled, settings.notificationEnabled);
   });
 
   test('copyWith でテーマモードだけ変更できる', () {

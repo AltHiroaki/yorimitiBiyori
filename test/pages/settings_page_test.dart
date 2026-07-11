@@ -37,10 +37,13 @@ class _FakeNotificationController implements NotificationController {
   Future<void> showInvitationNotification() async {}
 
   @override
-  Future<void> scheduleDailyNotification(String notificationTime) async {}
+  Future<void> scheduleDailyNotifications({
+    required String startTime,
+    required String endTime,
+  }) async {}
 
   @override
-  Future<void> cancelDailyNotification() async {}
+  Future<void> cancelDailyNotifications() async {}
 }
 
 Future<void> _pumpPage(
@@ -204,7 +207,8 @@ void main() {
       settingsPreferenceKey: jsonEncode(
         const UserSettings(
           notificationEnabled: true,
-          notificationTime: '17:30',
+          notificationStartTime: '17:00',
+          notificationEndTime: '21:00',
         ).toJson(),
       ),
     });
@@ -214,7 +218,8 @@ void main() {
       notificationController: notificationController,
     );
 
-    expect(find.text('通知時刻：17:30'), findsOneWidget);
+    expect(find.text('開始時刻：17:00'), findsOneWidget);
+    expect(find.text('終了時刻：21:00'), findsOneWidget);
 
     await tester.tap(find.byType(Switch));
     await tester.pumpAndSettle();
@@ -252,7 +257,7 @@ void main() {
     expect(find.text('通知を有効にするには、端末の通知許可が必要です'), findsOneWidget);
   });
 
-  testWidgets('通知時刻を変更すると設定を保存し、通知サービスへ反映する', (tester) async {
+  testWidgets('開始時刻を変更すると設定を保存し、通知サービスへ反映する', (tester) async {
     final notificationController = _FakeNotificationController();
     TimeOfDay? receivedInitialTime;
 
@@ -265,15 +270,109 @@ void main() {
       },
     );
 
-    await tester.tap(find.text('変更'));
+    // 1 つ目の「変更」= 開始時刻。
+    await tester.tap(find.text('変更').first);
     await tester.pumpAndSettle();
 
-    expect(receivedInitialTime, const TimeOfDay(hour: 17, minute: 30));
-    expect(find.text('通知時刻：19:05'), findsOneWidget);
+    expect(receivedInitialTime, const TimeOfDay(hour: 17, minute: 0));
+    expect(find.text('開始時刻：19:05'), findsOneWidget);
 
     final savedSettings = await SettingsRepository().loadSettings();
-    expect(savedSettings.notificationTime, '19:05');
-    expect(notificationController.appliedSettingsLog.single.notificationTime,
+    expect(savedSettings.notificationStartTime, '19:05');
+    expect(savedSettings.notificationEndTime, '21:00');
+    expect(
+        notificationController.appliedSettingsLog.single.notificationStartTime,
         '19:05');
+  });
+
+  testWidgets('終了時刻を変更すると設定を保存し、通知サービスへ反映する', (tester) async {
+    final notificationController = _FakeNotificationController();
+    TimeOfDay? receivedInitialTime;
+
+    await _pumpPage(
+      tester,
+      notificationController: notificationController,
+      notificationTimePicker: (context, initialTime) async {
+        receivedInitialTime = initialTime;
+        return const TimeOfDay(hour: 22, minute: 30);
+      },
+    );
+
+    // 2 つ目の「変更」= 終了時刻。
+    await tester.tap(find.text('変更').at(1));
+    await tester.pumpAndSettle();
+
+    expect(receivedInitialTime, const TimeOfDay(hour: 21, minute: 0));
+    expect(find.text('終了時刻：22:30'), findsOneWidget);
+
+    final savedSettings = await SettingsRepository().loadSettings();
+    expect(savedSettings.notificationEndTime, '22:30');
+    expect(notificationController.appliedSettingsLog.single.notificationEndTime,
+        '22:30');
+  });
+
+  testWidgets('終了時刻より後の開始時刻はエラーになり保存されない', (tester) async {
+    final notificationController = _FakeNotificationController();
+
+    await _pumpPage(
+      tester,
+      notificationController: notificationController,
+      notificationTimePicker: (context, initialTime) async {
+        return const TimeOfDay(hour: 22, minute: 0);
+      },
+    );
+
+    await tester.tap(find.text('変更').first);
+    await tester.pumpAndSettle();
+
+    expect(find.text('開始時刻は終了時刻より後にできません'), findsOneWidget);
+    expect(find.text('開始時刻：17:00'), findsOneWidget);
+
+    final savedSettings = await SettingsRepository().loadSettings();
+    expect(savedSettings.notificationStartTime, '17:00');
+    expect(notificationController.appliedSettingsLog, isEmpty);
+  });
+
+  testWidgets('開始時刻より前の終了時刻はエラーになり保存されない', (tester) async {
+    final notificationController = _FakeNotificationController();
+
+    await _pumpPage(
+      tester,
+      notificationController: notificationController,
+      notificationTimePicker: (context, initialTime) async {
+        return const TimeOfDay(hour: 8, minute: 0);
+      },
+    );
+
+    await tester.tap(find.text('変更').at(1));
+    await tester.pumpAndSettle();
+
+    expect(find.text('終了時刻は開始時刻より前にできません'), findsOneWidget);
+    expect(find.text('終了時刻：21:00'), findsOneWidget);
+
+    final savedSettings = await SettingsRepository().loadSettings();
+    expect(savedSettings.notificationEndTime, '21:00');
+    expect(notificationController.appliedSettingsLog, isEmpty);
+  });
+
+  testWidgets('開始時刻と同じ終了時刻は固定時刻として保存できる', (tester) async {
+    final notificationController = _FakeNotificationController();
+
+    await _pumpPage(
+      tester,
+      notificationController: notificationController,
+      notificationTimePicker: (context, initialTime) async {
+        return const TimeOfDay(hour: 17, minute: 0);
+      },
+    );
+
+    await tester.tap(find.text('変更').at(1));
+    await tester.pumpAndSettle();
+
+    expect(find.text('終了時刻：17:00'), findsOneWidget);
+
+    final savedSettings = await SettingsRepository().loadSettings();
+    expect(savedSettings.notificationStartTime, '17:00');
+    expect(savedSettings.notificationEndTime, '17:00');
   });
 }
