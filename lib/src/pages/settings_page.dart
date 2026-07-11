@@ -90,7 +90,7 @@ class _SettingsPageState extends State<SettingsPage> {
         ),
         const SizedBox(height: 4),
         const Text(
-          '興味カテゴリ、通知時刻、履歴を管理します。',
+          '興味カテゴリ、通知時間帯、履歴を管理します。',
           style: TextStyle(fontSize: 14),
         ),
         const SizedBox(height: 16),
@@ -255,7 +255,7 @@ class _SettingsPageState extends State<SettingsPage> {
             ),
             const SizedBox(height: 4),
             Text(
-              '毎日 ${_settings.notificationTime} によりみちのきっかけを届けます。',
+              '毎日 ${_settings.notificationStartTime}〜${_settings.notificationEndTime} のあいだのどこかで、よりみちのきっかけを届けます。',
               style: TextStyle(
                 fontSize: 13,
                 color: colorScheme.onSurfaceVariant,
@@ -266,13 +266,30 @@ class _SettingsPageState extends State<SettingsPage> {
               children: [
                 Expanded(
                   child: Text(
-                    '通知時刻：${_settings.notificationTime}',
+                    '開始時刻：${_settings.notificationStartTime}',
+                    style: const TextStyle(fontWeight: FontWeight.w600),
+                  ),
+                ),
+                OutlinedButton(
+                  onPressed: _isNotificationSaving
+                      ? null
+                      : _pickNotificationStartTime,
+                  child: const Text('変更'),
+                ),
+              ],
+            ),
+            const SizedBox(height: 8),
+            Row(
+              children: [
+                Expanded(
+                  child: Text(
+                    '終了時刻：${_settings.notificationEndTime}',
                     style: const TextStyle(fontWeight: FontWeight.w600),
                   ),
                 ),
                 OutlinedButton(
                   onPressed:
-                      _isNotificationSaving ? null : _pickNotificationTime,
+                      _isNotificationSaving ? null : _pickNotificationEndTime,
                   child: const Text('変更'),
                 ),
               ],
@@ -297,27 +314,84 @@ class _SettingsPageState extends State<SettingsPage> {
     await _saveNotificationSettings(nextSettings);
   }
 
-  Future<void> _pickNotificationTime() async {
-    final initialTime = _parseTimeOfDay(_settings.notificationTime);
-    final picker = widget.notificationTimePicker ?? _showNotificationTimePicker;
+  /// 開始時刻を選択する。終了時刻より後は選べない（開始 == 終了は固定時刻
+  /// として許容する）。
+  Future<void> _pickNotificationStartTime() async {
+    final initialTime = _parseTimeOfDay(_settings.notificationStartTime);
+    final picker =
+        widget.notificationTimePicker ?? _showNotificationStartTimePicker;
     final pickedTime = await picker(context, initialTime);
     if (pickedTime == null) {
       return;
     }
 
+    final endMinutes = _notificationTimeToMinutes(_settings.notificationEndTime);
+    if (_timeOfDayToMinutes(pickedTime) > endMinutes) {
+      _showRangeValidationError('開始時刻は終了時刻より後にできません');
+      return;
+    }
+
     await _saveNotificationSettings(
-      _settings.copyWith(notificationTime: _formatTimeOfDay(pickedTime)),
+      _settings.copyWith(notificationStartTime: _formatTimeOfDay(pickedTime)),
     );
+  }
+
+  /// 終了時刻を選択する。開始時刻より前は選べない。
+  Future<void> _pickNotificationEndTime() async {
+    final initialTime = _parseTimeOfDay(_settings.notificationEndTime);
+    final picker =
+        widget.notificationTimePicker ?? _showNotificationEndTimePicker;
+    final pickedTime = await picker(context, initialTime);
+    if (pickedTime == null) {
+      return;
+    }
+
+    final startMinutes =
+        _notificationTimeToMinutes(_settings.notificationStartTime);
+    if (_timeOfDayToMinutes(pickedTime) < startMinutes) {
+      _showRangeValidationError('終了時刻は開始時刻より前にできません');
+      return;
+    }
+
+    await _saveNotificationSettings(
+      _settings.copyWith(notificationEndTime: _formatTimeOfDay(pickedTime)),
+    );
+  }
+
+  void _showRangeValidationError(String message) {
+    if (!mounted) {
+      return;
+    }
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(content: Text(message)),
+    );
+  }
+
+  Future<TimeOfDay?> _showNotificationStartTimePicker(
+    BuildContext context,
+    TimeOfDay initialTime,
+  ) {
+    return _showNotificationTimePicker(context, initialTime,
+        helpText: '通知開始時刻');
+  }
+
+  Future<TimeOfDay?> _showNotificationEndTimePicker(
+    BuildContext context,
+    TimeOfDay initialTime,
+  ) {
+    return _showNotificationTimePicker(context, initialTime,
+        helpText: '通知終了時刻');
   }
 
   Future<TimeOfDay?> _showNotificationTimePicker(
     BuildContext context,
-    TimeOfDay initialTime,
-  ) {
+    TimeOfDay initialTime, {
+    required String helpText,
+  }) {
     return showTimePicker(
       context: context,
       initialTime: initialTime,
-      helpText: '通知時刻',
+      helpText: helpText,
       cancelText: 'キャンセル',
       confirmText: '決定',
     );
@@ -368,6 +442,13 @@ class _SettingsPageState extends State<SettingsPage> {
     final hour = time.hour.toString().padLeft(2, '0');
     final minute = time.minute.toString().padLeft(2, '0');
     return '$hour:$minute';
+  }
+
+  int _timeOfDayToMinutes(TimeOfDay time) => time.hour * 60 + time.minute;
+
+  int _notificationTimeToMinutes(String source) {
+    final time = parseNotificationTime(source);
+    return time.hour * 60 + time.minute;
   }
 
   /// 履歴削除カード：通常時は「削除」ボタン、タップするとインライン確認に切り替わる。

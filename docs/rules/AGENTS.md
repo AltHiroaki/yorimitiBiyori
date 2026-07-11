@@ -36,7 +36,7 @@ The core experience is:
 
 1. On first launch the user completes onboarding: welcome modal → interest category selection → notification permission.
 2. In 提案設定, the user picks categories, then sets each category's detail settings.
-3. The app sends a daily local notification at the configured time (default 17:30). The wording is a soft invitation that does NOT name a duration (e.g. "暇な時間って存在しますか？"). There are no time-selection notification actions.
+3. The app sends one local notification per day at a random time within the user-configured range (default 17:00–21:00). The wording is a soft invitation that does NOT name a duration (e.g. "暇な時間って存在しますか？"). There are no time-selection notification actions.
 4. The user taps the notification body, which opens the suggestion screen (suggestion produced from the saved category + detail settings).
 5. The suggestion screen shows one matching suggestion with title, description, tags, where-to-try, and budget.
 6. "やってみる" opens a completion modal with feedback chips (よかった / 普通 / 合わなかった) and saves a done record.
@@ -84,7 +84,7 @@ The MVP includes only:
 - onboarding flow (welcome → categories → notification permission)
 - interest category registration (MVP 4 categories, multi-select)
 - suggestion settings screen (two-stage: category selection → per-category detail settings; MVP is one "genre" group per category)
-- local notification at a configured time, soft wording without naming a duration, no time-selection actions
+- local notification once per day at a random time within the configured range, soft wording without naming a duration, no time-selection actions
 - suggestion display matching the category + detail-setting conditions (card shows where-to-try and budget)
 - re-suggestion ("別の提案", records the shown suggestion as skipped)
 - completion modal with feedback (good / normal / bad) saving a done record
@@ -107,7 +107,6 @@ Do not implement the following unless explicitly requested:
 - AI API calls (Claude API detail generation is advanced Phase 1)
 - cloud storage per user
 - account-based synchronization
-- random notification time within a user-selected time range
 
 iOS implementation, iOS notification behavior, TestFlight distribution, and iPhone device verification are also post-MVP advanced-phase work.
 
@@ -274,13 +273,7 @@ The notification is the entry point that nudges the user to open the app. The su
 - There are **no time-selection notification actions** (the old 15 / 30 / 60 minute actions are removed, because time is no longer a universal condition).
 - Tapping the notification body opens the suggestion screen.
 
-For the MVP, schedule notifications at the configured fixed time (default 17:30). Random notification timing within a user-selected time range is an advanced feature after the fixed-time notification flow is stable. If implemented later, use a bounded range such as 17:00-21:00 and re-schedule the next notification after each delivery instead of using a daily repeating fixed notification.
-
-Notification implementation order:
-
-1. Make in-app condition selection work (two-stage suggestion settings screen).
-2. Show a basic local notification (soft, no duration in the text).
-3. Open the suggestion screen from a notification tap (using the saved conditions).
+Notifications fire once per day at a random time within a user-selected bounded range (`notification_start_time`–`notification_end_time`, default 17:00–21:00; start == end means a fixed time and is how the legacy single `notification_time` is migrated). Because Android provides no delivery callback, the implementation pre-schedules 7 single-shot notifications (IDs 4101–4107, one per day) and re-schedules them on every app launch via `applySettings`; a persisted plan (`yorimiti_biyori_scheduled_notification_plan`) prevents scheduling a second notification for a day whose planned time has already passed. Known limitation: if the app is not opened for 7+ days, notifications stop until the next launch. Do not use a fully random time, multiple notifications per day, or `matchDateTimeComponents` daily repeats.
 
 If notification permission is denied, the app must remain fully usable with manual suggestions.
 

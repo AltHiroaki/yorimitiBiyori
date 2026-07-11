@@ -2,7 +2,9 @@
 /// 企画書 ver6 の MVP コアカテゴリ（音楽・料理・読書・映画）から選ぶ。
 const List<String> defaultSelectedCategoryIds = ['music', 'read', 'movie'];
 
-const String defaultNotificationTime = '17:30';
+/// 通知時間帯のデフォルト。この範囲内で毎日1回ランダムな時刻に通知する。
+const String defaultNotificationStartTime = '17:00';
+const String defaultNotificationEndTime = '21:00';
 
 /// テーマモード設定。system は端末の設定に追従する。
 enum ThemeModeSetting {
@@ -29,7 +31,8 @@ class UserSettings {
     this.selectedCategories = defaultSelectedCategoryIds,
     this.detailSettings = const {},
     this.notificationEnabled = true,
-    this.notificationTime = defaultNotificationTime,
+    this.notificationStartTime = defaultNotificationStartTime,
+    this.notificationEndTime = defaultNotificationEndTime,
     this.firstLaunchCompleted = false,
     this.recentSuggestionIds = const [],
     this.themeMode = ThemeModeSetting.system,
@@ -44,8 +47,13 @@ class UserSettings {
 
   final bool notificationEnabled;
 
-  /// `HH:mm` 形式の通知時刻。
-  final String notificationTime;
+  /// `HH:mm` 形式の通知時間帯の開始時刻。この範囲内で毎日1回ランダムな時刻に
+  /// 通知する。開始 == 終了は「固定時刻に通知」として扱う（旧
+  /// `notification_time` からの移行結果もこの形になる）。
+  final String notificationStartTime;
+
+  /// `HH:mm` 形式の通知時間帯の終了時刻。
+  final String notificationEndTime;
 
   final bool firstLaunchCompleted;
 
@@ -58,6 +66,7 @@ class UserSettings {
   /// フィールドごとに壊れたデータを検出し、そのフィールドだけデフォルト値に
   /// フォールバックする。1つのフィールドが壊れていても他のフィールドは保持する。
   static UserSettings fromJson(Map<String, dynamic> json) {
+    final notificationRange = _parseNotificationRange(json);
     return UserSettings(
       selectedCategories: _parseStringList(
         json['selected_categories'],
@@ -67,9 +76,8 @@ class UserSettings {
       notificationEnabled: json['notification_enabled'] is bool
           ? json['notification_enabled'] as bool
           : true,
-      notificationTime: json['notification_time'] is String
-          ? json['notification_time'] as String
-          : defaultNotificationTime,
+      notificationStartTime: notificationRange.start,
+      notificationEndTime: notificationRange.end,
       firstLaunchCompleted: json['first_launch_completed'] is bool
           ? json['first_launch_completed'] as bool
           : false,
@@ -86,7 +94,8 @@ class UserSettings {
       'selected_categories': selectedCategories,
       'detail_settings': detailSettings,
       'notification_enabled': notificationEnabled,
-      'notification_time': notificationTime,
+      'notification_start_time': notificationStartTime,
+      'notification_end_time': notificationEndTime,
       'first_launch_completed': firstLaunchCompleted,
       'recent_suggestion_ids': recentSuggestionIds,
       'theme_mode': themeMode.name,
@@ -97,7 +106,8 @@ class UserSettings {
     List<String>? selectedCategories,
     Map<String, Map<String, List<String>>>? detailSettings,
     bool? notificationEnabled,
-    String? notificationTime,
+    String? notificationStartTime,
+    String? notificationEndTime,
     bool? firstLaunchCompleted,
     List<String>? recentSuggestionIds,
     ThemeModeSetting? themeMode,
@@ -106,13 +116,87 @@ class UserSettings {
       selectedCategories: selectedCategories ?? this.selectedCategories,
       detailSettings: detailSettings ?? this.detailSettings,
       notificationEnabled: notificationEnabled ?? this.notificationEnabled,
-      notificationTime: notificationTime ?? this.notificationTime,
+      notificationStartTime:
+          notificationStartTime ?? this.notificationStartTime,
+      notificationEndTime: notificationEndTime ?? this.notificationEndTime,
       firstLaunchCompleted:
           firstLaunchCompleted ?? this.firstLaunchCompleted,
       recentSuggestionIds: recentSuggestionIds ?? this.recentSuggestionIds,
       themeMode: themeMode ?? this.themeMode,
     );
   }
+}
+
+class _NotificationRange {
+  const _NotificationRange(this.start, this.end);
+
+  final String start;
+  final String end;
+}
+
+/// 通知時間帯を復元する。
+/// 新キー（`notification_start_time` / `notification_end_time`）があれば
+/// フィールド単位で採用し、両方無ければ旧 `notification_time` を
+/// 開始＝終了の縮退範囲として引き継ぐ（従来の固定時刻動作を保存する移行）。
+/// どちらも無効ならデフォルト、開始 > 終了なら両方デフォルトへ戻す。
+_NotificationRange _parseNotificationRange(Map<String, dynamic> json) {
+  final startValue = json['notification_start_time'];
+  final endValue = json['notification_end_time'];
+  final hasRangeKeys =
+      _isValidNotificationTime(startValue) || _isValidNotificationTime(endValue);
+
+  String start;
+  String end;
+  if (hasRangeKeys) {
+    start = _isValidNotificationTime(startValue)
+        ? startValue as String
+        : defaultNotificationStartTime;
+    end = _isValidNotificationTime(endValue)
+        ? endValue as String
+        : defaultNotificationEndTime;
+  } else if (_isValidNotificationTime(json['notification_time'])) {
+    final legacyTime = json['notification_time'] as String;
+    start = legacyTime;
+    end = legacyTime;
+  } else {
+    start = defaultNotificationStartTime;
+    end = defaultNotificationEndTime;
+  }
+
+  if (_notificationTimeToMinutes(start) > _notificationTimeToMinutes(end)) {
+    return const _NotificationRange(
+      defaultNotificationStartTime,
+      defaultNotificationEndTime,
+    );
+  }
+  return _NotificationRange(start, end);
+}
+
+/// `HH:mm` 形式（hour 0〜23・minute 0〜59）かどうか。
+/// notification_service 側の parseNotificationTime と同じ規則だが、
+/// モデル → サービスの import 循環を避けるためここで独自に判定する。
+bool _isValidNotificationTime(dynamic value) {
+  if (value is! String) {
+    return false;
+  }
+  final parts = value.split(':');
+  if (parts.length != 2) {
+    return false;
+  }
+  final hour = int.tryParse(parts[0]);
+  final minute = int.tryParse(parts[1]);
+  return hour != null &&
+      minute != null &&
+      hour >= 0 &&
+      hour <= 23 &&
+      minute >= 0 &&
+      minute <= 59;
+}
+
+/// 有効な `HH:mm` 文字列を 0 時からの経過分に変換する（範囲の前後比較用）。
+int _notificationTimeToMinutes(String time) {
+  final parts = time.split(':');
+  return int.parse(parts[0]) * 60 + int.parse(parts[1]);
 }
 
 List<String> _parseStringList(dynamic value, List<String> fallback) {

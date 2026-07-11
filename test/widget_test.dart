@@ -34,10 +34,13 @@ class _FakeNotificationController implements NotificationController {
   Future<void> showInvitationNotification() async {}
 
   @override
-  Future<void> scheduleDailyNotification(String notificationTime) async {}
+  Future<void> scheduleDailyNotifications({
+    required String startTime,
+    required String endTime,
+  }) async {}
 
   @override
-  Future<void> cancelDailyNotification() async {}
+  Future<void> cancelDailyNotifications() async {}
 }
 
 void main() {
@@ -108,7 +111,7 @@ void main() {
 
     await tester.tap(find.text('設定'));
     await tester.pumpAndSettle();
-    expect(find.text('興味カテゴリ、通知時刻、履歴を管理します。'), findsOneWidget);
+    expect(find.text('興味カテゴリ、通知時間帯、履歴を管理します。'), findsOneWidget);
 
     await tester.scrollUntilVisible(find.text('提案設定を開く'), 200);
     await tester.tap(find.text('提案設定を開く'));
@@ -288,7 +291,7 @@ void main() {
     await tester.tap(find.text('設定'));
     await tester.pumpAndSettle();
 
-    expect(find.text('興味カテゴリ、通知時刻、履歴を管理します。'), findsOneWidget);
+    expect(find.text('興味カテゴリ、通知時間帯、履歴を管理します。'), findsOneWidget);
 
     notificationController.tapNotification();
     await tester.pumpAndSettle();
