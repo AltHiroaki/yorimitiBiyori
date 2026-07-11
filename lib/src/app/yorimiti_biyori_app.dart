@@ -11,6 +11,7 @@ import '../pages/history_page.dart';
 import '../pages/settings_page.dart';
 import '../pages/suggestion_page.dart';
 import '../repositories/settings_repository.dart';
+import 'theme_mode_scope.dart';
 
 /// UI プロトタイプのカラーパレット（`よりみち日和 UIプロトタイプ/` の定数 C に対応）。
 const Color _primarySeedColor = Color(0xFF3F6F44);
@@ -22,26 +23,40 @@ const double _cardCornerRadius = 24;
 
 /// アプリ全体のテーマ。カードの見た目（白地・薄縁・角丸）はここに集約し、
 /// 各画面の Card では個別指定しない。
-ThemeData buildYorimitiBiyoriTheme() {
+ThemeData buildYorimitiBiyoriTheme({
+  Brightness brightness = Brightness.light,
+}) {
+  final colorScheme = ColorScheme.fromSeed(
+    seedColor: _primarySeedColor,
+    brightness: brightness,
+  );
+  final isDark = brightness == Brightness.dark;
+  final scaffoldBackgroundColor =
+      isDark ? colorScheme.surface : _pageBackgroundColor;
+  final cardBackgroundColor =
+      isDark ? colorScheme.surfaceContainerLow : Colors.white;
+  final cardOutlineColor =
+      isDark ? colorScheme.outlineVariant : _cardOutlineColor;
+
   return ThemeData(
-    colorScheme: ColorScheme.fromSeed(seedColor: _primarySeedColor),
+    colorScheme: colorScheme,
     useMaterial3: true,
-    scaffoldBackgroundColor: _pageBackgroundColor,
+    scaffoldBackgroundColor: scaffoldBackgroundColor,
     cardTheme: CardThemeData(
       elevation: 0,
-      color: Colors.white,
+      color: cardBackgroundColor,
       surfaceTintColor: Colors.transparent,
       // 画面側は SizedBox で間隔を管理しているため、既定の外側余白は持たせない。
       margin: EdgeInsets.zero,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(_cardCornerRadius),
-        side: const BorderSide(color: _cardOutlineColor),
+        side: BorderSide(color: cardOutlineColor),
       ),
     ),
   );
 }
 
-class YorimitiBiyoriApp extends StatelessWidget {
+class YorimitiBiyoriApp extends StatefulWidget {
   const YorimitiBiyoriApp({
     super.key,
     this.settingsRepository,
@@ -53,14 +68,54 @@ class YorimitiBiyoriApp extends StatelessWidget {
   final NotificationController? notificationController;
 
   @override
+  State<YorimitiBiyoriApp> createState() => _YorimitiBiyoriAppState();
+}
+
+class _YorimitiBiyoriAppState extends State<YorimitiBiyoriApp> {
+  late final SettingsRepository _settingsRepository;
+  ThemeModeSetting _themeModeSetting = ThemeModeSetting.system;
+
+  @override
+  void initState() {
+    super.initState();
+    _settingsRepository = widget.settingsRepository ?? SettingsRepository();
+    _loadThemeModeSetting();
+  }
+
+  Future<void> _loadThemeModeSetting() async {
+    final settings = await _settingsRepository.loadSettings();
+    if (!mounted) {
+      return;
+    }
+    setState(() {
+      _themeModeSetting = settings.themeMode;
+    });
+  }
+
+  /// 設定画面が保存済みのテーマモードを [ThemeModeScope] 経由で通知してくる。
+  /// ここでは表示への反映（MaterialApp の themeMode 更新）だけを行う。
+  void _handleThemeModeSettingChanged(ThemeModeSetting setting) {
+    setState(() {
+      _themeModeSetting = setting;
+    });
+  }
+
+  @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'よりみち日和',
-      debugShowCheckedModeBanner: false,
-      theme: buildYorimitiBiyoriTheme(),
-      home: OnboardingGate(
-        settingsRepository: settingsRepository ?? SettingsRepository(),
-        notificationController: notificationController ?? NotificationService(),
+    return ThemeModeScope(
+      themeModeSetting: _themeModeSetting,
+      onThemeModeSettingChanged: _handleThemeModeSettingChanged,
+      child: MaterialApp(
+        title: 'よりみち日和',
+        debugShowCheckedModeBanner: false,
+        theme: buildYorimitiBiyoriTheme(),
+        darkTheme: buildYorimitiBiyoriTheme(brightness: Brightness.dark),
+        themeMode: themeModeFromSetting(_themeModeSetting),
+        home: OnboardingGate(
+          settingsRepository: _settingsRepository,
+          notificationController:
+              widget.notificationController ?? NotificationService(),
+        ),
       ),
     );
   }

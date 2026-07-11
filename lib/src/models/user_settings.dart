@@ -4,6 +4,25 @@ const List<String> defaultSelectedCategoryIds = ['music', 'read', 'movie'];
 
 const String defaultNotificationTime = '17:30';
 
+/// テーマモード設定。system は端末の設定に追従する。
+enum ThemeModeSetting {
+  system,
+  light,
+  dark;
+
+  /// 保存値（`name` 文字列）から復元する。不明な値は [system] にフォールバックする。
+  static ThemeModeSetting fromJson(dynamic value) {
+    if (value is String) {
+      for (final setting in ThemeModeSetting.values) {
+        if (setting.name == value) {
+          return setting;
+        }
+      }
+    }
+    return ThemeModeSetting.system;
+  }
+}
+
 /// ユーザー設定（選択カテゴリ・カテゴリ別詳細設定・通知設定・直近提案IDなど）。
 class UserSettings {
   const UserSettings({
@@ -13,6 +32,7 @@ class UserSettings {
     this.notificationTime = defaultNotificationTime,
     this.firstLaunchCompleted = false,
     this.recentSuggestionIds = const [],
+    this.themeMode = ThemeModeSetting.system,
   });
 
   /// 選択中の興味カテゴリ id（例：`music`）。
@@ -31,6 +51,9 @@ class UserSettings {
 
   /// 直近重複除外用の直近3件の提案ID。
   final List<String> recentSuggestionIds;
+
+  /// 表示テーマ（システム追従・ライト固定・ダーク固定）。
+  final ThemeModeSetting themeMode;
 
   /// フィールドごとに壊れたデータを検出し、そのフィールドだけデフォルト値に
   /// フォールバックする。1つのフィールドが壊れていても他のフィールドは保持する。
@@ -54,6 +77,7 @@ class UserSettings {
         json['recent_suggestion_ids'],
         const [],
       ),
+      themeMode: ThemeModeSetting.fromJson(json['theme_mode']),
     );
   }
 
@@ -65,6 +89,7 @@ class UserSettings {
       'notification_time': notificationTime,
       'first_launch_completed': firstLaunchCompleted,
       'recent_suggestion_ids': recentSuggestionIds,
+      'theme_mode': themeMode.name,
     };
   }
 
@@ -75,6 +100,7 @@ class UserSettings {
     String? notificationTime,
     bool? firstLaunchCompleted,
     List<String>? recentSuggestionIds,
+    ThemeModeSetting? themeMode,
   }) {
     return UserSettings(
       selectedCategories: selectedCategories ?? this.selectedCategories,
@@ -84,6 +110,7 @@ class UserSettings {
       firstLaunchCompleted:
           firstLaunchCompleted ?? this.firstLaunchCompleted,
       recentSuggestionIds: recentSuggestionIds ?? this.recentSuggestionIds,
+      themeMode: themeMode ?? this.themeMode,
     );
   }
 }

@@ -5,10 +5,6 @@ import '../models/interest_category.dart';
 import '../models/suggestion_record.dart';
 import '../repositories/records_repository.dart';
 
-/// スキップ表示用の黄系カラー（UI プロトタイプ HistoryScreen の skipBg / skipText）。
-const Color _skipBackgroundColor = Color(0xFFF2E8A2);
-const Color _skipTextColor = Color(0xFF7B6F00);
-
 /// 履歴タブ。仕様書 3.2 に対応する。
 /// サマリー（実施／スキップ／合計分）と新しい順の履歴一覧を表示し、
 /// 履歴 0 件のときは空状態と「提案を見てみる」ボタンを表示する。
@@ -112,7 +108,7 @@ class _HistoryPageState extends State<HistoryPage> {
             _buildSummaryItem(
               value: '${_summary.skippedCount}',
               label: 'スキップ',
-              valueColor: _skipTextColor,
+              valueColor: colorScheme.tertiary,
             ),
             const SizedBox(height: 48, child: VerticalDivider(width: 1)),
             _buildSummaryItem(
@@ -154,8 +150,10 @@ class _HistoryPageState extends State<HistoryPage> {
     final colorScheme = Theme.of(context).colorScheme;
     final isDone = record.status == SuggestionRecordStatus.done;
     final iconBackground =
-        isDone ? colorScheme.primaryContainer : _skipBackgroundColor;
-    final accentColor = isDone ? colorScheme.primary : _skipTextColor;
+        isDone ? colorScheme.primaryContainer : colorScheme.tertiaryContainer;
+    final accentColor = isDone
+        ? colorScheme.onPrimaryContainer
+        : colorScheme.onTertiaryContainer;
     final categoryLabel =
         InterestCategories.findById(record.category)?.label ?? record.category;
 

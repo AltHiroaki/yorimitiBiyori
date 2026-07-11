@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../app/theme_mode_scope.dart';
 import '../features/notifications/notification_service.dart';
 import '../models/user_settings.dart';
 import '../repositories/records_repository.dart';
@@ -100,6 +101,8 @@ class _SettingsPageState extends State<SettingsPage> {
           description: '音楽、料理、読書、映画から複数選択できるようにします。',
         ),
         const SizedBox(height: 12),
+        _buildThemeCard(),
+        const SizedBox(height: 12),
         _buildNotificationCard(),
         const SizedBox(height: 12),
         _buildDeleteHistoryCard(),
@@ -146,6 +149,84 @@ class _SettingsPageState extends State<SettingsPage> {
       return;
     }
     await _loadSettings();
+  }
+
+  /// テーマカード：ライト／ダーク／システム追従を切り替える（issue #40）。
+  Widget _buildThemeCard() {
+    final colorScheme = Theme.of(context).colorScheme;
+
+    return Card(
+      child: Padding(
+        padding: const EdgeInsets.all(20),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const Text(
+              'テーマ',
+              style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 4),
+            Text(
+              'ライト／ダークを切り替えます。「システム」は端末の設定に従います。',
+              style: TextStyle(
+                fontSize: 13,
+                color: colorScheme.onSurfaceVariant,
+              ),
+            ),
+            const SizedBox(height: 12),
+            SizedBox(
+              width: double.infinity,
+              child: SegmentedButton<ThemeModeSetting>(
+                segments: const [
+                  ButtonSegment(
+                    value: ThemeModeSetting.system,
+                    label: Text('システム'),
+                  ),
+                  ButtonSegment(
+                    value: ThemeModeSetting.light,
+                    label: Text('ライト'),
+                    icon: Icon(Icons.light_mode_outlined),
+                  ),
+                  ButtonSegment(
+                    value: ThemeModeSetting.dark,
+                    label: Text('ダーク'),
+                    icon: Icon(Icons.dark_mode_outlined),
+                  ),
+                ],
+                selected: {_settings.themeMode},
+                onSelectionChanged: (selection) {
+                  _updateThemeMode(selection.first);
+                },
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  /// テーマモードを保存し、アプリルート（[ThemeModeScope]）へ反映する。
+  Future<void> _updateThemeMode(ThemeModeSetting themeMode) async {
+    final nextSettings = _settings.copyWith(themeMode: themeMode);
+    try {
+      await _settingsRepository.saveSettings(nextSettings);
+    } catch (_) {
+      if (!mounted) {
+        return;
+      }
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('テーマ設定を保存できませんでした')),
+      );
+      return;
+    }
+
+    if (!mounted) {
+      return;
+    }
+    setState(() {
+      _settings = nextSettings;
+    });
+    ThemeModeScope.maybeOf(context)?.onThemeModeSettingChanged(themeMode);
   }
 
   Widget _buildNotificationCard() {
