@@ -1,9 +1,11 @@
 import 'dart:math' as math;
 
 import 'package:flutter_test/flutter_test.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:timezone/data/latest.dart' as timezone_data;
 import 'package:timezone/timezone.dart' as timezone;
 import 'package:yorimiti_biyori/src/features/notifications/notification_service.dart';
+import 'package:yorimiti_biyori/src/features/notifications/scheduled_notification_plan_store.dart';
 
 /// キューに積んだ値を順に返すスクリプト化 Random。
 /// nextInt に渡された max も記録し、境界値のアサーションに使う。
@@ -30,6 +32,8 @@ class _ScriptedRandom implements math.Random {
 }
 
 void main() {
+  TestWidgetsFlutterBinding.ensureInitialized();
+
   late timezone.Location location;
 
   setUpAll(() {
@@ -237,6 +241,164 @@ void main() {
       expect(schedule[2].month, 8);
       expect(schedule[2].day, 1);
     });
+  });
+
+  group('mergeFiredTodayEntries', () {
+    List<timezone.TZDateTime> futureSchedule(timezone.TZDateTime firstDay) {
+      return List.generate(
+        scheduledNotificationDayCount,
+        (i) => timezone.TZDateTime(
+          location,
+          firstDay.year,
+          firstDay.month,
+          firstDay.day + i,
+          18,
+        ),
+      );
+    }
+
+    test('発火済みの今日分が保存プランの先頭に残る', () {
+      final now = timezone.TZDateTime(location, 2026, 7, 12, 19, 0);
+      final firedToday = timezone.TZDateTime(location, 2026, 7, 12, 18, 15);
+      final newSchedule =
+          futureSchedule(timezone.TZDateTime(location, 2026, 7, 13));
+
+      final merged = mergeFiredTodayEntries(
+        now: now,
+        previousPlan: [firedToday],
+        newSchedule: newSchedule,
+      );
+
+      expect(merged, hasLength(scheduledNotificationDayCount + 1));
+      expect(merged.first, firedToday);
+      expect(merged.sublist(1), newSchedule);
+    });
+
+    test('過去日のエントリは引き継がない', () {
+      final now = timezone.TZDateTime(location, 2026, 7, 12, 19, 0);
+      final newSchedule =
+          futureSchedule(timezone.TZDateTime(location, 2026, 7, 13));
+
+      final merged = mergeFiredTodayEntries(
+        now: now,
+        previousPlan: [
+          timezone.TZDateTime(location, 2026, 7, 10, 18, 0),
+          timezone.TZDateTime(location, 2026, 7, 11, 19, 0),
+        ],
+        newSchedule: newSchedule,
+      );
+
+      expect(merged, newSchedule);
+    });
+
+    test('今日の未来分は引き継がない（乱択し直しに任せる）', () {
+      final now = timezone.TZDateTime(location, 2026, 7, 12, 18, 0);
+      final pendingToday = timezone.TZDateTime(location, 2026, 7, 12, 20, 45);
+      final newSchedule =
+          futureSchedule(timezone.TZDateTime(location, 2026, 7, 12));
+
+      final merged = mergeFiredTodayEntries(
+        now: now,
+        previousPlan: [pendingToday],
+        newSchedule: newSchedule,
+      );
+
+      expect(merged, newSchedule);
+    });
+
+    test('前回プランが空なら新スケジュールのまま', () {
+      final now = timezone.TZDateTime(location, 2026, 7, 12, 19, 0);
+      final newSchedule =
+          futureSchedule(timezone.TZDateTime(location, 2026, 7, 13));
+
+      final merged = mergeFiredTodayEntries(
+        now: now,
+        previousPlan: const [],
+        newSchedule: newSchedule,
+      );
+
+      expect(merged, newSchedule);
+    });
+
+    test('発火済みが複数あっても残すのは1件だけ', () {
+      final now = timezone.TZDateTime(location, 2026, 7, 12, 19, 0);
+      final newSchedule =
+          futureSchedule(timezone.TZDateTime(location, 2026, 7, 13));
+
+      final merged = mergeFiredTodayEntries(
+        now: now,
+        previousPlan: [
+          timezone.TZDateTime(location, 2026, 7, 12, 17, 30),
+          timezone.TZDateTime(location, 2026, 7, 12, 18, 15),
+        ],
+        newSchedule: newSchedule,
+      );
+
+      expect(merged, hasLength(newSchedule.length + 1));
+      expect(merged.first, timezone.TZDateTime(location, 2026, 7, 12, 17, 30));
+    });
+
+    test('発火済みがあるとき新スケジュール側の今日分は捨てる', () {
+      final now = timezone.TZDateTime(location, 2026, 7, 12, 19, 0);
+      final firedToday = timezone.TZDateTime(location, 2026, 7, 12, 17, 30);
+      final todayInNewSchedule =
+          timezone.TZDateTime(location, 2026, 7, 12, 20, 0);
+      final tomorrowEntry = timezone.TZDateTime(location, 2026, 7, 13, 18, 0);
+
+      final merged = mergeFiredTodayEntries(
+        now: now,
+        previousPlan: [firedToday],
+        newSchedule: [todayInNewSchedule, tomorrowEntry],
+      );
+
+      expect(merged, [firedToday, tomorrowEntry]);
+    });
+  });
+
+  group('scheduleDailyNotifications', () {
+    test('同日中に再スケジュールしても発火済みエントリが保存に残り初日は明日のまま', () async {
+      SharedPreferences.setMockInitialValues({});
+      final store = ScheduledNotificationPlanStore();
+      final firedToday = timezone.TZDateTime(location, 2026, 7, 12, 18, 15);
+      await store.save([firedToday]);
+
+      final now = timezone.TZDateTime(location, 2026, 7, 12, 19, 0);
+      final service = NotificationService(
+        location: location,
+        now: () => now,
+        random: math.Random(1),
+        planStore: store,
+      );
+
+      // 1回目: 発火済みエントリを検知して明日以降を予約する（PR #57 のシナリオ）。
+      await service.scheduleDailyNotifications(
+        startTime: '17:00',
+        endTime: '21:00',
+      );
+      var savedPlan = await store.load(location);
+      expect(savedPlan, contains(firedToday));
+      expect(savedPlan.where((date) => date.day == 12), [firedToday]);
+      expect(savedPlan, hasLength(scheduledNotificationDayCount + 1));
+
+      // 2回目: 保存が上書きされていなければ、引き続き今日2回目は予約されない。
+      await service.scheduleDailyNotifications(
+        startTime: '17:00',
+        endTime: '21:00',
+      );
+      savedPlan = await store.load(location);
+      expect(savedPlan, contains(firedToday));
+      expect(savedPlan.where((date) => date.day == 12), [firedToday]);
+      final futureEntries = savedPlan.where((date) => date.isAfter(now));
+      expect(futureEntries.every((date) => date.day >= 13), isTrue);
+    });
+  });
+
+  test('端末タイムゾーンが取得できない環境では Asia/Tokyo にフォールバックする', () async {
+    final service = NotificationService();
+
+    await service.initialize();
+
+    expect(service.notificationLocation.name, 'Asia/Tokyo');
   });
 
   test('通知文言に分数を含めない', () {

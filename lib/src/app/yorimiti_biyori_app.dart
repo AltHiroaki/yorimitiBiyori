@@ -219,9 +219,14 @@ class _OnboardingFlowState extends State<OnboardingFlow> {
           await widget.notificationController.requestPermission();
     }
 
+    // 詳細設定は消さず、オンボーディングで選ばれなかったカテゴリの分だけ落とす。
+    final retainedDetailSettings = <String, Map<String, List<String>>>{
+      for (final entry in widget.initialSettings.detailSettings.entries)
+        if (_selectedCategoryIds.contains(entry.key)) entry.key: entry.value,
+    };
     final completedSettings = widget.initialSettings.copyWith(
       selectedCategories: _selectedCategoryIds,
-      detailSettings: const {},
+      detailSettings: retainedDetailSettings,
       notificationEnabled: isNotificationEnabled,
       firstLaunchCompleted: true,
     );

@@ -1,7 +1,9 @@
 import 'dart:math' as math;
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
+import 'package:flutter_timezone/flutter_timezone.dart';
 import 'package:timezone/data/latest.dart' as timezone_data;
 import 'package:timezone/timezone.dart' as timezone;
 
@@ -22,7 +24,8 @@ const String _androidChannelId = 'yorimiti_daily_invitation';
 const String _androidChannelName = 'よりみちのきっかけ';
 const String _androidChannelDescription = '空き時間によりみち提案を届ける通知';
 const String _androidDefaultIcon = '@mipmap/ic_launcher';
-const String _japanTimeZoneName = 'Asia/Tokyo';
+/// 端末のタイムゾーンが取得できないときに使うフォールバック。
+const String _fallbackTimeZoneName = 'Asia/Tokyo';
 
 typedef NotificationTapCallback = void Function(String? payload);
 
@@ -142,16 +145,50 @@ List<timezone.TZDateTime> computeNotificationSchedule({
   return schedule;
 }
 
+/// 保存用の通知プランを作る。[previousPlan] のうち「今日 かつ [now] 以前」
+/// （＝発火済みとみなすエントリ）を [newSchedule] の先頭へ引き継ぐ。
+///
+/// 発火済みエントリを保存し直さないと、同じ日に再スケジュールしたとき
+/// [computeNotificationSchedule] の isTodayFired 判定材料が失われ、
+/// 1日2回通知されてしまう。
+///
+/// - 過去日のエントリは捨てる（発火済み判定には今日の分しか使わないため）
+/// - 今日の未来分は捨てる（computeNotificationSchedule が乱択し直すため）
+/// - 発火済みが複数あっても残すのは最初の1件だけ
+/// - 発火済みがある場合、[newSchedule] 側の今日分は捨てる（二重保存の防御）
+List<timezone.TZDateTime> mergeFiredTodayEntries({
+  required timezone.TZDateTime now,
+  required List<timezone.TZDateTime> previousPlan,
+  required List<timezone.TZDateTime> newSchedule,
+}) {
+  bool isSameDayAsNow(timezone.TZDateTime date) =>
+      date.year == now.year && date.month == now.month && date.day == now.day;
+
+  timezone.TZDateTime? firedToday;
+  for (final scheduled in previousPlan) {
+    if (isSameDayAsNow(scheduled) && !scheduled.isAfter(now)) {
+      firedToday = scheduled;
+      break;
+    }
+  }
+  if (firedToday == null) {
+    return newSchedule;
+  }
+
+  return [
+    firedToday,
+    ...newSchedule.where((date) => !isSameDayAsNow(date)),
+  ];
+}
+
 class NotificationService implements NotificationController {
   NotificationService({
     FlutterLocalNotificationsPlugin? plugin,
-    timezone.Location? location,
-    timezone.TZDateTime Function()? now,
+    this._location,
+    this._now,
     math.Random? random,
     ScheduledNotificationPlanStore? planStore,
   })  : _plugin = plugin ?? FlutterLocalNotificationsPlugin(),
-        _location = location,
-        _now = now,
         _random = random ?? math.Random(),
         _planStore = planStore ?? ScheduledNotificationPlanStore();
 
@@ -163,6 +200,7 @@ class NotificationService implements NotificationController {
 
   bool _isInitialized = false;
   NotificationTapCallback? _onNotificationTap;
+  timezone.Location? _deviceLocation;
 
   @override
   Future<void> initialize({NotificationTapCallback? onNotificationTap}) async {
@@ -173,6 +211,7 @@ class NotificationService implements NotificationController {
 
     try {
       timezone_data.initializeTimeZones();
+      await _resolveDeviceLocation();
       await _plugin.initialize(
         settings: const InitializationSettings(
           android: AndroidInitializationSettings(_androidDefaultIcon),
@@ -250,16 +289,18 @@ class NotificationService implements NotificationController {
   }) async {
     await initialize();
     final location = _notificationLocation;
+    final now = _now?.call() ?? timezone.TZDateTime.now(location);
+    final previousPlan = await _planStore.load(location);
     final schedule = computeNotificationSchedule(
       location: location,
-      now: _now?.call() ?? timezone.TZDateTime.now(location),
+      now: now,
       startTime: parseNotificationTime(startTime),
       endTime: parseNotificationTime(
         endTime,
         fallbackTime: defaultNotificationEndTime,
       ),
       random: _random,
-      previousPlan: await _planStore.load(location),
+      previousPlan: previousPlan,
     );
 
     try {
@@ -281,7 +322,13 @@ class NotificationService implements NotificationController {
         rethrow;
       }
     }
-    await _planStore.save(schedule);
+    await _planStore.save(
+      mergeFiredTodayEntries(
+        now: now,
+        previousPlan: previousPlan,
+        newSchedule: schedule,
+      ),
+    );
   }
 
   @override
@@ -299,9 +346,29 @@ class NotificationService implements NotificationController {
     await _planStore.clear();
   }
 
+  /// 端末のローカルタイムゾーンを解決する。取得失敗・未知の TZ 名のときは
+  /// 何もしない（_notificationLocation が Asia/Tokyo へフォールバックする）。
+  Future<void> _resolveDeviceLocation() async {
+    if (_location != null || _deviceLocation != null) {
+      return;
+    }
+    try {
+      final timezoneInfo = await FlutterTimezone.getLocalTimezone();
+      _deviceLocation = timezone.getLocation(timezoneInfo.identifier);
+    } catch (_) {
+      // MissingPluginException（テスト環境）・LocationNotFoundException・
+      // PlatformException はすべて日本時間フォールバックで吸収する。
+    }
+  }
+
+  @visibleForTesting
+  timezone.Location get notificationLocation => _notificationLocation;
+
   timezone.Location get _notificationLocation {
     timezone_data.initializeTimeZones();
-    return _location ?? timezone.getLocation(_japanTimeZoneName);
+    return _location ??
+        _deviceLocation ??
+        timezone.getLocation(_fallbackTimeZoneName);
   }
 
   NotificationDetails get _notificationDetails {
