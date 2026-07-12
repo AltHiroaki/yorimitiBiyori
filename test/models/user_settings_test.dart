@@ -18,6 +18,7 @@ void main() {
 
   test('fromJson/toJson が往復する', () {
     final json = {
+      'version': userSettingsSchemaVersion,
       'selected_categories': ['music', 'movie'],
       'detail_settings': {
         'music': {

@@ -7,6 +7,9 @@ import '../models/suggestion_record.dart';
 /// shared_preferences の保存キー（仕様書 5.4）。
 const String recordsPreferenceKey = 'yorimiti_biyori_records';
 
+/// shared_preferences に保存する履歴 JSON の現行スキーマバージョン。
+const int recordsSchemaVersion = 1;
+
 /// 実施・スキップ履歴を shared_preferences に JSON 文字列で保存・復元する repository。
 class RecordsRepository {
   /// 保存済みの履歴を全件読み込む。
@@ -19,15 +22,7 @@ class RecordsRepository {
       return [];
     }
 
-    try {
-      final decodedJson = jsonDecode(source);
-      if (decodedJson is! List) {
-        return [];
-      }
-      return _parseRecords(decodedJson);
-    } on FormatException {
-      return [];
-    }
+    return parseRecordsJsonSource(source);
   }
 
   /// 履歴を1件追加して保存する。
@@ -45,17 +40,20 @@ class RecordsRepository {
 
   Future<void> _saveRecords(List<SuggestionRecord> records) async {
     final preferences = await SharedPreferences.getInstance();
-    final encodedRecords =
-        records.map((record) => record.toJson()).toList();
+    final encodedRecords = records.map((record) => record.toJson()).toList();
+    final encodedStorage = {
+      'version': recordsSchemaVersion,
+      'records': encodedRecords,
+    };
     await preferences.setString(
       recordsPreferenceKey,
-      jsonEncode(encodedRecords),
+      jsonEncode(encodedStorage),
     );
   }
 
-  List<SuggestionRecord> _parseRecords(List<dynamic> decodedJson) {
+  static List<SuggestionRecord> _parseRecords(List<dynamic> decodedRecords) {
     final records = <SuggestionRecord>[];
-    for (final recordJson in decodedJson) {
+    for (final recordJson in decodedRecords) {
       if (recordJson is! Map<String, dynamic>) {
         continue;
       }
@@ -66,4 +64,34 @@ class RecordsRepository {
     }
     return records;
   }
+}
+
+/// 保存文字列から履歴を復元する入口。
+/// 将来スキーマが変わったときは、ここで version を見て移行処理を挟む。
+List<SuggestionRecord> parseRecordsJsonSource(String source) {
+  try {
+    return parseRecordsJson(jsonDecode(source));
+  } on FormatException {
+    return [];
+  }
+}
+
+List<SuggestionRecord> parseRecordsJson(Object? decodedJson) {
+  if (decodedJson is List) {
+    return RecordsRepository._parseRecords(decodedJson);
+  }
+
+  if (decodedJson is! Map<String, dynamic>) {
+    return [];
+  }
+
+  if (decodedJson['version'] != recordsSchemaVersion) {
+    return [];
+  }
+
+  final decodedRecords = decodedJson['records'];
+  if (decodedRecords is! List) {
+    return [];
+  }
+  return RecordsRepository._parseRecords(decodedRecords);
 }

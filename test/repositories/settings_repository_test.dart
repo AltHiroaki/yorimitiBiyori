@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:yorimiti_biyori/src/models/user_settings.dart';
@@ -28,8 +30,13 @@ void main() {
     );
 
     await repository.saveSettings(settings);
+    final preferences = await SharedPreferences.getInstance();
+    final savedJson = jsonDecode(
+      preferences.getString(settingsPreferenceKey)!,
+    ) as Map<String, dynamic>;
     final loadedSettings = await repository.loadSettings();
 
+    expect(savedJson['version'], userSettingsSchemaVersion);
     expect(loadedSettings.selectedCategories, ['music', 'walk']);
     expect(loadedSettings.detailSettings, {
       'music': {
@@ -109,6 +116,36 @@ void main() {
 
     expect(loadedSettings.notificationStartTime, '12:15');
     expect(loadedSettings.notificationEndTime, '12:15');
+  });
+
+  test('旧形式（version なし）の保存データもこれまでどおり読み込める', () async {
+    SharedPreferences.setMockInitialValues({
+      settingsPreferenceKey: jsonEncode({
+        'selected_categories': ['cook'],
+        'notification_enabled': false,
+        'unknown_field': 'ignored',
+      }),
+    });
+    final repository = SettingsRepository();
+
+    final loadedSettings = await repository.loadSettings();
+
+    expect(loadedSettings.selectedCategories, ['cook']);
+    expect(loadedSettings.notificationEnabled, isFalse);
+  });
+
+  test('未知の version はデフォルト設定にフォールバックする', () async {
+    SharedPreferences.setMockInitialValues({
+      settingsPreferenceKey: jsonEncode({
+        'version': 999,
+        'selected_categories': ['cook'],
+      }),
+    });
+    final repository = SettingsRepository();
+
+    final loadedSettings = await repository.loadSettings();
+
+    expect(loadedSettings.selectedCategories, defaultSelectedCategoryIds);
   });
 
   test('2回保存すると後の設定で上書きされる', () async {
