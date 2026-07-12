@@ -178,5 +178,77 @@
     "where_to_try": "建物の外に出て、タイマーを15分にセットして歩く。",
     "estimated_minutes": 15,
     "weight": 1.0
+  },
+  {
+    "id": "cook_italian_one_pan",
+    "title": "ワンパンパスタを作る",
+    "description": "フライパン1つで作れるパスタで、気軽にイタリアンを試す。洗い物が少ない気楽なよりみちです。",
+    "detail": "パスタを半分に折って具と一緒に煮ると、鍋を分けずに仕上がります。トマト缶かオリーブオイルとにんにくがあれば十分です。",
+    "category": "cook",
+    "tags": ["イタリアン", "パスタ", "ワンパン"],
+    "budget_yen": 400,
+    "where_to_try": "家にあるパスタとトマト缶（またはオリーブオイル）で、フライパン1つで作る。",
+    "estimated_minutes": 25,
+    "weight": 1.0
+  },
+  {
+    "id": "cook_asian_stirfry",
+    "title": "ナンプラー香るアジア風炒めを作る",
+    "description": "いつもの炒め物をナンプラーやごま油でアジア風に寄せてみる。味の角度を少し変えるよりみちです。",
+    "detail": "ナンプラーが無ければ、鶏がらスープの素とレモン汁でも近い雰囲気になります。",
+    "category": "cook",
+    "tags": ["アジア風", "炒め物"],
+    "budget_yen": 500,
+    "where_to_try": "冷蔵庫の肉と野菜を炒めて、仕上げにナンプラーかごま油を少し足す。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "cook_spicy_noodle_arrange",
+    "title": "激辛アレンジ麺に挑戦する",
+    "description": "インスタント麺にラー油や唐辛子を足して、自分の限界の少し手前の辛さを試す。",
+    "detail": "辛さは後から足せるので、少しずつ様子を見ながら調整すると失敗しません。",
+    "category": "cook",
+    "tags": ["激辛", "麺", "アレンジ"],
+    "budget_yen": 300,
+    "where_to_try": "手持ちのインスタント麺に、ラー油・一味・豆板醤のどれかを足す。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "cook_refreshing_pickles",
+    "title": "さっぱり浅漬けを仕込む",
+    "description": "きゅうりやキャベツを塩で揉んで、さっぱりした浅漬けを作っておく。次の食事が少し楽しみになります。",
+    "detail": "ポリ袋に野菜と塩少々を入れて揉むだけ。酢やレモンを足すとさらにさっぱりします。",
+    "category": "cook",
+    "tags": ["さっぱり", "作り置き", "副菜"],
+    "budget_yen": 300,
+    "where_to_try": "冷蔵庫の野菜1種類をポリ袋で塩揉みして10分置く。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "music_western_new_release",
+    "title": "洋楽の新譜を1曲だけ聴く",
+    "description": "洋楽の新着プレイリストから、知らない曲を1曲だけ聴いてみる。",
+    "detail": "歌詞が分からなくても大丈夫。雰囲気が好きかどうかだけで選ぶと気楽です。",
+    "category": "music",
+    "tags": ["洋楽", "新しい出会い", "無料"],
+    "budget_yen": 0,
+    "where_to_try": "音楽アプリの新着や洋楽ランキングから1曲選んで再生する。",
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "read_novel_opening",
+    "title": "小説の冒頭だけ読んでみる",
+    "description": "気になっていた小説の冒頭数ページだけ読んで、続きを読むか決める。",
+    "detail": "冒頭だけと決めておくと、長編でも気軽に手を出せます。合わなければ閉じてOKです。",
+    "category": "read",
+    "tags": ["小説", "10分以内", "無料"],
+    "budget_yen": 0,
+    "where_to_try": "電子書籍の無料サンプルか、本屋・図書館で1冊手に取る。",
+    "estimated_minutes": 10,
+    "weight": 1.0
   }
 ]
