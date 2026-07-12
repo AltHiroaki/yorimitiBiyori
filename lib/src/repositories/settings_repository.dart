@@ -19,15 +19,7 @@ class SettingsRepository {
       return const UserSettings();
     }
 
-    try {
-      final decodedJson = jsonDecode(source);
-      if (decodedJson is! Map<String, dynamic>) {
-        return const UserSettings();
-      }
-      return UserSettings.fromJson(decodedJson);
-    } on FormatException {
-      return const UserSettings();
-    }
+    return parseSettingsJsonSource(source);
   }
 
   /// ユーザー設定を保存する。既存の保存内容は上書きされる。
@@ -38,4 +30,27 @@ class SettingsRepository {
       jsonEncode(settings.toJson()),
     );
   }
+}
+
+/// 保存文字列からユーザー設定を復元する入口。
+/// 将来スキーマが変わったときは、ここで version を見て移行処理を挟む。
+UserSettings parseSettingsJsonSource(String source) {
+  try {
+    return parseSettingsJson(jsonDecode(source));
+  } on FormatException {
+    return const UserSettings();
+  }
+}
+
+UserSettings parseSettingsJson(Object? decodedJson) {
+  if (decodedJson is! Map<String, dynamic>) {
+    return const UserSettings();
+  }
+
+  final version = decodedJson['version'];
+  if (version == null || version == userSettingsSchemaVersion) {
+    return UserSettings.fromJson(decodedJson);
+  }
+
+  return const UserSettings();
 }

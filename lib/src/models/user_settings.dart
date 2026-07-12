@@ -6,6 +6,9 @@ const List<String> defaultSelectedCategoryIds = ['music', 'read', 'movie'];
 const String defaultNotificationStartTime = '17:00';
 const String defaultNotificationEndTime = '21:00';
 
+/// shared_preferences に保存するユーザー設定 JSON の現行スキーマバージョン。
+const int userSettingsSchemaVersion = 1;
+
 /// テーマモード設定。system は端末の設定に追従する。
 enum ThemeModeSetting {
   system,
@@ -91,6 +94,7 @@ class UserSettings {
 
   Map<String, dynamic> toJson() {
     return {
+      'version': userSettingsSchemaVersion,
       'selected_categories': selectedCategories,
       'detail_settings': detailSettings,
       'notification_enabled': notificationEnabled,

@@ -36,8 +36,14 @@ void main() {
 
     await repository.addRecord(doneRecord);
     await repository.addRecord(skippedRecord);
+    final preferences = await SharedPreferences.getInstance();
+    final savedJson = jsonDecode(
+      preferences.getString(recordsPreferenceKey)!,
+    ) as Map<String, dynamic>;
     final loadedRecords = await repository.loadRecords();
 
+    expect(savedJson['version'], recordsSchemaVersion);
+    expect(savedJson['records'], isA<List<dynamic>>());
     expect(loadedRecords, hasLength(2));
     expect(loadedRecords[0].id, 'record_1');
     expect(loadedRecords[0].status, SuggestionRecordStatus.done);
@@ -78,9 +84,58 @@ void main() {
     expect(loadedRecords, isEmpty);
   });
 
-  test('リスト以外の JSON は空リストにフォールバックする', () async {
+  test('version 付き JSON の records 以外は空リストにフォールバックする', () async {
     SharedPreferences.setMockInitialValues({
       recordsPreferenceKey: '{"id": "record_1"}',
+    });
+    final repository = RecordsRepository();
+
+    final loadedRecords = await repository.loadRecords();
+
+    expect(loadedRecords, isEmpty);
+  });
+
+  test('旧形式（version なしのリスト）もこれまでどおり読み込める', () async {
+    SharedPreferences.setMockInitialValues({
+      recordsPreferenceKey: jsonEncode([
+        {
+          ...doneRecord.toJson(),
+          'unknown_field': 'ignored',
+        },
+        skippedRecord.toJson(),
+      ]),
+    });
+    final repository = RecordsRepository();
+
+    final loadedRecords = await repository.loadRecords();
+
+    expect(loadedRecords, hasLength(2));
+    expect(loadedRecords[0].id, 'record_1');
+    expect(loadedRecords[1].id, 'record_2');
+  });
+
+  test('version 付き JSON も読み込める', () async {
+    SharedPreferences.setMockInitialValues({
+      recordsPreferenceKey: jsonEncode({
+        'version': recordsSchemaVersion,
+        'records': [doneRecord.toJson()],
+        'unknown_field': 'ignored',
+      }),
+    });
+    final repository = RecordsRepository();
+
+    final loadedRecords = await repository.loadRecords();
+
+    expect(loadedRecords, hasLength(1));
+    expect(loadedRecords.single.id, 'record_1');
+  });
+
+  test('未知の version は空リストにフォールバックする', () async {
+    SharedPreferences.setMockInitialValues({
+      recordsPreferenceKey: jsonEncode({
+        'version': 999,
+        'records': [doneRecord.toJson()],
+      }),
     });
     final repository = RecordsRepository();
 
@@ -94,10 +149,18 @@ void main() {
       doneRecord.toJson(),
       {'id': 'broken_record'},
       'not a map',
+      {
+        ...doneRecord.toJson(),
+        'id': 'broken_status',
+        'status': 'unknown',
+      },
       skippedRecord.toJson(),
     ];
     SharedPreferences.setMockInitialValues({
-      recordsPreferenceKey: jsonEncode(brokenList),
+      recordsPreferenceKey: jsonEncode({
+        'version': recordsSchemaVersion,
+        'records': brokenList,
+      }),
     });
     final repository = RecordsRepository();
 
