@@ -312,7 +312,9 @@ class _AppShellState extends State<AppShell> {
     // 履歴の空状態から提案タブへ切り替えられるようコールバックを渡すため、
     // ページはビルド時に組み立てる（タブ切替時に再生成され履歴も読み直される）。
     final pages = <Widget>[
-      const SuggestionPage(),
+      SuggestionPage(
+        onGoToHistory: () => setState(() => _currentIndex = 1),
+      ),
       HistoryPage(
         onGoToSuggestions: () => setState(() => _currentIndex = 0),
       ),

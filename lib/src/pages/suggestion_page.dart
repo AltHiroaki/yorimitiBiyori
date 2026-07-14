@@ -5,10 +5,12 @@ import 'package:flutter/material.dart';
 
 import '../features/recommendation/suggestion_picker.dart';
 import '../models/interest_category.dart';
+import '../models/ongoing_suggestion.dart';
 import '../models/suggestion.dart';
 import '../models/suggestion_record.dart';
 import '../models/user_settings.dart';
 import '../repositories/current_suggestion_repository.dart';
+import '../repositories/ongoing_suggestion_repository.dart';
 import '../repositories/records_repository.dart';
 import '../repositories/settings_repository.dart';
 import '../repositories/suggestion_repository.dart';
@@ -28,7 +30,9 @@ class SuggestionPage extends StatefulWidget {
     this.settingsRepository,
     this.recordsRepository,
     this.currentSuggestionRepository,
+    this.ongoingSuggestionRepository,
     this.random,
+    this.onGoToHistory,
   });
 
   /// テスト用に差し替え可能。null なら通常の repository・乱数を使う。
@@ -36,7 +40,11 @@ class SuggestionPage extends StatefulWidget {
   final SettingsRepository? settingsRepository;
   final RecordsRepository? recordsRepository;
   final CurrentSuggestionRepository? currentSuggestionRepository;
+  final OngoingSuggestionRepository? ongoingSuggestionRepository;
   final Random? random;
+
+  /// 完了フローの最後に履歴タブへ切り替えるためのコールバック（issue #48）。
+  final VoidCallback? onGoToHistory;
 
   @override
   State<SuggestionPage> createState() => _SuggestionPageState();
@@ -47,6 +55,7 @@ class _SuggestionPageState extends State<SuggestionPage> {
   late final SettingsRepository _settingsRepository;
   late final RecordsRepository _recordsRepository;
   late final CurrentSuggestionRepository _currentSuggestionRepository;
+  late final OngoingSuggestionRepository _ongoingSuggestionRepository;
   late final Random _random;
 
   _LoadStatus _status = _LoadStatus.loading;
@@ -55,6 +64,10 @@ class _SuggestionPageState extends State<SuggestionPage> {
 
   /// 表示中の提案。null は「条件に合う候補なし」を表す。
   Suggestion? _currentSuggestion;
+
+  /// 実施中のよりみち。null は「実施中なし」（通常の提案表示）を表す。
+  Suggestion? _ongoingSuggestion;
+  DateTime? _ongoingStartedAt;
 
   @override
   void initState() {
@@ -65,6 +78,8 @@ class _SuggestionPageState extends State<SuggestionPage> {
     _recordsRepository = widget.recordsRepository ?? RecordsRepository();
     _currentSuggestionRepository =
         widget.currentSuggestionRepository ?? CurrentSuggestionRepository();
+    _ongoingSuggestionRepository =
+        widget.ongoingSuggestionRepository ?? OngoingSuggestionRepository();
     _random = widget.random ?? Random();
     _initialize();
   }
@@ -75,11 +90,16 @@ class _SuggestionPageState extends State<SuggestionPage> {
     final settings = await _settingsRepository.loadSettings();
     final currentSuggestionId =
         await _currentSuggestionRepository.loadCurrentSuggestionId();
+    final ongoing = await _ongoingSuggestionRepository.loadOngoingSuggestion();
     try {
       final suggestions = await _suggestionRepository.loadSuggestions();
       if (!mounted) {
         return;
       }
+      final ongoingSuggestion = _resolveOngoingSuggestion(
+        suggestions: suggestions,
+        ongoing: ongoing,
+      );
       final restoredSuggestion = _restoreCurrentSuggestion(
         suggestions: suggestions,
         settings: settings,
@@ -89,6 +109,10 @@ class _SuggestionPageState extends State<SuggestionPage> {
         _allSuggestions = suggestions;
         _settings = settings;
         _status = _LoadStatus.loaded;
+        if (ongoingSuggestion != null) {
+          _ongoingSuggestion = ongoingSuggestion;
+          _ongoingStartedAt = ongoing!.startedAt;
+        }
         if (restoredSuggestion == null) {
           _drawSuggestion();
         } else {
@@ -103,6 +127,28 @@ class _SuggestionPageState extends State<SuggestionPage> {
         _status = _LoadStatus.error;
       });
     }
+  }
+
+  /// 保存済みの実施中よりみちを提案データから引き直す。
+  /// 提案データの更新で ID が消えていた場合は実施中を解除する（null を返す）。
+  Suggestion? _resolveOngoingSuggestion({
+    required List<Suggestion> suggestions,
+    required OngoingSuggestion? ongoing,
+  }) {
+    if (ongoing == null) {
+      return null;
+    }
+
+    for (final suggestion in suggestions) {
+      if (suggestion.id == ongoing.suggestionId) {
+        return suggestion;
+      }
+    }
+    // 該当データが存在しないため、保存済みの実施中状態も片付ける。
+    unawaited(
+      _ongoingSuggestionRepository.clearOngoingSuggestion().catchError((_) {}),
+    );
+    return null;
   }
 
   /// 現在の設定で候補を絞り込み、weight 付きランダムで 1 件選ぶ。
@@ -168,9 +214,29 @@ class _SuggestionPageState extends State<SuggestionPage> {
     );
   }
 
-  /// やってみる：完了モーダルでフィードバックを聞き、done として履歴に保存する。
-  /// モーダルを閉じただけ（フィードバック未確定）の場合は保存しない。
-  Future<void> _onTrySuggestion(Suggestion suggestion) async {
+  /// やってみる：提案を実施中状態に切り替える（issue #48）。
+  /// 実施中はタブ切替・アプリ再起動でも維持されるよう永続化する。
+  void _onTrySuggestion(Suggestion suggestion) {
+    final startedAt = DateTime.now();
+    setState(() {
+      _ongoingSuggestion = suggestion;
+      _ongoingStartedAt = startedAt;
+    });
+    unawaited(
+      _ongoingSuggestionRepository
+          .saveOngoingSuggestion(
+            OngoingSuggestion(
+              suggestionId: suggestion.id,
+              startedAt: startedAt,
+            ),
+          )
+          .catchError((_) {}),
+    );
+  }
+
+  /// 実施中カードの完了：フィードバックを聞いて done として履歴に保存し、
+  /// お祝いを表示して履歴タブへ移る。モーダルを閉じただけなら実施中のまま。
+  Future<void> _onCompleteOngoing(Suggestion suggestion) async {
     final feedback = await showCompletionModal(context);
     if (feedback == null) {
       return;
@@ -180,6 +246,44 @@ class _SuggestionPageState extends State<SuggestionPage> {
       status: SuggestionRecordStatus.done,
       feedback: feedback,
     );
+    await _clearOngoing();
+    if (!mounted) {
+      return;
+    }
+    // お祝いリアクション。派手な演出（アニメーション等）は発展時に検討する。
+    ScaffoldMessenger.of(context).showSnackBar(
+      const SnackBar(content: Text('🎉 よりみち完了！おつかれさまでした')),
+    );
+    widget.onGoToHistory?.call();
+  }
+
+  /// 実施中カードのスキップ：skipped として履歴に保存し、実施中を解除して再抽選する。
+  Future<void> _onSkipOngoing(Suggestion suggestion) async {
+    _recordRecent(suggestion.id);
+    unawaited(
+      _saveRecord(
+        suggestion,
+        status: SuggestionRecordStatus.skipped,
+        feedback: null,
+        updateRecent: false,
+      ),
+    );
+    await _clearOngoing();
+  }
+
+  /// 実施中状態を解除し、通常の提案表示（再抽選）に戻す。
+  Future<void> _clearOngoing() async {
+    await _ongoingSuggestionRepository
+        .clearOngoingSuggestion()
+        .catchError((_) {});
+    if (!mounted) {
+      return;
+    }
+    setState(() {
+      _ongoingSuggestion = null;
+      _ongoingStartedAt = null;
+      _drawSuggestion();
+    });
   }
 
   /// 別の提案：表示中の提案を skipped として履歴に保存し、同条件で再抽選する（仕様書 6.4）。
@@ -272,7 +376,9 @@ class _SuggestionPageState extends State<SuggestionPage> {
             const SizedBox(height: 16),
             _buildConditionCard(),
             const SizedBox(height: 12),
-            if (_currentSuggestion case final Suggestion suggestion)
+            if (_ongoingSuggestion case final Suggestion ongoing)
+              _buildOngoingCard(ongoing)
+            else if (_currentSuggestion case final Suggestion suggestion)
               _buildSuggestionCard(suggestion)
             else
               _buildEmptyCard(),
@@ -337,6 +443,13 @@ class _SuggestionPageState extends State<SuggestionPage> {
         ),
       ),
     );
+  }
+
+  /// 実施中カードに表示する「HH:mm」形式の開始時刻。
+  String _formatStartTime(DateTime startedAt) {
+    final hour = startedAt.hour.toString().padLeft(2, '0');
+    final minute = startedAt.minute.toString().padLeft(2, '0');
+    return '$hour:$minute';
   }
 
   /// 有効な詳細設定の選択値を「／」で連結した要約（例：ジャズ／作業向け）。
@@ -410,6 +523,78 @@ class _SuggestionPageState extends State<SuggestionPage> {
                   child: OutlinedButton(
                     onPressed: _onAnotherSuggestion,
                     child: const Text('別の提案'),
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  /// 実施中カード（issue #48）：完了／スキップの2ボタンで、開始時刻を添える。
+  Widget _buildOngoingCard(Suggestion suggestion) {
+    final colorScheme = Theme.of(context).colorScheme;
+    final startedAt = _ongoingStartedAt;
+
+    return Card(
+      child: Padding(
+        padding: const EdgeInsets.all(20),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              children: [
+                Icon(Icons.directions_walk, size: 18, color: colorScheme.primary),
+                const SizedBox(width: 6),
+                Expanded(
+                  child: Text(
+                    '実施中のよりみち',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: colorScheme.primary,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(height: 8),
+            Text(
+              suggestion.title,
+              maxLines: 2,
+              overflow: TextOverflow.ellipsis,
+              style:
+                  const TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 8),
+            Text(suggestion.description),
+            const SizedBox(height: 12),
+            Text('入手先：${suggestion.whereToTry}'),
+            if (startedAt != null) ...[
+              const SizedBox(height: 4),
+              Text(
+                '開始：${_formatStartTime(startedAt)}',
+                style: TextStyle(
+                  fontSize: 13,
+                  color: colorScheme.onSurfaceVariant,
+                ),
+              ),
+            ],
+            const SizedBox(height: 16),
+            Row(
+              children: [
+                Expanded(
+                  child: FilledButton(
+                    onPressed: () => _onCompleteOngoing(suggestion),
+                    child: const Text('完了'),
+                  ),
+                ),
+                const SizedBox(width: 8),
+                Expanded(
+                  child: OutlinedButton(
+                    onPressed: () => _onSkipOngoing(suggestion),
+                    child: const Text('スキップ'),
                   ),
                 ),
               ],

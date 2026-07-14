@@ -96,9 +96,14 @@ void main() {
 
     expect(find.text('空いた時間に、小さなよりみちを。'), findsOneWidget);
 
+    // やってみる → 実施中カード → 完了 → フィードバックモーダル（issue #48）。
     final tryButton = find.widgetWithText(FilledButton, 'やってみる');
     await tester.scrollUntilVisible(tryButton, 100);
     await tester.tap(tryButton);
+    await tester.pumpAndSettle();
+    expect(find.text('実施中のよりみち'), findsOneWidget);
+
+    await tester.tap(find.widgetWithText(FilledButton, '完了'));
     await tester.pumpAndSettle();
     expect(find.text('おつかれさまです'), findsOneWidget);
 
