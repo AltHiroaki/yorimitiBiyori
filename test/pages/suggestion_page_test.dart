@@ -8,6 +8,7 @@ import 'package:yorimiti_biyori/src/models/suggestion_record.dart';
 import 'package:yorimiti_biyori/src/models/user_settings.dart';
 import 'package:yorimiti_biyori/src/pages/suggestion_page.dart';
 import 'package:yorimiti_biyori/src/pages/suggestion_settings_page.dart';
+import 'package:yorimiti_biyori/src/repositories/current_suggestion_repository.dart';
 import 'package:yorimiti_biyori/src/repositories/records_repository.dart';
 import 'package:yorimiti_biyori/src/repositories/settings_repository.dart';
 import 'package:yorimiti_biyori/src/repositories/suggestion_repository.dart';
@@ -44,6 +45,28 @@ class _FakeRecordsRepository implements RecordsRepository {
   @override
   Future<void> deleteAllRecords() async {
     addedRecords.clear();
+  }
+}
+
+class _FakeCurrentSuggestionRepository implements CurrentSuggestionRepository {
+  _FakeCurrentSuggestionRepository([this.currentSuggestionId]);
+
+  String? currentSuggestionId;
+  final List<String?> savedSuggestionIdLog = [];
+
+  @override
+  Future<String?> loadCurrentSuggestionId() async => currentSuggestionId;
+
+  @override
+  Future<void> saveCurrentSuggestionId(String suggestionId) async {
+    currentSuggestionId = suggestionId;
+    savedSuggestionIdLog.add(suggestionId);
+  }
+
+  @override
+  Future<void> clearCurrentSuggestion() async {
+    currentSuggestionId = null;
+    savedSuggestionIdLog.add(null);
   }
 }
 
@@ -100,6 +123,7 @@ Future<_FakeSettingsRepository> _pumpPage(
   required UserSettings settings,
   bool failAssetLoad = false,
   _FakeRecordsRepository? recordsRepository,
+  _FakeCurrentSuggestionRepository? currentSuggestionRepository,
 }) async {
   // ListView の下部（案内カード等）まで描画されるよう縦長の画面にする。
   tester.view.physicalSize = const Size(800, 2400);
@@ -118,6 +142,8 @@ Future<_FakeSettingsRepository> _pumpPage(
           suggestionRepository: suggestionRepository,
           settingsRepository: settingsRepository,
           recordsRepository: recordsRepository ?? _FakeRecordsRepository(),
+          currentSuggestionRepository: currentSuggestionRepository ??
+              _FakeCurrentSuggestionRepository(),
           random: Random(0),
         ),
       ),
@@ -218,8 +244,7 @@ void main() {
       settings: const UserSettings(selectedCategories: ['music']),
     );
 
-    expect(repository.savedSettingsLog, hasLength(1));
-    expect(repository.savedSettingsLog.last.recentSuggestionIds, hasLength(1));
+    expect(repository.savedSettingsLog, isEmpty);
 
     for (var i = 0; i < 3; i++) {
       await tester.tap(find.text('別の提案'));
@@ -380,5 +405,48 @@ void main() {
 
     expect(find.text('🚶 散歩'), findsOneWidget);
     expect(find.text('詳細設定：ジャズ'), findsOneWidget);
+  });
+
+  testWidgets('表示中提案IDが復元され、直近リストを消費しない', (tester) async {
+    final currentSuggestionRepository =
+        _FakeCurrentSuggestionRepository('music_b');
+    final settingsRepository = await _pumpPage(
+      tester,
+      suggestions: [
+        _suggestionJson(id: 'music_a', title: 'ジャズを1曲流す', tags: ['ジャズ']),
+        _suggestionJson(id: 'music_b', title: 'ポップスを1曲流す', tags: ['ポップス']),
+      ],
+      settings: const UserSettings(selectedCategories: ['music']),
+      currentSuggestionRepository: currentSuggestionRepository,
+    );
+
+    expect(find.text('ポップスを1曲流す'), findsOneWidget);
+    expect(find.text('ジャズを1曲流す'), findsNothing);
+    expect(settingsRepository.savedSettingsLog, isEmpty);
+    expect(currentSuggestionRepository.savedSuggestionIdLog, ['music_b']);
+  });
+
+  testWidgets('保存された表示中提案が現在条件に合わなければ再抽選する', (tester) async {
+    final currentSuggestionRepository =
+        _FakeCurrentSuggestionRepository('music_b');
+    await _pumpPage(
+      tester,
+      suggestions: [
+        _suggestionJson(id: 'music_a', title: 'ジャズを1曲流す', tags: ['ジャズ']),
+        _suggestionJson(id: 'music_b', title: 'ポップスを1曲流す', tags: ['ポップス']),
+      ],
+      settings: const UserSettings(
+        selectedCategories: ['music'],
+        detailSettings: {
+          'music': {
+            'genre': ['ジャズ'],
+          },
+        },
+      ),
+      currentSuggestionRepository: currentSuggestionRepository,
+    );
+
+    expect(find.text('ジャズを1曲流す'), findsOneWidget);
+    expect(currentSuggestionRepository.currentSuggestionId, 'music_a');
   });
 }

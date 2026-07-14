@@ -8,6 +8,7 @@ import '../models/interest_category.dart';
 import '../models/suggestion.dart';
 import '../models/suggestion_record.dart';
 import '../models/user_settings.dart';
+import '../repositories/current_suggestion_repository.dart';
 import '../repositories/records_repository.dart';
 import '../repositories/settings_repository.dart';
 import '../repositories/suggestion_repository.dart';
@@ -26,6 +27,7 @@ class SuggestionPage extends StatefulWidget {
     this.suggestionRepository,
     this.settingsRepository,
     this.recordsRepository,
+    this.currentSuggestionRepository,
     this.random,
   });
 
@@ -33,6 +35,7 @@ class SuggestionPage extends StatefulWidget {
   final SuggestionRepository? suggestionRepository;
   final SettingsRepository? settingsRepository;
   final RecordsRepository? recordsRepository;
+  final CurrentSuggestionRepository? currentSuggestionRepository;
   final Random? random;
 
   @override
@@ -43,6 +46,7 @@ class _SuggestionPageState extends State<SuggestionPage> {
   late final SuggestionRepository _suggestionRepository;
   late final SettingsRepository _settingsRepository;
   late final RecordsRepository _recordsRepository;
+  late final CurrentSuggestionRepository _currentSuggestionRepository;
   late final Random _random;
 
   _LoadStatus _status = _LoadStatus.loading;
@@ -59,6 +63,8 @@ class _SuggestionPageState extends State<SuggestionPage> {
         widget.suggestionRepository ?? SuggestionRepository();
     _settingsRepository = widget.settingsRepository ?? SettingsRepository();
     _recordsRepository = widget.recordsRepository ?? RecordsRepository();
+    _currentSuggestionRepository =
+        widget.currentSuggestionRepository ?? CurrentSuggestionRepository();
     _random = widget.random ?? Random();
     _initialize();
   }
@@ -67,16 +73,27 @@ class _SuggestionPageState extends State<SuggestionPage> {
     // 設定の読込は repository 側でデフォルトへフォールバックするため失敗しない。
     // エラー扱いにするのは提案データ（suggestions.json）の読込失敗のみ。
     final settings = await _settingsRepository.loadSettings();
+    final currentSuggestionId =
+        await _currentSuggestionRepository.loadCurrentSuggestionId();
     try {
       final suggestions = await _suggestionRepository.loadSuggestions();
       if (!mounted) {
         return;
       }
+      final restoredSuggestion = _restoreCurrentSuggestion(
+        suggestions: suggestions,
+        settings: settings,
+        suggestionId: currentSuggestionId,
+      );
       setState(() {
         _allSuggestions = suggestions;
         _settings = settings;
         _status = _LoadStatus.loaded;
-        _drawSuggestion();
+        if (restoredSuggestion == null) {
+          _drawSuggestion();
+        } else {
+          _setCurrentSuggestion(restoredSuggestion);
+        }
       });
     } catch (_) {
       if (!mounted) {
@@ -95,10 +112,43 @@ class _SuggestionPageState extends State<SuggestionPage> {
       _settings.recentSuggestionIds,
     );
     final picked = pickWeightedRandom(candidates, _random);
-    _currentSuggestion = picked;
-    if (picked != null) {
-      _recordRecent(picked.id);
+    _setCurrentSuggestion(picked);
+  }
+
+  Suggestion? _restoreCurrentSuggestion({
+    required List<Suggestion> suggestions,
+    required UserSettings settings,
+    required String? suggestionId,
+  }) {
+    if (suggestionId == null) {
+      return null;
     }
+
+    final matchedSuggestions = filterSuggestions(suggestions, settings);
+    for (final suggestion in matchedSuggestions) {
+      if (suggestion.id == suggestionId) {
+        return suggestion;
+      }
+    }
+    return null;
+  }
+
+  void _setCurrentSuggestion(Suggestion? suggestion) {
+    _currentSuggestion = suggestion;
+    if (suggestion == null) {
+      unawaited(
+        _currentSuggestionRepository.clearCurrentSuggestion().catchError(
+              (_) {},
+            ),
+      );
+      return;
+    }
+
+    unawaited(
+      _currentSuggestionRepository
+          .saveCurrentSuggestionId(suggestion.id)
+          .catchError((_) {}),
+    );
   }
 
   /// 表示した提案 ID を直近リストへ追加する（重複は寄せ、3件を超えたら古い順に削除）。
@@ -135,11 +185,13 @@ class _SuggestionPageState extends State<SuggestionPage> {
   /// 別の提案：表示中の提案を skipped として履歴に保存し、同条件で再抽選する（仕様書 6.4）。
   void _onAnotherSuggestion() {
     if (_currentSuggestion case final Suggestion suggestion) {
+      _recordRecent(suggestion.id);
       unawaited(
         _saveRecord(
           suggestion,
           status: SuggestionRecordStatus.skipped,
           feedback: null,
+          updateRecent: false,
         ),
       );
     }
@@ -152,6 +204,7 @@ class _SuggestionPageState extends State<SuggestionPage> {
     Suggestion suggestion, {
     required SuggestionRecordStatus status,
     required SuggestionFeedback? feedback,
+    bool updateRecent = true,
   }) async {
     final now = DateTime.now();
     final record = SuggestionRecord(
@@ -165,6 +218,9 @@ class _SuggestionPageState extends State<SuggestionPage> {
       createdAt: now,
     );
     await _recordsRepository.addRecord(record);
+    if (updateRecent) {
+      _recordRecent(suggestion.id);
+    }
   }
 
   Future<void> _openSuggestionSettings() async {
