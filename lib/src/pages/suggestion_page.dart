@@ -169,16 +169,16 @@ class _SuggestionPageState extends State<SuggestionPage> {
   }
 
   /// やってみる：完了モーダルでフィードバックを聞き、done として履歴に保存する。
+  /// 保存の成否表示・保存中のボタン無効化はモーダル側が担う（issue #44）。
   /// モーダルを閉じただけ（フィードバック未確定）の場合は保存しない。
   Future<void> _onTrySuggestion(Suggestion suggestion) async {
-    final feedback = await showCompletionModal(context);
-    if (feedback == null) {
-      return;
-    }
-    await _saveRecord(
-      suggestion,
-      status: SuggestionRecordStatus.done,
-      feedback: feedback,
+    await showCompletionModal(
+      context,
+      onSave: (feedback) => _saveRecord(
+        suggestion,
+        status: SuggestionRecordStatus.done,
+        feedback: feedback,
+      ),
     );
   }
 

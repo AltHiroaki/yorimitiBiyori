@@ -376,6 +376,8 @@ void main() {
     expect(skippedRecord.suggestionId, firstWasA ? 'music_a' : 'music_b');
     expect(skippedRecord.status, SuggestionRecordStatus.skipped);
     expect(skippedRecord.feedback, isNull);
+    // スキップはカードの切り替わり自体がフィードバックのため SnackBar は出さない（issue #44）。
+    expect(find.text('履歴に保存しました'), findsNothing);
   });
 
   testWidgets('提案設定から戻ると条件が再読込されて表示に反映される', (tester) async {
