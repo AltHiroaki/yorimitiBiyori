@@ -10,6 +10,7 @@ import 'package:yorimiti_biyori/src/features/notifications/notification_service.
 import 'package:yorimiti_biyori/src/models/suggestion_record.dart';
 import 'package:yorimiti_biyori/src/models/user_settings.dart';
 import 'package:yorimiti_biyori/src/pages/history_page.dart';
+import 'package:yorimiti_biyori/src/repositories/ongoing_suggestion_repository.dart';
 import 'package:yorimiti_biyori/src/repositories/records_repository.dart';
 import 'package:yorimiti_biyori/src/repositories/settings_repository.dart';
 
@@ -275,6 +276,53 @@ void main() {
     await tester.pumpAndSettle();
 
     expect(find.text('まだ履歴はありません'), findsOneWidget);
+  });
+
+  testWidgets('スキップ履歴を復活すると提案タブの実施中カードへ自動遷移する',
+      (tester) async {
+    final skippedRecord = SuggestionRecord(
+      id: 'record_skipped',
+      suggestionId: 'music_jazz_focus',
+      suggestionTitle: '作業用にジャズを1曲だけ流す',
+      category: 'music',
+      estimatedMinutes: 5,
+      status: SuggestionRecordStatus.skipped,
+      feedback: null,
+      createdAt: DateTime.utc(2026, 7, 1, 12),
+    );
+    SharedPreferences.setMockInitialValues({
+      settingsPreferenceKey: jsonEncode(
+        const UserSettings(firstLaunchCompleted: true).toJson(),
+      ),
+      recordsPreferenceKey: jsonEncode([skippedRecord.toJson()]),
+    });
+    rootBundle.clear();
+
+    await tester.pumpWidget(const YorimitiBiyoriApp());
+    await tester.pumpAndSettle();
+
+    await tester.tap(find.text('履歴'));
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('作業用にジャズを1曲だけ流す'));
+    await tester.pumpAndSettle();
+    await tester.tap(find.widgetWithText(FilledButton, 'やってみる'));
+    await tester.pumpAndSettle();
+    await tester.tap(find.widgetWithText(FilledButton, '実施する'));
+    await tester.pumpAndSettle();
+
+    expect(find.text('実施中のよりみち'), findsOneWidget);
+    expect(find.text('作業用にジャズを1曲だけ流す'), findsOneWidget);
+
+    final preferences = await SharedPreferences.getInstance();
+    expect(
+      preferences.getString(ongoingSuggestionPreferenceKey),
+      isNotNull,
+    );
+
+    await tester.tap(find.text('履歴'));
+    await tester.pumpAndSettle();
+    expect(find.text('作業用にジャズを1曲だけ流す'), findsOneWidget);
+    expect(find.text('スキップ'), findsNWidgets(2));
   });
 
   testWidgets('設定タブで履歴を削除すると履歴タブが空状態に戻る', (WidgetTester tester) async {
