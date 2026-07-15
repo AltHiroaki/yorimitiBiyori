@@ -67,7 +67,7 @@ void main() {
         selectedCategories: ['movie'],
         detailSettings: {
           'movie': {
-            'mood': [],
+            'genre': [],
             'time': ['問わない'],
           },
         },
@@ -146,7 +146,7 @@ void main() {
             'genre': ['ジャズ'],
           },
           'movie': {
-            'mood': ['笑える'],
+            'genre': ['笑える'],
           },
         },
       );
