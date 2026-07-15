@@ -5,7 +5,11 @@
     "description": "歌詞のないジャズを1曲、作業や勉強のBGMにしてみる。集中したいときに向いた軽いよりみちです。",
     "detail": "配信サービスの「作業用ジャズ」プレイリストから1曲選ぶだけでOK。いつもの曲から少しだけ角度を変えられます。",
     "category": "music",
-    "tags": ["ジャズ", "作業向け", "無料"],
+    "tags": [
+      "ジャズ",
+      "作業向け",
+      "無料"
+    ],
     "budget_yen": 0,
     "where_to_try": "音楽配信アプリで「作業用 ジャズ」と検索してプレイリストを開く。",
     "estimated_minutes": 5,
@@ -17,7 +21,11 @@
     "description": "短いクラシック曲を1曲だけ流して、スマホから少し目を離す。落ち着きたいときのよりみちです。",
     "detail": "ピアノ小品や弦楽曲など、5分前後で終わる曲を選ぶと気軽に試せます。",
     "category": "music",
-    "tags": ["クラシック", "リラックス", "無料"],
+    "tags": [
+      "クラシック",
+      "リラックス",
+      "無料"
+    ],
     "budget_yen": 0,
     "where_to_try": "音楽アプリで「クラシック 短い 名曲」と検索して1曲再生する。",
     "estimated_minutes": 6,
@@ -29,7 +37,11 @@
     "description": "いつもより少し明るいポップスを1曲選んで、気持ちを切り替える。",
     "detail": "作業前や移動中に、テンポのよい曲を1曲だけ聴くと始動しやすくなります。",
     "category": "music",
-    "tags": ["ポップス", "盛り上がりたい", "無料"],
+    "tags": [
+      "ポップス",
+      "盛り上がりたい",
+      "無料"
+    ],
     "budget_yen": 0,
     "where_to_try": "音楽アプリのランキングやおすすめから、知らないポップスを1曲選ぶ。",
     "estimated_minutes": 5,
@@ -41,7 +53,11 @@
     "description": "卵や豆腐、鶏むね肉を使って、手早く食べられる高タンパク丼を作る。",
     "detail": "ご飯に具材をのせるだけの形にすると、料理のハードルが下がります。",
     "category": "cook",
-    "tags": ["高タンパク", "丼", "和食"],
+    "tags": [
+      "高タンパク",
+      "丼",
+      "和食"
+    ],
     "budget_yen": 400,
     "where_to_try": "冷蔵庫の卵・豆腐・鶏むね肉のどれかを使い、丼にまとめる。",
     "estimated_minutes": 20,
@@ -53,7 +69,11 @@
     "description": "余っている野菜を小さく切って、温かいスープにする。軽く整える料理のよりみちです。",
     "detail": "コンソメ、味噌、中華だしのどれかがあれば十分。野菜を多めに入れるのがポイントです。",
     "category": "cook",
-    "tags": ["野菜多め", "洋食", "作り置き"],
+    "tags": [
+      "野菜多め",
+      "洋食",
+      "作り置き"
+    ],
     "budget_yen": 300,
     "where_to_try": "冷蔵庫の半端な野菜を2種類選び、鍋で煮る。",
     "estimated_minutes": 25,
@@ -65,7 +85,11 @@
     "description": "肉や卵、野菜を中心にした炒め物で、満足感のある低糖質メニューを試す。",
     "detail": "ご飯を主役にせず、具材を大きめに切ると食べ応えが出ます。",
     "category": "cook",
-    "tags": ["低糖質", "中華", "ガッツリ"],
+    "tags": [
+      "低糖質",
+      "中華",
+      "ガッツリ"
+    ],
     "budget_yen": 600,
     "where_to_try": "卵、豚肉、キャベツなどをフライパンで炒め、塩こしょうと少しの醤油で整える。",
     "estimated_minutes": 20,
@@ -77,7 +101,12 @@
     "description": "電子書籍の無料サンプルで、日常エッセイを1話だけ読む。",
     "detail": "途中でやめても話が分からなくなりにくいので、短い空き時間に向いています。",
     "category": "read",
-    "tags": ["エッセイ", "10分以内", "電子書籍", "無料"],
+    "tags": [
+      "エッセイ",
+      "10分以内",
+      "電子書籍",
+      "無料"
+    ],
     "budget_yen": 0,
     "where_to_try": "電子書籍アプリで気になるエッセイを開き、無料サンプルを読む。",
     "estimated_minutes": 10,
@@ -89,7 +118,12 @@
     "description": "図書館の棚から薄めのノンフィクションを選び、1章だけ読んでみる。",
     "detail": "買わずに試せるので、知らない分野にも入りやすいよりみちです。",
     "category": "read",
-    "tags": ["ノンフィクション", "30分", "図書館", "無料"],
+    "tags": [
+      "ノンフィクション",
+      "30分",
+      "図書館",
+      "無料"
+    ],
     "budget_yen": 0,
     "where_to_try": "最寄りの図書館で、普段行かない棚から1冊手に取る。",
     "estimated_minutes": 30,
@@ -101,7 +135,11 @@
     "description": "詩集やWebで詩を1編だけ読み、言葉のリズムを味わう。",
     "detail": "意味を完璧に理解しようとせず、気になった言葉を1つ見つけるだけで十分です。",
     "category": "read",
-    "tags": ["詩集", "10分以内", "〜500円"],
+    "tags": [
+      "詩集",
+      "10分以内",
+      "〜500円"
+    ],
     "budget_yen": 500,
     "where_to_try": "手元の詩集、青空文庫、電子書籍のサンプルから1編選ぶ。",
     "estimated_minutes": 5,
@@ -113,7 +151,11 @@
     "description": "笑える映画を1本だけウォッチリストに追加する。観る前の準備だけでも気分が軽くなります。",
     "detail": "今すぐ全編観なくても、次の空き時間の選択肢を作るだけで十分です。",
     "category": "movie",
-    "tags": ["笑える", "90分以内", "Netflix"],
+    "tags": [
+      "笑える",
+      "90分以内",
+      "Netflix"
+    ],
     "budget_yen": 0,
     "where_to_try": "Netflixで「コメディ」カテゴリを開き、90分以内の作品を1本保存する。",
     "estimated_minutes": 10,
@@ -125,7 +167,11 @@
     "description": "気になっていた映画の予告編を1本だけ観て、次に観たい作品を探す。",
     "detail": "本編を観る時間がなくても、予告編なら短時間で作品の雰囲気をつかめます。",
     "category": "movie",
-    "tags": ["考えさせる", "問わない", "Amazon Prime"],
+    "tags": [
+      "考えさせる",
+      "問わない",
+      "Amazon Prime"
+    ],
     "budget_yen": 0,
     "where_to_try": "Amazon Prime Videoで評価の高い作品の予告編を1本再生する。",
     "estimated_minutes": 5,
@@ -137,7 +183,11 @@
     "description": "レビューを少し眺めて、泣ける映画を次に観る候補としてメモする。",
     "detail": "今日は選ぶだけ。観る日を決めると、楽しみを未来に置いておけます。",
     "category": "movie",
-    "tags": ["泣ける", "問わない", "問わない"],
+    "tags": [
+      "泣ける",
+      "問わない",
+      "問わない"
+    ],
     "budget_yen": 0,
     "where_to_try": "配信アプリや映画レビューサイトで「泣ける 映画」と検索する。",
     "estimated_minutes": 10,
@@ -149,7 +199,11 @@
     "description": "いつもの道で、普段は曲がらない角を1つだけ曲がってみる。",
     "detail": "遠くへ行かなくても、視点を少しずらすだけで小さな発見があります。",
     "category": "walk",
-    "tags": ["気分転換", "発見", "15分以内"],
+    "tags": [
+      "気分転換",
+      "発見",
+      "15分以内"
+    ],
     "budget_yen": 0,
     "where_to_try": "自宅や学校の周りで、普段曲がらない角を1つ選ぶ。",
     "estimated_minutes": 15,
@@ -161,7 +215,10 @@
     "description": "空、看板、音など、観察するテーマを1つ決めて歩く。",
     "detail": "テーマがあると、同じ道でも見えるものが変わります。写真は1枚だけ残すと気楽です。",
     "category": "walk",
-    "tags": ["発見", "30分"],
+    "tags": [
+      "発見",
+      "30分"
+    ],
     "budget_yen": 0,
     "where_to_try": "通学路や駅までの道で「青いものを探す」などテーマを決める。",
     "estimated_minutes": 30,
@@ -173,7 +230,10 @@
     "description": "少しだけ速いペースで歩いて、体を起こす。運動目的の散歩です。",
     "detail": "息が少し弾む程度で十分。行き先を決めず、15分で戻ると続けやすいです。",
     "category": "walk",
-    "tags": ["運動", "15分以内"],
+    "tags": [
+      "運動",
+      "15分以内"
+    ],
     "budget_yen": 0,
     "where_to_try": "建物の外に出て、タイマーを15分にセットして歩く。",
     "estimated_minutes": 15,
@@ -185,7 +245,11 @@
     "description": "フライパン1つで作れるパスタで、気軽にイタリアンを試す。洗い物が少ない気楽なよりみちです。",
     "detail": "パスタを半分に折って具と一緒に煮ると、鍋を分けずに仕上がります。トマト缶かオリーブオイルとにんにくがあれば十分です。",
     "category": "cook",
-    "tags": ["イタリアン", "パスタ", "ワンパン"],
+    "tags": [
+      "イタリアン",
+      "パスタ",
+      "ワンパン"
+    ],
     "budget_yen": 400,
     "where_to_try": "家にあるパスタとトマト缶（またはオリーブオイル）で、フライパン1つで作る。",
     "estimated_minutes": 25,
@@ -197,7 +261,10 @@
     "description": "いつもの炒め物をナンプラーやごま油でアジア風に寄せてみる。味の角度を少し変えるよりみちです。",
     "detail": "ナンプラーが無ければ、鶏がらスープの素とレモン汁でも近い雰囲気になります。",
     "category": "cook",
-    "tags": ["アジア風", "炒め物"],
+    "tags": [
+      "アジア風",
+      "炒め物"
+    ],
     "budget_yen": 500,
     "where_to_try": "冷蔵庫の肉と野菜を炒めて、仕上げにナンプラーかごま油を少し足す。",
     "estimated_minutes": 20,
@@ -209,7 +276,11 @@
     "description": "インスタント麺にラー油や唐辛子を足して、自分の限界の少し手前の辛さを試す。",
     "detail": "辛さは後から足せるので、少しずつ様子を見ながら調整すると失敗しません。",
     "category": "cook",
-    "tags": ["激辛", "麺", "アレンジ"],
+    "tags": [
+      "激辛",
+      "麺",
+      "アレンジ"
+    ],
     "budget_yen": 300,
     "where_to_try": "手持ちのインスタント麺に、ラー油・一味・豆板醤のどれかを足す。",
     "estimated_minutes": 20,
@@ -221,7 +292,11 @@
     "description": "きゅうりやキャベツを塩で揉んで、さっぱりした浅漬けを作っておく。次の食事が少し楽しみになります。",
     "detail": "ポリ袋に野菜と塩少々を入れて揉むだけ。酢やレモンを足すとさらにさっぱりします。",
     "category": "cook",
-    "tags": ["さっぱり", "作り置き", "副菜"],
+    "tags": [
+      "さっぱり",
+      "作り置き",
+      "副菜"
+    ],
     "budget_yen": 300,
     "where_to_try": "冷蔵庫の野菜1種類をポリ袋で塩揉みして10分置く。",
     "estimated_minutes": 20,
@@ -233,7 +308,11 @@
     "description": "洋楽の新着プレイリストから、知らない曲を1曲だけ聴いてみる。",
     "detail": "歌詞が分からなくても大丈夫。雰囲気が好きかどうかだけで選ぶと気楽です。",
     "category": "music",
-    "tags": ["洋楽", "新しい出会い", "無料"],
+    "tags": [
+      "洋楽",
+      "新しい出会い",
+      "無料"
+    ],
     "budget_yen": 0,
     "where_to_try": "音楽アプリの新着や洋楽ランキングから1曲選んで再生する。",
     "estimated_minutes": 5,
@@ -245,10 +324,2814 @@
     "description": "気になっていた小説の冒頭数ページだけ読んで、続きを読むか決める。",
     "detail": "冒頭だけと決めておくと、長編でも気軽に手を出せます。合わなければ閉じてOKです。",
     "category": "read",
-    "tags": ["小説", "10分以内", "無料"],
+    "tags": [
+      "小説",
+      "10分以内",
+      "無料"
+    ],
     "budget_yen": 0,
     "where_to_try": "電子書籍の無料サンプルか、本屋・図書館で1冊手に取る。",
     "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "music_01_lemon",
+    "title": "『Lemon』を聴いてみる",
+    "description": "米津玄師｜切なさと透明感のあるメロディが印象的な一曲。",
+    "detail": "米津玄師の『Lemon』を1曲だけ聴いてみる。切なさと透明感のあるメロディが印象的な一曲。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Lemon 米津玄師」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_02_radwimps",
+    "title": "『前前前世』を聴いてみる",
+    "description": "RADWIMPS｜疾走感があって気分がぱっと上向く。",
+    "detail": "RADWIMPSの『前前前世』を1曲だけ聴いてみる。疾走感があって気分がぱっと上向く。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「前前前世 RADWIMPS」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_03_item",
+    "title": "『マリーゴールド』を聴いてみる",
+    "description": "あいみょん｜夏の夕方に聴きたくなる、素直な歌詞が魅力。",
+    "detail": "あいみょんの『マリーゴールド』を1曲だけ聴いてみる。夏の夕方に聴きたくなる、素直な歌詞が魅力。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「マリーゴールド あいみょん」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_04_foorin",
+    "title": "『パプリカ』を聴いてみる",
+    "description": "Foorin｜明るく弾むリズムで気持ちが軽くなる。",
+    "detail": "Foorinの『パプリカ』を1曲だけ聴いてみる。明るく弾むリズムで気持ちが軽くなる。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「パプリカ Foorin」と検索して聴く。",
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_05_yoasobi",
+    "title": "『夜に駆ける』を聴いてみる",
+    "description": "YOASOBI｜小説原作らしい物語性のあるサウンド。",
+    "detail": "YOASOBIの『夜に駆ける』を1曲だけ聴いてみる。小説原作らしい物語性のあるサウンド。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「夜に駆ける YOASOBI」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_06_item",
+    "title": "『恋』を聴いてみる",
+    "description": "星野源｜ドラマ主題歌としても有名な、踊りたくなる一曲。",
+    "detail": "星野源の『恋』を1曲だけ聴いてみる。ドラマ主題歌としても有名な、踊りたくなる一曲。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「恋 星野源」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_07_daoko",
+    "title": "『打上花火』を聴いてみる",
+    "description": "DAOKO×米津玄師｜夏の情景が浮かぶデュエット曲。",
+    "detail": "DAOKO×米津玄師の『打上花火』を1曲だけ聴いてみる。夏の情景が浮かぶデュエット曲。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「打上花火 DAOKO×米津玄師」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_08_kinggnu",
+    "title": "『白日』を聴いてみる",
+    "description": "King Gnu｜静と動の切り替えが気持ちいい一曲。",
+    "detail": "King Gnuの『白日』を1曲だけ聴いてみる。静と動の切り替えが気持ちいい一曲。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「白日 King Gnu」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_09_yoasobi",
+    "title": "『群青』を聴いてみる",
+    "description": "YOASOBI｜青春の切なさが詰まったミディアムテンポの曲。",
+    "detail": "YOASOBIの『群青』を1曲だけ聴いてみる。青春の切なさが詰まったミディアムテンポの曲。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「群青 YOASOBI」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_10_officialdismpretende",
+    "title": "『Pretender』を聴いてみる",
+    "description": "Official髭男dism｜サビの高音が印象に残るラブソング。",
+    "detail": "Official髭男dismの『Pretender』を1曲だけ聴いてみる。サビの高音が印象に残るラブソング。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Pretender Official髭男dism」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_11_ado",
+    "title": "『うっせぇわ』を聴いてみる",
+    "description": "Ado｜エネルギッシュな歌声でモヤモヤを発散できる。",
+    "detail": "Adoの『うっせぇわ』を1曲だけ聴いてみる。エネルギッシュな歌声でモヤモヤを発散できる。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「うっせぇわ Ado」と検索して聴く。",
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_12_radwimps",
+    "title": "『愛にできることはまだあるかい』を聴いてみる",
+    "description": "RADWIMPS｜壮大なサウンドで気持ちが引き締まる。",
+    "detail": "RADWIMPSの『愛にできることはまだあるかい』を1曲だけ聴いてみる。壮大なサウンドで気持ちが引き締まる。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「愛にできることはまだあるかい RADWIMPS」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_13_yoasobi",
+    "title": "『アイドル』を聴いてみる",
+    "description": "YOASOBI｜テンポの良さでやる気スイッチが入る一曲。",
+    "detail": "YOASOBIの『アイドル』を1曲だけ聴いてみる。テンポの良さでやる気スイッチが入る一曲。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「アイドル YOASOBI」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_14_item",
+    "title": "『酒とバラの日々』を聴いてみる",
+    "description": "オスカー・ピーターソン｜ゆったりとしたピアノトリオの定番曲。",
+    "detail": "オスカー・ピーターソンの『酒とバラの日々』を1曲だけ聴いてみる。ゆったりとしたピアノトリオの定番曲。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「酒とバラの日々 オスカー・ピーターソン」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_15_takefive",
+    "title": "『Take Five』を聴いてみる",
+    "description": "デイヴ・ブルーベック・カルテット｜変拍子が心地よい、ジャズ入門にもぴったりの曲。",
+    "detail": "デイヴ・ブルーベック・カルテットの『Take Five』を1曲だけ聴いてみる。変拍子が心地よい、ジャズ入門にもぴったりの曲。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Take Five デイヴ・ブルーベック・カルテット」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_16_autumnleaves",
+    "title": "『Autumn Leaves』を聴いてみる",
+    "description": "キャノンボール・アダレイ｜秋の夕暮れによく合うスタンダードナンバー。",
+    "detail": "キャノンボール・アダレイの『Autumn Leaves』を1曲だけ聴いてみる。秋の夕暮れによく合うスタンダードナンバー。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Autumn Leaves キャノンボール・アダレイ」と検索して聴く。",
+    "estimated_minutes": 6,
+    "weight": 1.0
+  },
+  {
+    "id": "music_17_myfavoritethings",
+    "title": "『My Favorite Things』を聴いてみる",
+    "description": "ジョン・コルトレーン｜サックスの即興が長く続く聴きごたえのある演奏。",
+    "detail": "ジョン・コルトレーンの『My Favorite Things』を1曲だけ聴いてみる。サックスの即興が長く続く聴きごたえのある演奏。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「My Favorite Things ジョン・コルトレーン」と検索して聴く。",
+    "estimated_minutes": 8,
+    "weight": 1.0
+  },
+  {
+    "id": "music_18_sowhat",
+    "title": "『So What』を聴いてみる",
+    "description": "マイルス・デイビス｜モード・ジャズの代表曲、静かな緊張感がある。",
+    "detail": "マイルス・デイビスの『So What』を1曲だけ聴いてみる。モード・ジャズの代表曲、静かな緊張感がある。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「So What マイルス・デイビス」と検索して聴く。",
+    "estimated_minutes": 9,
+    "weight": 1.0
+  },
+  {
+    "id": "music_19_flymetothemoon",
+    "title": "『Fly Me to the Moon』を聴いてみる",
+    "description": "フランク・シナトラ｜誰もが一度は耳にしたことのある名スタンダード。",
+    "detail": "フランク・シナトラの『Fly Me to the Moon』を1曲だけ聴いてみる。誰もが一度は耳にしたことのある名スタンダード。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Fly Me to the Moon フランク・シナトラ」と検索して聴く。",
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_20_roundmidnight",
+    "title": "『Round Midnight』を聴いてみる",
+    "description": "セロニアス・モンク｜夜更けにひとり聴きたい、少し不思議な響き。",
+    "detail": "セロニアス・モンクの『Round Midnight』を1曲だけ聴いてみる。夜更けにひとり聴きたい、少し不思議な響き。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Round Midnight セロニアス・モンク」と検索して聴く。",
+    "estimated_minutes": 6,
+    "weight": 1.0
+  },
+  {
+    "id": "music_21_summertime",
+    "title": "『Summertime』を聴いてみる",
+    "description": "サラ・ヴォーン｜夏の気だるさを歌い上げる名唱。",
+    "detail": "サラ・ヴォーンの『Summertime』を1曲だけ聴いてみる。夏の気だるさを歌い上げる名唱。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Summertime サラ・ヴォーン」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_22_waltzfordebby",
+    "title": "『Waltz for Debby』を聴いてみる",
+    "description": "ビル・エヴァンス｜3拍子の優しいピアノが心を落ち着かせる。",
+    "detail": "ビル・エヴァンスの『Waltz for Debby』を1曲だけ聴いてみる。3拍子の優しいピアノが心を落ち着かせる。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Waltz for Debby ビル・エヴァンス」と検索して聴く。",
+    "estimated_minutes": 6,
+    "weight": 1.0
+  },
+  {
+    "id": "music_23_blueingreen",
+    "title": "『Blue in Green』を聴いてみる",
+    "description": "マイルス・デイビス｜静かで内省的な、夜に合う一曲。",
+    "detail": "マイルス・デイビスの『Blue in Green』を1曲だけ聴いてみる。静かで内省的な、夜に合う一曲。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Blue in Green マイルス・デイビス」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_24_feelinggood",
+    "title": "『Feeling Good』を聴いてみる",
+    "description": "ニーナ・シモン｜力強いボーカルで気持ちが前を向く。",
+    "detail": "ニーナ・シモンの『Feeling Good』を1曲だけ聴いてみる。力強いボーカルで気持ちが前を向く。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Feeling Good ニーナ・シモン」と検索して聴く。",
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_25_anightintunisia",
+    "title": "『A Night in Tunisia』を聴いてみる",
+    "description": "ディジー・ガレスピー｜疾走感のあるビバップの名曲。",
+    "detail": "ディジー・ガレスピーの『A Night in Tunisia』を1曲だけ聴いてみる。疾走感のあるビバップの名曲。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「A Night in Tunisia ディジー・ガレスピー」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_26_1",
+    "title": "『月光 第1楽章』を聴いてみる",
+    "description": "ベートーヴェン｜静かな夜にそっと寄り添うピアノ曲。",
+    "detail": "ベートーヴェンの『月光 第1楽章』を1曲だけ聴いてみる。静かな夜にそっと寄り添うピアノ曲。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「月光 第1楽章 ベートーヴェン」と検索して聴く。",
+    "estimated_minutes": 6,
+    "weight": 1.0
+  },
+  {
+    "id": "music_27_item",
+    "title": "『亡き王女のためのパヴァーヌ』を聴いてみる",
+    "description": "ラヴェル｜優雅で少し切ないメロディが印象的。",
+    "detail": "ラヴェルの『亡き王女のためのパヴァーヌ』を1曲だけ聴いてみる。優雅で少し切ないメロディが印象的。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「亡き王女のためのパヴァーヌ ラヴェル」と検索して聴く。",
+    "estimated_minutes": 6,
+    "weight": 1.0
+  },
+  {
+    "id": "music_28_g",
+    "title": "『G線上のアリア』を聴いてみる",
+    "description": "バッハ｜弦楽器の温かい響きに包まれる名曲。",
+    "detail": "バッハの『G線上のアリア』を1曲だけ聴いてみる。弦楽器の温かい響きに包まれる名曲。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「G線上のアリア バッハ」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_29_item",
+    "title": "『別れの曲』を聴いてみる",
+    "description": "ショパン｜練習曲でありながら深い抒情性を持つ一曲。",
+    "detail": "ショパンの『別れの曲』を1曲だけ聴いてみる。練習曲でありながら深い抒情性を持つ一曲。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「別れの曲 ショパン」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_30_item",
+    "title": "『カノン』を聴いてみる",
+    "description": "パッヘルベル｜結婚式などでも定番の、穏やかな旋律。",
+    "detail": "パッヘルベルの『カノン』を1曲だけ聴いてみる。結婚式などでも定番の、穏やかな旋律。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「カノン パッヘルベル」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_31_item",
+    "title": "『白鳥』を聴いてみる",
+    "description": "サン=サーンス｜チェロの旋律が美しい、短くて聴きやすい曲。",
+    "detail": "サン=サーンスの『白鳥』を1曲だけ聴いてみる。チェロの旋律が美しい、短くて聴きやすい曲。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「白鳥 サン=サーンス」と検索して聴く。",
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_32_item",
+    "title": "『展覧会の絵 プロムナード』を聴いてみる",
+    "description": "ムソルグスキー｜美術館を歩くような気分になれる一曲。",
+    "detail": "ムソルグスキーの『展覧会の絵 プロムナード』を1曲だけ聴いてみる。美術館を歩くような気分になれる一曲。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「展覧会の絵 プロムナード ムソルグスキー」と検索して聴く。",
+    "estimated_minutes": 2,
+    "weight": 1.0
+  },
+  {
+    "id": "music_33_item",
+    "title": "『愛の挨拶』を聴いてみる",
+    "description": "エルガー｜優しく温かい気持ちになれる小品。",
+    "detail": "エルガーの『愛の挨拶』を1曲だけ聴いてみる。優しく温かい気持ちになれる小品。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「愛の挨拶 エルガー」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_34_item",
+    "title": "『トロイメライ』を聴いてみる",
+    "description": "シューマン｜「子供の情景」の中でも特に有名な夢見るような曲。",
+    "detail": "シューマンの『トロイメライ』を1曲だけ聴いてみる。「子供の情景」の中でも特に有名な夢見るような曲。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「トロイメライ シューマン」と検索して聴く。",
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_35_item",
+    "title": "『アヴェ・マリア』を聴いてみる",
+    "description": "シューベルト｜静かな祈りのような美しい旋律。",
+    "detail": "シューベルトの『アヴェ・マリア』を1曲だけ聴いてみる。静かな祈りのような美しい旋律。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「アヴェ・マリア シューベルト」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_36_2",
+    "title": "『ノクターン第2番』を聴いてみる",
+    "description": "ショパン｜夜にぴったりの、しっとりとしたピアノ曲。",
+    "detail": "ショパンの『ノクターン第2番』を1曲だけ聴いてみる。夜にぴったりの、しっとりとしたピアノ曲。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「ノクターン第2番 ショパン」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_37_1",
+    "title": "『四季 春 第1楽章』を聴いてみる",
+    "description": "ヴィヴァルディ｜軽やかで明るい、春を感じるヴァイオリン曲。",
+    "detail": "ヴィヴァルディの『四季 春 第1楽章』を1曲だけ聴いてみる。軽やかで明るい、春を感じるヴァイオリン曲。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「四季 春 第1楽章 ヴィヴァルディ」と検索して聴く。",
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_38_edsheeranperfect",
+    "title": "『Perfect』を聴いてみる",
+    "description": "Ed Sheeran｜結婚式の定番にもなった優しいラブソング。",
+    "detail": "Ed Sheeranの『Perfect』を1曲だけ聴いてみる。結婚式の定番にもなった優しいラブソング。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Perfect Ed Sheeran」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_39_edsheeranshapeofyou",
+    "title": "『Shape of You』を聴いてみる",
+    "description": "Ed Sheeran｜耳に残るビートで気分が上がる一曲。",
+    "detail": "Ed Sheeranの『Shape of You』を1曲だけ聴いてみる。耳に残るビートで気分が上がる一曲。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Shape of You Ed Sheeran」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_40_adelesomeonelikeyou",
+    "title": "『Someone Like You』を聴いてみる",
+    "description": "Adele｜力強い歌声にじんとくるバラード。",
+    "detail": "Adeleの『Someone Like You』を1曲だけ聴いてみる。力強い歌声にじんとくるバラード。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Someone Like You Adele」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_41_theweekndblindinglig",
+    "title": "『Blinding Lights』を聴いてみる",
+    "description": "The Weeknd｜80年代風シンセが効いた高揚感のある曲。",
+    "detail": "The Weekndの『Blinding Lights』を1曲だけ聴いてみる。80年代風シンセが効いた高揚感のある曲。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Blinding Lights The Weeknd」と検索して聴く。",
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_42_ladygagabradleycoope",
+    "title": "『Shallow』を聴いてみる",
+    "description": "Lady Gaga & Bradley Cooper｜映画「アリー/スター誕生」の名デュエット曲。",
+    "detail": "Lady Gaga & Bradley Cooperの『Shallow』を1曲だけ聴いてみる。映画「アリー/スター誕生」の名デュエット曲。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Shallow Lady Gaga & Bradley Cooper」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_43_coldplayvivalavida",
+    "title": "『Viva La Vida』を聴いてみる",
+    "description": "Coldplay｜壮大なストリングスが印象的なアンセム。",
+    "detail": "Coldplayの『Viva La Vida』を1曲だけ聴いてみる。壮大なストリングスが印象的なアンセム。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Viva La Vida Coldplay」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_44_onerepubliccountings",
+    "title": "『Counting Stars』を聴いてみる",
+    "description": "OneRepublic｜軽快なリズムで気持ちが前向きになる。",
+    "detail": "OneRepublicの『Counting Stars』を1曲だけ聴いてみる。軽快なリズムで気持ちが前向きになる。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Counting Stars OneRepublic」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_45_brunomarsjustthewayy",
+    "title": "『Just the Way You Are』を聴いてみる",
+    "description": "Bruno Mars｜素直な歌詞が心に残るラブソング。",
+    "detail": "Bruno Marsの『Just the Way You Are』を1曲だけ聴いてみる。素直な歌詞が心に残るラブソング。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Just the Way You Are Bruno Mars」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_46_brunomarsuptownfunk",
+    "title": "『Uptown Funk』を聴いてみる",
+    "description": "Bruno Mars｜聴くだけで体が動き出すファンクナンバー。",
+    "detail": "Bruno Marsの『Uptown Funk』を1曲だけ聴いてみる。聴くだけで体が動き出すファンクナンバー。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Uptown Funk Bruno Mars」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_47_adelerollinginthedee",
+    "title": "『Rolling in the Deep』を聴いてみる",
+    "description": "Adele｜力強いビートとボーカルが胸に響く。",
+    "detail": "Adeleの『Rolling in the Deep』を1曲だけ聴いてみる。力強いビートとボーカルが胸に響く。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Rolling in the Deep Adele」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_48_journeydontstopbelie",
+    "title": "『Don't Stop Believin'』を聴いてみる",
+    "description": "Journey｜サビで自然と口ずさみたくなる定番アンセム。",
+    "detail": "Journeyの『Don't Stop Believin'』を1曲だけ聴いてみる。サビで自然と口ずさみたくなる定番アンセム。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Don't Stop Believin' Journey」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_49_lewiscapaldisomeoney",
+    "title": "『Someone You Loved』を聴いてみる",
+    "description": "Lewis Capaldi｜しっとりと聴かせるピアノバラード。",
+    "detail": "Lewis Capaldiの『Someone You Loved』を1曲だけ聴いてみる。しっとりと聴かせるピアノバラード。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Someone You Loved Lewis Capaldi」と検索して聴く。",
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_50_mileycyrusflowers",
+    "title": "『Flowers』を聴いてみる",
+    "description": "Miley Cyrus｜前向きな自立をテーマにした軽快な一曲。",
+    "detail": "Miley Cyrusの『Flowers』を1曲だけ聴いてみる。前向きな自立をテーマにした軽快な一曲。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Flowers Miley Cyrus」と検索して聴く。",
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "cook_01_item",
+    "title": "鮭の塩焼き定食を作ってみる",
+    "description": "和食の一品。焼くだけで完成する、ほっとする定番おかず。",
+    "detail": "鮭の塩焼き定食を作ってみる。焼くだけで完成する、ほっとする定番おかず。",
+    "category": "cook",
+    "tags": [
+      "和食"
+    ],
+    "budget_yen": 400,
+    "where_to_try": "「鮭の塩焼き定食 レシピ」で検索して、手元の材料で作ってみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "cook_02_item",
+    "title": "肉じゃがを作ってみる",
+    "description": "和食の一品。じゃがいもと肉を煮るだけの家庭の定番。",
+    "detail": "肉じゃがを作ってみる。じゃがいもと肉を煮るだけの家庭の定番。",
+    "category": "cook",
+    "tags": [
+      "和食"
+    ],
+    "budget_yen": 500,
+    "where_to_try": "「肉じゃが レシピ」で検索して、手元の材料で作ってみる。",
+    "estimated_minutes": 30,
+    "weight": 1.0
+  },
+  {
+    "id": "cook_03_item",
+    "title": "卵焼きを作ってみる",
+    "description": "和食の一品。だし多めにすると、ふわっと優しい味に。",
+    "detail": "卵焼きを作ってみる。だし多めにすると、ふわっと優しい味に。",
+    "category": "cook",
+    "tags": [
+      "和食"
+    ],
+    "budget_yen": 150,
+    "where_to_try": "「卵焼き レシピ」で検索して、手元の材料で作ってみる。",
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "cook_04_item",
+    "title": "筑前煮を作ってみる",
+    "description": "和食の一品。根菜をごろごろ入れて作る、体が温まる煮物。",
+    "detail": "筑前煮を作ってみる。根菜をごろごろ入れて作る、体が温まる煮物。",
+    "category": "cook",
+    "tags": [
+      "和食"
+    ],
+    "budget_yen": 500,
+    "where_to_try": "「筑前煮 レシピ」で検索して、手元の材料で作ってみる。",
+    "estimated_minutes": 35,
+    "weight": 1.0
+  },
+  {
+    "id": "cook_05_item",
+    "title": "出汁巻き卵を作ってみる",
+    "description": "和食の一品。だしをしっかり効かせた、少し贅沢な卵焼き。",
+    "detail": "出汁巻き卵を作ってみる。だしをしっかり効かせた、少し贅沢な卵焼き。",
+    "category": "cook",
+    "tags": [
+      "和食"
+    ],
+    "budget_yen": 200,
+    "where_to_try": "「出汁巻き卵 レシピ」で検索して、手元の材料で作ってみる。",
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "cook_06_item",
+    "title": "ぶり大根を作ってみる",
+    "description": "和食の一品。冬に食べたくなる、コトコト煮込む一品。",
+    "detail": "ぶり大根を作ってみる。冬に食べたくなる、コトコト煮込む一品。",
+    "category": "cook",
+    "tags": [
+      "和食"
+    ],
+    "budget_yen": 600,
+    "where_to_try": "「ぶり大根 レシピ」で検索して、手元の材料で作ってみる。",
+    "estimated_minutes": 40,
+    "weight": 1.0
+  },
+  {
+    "id": "cook_07_item",
+    "title": "ひじきの煮物を作ってみる",
+    "description": "和食の一品。作り置きにも便利な、優しい甘辛味。",
+    "detail": "ひじきの煮物を作ってみる。作り置きにも便利な、優しい甘辛味。",
+    "category": "cook",
+    "tags": [
+      "和食"
+    ],
+    "budget_yen": 300,
+    "where_to_try": "「ひじきの煮物 レシピ」で検索して、手元の材料で作ってみる。",
+    "estimated_minutes": 25,
+    "weight": 1.0
+  },
+  {
+    "id": "cook_08_item",
+    "title": "オムライスを作ってみる",
+    "description": "洋食の一品。ケチャップライスを卵で包むだけの人気メニュー。",
+    "detail": "オムライスを作ってみる。ケチャップライスを卵で包むだけの人気メニュー。",
+    "category": "cook",
+    "tags": [
+      "洋食"
+    ],
+    "budget_yen": 350,
+    "where_to_try": "「オムライス レシピ」で検索して、手元の材料で作ってみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "cook_09_item",
+    "title": "ハンバーグを作ってみる",
+    "description": "洋食の一品。こねて焼くだけ、みんな好きな定番洋食。",
+    "detail": "ハンバーグを作ってみる。こねて焼くだけ、みんな好きな定番洋食。",
+    "category": "cook",
+    "tags": [
+      "洋食"
+    ],
+    "budget_yen": 450,
+    "where_to_try": "「ハンバーグ レシピ」で検索して、手元の材料で作ってみる。",
+    "estimated_minutes": 25,
+    "weight": 1.0
+  },
+  {
+    "id": "cook_10_item",
+    "title": "クリームシチューを作ってみる",
+    "description": "洋食の一品。野菜をたっぷり入れて、体を温める一皿。",
+    "detail": "クリームシチューを作ってみる。野菜をたっぷり入れて、体を温める一皿。",
+    "category": "cook",
+    "tags": [
+      "洋食"
+    ],
+    "budget_yen": 500,
+    "where_to_try": "「クリームシチュー レシピ」で検索して、手元の材料で作ってみる。",
+    "estimated_minutes": 30,
+    "weight": 1.0
+  },
+  {
+    "id": "cook_11_item",
+    "title": "ナポリタンを作ってみる",
+    "description": "洋食の一品。ケチャップで炒めるだけの喫茶店風パスタ。",
+    "detail": "ナポリタンを作ってみる。ケチャップで炒めるだけの喫茶店風パスタ。",
+    "category": "cook",
+    "tags": [
+      "洋食"
+    ],
+    "budget_yen": 350,
+    "where_to_try": "「ナポリタン レシピ」で検索して、手元の材料で作ってみる。",
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "cook_12_item",
+    "title": "ビーフシチューを作ってみる",
+    "description": "洋食の一品。じっくり煮込んでお店みたいな味に仕上げる。",
+    "detail": "ビーフシチューを作ってみる。じっくり煮込んでお店みたいな味に仕上げる。",
+    "category": "cook",
+    "tags": [
+      "洋食"
+    ],
+    "budget_yen": 800,
+    "where_to_try": "「ビーフシチュー レシピ」で検索して、手元の材料で作ってみる。",
+    "estimated_minutes": 60,
+    "weight": 1.0
+  },
+  {
+    "id": "cook_13_item",
+    "title": "ポトフを作ってみる",
+    "description": "洋食の一品。野菜を大きめに切って煮るだけのシンプル煮込み。",
+    "detail": "ポトフを作ってみる。野菜を大きめに切って煮るだけのシンプル煮込み。",
+    "category": "cook",
+    "tags": [
+      "洋食"
+    ],
+    "budget_yen": 500,
+    "where_to_try": "「ポトフ レシピ」で検索して、手元の材料で作ってみる。",
+    "estimated_minutes": 35,
+    "weight": 1.0
+  },
+  {
+    "id": "cook_14_item",
+    "title": "麻婆豆腐を作ってみる",
+    "description": "中華の一品。豆腐と挽き肉をピリ辛のあんで仕上げる定番。",
+    "detail": "麻婆豆腐を作ってみる。豆腐と挽き肉をピリ辛のあんで仕上げる定番。",
+    "category": "cook",
+    "tags": [
+      "中華"
+    ],
+    "budget_yen": 400,
+    "where_to_try": "「麻婆豆腐 レシピ」で検索して、手元の材料で作ってみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "cook_15_item",
+    "title": "青椒肉絲を作ってみる",
+    "description": "中華の一品。細切り肉とピーマンを炒める、彩りのいい一皿。",
+    "detail": "青椒肉絲を作ってみる。細切り肉とピーマンを炒める、彩りのいい一皿。",
+    "category": "cook",
+    "tags": [
+      "中華"
+    ],
+    "budget_yen": 500,
+    "where_to_try": "「青椒肉絲 レシピ」で検索して、手元の材料で作ってみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "cook_16_item",
+    "title": "エビチリを作ってみる",
+    "description": "中華の一品。甘辛いチリソースがご飯によく合う。",
+    "detail": "エビチリを作ってみる。甘辛いチリソースがご飯によく合う。",
+    "category": "cook",
+    "tags": [
+      "中華"
+    ],
+    "budget_yen": 600,
+    "where_to_try": "「エビチリ レシピ」で検索して、手元の材料で作ってみる。",
+    "estimated_minutes": 25,
+    "weight": 1.0
+  },
+  {
+    "id": "cook_17_item",
+    "title": "餃子を作ってみる",
+    "description": "中華の一品。包んで焼くだけ、ホームパーティーにも向く。",
+    "detail": "餃子を作ってみる。包んで焼くだけ、ホームパーティーにも向く。",
+    "category": "cook",
+    "tags": [
+      "中華"
+    ],
+    "budget_yen": 400,
+    "where_to_try": "「餃子 レシピ」で検索して、手元の材料で作ってみる。",
+    "estimated_minutes": 30,
+    "weight": 1.0
+  },
+  {
+    "id": "cook_18_item",
+    "title": "回鍋肉を作ってみる",
+    "description": "中華の一品。キャベツと豚肉を甜麺醤で炒める濃厚な一品。",
+    "detail": "回鍋肉を作ってみる。キャベツと豚肉を甜麺醤で炒める濃厚な一品。",
+    "category": "cook",
+    "tags": [
+      "中華"
+    ],
+    "budget_yen": 450,
+    "where_to_try": "「回鍋肉 レシピ」で検索して、手元の材料で作ってみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "cook_19_item",
+    "title": "中華丼を作ってみる",
+    "description": "中華の一品。野菜あんかけをご飯にのせるだけの簡単丼。",
+    "detail": "中華丼を作ってみる。野菜あんかけをご飯にのせるだけの簡単丼。",
+    "category": "cook",
+    "tags": [
+      "中華"
+    ],
+    "budget_yen": 400,
+    "where_to_try": "「中華丼 レシピ」で検索して、手元の材料で作ってみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "cook_20_item",
+    "title": "ペペロンチーノを作ってみる",
+    "description": "イタリアンの一品。にんにくと唐辛子だけで作れるシンプルパスタ。",
+    "detail": "ペペロンチーノを作ってみる。にんにくと唐辛子だけで作れるシンプルパスタ。",
+    "category": "cook",
+    "tags": [
+      "イタリアン"
+    ],
+    "budget_yen": 300,
+    "where_to_try": "「ペペロンチーノ レシピ」で検索して、手元の材料で作ってみる。",
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "cook_21_item",
+    "title": "マルゲリータ風トーストを作ってみる",
+    "description": "イタリアンの一品。食パンにトマトとチーズをのせて焼くだけ。",
+    "detail": "マルゲリータ風トーストを作ってみる。食パンにトマトとチーズをのせて焼くだけ。",
+    "category": "cook",
+    "tags": [
+      "イタリアン"
+    ],
+    "budget_yen": 250,
+    "where_to_try": "「マルゲリータ風トースト レシピ」で検索して、手元の材料で作ってみる。",
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "cook_22_item",
+    "title": "カプレーゼを作ってみる",
+    "description": "イタリアンの一品。トマトとモッツァレラを並べるだけの前菜。",
+    "detail": "カプレーゼを作ってみる。トマトとモッツァレラを並べるだけの前菜。",
+    "category": "cook",
+    "tags": [
+      "イタリアン"
+    ],
+    "budget_yen": 350,
+    "where_to_try": "「カプレーゼ レシピ」で検索して、手元の材料で作ってみる。",
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "cook_23_item",
+    "title": "ミネストローネを作ってみる",
+    "description": "イタリアンの一品。野菜をたっぷり煮込んだトマトベースのスープ。",
+    "detail": "ミネストローネを作ってみる。野菜をたっぷり煮込んだトマトベースのスープ。",
+    "category": "cook",
+    "tags": [
+      "イタリアン"
+    ],
+    "budget_yen": 400,
+    "where_to_try": "「ミネストローネ レシピ」で検索して、手元の材料で作ってみる。",
+    "estimated_minutes": 30,
+    "weight": 1.0
+  },
+  {
+    "id": "cook_24_item",
+    "title": "ジェノベーゼパスタを作ってみる",
+    "description": "イタリアンの一品。バジルソースの香りが広がる一皿。",
+    "detail": "ジェノベーゼパスタを作ってみる。バジルソースの香りが広がる一皿。",
+    "category": "cook",
+    "tags": [
+      "イタリアン"
+    ],
+    "budget_yen": 500,
+    "where_to_try": "「ジェノベーゼパスタ レシピ」で検索して、手元の材料で作ってみる。",
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "cook_25_item",
+    "title": "リゾットを作ってみる",
+    "description": "イタリアンの一品。米をだしで煮込む、洗い物が少ない一品。",
+    "detail": "リゾットを作ってみる。米をだしで煮込む、洗い物が少ない一品。",
+    "category": "cook",
+    "tags": [
+      "イタリアン"
+    ],
+    "budget_yen": 400,
+    "where_to_try": "「リゾット レシピ」で検索して、手元の材料で作ってみる。",
+    "estimated_minutes": 25,
+    "weight": 1.0
+  },
+  {
+    "id": "cook_26_item",
+    "title": "ガパオライスを作ってみる",
+    "description": "アジア風の一品。ナンプラーとバジルで作るタイ風炒めご飯。",
+    "detail": "ガパオライスを作ってみる。ナンプラーとバジルで作るタイ風炒めご飯。",
+    "category": "cook",
+    "tags": [
+      "アジア風"
+    ],
+    "budget_yen": 450,
+    "where_to_try": "「ガパオライス レシピ」で検索して、手元の材料で作ってみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "cook_27_item",
+    "title": "パッタイを作ってみる",
+    "description": "アジア風の一品。甘酸っぱいタレで炒めるタイ風焼きそば。",
+    "detail": "パッタイを作ってみる。甘酸っぱいタレで炒めるタイ風焼きそば。",
+    "category": "cook",
+    "tags": [
+      "アジア風"
+    ],
+    "budget_yen": 500,
+    "where_to_try": "「パッタイ レシピ」で検索して、手元の材料で作ってみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "cook_28_item",
+    "title": "生春巻きを作ってみる",
+    "description": "アジア風の一品。野菜とエビを巻くだけ、火を使わない一品。",
+    "detail": "生春巻きを作ってみる。野菜とエビを巻くだけ、火を使わない一品。",
+    "category": "cook",
+    "tags": [
+      "アジア風"
+    ],
+    "budget_yen": 500,
+    "where_to_try": "「生春巻き レシピ」で検索して、手元の材料で作ってみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "cook_29_item",
+    "title": "タイ風グリーンカレーを作ってみる",
+    "description": "アジア風の一品。ココナッツミルクでまろやかに仕上げる。",
+    "detail": "タイ風グリーンカレーを作ってみる。ココナッツミルクでまろやかに仕上げる。",
+    "category": "cook",
+    "tags": [
+      "アジア風"
+    ],
+    "budget_yen": 600,
+    "where_to_try": "「タイ風グリーンカレー レシピ」で検索して、手元の材料で作ってみる。",
+    "estimated_minutes": 30,
+    "weight": 1.0
+  },
+  {
+    "id": "cook_30_item",
+    "title": "ビーフンサラダを作ってみる",
+    "description": "アジア風の一品。さっぱりした味付けで箸が進む麺サラダ。",
+    "detail": "ビーフンサラダを作ってみる。さっぱりした味付けで箸が進む麺サラダ。",
+    "category": "cook",
+    "tags": [
+      "アジア風"
+    ],
+    "budget_yen": 400,
+    "where_to_try": "「ビーフンサラダ レシピ」で検索して、手元の材料で作ってみる。",
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "cook_31_item",
+    "title": "ナシゴレンを作ってみる",
+    "description": "アジア風の一品。ケチャップマニスで炒めるインドネシア風炒飯。",
+    "detail": "ナシゴレンを作ってみる。ケチャップマニスで炒めるインドネシア風炒飯。",
+    "category": "cook",
+    "tags": [
+      "アジア風"
+    ],
+    "budget_yen": 450,
+    "where_to_try": "「ナシゴレン レシピ」で検索して、手元の材料で作ってみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "cook_32_item",
+    "title": "麻辣湯風スープを作ってみる",
+    "description": "激辛の一品。花椒の痺れと唐辛子の辛さが効いたスープ。",
+    "detail": "麻辣湯風スープを作ってみる。花椒の痺れと唐辛子の辛さが効いたスープ。",
+    "category": "cook",
+    "tags": [
+      "激辛"
+    ],
+    "budget_yen": 500,
+    "where_to_try": "「麻辣湯風スープ レシピ」で検索して、手元の材料で作ってみる。",
+    "estimated_minutes": 25,
+    "weight": 1.0
+  },
+  {
+    "id": "cook_33_item",
+    "title": "辛味噌チゲを作ってみる",
+    "description": "激辛の一品。キムチと味噌でコクのある辛さに仕上げる。",
+    "detail": "辛味噌チゲを作ってみる。キムチと味噌でコクのある辛さに仕上げる。",
+    "category": "cook",
+    "tags": [
+      "激辛"
+    ],
+    "budget_yen": 500,
+    "where_to_try": "「辛味噌チゲ レシピ」で検索して、手元の材料で作ってみる。",
+    "estimated_minutes": 25,
+    "weight": 1.0
+  },
+  {
+    "id": "cook_34_item",
+    "title": "激辛担々麺を作ってみる",
+    "description": "激辛の一品。ラー油と豆板醤をたっぷり効かせた一杯。",
+    "detail": "激辛担々麺を作ってみる。ラー油と豆板醤をたっぷり効かせた一杯。",
+    "category": "cook",
+    "tags": [
+      "激辛"
+    ],
+    "budget_yen": 500,
+    "where_to_try": "「激辛担々麺 レシピ」で検索して、手元の材料で作ってみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "cook_35_item",
+    "title": "ハバネロチキンを作ってみる",
+    "description": "激辛の一品。辛さ好きにはたまらない刺激的な炒め物。",
+    "detail": "ハバネロチキンを作ってみる。辛さ好きにはたまらない刺激的な炒め物。",
+    "category": "cook",
+    "tags": [
+      "激辛"
+    ],
+    "budget_yen": 500,
+    "where_to_try": "「ハバネロチキン レシピ」で検索して、手元の材料で作ってみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "cook_36_item",
+    "title": "辛味噌ラーメンを作ってみる",
+    "description": "激辛の一品。市販麺に辛味噌を足すだけの簡単アレンジ。",
+    "detail": "辛味噌ラーメンを作ってみる。市販麺に辛味噌を足すだけの簡単アレンジ。",
+    "category": "cook",
+    "tags": [
+      "激辛"
+    ],
+    "budget_yen": 400,
+    "where_to_try": "「辛味噌ラーメン レシピ」で検索して、手元の材料で作ってみる。",
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "cook_37_item",
+    "title": "豚キムチ炒めを作ってみる",
+    "description": "激辛の一品。キムチの酸味と辛さがご飯に合う定番。",
+    "detail": "豚キムチ炒めを作ってみる。キムチの酸味と辛さがご飯に合う定番。",
+    "category": "cook",
+    "tags": [
+      "激辛"
+    ],
+    "budget_yen": 450,
+    "where_to_try": "「豚キムチ炒め レシピ」で検索して、手元の材料で作ってみる。",
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "cook_38_item",
+    "title": "ささみわさびを作ってみる",
+    "description": "さっぱりの一品。茹でたささみをわさび醤油で和えるだけ。",
+    "detail": "ささみわさびを作ってみる。茹でたささみをわさび醤油で和えるだけ。",
+    "category": "cook",
+    "tags": [
+      "さっぱり"
+    ],
+    "budget_yen": 300,
+    "where_to_try": "「ささみわさび レシピ」で検索して、手元の材料で作ってみる。",
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "cook_39_item",
+    "title": "トマトと大葉の冷奴を作ってみる",
+    "description": "さっぱりの一品。冷たい豆腐に薬味をのせるだけの一品。",
+    "detail": "トマトと大葉の冷奴を作ってみる。冷たい豆腐に薬味をのせるだけの一品。",
+    "category": "cook",
+    "tags": [
+      "さっぱり"
+    ],
+    "budget_yen": 250,
+    "where_to_try": "「トマトと大葉の冷奴 レシピ」で検索して、手元の材料で作ってみる。",
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "cook_40_item",
+    "title": "梅しそ素麺を作ってみる",
+    "description": "さっぱりの一品。暑い日にするする食べられる冷たい麺。",
+    "detail": "梅しそ素麺を作ってみる。暑い日にするする食べられる冷たい麺。",
+    "category": "cook",
+    "tags": [
+      "さっぱり"
+    ],
+    "budget_yen": 300,
+    "where_to_try": "「梅しそ素麺 レシピ」で検索して、手元の材料で作ってみる。",
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "cook_41_item",
+    "title": "きゅうりの浅漬けを作ってみる",
+    "description": "さっぱりの一品。塩でもむだけで箸休めにぴったり。",
+    "detail": "きゅうりの浅漬けを作ってみる。塩でもむだけで箸休めにぴったり。",
+    "category": "cook",
+    "tags": [
+      "さっぱり"
+    ],
+    "budget_yen": 150,
+    "where_to_try": "「きゅうりの浅漬け レシピ」で検索して、手元の材料で作ってみる。",
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "cook_42_item",
+    "title": "冷やし茶漬けを作ってみる",
+    "description": "さっぱりの一品。冷たいだしをかけるだけの軽い一膳。",
+    "detail": "冷やし茶漬けを作ってみる。冷たいだしをかけるだけの軽い一膳。",
+    "category": "cook",
+    "tags": [
+      "さっぱり"
+    ],
+    "budget_yen": 250,
+    "where_to_try": "「冷やし茶漬け レシピ」で検索して、手元の材料で作ってみる。",
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "cook_43_item",
+    "title": "鶏むね肉の梅ポン酢を作ってみる",
+    "description": "さっぱりの一品。茹でた鶏むね肉を梅とポン酢でさっぱり食べる。",
+    "detail": "鶏むね肉の梅ポン酢を作ってみる。茹でた鶏むね肉を梅とポン酢でさっぱり食べる。",
+    "category": "cook",
+    "tags": [
+      "さっぱり"
+    ],
+    "budget_yen": 350,
+    "where_to_try": "「鶏むね肉の梅ポン酢 レシピ」で検索して、手元の材料で作ってみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "cook_44_item",
+    "title": "唐揚げ定食を作ってみる",
+    "description": "ガッツリの一品。揚げたてのジューシーな唐揚げでお腹いっぱいに。",
+    "detail": "唐揚げ定食を作ってみる。揚げたてのジューシーな唐揚げでお腹いっぱいに。",
+    "category": "cook",
+    "tags": [
+      "ガッツリ"
+    ],
+    "budget_yen": 500,
+    "where_to_try": "「唐揚げ定食 レシピ」で検索して、手元の材料で作ってみる。",
+    "estimated_minutes": 30,
+    "weight": 1.0
+  },
+  {
+    "id": "cook_45_item",
+    "title": "豚の生姜焼きを作ってみる",
+    "description": "ガッツリの一品。甘辛いタレがご飯によく合う定番おかず。",
+    "detail": "豚の生姜焼きを作ってみる。甘辛いタレがご飯によく合う定番おかず。",
+    "category": "cook",
+    "tags": [
+      "ガッツリ"
+    ],
+    "budget_yen": 450,
+    "where_to_try": "「豚の生姜焼き レシピ」で検索して、手元の材料で作ってみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "cook_46_item",
+    "title": "カツ丼を作ってみる",
+    "description": "ガッツリの一品。揚げたてのカツを卵でとじる満足度の高い丼。",
+    "detail": "カツ丼を作ってみる。揚げたてのカツを卵でとじる満足度の高い丼。",
+    "category": "cook",
+    "tags": [
+      "ガッツリ"
+    ],
+    "budget_yen": 550,
+    "where_to_try": "「カツ丼 レシピ」で検索して、手元の材料で作ってみる。",
+    "estimated_minutes": 25,
+    "weight": 1.0
+  },
+  {
+    "id": "cook_47_item",
+    "title": "スタミナ焼肉丼を作ってみる",
+    "description": "ガッツリの一品。にんにく醤油で炒めた肉をご飯にたっぷりのせる。",
+    "detail": "スタミナ焼肉丼を作ってみる。にんにく醤油で炒めた肉をご飯にたっぷりのせる。",
+    "category": "cook",
+    "tags": [
+      "ガッツリ"
+    ],
+    "budget_yen": 600,
+    "where_to_try": "「スタミナ焼肉丼 レシピ」で検索して、手元の材料で作ってみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "cook_48_item",
+    "title": "チーズハンバーグを作ってみる",
+    "description": "ガッツリの一品。とろけるチーズをのせたボリューム満点の一皿。",
+    "detail": "チーズハンバーグを作ってみる。とろけるチーズをのせたボリューム満点の一皿。",
+    "category": "cook",
+    "tags": [
+      "ガッツリ"
+    ],
+    "budget_yen": 550,
+    "where_to_try": "「チーズハンバーグ レシピ」で検索して、手元の材料で作ってみる。",
+    "estimated_minutes": 25,
+    "weight": 1.0
+  },
+  {
+    "id": "cook_49_item",
+    "title": "豚バラ丼を作ってみる",
+    "description": "ガッツリの一品。こってり味の豚バラを甘辛く炒めてのせる。",
+    "detail": "豚バラ丼を作ってみる。こってり味の豚バラを甘辛く炒めてのせる。",
+    "category": "cook",
+    "tags": [
+      "ガッツリ"
+    ],
+    "budget_yen": 500,
+    "where_to_try": "「豚バラ丼 レシピ」で検索して、手元の材料で作ってみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "cook_50_item",
+    "title": "とんかつを作ってみる",
+    "description": "ガッツリの一品。揚げたてサクサクの衣で食べ応え抜群。",
+    "detail": "とんかつを作ってみる。揚げたてサクサクの衣で食べ応え抜群。",
+    "category": "cook",
+    "tags": [
+      "ガッツリ"
+    ],
+    "budget_yen": 500,
+    "where_to_try": "「とんかつ レシピ」で検索して、手元の材料で作ってみる。",
+    "estimated_minutes": 25,
+    "weight": 1.0
+  },
+  {
+    "id": "read_01_item",
+    "title": "『流星ワゴン』を読んでみる",
+    "description": "重松清｜小説。父と子の関係を見つめ直すヒューマンドラマ。",
+    "detail": "『流星ワゴン』（重松清）を少しだけ読んでみる。父と子の関係を見つめ直すヒューマンドラマ。",
+    "category": "read",
+    "tags": [
+      "小説"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まずは冒頭だけ開いてみる。",
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_02_item",
+    "title": "『コンビニ人間』を読んでみる",
+    "description": "村田沙耶香｜小説。「普通」とは何かを問いかける芥川賞受賞作。",
+    "detail": "『コンビニ人間』（村田沙耶香）を少しだけ読んでみる。「普通」とは何かを問いかける芥川賞受賞作。",
+    "category": "read",
+    "tags": [
+      "小説"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まずは冒頭だけ開いてみる。",
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_03_item",
+    "title": "『博士の愛した数式』を読んでみる",
+    "description": "小川洋子｜小説。記憶が80分しかもたない博士と家政婦の温かい物語。",
+    "detail": "『博士の愛した数式』（小川洋子）を少しだけ読んでみる。記憶が80分しかもたない博士と家政婦の温かい物語。",
+    "category": "read",
+    "tags": [
+      "小説"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まずは冒頭だけ開いてみる。",
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_04_x",
+    "title": "『容疑者Xの献身』を読んでみる",
+    "description": "東野圭吾｜小説。切なくも緻密なトリックが光る本格ミステリー。",
+    "detail": "『容疑者Xの献身』（東野圭吾）を少しだけ読んでみる。切なくも緻密なトリックが光る本格ミステリー。",
+    "category": "read",
+    "tags": [
+      "小説"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まずは冒頭だけ開いてみる。",
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_05_item",
+    "title": "『世界の中心で、愛をさけぶ』を読んでみる",
+    "description": "片山恭一｜小説。純愛と喪失を描いたベストセラー恋愛小説。",
+    "detail": "『世界の中心で、愛をさけぶ』（片山恭一）を少しだけ読んでみる。純愛と喪失を描いたベストセラー恋愛小説。",
+    "category": "read",
+    "tags": [
+      "小説"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まずは冒頭だけ開いてみる。",
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_06_item",
+    "title": "『火花』を読んでみる",
+    "description": "又吉直樹｜小説。芸人同士の師弟関係を描いた芥川賞受賞作。",
+    "detail": "『火花』（又吉直樹）を少しだけ読んでみる。芸人同士の師弟関係を描いた芥川賞受賞作。",
+    "category": "read",
+    "tags": [
+      "小説"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まずは冒頭だけ開いてみる。",
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_07_item",
+    "title": "『蜜蜂と遠雷』を読んでみる",
+    "description": "恩田陸｜小説。ピアノコンクールを舞台にした音楽小説の傑作。",
+    "detail": "『蜜蜂と遠雷』（恩田陸）を少しだけ読んでみる。ピアノコンクールを舞台にした音楽小説の傑作。",
+    "category": "read",
+    "tags": [
+      "小説"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まずは冒頭だけ開いてみる。",
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_08_item",
+    "title": "『かがみの孤城』を読んでみる",
+    "description": "辻村深月｜小説。居場所のない子どもたちが集う不思議な城の物語。",
+    "detail": "『かがみの孤城』（辻村深月）を少しだけ読んでみる。居場所のない子どもたちが集う不思議な城の物語。",
+    "category": "read",
+    "tags": [
+      "小説"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まずは冒頭だけ開いてみる。",
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_09_item",
+    "title": "『存在のすべてを』を読んでみる",
+    "description": "塩田武士｜小説。誘拐事件の真相を追うミステリー巨編。",
+    "detail": "『存在のすべてを』（塩田武士）を少しだけ読んでみる。誘拐事件の真相を追うミステリー巨編。",
+    "category": "read",
+    "tags": [
+      "小説"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まずは冒頭だけ開いてみる。",
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_10_item",
+    "title": "『三体』を読んでみる",
+    "description": "劉慈欣｜小説。中国発、世界的ヒットとなったSF大作。",
+    "detail": "『三体』（劉慈欣）を少しだけ読んでみる。中国発、世界的ヒットとなったSF大作。",
+    "category": "read",
+    "tags": [
+      "小説"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まずは冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_11_item",
+    "title": "『ノルウェイの森』を読んでみる",
+    "description": "村上春樹｜小説。青春の喪失と再生を描いた代表的恋愛小説。",
+    "detail": "『ノルウェイの森』（村上春樹）を少しだけ読んでみる。青春の喪失と再生を描いた代表的恋愛小説。",
+    "category": "read",
+    "tags": [
+      "小説"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まずは冒頭だけ開いてみる。",
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_12_item",
+    "title": "『羊と鋼の森』を読んでみる",
+    "description": "宮下奈都｜小説。ピアノ調律師の成長を描いた静かな物語。",
+    "detail": "『羊と鋼の森』（宮下奈都）を少しだけ読んでみる。ピアノ調律師の成長を描いた静かな物語。",
+    "category": "read",
+    "tags": [
+      "小説"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まずは冒頭だけ開いてみる。",
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_13_item",
+    "title": "『告白』を読んでみる",
+    "description": "湊かなえ｜小説。衝撃の展開が続くイヤミス系ベストセラー。",
+    "detail": "『告白』（湊かなえ）を少しだけ読んでみる。衝撃の展開が続くイヤミス系ベストセラー。",
+    "category": "read",
+    "tags": [
+      "小説"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まずは冒頭だけ開いてみる。",
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_14_item",
+    "title": "『陰陽師』を読んでみる",
+    "description": "夢枕獏｜小説。平安京を舞台にした幻想的な伝奇小説。",
+    "detail": "『陰陽師』（夢枕獏）を少しだけ読んでみる。平安京を舞台にした幻想的な伝奇小説。",
+    "category": "read",
+    "tags": [
+      "小説"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まずは冒頭だけ開いてみる。",
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_15_item",
+    "title": "『きらきらひかる』を読んでみる",
+    "description": "江國香織｜小説。不器用な夫婦の関係を描いた繊細な物語。",
+    "detail": "『きらきらひかる』（江國香織）を少しだけ読んでみる。不器用な夫婦の関係を描いた繊細な物語。",
+    "category": "read",
+    "tags": [
+      "小説"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まずは冒頭だけ開いてみる。",
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_16_item",
+    "title": "『万引き家族』を読んでみる",
+    "description": "是枝裕和｜小説。映画のノベライズ、疑似家族の絆を描く。",
+    "detail": "『万引き家族』（是枝裕和）を少しだけ読んでみる。映画のノベライズ、疑似家族の絆を描く。",
+    "category": "read",
+    "tags": [
+      "小説"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まずは冒頭だけ開いてみる。",
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_17_item",
+    "title": "『夜のピクニック』を読んでみる",
+    "description": "恩田陸｜小説。夜通し歩く高校行事を描いた青春小説。",
+    "detail": "『夜のピクニック』（恩田陸）を少しだけ読んでみる。夜通し歩く高校行事を描いた青春小説。",
+    "category": "read",
+    "tags": [
+      "小説"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まずは冒頭だけ開いてみる。",
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_18_5",
+    "title": "『秒速5センチメートル』を読んでみる",
+    "description": "新海誠｜小説。すれ違う想いを描いた切ないノベライズ。",
+    "detail": "『秒速5センチメートル』（新海誠）を少しだけ読んでみる。すれ違う想いを描いた切ないノベライズ。",
+    "category": "read",
+    "tags": [
+      "小説"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まずは冒頭だけ開いてみる。",
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_19_item",
+    "title": "『阪急電車』を読んでみる",
+    "description": "有川浩｜小説。小さな私鉄沿線を舞台にした連作短編集。",
+    "detail": "『阪急電車』（有川浩）を少しだけ読んでみる。小さな私鉄沿線を舞台にした連作短編集。",
+    "category": "read",
+    "tags": [
+      "小説"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まずは冒頭だけ開いてみる。",
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_20_item",
+    "title": "『天気の子』を読んでみる",
+    "description": "新海誠｜小説。少年少女の選択を描いた映画のノベライズ。",
+    "detail": "『天気の子』（新海誠）を少しだけ読んでみる。少年少女の選択を描いた映画のノベライズ。",
+    "category": "read",
+    "tags": [
+      "小説"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まずは冒頭だけ開いてみる。",
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_21_item",
+    "title": "『もものかんづめ』を読んでみる",
+    "description": "さくらももこ｜エッセイ。独特のユーモアが詰まった人気エッセイ集。",
+    "detail": "『もものかんづめ』（さくらももこ）を少しだけ読んでみる。独特のユーモアが詰まった人気エッセイ集。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まずは冒頭だけ開いてみる。",
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_22_item",
+    "title": "『たいのおかしら』を読んでみる",
+    "description": "さくらももこ｜エッセイ。日常の些細な出来事を面白く描く一冊。",
+    "detail": "『たいのおかしら』（さくらももこ）を少しだけ読んでみる。日常の些細な出来事を面白く描く一冊。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まずは冒頭だけ開いてみる。",
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_23_2",
+    "title": "『第2図書係補佐』を読んでみる",
+    "description": "又吉直樹｜エッセイ。読書好きの著者による本にまつわるエッセイ。",
+    "detail": "『第2図書係補佐』（又吉直樹）を少しだけ読んでみる。読書好きの著者による本にまつわるエッセイ。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まずは冒頭だけ開いてみる。",
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_24_item",
+    "title": "『そして生活はつづく』を読んでみる",
+    "description": "星野源｜エッセイ。日常の観察眼が光る、飾らない語り口のエッセイ。",
+    "detail": "『そして生活はつづく』（星野源）を少しだけ読んでみる。日常の観察眼が光る、飾らない語り口のエッセイ。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まずは冒頭だけ開いてみる。",
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_25_item",
+    "title": "『社会人大学人見知り学部卒業見込』を読んでみる",
+    "description": "若林正恭｜エッセイ。人見知りならではの視点で綴られる痛快エッセイ。",
+    "detail": "『社会人大学人見知り学部卒業見込』（若林正恭）を少しだけ読んでみる。人見知りならではの視点で綴られる痛快エッセイ。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まずは冒頭だけ開いてみる。",
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_26_item",
+    "title": "『ボクたちはみんな大人になれなかった』を読んでみる",
+    "description": "燃え殻｜エッセイ。90年代を懐かしむ大人に刺さる一冊。",
+    "detail": "『ボクたちはみんな大人になれなかった』（燃え殻）を少しだけ読んでみる。90年代を懐かしむ大人に刺さる一冊。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まずは冒頭だけ開いてみる。",
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_27_item",
+    "title": "『マイ仏教』を読んでみる",
+    "description": "みうらじゅん｜エッセイ。独自の視点で仏教を語るユニークなエッセイ。",
+    "detail": "『マイ仏教』（みうらじゅん）を少しだけ読んでみる。独自の視点で仏教を語るユニークなエッセイ。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まずは冒頭だけ開いてみる。",
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_28_item",
+    "title": "『聞く力』を読んでみる",
+    "description": "阿川佐和子｜エッセイ。会話上手になるヒントが詰まった対談エッセイ。",
+    "detail": "『聞く力』（阿川佐和子）を少しだけ読んでみる。会話上手になるヒントが詰まった対談エッセイ。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まずは冒頭だけ開いてみる。",
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_29_item",
+    "title": "『妻のトリセツ』を読んでみる",
+    "description": "黒川伊保子｜エッセイ。脳科学の視点からパートナーとの関係を考える。",
+    "detail": "『妻のトリセツ』（黒川伊保子）を少しだけ読んでみる。脳科学の視点からパートナーとの関係を考える。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まずは冒頭だけ開いてみる。",
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_30_item",
+    "title": "『夫のトリセツ』を読んでみる",
+    "description": "黒川伊保子｜エッセイ。「妻のトリセツ」の対になる、夫向けの一冊。",
+    "detail": "『夫のトリセツ』（黒川伊保子）を少しだけ読んでみる。「妻のトリセツ」の対になる、夫向けの一冊。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まずは冒頭だけ開いてみる。",
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_31_item",
+    "title": "『家族という病』を読んでみる",
+    "description": "下重暁子｜エッセイ。家族との距離感を見つめ直すエッセイ。",
+    "detail": "『家族という病』（下重暁子）を少しだけ読んでみる。家族との距離感を見つめ直すエッセイ。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まずは冒頭だけ開いてみる。",
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_32_item",
+    "title": "『大人の言い訳』を読んでみる",
+    "description": "みうらじゅん｜エッセイ。肩の力が抜けるユーモラスな語り口。",
+    "detail": "『大人の言い訳』（みうらじゅん）を少しだけ読んでみる。肩の力が抜けるユーモラスな語り口。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まずは冒頭だけ開いてみる。",
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_33_item",
+    "title": "『サピエンス全史』を読んでみる",
+    "description": "ユヴァル・ノア・ハラリ｜ノンフィクション。人類の歴史を大きな視点で描く話題の一冊。",
+    "detail": "『サピエンス全史』（ユヴァル・ノア・ハラリ）を少しだけ読んでみる。人類の歴史を大きな視点で描く話題の一冊。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まずは冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_34_factfulness",
+    "title": "『FACTFULNESS』を読んでみる",
+    "description": "ハンス・ロスリング｜ノンフィクション。データに基づいて世界を正しく見る方法を学べる。",
+    "detail": "『FACTFULNESS』（ハンス・ロスリング）を少しだけ読んでみる。データに基づいて世界を正しく見る方法を学べる。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まずは冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_35_item",
+    "title": "『銃・病原菌・鉄』を読んでみる",
+    "description": "ジャレド・ダイアモンド｜ノンフィクション。文明の差がなぜ生まれたかを解き明かす大著。",
+    "detail": "『銃・病原菌・鉄』（ジャレド・ダイアモンド）を少しだけ読んでみる。文明の差がなぜ生まれたかを解き明かす大著。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まずは冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_36_item",
+    "title": "『夜と霧』を読んでみる",
+    "description": "ヴィクトール・E・フランクル｜ノンフィクション。強制収容所を生き抜いた著者による深い人生論。",
+    "detail": "『夜と霧』（ヴィクトール・E・フランクル）を少しだけ読んでみる。強制収容所を生き抜いた著者による深い人生論。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まずは冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_37_item",
+    "title": "『生物と無生物のあいだ』を読んでみる",
+    "description": "福岡伸一｜ノンフィクション。生命とは何かを平易な言葉で語る科学エッセイ。",
+    "detail": "『生物と無生物のあいだ』（福岡伸一）を少しだけ読んでみる。生命とは何かを平易な言葉で語る科学エッセイ。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まずは冒頭だけ開いてみる。",
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_38_item",
+    "title": "『東京タワー』を読んでみる",
+    "description": "リリー・フランキー｜ノンフィクション。母と子の絆を描いた自伝的作品。",
+    "detail": "『東京タワー』（リリー・フランキー）を少しだけ読んでみる。母と子の絆を描いた自伝的作品。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まずは冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_39_item",
+    "title": "『進化しすぎた脳』を読んでみる",
+    "description": "池谷裕二｜ノンフィクション。脳科学の面白さを対話形式で学べる一冊。",
+    "detail": "『進化しすぎた脳』（池谷裕二）を少しだけ読んでみる。脳科学の面白さを対話形式で学べる一冊。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まずは冒頭だけ開いてみる。",
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_40_item",
+    "title": "『学び方の学び方』を読んでみる",
+    "description": "バーバラ・オークリー｜ノンフィクション。効率的な学習法を科学的に解説する一冊。",
+    "detail": "『学び方の学び方』（バーバラ・オークリー）を少しだけ読んでみる。効率的な学習法を科学的に解説する一冊。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まずは冒頭だけ開いてみる。",
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_41_item",
+    "title": "『医者が教える食事術』を読んでみる",
+    "description": "牧田善二｜ノンフィクション。血糖値コントロールを軸にした食事の知識本。",
+    "detail": "『医者が教える食事術』（牧田善二）を少しだけ読んでみる。血糖値コントロールを軸にした食事の知識本。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まずは冒頭だけ開いてみる。",
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_42_item",
+    "title": "『スタンフォード式最高の睡眠』を読んでみる",
+    "description": "西野精治｜ノンフィクション。科学的根拠に基づいた快眠のコツをまとめた一冊。",
+    "detail": "『スタンフォード式最高の睡眠』（西野精治）を少しだけ読んでみる。科学的根拠に基づいた快眠のコツをまとめた一冊。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まずは冒頭だけ開いてみる。",
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_43_9",
+    "title": "『人は聞き方が9割』を読んでみる",
+    "description": "永松茂久｜ノンフィクション。コミュニケーションの基本を分かりやすく解説。",
+    "detail": "『人は聞き方が9割』（永松茂久）を少しだけ読んでみる。コミュニケーションの基本を分かりやすく解説。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まずは冒頭だけ開いてみる。",
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_44_item",
+    "title": "『嫌われる勇気』を読んでみる",
+    "description": "岸見一郎・古賀史健｜ノンフィクション。アドラー心理学を対話形式で学べるロングセラー。",
+    "detail": "『嫌われる勇気』（岸見一郎・古賀史健）を少しだけ読んでみる。アドラー心理学を対話形式で学べるロングセラー。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まずは冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_45_item",
+    "title": "『道程』を読んでみる",
+    "description": "高村光太郎｜詩集。力強い生き方を歌った代表的な詩集。",
+    "detail": "『道程』（高村光太郎）を少しだけ読んでみる。力強い生き方を歌った代表的な詩集。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "青空文庫・図書館で読める。まずは冒頭だけ開いてみる。",
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "read_46_item",
+    "title": "『智恵子抄』を読んでみる",
+    "description": "高村光太郎｜詩集。妻・智恵子への想いを綴った詩集。",
+    "detail": "『智恵子抄』（高村光太郎）を少しだけ読んでみる。妻・智恵子への想いを綴った詩集。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "青空文庫・図書館で読める。まずは冒頭だけ開いてみる。",
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "read_47_item",
+    "title": "『山羊の歌』を読んでみる",
+    "description": "中原中也｜詩集。独特のリズムを持つ中也の代表詩集。",
+    "detail": "『山羊の歌』（中原中也）を少しだけ読んでみる。独特のリズムを持つ中也の代表詩集。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "青空文庫・図書館で読める。まずは冒頭だけ開いてみる。",
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "read_48_item",
+    "title": "『二十億光年の孤独』を読んでみる",
+    "description": "谷川俊太郎｜詩集。みずみずしい言葉で綴られたデビュー詩集。",
+    "detail": "『二十億光年の孤独』（谷川俊太郎）を少しだけ読んでみる。みずみずしい言葉で綴られたデビュー詩集。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "青空文庫・図書館で読める。まずは冒頭だけ開いてみる。",
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "read_49_item",
+    "title": "『谷川俊太郎詩選集』を読んでみる",
+    "description": "谷川俊太郎｜詩集。やわらかな言葉づかいが魅力の詩を集めた一冊。",
+    "detail": "『谷川俊太郎詩選集』（谷川俊太郎）を少しだけ読んでみる。やわらかな言葉づかいが魅力の詩を集めた一冊。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "青空文庫・図書館で読める。まずは冒頭だけ開いてみる。",
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "read_50_item",
+    "title": "『わたしと小鳥とすずと』を読んでみる",
+    "description": "金子みすゞ｜詩集。優しいまなざしが感じられる童謡詩集。",
+    "detail": "『わたしと小鳥とすずと』（金子みすゞ）を少しだけ読んでみる。優しいまなざしが感じられる童謡詩集。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "青空文庫・図書館で読める。まずは冒頭だけ開いてみる。",
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_01_item",
+    "title": "『少林サッカー』を観る",
+    "description": "チャウ・シンチー主演・チャウ・シンチー監督。破天荒なサッカーアクションで笑える快作。",
+    "detail": "『少林サッカー』（チャウ・シンチー主演・チャウ・シンチー監督）を候補に入れる。破天荒なサッカーアクションで笑える快作。",
+    "category": "movie",
+    "tags": [
+      "笑える"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 87,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_02_item",
+    "title": "『カンフーハッスル』を観る",
+    "description": "チャウ・シンチー主演・チャウ・シンチー監督。アクションとギャグが詰め込まれた娯楽作。",
+    "detail": "『カンフーハッスル』（チャウ・シンチー主演・チャウ・シンチー監督）を候補に入れる。アクションとギャグが詰め込まれた娯楽作。",
+    "category": "movie",
+    "tags": [
+      "笑える"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 99,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_03_item",
+    "title": "『スーパーの女』を観る",
+    "description": "宮本信子主演・伊丹十三監督。スーパーの舞台裏を痛快に描くコメディ。",
+    "detail": "『スーパーの女』（宮本信子主演・伊丹十三監督）を候補に入れる。スーパーの舞台裏を痛快に描くコメディ。",
+    "category": "movie",
+    "tags": [
+      "笑える"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 126,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_04_item",
+    "title": "『テルマエ・ロマエ』を観る",
+    "description": "阿部寛主演・武内英樹監督。古代ローマと現代を行き来する温泉コメディ。",
+    "detail": "『テルマエ・ロマエ』（阿部寛主演・武内英樹監督）を候補に入れる。古代ローマと現代を行き来する温泉コメディ。",
+    "category": "movie",
+    "tags": [
+      "笑える"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 108,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_05_item",
+    "title": "『舞妓はレディ』を観る",
+    "description": "上白石萌音主演・周防正行監督。方言修行を描くミュージカルコメディ。",
+    "detail": "『舞妓はレディ』（上白石萌音主演・周防正行監督）を候補に入れる。方言修行を描くミュージカルコメディ。",
+    "category": "movie",
+    "tags": [
+      "笑える"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 135,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_06_item",
+    "title": "『有頂天ホテル』を観る",
+    "description": "役所広司主演・三谷幸喜監督。大晦日のホテルを舞台にした群像喜劇。",
+    "detail": "『有頂天ホテル』（役所広司主演・三谷幸喜監督）を候補に入れる。大晦日のホテルを舞台にした群像喜劇。",
+    "category": "movie",
+    "tags": [
+      "笑える"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 136,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_07_themovie",
+    "title": "『踊る大捜査線 THE MOVIE』を観る",
+    "description": "織田裕二主演・本広克行監督。刑事ドラマならではのテンポのいい掛け合いが魅力。",
+    "detail": "『踊る大捜査線 THE MOVIE』（織田裕二主演・本広克行監督）を候補に入れる。刑事ドラマならではのテンポのいい掛け合いが魅力。",
+    "category": "movie",
+    "tags": [
+      "笑える"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 119,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_08_item",
+    "title": "『ザ・マジックアワー』を観る",
+    "description": "妻夫木聡主演・三谷幸喜監督。勘違いから始まる連続コメディの傑作。",
+    "detail": "『ザ・マジックアワー』（妻夫木聡主演・三谷幸喜監督）を候補に入れる。勘違いから始まる連続コメディの傑作。",
+    "category": "movie",
+    "tags": [
+      "笑える"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 136,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_09_item",
+    "title": "『幕が上がる』を観る",
+    "description": "ももいろクローバーZ主演・本広克行監督。高校演劇部の奮闘を描く青春コメディ。",
+    "detail": "『幕が上がる』（ももいろクローバーZ主演・本広克行監督）を候補に入れる。高校演劇部の奮闘を描く青春コメディ。",
+    "category": "movie",
+    "tags": [
+      "笑える"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 119,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_10_item",
+    "title": "『モンスターズ・インク』を観る",
+    "description": "ジョン・グッドマン主演・ピート・ドクター監督。怖がらせ屋のモンスターたちが繰り広げる愉快な物語。",
+    "detail": "『モンスターズ・インク』（ジョン・グッドマン主演・ピート・ドクター監督）を候補に入れる。怖がらせ屋のモンスターたちが繰り広げる愉快な物語。",
+    "category": "movie",
+    "tags": [
+      "笑える"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 92,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_11_item",
+    "title": "『インターンシップ』を観る",
+    "description": "ヴィンス・ヴォーン主演・ショーン・レヴィ監督。中年男性たちがIT企業に挑む痛快コメディ。",
+    "detail": "『インターンシップ』（ヴィンス・ヴォーン主演・ショーン・レヴィ監督）を候補に入れる。中年男性たちがIT企業に挑む痛快コメディ。",
+    "category": "movie",
+    "tags": [
+      "笑える"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 119,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_12_item",
+    "title": "『ドラえもん のび太の宝島』を観る",
+    "description": "大原めぐみ主演・今井一暁監督。冒険と笑いが詰まったファミリー向けアニメ。",
+    "detail": "『ドラえもん のび太の宝島』（大原めぐみ主演・今井一暁監督）を候補に入れる。冒険と笑いが詰まったファミリー向けアニメ。",
+    "category": "movie",
+    "tags": [
+      "笑える"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 111,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_13_item",
+    "title": "『モンティ・パイソン・アンド・ホーリー・グレイル』を観る",
+    "description": "グラハム・チャップマン主演・テリー・ギリアム監督。不条理なギャグが連発するカルト的コメディ。",
+    "detail": "『モンティ・パイソン・アンド・ホーリー・グレイル』（グラハム・チャップマン主演・テリー・ギリアム監督）を候補に入れる。不条理なギャグが連発するカルト的コメディ。",
+    "category": "movie",
+    "tags": [
+      "笑える"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 91,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_14_item",
+    "title": "『ホーム・アローン』を観る",
+    "description": "マコーレー・カルキン主演・クリス・コロンバス監督。留守番中の少年が仕掛ける罠が笑いを誘う。",
+    "detail": "『ホーム・アローン』（マコーレー・カルキン主演・クリス・コロンバス監督）を候補に入れる。留守番中の少年が仕掛ける罠が笑いを誘う。",
+    "category": "movie",
+    "tags": [
+      "笑える"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 103,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_15_item",
+    "title": "『ミスター・ビーン カンヌで大迷惑』を観る",
+    "description": "ローワン・アトキンソン主演・スティーヴ・ベンデラック監督。セリフ少なめでも笑える定番シリーズ。",
+    "detail": "『ミスター・ビーン カンヌで大迷惑』（ローワン・アトキンソン主演・スティーヴ・ベンデラック監督）を候補に入れる。セリフ少なめでも笑える定番シリーズ。",
+    "category": "movie",
+    "tags": [
+      "笑える"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 90,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_16_item",
+    "title": "『名探偵ピカチュウ』を観る",
+    "description": "ライアン・レイノルズ主演・ロブ・レターマン監督。軽快な掛け合いが楽しいポケモン実写作品。",
+    "detail": "『名探偵ピカチュウ』（ライアン・レイノルズ主演・ロブ・レターマン監督）を候補に入れる。軽快な掛け合いが楽しいポケモン実写作品。",
+    "category": "movie",
+    "tags": [
+      "笑える"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 104,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_17_item",
+    "title": "『パディントン』を観る",
+    "description": "ベン・ウィショー主演・ポール・キング監督。心温まるくまのパディントンの実写化作品。",
+    "detail": "『パディントン』（ベン・ウィショー主演・ポール・キング監督）を候補に入れる。心温まるくまのパディントンの実写化作品。",
+    "category": "movie",
+    "tags": [
+      "笑える"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 95,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_18_item",
+    "title": "『世界の中心で、愛をさけぶ』を観る",
+    "description": "柴咲コウ主演・行定勲監督。純愛と喪失を描いた邦画の代表的恋愛映画。",
+    "detail": "『世界の中心で、愛をさけぶ』（柴咲コウ主演・行定勲監督）を候補に入れる。純愛と喪失を描いた邦画の代表的恋愛映画。",
+    "category": "movie",
+    "tags": [
+      "泣ける"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 138,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_19_item",
+    "title": "『いま、会いにゆきます』を観る",
+    "description": "竹内結子主演・土井裕泰監督。亡き妻との再会を描く切ないファンタジー。",
+    "detail": "『いま、会いにゆきます』（竹内結子主演・土井裕泰監督）を候補に入れる。亡き妻との再会を描く切ないファンタジー。",
+    "category": "movie",
+    "tags": [
+      "泣ける"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 119,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_20_always",
+    "title": "『ALWAYS 三丁目の夕日』を観る",
+    "description": "吉岡秀隆主演・山崎貴監督。昭和の下町を舞台にした人情ドラマ。",
+    "detail": "『ALWAYS 三丁目の夕日』（吉岡秀隆主演・山崎貴監督）を候補に入れる。昭和の下町を舞台にした人情ドラマ。",
+    "category": "movie",
+    "tags": [
+      "泣ける"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 133,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_21_item",
+    "title": "『きみに読む物語』を観る",
+    "description": "ライアン・ゴズリング主演・ニック・カサヴェテス監督。生涯にわたる愛を描いたラブストーリーの名作。",
+    "detail": "『きみに読む物語』（ライアン・ゴズリング主演・ニック・カサヴェテス監督）を候補に入れる。生涯にわたる愛を描いたラブストーリーの名作。",
+    "category": "movie",
+    "tags": [
+      "泣ける"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 123,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_22_item",
+    "title": "『タイタニック』を観る",
+    "description": "レオナルド・ディカプリオ主演・ジェームズ・キャメロン監督。実話を基にした壮大な悲恋の物語。",
+    "detail": "『タイタニック』（レオナルド・ディカプリオ主演・ジェームズ・キャメロン監督）を候補に入れる。実話を基にした壮大な悲恋の物語。",
+    "category": "movie",
+    "tags": [
+      "泣ける"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 195,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_23_item",
+    "title": "『ライフ・イズ・ビューティフル』を観る",
+    "description": "ロベルト・ベニーニ主演・ロベルト・ベニーニ監督。過酷な状況でも家族を思う父の愛を描く。",
+    "detail": "『ライフ・イズ・ビューティフル』（ロベルト・ベニーニ主演・ロベルト・ベニーニ監督）を候補に入れる。過酷な状況でも家族を思う父の愛を描く。",
+    "category": "movie",
+    "tags": [
+      "泣ける"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 116,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_24_item",
+    "title": "『ショーシャンクの空に』を観る",
+    "description": "ティム・ロビンス主演・フランク・ダラボン監督。希望を失わない主人公の姿に胸を打たれる名作。",
+    "detail": "『ショーシャンクの空に』（ティム・ロビンス主演・フランク・ダラボン監督）を候補に入れる。希望を失わない主人公の姿に胸を打たれる名作。",
+    "category": "movie",
+    "tags": [
+      "泣ける"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 143,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_25_1",
+    "title": "『余命1ヶ月の花嫁』を観る",
+    "description": "榮倉奈々主演・廣木隆一監督。実話を基にした、限られた時間を生きる物語。",
+    "detail": "『余命1ヶ月の花嫁』（榮倉奈々主演・廣木隆一監督）を候補に入れる。実話を基にした、限られた時間を生きる物語。",
+    "category": "movie",
+    "tags": [
+      "泣ける"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 118,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_26_15",
+    "title": "『阪急電車 片道15分の奇跡』を観る",
+    "description": "中谷美紀主演・三宅喜重監督。小さな私鉄沿線で交錯する人生模様を描く。",
+    "detail": "『阪急電車 片道15分の奇跡』（中谷美紀主演・三宅喜重監督）を候補に入れる。小さな私鉄沿線で交錯する人生模様を描く。",
+    "category": "movie",
+    "tags": [
+      "泣ける"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 119,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_27_item",
+    "title": "『岳 -ガク-』を観る",
+    "description": "小栗旬主演・片山修監督。山岳救助を題材にした感動の人間ドラマ。",
+    "detail": "『岳 -ガク-』（小栗旬主演・片山修監督）を候補に入れる。山岳救助を題材にした感動の人間ドラマ。",
+    "category": "movie",
+    "tags": [
+      "泣ける"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 129,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_28_item",
+    "title": "『東京タワー ~オカンとボクと、時々、オトン~』を観る",
+    "description": "オダギリジョー主演・松岡錠司監督。母と息子の絆を描いた実話ベースの物語。",
+    "detail": "『東京タワー ~オカンとボクと、時々、オトン~』（オダギリジョー主演・松岡錠司監督）を候補に入れる。母と息子の絆を描いた実話ベースの物語。",
+    "category": "movie",
+    "tags": [
+      "泣ける"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 142,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_29_8",
+    "title": "『8年越しの花嫁』を観る",
+    "description": "佐藤健主演・瀬々敬久監督。実話を基にした夫婦の絆を描く感動作。",
+    "detail": "『8年越しの花嫁』（佐藤健主演・瀬々敬久監督）を候補に入れる。実話を基にした夫婦の絆を描く感動作。",
+    "category": "movie",
+    "tags": [
+      "泣ける"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 128,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_30_item",
+    "title": "『あん』を観る",
+    "description": "樹木希林主演・河瀬直美監督。どら焼き屋を舞台にした静かな人間ドラマ。",
+    "detail": "『あん』（樹木希林主演・河瀬直美監督）を候補に入れる。どら焼き屋を舞台にした静かな人間ドラマ。",
+    "category": "movie",
+    "tags": [
+      "泣ける"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 113,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_31_item",
+    "title": "『コクリコ坂から』を観る",
+    "description": "長澤まさみ主演・宮崎吾朗監督。昭和の横浜を舞台にした青春アニメーション。",
+    "detail": "『コクリコ坂から』（長澤まさみ主演・宮崎吾朗監督）を候補に入れる。昭和の横浜を舞台にした青春アニメーション。",
+    "category": "movie",
+    "tags": [
+      "泣ける"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 91,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_32_item",
+    "title": "『きっと、うまくいく』を観る",
+    "description": "アーミル・カーン主演・ラージクマール・ヒラーニ監督。友情と挑戦を描くインド映画の傑作。",
+    "detail": "『きっと、うまくいく』（アーミル・カーン主演・ラージクマール・ヒラーニ監督）を候補に入れる。友情と挑戦を描くインド映画の傑作。",
+    "category": "movie",
+    "tags": [
+      "泣ける"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 170,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_33_item",
+    "title": "『リメンバー・ミー』を観る",
+    "description": "アンソニー・ゴンザレス主演・リー・アンクリッチ監督。家族への想いを描くピクサーの感動作。",
+    "detail": "『リメンバー・ミー』（アンソニー・ゴンザレス主演・リー・アンクリッチ監督）を候補に入れる。家族への想いを描くピクサーの感動作。",
+    "category": "movie",
+    "tags": [
+      "泣ける"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 105,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_34_item",
+    "title": "『ソウルフル・ワールド』を観る",
+    "description": "ジェイミー・フォックス主演・ピート・ドクター監督。人生の意味を問いかけるピクサーの意欲作。",
+    "detail": "『ソウルフル・ワールド』（ジェイミー・フォックス主演・ピート・ドクター監督）を候補に入れる。人生の意味を問いかけるピクサーの意欲作。",
+    "category": "movie",
+    "tags": [
+      "泣ける"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 100,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_35_item",
+    "title": "『パラサイト 半地下の家族』を観る",
+    "description": "ソン・ガンホ主演・ポン・ジュノ監督。格差社会を鋭く描くアカデミー賞受賞作。",
+    "detail": "『パラサイト 半地下の家族』（ソン・ガンホ主演・ポン・ジュノ監督）を候補に入れる。格差社会を鋭く描くアカデミー賞受賞作。",
+    "category": "movie",
+    "tags": [
+      "考えさせる"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 132,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_36_item",
+    "title": "『マトリックス』を観る",
+    "description": "キアヌ・リーブス主演・リリー&ラナ・ウォシャウスキー監督。現実とは何かを問いかけるSFの金字塔。",
+    "detail": "『マトリックス』（キアヌ・リーブス主演・リリー&ラナ・ウォシャウスキー監督）を候補に入れる。現実とは何かを問いかけるSFの金字塔。",
+    "category": "movie",
+    "tags": [
+      "考えさせる"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 136,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_37_item",
+    "title": "『インセプション』を観る",
+    "description": "レオナルド・ディカプリオ主演・クリストファー・ノーラン監督。夢と現実が入り組む頭を使うSF大作。",
+    "detail": "『インセプション』（レオナルド・ディカプリオ主演・クリストファー・ノーラン監督）を候補に入れる。夢と現実が入り組む頭を使うSF大作。",
+    "category": "movie",
+    "tags": [
+      "考えさせる"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 148,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_38_item",
+    "title": "『万引き家族』を観る",
+    "description": "リリー・フランキー主演・是枝裕和監督。血のつながらない家族の絆と社会問題を描く。",
+    "detail": "『万引き家族』（リリー・フランキー主演・是枝裕和監督）を候補に入れる。血のつながらない家族の絆と社会問題を描く。",
+    "category": "movie",
+    "tags": [
+      "考えさせる"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 121,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_39_es",
+    "title": "『es[エス]』を観る",
+    "description": "モーリッツ・ブライブトロイ主演・オリヴァー・ヒルシュビーゲル監督。実験を題材に人間の心理の危うさを描く。",
+    "detail": "『es[エス]』（モーリッツ・ブライブトロイ主演・オリヴァー・ヒルシュビーゲル監督）を候補に入れる。実験を題材に人間の心理の危うさを描く。",
+    "category": "movie",
+    "tags": [
+      "考えさせる"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 121,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_40_item",
+    "title": "『シン・ゴジラ』を観る",
+    "description": "長谷川博己主演・庵野秀明・樋口真嗣監督。危機管理のリアリティを描いた社会派怪獣映画。",
+    "detail": "『シン・ゴジラ』（長谷川博己主演・庵野秀明・樋口真嗣監督）を候補に入れる。危機管理のリアリティを描いた社会派怪獣映画。",
+    "category": "movie",
+    "tags": [
+      "考えさせる"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 120,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_41_her",
+    "title": "『her/世界でひとつの彼女』を観る",
+    "description": "ホアキン・フェニックス主演・スパイク・ジョーンズ監督。AIとの関係を通じて愛の形を問いかける。",
+    "detail": "『her/世界でひとつの彼女』（ホアキン・フェニックス主演・スパイク・ジョーンズ監督）を候補に入れる。AIとの関係を通じて愛の形を問いかける。",
+    "category": "movie",
+    "tags": [
+      "考えさせる"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 126,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_42_2049",
+    "title": "『ブレードランナー2049』を観る",
+    "description": "ライアン・ゴズリング主演・ドゥニ・ヴィルヌーヴ監督。人間とは何かを問い続けるSFの続編作。",
+    "detail": "『ブレードランナー2049』（ライアン・ゴズリング主演・ドゥニ・ヴィルヌーヴ監督）を候補に入れる。人間とは何かを問い続けるSFの続編作。",
+    "category": "movie",
+    "tags": [
+      "考えさせる"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 164,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_43_item",
+    "title": "『アイ,ロボット』を観る",
+    "description": "ウィル・スミス主演・アレックス・プロヤス監督。AIと人間の共存を考えさせるアクションSF。",
+    "detail": "『アイ,ロボット』（ウィル・スミス主演・アレックス・プロヤス監督）を候補に入れる。AIと人間の共存を考えさせるアクションSF。",
+    "category": "movie",
+    "tags": [
+      "考えさせる"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 115,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_44_item",
+    "title": "『コンタクト』を観る",
+    "description": "ジョディ・フォスター主演・ロバート・ゼメキス監督。科学と信仰の間で揺れる主人公を描く。",
+    "detail": "『コンタクト』（ジョディ・フォスター主演・ロバート・ゼメキス監督）を候補に入れる。科学と信仰の間で揺れる主人公を描く。",
+    "category": "movie",
+    "tags": [
+      "考えさせる"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 150,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_45_item",
+    "title": "『インターステラー』を観る",
+    "description": "マシュー・マコノヒー主演・クリストファー・ノーラン監督。時間と家族愛を描く壮大なSF叙事詩。",
+    "detail": "『インターステラー』（マシュー・マコノヒー主演・クリストファー・ノーラン監督）を候補に入れる。時間と家族愛を描く壮大なSF叙事詩。",
+    "category": "movie",
+    "tags": [
+      "考えさせる"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 169,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_46_12",
+    "title": "『12人の怒れる男』を観る",
+    "description": "ヘンリー・フォンダ主演・シドニー・ルメット監督。密室での議論だけで見せる法廷劇の傑作。",
+    "detail": "『12人の怒れる男』（ヘンリー・フォンダ主演・シドニー・ルメット監督）を候補に入れる。密室での議論だけで見せる法廷劇の傑作。",
+    "category": "movie",
+    "tags": [
+      "考えさせる"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 96,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_47_item",
+    "title": "『すずめの戸締まり』を観る",
+    "description": "原菜乃華主演・新海誠監督。災害と喪失をテーマにしたアニメーション。",
+    "detail": "『すずめの戸締まり』（原菜乃華主演・新海誠監督）を候補に入れる。災害と喪失をテーマにしたアニメーション。",
+    "category": "movie",
+    "tags": [
+      "考えさせる"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 122,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_48_item",
+    "title": "『ドライブ・マイ・カー』を観る",
+    "description": "西島秀俊主演・濱口竜介監督。喪失と再生を静かに描くカンヌ受賞作。",
+    "detail": "『ドライブ・マイ・カー』（西島秀俊主演・濱口竜介監督）を候補に入れる。喪失と再生を静かに描くカンヌ受賞作。",
+    "category": "movie",
+    "tags": [
+      "考えさせる"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 179,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_49_item",
+    "title": "『マネー・ショート 華麗なる大逆転』を観る",
+    "description": "クリスチャン・ベール主演・アダム・マッケイ監督。金融危機の裏側を描く社会派ドラマ。",
+    "detail": "『マネー・ショート 華麗なる大逆転』（クリスチャン・ベール主演・アダム・マッケイ監督）を候補に入れる。金融危機の裏側を描く社会派ドラマ。",
+    "category": "movie",
+    "tags": [
+      "考えさせる"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 130,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_50_ai",
+    "title": "『AI崩壊』を観る",
+    "description": "大沢たかお主演・入江悠監督。AIと社会の在り方を問いかける邦画サスペンス。",
+    "detail": "『AI崩壊』（大沢たかお主演・入江悠監督）を候補に入れる。AIと社会の在り方を問いかける邦画サスペンス。",
+    "category": "movie",
+    "tags": [
+      "考えさせる"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 120,
     "weight": 1.0
   }
 ]
