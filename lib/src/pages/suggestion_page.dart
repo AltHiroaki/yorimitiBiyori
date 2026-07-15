@@ -14,6 +14,7 @@ import '../repositories/ongoing_suggestion_repository.dart';
 import '../repositories/records_repository.dart';
 import '../repositories/settings_repository.dart';
 import '../repositories/suggestion_repository.dart';
+import '../widgets/completion_celebration.dart';
 import '../widgets/completion_modal.dart';
 import '../widgets/section_card.dart';
 import 'suggestion_settings_page.dart';
@@ -32,7 +33,8 @@ class SuggestionPage extends StatefulWidget {
     this.currentSuggestionRepository,
     this.ongoingSuggestionRepository,
     this.random,
-    this.onGoToHistory,
+    this.historyDestinationKey,
+    this.onSuggestionCompleted,
   });
 
   /// テスト用に差し替え可能。null なら通常の repository・乱数を使う。
@@ -43,8 +45,11 @@ class SuggestionPage extends StatefulWidget {
   final OngoingSuggestionRepository? ongoingSuggestionRepository;
   final Random? random;
 
-  /// 完了フローの最後に履歴タブへ切り替えるためのコールバック（issue #48）。
-  final VoidCallback? onGoToHistory;
+  /// カード吸い込み先となる履歴タブのアイコン位置を取得するためのキー。
+  final GlobalKey? historyDestinationKey;
+
+  /// 完了演出後、保存した履歴 ID を渡して履歴タブへ切り替える。
+  final ValueChanged<String>? onSuggestionCompleted;
 
   @override
   State<SuggestionPage> createState() => _SuggestionPageState();
@@ -68,6 +73,7 @@ class _SuggestionPageState extends State<SuggestionPage> {
   /// 実施中のよりみち。null は「実施中なし」（通常の提案表示）を表す。
   Suggestion? _ongoingSuggestion;
   DateTime? _ongoingStartedAt;
+  final GlobalKey _ongoingCardKey = GlobalKey();
 
   @override
   void initState() {
@@ -241,20 +247,84 @@ class _SuggestionPageState extends State<SuggestionPage> {
     if (feedback == null) {
       return;
     }
+
+    final sourceRect = _ongoingCardRect();
+    final historyDestinationCenter = _historyDestinationCenter();
+    final disableAnimations =
+        MediaQuery.maybeOf(context)?.disableAnimations ?? false;
+    final completedRecordId =
+        'record_${DateTime.now().microsecondsSinceEpoch}';
     await _saveRecord(
       suggestion,
       status: SuggestionRecordStatus.done,
       feedback: feedback,
+      recordId: completedRecordId,
     );
+    if (!mounted) {
+      return;
+    }
+
+    await showCompletionCheckOverlay(
+      context: context,
+      disableAnimations: disableAnimations,
+    );
+    if (!mounted) {
+      return;
+    }
+
     await _clearOngoing();
     if (!mounted) {
       return;
     }
-    // お祝いリアクション。派手な演出（アニメーション等）は発展時に検討する。
-    ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(content: Text('🎉 よりみち完了！おつかれさまでした')),
+
+    await showCompletionCardFlightOverlay(
+      context: context,
+      sourceRect: sourceRect,
+      targetCenter: historyDestinationCenter,
+      suggestionTitle: suggestion.title,
+      disableAnimations: disableAnimations,
     );
-    widget.onGoToHistory?.call();
+    if (!mounted) {
+      return;
+    }
+    widget.onSuggestionCompleted?.call(completedRecordId);
+  }
+
+  Rect _ongoingCardRect() {
+    final cardRect = _globalRectFor(_ongoingCardKey);
+    if (cardRect != null) {
+      return cardRect;
+    }
+
+    final screenSize = MediaQuery.sizeOf(context);
+    final fallbackWidth = min(screenSize.width - 48, 400.0);
+    return Rect.fromLTWH(
+      (screenSize.width - fallbackWidth) / 2,
+      screenSize.height * 0.25,
+      fallbackWidth,
+      220,
+    );
+  }
+
+  Offset _historyDestinationCenter() {
+    final destinationKey = widget.historyDestinationKey;
+    if (destinationKey != null) {
+      final destinationRect = _globalRectFor(destinationKey);
+      if (destinationRect != null) {
+        return destinationRect.center;
+      }
+    }
+
+    final screenSize = MediaQuery.sizeOf(context);
+    return Offset(screenSize.width / 2, screenSize.height - 36);
+  }
+
+  Rect? _globalRectFor(GlobalKey key) {
+    final renderObject = key.currentContext?.findRenderObject();
+    if (renderObject is! RenderBox || !renderObject.hasSize) {
+      return null;
+    }
+    return renderObject.localToGlobal(Offset.zero) & renderObject.size;
   }
 
   /// 実施中カードのスキップ：skipped として履歴に保存し、実施中を解除して再抽選する。
@@ -309,10 +379,11 @@ class _SuggestionPageState extends State<SuggestionPage> {
     required SuggestionRecordStatus status,
     required SuggestionFeedback? feedback,
     bool updateRecent = true,
+    String? recordId,
   }) async {
     final now = DateTime.now();
     final record = SuggestionRecord(
-      id: 'record_${now.microsecondsSinceEpoch}',
+      id: recordId ?? 'record_${now.microsecondsSinceEpoch}',
       suggestionId: suggestion.id,
       suggestionTitle: suggestion.title,
       category: suggestion.category,
@@ -539,6 +610,7 @@ class _SuggestionPageState extends State<SuggestionPage> {
     final startedAt = _ongoingStartedAt;
 
     return Card(
+      key: _ongoingCardKey,
       child: Padding(
         padding: const EdgeInsets.all(20),
         child: Column(
