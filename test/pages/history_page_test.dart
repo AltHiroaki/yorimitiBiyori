@@ -28,6 +28,7 @@ Future<void> _pumpPage(
   WidgetTester tester, {
   required List<SuggestionRecord> records,
   VoidCallback? onGoToSuggestions,
+  String? highlightedRecordId,
 }) async {
   await tester.pumpWidget(
     MaterialApp(
@@ -35,6 +36,7 @@ Future<void> _pumpPage(
         body: HistoryPage(
           recordsRepository: _FakeRecordsRepository(records),
           onGoToSuggestions: onGoToSuggestions,
+          highlightedRecordId: highlightedRecordId,
         ),
       ),
     ),
@@ -150,5 +152,43 @@ void main() {
     await tester.pumpAndSettle();
 
     expect(wasCalled, isTrue);
+  });
+
+  testWidgets('指定した直近レコードだけが1.5秒の背景ハイライト対象になる', (tester) async {
+    await _pumpPage(
+      tester,
+      records: [
+        _record(
+          id: 'highlighted',
+          title: '保存したばかりの提案',
+          status: SuggestionRecordStatus.done,
+        ),
+        _record(
+          id: 'normal',
+          title: '以前の提案',
+          status: SuggestionRecordStatus.done,
+        ),
+      ],
+      highlightedRecordId: 'highlighted',
+    );
+
+    final highlightAnimation = find.byWidgetPredicate(
+      (widget) => widget is TweenAnimationBuilder<double>,
+    );
+    expect(highlightAnimation, findsOneWidget);
+    expect(
+      tester
+          .widget<TweenAnimationBuilder<double>>(highlightAnimation)
+          .duration,
+      historyNewRecordHighlightDuration,
+    );
+    expect(
+      find.byKey(const ValueKey<String>('history-record-highlighted')),
+      findsOneWidget,
+    );
+    expect(
+      find.byKey(const ValueKey<String>('history-record-normal')),
+      findsOneWidget,
+    );
   });
 }

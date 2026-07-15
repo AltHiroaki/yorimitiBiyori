@@ -147,7 +147,7 @@ Future<_FakeSettingsRepository> _pumpPage(
   _FakeRecordsRepository? recordsRepository,
   _FakeCurrentSuggestionRepository? currentSuggestionRepository,
   _FakeOngoingSuggestionRepository? ongoingSuggestionRepository,
-  VoidCallback? onGoToHistory,
+  ValueChanged<String>? onSuggestionCompleted,
 }) async {
   // ListView の下部（案内カード等）まで描画されるよう縦長の画面にする。
   tester.view.physicalSize = const Size(800, 2400);
@@ -171,7 +171,7 @@ Future<_FakeSettingsRepository> _pumpPage(
           ongoingSuggestionRepository:
               ongoingSuggestionRepository ?? _FakeOngoingSuggestionRepository(),
           random: Random(0),
-          onGoToHistory: onGoToHistory,
+          onSuggestionCompleted: onSuggestionCompleted,
         ),
       ),
     ),
@@ -355,11 +355,11 @@ void main() {
     expect(ongoingRepository.ongoing!.suggestionId, 'music_a');
   });
 
-  testWidgets('実施中の完了→履歴に保存で done レコードが保存され、お祝いと履歴遷移が起きる',
+  testWidgets('実施中の完了→履歴に保存で done レコードが保存され、完了演出後に履歴IDが渡る',
       (tester) async {
     final recordsRepository = _FakeRecordsRepository();
     final ongoingRepository = _FakeOngoingSuggestionRepository();
-    var wentToHistory = false;
+    String? completedRecordId;
     await _pumpPage(
       tester,
       suggestions: [
@@ -368,7 +368,7 @@ void main() {
       settings: const UserSettings(selectedCategories: ['music']),
       recordsRepository: recordsRepository,
       ongoingSuggestionRepository: ongoingRepository,
-      onGoToHistory: () => wentToHistory = true,
+      onSuggestionCompleted: (recordId) => completedRecordId = recordId,
     );
 
     await tester.tap(find.text('やってみる'));
@@ -391,10 +391,10 @@ void main() {
     expect(savedRecord.status, SuggestionRecordStatus.done);
     expect(savedRecord.feedback, SuggestionFeedback.normal);
 
-    // 実施中は解除され、お祝い SnackBar と履歴タブへの遷移が起きる。
+    // 実施中は解除され、保存した履歴 ID がタブ遷移側へ渡る。
     expect(ongoingRepository.ongoing, isNull);
-    expect(find.text('🎉 よりみち完了！おつかれさまでした'), findsOneWidget);
-    expect(wentToHistory, isTrue);
+    expect(completedRecordId, savedRecord.id);
+    expect(find.byType(SnackBar), findsNothing);
   });
 
   testWidgets('完了モーダルを保存せず閉じると履歴は保存されず実施中のまま', (tester) async {

@@ -5,6 +5,9 @@ import '../models/interest_category.dart';
 import '../models/suggestion_record.dart';
 import '../repositories/records_repository.dart';
 
+const Duration historyNewRecordHighlightDuration =
+    Duration(milliseconds: 1500);
+
 /// 履歴タブ。仕様書 3.2 に対応する。
 /// サマリー（実施／スキップ／合計分）と新しい順の履歴一覧を表示し、
 /// 履歴 0 件のときは空状態と「提案を見てみる」ボタンを表示する。
@@ -13,6 +16,7 @@ class HistoryPage extends StatefulWidget {
     super.key,
     this.recordsRepository,
     this.onGoToSuggestions,
+    this.highlightedRecordId,
   });
 
   /// テスト用に差し替え可能。null なら通常の repository を使う。
@@ -20,6 +24,9 @@ class HistoryPage extends StatefulWidget {
 
   /// 空状態の「提案を見てみる」で提案タブへ切り替えるためのコールバック。
   final VoidCallback? onGoToSuggestions;
+
+  /// 完了フローで保存した直後に背景色を強調する履歴 ID。
+  final String? highlightedRecordId;
 
   @override
   State<HistoryPage> createState() => _HistoryPageState();
@@ -147,6 +154,32 @@ class _HistoryPageState extends State<HistoryPage> {
 
   /// 履歴 1 行：ステータスアイコン・タイトル・日付とカテゴリ・所要時間・バッジ。
   Widget _buildRecordRow(SuggestionRecord record) {
+    if (record.id != widget.highlightedRecordId) {
+      return _buildRecordCard(record);
+    }
+
+    final theme = Theme.of(context);
+    final normalCardColor =
+        theme.cardTheme.color ?? theme.colorScheme.surfaceContainerLow;
+    return TweenAnimationBuilder<double>(
+      duration: historyNewRecordHighlightDuration,
+      curve: Curves.easeOutCubic,
+      tween: Tween(begin: 0, end: 1),
+      builder: (context, progress, _) {
+        final backgroundColor = Color.lerp(
+          theme.colorScheme.primaryContainer,
+          normalCardColor,
+          progress,
+        );
+        return _buildRecordCard(record, backgroundColor: backgroundColor);
+      },
+    );
+  }
+
+  Widget _buildRecordCard(
+    SuggestionRecord record, {
+    Color? backgroundColor,
+  }) {
     final colorScheme = Theme.of(context).colorScheme;
     final isDone = record.status == SuggestionRecordStatus.done;
     final iconBackground =
@@ -158,6 +191,8 @@ class _HistoryPageState extends State<HistoryPage> {
         InterestCategories.findById(record.category)?.label ?? record.category;
 
     return Card(
+      key: ValueKey<String>('history-record-${record.id}'),
+      color: backgroundColor,
       child: Padding(
         padding: const EdgeInsets.all(16),
         child: Row(
