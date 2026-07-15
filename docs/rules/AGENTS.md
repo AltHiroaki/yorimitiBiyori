@@ -70,7 +70,7 @@ There is **no difficulty, no universal time condition, and no travel-distance co
    - 音楽: ジャンル(ポップス/ジャズ/クラシック/洋楽)
    - 料理: 味覚・ジャンル(和食/洋食/中華/イタリアン/アジア風/激辛/さっぱり/ガッツリ)
    - 読書: ジャンル(エッセイ/小説/ノンフィクション/詩集)
-   - 映画: ジャンル(泣ける/笑える/考えさせる) — a single suggestion's `tags` may hold more than one of these values, since one movie can span multiple genres
+   - 映画: ジャンル(アクション/コメディ/ドラマ/SF/サスペンス/ファンタジー/恋愛/アニメ/ミステリー) — a single suggestion's `tags` may hold more than one of these values, since one movie can span multiple genres
    - 散歩 (advanced): 目的(気分転換/運動/発見)
 
    Advanced-phase detail settings (企画書 ver6 表3 "発展版で追加"): 音楽=言語・気分, 料理=栄養素・ダイエット, 読書=読書時間・入手予算, 映画=上映時間・視聴先.

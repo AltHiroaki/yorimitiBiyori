@@ -56,11 +56,11 @@ void main() {
 
     test('未選択グループと問わないは絞り込まない', () {
       final suggestions = [
-        _suggestion(id: 'free', category: 'movie', tags: ['笑える', 'Netflix']),
+        _suggestion(id: 'free', category: 'movie', tags: ['コメディ', 'Netflix']),
         _suggestion(
           id: 'prime',
           category: 'movie',
-          tags: ['考えさせる', 'Amazon Prime'],
+          tags: ['ドラマ', 'Amazon Prime'],
         ),
       ];
       const settings = UserSettings(
@@ -126,7 +126,7 @@ void main() {
         _suggestion(
           id: 'movie_match',
           category: 'movie',
-          tags: ['笑える'],
+          tags: ['コメディ'],
         ),
         _suggestion(
           id: 'music_wrong_detail',
@@ -146,7 +146,7 @@ void main() {
             'genre': ['ジャズ'],
           },
           'movie': {
-            'genre': ['笑える'],
+            'genre': ['コメディ'],
           },
         },
       );
