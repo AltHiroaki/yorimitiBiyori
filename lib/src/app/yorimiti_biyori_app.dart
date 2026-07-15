@@ -11,46 +11,127 @@ import '../pages/history_page.dart';
 import '../pages/settings_page.dart';
 import '../pages/suggestion_page.dart';
 import '../repositories/settings_repository.dart';
+import '../widgets/neumorphic_surface.dart';
 import 'theme_mode_scope.dart';
+import 'yorimiti_neumorphic_theme.dart';
 
 /// UI プロトタイプのカラーパレット（`よりみち日和 UIプロトタイプ/` の定数 C に対応）。
 const Color _primarySeedColor = Color(0xFF3F6F44);
 const Color _pageBackgroundColor = Color(0xFFF8FBF3);
-const Color _cardOutlineColor = Color(0xFFDFE6D9);
+const Color _surfaceVariantColor = Color(0xFFEEF5E8);
+const Color _primaryContainerColor = Color(0xFFC2E8C0);
+const Color _darkPageBackgroundColor = Color(0xFF1D221C);
+const Color _darkSurfaceVariantColor = Color(0xFF242B23);
 
-/// プロトタイプのカードは角丸 20〜28px。代表値として大きめの 24 に揃える。
-const double _cardCornerRadius = 24;
-
-/// アプリ全体のテーマ。カードの見た目（白地・薄縁・角丸）はここに集約し、
-/// 各画面の Card では個別指定しない。
-ThemeData buildYorimitiBiyoriTheme({
-  Brightness brightness = Brightness.light,
-}) {
-  final colorScheme = ColorScheme.fromSeed(
+/// Issue #66 のニューモーフィズムトークンを集約したアプリテーマ。
+ThemeData buildYorimitiBiyoriTheme({Brightness brightness = Brightness.light}) {
+  final baseColorScheme = ColorScheme.fromSeed(
     seedColor: _primarySeedColor,
     brightness: brightness,
   );
   final isDark = brightness == Brightness.dark;
-  final scaffoldBackgroundColor =
-      isDark ? colorScheme.surface : _pageBackgroundColor;
-  final cardBackgroundColor =
-      isDark ? colorScheme.surfaceContainerLow : Colors.white;
-  final cardOutlineColor =
-      isDark ? colorScheme.outlineVariant : _cardOutlineColor;
+  final surfaceColor = isDark ? _darkPageBackgroundColor : _pageBackgroundColor;
+  final surfaceVariantColor = isDark
+      ? _darkSurfaceVariantColor
+      : _surfaceVariantColor;
+  final colorScheme = baseColorScheme.copyWith(
+    primary: isDark ? baseColorScheme.primary : _primarySeedColor,
+    primaryContainer: isDark
+        ? baseColorScheme.primaryContainer
+        : _primaryContainerColor,
+    surface: surfaceColor,
+    surfaceContainerLowest: surfaceColor,
+    surfaceContainerLow: surfaceColor,
+    surfaceContainer: surfaceColor,
+    surfaceContainerHigh: surfaceVariantColor,
+    surfaceContainerHighest: surfaceVariantColor,
+  );
+  final roundedButtonShape = RoundedRectangleBorder(
+    borderRadius: BorderRadius.circular(YorimitiNeumorphicTheme.buttonRadius),
+  );
 
   return ThemeData(
     colorScheme: colorScheme,
     useMaterial3: true,
-    scaffoldBackgroundColor: scaffoldBackgroundColor,
+    fontFamily: 'ZenMaruGothic',
+    fontFamilyFallback: const ['Noto Sans JP', 'sans-serif'],
+    scaffoldBackgroundColor: surfaceColor,
+    canvasColor: surfaceColor,
+    extensions: [buildYorimitiNeumorphicTheme(brightness: brightness)],
     cardTheme: CardThemeData(
       elevation: 0,
-      color: cardBackgroundColor,
+      color: surfaceColor,
       surfaceTintColor: Colors.transparent,
-      // 画面側は SizedBox で間隔を管理しているため、既定の外側余白は持たせない。
       margin: EdgeInsets.zero,
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(_cardCornerRadius),
-        side: BorderSide(color: cardOutlineColor),
+        borderRadius: BorderRadius.circular(YorimitiNeumorphicTheme.cardRadius),
+      ),
+    ),
+    appBarTheme: AppBarTheme(
+      backgroundColor: surfaceColor,
+      surfaceTintColor: Colors.transparent,
+      elevation: 0,
+    ),
+    navigationBarTheme: NavigationBarThemeData(
+      backgroundColor: surfaceColor,
+      elevation: 0,
+      indicatorColor: colorScheme.primaryContainer,
+      indicatorShape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(YorimitiNeumorphicTheme.pillRadius),
+      ),
+    ),
+    chipTheme: ChipThemeData(
+      backgroundColor: Colors.transparent,
+      selectedColor: Colors.transparent,
+      disabledColor: Colors.transparent,
+      surfaceTintColor: Colors.transparent,
+      showCheckmark: false,
+      side: BorderSide.none,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(YorimitiNeumorphicTheme.chipRadius),
+      ),
+    ),
+    filledButtonTheme: FilledButtonThemeData(
+      style: FilledButton.styleFrom(
+        minimumSize: const Size(0, 48),
+        elevation: 0,
+        shape: roundedButtonShape,
+      ),
+    ),
+    outlinedButtonTheme: OutlinedButtonThemeData(
+      style: OutlinedButton.styleFrom(
+        minimumSize: const Size(0, 48),
+        elevation: 0,
+        backgroundColor: surfaceColor,
+        side: BorderSide.none,
+        shape: roundedButtonShape,
+      ),
+    ),
+    segmentedButtonTheme: SegmentedButtonThemeData(
+      style: ButtonStyle(
+        side: const WidgetStatePropertyAll(BorderSide.none),
+        backgroundColor: WidgetStateProperty.resolveWith((states) {
+          return states.contains(WidgetState.selected)
+              ? colorScheme.primaryContainer
+              : Colors.transparent;
+        }),
+      ),
+    ),
+    dialogTheme: DialogThemeData(
+      backgroundColor: surfaceColor,
+      surfaceTintColor: Colors.transparent,
+      elevation: 0,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(YorimitiNeumorphicTheme.heroRadius),
+      ),
+    ),
+    bottomSheetTheme: BottomSheetThemeData(
+      backgroundColor: surfaceColor,
+      surfaceTintColor: Colors.transparent,
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(
+          top: Radius.circular(YorimitiNeumorphicTheme.heroRadius),
+        ),
       ),
     ),
   );
@@ -164,9 +245,7 @@ class _OnboardingGateState extends State<OnboardingGate> {
   Widget build(BuildContext context) {
     final settings = _settings;
     if (settings == null) {
-      return const Scaffold(
-        body: Center(child: CircularProgressIndicator()),
-      );
+      return const Scaffold(body: Center(child: CircularProgressIndicator()));
     }
 
     if (!settings.firstLaunchCompleted) {
@@ -215,8 +294,8 @@ class _OnboardingFlowState extends State<OnboardingFlow> {
   Future<void> _complete(NotificationPermissionChoice choice) async {
     var isNotificationEnabled = false;
     if (choice == NotificationPermissionChoice.allow) {
-      isNotificationEnabled =
-          await widget.notificationController.requestPermission();
+      isNotificationEnabled = await widget.notificationController
+          .requestPermission();
     }
 
     // 詳細設定は消さず、オンボーディングで選ばれなかったカテゴリの分だけ落とす。
@@ -313,9 +392,7 @@ class _AppShellState extends State<AppShell> {
     // ページはビルド時に組み立てる（タブ切替時に再生成され履歴も読み直される）。
     final pages = <Widget>[
       const SuggestionPage(),
-      HistoryPage(
-        onGoToSuggestions: () => setState(() => _currentIndex = 0),
-      ),
+      HistoryPage(onGoToSuggestions: () => setState(() => _currentIndex = 0)),
       SettingsPage(notificationController: _notificationController),
     ];
 
@@ -329,28 +406,30 @@ class _AppShellState extends State<AppShell> {
           ),
         ),
       ),
-      bottomNavigationBar: NavigationBar(
-        selectedIndex: _currentIndex,
-        onDestinationSelected: (index) {
-          setState(() => _currentIndex = index);
-        },
-        destinations: const [
-          NavigationDestination(
-            icon: Icon(Icons.lightbulb_outline),
-            selectedIcon: Icon(Icons.lightbulb),
-            label: '提案',
-          ),
-          NavigationDestination(
-            icon: Icon(Icons.history_outlined),
-            selectedIcon: Icon(Icons.history),
-            label: '履歴',
-          ),
-          NavigationDestination(
-            icon: Icon(Icons.settings_outlined),
-            selectedIcon: Icon(Icons.settings),
-            label: '設定',
-          ),
-        ],
+      bottomNavigationBar: NeumorphicNavigationSurface(
+        child: NavigationBar(
+          selectedIndex: _currentIndex,
+          onDestinationSelected: (index) {
+            setState(() => _currentIndex = index);
+          },
+          destinations: const [
+            NavigationDestination(
+              icon: Icon(Icons.lightbulb_outline),
+              selectedIcon: Icon(Icons.lightbulb),
+              label: '提案',
+            ),
+            NavigationDestination(
+              icon: Icon(Icons.history_outlined),
+              selectedIcon: Icon(Icons.history),
+              label: '履歴',
+            ),
+            NavigationDestination(
+              icon: Icon(Icons.settings_outlined),
+              selectedIcon: Icon(Icons.settings),
+              label: '設定',
+            ),
+          ],
+        ),
       ),
     );
   }

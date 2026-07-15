@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../models/suggestion_record.dart';
+import 'neumorphic_surface.dart';
 
 /// 完了モーダル（仕様書 3.6）を表示する。
 /// 「履歴に保存」で選択中のフィードバックを返し、
@@ -69,23 +70,29 @@ class _CompletionModalState extends State<CompletionModal> {
             runSpacing: 10,
             children: [
               for (final choice in _feedbackChoices)
-                ChoiceChip(
-                  label: Text('${choice.emoji} ${choice.label}'),
-                  selected: _selectedFeedback == choice.feedback,
-                  onSelected: (_) {
-                    setState(() => _selectedFeedback = choice.feedback);
-                  },
+                NeumorphicChipFrame(
+                  isSelected: _selectedFeedback == choice.feedback,
+                  child: ChoiceChip(
+                    label: Text('${choice.emoji} ${choice.label}'),
+                    selected: _selectedFeedback == choice.feedback,
+                    onSelected: (_) {
+                      setState(() => _selectedFeedback = choice.feedback);
+                    },
+                  ),
                 ),
             ],
           ),
           const SizedBox(height: 24),
           SizedBox(
             width: double.infinity,
-            child: FilledButton(
-              onPressed: () {
-                Navigator.of(context).pop(_selectedFeedback);
-              },
-              child: const Text('履歴に保存'),
+            child: NeumorphicButtonFrame(
+              isPrimary: true,
+              child: FilledButton(
+                onPressed: () {
+                  Navigator.of(context).pop(_selectedFeedback);
+                },
+                child: const Text('履歴に保存'),
+              ),
             ),
           ),
         ],

@@ -5,13 +5,12 @@ import '../features/notifications/notification_service.dart';
 import '../models/user_settings.dart';
 import '../repositories/records_repository.dart';
 import '../repositories/settings_repository.dart';
+import '../widgets/neumorphic_surface.dart';
 import '../widgets/section_card.dart';
 import 'suggestion_settings_page.dart';
 
-typedef NotificationTimePicker = Future<TimeOfDay?> Function(
-  BuildContext context,
-  TimeOfDay initialTime,
-);
+typedef NotificationTimePicker =
+    Future<TimeOfDay?> Function(BuildContext context, TimeOfDay initialTime);
 
 /// 設定タブ。
 /// UI プロトタイプの「03 設定」に対応する。
@@ -74,9 +73,9 @@ class _SettingsPageState extends State<SettingsPage> {
     setState(() {
       _showDeleteConfirm = false;
     });
-    ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(content: Text('履歴を削除しました')),
-    );
+    ScaffoldMessenger.of(
+      context,
+    ).showSnackBar(const SnackBar(content: Text('履歴を削除しました')));
   }
 
   @override
@@ -89,10 +88,7 @@ class _SettingsPageState extends State<SettingsPage> {
           style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
         ),
         const SizedBox(height: 4),
-        const Text(
-          '興味カテゴリ、通知時間帯、履歴を管理します。',
-          style: TextStyle(fontSize: 14),
-        ),
+        const Text('興味カテゴリ、通知時間帯、履歴を管理します。', style: TextStyle(fontSize: 14)),
         const SizedBox(height: 16),
         _buildSuggestionSettingsCard(),
         const SizedBox(height: 12),
@@ -111,7 +107,7 @@ class _SettingsPageState extends State<SettingsPage> {
   }
 
   Widget _buildSuggestionSettingsCard() {
-    return Card(
+    return NeumorphicSurface(
       child: Padding(
         padding: const EdgeInsets.all(20),
         child: Column(
@@ -126,9 +122,11 @@ class _SettingsPageState extends State<SettingsPage> {
             const SizedBox(height: 12),
             Align(
               alignment: Alignment.centerRight,
-              child: OutlinedButton(
-                onPressed: _openSuggestionSettings,
-                child: const Text('提案設定を開く'),
+              child: NeumorphicButtonFrame(
+                child: OutlinedButton(
+                  onPressed: _openSuggestionSettings,
+                  child: const Text('提案設定を開く'),
+                ),
               ),
             ),
           ],
@@ -140,9 +138,8 @@ class _SettingsPageState extends State<SettingsPage> {
   Future<void> _openSuggestionSettings() async {
     await Navigator.of(context).push(
       MaterialPageRoute<void>(
-        builder: (_) => SuggestionSettingsPage(
-          settingsRepository: _settingsRepository,
-        ),
+        builder: (_) =>
+            SuggestionSettingsPage(settingsRepository: _settingsRepository),
       ),
     );
     if (!mounted) {
@@ -155,7 +152,7 @@ class _SettingsPageState extends State<SettingsPage> {
   Widget _buildThemeCard() {
     final colorScheme = Theme.of(context).colorScheme;
 
-    return Card(
+    return NeumorphicSurface(
       child: Padding(
         padding: const EdgeInsets.all(20),
         child: Column(
@@ -176,27 +173,29 @@ class _SettingsPageState extends State<SettingsPage> {
             const SizedBox(height: 12),
             SizedBox(
               width: double.infinity,
-              child: SegmentedButton<ThemeModeSetting>(
-                segments: const [
-                  ButtonSegment(
-                    value: ThemeModeSetting.system,
-                    label: Text('システム'),
-                  ),
-                  ButtonSegment(
-                    value: ThemeModeSetting.light,
-                    label: Text('ライト'),
-                    icon: Icon(Icons.light_mode_outlined),
-                  ),
-                  ButtonSegment(
-                    value: ThemeModeSetting.dark,
-                    label: Text('ダーク'),
-                    icon: Icon(Icons.dark_mode_outlined),
-                  ),
-                ],
-                selected: {_settings.themeMode},
-                onSelectionChanged: (selection) {
-                  _updateThemeMode(selection.first);
-                },
+              child: NeumorphicRecessedSurface(
+                child: SegmentedButton<ThemeModeSetting>(
+                  segments: const [
+                    ButtonSegment(
+                      value: ThemeModeSetting.system,
+                      label: Text('システム'),
+                    ),
+                    ButtonSegment(
+                      value: ThemeModeSetting.light,
+                      label: Text('ライト'),
+                      icon: Icon(Icons.light_mode_outlined),
+                    ),
+                    ButtonSegment(
+                      value: ThemeModeSetting.dark,
+                      label: Text('ダーク'),
+                      icon: Icon(Icons.dark_mode_outlined),
+                    ),
+                  ],
+                  selected: {_settings.themeMode},
+                  onSelectionChanged: (selection) {
+                    _updateThemeMode(selection.first);
+                  },
+                ),
               ),
             ),
           ],
@@ -214,9 +213,9 @@ class _SettingsPageState extends State<SettingsPage> {
       if (!mounted) {
         return;
       }
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('テーマ設定を保存できませんでした')),
-      );
+      ScaffoldMessenger.of(
+        context,
+      ).showSnackBar(const SnackBar(content: Text('テーマ設定を保存できませんでした')));
       return;
     }
 
@@ -232,7 +231,7 @@ class _SettingsPageState extends State<SettingsPage> {
   Widget _buildNotificationCard() {
     final colorScheme = Theme.of(context).colorScheme;
 
-    return Card(
+    return NeumorphicSurface(
       child: Padding(
         padding: const EdgeInsets.all(20),
         child: Column(
@@ -248,8 +247,9 @@ class _SettingsPageState extends State<SettingsPage> {
                 ),
                 Switch(
                   value: _settings.notificationEnabled,
-                  onChanged:
-                      _isNotificationSaving ? null : _updateNotificationEnabled,
+                  onChanged: _isNotificationSaving
+                      ? null
+                      : _updateNotificationEnabled,
                 ),
               ],
             ),
@@ -270,11 +270,14 @@ class _SettingsPageState extends State<SettingsPage> {
                     style: const TextStyle(fontWeight: FontWeight.w600),
                   ),
                 ),
-                OutlinedButton(
-                  onPressed: _isNotificationSaving
-                      ? null
-                      : _pickNotificationStartTime,
-                  child: const Text('変更'),
+                NeumorphicButtonFrame(
+                  isEnabled: !_isNotificationSaving,
+                  child: OutlinedButton(
+                    onPressed: _isNotificationSaving
+                        ? null
+                        : _pickNotificationStartTime,
+                    child: const Text('変更'),
+                  ),
                 ),
               ],
             ),
@@ -287,10 +290,14 @@ class _SettingsPageState extends State<SettingsPage> {
                     style: const TextStyle(fontWeight: FontWeight.w600),
                   ),
                 ),
-                OutlinedButton(
-                  onPressed:
-                      _isNotificationSaving ? null : _pickNotificationEndTime,
-                  child: const Text('変更'),
+                NeumorphicButtonFrame(
+                  isEnabled: !_isNotificationSaving,
+                  child: OutlinedButton(
+                    onPressed: _isNotificationSaving
+                        ? null
+                        : _pickNotificationEndTime,
+                    child: const Text('変更'),
+                  ),
                 ),
               ],
             ),
@@ -325,7 +332,9 @@ class _SettingsPageState extends State<SettingsPage> {
       return;
     }
 
-    final endMinutes = _notificationTimeToMinutes(_settings.notificationEndTime);
+    final endMinutes = _notificationTimeToMinutes(
+      _settings.notificationEndTime,
+    );
     if (_timeOfDayToMinutes(pickedTime) > endMinutes) {
       _showRangeValidationError('開始時刻は終了時刻より後にできません');
       return;
@@ -346,8 +355,9 @@ class _SettingsPageState extends State<SettingsPage> {
       return;
     }
 
-    final startMinutes =
-        _notificationTimeToMinutes(_settings.notificationStartTime);
+    final startMinutes = _notificationTimeToMinutes(
+      _settings.notificationStartTime,
+    );
     if (_timeOfDayToMinutes(pickedTime) < startMinutes) {
       _showRangeValidationError('終了時刻は開始時刻より前にできません');
       return;
@@ -362,25 +372,31 @@ class _SettingsPageState extends State<SettingsPage> {
     if (!mounted) {
       return;
     }
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(content: Text(message)),
-    );
+    ScaffoldMessenger.of(
+      context,
+    ).showSnackBar(SnackBar(content: Text(message)));
   }
 
   Future<TimeOfDay?> _showNotificationStartTimePicker(
     BuildContext context,
     TimeOfDay initialTime,
   ) {
-    return _showNotificationTimePicker(context, initialTime,
-        helpText: '通知開始時刻');
+    return _showNotificationTimePicker(
+      context,
+      initialTime,
+      helpText: '通知開始時刻',
+    );
   }
 
   Future<TimeOfDay?> _showNotificationEndTimePicker(
     BuildContext context,
     TimeOfDay initialTime,
   ) {
-    return _showNotificationTimePicker(context, initialTime,
-        helpText: '通知終了時刻');
+    return _showNotificationTimePicker(
+      context,
+      initialTime,
+      helpText: '通知終了時刻',
+    );
   }
 
   Future<TimeOfDay?> _showNotificationTimePicker(
@@ -412,9 +428,9 @@ class _SettingsPageState extends State<SettingsPage> {
       setState(() {
         _isNotificationSaving = false;
       });
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('通知設定を保存できませんでした')),
-      );
+      ScaffoldMessenger.of(
+        context,
+      ).showSnackBar(const SnackBar(content: Text('通知設定を保存できませんでした')));
       return;
     }
 
@@ -425,9 +441,9 @@ class _SettingsPageState extends State<SettingsPage> {
       _settings = settings;
       _isNotificationSaving = false;
     });
-    ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(content: Text('通知設定を保存しました')),
-    );
+    ScaffoldMessenger.of(
+      context,
+    ).showSnackBar(const SnackBar(content: Text('通知設定を保存しました')));
   }
 
   TimeOfDay _parseTimeOfDay(String source) {
@@ -455,7 +471,7 @@ class _SettingsPageState extends State<SettingsPage> {
   Widget _buildDeleteHistoryCard() {
     final colorScheme = Theme.of(context).colorScheme;
 
-    return Card(
+    return NeumorphicSurface(
       child: Padding(
         padding: const EdgeInsets.all(20),
         child: _showDeleteConfirm
@@ -516,24 +532,29 @@ class _SettingsPageState extends State<SettingsPage> {
         Row(
           children: [
             Expanded(
-              child: FilledButton.tonal(
-                onPressed: () {
-                  setState(() {
-                    _showDeleteConfirm = false;
-                  });
-                },
-                child: const Text('キャンセル'),
+              child: NeumorphicButtonFrame(
+                child: FilledButton.tonal(
+                  onPressed: () {
+                    setState(() {
+                      _showDeleteConfirm = false;
+                    });
+                  },
+                  child: const Text('キャンセル'),
+                ),
               ),
             ),
             const SizedBox(width: 10),
             Expanded(
-              child: FilledButton(
-                onPressed: _deleteAllRecords,
-                style: FilledButton.styleFrom(
-                  backgroundColor: colorScheme.error,
-                  foregroundColor: colorScheme.onError,
+              child: NeumorphicButtonFrame(
+                isPrimary: true,
+                child: FilledButton(
+                  onPressed: _deleteAllRecords,
+                  style: FilledButton.styleFrom(
+                    backgroundColor: colorScheme.error,
+                    foregroundColor: colorScheme.onError,
+                  ),
+                  child: const Text('削除する'),
                 ),
-                child: const Text('削除する'),
               ),
             ),
           ],

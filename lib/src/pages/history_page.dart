@@ -4,6 +4,7 @@ import '../features/records/record_summary.dart';
 import '../models/interest_category.dart';
 import '../models/suggestion_record.dart';
 import '../repositories/records_repository.dart';
+import '../widgets/neumorphic_surface.dart';
 
 /// 履歴タブ。仕様書 3.2 に対応する。
 /// サマリー（実施／スキップ／合計分）と新しい順の履歴一覧を表示し、
@@ -66,10 +67,7 @@ class _HistoryPageState extends State<HistoryPage> {
           style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
         ),
         const SizedBox(height: 4),
-        const Text(
-          '実施したよりみちと、スキップした提案を確認します。',
-          style: TextStyle(fontSize: 14),
-        ),
+        const Text('実施したよりみちと、スキップした提案を確認します。', style: TextStyle(fontSize: 14)),
         const SizedBox(height: 16),
         _buildSummaryCard(),
         const SizedBox(height: 24),
@@ -94,7 +92,7 @@ class _HistoryPageState extends State<HistoryPage> {
   Widget _buildSummaryCard() {
     final colorScheme = Theme.of(context).colorScheme;
 
-    return Card(
+    return NeumorphicSurface(
       child: Padding(
         padding: const EdgeInsets.symmetric(vertical: 20),
         child: Row(
@@ -149,15 +147,16 @@ class _HistoryPageState extends State<HistoryPage> {
   Widget _buildRecordRow(SuggestionRecord record) {
     final colorScheme = Theme.of(context).colorScheme;
     final isDone = record.status == SuggestionRecordStatus.done;
-    final iconBackground =
-        isDone ? colorScheme.primaryContainer : colorScheme.tertiaryContainer;
+    final iconBackground = isDone
+        ? colorScheme.primaryContainer
+        : colorScheme.tertiaryContainer;
     final accentColor = isDone
         ? colorScheme.onPrimaryContainer
         : colorScheme.onTertiaryContainer;
     final categoryLabel =
         InterestCategories.findById(record.category)?.label ?? record.category;
 
-    return Card(
+    return NeumorphicSurface(
       child: Padding(
         padding: const EdgeInsets.all(16),
         child: Row(
@@ -200,18 +199,21 @@ class _HistoryPageState extends State<HistoryPage> {
               ),
             ),
             const SizedBox(width: 8),
-            Container(
-              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
-              decoration: BoxDecoration(
-                color: iconBackground,
-                borderRadius: BorderRadius.circular(10),
-              ),
-              child: Text(
-                isDone ? '実施' : 'スキップ',
-                style: TextStyle(
-                  fontSize: 12,
-                  fontWeight: FontWeight.w600,
-                  color: accentColor,
+            NeumorphicChipFrame(
+              isSelected: true,
+              backgroundColor: iconBackground,
+              child: Padding(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 10,
+                  vertical: 4,
+                ),
+                child: Text(
+                  isDone ? '実施' : 'スキップ',
+                  style: TextStyle(
+                    fontSize: 12,
+                    fontWeight: FontWeight.w600,
+                    color: accentColor,
+                  ),
                 ),
               ),
             ),
@@ -223,7 +225,7 @@ class _HistoryPageState extends State<HistoryPage> {
 
   /// 空状態：サマリーは 0 表示のまま、提案タブへの導線を出す（仕様書 3.2）。
   Widget _buildEmptyState() {
-    return Card(
+    return NeumorphicSurface(
       child: Padding(
         padding: const EdgeInsets.all(20),
         child: Column(
@@ -236,9 +238,13 @@ class _HistoryPageState extends State<HistoryPage> {
             const SizedBox(height: 8),
             const Text('よりみちを実行すると、ここに記録されます。'),
             const SizedBox(height: 16),
-            FilledButton(
-              onPressed: widget.onGoToSuggestions,
-              child: const Text('提案を見てみる'),
+            NeumorphicButtonFrame(
+              isPrimary: true,
+              isEnabled: widget.onGoToSuggestions != null,
+              child: FilledButton(
+                onPressed: widget.onGoToSuggestions,
+                child: const Text('提案を見てみる'),
+              ),
             ),
           ],
         ),
