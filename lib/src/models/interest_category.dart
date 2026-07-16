@@ -82,7 +82,17 @@ class InterestCategories {
         DetailSettingGroup(
           id: 'genre',
           label: 'ジャンル',
-          options: ['泣ける', '笑える', '考えさせる'],
+          options: [
+            'アクション',
+            'コメディ',
+            'ドラマ',
+            'SF',
+            'サスペンス',
+            'ファンタジー',
+            '恋愛',
+            'アニメ',
+            'ミステリー',
+          ],
         ),
       ],
     ),
