@@ -9,6 +9,7 @@ import 'package:yorimiti_biyori/src/app/yorimiti_biyori_app.dart';
 import 'package:yorimiti_biyori/src/features/notifications/notification_service.dart';
 import 'package:yorimiti_biyori/src/models/suggestion_record.dart';
 import 'package:yorimiti_biyori/src/models/user_settings.dart';
+import 'package:yorimiti_biyori/src/pages/history_page.dart';
 import 'package:yorimiti_biyori/src/repositories/records_repository.dart';
 import 'package:yorimiti_biyori/src/repositories/settings_repository.dart';
 
@@ -96,9 +97,14 @@ void main() {
 
     expect(find.text('空いた時間に、小さなよりみちを。'), findsOneWidget);
 
+    // やってみる → 実施中カード → 完了 → フィードバックモーダル（issue #48）。
     final tryButton = find.widgetWithText(FilledButton, 'やってみる');
     await tester.scrollUntilVisible(tryButton, 100);
     await tester.tap(tryButton);
+    await tester.pumpAndSettle();
+    expect(find.text('実施中のよりみち'), findsOneWidget);
+
+    await tester.tap(find.widgetWithText(FilledButton, '完了'));
     await tester.pumpAndSettle();
     expect(find.text('おつかれさまです'), findsOneWidget);
 
@@ -224,6 +230,41 @@ void main() {
 
     await tester.pumpAndSettle();
     expect(find.byKey(const ValueKey<int>(1)), findsOneWidget);
+  });
+
+  testWidgets('完了時は履歴タブへ自動遷移し、保存した履歴IDをハイライト対象に渡す',
+      (tester) async {
+    tester.view.physicalSize = const Size(800, 2400);
+    tester.view.devicePixelRatio = 1.0;
+    addTearDown(tester.view.reset);
+
+    await tester.pumpWidget(const YorimitiBiyoriApp());
+    await tester.pumpAndSettle();
+
+    final tryButton = find.widgetWithText(FilledButton, 'やってみる');
+    await tester.scrollUntilVisible(tryButton, 100);
+    await tester.tap(tryButton);
+    await tester.pumpAndSettle();
+    await tester.tap(find.widgetWithText(FilledButton, '完了'));
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('🙂 普通'));
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('履歴に保存'));
+    await tester.pumpAndSettle();
+
+    expect(find.byKey(const ValueKey<String>('completion-history')), findsOneWidget);
+    expect(find.text('最近の履歴'), findsOneWidget);
+
+    final historyPage = tester.widget<HistoryPage>(find.byType(HistoryPage));
+    expect(historyPage.highlightedRecordId, isNotNull);
+
+    final appShellSwitcher = find.byWidgetPredicate((widget) {
+      return widget is AnimatedSwitcher && widget.child is KeyedSubtree;
+    });
+    expect(
+      tester.widget<AnimatedSwitcher>(appShellSwitcher).duration,
+      const Duration(milliseconds: 400),
+    );
   });
 
   testWidgets('履歴タブに切り替えると空状態が表示される', (WidgetTester tester) async {

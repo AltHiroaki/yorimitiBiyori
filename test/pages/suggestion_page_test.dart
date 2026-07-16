@@ -4,11 +4,13 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:yorimiti_biyori/src/models/ongoing_suggestion.dart';
 import 'package:yorimiti_biyori/src/models/suggestion_record.dart';
 import 'package:yorimiti_biyori/src/models/user_settings.dart';
 import 'package:yorimiti_biyori/src/pages/suggestion_page.dart';
 import 'package:yorimiti_biyori/src/pages/suggestion_settings_page.dart';
 import 'package:yorimiti_biyori/src/repositories/current_suggestion_repository.dart';
+import 'package:yorimiti_biyori/src/repositories/ongoing_suggestion_repository.dart';
 import 'package:yorimiti_biyori/src/repositories/records_repository.dart';
 import 'package:yorimiti_biyori/src/repositories/settings_repository.dart';
 import 'package:yorimiti_biyori/src/repositories/suggestion_repository.dart';
@@ -67,6 +69,26 @@ class _FakeCurrentSuggestionRepository implements CurrentSuggestionRepository {
   Future<void> clearCurrentSuggestion() async {
     currentSuggestionId = null;
     savedSuggestionIdLog.add(null);
+  }
+}
+
+/// 実施中よりみちをメモリ上で保持するテスト用フェイク。
+class _FakeOngoingSuggestionRepository implements OngoingSuggestionRepository {
+  _FakeOngoingSuggestionRepository([this.ongoing]);
+
+  OngoingSuggestion? ongoing;
+
+  @override
+  Future<OngoingSuggestion?> loadOngoingSuggestion() async => ongoing;
+
+  @override
+  Future<void> saveOngoingSuggestion(OngoingSuggestion ongoing) async {
+    this.ongoing = ongoing;
+  }
+
+  @override
+  Future<void> clearOngoingSuggestion() async {
+    ongoing = null;
   }
 }
 
@@ -130,6 +152,8 @@ Future<_FakeSettingsRepository> _pumpPage(
   bool failAssetLoad = false,
   _FakeRecordsRepository? recordsRepository,
   _FakeCurrentSuggestionRepository? currentSuggestionRepository,
+  _FakeOngoingSuggestionRepository? ongoingSuggestionRepository,
+  ValueChanged<String>? onSuggestionCompleted,
 }) async {
   // ListView の下部（案内カード等）まで描画されるよう縦長の画面にする。
   tester.view.physicalSize = const Size(800, 2400);
@@ -150,7 +174,10 @@ Future<_FakeSettingsRepository> _pumpPage(
           recordsRepository: recordsRepository ?? _FakeRecordsRepository(),
           currentSuggestionRepository: currentSuggestionRepository ??
               _FakeCurrentSuggestionRepository(),
+          ongoingSuggestionRepository:
+              ongoingSuggestionRepository ?? _FakeOngoingSuggestionRepository(),
           random: Random(0),
+          onSuggestionCompleted: onSuggestionCompleted,
         ),
       ),
     ),
@@ -310,8 +337,35 @@ void main() {
     expect(find.text('データの読み込みに失敗しました。再起動してください。'), findsOneWidget);
   });
 
-  testWidgets('やってみる→履歴に保存で done レコードが保存される', (tester) async {
+  testWidgets('やってみるで実施中カードに切り替わり、実施中状態が保存される', (tester) async {
+    final ongoingRepository = _FakeOngoingSuggestionRepository();
+    await _pumpPage(
+      tester,
+      suggestions: [
+        _suggestionJson(id: 'music_a', title: 'ジャズを1曲流す', tags: ['ジャズ']),
+      ],
+      settings: const UserSettings(selectedCategories: ['music']),
+      ongoingSuggestionRepository: ongoingRepository,
+    );
+
+    await tester.tap(find.text('やってみる'));
+    await tester.pumpAndSettle();
+
+    expect(find.text('実施中のよりみち'), findsOneWidget);
+    expect(find.text('ジャズを1曲流す'), findsOneWidget);
+    expect(find.text('完了'), findsOneWidget);
+    expect(find.text('スキップ'), findsOneWidget);
+    expect(find.text('やってみる'), findsNothing);
+    expect(find.text('別の提案'), findsNothing);
+    expect(ongoingRepository.ongoing, isNotNull);
+    expect(ongoingRepository.ongoing!.suggestionId, 'music_a');
+  });
+
+  testWidgets('実施中の完了→履歴に保存で done レコードが保存され、完了演出後に履歴IDが渡る',
+      (tester) async {
     final recordsRepository = _FakeRecordsRepository();
+    final ongoingRepository = _FakeOngoingSuggestionRepository();
+    String? completedRecordId;
     await _pumpPage(
       tester,
       suggestions: [
@@ -319,9 +373,13 @@ void main() {
       ],
       settings: const UserSettings(selectedCategories: ['music']),
       recordsRepository: recordsRepository,
+      ongoingSuggestionRepository: ongoingRepository,
+      onSuggestionCompleted: (recordId) => completedRecordId = recordId,
     );
 
     await tester.tap(find.text('やってみる'));
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('完了'));
     await tester.pumpAndSettle();
     expect(find.text('おつかれさまです'), findsOneWidget);
 
@@ -338,10 +396,16 @@ void main() {
     expect(savedRecord.estimatedMinutes, 5);
     expect(savedRecord.status, SuggestionRecordStatus.done);
     expect(savedRecord.feedback, SuggestionFeedback.normal);
+
+    // 実施中は解除され、保存した履歴 ID がタブ遷移側へ渡る。
+    expect(ongoingRepository.ongoing, isNull);
+    expect(completedRecordId, savedRecord.id);
+    expect(find.byType(SnackBar), findsNothing);
   });
 
-  testWidgets('完了モーダルを保存せず閉じると履歴は保存されない', (tester) async {
+  testWidgets('完了モーダルを保存せず閉じると履歴は保存されず実施中のまま', (tester) async {
     final recordsRepository = _FakeRecordsRepository();
+    final ongoingRepository = _FakeOngoingSuggestionRepository();
     await _pumpPage(
       tester,
       suggestions: [
@@ -349,15 +413,96 @@ void main() {
       ],
       settings: const UserSettings(selectedCategories: ['music']),
       recordsRepository: recordsRepository,
+      ongoingSuggestionRepository: ongoingRepository,
     );
 
     await tester.tap(find.text('やってみる'));
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('完了'));
     await tester.pumpAndSettle();
     // モーダル外（背景）をタップして閉じる。
     await tester.tapAt(const Offset(400, 20));
     await tester.pumpAndSettle();
 
     expect(recordsRepository.addedRecords, isEmpty);
+    expect(find.text('実施中のよりみち'), findsOneWidget);
+    expect(ongoingRepository.ongoing, isNotNull);
+  });
+
+  testWidgets('実施中のスキップで skipped が保存され、通常の提案表示に戻る', (tester) async {
+    final recordsRepository = _FakeRecordsRepository();
+    final ongoingRepository = _FakeOngoingSuggestionRepository();
+    await _pumpPage(
+      tester,
+      suggestions: [
+        _suggestionJson(id: 'music_a', title: 'ジャズを1曲流す', tags: ['ジャズ']),
+        _suggestionJson(id: 'music_b', title: 'ポップスを1曲流す', tags: ['ポップス']),
+      ],
+      settings: const UserSettings(selectedCategories: ['music']),
+      recordsRepository: recordsRepository,
+      ongoingSuggestionRepository: ongoingRepository,
+    );
+
+    await tester.tap(find.text('やってみる'));
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('スキップ'));
+    await tester.pumpAndSettle();
+
+    expect(recordsRepository.addedRecords, hasLength(1));
+    expect(
+      recordsRepository.addedRecords.single.status,
+      SuggestionRecordStatus.skipped,
+    );
+    expect(ongoingRepository.ongoing, isNull);
+    // 実施中カードが消え、通常の提案カード（やってみる／別の提案）に戻る。
+    expect(find.text('実施中のよりみち'), findsNothing);
+    expect(find.text('やってみる'), findsOneWidget);
+    expect(find.text('別の提案'), findsOneWidget);
+  });
+
+  testWidgets('保存済みの実施中状態が起動時に復元される', (tester) async {
+    final ongoingRepository = _FakeOngoingSuggestionRepository(
+      OngoingSuggestion(
+        suggestionId: 'music_a',
+        startedAt: DateTime(2026, 7, 15, 17, 30),
+      ),
+    );
+    await _pumpPage(
+      tester,
+      suggestions: [
+        _suggestionJson(id: 'music_a', title: 'ジャズを1曲流す', tags: ['ジャズ']),
+      ],
+      settings: const UserSettings(selectedCategories: ['music']),
+      ongoingSuggestionRepository: ongoingRepository,
+    );
+
+    expect(find.text('実施中のよりみち'), findsOneWidget);
+    expect(find.text('ジャズを1曲流す'), findsOneWidget);
+    expect(find.text('開始：17:30'), findsOneWidget);
+    expect(find.text('完了'), findsOneWidget);
+    expect(find.text('スキップ'), findsOneWidget);
+  });
+
+  testWidgets('実施中の提案IDが提案データに存在しない場合は実施中を解除して通常表示に戻る',
+      (tester) async {
+    final ongoingRepository = _FakeOngoingSuggestionRepository(
+      OngoingSuggestion(
+        suggestionId: 'deleted_id',
+        startedAt: DateTime(2026, 7, 15, 17, 30),
+      ),
+    );
+    await _pumpPage(
+      tester,
+      suggestions: [
+        _suggestionJson(id: 'music_a', title: 'ジャズを1曲流す', tags: ['ジャズ']),
+      ],
+      settings: const UserSettings(selectedCategories: ['music']),
+      ongoingSuggestionRepository: ongoingRepository,
+    );
+
+    expect(find.text('実施中のよりみち'), findsNothing);
+    expect(find.text('今日のよりみち'), findsOneWidget);
+    expect(ongoingRepository.ongoing, isNull);
   });
 
   testWidgets('別の提案でスキップが記録されてから再抽選される', (tester) async {
