@@ -306,9 +306,12 @@ class _SuggestionPageState extends State<SuggestionPage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                const Text(
-                  '現在の提案条件',
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                // 文字サイズ拡大時に折り返せるよう、タイトル側を可変幅にする。
+                const Expanded(
+                  child: Text(
+                    '現在の提案条件',
+                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                  ),
                 ),
                 TextButton(
                   onPressed: _openSuggestionSettings,
