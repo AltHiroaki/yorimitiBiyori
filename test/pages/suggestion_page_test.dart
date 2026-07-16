@@ -400,7 +400,8 @@ void main() {
     // 実施中は解除され、保存した履歴 ID がタブ遷移側へ渡る。
     expect(ongoingRepository.ongoing, isNull);
     expect(completedRecordId, savedRecord.id);
-    expect(find.byType(SnackBar), findsNothing);
+    // 保存成功のフィードバックとして SnackBar を表示する（issue #44）。
+    expect(find.text('履歴に保存しました'), findsOneWidget);
   });
 
   testWidgets('完了モーダルを保存せず閉じると履歴は保存されず実施中のまま', (tester) async {
@@ -527,6 +528,8 @@ void main() {
     expect(skippedRecord.suggestionId, firstWasA ? 'music_a' : 'music_b');
     expect(skippedRecord.status, SuggestionRecordStatus.skipped);
     expect(skippedRecord.feedback, isNull);
+    // スキップはカードの切り替わり自体がフィードバックのため SnackBar は出さない（issue #44）。
+    expect(find.text('履歴に保存しました'), findsNothing);
   });
 
   testWidgets('提案設定から戻ると条件が再読込されて表示に反映される', (tester) async {

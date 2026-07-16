@@ -242,9 +242,20 @@ class _SuggestionPageState extends State<SuggestionPage> {
 
   /// 実施中カードの完了：フィードバックを聞いて done として履歴に保存し、
   /// お祝いを表示して履歴タブへ移る。モーダルを閉じただけなら実施中のまま。
+  /// 保存の成否表示・保存中のボタン無効化はモーダル側が担う（issue #44）。
   Future<void> _onCompleteOngoing(Suggestion suggestion) async {
-    final feedback = await showCompletionModal(context);
-    if (feedback == null) {
+    final completedRecordId =
+        'record_${DateTime.now().microsecondsSinceEpoch}';
+    final saved = await showCompletionModal(
+      context,
+      onSave: (feedback) => _saveRecord(
+        suggestion,
+        status: SuggestionRecordStatus.done,
+        feedback: feedback,
+        recordId: completedRecordId,
+      ),
+    );
+    if (!mounted || saved != true) {
       return;
     }
 
@@ -252,17 +263,6 @@ class _SuggestionPageState extends State<SuggestionPage> {
     final historyDestinationCenter = _historyDestinationCenter();
     final disableAnimations =
         MediaQuery.maybeOf(context)?.disableAnimations ?? false;
-    final completedRecordId =
-        'record_${DateTime.now().microsecondsSinceEpoch}';
-    await _saveRecord(
-      suggestion,
-      status: SuggestionRecordStatus.done,
-      feedback: feedback,
-      recordId: completedRecordId,
-    );
-    if (!mounted) {
-      return;
-    }
 
     await showCompletionCheckOverlay(
       context: context,
