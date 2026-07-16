@@ -23,6 +23,11 @@ const Color _primaryContainerColor = Color(0xFFC2E8C0);
 const Color _darkPageBackgroundColor = Color(0xFF1D221C);
 const Color _darkSurfaceVariantColor = Color(0xFF242B23);
 
+const Duration _tabFadeDuration = Duration(milliseconds: 200);
+const Duration _completionNavigationDuration = Duration(milliseconds: 400);
+const ValueKey<String> _completionHistoryPageKey =
+    ValueKey<String>('completion-history');
+
 /// Issue #66 のニューモーフィズムトークンを集約したアプリテーマ。
 ThemeData buildYorimitiBiyoriTheme({Brightness brightness = Brightness.light}) {
   final baseColorScheme = ColorScheme.fromSeed(
@@ -359,16 +364,42 @@ class AppShell extends StatefulWidget {
   State<AppShell> createState() => _AppShellState();
 }
 
-class _AppShellState extends State<AppShell> {
+class _AppShellState extends State<AppShell>
+    with SingleTickerProviderStateMixin {
   late final NotificationController _notificationController;
+  late final AnimationController _historyImpactController;
+  late final Animation<double> _historyImpactScale;
+  final GlobalKey _historyDestinationKey = GlobalKey();
   int _currentIndex = 0;
+  bool _isCompletionNavigation = false;
+  String? _highlightedRecordId;
 
   @override
   void initState() {
     super.initState();
     _notificationController =
         widget.notificationController ?? NotificationService();
+    _historyImpactController = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 360),
+    );
+    _historyImpactScale = TweenSequence<double>([
+      TweenSequenceItem(tween: Tween(begin: 1, end: 1.18), weight: 45),
+      TweenSequenceItem(tween: Tween(begin: 1.18, end: 0.94), weight: 25),
+      TweenSequenceItem(tween: Tween(begin: 0.94, end: 1), weight: 30),
+    ]).animate(
+      CurvedAnimation(
+        parent: _historyImpactController,
+        curve: Curves.easeOut,
+      ),
+    );
     unawaited(_initializeNotifications());
+  }
+
+  @override
+  void dispose() {
+    _historyImpactController.dispose();
+    super.dispose();
   }
 
   Future<void> _initializeNotifications() async {
@@ -377,13 +408,52 @@ class _AppShellState extends State<AppShell> {
         if (!mounted) {
           return;
         }
-        setState(() {
-          _currentIndex = 0;
-        });
+        _selectTab(0);
       },
     );
     final settings = await SettingsRepository().loadSettings();
     await _notificationController.applySettings(settings);
+  }
+
+  void _selectTab(int index) {
+    if (index == _currentIndex) {
+      return;
+    }
+    setState(() {
+      _currentIndex = index;
+      _isCompletionNavigation = false;
+      _highlightedRecordId = null;
+    });
+  }
+
+  void _handleSuggestionCompleted(String recordId) {
+    if (!mounted) {
+      return;
+    }
+    setState(() {
+      _currentIndex = 1;
+      _isCompletionNavigation = true;
+      _highlightedRecordId = recordId;
+    });
+    _historyImpactController.forward(from: 0);
+  }
+
+  Widget _buildTabTransition(
+    Widget child,
+    Animation<double> animation,
+  ) {
+    final fadedChild = FadeTransition(opacity: animation, child: child);
+    if (child.key != _completionHistoryPageKey) {
+      return fadedChild;
+    }
+
+    final slideAnimation = Tween<Offset>(
+      begin: const Offset(0.12, 0),
+      end: Offset.zero,
+    ).animate(
+      CurvedAnimation(parent: animation, curve: Curves.easeOutCubic),
+    );
+    return SlideTransition(position: slideAnimation, child: fadedChild);
   }
 
   @override
@@ -391,17 +461,30 @@ class _AppShellState extends State<AppShell> {
     // 履歴の空状態から提案タブへ切り替えられるようコールバックを渡すため、
     // ページはビルド時に組み立てる（タブ切替時に再生成され履歴も読み直される）。
     final pages = <Widget>[
-      const SuggestionPage(),
-      HistoryPage(onGoToSuggestions: () => setState(() => _currentIndex = 0)),
+      SuggestionPage(
+        historyDestinationKey: _historyDestinationKey,
+        onSuggestionCompleted: _handleSuggestionCompleted,
+      ),
+      HistoryPage(
+        highlightedRecordId: _highlightedRecordId,
+        onGoToSuggestions: () => _selectTab(0),
+        onSuggestionRevived: () => _selectTab(0),
+      ),
       SettingsPage(notificationController: _notificationController),
     ];
+    final pageKey = _isCompletionNavigation
+        ? _completionHistoryPageKey
+        : ValueKey<int>(_currentIndex);
 
     return Scaffold(
       body: SafeArea(
         child: AnimatedSwitcher(
-          duration: const Duration(milliseconds: 200),
+          duration: _isCompletionNavigation
+              ? _completionNavigationDuration
+              : _tabFadeDuration,
+          transitionBuilder: _buildTabTransition,
           child: KeyedSubtree(
-            key: ValueKey(_currentIndex),
+            key: pageKey,
             child: pages[_currentIndex],
           ),
         ),
@@ -409,21 +492,25 @@ class _AppShellState extends State<AppShell> {
       bottomNavigationBar: NeumorphicNavigationSurface(
         child: NavigationBar(
           selectedIndex: _currentIndex,
-          onDestinationSelected: (index) {
-            setState(() => _currentIndex = index);
-          },
-          destinations: const [
-            NavigationDestination(
+          onDestinationSelected: _selectTab,
+          destinations: [
+            const NavigationDestination(
               icon: Icon(Icons.lightbulb_outline),
               selectedIcon: Icon(Icons.lightbulb),
               label: '提案',
             ),
             NavigationDestination(
-              icon: Icon(Icons.history_outlined),
-              selectedIcon: Icon(Icons.history),
+              icon: KeyedSubtree(
+                key: _historyDestinationKey,
+                child: const Icon(Icons.history_outlined),
+              ),
+              selectedIcon: ScaleTransition(
+                scale: _historyImpactScale,
+                child: const Icon(Icons.history),
+              ),
               label: '履歴',
             ),
-            NavigationDestination(
+            const NavigationDestination(
               icon: Icon(Icons.settings_outlined),
               selectedIcon: Icon(Icons.settings),
               label: '設定',

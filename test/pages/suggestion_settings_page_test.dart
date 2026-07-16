@@ -137,7 +137,7 @@ void main() {
             'genre': ['ジャズ'],
           },
           'movie': {
-            'mood': ['泣ける'],
+            'genre': ['ドラマ'],
           },
         },
       ),
@@ -176,6 +176,77 @@ void main() {
     expect(jazzChip.selected, isFalse);
     // リセットだけでは保存されない。
     expect(repository.savedSettingsLog, isEmpty);
+  });
+
+  testWidgets('興味カテゴリに必須マーク（赤い *）が表示される', (tester) async {
+    await _pumpPage(
+      tester,
+      const UserSettings(selectedCategories: ['music']),
+    );
+
+    expect(find.text('興味カテゴリ *', findRichText: true), findsOneWidget);
+  });
+
+  testWidgets('カテゴリを0件にすると保存が無効になり、必須メッセージが表示される', (tester) async {
+    final repository = await _pumpPage(
+      tester,
+      const UserSettings(selectedCategories: ['music']),
+    );
+
+    await tester.tap(find.widgetWithText(FilterChip, '🎵 音楽'));
+    await tester.pumpAndSettle();
+
+    expect(find.text('1つ以上選択してください（必須）'), findsOneWidget);
+    expect(find.text('0つ選択中'), findsNothing);
+
+    final saveButton = tester.widget<FilledButton>(
+      find.widgetWithText(FilledButton, 'この条件で保存'),
+    );
+    expect(saveButton.onPressed, isNull);
+
+    // 無効なボタンはタップしても保存されない。
+    await tester.tap(find.text('この条件で保存'), warnIfMissed: false);
+    await tester.pumpAndSettle();
+    expect(repository.savedSettingsLog, isEmpty);
+
+    // 1件選び直すと保存が有効に戻る。
+    await tester.tap(find.widgetWithText(FilterChip, '🎵 音楽'));
+    await tester.pumpAndSettle();
+    expect(find.text('1つ選択中'), findsOneWidget);
+    expect(
+      tester
+          .widget<FilledButton>(
+            find.widgetWithText(FilledButton, 'この条件で保存'),
+          )
+          .onPressed,
+      isNotNull,
+    );
+  });
+
+  testWidgets('すべて選択で全カテゴリが選択され、すべて解除で0件になる', (tester) async {
+    await _pumpPage(
+      tester,
+      const UserSettings(selectedCategories: ['music']),
+    );
+
+    await tester.tap(find.text('すべて選択'));
+    await tester.pumpAndSettle();
+
+    expect(find.text('4つ選択中'), findsOneWidget);
+    for (final label in ['🎵 音楽', '🍳 料理', '📖 読書', '🎬 映画']) {
+      final chip = tester.widget<FilterChip>(
+        find.widgetWithText(FilterChip, label),
+      );
+      expect(chip.selected, isTrue, reason: '$label が選択されているはず');
+    }
+
+    // 全選択中はボタンが「すべて解除」に切り替わる。
+    expect(find.text('すべて選択'), findsNothing);
+    await tester.tap(find.text('すべて解除'));
+    await tester.pumpAndSettle();
+
+    expect(find.text('1つ以上選択してください（必須）'), findsOneWidget);
+    expect(find.text('すべて選択'), findsOneWidget);
   });
 
   testWidgets('保存すると画面が閉じる', (tester) async {

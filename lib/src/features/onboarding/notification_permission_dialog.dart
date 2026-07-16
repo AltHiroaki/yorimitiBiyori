@@ -37,15 +37,18 @@ class NotificationPermissionDialog extends StatelessWidget {
             const SizedBox(height: 16),
             const Text('空き時間に、小さな行動の提案をお届けします。通知はあとから設定で変更できます。'),
             const SizedBox(height: 24),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.end,
+            // 文字サイズ最大でもあふれないよう、収まらないときは縦積みにする。
+            OverflowBar(
+              alignment: MainAxisAlignment.end,
+              overflowAlignment: OverflowBarAlignment.end,
+              spacing: 8,
+              overflowSpacing: 8,
               children: [
                 TextButton(
                   onPressed: () =>
                       onSelected(NotificationPermissionChoice.later),
                   child: const Text('あとで'),
                 ),
-                const SizedBox(width: 8),
                 NeumorphicButtonFrame(
                   isPrimary: true,
                   child: FilledButton(
