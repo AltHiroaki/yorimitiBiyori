@@ -64,6 +64,22 @@ class _SuggestionSettingsPageState extends State<SuggestionSettingsPage> {
     });
   }
 
+  bool get _areAllCategoriesSelected =>
+      _selectedCategoryIds.length == InterestCategories.all.length;
+
+  /// 全カテゴリの一括選択／一括解除（issue #50）。
+  void _toggleSelectAllCategories() {
+    setState(() {
+      if (_areAllCategoriesSelected) {
+        _selectedCategoryIds.clear();
+      } else {
+        _selectedCategoryIds.addAll([
+          for (final category in InterestCategories.all) category.id,
+        ]);
+      }
+    });
+  }
+
   void _toggleDetailValue(String categoryId, String groupId, String value) {
     setState(() {
       final groupSelections = _detailSelections
@@ -150,7 +166,11 @@ class _SuggestionSettingsPageState extends State<SuggestionSettingsPage> {
               SizedBox(
                 width: double.infinity,
                 child: FilledButton(
-                  onPressed: _loadedSettings == null ? null : _save,
+                  // 興味カテゴリは必須のため、0件のときは保存できない（issue #50）。
+                  onPressed:
+                      (_loadedSettings == null || _selectedCategoryIds.isEmpty)
+                          ? null
+                          : _save,
                   child: const Text('この条件で保存'),
                 ),
               ),
@@ -165,19 +185,41 @@ class _SuggestionSettingsPageState extends State<SuggestionSettingsPage> {
     );
   }
 
-  /// 第 1 段階：興味カテゴリの複数選択。
+  /// 第 1 段階：興味カテゴリの複数選択（必須・一括選択付き。issue #50）。
   Widget _buildCategoryCard() {
+    final colorScheme = Theme.of(context).colorScheme;
+    const titleStyle = TextStyle(fontSize: 18, fontWeight: FontWeight.bold);
+
     return Card(
       child: Padding(
-        padding: const EdgeInsets.all(20),
+        padding: const EdgeInsets.fromLTRB(20, 12, 12, 20),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text(
-              '興味カテゴリ',
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            Row(
+              children: [
+                Expanded(
+                  // Google フォーム風の必須マーク（赤い * ）を添える。
+                  child: Text.rich(
+                    TextSpan(
+                      text: '興味カテゴリ',
+                      style: titleStyle,
+                      children: [
+                        TextSpan(
+                          text: ' *',
+                          style: titleStyle.copyWith(color: colorScheme.error),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                TextButton(
+                  onPressed: _toggleSelectAllCategories,
+                  child: Text(_areAllCategoriesSelected ? 'すべて解除' : 'すべて選択'),
+                ),
+              ],
             ),
-            const SizedBox(height: 12),
+            const SizedBox(height: 8),
             Wrap(
               spacing: 8,
               runSpacing: 8,
@@ -191,7 +233,13 @@ class _SuggestionSettingsPageState extends State<SuggestionSettingsPage> {
               ],
             ),
             const SizedBox(height: 12),
-            Text('${_selectedCategoryIds.length}つ選択中'),
+            if (_selectedCategoryIds.isEmpty)
+              Text(
+                '1つ以上選択してください（必須）',
+                style: TextStyle(color: colorScheme.error),
+              )
+            else
+              Text('${_selectedCategoryIds.length}つ選択中'),
           ],
         ),
       ),
