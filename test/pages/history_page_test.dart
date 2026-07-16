@@ -55,7 +55,13 @@ class _FakeAssetBundle extends AssetBundle {
   final String? source;
 
   @override
-  Future<ByteData> load(String key) async => throw UnimplementedError();
+  Future<ByteData> load(String key) async {
+    final source = this.source;
+    if (source == null) {
+      throw FlutterError('asset load failed: $key');
+    }
+    return ByteData.sublistView(Uint8List.fromList(utf8.encode(source)));
+  }
 
   @override
   Future<String> loadString(String key, {bool cache = true}) async {
