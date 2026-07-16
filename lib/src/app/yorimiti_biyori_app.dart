@@ -388,6 +388,7 @@ class _AppShellState extends State<AppShell>
       HistoryPage(
         highlightedRecordId: _highlightedRecordId,
         onGoToSuggestions: () => _selectTab(0),
+        onSuggestionRevived: () => _selectTab(0),
       ),
       SettingsPage(notificationController: _notificationController),
     ];
