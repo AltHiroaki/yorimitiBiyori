@@ -17,7 +17,12 @@ class SuggestionRepository {
   final String assetPath;
 
   Future<List<Suggestion>> loadSuggestions() async {
-    final source = await _assetBundle.loadString(assetPath);
+    // AssetBundle.loadString はデータが50KBを超えると UTF-8 デコードを
+    // 別 isolate（compute）に逃がす。件数が増えて閾値を超えると、ウィジェット
+    // テストの pump（実イベントループを回さない）内では isolate からの応答を
+    // 待てず固まってしまうため、ここでは常にメインisolateでデコードする。
+    final data = await _assetBundle.load(assetPath);
+    final source = utf8.decode(Uint8List.sublistView(data));
     return parseSuggestionsJson(source);
   }
 }
