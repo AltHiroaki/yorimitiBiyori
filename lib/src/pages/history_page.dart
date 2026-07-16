@@ -2,8 +2,16 @@ import 'package:flutter/material.dart';
 
 import '../features/records/record_summary.dart';
 import '../models/interest_category.dart';
+import '../models/ongoing_suggestion.dart';
+import '../models/suggestion.dart';
 import '../models/suggestion_record.dart';
+import '../repositories/ongoing_suggestion_repository.dart';
 import '../repositories/records_repository.dart';
+import '../repositories/suggestion_repository.dart';
+import '../widgets/revive_suggestion_modals.dart';
+
+const Duration historyNewRecordHighlightDuration =
+    Duration(milliseconds: 1500);
 
 /// 履歴タブ。仕様書 3.2 に対応する。
 /// サマリー（実施／スキップ／合計分）と新しい順の履歴一覧を表示し、
@@ -12,14 +20,26 @@ class HistoryPage extends StatefulWidget {
   const HistoryPage({
     super.key,
     this.recordsRepository,
+    this.suggestionRepository,
+    this.ongoingSuggestionRepository,
     this.onGoToSuggestions,
+    this.onSuggestionRevived,
+    this.highlightedRecordId,
   });
 
   /// テスト用に差し替え可能。null なら通常の repository を使う。
   final RecordsRepository? recordsRepository;
+  final SuggestionRepository? suggestionRepository;
+  final OngoingSuggestionRepository? ongoingSuggestionRepository;
 
   /// 空状態の「提案を見てみる」で提案タブへ切り替えるためのコールバック。
   final VoidCallback? onGoToSuggestions;
+
+  /// スキップした提案を実施中に戻した後、提案タブへ切り替える。
+  final VoidCallback? onSuggestionRevived;
+
+  /// 完了フローで保存した直後に背景色を強調する履歴 ID。
+  final String? highlightedRecordId;
 
   @override
   State<HistoryPage> createState() => _HistoryPageState();
@@ -27,8 +47,11 @@ class HistoryPage extends StatefulWidget {
 
 class _HistoryPageState extends State<HistoryPage> {
   late final RecordsRepository _recordsRepository;
+  late final SuggestionRepository _suggestionRepository;
+  late final OngoingSuggestionRepository _ongoingSuggestionRepository;
 
   bool _isLoading = true;
+  bool _isReviveFlowOpen = false;
   List<SuggestionRecord> _newestFirstRecords = const [];
   RecordSummary _summary = summarizeRecords(const []);
 
@@ -36,6 +59,10 @@ class _HistoryPageState extends State<HistoryPage> {
   void initState() {
     super.initState();
     _recordsRepository = widget.recordsRepository ?? RecordsRepository();
+    _suggestionRepository =
+        widget.suggestionRepository ?? SuggestionRepository();
+    _ongoingSuggestionRepository =
+        widget.ongoingSuggestionRepository ?? OngoingSuggestionRepository();
     _loadRecords();
   }
 
@@ -50,6 +77,90 @@ class _HistoryPageState extends State<HistoryPage> {
       _summary = summarizeRecords(records);
       _isLoading = false;
     });
+  }
+
+  Future<void> _openReviveFlow(SuggestionRecord record) async {
+    if (_isReviveFlowOpen ||
+        record.status != SuggestionRecordStatus.skipped) {
+      return;
+    }
+
+    setState(() {
+      _isReviveFlowOpen = true;
+    });
+    try {
+      final suggestions = await _suggestionRepository.loadSuggestions();
+      if (!mounted) {
+        return;
+      }
+      final suggestion = _findSuggestionById(
+        suggestions,
+        record.suggestionId,
+      );
+      if (suggestion == null) {
+        await showReviveSuggestionUnavailableDialog(context: context);
+        return;
+      }
+
+      final shouldTry = await showReviveSuggestionDetailDialog(
+        context: context,
+        suggestion: suggestion,
+      );
+      if (!mounted || !shouldTry) {
+        return;
+      }
+
+      final ongoingSuggestion =
+          await _ongoingSuggestionRepository.loadOngoingSuggestion();
+      if (!mounted) {
+        return;
+      }
+      final shouldRevive = await showReviveSuggestionConfirmDialog(
+        context: context,
+        suggestion: suggestion,
+        hasOngoingSuggestion: ongoingSuggestion != null,
+      );
+      if (!mounted || !shouldRevive) {
+        return;
+      }
+
+      await _ongoingSuggestionRepository.saveOngoingSuggestion(
+        OngoingSuggestion(
+          suggestionId: suggestion.id,
+          startedAt: DateTime.now(),
+        ),
+      );
+      if (!mounted) {
+        return;
+      }
+      widget.onSuggestionRevived?.call();
+    } catch (_) {
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(
+            content: Text('提案を復活できませんでした。もう一度お試しください。'),
+          ),
+        );
+      }
+    } finally {
+      if (mounted) {
+        setState(() {
+          _isReviveFlowOpen = false;
+        });
+      }
+    }
+  }
+
+  Suggestion? _findSuggestionById(
+    List<Suggestion> suggestions,
+    String suggestionId,
+  ) {
+    for (final suggestion in suggestions) {
+      if (suggestion.id == suggestionId) {
+        return suggestion;
+      }
+    }
+    return null;
   }
 
   @override
@@ -147,6 +258,32 @@ class _HistoryPageState extends State<HistoryPage> {
 
   /// 履歴 1 行：ステータスアイコン・タイトル・日付とカテゴリ・所要時間・バッジ。
   Widget _buildRecordRow(SuggestionRecord record) {
+    if (record.id != widget.highlightedRecordId) {
+      return _buildRecordCard(record);
+    }
+
+    final theme = Theme.of(context);
+    final normalCardColor =
+        theme.cardTheme.color ?? theme.colorScheme.surfaceContainerLow;
+    return TweenAnimationBuilder<double>(
+      duration: historyNewRecordHighlightDuration,
+      curve: Curves.easeOutCubic,
+      tween: Tween(begin: 0, end: 1),
+      builder: (context, progress, _) {
+        final backgroundColor = Color.lerp(
+          theme.colorScheme.primaryContainer,
+          normalCardColor,
+          progress,
+        );
+        return _buildRecordCard(record, backgroundColor: backgroundColor);
+      },
+    );
+  }
+
+  Widget _buildRecordCard(
+    SuggestionRecord record, {
+    Color? backgroundColor,
+  }) {
     final colorScheme = Theme.of(context).colorScheme;
     final isDone = record.status == SuggestionRecordStatus.done;
     final iconBackground =
@@ -158,64 +295,83 @@ class _HistoryPageState extends State<HistoryPage> {
         InterestCategories.findById(record.category)?.label ?? record.category;
 
     return Card(
-      child: Padding(
-        padding: const EdgeInsets.all(16),
-        child: Row(
-          children: [
-            CircleAvatar(
-              radius: 20,
-              backgroundColor: iconBackground,
-              child: isDone
-                  ? Icon(Icons.check, size: 18, color: accentColor)
-                  : Text(
-                      '−',
-                      style: TextStyle(
-                        fontSize: 18,
+      key: ValueKey<String>('history-record-${record.id}'),
+      color: backgroundColor,
+      clipBehavior: Clip.antiAlias,
+      child: InkWell(
+        onTap: isDone || _isReviveFlowOpen
+            ? null
+            : () => _openReviveFlow(record),
+        child: Padding(
+          padding: const EdgeInsets.all(16),
+          child: Row(
+            children: [
+              CircleAvatar(
+                radius: 20,
+                backgroundColor: iconBackground,
+                child: isDone
+                    ? Icon(Icons.check, size: 18, color: accentColor)
+                    : Text(
+                        '−',
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                          color: accentColor,
+                        ),
+                      ),
+              ),
+              const SizedBox(width: 14),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      record.suggestionTitle,
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: const TextStyle(
+                        fontSize: 15,
                         fontWeight: FontWeight.bold,
-                        color: accentColor,
                       ),
                     ),
-            ),
-            const SizedBox(width: 14),
-            Expanded(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    record.suggestionTitle,
-                    maxLines: 1,
-                    overflow: TextOverflow.ellipsis,
-                    style: const TextStyle(
-                      fontSize: 15,
-                      fontWeight: FontWeight.bold,
+                    const SizedBox(height: 4),
+                    Text(
+                      '${_formatRecordDate(record.createdAt)}　'
+                      '$categoryLabel・${record.estimatedMinutes}分',
+                      style: const TextStyle(fontSize: 13),
                     ),
-                  ),
-                  const SizedBox(height: 4),
-                  Text(
-                    '${_formatRecordDate(record.createdAt)}　'
-                    '$categoryLabel・${record.estimatedMinutes}分',
-                    style: const TextStyle(fontSize: 13),
-                  ),
-                ],
-              ),
-            ),
-            const SizedBox(width: 8),
-            Container(
-              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
-              decoration: BoxDecoration(
-                color: iconBackground,
-                borderRadius: BorderRadius.circular(10),
-              ),
-              child: Text(
-                isDone ? '実施' : 'スキップ',
-                style: TextStyle(
-                  fontSize: 12,
-                  fontWeight: FontWeight.w600,
-                  color: accentColor,
+                  ],
                 ),
               ),
-            ),
-          ],
+              const SizedBox(width: 8),
+              Container(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 10,
+                  vertical: 4,
+                ),
+                decoration: BoxDecoration(
+                  color: iconBackground,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: Text(
+                  isDone ? '実施' : 'スキップ',
+                  style: TextStyle(
+                    fontSize: 12,
+                    fontWeight: FontWeight.w600,
+                    color: accentColor,
+                  ),
+                ),
+              ),
+              if (!isDone) ...[
+                const SizedBox(width: 4),
+                Icon(
+                  Icons.chevron_right,
+                  size: 20,
+                  color: colorScheme.onSurfaceVariant,
+                ),
+              ],
+            ],
+          ),
         ),
       ),
     );

@@ -19,7 +19,7 @@ For general coding quality rules, also follow `docs/rules/SKILL.md`.
 
 The specification source of truth is:
 
-1. The project proposal (企画書 ver6, `docs/spec/企画書.md` and the submitted PDF) — concept, **two-stage model (category → per-category detail settings)**, data catalog design, processing flow, future phases. In ver6 the MVP core categories are 音楽/料理/読書/映画 (4), and each MVP detail setting is a single "genre" group (movie uses 気分). The ver6 PDF lists a `difficulty` catalog field, but this project does not use it (difficulty is not implemented).
+1. The project proposal (企画書 ver6, `docs/spec/企画書.md` and the submitted PDF) — concept, **two-stage model (category → per-category detail settings)**, data catalog design, processing flow, future phases. In ver6 the MVP core categories are 音楽/料理/読書/映画 (4), and each MVP detail setting is a single "genre" group. The ver6 PDF lists a `difficulty` catalog field, but this project does not use it (difficulty is not implemented).
 2. The UI prototype in `よりみち日和 UIプロトタイプ/` — screen structure, UI copy, interaction flow. It is a Figma-exported React project and is **reference only**. Never copy React code or dependencies into the Flutter app.
 
 When they conflict, follow the proposal for the suggestion-conditions model (two-stage), data, and logic, and the prototype for other screens and UI text. The implementation spec is `docs/spec/仕様書.md` and the summary is `docs/spec/仕様要約.md`.
@@ -30,7 +30,7 @@ When they conflict, follow the proposal for the suggestion-conditions model (two
 
 `yorimitiBiyori` is a Flutter mobile app. The MVP targets Android only; iOS support is a post-MVP advanced phase.
 
-The app suggests one small "yorimichi" (detour) action that fits the user's interest categories and per-category detail settings during short free-time gaps. The model is **two-stage**: the user picks categories, then refines each with a category-specific detail setting. In the MVP each category exposes a single "genre" group (movie uses 気分); multiple detail-setting groups (language, mood, time, budget, source, etc.) are an advanced-phase extension.
+The app suggests one small "yorimichi" (detour) action that fits the user's interest categories and per-category detail settings during short free-time gaps. The model is **two-stage**: the user picks categories, then refines each with a category-specific detail setting. In the MVP each category exposes a single "genre" group; multiple detail-setting groups (language, mood, time, budget, source, etc.) are an advanced-phase extension.
 
 The core experience is:
 
@@ -66,11 +66,11 @@ Bottom NavigationBar with exactly 3 tabs. There is **no home screen**; the sugge
 There is **no difficulty, no universal time condition, and no travel-distance condition** (removed from the old model; the ver6 PDF `difficulty` field is not implemented in this project). Conditions are set in two stages:
 
 1. **Stage 1 — category selection** (multi-select, MVP 4 categories): music 音楽 / cook 料理 / read 読書 / movie 映画. walk 散歩 is an advanced-phase category (definition + data retained in `InterestCategories.developmentCategories`).
-2. **Stage 2 — per-category detail settings** (each group is multi-select; unselected = 指定なし = no filtering). **In the MVP each category exposes a single "genre" group (movie uses 気分):**
+2. **Stage 2 — per-category detail settings** (each group is multi-select; unselected = 指定なし = no filtering). **In the MVP each category exposes a single "genre" group:**
    - 音楽: ジャンル(ポップス/ジャズ/クラシック/洋楽)
    - 料理: 味覚・ジャンル(和食/洋食/中華/イタリアン/アジア風/激辛/さっぱり/ガッツリ)
    - 読書: ジャンル(エッセイ/小説/ノンフィクション/詩集)
-   - 映画: 気分(泣ける/笑える/考えさせる)
+   - 映画: ジャンル(泣ける/笑える/考えさせる) — a single suggestion's `tags` may hold more than one of these values, since one movie can span multiple genres
    - 散歩 (advanced): 目的(気分転換/運動/発見)
 
    Advanced-phase detail settings (企画書 ver6 表3 "発展版で追加"): 音楽=言語・気分, 料理=栄養素・ダイエット, 読書=読書時間・入手予算, 映画=上映時間・視聴先.
