@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../models/suggestion_record.dart';
+import 'neumorphic_surface.dart';
 
 /// 選択されたフィードバックで履歴を保存する処理。呼び出し側（提案画面）が渡す。
 typedef CompletionSaveCallback = Future<void> Function(
@@ -109,23 +110,30 @@ class _CompletionModalState extends State<CompletionModal> {
             runSpacing: 10,
             children: [
               for (final choice in _feedbackChoices)
-                ChoiceChip(
-                  label: Text('${choice.emoji} ${choice.label}'),
-                  selected: _selectedFeedback == choice.feedback,
-                  onSelected: _isSaving
-                      ? null
-                      : (_) {
-                          setState(() => _selectedFeedback = choice.feedback);
-                        },
+                NeumorphicChipFrame(
+                  isSelected: _selectedFeedback == choice.feedback,
+                  child: ChoiceChip(
+                    label: Text('${choice.emoji} ${choice.label}'),
+                    selected: _selectedFeedback == choice.feedback,
+                    onSelected: _isSaving
+                        ? null
+                        : (_) {
+                            setState(() => _selectedFeedback = choice.feedback);
+                          },
+                  ),
                 ),
             ],
           ),
           const SizedBox(height: 24),
           SizedBox(
             width: double.infinity,
-            child: FilledButton(
-              onPressed: _isSaving ? null : _handleSave,
-              child: const Text('履歴に保存'),
+            child: NeumorphicButtonFrame(
+              isPrimary: true,
+              isEnabled: !_isSaving,
+              child: FilledButton(
+                onPressed: _isSaving ? null : _handleSave,
+                child: const Text('履歴に保存'),
+              ),
             ),
           ),
         ],

@@ -16,6 +16,7 @@ import '../repositories/settings_repository.dart';
 import '../repositories/suggestion_repository.dart';
 import '../widgets/completion_celebration.dart';
 import '../widgets/completion_modal.dart';
+import '../widgets/neumorphic_surface.dart';
 import '../widgets/section_card.dart';
 import 'suggestion_settings_page.dart';
 
@@ -94,8 +95,8 @@ class _SuggestionPageState extends State<SuggestionPage> {
     // 設定の読込は repository 側でデフォルトへフォールバックするため失敗しない。
     // エラー扱いにするのは提案データ（suggestions.json）の読込失敗のみ。
     final settings = await _settingsRepository.loadSettings();
-    final currentSuggestionId =
-        await _currentSuggestionRepository.loadCurrentSuggestionId();
+    final currentSuggestionId = await _currentSuggestionRepository
+        .loadCurrentSuggestionId();
     final ongoing = await _ongoingSuggestionRepository.loadOngoingSuggestion();
     try {
       final suggestions = await _suggestionRepository.loadSuggestions();
@@ -190,8 +191,8 @@ class _SuggestionPageState extends State<SuggestionPage> {
     if (suggestion == null) {
       unawaited(
         _currentSuggestionRepository.clearCurrentSuggestion().catchError(
-              (_) {},
-            ),
+          (_) {},
+        ),
       );
       return;
     }
@@ -215,9 +216,7 @@ class _SuggestionPageState extends State<SuggestionPage> {
       recentIds.removeRange(0, recentIds.length - recentSuggestionLimit);
     }
     _settings = _settings.copyWith(recentSuggestionIds: recentIds);
-    unawaited(
-      _settingsRepository.saveSettings(_settings).catchError((_) {}),
-    );
+    unawaited(_settingsRepository.saveSettings(_settings).catchError((_) {}));
   }
 
   /// やってみる：提案を実施中状態に切り替える（issue #48）。
@@ -440,10 +439,7 @@ class _SuggestionPageState extends State<SuggestionPage> {
               style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 4),
-            const Text(
-              '空いた時間に、小さなよりみちを。',
-              style: TextStyle(fontSize: 14),
-            ),
+            const Text('空いた時間に、小さなよりみちを。', style: TextStyle(fontSize: 14)),
             const SizedBox(height: 16),
             _buildConditionCard(),
             const SizedBox(height: 12),
@@ -468,13 +464,13 @@ class _SuggestionPageState extends State<SuggestionPage> {
   Widget _buildConditionCard() {
     final selectedCategories = <InterestCategory>[
       for (final categoryId in _settings.selectedCategories)
-        if (InterestCategories.findById(categoryId) case final InterestCategory
-            category)
+        if (InterestCategories.findById(categoryId)
+            case final InterestCategory category)
           category,
     ];
     final detailSummary = _buildDetailSummary();
 
-    return Card(
+    return NeumorphicSurface(
       child: Padding(
         padding: const EdgeInsets.fromLTRB(20, 8, 8, 20),
         child: Column(
@@ -504,7 +500,11 @@ class _SuggestionPageState extends State<SuggestionPage> {
                 runSpacing: 8,
                 children: [
                   for (final category in selectedCategories)
-                    Chip(label: Text('${category.emoji} ${category.label}')),
+                    NeumorphicChipFrame(
+                      child: Chip(
+                        label: Text('${category.emoji} ${category.label}'),
+                      ),
+                    ),
                 ],
               ),
               const SizedBox(height: 8),
@@ -545,7 +545,8 @@ class _SuggestionPageState extends State<SuggestionPage> {
   Widget _buildSuggestionCard(Suggestion suggestion) {
     final colorScheme = Theme.of(context).colorScheme;
 
-    return Card(
+    return NeumorphicSurface(
+      radius: 32,
       child: Padding(
         padding: const EdgeInsets.all(20),
         child: Column(
@@ -563,8 +564,7 @@ class _SuggestionPageState extends State<SuggestionPage> {
               suggestion.title,
               maxLines: 2,
               overflow: TextOverflow.ellipsis,
-              style:
-                  const TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+              style: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 8),
             Text(suggestion.description),
@@ -573,8 +573,11 @@ class _SuggestionPageState extends State<SuggestionPage> {
               spacing: 8,
               runSpacing: 8,
               children: [
-                for (final tag in suggestion.tags) Chip(label: Text(tag)),
-                Chip(label: Text('約${suggestion.estimatedMinutes}分')),
+                for (final tag in suggestion.tags)
+                  NeumorphicChipFrame(child: Chip(label: Text(tag))),
+                NeumorphicChipFrame(
+                  child: Chip(label: Text('約${suggestion.estimatedMinutes}分')),
+                ),
               ],
             ),
             const SizedBox(height: 12),
@@ -587,16 +590,21 @@ class _SuggestionPageState extends State<SuggestionPage> {
             Row(
               children: [
                 Expanded(
-                  child: FilledButton(
-                    onPressed: () => _onTrySuggestion(suggestion),
-                    child: const Text('やってみる'),
+                  child: NeumorphicButtonFrame(
+                    isPrimary: true,
+                    child: FilledButton(
+                      onPressed: () => _onTrySuggestion(suggestion),
+                      child: const Text('やってみる'),
+                    ),
                   ),
                 ),
                 const SizedBox(width: 8),
                 Expanded(
-                  child: OutlinedButton(
-                    onPressed: _onAnotherSuggestion,
-                    child: const Text('別の提案'),
+                  child: NeumorphicButtonFrame(
+                    child: OutlinedButton(
+                      onPressed: _onAnotherSuggestion,
+                      child: const Text('別の提案'),
+                    ),
                   ),
                 ),
               ],
@@ -684,7 +692,7 @@ class _SuggestionPageState extends State<SuggestionPage> {
   Widget _buildEmptyCard() {
     final isCategoryEmpty = _settings.selectedCategories.isEmpty;
 
-    return Card(
+    return NeumorphicSurface(
       child: Padding(
         padding: const EdgeInsets.all(20),
         child: Column(
@@ -692,8 +700,7 @@ class _SuggestionPageState extends State<SuggestionPage> {
           children: [
             Text(
               isCategoryEmpty ? 'カテゴリが選ばれていません' : '条件に合う提案が見つかりませんでした',
-              style:
-                  const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+              style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 8),
             Text(
@@ -702,9 +709,12 @@ class _SuggestionPageState extends State<SuggestionPage> {
                   : 'カテゴリを増やすか、詳細設定を緩めてみてください。',
             ),
             const SizedBox(height: 16),
-            FilledButton(
-              onPressed: _openSuggestionSettings,
-              child: const Text('提案設定を開く'),
+            NeumorphicButtonFrame(
+              isPrimary: true,
+              child: FilledButton(
+                onPressed: _openSuggestionSettings,
+                child: const Text('提案設定を開く'),
+              ),
             ),
           ],
         ),

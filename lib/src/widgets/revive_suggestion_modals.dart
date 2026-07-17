@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../models/suggestion.dart';
+import 'neumorphic_surface.dart';
 
 /// スキップした提案の詳細を表示し、「やってみる」が押されたら true を返す。
 Future<bool> showReviveSuggestionDetailDialog({
@@ -142,8 +143,11 @@ class _ReviveSuggestionDetailDialog extends StatelessWidget {
                 spacing: 8,
                 runSpacing: 8,
                 children: [
-                  for (final tag in suggestion.tags) Chip(label: Text(tag)),
-                  Chip(label: Text('約${suggestion.estimatedMinutes}分')),
+                  for (final tag in suggestion.tags)
+                    NeumorphicChipFrame(child: Chip(label: Text(tag))),
+                  NeumorphicChipFrame(
+                    child: Chip(label: Text('約${suggestion.estimatedMinutes}分')),
+                  ),
                 ],
               ),
               const SizedBox(height: 14),

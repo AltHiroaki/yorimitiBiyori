@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../models/interest_category.dart';
 import '../models/user_settings.dart';
 import '../repositories/settings_repository.dart';
+import '../widgets/neumorphic_surface.dart';
 
 /// 提案設定画面（サブ画面・二段階方式）。
 /// 仕様書 3.4 に対応する。第 1 段階で興味カテゴリを、
@@ -165,13 +166,19 @@ class _SuggestionSettingsPageState extends State<SuggestionSettingsPage> {
             children: [
               SizedBox(
                 width: double.infinity,
-                child: FilledButton(
-                  // 興味カテゴリは必須のため、0件のときは保存できない（issue #50）。
-                  onPressed:
-                      (_loadedSettings == null || _selectedCategoryIds.isEmpty)
-                          ? null
-                          : _save,
-                  child: const Text('この条件で保存'),
+                child: NeumorphicButtonFrame(
+                  isPrimary: true,
+                  isEnabled:
+                      _loadedSettings != null && _selectedCategoryIds.isNotEmpty,
+                  child: FilledButton(
+                    // 興味カテゴリは必須のため、0件のときは保存できない（issue #50）。
+                    onPressed:
+                        (_loadedSettings == null ||
+                                _selectedCategoryIds.isEmpty)
+                            ? null
+                            : _save,
+                    child: const Text('この条件で保存'),
+                  ),
                 ),
               ),
               TextButton(
@@ -190,7 +197,7 @@ class _SuggestionSettingsPageState extends State<SuggestionSettingsPage> {
     final colorScheme = Theme.of(context).colorScheme;
     const titleStyle = TextStyle(fontSize: 18, fontWeight: FontWeight.bold);
 
-    return Card(
+    return NeumorphicSurface(
       child: Padding(
         padding: const EdgeInsets.fromLTRB(20, 12, 12, 20),
         child: Column(
@@ -225,10 +232,13 @@ class _SuggestionSettingsPageState extends State<SuggestionSettingsPage> {
               runSpacing: 8,
               children: [
                 for (final category in InterestCategories.all)
-                  FilterChip(
-                    label: Text('${category.emoji} ${category.label}'),
-                    selected: _selectedCategoryIds.contains(category.id),
-                    onSelected: (_) => _toggleCategory(category.id),
+                  NeumorphicChipFrame(
+                    isSelected: _selectedCategoryIds.contains(category.id),
+                    child: FilterChip(
+                      label: Text('${category.emoji} ${category.label}'),
+                      selected: _selectedCategoryIds.contains(category.id),
+                      onSelected: (_) => _toggleCategory(category.id),
+                    ),
                   ),
               ],
             ),
@@ -250,7 +260,7 @@ class _SuggestionSettingsPageState extends State<SuggestionSettingsPage> {
   Widget _buildDetailSettingsCard(InterestCategory category) {
     final categorySelections = _detailSelections[category.id] ?? const {};
 
-    return Card(
+    return NeumorphicSurface(
       child: Padding(
         padding: const EdgeInsets.all(20),
         child: Column(
@@ -277,13 +287,18 @@ class _SuggestionSettingsPageState extends State<SuggestionSettingsPage> {
                 runSpacing: 8,
                 children: [
                   for (final option in group.options)
-                    FilterChip(
-                      label: Text(option),
-                      selected:
+                    NeumorphicChipFrame(
+                      isSelected:
                           categorySelections[group.id]?.contains(option) ??
-                              false,
-                      onSelected: (_) =>
-                          _toggleDetailValue(category.id, group.id, option),
+                          false,
+                      child: FilterChip(
+                        label: Text(option),
+                        selected:
+                            categorySelections[group.id]?.contains(option) ??
+                            false,
+                        onSelected: (_) =>
+                            _toggleDetailValue(category.id, group.id, option),
+                      ),
                     ),
                 ],
               ),

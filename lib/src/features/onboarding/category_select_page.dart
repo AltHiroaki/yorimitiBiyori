@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../models/interest_category.dart';
+import '../../widgets/neumorphic_surface.dart';
 
 /// オンボーディングのカテゴリ選択ステップ。
 class CategorySelectPage extends StatefulWidget {
@@ -63,10 +64,13 @@ class _CategorySelectPageState extends State<CategorySelectPage> {
               runSpacing: 8,
               children: [
                 for (final category in InterestCategories.all)
-                  FilterChip(
-                    label: Text('${category.emoji} ${category.label}'),
-                    selected: _selectedCategoryIds.contains(category.id),
-                    onSelected: (_) => _toggleCategory(category.id),
+                  NeumorphicChipFrame(
+                    isSelected: _selectedCategoryIds.contains(category.id),
+                    child: FilterChip(
+                      label: Text('${category.emoji} ${category.label}'),
+                      selected: _selectedCategoryIds.contains(category.id),
+                      onSelected: (_) => _toggleCategory(category.id),
+                    ),
                   ),
               ],
             ),
@@ -80,9 +84,13 @@ class _CategorySelectPageState extends State<CategorySelectPage> {
           padding: const EdgeInsets.fromLTRB(24, 8, 24, 16),
           child: SizedBox(
             width: double.infinity,
-            child: FilledButton(
-              onPressed: _selectedCategoryIds.isEmpty ? null : _submit,
-              child: const Text('次へ'),
+            child: NeumorphicButtonFrame(
+              isPrimary: true,
+              isEnabled: _selectedCategoryIds.isNotEmpty,
+              child: FilledButton(
+                onPressed: _selectedCategoryIds.isEmpty ? null : _submit,
+                child: const Text('次へ'),
+              ),
             ),
           ),
         ),

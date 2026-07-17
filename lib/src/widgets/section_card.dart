@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'neumorphic_surface.dart';
+
 class SectionCard extends StatelessWidget {
   const SectionCard({
     required this.title,
@@ -12,8 +14,7 @@ class SectionCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // カードの見た目（白地・薄縁・角丸）はアプリテーマの CardTheme に集約している。
-    return Card(
+    return NeumorphicSurface(
       child: Padding(
         padding: const EdgeInsets.all(20),
         child: Column(
