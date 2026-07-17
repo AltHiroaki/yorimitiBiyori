@@ -73,11 +73,38 @@ void main() {
     await tester.pumpAndSettle();
     await tester.tap(tryButton);
     await tester.pumpAndSettle();
+
+    // やってみる後は実施中カードに切り替わる（issue #48）。
+    expect(find.text('実施中のよりみち'), findsOneWidget);
+
+    // 実施中カードの「完了」で完了モーダルを開く。
+    final completeButton = find.text('完了').hitTestable();
+    await tester.dragUntilVisible(
+      completeButton,
+      find.byType(ListView),
+      const Offset(0, -200),
+    );
+    await tester.pumpAndSettle();
+    await tester.tap(completeButton);
+    await tester.pumpAndSettle();
     expect(find.text('おつかれさまです'), findsOneWidget);
 
-    // モーダルを閉じて「別の提案」も描画する。
+    // 保存せずにモーダルを閉じると実施中カードのまま残る。
     await tester.tapAt(const Offset(180, 20));
     await tester.pumpAndSettle();
+    expect(find.text('実施中のよりみち'), findsOneWidget);
+
+    // スキップで通常の提案カードに戻し、「別の提案」も描画する。
+    final skipButton = find.text('スキップ').hitTestable();
+    await tester.dragUntilVisible(
+      skipButton,
+      find.byType(ListView),
+      const Offset(0, -200),
+    );
+    await tester.pumpAndSettle();
+    await tester.tap(skipButton);
+    await tester.pumpAndSettle();
+
     final anotherButton = find.text('別の提案').hitTestable();
     await tester.dragUntilVisible(
       anotherButton,
