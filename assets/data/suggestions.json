@@ -1035,6 +1035,2078 @@
     "weight": 1.0
   },
   {
+    "id": "music_051_item",
+    "title": "『上を向いて歩こう』を聴いてみる",
+    "description": "坂本九｜世界的にも知られる、前向きな気持ちにさせる名曲。",
+    "detail": "坂本九の『上を向いて歩こう』を1曲だけ聴いてみる。世界的にも知られる、前向きな気持ちにさせる名曲。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「上を向いて歩こう 坂本九」と検索して聴く。",
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_052_item",
+    "title": "『世界に一つだけの花』を聴いてみる",
+    "description": "SMAP｜ありのままでいいと肯定してくれる定番曲。",
+    "detail": "SMAPの『世界に一つだけの花』を1曲だけ聴いてみる。ありのままでいいと肯定してくれる定番曲。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「世界に一つだけの花 SMAP」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_053_item",
+    "title": "『さくら』を聴いてみる",
+    "description": "森山直太朗｜卒業シーズンに聴きたくなる名バラード。",
+    "detail": "森山直太朗の『さくら』を1曲だけ聴いてみる。卒業シーズンに聴きたくなる名バラード。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「さくら 森山直太朗」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_054_tomorrowneverknows",
+    "title": "『Tomorrow never knows』を聴いてみる",
+    "description": "Mr.Children｜疾走感のあるギターが印象的な代表曲。",
+    "detail": "Mr.Childrenの『Tomorrow never knows』を1曲だけ聴いてみる。疾走感のあるギターが印象的な代表曲。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Tomorrow never knows Mr.Children」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_055_hanabi",
+    "title": "『HANABI』を聴いてみる",
+    "description": "Mr.Children｜ドラマ主題歌としても有名な壮大なバラード。",
+    "detail": "Mr.Childrenの『HANABI』を1曲だけ聴いてみる。ドラマ主題歌としても有名な壮大なバラード。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「HANABI Mr.Children」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_056_innocentworld",
+    "title": "『innocent world』を聴いてみる",
+    "description": "Mr.Children｜爽やかなメロディが心地よい定番曲。",
+    "detail": "Mr.Childrenの『innocent world』を1曲だけ聴いてみる。爽やかなメロディが心地よい定番曲。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「innocent world Mr.Children」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_057_firstlove",
+    "title": "『First Love』を聴いてみる",
+    "description": "宇多田ヒカル｜切なさの中に強さがあるラブソングの名作。",
+    "detail": "宇多田ヒカルの『First Love』を1曲だけ聴いてみる。切なさの中に強さがあるラブソングの名作。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「First Love 宇多田ヒカル」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_058_automatic",
+    "title": "『Automatic』を聴いてみる",
+    "description": "宇多田ヒカル｜デビュー曲ながら完成度の高いR&Bナンバー。",
+    "detail": "宇多田ヒカルの『Automatic』を1曲だけ聴いてみる。デビュー曲ながら完成度の高いR&Bナンバー。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Automatic 宇多田ヒカル」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_059_tsunami",
+    "title": "『TSUNAMI』を聴いてみる",
+    "description": "サザンオールスターズ｜壮大なスケール感を持つ夏の定番曲。",
+    "detail": "サザンオールスターズの『TSUNAMI』を1曲だけ聴いてみる。壮大なスケール感を持つ夏の定番曲。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「TSUNAMI サザンオールスターズ」と検索して聴く。",
+    "estimated_minutes": 6,
+    "weight": 1.0
+  },
+  {
+    "id": "music_060_item",
+    "title": "『勝手にシンドバッド』を聴いてみる",
+    "description": "サザンオールスターズ｜デビュー曲にして夏歌の金字塔。",
+    "detail": "サザンオールスターズの『勝手にシンドバッド』を1曲だけ聴いてみる。デビュー曲にして夏歌の金字塔。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「勝手にシンドバッド サザンオールスターズ」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_061_item",
+    "title": "『島唄』を聴いてみる",
+    "description": "THE BOOM｜沖縄の情景が浮かぶ国民的な名曲。",
+    "detail": "THE BOOMの『島唄』を1曲だけ聴いてみる。沖縄の情景が浮かぶ国民的な名曲。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「島唄 THE BOOM」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_062_lovelovelove",
+    "title": "『LOVE LOVE LOVE』を聴いてみる",
+    "description": "DREAMS COME TRUE｜結婚式の定番としても知られる祝福ソング。",
+    "detail": "DREAMS COME TRUEの『LOVE LOVE LOVE』を1曲だけ聴いてみる。結婚式の定番としても知られる祝福ソング。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「LOVE LOVE LOVE DREAMS COME TRUE」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_063_39",
+    "title": "『3月9日』を聴いてみる",
+    "description": "レミオロメン｜卒業式ソングの定番として愛される一曲。",
+    "detail": "レミオロメンの『3月9日』を1曲だけ聴いてみる。卒業式ソングの定番として愛される一曲。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「3月9日 レミオロメン」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_064_item",
+    "title": "『桜坂』を聴いてみる",
+    "description": "福山雅治｜別れと再会を描いた季節感あるバラード。",
+    "detail": "福山雅治の『桜坂』を1曲だけ聴いてみる。別れと再会を描いた季節感あるバラード。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「桜坂 福山雅治」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_065_item",
+    "title": "『三日月』を聴いてみる",
+    "description": "絢香｜力強い歌声が印象的な応援ソング。",
+    "detail": "絢香の『三日月』を1曲だけ聴いてみる。力強い歌声が印象的な応援ソング。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「三日月 絢香」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_066_item",
+    "title": "『カブトムシ』を聴いてみる",
+    "description": "aiko｜切なさと甘さが同居する代表曲。",
+    "detail": "aikoの『カブトムシ』を1曲だけ聴いてみる。切なさと甘さが同居する代表曲。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「カブトムシ aiko」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_067_item",
+    "title": "『花火』を聴いてみる",
+    "description": "aiko｜夏の恋心をみずみずしく描いた一曲。",
+    "detail": "aikoの『花火』を1曲だけ聴いてみる。夏の恋心をみずみずしく描いた一曲。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「花火 aiko」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_068_item",
+    "title": "『空も飛べるはず』を聴いてみる",
+    "description": "スピッツ｜青春映画のような爽やかさを持つ名曲。",
+    "detail": "スピッツの『空も飛べるはず』を1曲だけ聴いてみる。青春映画のような爽やかさを持つ名曲。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「空も飛べるはず スピッツ」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_069_item",
+    "title": "『チェリー』を聴いてみる",
+    "description": "スピッツ｜シンプルな恋心を歌った国民的ヒット曲。",
+    "detail": "スピッツの『チェリー』を1曲だけ聴いてみる。シンプルな恋心を歌った国民的ヒット曲。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「チェリー スピッツ」と検索して聴く。",
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_070_item",
+    "title": "『ロビンソン』を聴いてみる",
+    "description": "スピッツ｜幻想的な歌詞世界が広がる代表曲。",
+    "detail": "スピッツの『ロビンソン』を1曲だけ聴いてみる。幻想的な歌詞世界が広がる代表曲。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「ロビンソン スピッツ」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_071_usa",
+    "title": "『U.S.A.』を聴いてみる",
+    "description": "DA PUMP｜一度聴いたら忘れられない高揚感のあるダンスナンバー。",
+    "detail": "DA PUMPの『U.S.A.』を1曲だけ聴いてみる。一度聴いたら忘れられない高揚感のあるダンスナンバー。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「U.S.A. DA PUMP」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_072_item",
+    "title": "『キセキ』を聴いてみる",
+    "description": "GReeeeN｜結婚式ソングの定番となった感動のバラード。",
+    "detail": "GReeeeNの『キセキ』を1曲だけ聴いてみる。結婚式ソングの定番となった感動のバラード。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「キセキ GReeeeN」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_073_item",
+    "title": "『遠く遠く』を聴いてみる",
+    "description": "GReeeeN｜前向きな気持ちにさせてくれる応援ソング。",
+    "detail": "GReeeeNの『遠く遠く』を1曲だけ聴いてみる。前向きな気持ちにさせてくれる応援ソング。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「遠く遠く GReeeeN」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_074_item",
+    "title": "『会いたかった』を聴いてみる",
+    "description": "AKB48｜グループの原点となった代表曲。",
+    "detail": "AKB48の『会いたかった』を1曲だけ聴いてみる。グループの原点となった代表曲。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「会いたかった AKB48」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_075_item",
+    "title": "『フライングゲット』を聴いてみる",
+    "description": "AKB48｜軽快なテンポで気分が上がるアイドルソング。",
+    "detail": "AKB48の『フライングゲット』を1曲だけ聴いてみる。軽快なテンポで気分が上がるアイドルソング。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「フライングゲット AKB48」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_076_ryusei",
+    "title": "『R.Y.U.S.E.I.』を聴いてみる",
+    "description": "三代目 J Soul Brothers｜ダンスと歌唱が融合した疾走感あるナンバー。",
+    "detail": "三代目 J Soul Brothersの『R.Y.U.S.E.I.』を1曲だけ聴いてみる。ダンスと歌唱が融合した疾走感あるナンバー。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「R.Y.U.S.E.I. 三代目 J Soul Brothers」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_077_choochootrain",
+    "title": "『Choo Choo TRAIN』を聴いてみる",
+    "description": "ZOO｜イントロだけで盛り上がる定番の一曲。",
+    "detail": "ZOOの『Choo Choo TRAIN』を1曲だけ聴いてみる。イントロだけで盛り上がる定番の一曲。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Choo Choo TRAIN ZOO」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_078_item",
+    "title": "『ただ君に晴れ』を聴いてみる",
+    "description": "ヨルシカ｜透明感のあるサウンドが印象的な一曲。",
+    "detail": "ヨルシカの『ただ君に晴れ』を1曲だけ聴いてみる。透明感のあるサウンドが印象的な一曲。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「ただ君に晴れ ヨルシカ」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_079_item",
+    "title": "『花に亡霊』を聴いてみる",
+    "description": "ヨルシカ｜映画主題歌としても知られる幻想的な楽曲。",
+    "detail": "ヨルシカの『花に亡霊』を1曲だけ聴いてみる。映画主題歌としても知られる幻想的な楽曲。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「花に亡霊 ヨルシカ」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_080_item",
+    "title": "『だから僕は音楽を辞めた』を聴いてみる",
+    "description": "ヨルシカ｜疾走感のあるロックサウンドが魅力の一曲。",
+    "detail": "ヨルシカの『だから僕は音楽を辞めた』を1曲だけ聴いてみる。疾走感のあるロックサウンドが魅力の一曲。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「だから僕は音楽を辞めた ヨルシカ」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_081_overdose",
+    "title": "『Overdose』を聴いてみる",
+    "description": "なとり｜中毒性のあるメロディが話題になった楽曲。",
+    "detail": "なとりの『Overdose』を1曲だけ聴いてみる。中毒性のあるメロディが話題になった楽曲。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Overdose なとり」と検索して聴く。",
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_082_item",
+    "title": "『ドライフラワー』を聴いてみる",
+    "description": "優里｜切ない別れを描いた大ヒットバラード。",
+    "detail": "優里の『ドライフラワー』を1曲だけ聴いてみる。切ない別れを描いた大ヒットバラード。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「ドライフラワー 優里」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_083_item",
+    "title": "『猫』を聴いてみる",
+    "description": "DISH//｜軽快なリズムで口ずさみたくなる一曲。",
+    "detail": "DISH//の『猫』を1曲だけ聴いてみる。軽快なリズムで口ずさみたくなる一曲。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「猫 DISH//」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_084_item",
+    "title": "『突然』を聴いてみる",
+    "description": "Da-iCE｜テンポの良さで気分が切り替わるポップナンバー。",
+    "detail": "Da-iCEの『突然』を1曲だけ聴いてみる。テンポの良さで気分が切り替わるポップナンバー。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「突然 Da-iCE」と検索して聴く。",
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_085_item",
+    "title": "『紅蓮華』を聴いてみる",
+    "description": "LiSA｜アニメ主題歌として広く知られる疾走感のある一曲。",
+    "detail": "LiSAの『紅蓮華』を1曲だけ聴いてみる。アニメ主題歌として広く知られる疾走感のある一曲。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「紅蓮華 LiSA」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_086_item",
+    "title": "『ゴーゴー幽霊船』を聴いてみる",
+    "description": "米津玄師｜独特な世界観に引き込まれる一曲。",
+    "detail": "米津玄師の『ゴーゴー幽霊船』を1曲だけ聴いてみる。独特な世界観に引き込まれる一曲。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「ゴーゴー幽霊船 米津玄師」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_087_item",
+    "title": "『香水』を聴いてみる",
+    "description": "瑛人｜シンプルな歌詞とメロディが中毒的な大ヒット曲。",
+    "detail": "瑛人の『香水』を1曲だけ聴いてみる。シンプルな歌詞とメロディが中毒的な大ヒット曲。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「香水 瑛人」と検索して聴く。",
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_088_georgiaonmymind",
+    "title": "『Georgia on My Mind』を聴いてみる",
+    "description": "Ray Charles｜深みのある歌声が心にしみるスタンダード。",
+    "detail": "Ray Charlesの『Georgia on My Mind』を1曲だけ聴いてみる。深みのある歌声が心にしみるスタンダード。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Georgia on My Mind Ray Charles」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_089_whatawonderfulworld",
+    "title": "『What a Wonderful World』を聴いてみる",
+    "description": "Louis Armstrong｜しゃがれ声が温かい、世界的に愛される名曲。",
+    "detail": "Louis Armstrongの『What a Wonderful World』を1曲だけ聴いてみる。しゃがれ声が温かい、世界的に愛される名曲。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「What a Wonderful World Louis Armstrong」と検索して聴く。",
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_090_bodyandsoul",
+    "title": "『Body and Soul』を聴いてみる",
+    "description": "Coleman Hawkins｜サックスの表現力が際立つバラード。",
+    "detail": "Coleman Hawkinsの『Body and Soul』を1曲だけ聴いてみる。サックスの表現力が際立つバラード。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Body and Soul Coleman Hawkins」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_091_allofme",
+    "title": "『All of Me』を聴いてみる",
+    "description": "Billie Holiday｜切ない歌声が印象的なジャズスタンダード。",
+    "detail": "Billie Holidayの『All of Me』を1曲だけ聴いてみる。切ない歌声が印象的なジャズスタンダード。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「All of Me Billie Holiday」と検索して聴く。",
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_092_cheektocheek",
+    "title": "『Cheek to Cheek』を聴いてみる",
+    "description": "Ella Fitzgerald｜軽やかなスウィング感が心地よい定番曲。",
+    "detail": "Ella Fitzgeraldの『Cheek to Cheek』を1曲だけ聴いてみる。軽やかなスウィング感が心地よい定番曲。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Cheek to Cheek Ella Fitzgerald」と検索して聴く。",
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_093_thegirlfromipanema",
+    "title": "『The Girl from Ipanema』を聴いてみる",
+    "description": "Stan Getz & Joao Gilberto｜ボサノヴァの代表曲、爽やかな午後に合う。",
+    "detail": "Stan Getz & Joao Gilbertoの『The Girl from Ipanema』を1曲だけ聴いてみる。ボサノヴァの代表曲、爽やかな午後に合う。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「The Girl from Ipanema Stan Getz & Joao Gilberto」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_094_misty",
+    "title": "『Misty』を聴いてみる",
+    "description": "Erroll Garner｜ロマンティックなピアノが印象的な名曲。",
+    "detail": "Erroll Garnerの『Misty』を1曲だけ聴いてみる。ロマンティックなピアノが印象的な名曲。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Misty Erroll Garner」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_095_autumninnewyork",
+    "title": "『Autumn in New York』を聴いてみる",
+    "description": "Billie Holiday｜秋の街を思わせるしっとりとした一曲。",
+    "detail": "Billie Holidayの『Autumn in New York』を1曲だけ聴いてみる。秋の街を思わせるしっとりとした一曲。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Autumn in New York Billie Holiday」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_096_stardust",
+    "title": "『Stardust』を聴いてみる",
+    "description": "Hoagy Carmichael｜ジャズスタンダードの中でも特に有名な名曲。",
+    "detail": "Hoagy Carmichaelの『Stardust』を1曲だけ聴いてみる。ジャズスタンダードの中でも特に有名な名曲。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Stardust Hoagy Carmichael」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_097_inasentimentalmood",
+    "title": "『In a Sentimental Mood』を聴いてみる",
+    "description": "Duke Ellington & John Coltrane｜2人の巨匠が奏でる甘美な一曲。",
+    "detail": "Duke Ellington & John Coltraneの『In a Sentimental Mood』を1曲だけ聴いてみる。2人の巨匠が奏でる甘美な一曲。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「In a Sentimental Mood Duke Ellington & John Coltrane」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_098_taketheatrain",
+    "title": "『Take the A Train』を聴いてみる",
+    "description": "Duke Ellington｜ビッグバンドジャズを代表する軽快な名曲。",
+    "detail": "Duke Ellingtonの『Take the A Train』を1曲だけ聴いてみる。ビッグバンドジャズを代表する軽快な名曲。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Take the A Train Duke Ellington」と検索して聴く。",
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_099_caravan",
+    "title": "『Caravan』を聴いてみる",
+    "description": "Duke Ellington｜エキゾチックなリズムが印象的な一曲。",
+    "detail": "Duke Ellingtonの『Caravan』を1曲だけ聴いてみる。エキゾチックなリズムが印象的な一曲。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Caravan Duke Ellington」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_100_moodindigo",
+    "title": "『Mood Indigo』を聴いてみる",
+    "description": "Duke Ellington｜物憂げな雰囲気が漂うムーディーな一曲。",
+    "detail": "Duke Ellingtonの『Mood Indigo』を1曲だけ聴いてみる。物憂げな雰囲気が漂うムーディーな一曲。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Mood Indigo Duke Ellington」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_101_straightnochaser",
+    "title": "『Straight, No Chaser』を聴いてみる",
+    "description": "Thelonious Monk｜独特なリズム感が癖になる一曲。",
+    "detail": "Thelonious Monkの『Straight, No Chaser』を1曲だけ聴いてみる。独特なリズム感が癖になる一曲。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Straight, No Chaser Thelonious Monk」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_102_wellyouneednt",
+    "title": "『Well You Needn't』を聴いてみる",
+    "description": "Thelonious Monk｜ユーモラスなメロディラインが特徴的。",
+    "detail": "Thelonious Monkの『Well You Needn't』を1曲だけ聴いてみる。ユーモラスなメロディラインが特徴的。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Well You Needn't Thelonious Monk」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_103_bagsgroove",
+    "title": "『Bags' Groove』を聴いてみる",
+    "description": "Miles Davis｜リラックスした雰囲気のブルース色の強い一曲。",
+    "detail": "Miles Davisの『Bags' Groove』を1曲だけ聴いてみる。リラックスした雰囲気のブルース色の強い一曲。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Bags' Groove Miles Davis」と検索して聴く。",
+    "estimated_minutes": 6,
+    "weight": 1.0
+  },
+  {
+    "id": "music_104_freddiefreeloader",
+    "title": "『Freddie Freeloader』を聴いてみる",
+    "description": "Miles Davis｜名盤『Kind of Blue』収録の軽快な一曲。",
+    "detail": "Miles Davisの『Freddie Freeloader』を1曲だけ聴いてみる。名盤『Kind of Blue』収録の軽快な一曲。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Freddie Freeloader Miles Davis」と検索して聴く。",
+    "estimated_minutes": 6,
+    "weight": 1.0
+  },
+  {
+    "id": "music_105_allblues",
+    "title": "『All Blues』を聴いてみる",
+    "description": "Miles Davis｜モーダルジャズの魅力が詰まった一曲。",
+    "detail": "Miles Davisの『All Blues』を1曲だけ聴いてみる。モーダルジャズの魅力が詰まった一曲。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「All Blues Miles Davis」と検索して聴く。",
+    "estimated_minutes": 7,
+    "weight": 1.0
+  },
+  {
+    "id": "music_106_bluetrain",
+    "title": "『Blue Train』を聴いてみる",
+    "description": "John Coltrane｜ブルースフィーリング溢れる代表曲。",
+    "detail": "John Coltraneの『Blue Train』を1曲だけ聴いてみる。ブルースフィーリング溢れる代表曲。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Blue Train John Coltrane」と検索して聴く。",
+    "estimated_minutes": 6,
+    "weight": 1.0
+  },
+  {
+    "id": "music_107_giantsteps",
+    "title": "『Giant Steps』を聴いてみる",
+    "description": "John Coltrane｜複雑なコード進行が有名な革新的な一曲。",
+    "detail": "John Coltraneの『Giant Steps』を1曲だけ聴いてみる。複雑なコード進行が有名な革新的な一曲。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Giant Steps John Coltrane」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_108_naima",
+    "title": "『Naima』を聴いてみる",
+    "description": "John Coltrane｜妻に捧げた美しいバラード。",
+    "detail": "John Coltraneの『Naima』を1曲だけ聴いてみる。妻に捧げた美しいバラード。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Naima John Coltrane」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_109_cantaloupeisland",
+    "title": "『Cantaloupe Island』を聴いてみる",
+    "description": "Herbie Hancock｜クールなピアノリフが印象的な一曲。",
+    "detail": "Herbie Hancockの『Cantaloupe Island』を1曲だけ聴いてみる。クールなピアノリフが印象的な一曲。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Cantaloupe Island Herbie Hancock」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_110_watermelonman",
+    "title": "『Watermelon Man』を聴いてみる",
+    "description": "Herbie Hancock｜ファンキーなノリが心地よい一曲。",
+    "detail": "Herbie Hancockの『Watermelon Man』を1曲だけ聴いてみる。ファンキーなノリが心地よい一曲。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Watermelon Man Herbie Hancock」と検索して聴く。",
+    "estimated_minutes": 6,
+    "weight": 1.0
+  },
+  {
+    "id": "music_111_chameleon",
+    "title": "『Chameleon』を聴いてみる",
+    "description": "Herbie Hancock｜フュージョンの名曲、グルーヴ感抜群。",
+    "detail": "Herbie Hancockの『Chameleon』を1曲だけ聴いてみる。フュージョンの名曲、グルーヴ感抜群。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Chameleon Herbie Hancock」と検索して聴く。",
+    "estimated_minutes": 8,
+    "weight": 1.0
+  },
+  {
+    "id": "music_112_songformyfather",
+    "title": "『Song for My Father』を聴いてみる",
+    "description": "Horace Silver｜ラテンのリズムを取り入れた温かい一曲。",
+    "detail": "Horace Silverの『Song for My Father』を1曲だけ聴いてみる。ラテンのリズムを取り入れた温かい一曲。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Song for My Father Horace Silver」と検索して聴く。",
+    "estimated_minutes": 6,
+    "weight": 1.0
+  },
+  {
+    "id": "music_113_moanin",
+    "title": "『Moanin'』を聴いてみる",
+    "description": "Art Blakey｜ゴスペルフィーリング溢れるハードバップの名曲。",
+    "detail": "Art Blakeyの『Moanin'』を1曲だけ聴いてみる。ゴスペルフィーリング溢れるハードバップの名曲。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Moanin' Art Blakey」と検索して聴く。",
+    "estimated_minutes": 6,
+    "weight": 1.0
+  },
+  {
+    "id": "music_114_singsingsing",
+    "title": "『Sing, Sing, Sing』を聴いてみる",
+    "description": "Benny Goodman｜スウィングジャズを象徴する熱狂的な一曲。",
+    "detail": "Benny Goodmanの『Sing, Sing, Sing』を1曲だけ聴いてみる。スウィングジャズを象徴する熱狂的な一曲。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Sing, Sing, Sing Benny Goodman」と検索して聴く。",
+    "estimated_minutes": 8,
+    "weight": 1.0
+  },
+  {
+    "id": "music_115_inthemood",
+    "title": "『In the Mood』を聴いてみる",
+    "description": "Glenn Miller｜ビッグバンドジャズの代表的な陽気な一曲。",
+    "detail": "Glenn Millerの『In the Mood』を1曲だけ聴いてみる。ビッグバンドジャズの代表的な陽気な一曲。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「In the Mood Glenn Miller」と検索して聴く。",
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_116_moonlightserenade",
+    "title": "『Moonlight Serenade』を聴いてみる",
+    "description": "Glenn Miller｜甘くロマンティックな夜のスタンダード。",
+    "detail": "Glenn Millerの『Moonlight Serenade』を1曲だけ聴いてみる。甘くロマンティックな夜のスタンダード。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Moonlight Serenade Glenn Miller」と検索して聴く。",
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_117_stthomas",
+    "title": "『St. Thomas』を聴いてみる",
+    "description": "Sonny Rollins｜カリプソ調の明るいリズムが魅力。",
+    "detail": "Sonny Rollinsの『St. Thomas』を1曲だけ聴いてみる。カリプソ調の明るいリズムが魅力。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「St. Thomas Sonny Rollins」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_118_bluebossa",
+    "title": "『Blue Bossa』を聴いてみる",
+    "description": "Kenny Dorham｜ボサノヴァとハードバップが融合した一曲。",
+    "detail": "Kenny Dorhamの『Blue Bossa』を1曲だけ聴いてみる。ボサノヴァとハードバップが融合した一曲。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Blue Bossa Kenny Dorham」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_119_desafinado",
+    "title": "『Desafinado』を聴いてみる",
+    "description": "Antonio Carlos Jobim｜ボサノヴァを世界に広めた名曲。",
+    "detail": "Antonio Carlos Jobimの『Desafinado』を1曲だけ聴いてみる。ボサノヴァを世界に広めた名曲。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Desafinado Antonio Carlos Jobim」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_120_corcovado",
+    "title": "『Corcovado』を聴いてみる",
+    "description": "Antonio Carlos Jobim｜静かな夜にぴったりの穏やかな一曲。",
+    "detail": "Antonio Carlos Jobimの『Corcovado』を1曲だけ聴いてみる。静かな夜にぴったりの穏やかな一曲。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Corcovado Antonio Carlos Jobim」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_121_feelssogood",
+    "title": "『Feels So Good』を聴いてみる",
+    "description": "Chuck Mangione｜フリューゲルホルンの音色が心地よい一曲。",
+    "detail": "Chuck Mangioneの『Feels So Good』を1曲だけ聴いてみる。フリューゲルホルンの音色が心地よい一曲。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Feels So Good Chuck Mangione」と検索して聴く。",
+    "estimated_minutes": 6,
+    "weight": 1.0
+  },
+  {
+    "id": "music_122_chelseabridge",
+    "title": "『Chelsea Bridge』を聴いてみる",
+    "description": "Billy Strayhorn｜洗練された和声美が魅力の一曲。",
+    "detail": "Billy Strayhornの『Chelsea Bridge』を1曲だけ聴いてみる。洗練された和声美が魅力の一曲。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Chelsea Bridge Billy Strayhorn」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_123_nardis",
+    "title": "『Nardis』を聴いてみる",
+    "description": "Bill Evans｜幻想的な雰囲気を持つモード・ジャズの一曲。",
+    "detail": "Bill Evansの『Nardis』を1曲だけ聴いてみる。幻想的な雰囲気を持つモード・ジャズの一曲。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Nardis Bill Evans」と検索して聴く。",
+    "estimated_minutes": 6,
+    "weight": 1.0
+  },
+  {
+    "id": "music_124_conalma",
+    "title": "『Con Alma』を聴いてみる",
+    "description": "Dizzy Gillespie｜ラテンの香り漂うビバップの一曲。",
+    "detail": "Dizzy Gillespieの『Con Alma』を1曲だけ聴いてみる。ラテンの香り漂うビバップの一曲。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Con Alma Dizzy Gillespie」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_125_roadsong",
+    "title": "『Road Song』を聴いてみる",
+    "description": "Wes Montgomery｜温かみのあるギターサウンドが特徴の一曲。",
+    "detail": "Wes Montgomeryの『Road Song』を1曲だけ聴いてみる。温かみのあるギターサウンドが特徴の一曲。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Road Song Wes Montgomery」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_126_51",
+    "title": "『交響曲第5番「運命」第1楽章』を聴いてみる",
+    "description": "ベートーヴェン｜力強い運命の動機で始まる名曲中の名曲。",
+    "detail": "ベートーヴェンの『交響曲第5番「運命」第1楽章』を1曲だけ聴いてみる。力強い運命の動機で始まる名曲中の名曲。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「交響曲第5番「運命」第1楽章 ベートーヴェン」と検索して聴く。",
+    "estimated_minutes": 7,
+    "weight": 1.0
+  },
+  {
+    "id": "music_127_9",
+    "title": "『交響曲第9番「歓喜の歌」』を聴いてみる",
+    "description": "ベートーヴェン｜年末の風物詩としても知られる合唱付きの大作。",
+    "detail": "ベートーヴェンの『交響曲第9番「歓喜の歌」』を1曲だけ聴いてみる。年末の風物詩としても知られる合唱付きの大作。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「交響曲第9番「歓喜の歌」 ベートーヴェン」と検索して聴く。",
+    "estimated_minutes": 8,
+    "weight": 1.0
+  },
+  {
+    "id": "music_128_item",
+    "title": "『エリーゼのために』を聴いてみる",
+    "description": "ベートーヴェン｜ピアノ小品として世界的に親しまれる名曲。",
+    "detail": "ベートーヴェンの『エリーゼのために』を1曲だけ聴いてみる。ピアノ小品として世界的に親しまれる名曲。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「エリーゼのために ベートーヴェン」と検索して聴く。",
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_129_2",
+    "title": "『ピアノソナタ「悲愴」第2楽章』を聴いてみる",
+    "description": "ベートーヴェン｜静かで美しい旋律が心に染みる一曲。",
+    "detail": "ベートーヴェンの『ピアノソナタ「悲愴」第2楽章』を1曲だけ聴いてみる。静かで美しい旋律が心に染みる一曲。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「ピアノソナタ「悲愴」第2楽章 ベートーヴェン」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_130_item",
+    "title": "『トルコ行進曲』を聴いてみる",
+    "description": "モーツァルト｜軽快で誰もが知る親しみやすい一曲。",
+    "detail": "モーツァルトの『トルコ行進曲』を1曲だけ聴いてみる。軽快で誰もが知る親しみやすい一曲。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「トルコ行進曲 モーツァルト」と検索して聴く。",
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_131_1",
+    "title": "『アイネ・クライネ・ナハトムジーク 第1楽章』を聴いてみる",
+    "description": "モーツァルト｜弦楽合奏の爽やかな響きが心地よい一曲。",
+    "detail": "モーツァルトの『アイネ・クライネ・ナハトムジーク 第1楽章』を1曲だけ聴いてみる。弦楽合奏の爽やかな響きが心地よい一曲。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「アイネ・クライネ・ナハトムジーク 第1楽章 モーツァルト」と検索して聴く。",
+    "estimated_minutes": 6,
+    "weight": 1.0
+  },
+  {
+    "id": "music_132_lacrimosa",
+    "title": "『レクイエム「Lacrimosa」』を聴いてみる",
+    "description": "モーツァルト｜荘厳で美しい、最晩年に作られた鎮魂曲。",
+    "detail": "モーツァルトの『レクイエム「Lacrimosa」』を1曲だけ聴いてみる。荘厳で美しい、最晩年に作られた鎮魂曲。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「レクイエム「Lacrimosa」 モーツァルト」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_133_item",
+    "title": "『歌劇「魔笛」より 夜の女王のアリア』を聴いてみる",
+    "description": "モーツァルト｜超絶技巧のソプラノが際立つ名アリア。",
+    "detail": "モーツァルトの『歌劇「魔笛」より 夜の女王のアリア』を1曲だけ聴いてみる。超絶技巧のソプラノが際立つ名アリア。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「歌劇「魔笛」より 夜の女王のアリア モーツァルト」と検索して聴く。",
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_134_item",
+    "title": "『セレナーデ ニ短調』を聴いてみる",
+    "description": "シューベルト｜甘く切ないメロディが印象的な歌曲。",
+    "detail": "シューベルトの『セレナーデ ニ短調』を1曲だけ聴いてみる。甘く切ないメロディが印象的な歌曲。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「セレナーデ ニ短調 シューベルト」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_135_71",
+    "title": "『交響曲第7番「未完成」第1楽章』を聴いてみる",
+    "description": "シューベルト｜未完成ながら深い余韻を残す名曲。",
+    "detail": "シューベルトの『交響曲第7番「未完成」第1楽章』を1曲だけ聴いてみる。未完成ながら深い余韻を残す名曲。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「交響曲第7番「未完成」第1楽章 シューベルト」と検索して聴く。",
+    "estimated_minutes": 8,
+    "weight": 1.0
+  },
+  {
+    "id": "music_136_item",
+    "title": "『喜歌劇「天国と地獄」序曲』を聴いてみる",
+    "description": "オッフェンバック｜運動会でもおなじみの軽快な一曲。",
+    "detail": "オッフェンバックの『喜歌劇「天国と地獄」序曲』を1曲だけ聴いてみる。運動会でもおなじみの軽快な一曲。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「喜歌劇「天国と地獄」序曲 オッフェンバック」と検索して聴く。",
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_137_1",
+    "title": "『威風堂々 第1番』を聴いてみる",
+    "description": "エルガー｜卒業式でもよく使われる荘厳な行進曲。",
+    "detail": "エルガーの『威風堂々 第1番』を1曲だけ聴いてみる。卒業式でもよく使われる荘厳な行進曲。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「威風堂々 第1番 エルガー」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_138_item",
+    "title": "『バレエ組曲「くるみ割り人形」花のワルツ』を聴いてみる",
+    "description": "チャイコフスキー｜華やかで優雅なワルツの名曲。",
+    "detail": "チャイコフスキーの『バレエ組曲「くるみ割り人形」花のワルツ』を1曲だけ聴いてみる。華やかで優雅なワルツの名曲。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「バレエ組曲「くるみ割り人形」花のワルツ チャイコフスキー」と検索して聴く。",
+    "estimated_minutes": 6,
+    "weight": 1.0
+  },
+  {
+    "id": "music_139_item",
+    "title": "『バレエ組曲「白鳥の湖」情景』を聴いてみる",
+    "description": "チャイコフスキー｜オーボエの旋律が印象的な幻想的な一曲。",
+    "detail": "チャイコフスキーの『バレエ組曲「白鳥の湖」情景』を1曲だけ聴いてみる。オーボエの旋律が印象的な幻想的な一曲。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「バレエ組曲「白鳥の湖」情景 チャイコフスキー」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_140_1812",
+    "title": "『序曲「1812年」』を聴いてみる",
+    "description": "チャイコフスキー｜大砲の音まで登場する壮大な祝祭序曲。",
+    "detail": "チャイコフスキーの『序曲「1812年」』を1曲だけ聴いてみる。大砲の音まで登場する壮大な祝祭序曲。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「序曲「1812年」 チャイコフスキー」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_141_1",
+    "title": "『弦楽セレナーデ 第1楽章』を聴いてみる",
+    "description": "チャイコフスキー｜弦楽器の温かい響きに包まれる名曲。",
+    "detail": "チャイコフスキーの『弦楽セレナーデ 第1楽章』を1曲だけ聴いてみる。弦楽器の温かい響きに包まれる名曲。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「弦楽セレナーデ 第1楽章 チャイコフスキー」と検索して聴く。",
+    "estimated_minutes": 9,
+    "weight": 1.0
+  },
+  {
+    "id": "music_142_5",
+    "title": "『ハンガリー舞曲第5番』を聴いてみる",
+    "description": "ブラームス｜情熱的でテンポの変化が楽しい一曲。",
+    "detail": "ブラームスの『ハンガリー舞曲第5番』を1曲だけ聴いてみる。情熱的でテンポの変化が楽しい一曲。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「ハンガリー舞曲第5番 ブラームス」と検索して聴く。",
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_143_31",
+    "title": "『交響曲第3番「英雄」第1楽章』を聴いてみる",
+    "description": "ベートーヴェン｜古典派からロマン派への転換を告げた大曲。",
+    "detail": "ベートーヴェンの『交響曲第3番「英雄」第1楽章』を1曲だけ聴いてみる。古典派からロマン派への転換を告げた大曲。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「交響曲第3番「英雄」第1楽章 ベートーヴェン」と検索して聴く。",
+    "estimated_minutes": 14,
+    "weight": 1.0
+  },
+  {
+    "id": "music_144_item",
+    "title": "『子守歌』を聴いてみる",
+    "description": "ブラームス｜世界で最も有名な子守歌のひとつ。",
+    "detail": "ブラームスの『子守歌』を1曲だけ聴いてみる。世界で最も有名な子守歌のひとつ。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「子守歌 ブラームス」と検索して聴く。",
+    "estimated_minutes": 2,
+    "weight": 1.0
+  },
+  {
+    "id": "music_145_item",
+    "title": "『主よ、人の望みの喜びよ』を聴いてみる",
+    "description": "バッハ｜穏やかで祈りに満ちたコラール曲。",
+    "detail": "バッハの『主よ、人の望みの喜びよ』を1曲だけ聴いてみる。穏やかで祈りに満ちたコラール曲。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「主よ、人の望みの喜びよ バッハ」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_146_item",
+    "title": "『トッカータとフーガ ニ短調』を聴いてみる",
+    "description": "バッハ｜パイプオルガンの荘厳な響きが印象的。",
+    "detail": "バッハの『トッカータとフーガ ニ短調』を1曲だけ聴いてみる。パイプオルガンの荘厳な響きが印象的。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「トッカータとフーガ ニ短調 バッハ」と検索して聴く。",
+    "estimated_minutes": 9,
+    "weight": 1.0
+  },
+  {
+    "id": "music_147_3",
+    "title": "『管弦楽組曲第3番「エア」』を聴いてみる",
+    "description": "バッハ｜「G線上のアリア」の原曲として知られる名曲。",
+    "detail": "バッハの『管弦楽組曲第3番「エア」』を1曲だけ聴いてみる。「G線上のアリア」の原曲として知られる名曲。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「管弦楽組曲第3番「エア」 バッハ」と検索して聴く。",
+    "estimated_minutes": 6,
+    "weight": 1.0
+  },
+  {
+    "id": "music_148_item",
+    "title": "『水上の音楽』を聴いてみる",
+    "description": "ヘンデル｜宮廷の舟遊びのために書かれた優雅な組曲。",
+    "detail": "ヘンデルの『水上の音楽』を1曲だけ聴いてみる。宮廷の舟遊びのために書かれた優雅な組曲。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「水上の音楽 ヘンデル」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_149_item",
+    "title": "『メサイア「ハレルヤ・コーラス」』を聴いてみる",
+    "description": "ヘンデル｜合唱曲として世界的に有名な祝祭的な一曲。",
+    "detail": "ヘンデルの『メサイア「ハレルヤ・コーラス」』を1曲だけ聴いてみる。合唱曲として世界的に有名な祝祭的な一曲。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「メサイア「ハレルヤ・コーラス」 ヘンデル」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_150_item",
+    "title": "『ボレロ』を聴いてみる",
+    "description": "ラヴェル｜同じリズムが徐々に盛り上がっていく名曲。",
+    "detail": "ラヴェルの『ボレロ』を1曲だけ聴いてみる。同じリズムが徐々に盛り上がっていく名曲。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「ボレロ ラヴェル」と検索して聴く。",
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "music_151_10",
+    "title": "『スラブ舞曲第10番』を聴いてみる",
+    "description": "ドヴォルザーク｜哀愁を帯びた美しい旋律が魅力の一曲。",
+    "detail": "ドヴォルザークの『スラブ舞曲第10番』を1曲だけ聴いてみる。哀愁を帯びた美しい旋律が魅力の一曲。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「スラブ舞曲第10番 ドヴォルザーク」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_152_92",
+    "title": "『交響曲第9番「新世界より」第2楽章』を聴いてみる",
+    "description": "ドヴォルザーク｜「家路」としても知られる望郷のメロディ。",
+    "detail": "ドヴォルザークの『交響曲第9番「新世界より」第2楽章』を1曲だけ聴いてみる。「家路」としても知られる望郷のメロディ。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「交響曲第9番「新世界より」第2楽章 ドヴォルザーク」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_153_item",
+    "title": "『組曲「惑星」より 木星』を聴いてみる",
+    "description": "ホルスト｜壮大でスケールの大きいオーケストラ曲。",
+    "detail": "ホルストの『組曲「惑星」より 木星』を1曲だけ聴いてみる。壮大でスケールの大きいオーケストラ曲。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「組曲「惑星」より 木星 ホルスト」と検索して聴く。",
+    "estimated_minutes": 8,
+    "weight": 1.0
+  },
+  {
+    "id": "music_154_item",
+    "title": "『交響詩「モルダウ」』を聴いてみる",
+    "description": "スメタナ｜チェコの大河を描いた雄大な名曲。",
+    "detail": "スメタナの『交響詩「モルダウ」』を1曲だけ聴いてみる。チェコの大河を描いた雄大な名曲。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「交響詩「モルダウ」 スメタナ」と検索して聴く。",
+    "estimated_minutes": 12,
+    "weight": 1.0
+  },
+  {
+    "id": "music_155_item",
+    "title": "『「ペール・ギュント」より 朝』を聴いてみる",
+    "description": "グリーグ｜静かな夜明けを思わせる穏やかな一曲。",
+    "detail": "グリーグの『「ペール・ギュント」より 朝』を1曲だけ聴いてみる。静かな夜明けを思わせる穏やかな一曲。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「「ペール・ギュント」より 朝 グリーグ」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_156_item",
+    "title": "『組曲「展覧会の絵」より キエフの大門』を聴いてみる",
+    "description": "ムソルグスキー｜壮大なフィナーレを飾る力強い一曲。",
+    "detail": "ムソルグスキーの『組曲「展覧会の絵」より キエフの大門』を1曲だけ聴いてみる。壮大なフィナーレを飾る力強い一曲。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「組曲「展覧会の絵」より キエフの大門 ムソルグスキー」と検索して聴く。",
+    "estimated_minutes": 6,
+    "weight": 1.0
+  },
+  {
+    "id": "music_157_item",
+    "title": "『幻想即興曲』を聴いてみる",
+    "description": "ショパン｜軽やかで華麗なピアノ曲の名作。",
+    "detail": "ショパンの『幻想即興曲』を1曲だけ聴いてみる。軽やかで華麗なピアノ曲の名作。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「幻想即興曲 ショパン」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_158_item",
+    "title": "『英雄ポロネーズ』を聴いてみる",
+    "description": "ショパン｜力強く堂々としたピアノ独奏曲。",
+    "detail": "ショパンの『英雄ポロネーズ』を1曲だけ聴いてみる。力強く堂々としたピアノ独奏曲。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「英雄ポロネーズ ショパン」と検索して聴く。",
+    "estimated_minutes": 6,
+    "weight": 1.0
+  },
+  {
+    "id": "music_159_item",
+    "title": "『前奏曲「雨だれ」』を聴いてみる",
+    "description": "ショパン｜静かな雨音を思わせる叙情的な一曲。",
+    "detail": "ショパンの『前奏曲「雨だれ」』を1曲だけ聴いてみる。静かな雨音を思わせる叙情的な一曲。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「前奏曲「雨だれ」 ショパン」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_160_5",
+    "title": "『マズルカ第5番』を聴いてみる",
+    "description": "ショパン｜ポーランドの民族舞曲に基づく愛らしい一曲。",
+    "detail": "ショパンの『マズルカ第5番』を1曲だけ聴いてみる。ポーランドの民族舞曲に基づく愛らしい一曲。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「マズルカ第5番 ショパン」と検索して聴く。",
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_161_item",
+    "title": "『ラ・カンパネラ』を聴いてみる",
+    "description": "リスト｜超絶技巧で知られる華麗なピアノ曲。",
+    "detail": "リストの『ラ・カンパネラ』を1曲だけ聴いてみる。超絶技巧で知られる華麗なピアノ曲。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「ラ・カンパネラ リスト」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_162_3",
+    "title": "『愛の夢 第3番』を聴いてみる",
+    "description": "リスト｜ロマンティックな旋律が美しいピアノ曲。",
+    "detail": "リストの『愛の夢 第3番』を1曲だけ聴いてみる。ロマンティックな旋律が美しいピアノ曲。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「愛の夢 第3番 リスト」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_163_bohemianrhapsody",
+    "title": "『Bohemian Rhapsody』を聴いてみる",
+    "description": "Queen｜複数の楽曲構成が特徴的な伝説的な一曲。",
+    "detail": "Queenの『Bohemian Rhapsody』を1曲だけ聴いてみる。複数の楽曲構成が特徴的な伝説的な一曲。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Bohemian Rhapsody Queen」と検索して聴く。",
+    "estimated_minutes": 6,
+    "weight": 1.0
+  },
+  {
+    "id": "music_164_billiejean",
+    "title": "『Billie Jean』を聴いてみる",
+    "description": "Michael Jackson｜イントロのベースラインだけで盛り上がる名曲。",
+    "detail": "Michael Jacksonの『Billie Jean』を1曲だけ聴いてみる。イントロのベースラインだけで盛り上がる名曲。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Billie Jean Michael Jackson」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_165_hotelcalifornia",
+    "title": "『Hotel California』を聴いてみる",
+    "description": "Eagles｜哀愁漂うギターソロが印象的なロックの名曲。",
+    "detail": "Eaglesの『Hotel California』を1曲だけ聴いてみる。哀愁漂うギターソロが印象的なロックの名曲。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Hotel California Eagles」と検索して聴く。",
+    "estimated_minutes": 6,
+    "weight": 1.0
+  },
+  {
+    "id": "music_166_imagine",
+    "title": "『Imagine』を聴いてみる",
+    "description": "John Lennon｜平和への願いを込めたシンプルで美しい一曲。",
+    "detail": "John Lennonの『Imagine』を1曲だけ聴いてみる。平和への願いを込めたシンプルで美しい一曲。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Imagine John Lennon」と検索して聴く。",
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_167_letitbe",
+    "title": "『Let It Be』を聴いてみる",
+    "description": "The Beatles｜穏やかに背中を押してくれる不朽の名曲。",
+    "detail": "The Beatlesの『Let It Be』を1曲だけ聴いてみる。穏やかに背中を押してくれる不朽の名曲。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Let It Be The Beatles」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_168_heyjude",
+    "title": "『Hey Jude』を聴いてみる",
+    "description": "The Beatles｜みんなで口ずさみたくなる長編の名曲。",
+    "detail": "The Beatlesの『Hey Jude』を1曲だけ聴いてみる。みんなで口ずさみたくなる長編の名曲。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Hey Jude The Beatles」と検索して聴く。",
+    "estimated_minutes": 7,
+    "weight": 1.0
+  },
+  {
+    "id": "music_169_yesterday",
+    "title": "『Yesterday』を聴いてみる",
+    "description": "The Beatles｜シンプルな旋律が胸に響くバラード。",
+    "detail": "The Beatlesの『Yesterday』を1曲だけ聴いてみる。シンプルな旋律が胸に響くバラード。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Yesterday The Beatles」と検索して聴く。",
+    "estimated_minutes": 2,
+    "weight": 1.0
+  },
+  {
+    "id": "music_170_stairwaytoheaven",
+    "title": "『Stairway to Heaven』を聴いてみる",
+    "description": "Led Zeppelin｜ロック史に残る壮大な構成の名曲。",
+    "detail": "Led Zeppelinの『Stairway to Heaven』を1曲だけ聴いてみる。ロック史に残る壮大な構成の名曲。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Stairway to Heaven Led Zeppelin」と検索して聴く。",
+    "estimated_minutes": 8,
+    "weight": 1.0
+  },
+  {
+    "id": "music_171_sweetchildomine",
+    "title": "『Sweet Child O' Mine』を聴いてみる",
+    "description": "Guns N' Roses｜印象的なギターリフから始まるロックの定番。",
+    "detail": "Guns N' Rosesの『Sweet Child O' Mine』を1曲だけ聴いてみる。印象的なギターリフから始まるロックの定番。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Sweet Child O' Mine Guns N' Roses」と検索して聴く。",
+    "estimated_minutes": 6,
+    "weight": 1.0
+  },
+  {
+    "id": "music_172_wonderwall",
+    "title": "『Wonderwall』を聴いてみる",
+    "description": "Oasis｜90年代を代表する切なさのあるロックナンバー。",
+    "detail": "Oasisの『Wonderwall』を1曲だけ聴いてみる。90年代を代表する切なさのあるロックナンバー。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Wonderwall Oasis」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_173_dontlookbackinanger",
+    "title": "『Don't Look Back in Anger』を聴いてみる",
+    "description": "Oasis｜大合唱が定番になっているアンセム。",
+    "detail": "Oasisの『Don't Look Back in Anger』を1曲だけ聴いてみる。大合唱が定番になっているアンセム。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Don't Look Back in Anger Oasis」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_174_thinkingoutloud",
+    "title": "『Thinking Out Loud』を聴いてみる",
+    "description": "Ed Sheeran｜結婚式でも人気の温かいラブソング。",
+    "detail": "Ed Sheeranの『Thinking Out Loud』を1曲だけ聴いてみる。結婚式でも人気の温かいラブソング。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Thinking Out Loud Ed Sheeran」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_175_photograph",
+    "title": "『Photograph』を聴いてみる",
+    "description": "Ed Sheeran｜思い出を大切にしたい気持ちに寄り添う一曲。",
+    "detail": "Ed Sheeranの『Photograph』を1曲だけ聴いてみる。思い出を大切にしたい気持ちに寄り添う一曲。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Photograph Ed Sheeran」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_176_watermelonsugar",
+    "title": "『Watermelon Sugar』を聴いてみる",
+    "description": "Harry Styles｜夏らしい爽やかなポップナンバー。",
+    "detail": "Harry Stylesの『Watermelon Sugar』を1曲だけ聴いてみる。夏らしい爽やかなポップナンバー。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Watermelon Sugar Harry Styles」と検索して聴く。",
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_177_asitwas",
+    "title": "『As It Was』を聴いてみる",
+    "description": "Harry Styles｜シンセポップ調の中毒性あるヒット曲。",
+    "detail": "Harry Stylesの『As It Was』を1曲だけ聴いてみる。シンセポップ調の中毒性あるヒット曲。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「As It Was Harry Styles」と検索して聴く。",
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_178_levitating",
+    "title": "『Levitating』を聴いてみる",
+    "description": "Dua Lipa｜ディスコ調のダンサブルな一曲。",
+    "detail": "Dua Lipaの『Levitating』を1曲だけ聴いてみる。ディスコ調のダンサブルな一曲。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Levitating Dua Lipa」と検索して聴く。",
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_179_dontstartnow",
+    "title": "『Don't Start Now』を聴いてみる",
+    "description": "Dua Lipa｜ベースラインが印象的なダンスポップ。",
+    "detail": "Dua Lipaの『Don't Start Now』を1曲だけ聴いてみる。ベースラインが印象的なダンスポップ。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Don't Start Now Dua Lipa」と検索して聴く。",
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_180_badguy",
+    "title": "『Bad Guy』を聴いてみる",
+    "description": "Billie Eilish｜ミニマルなビートが癖になる一曲。",
+    "detail": "Billie Eilishの『Bad Guy』を1曲だけ聴いてみる。ミニマルなビートが癖になる一曲。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Bad Guy Billie Eilish」と検索して聴く。",
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_181_happierthanever",
+    "title": "『Happier Than Ever』を聴いてみる",
+    "description": "Billie Eilish｜静と動が入れ替わる構成が印象的な一曲。",
+    "detail": "Billie Eilishの『Happier Than Ever』を1曲だけ聴いてみる。静と動が入れ替わる構成が印象的な一曲。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Happier Than Ever Billie Eilish」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_182_circles",
+    "title": "『Circles』を聴いてみる",
+    "description": "Post Malone｜浮遊感のあるメロディが心地よい一曲。",
+    "detail": "Post Maloneの『Circles』を1曲だけ聴いてみる。浮遊感のあるメロディが心地よい一曲。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Circles Post Malone」と検索して聴く。",
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_183_sunflower",
+    "title": "『Sunflower』を聴いてみる",
+    "description": "Post Malone & Swae Lee｜映画「スパイダーマン」主題歌としても有名。",
+    "detail": "Post Malone & Swae Leeの『Sunflower』を1曲だけ聴いてみる。映画「スパイダーマン」主題歌としても有名。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Sunflower Post Malone & Swae Lee」と検索して聴く。",
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_184_shakeitoff",
+    "title": "『Shake It Off』を聴いてみる",
+    "description": "Taylor Swift｜前向きな気持ちにさせてくれるポップナンバー。",
+    "detail": "Taylor Swiftの『Shake It Off』を1曲だけ聴いてみる。前向きな気持ちにさせてくれるポップナンバー。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Shake It Off Taylor Swift」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_185_lovestory",
+    "title": "『Love Story』を聴いてみる",
+    "description": "Taylor Swift｜おとぎ話のような世界観が魅力の一曲。",
+    "detail": "Taylor Swiftの『Love Story』を1曲だけ聴いてみる。おとぎ話のような世界観が魅力の一曲。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Love Story Taylor Swift」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_186_blankspace",
+    "title": "『Blank Space』を聴いてみる",
+    "description": "Taylor Swift｜キャッチーなサビが耳に残る一曲。",
+    "detail": "Taylor Swiftの『Blank Space』を1曲だけ聴いてみる。キャッチーなサビが耳に残る一曲。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Blank Space Taylor Swift」と検索して聴く。",
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_187_uptowngirl",
+    "title": "『Uptown Girl』を聴いてみる",
+    "description": "Billy Joel｜軽快なメロディが心を弾ませる定番曲。",
+    "detail": "Billy Joelの『Uptown Girl』を1曲だけ聴いてみる。軽快なメロディが心を弾ませる定番曲。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Uptown Girl Billy Joel」と検索して聴く。",
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_188_pianoman",
+    "title": "『Piano Man』を聴いてみる",
+    "description": "Billy Joel｜バーの情景を描いたストーリー性のある名曲。",
+    "detail": "Billy Joelの『Piano Man』を1曲だけ聴いてみる。バーの情景を描いたストーリー性のある名曲。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Piano Man Billy Joel」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_189_iwantitthatway",
+    "title": "『I Want It That Way』を聴いてみる",
+    "description": "Backstreet Boys｜90年代ポップスを代表するハーモニーが魅力の一曲。",
+    "detail": "Backstreet Boysの『I Want It That Way』を1曲だけ聴いてみる。90年代ポップスを代表するハーモニーが魅力の一曲。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「I Want It That Way Backstreet Boys」と検索して聴く。",
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_190_umbrella",
+    "title": "『Umbrella』を聴いてみる",
+    "description": "Rihanna｜雨の日をテーマにした大ヒットダンスナンバー。",
+    "detail": "Rihannaの『Umbrella』を1曲だけ聴いてみる。雨の日をテーマにした大ヒットダンスナンバー。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Umbrella Rihanna」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_191_diamonds",
+    "title": "『Diamonds』を聴いてみる",
+    "description": "Rihanna｜壮大なサビが印象的なバラード。",
+    "detail": "Rihannaの『Diamonds』を1曲だけ聴いてみる。壮大なサビが印象的なバラード。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Diamonds Rihanna」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_192_roar",
+    "title": "『Roar』を聴いてみる",
+    "description": "Katy Perry｜自信を取り戻させてくれる応援ソング。",
+    "detail": "Katy Perryの『Roar』を1曲だけ聴いてみる。自信を取り戻させてくれる応援ソング。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Roar Katy Perry」と検索して聴く。",
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_193_firework",
+    "title": "『Firework』を聴いてみる",
+    "description": "Katy Perry｜前向きなメッセージが込められたアンセム。",
+    "detail": "Katy Perryの『Firework』を1曲だけ聴いてみる。前向きなメッセージが込められたアンセム。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Firework Katy Perry」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_194_radioactive",
+    "title": "『Radioactive』を聴いてみる",
+    "description": "Imagine Dragons｜重厚なビートが印象的なロックナンバー。",
+    "detail": "Imagine Dragonsの『Radioactive』を1曲だけ聴いてみる。重厚なビートが印象的なロックナンバー。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Radioactive Imagine Dragons」と検索して聴く。",
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_195_believer",
+    "title": "『Believer』を聴いてみる",
+    "description": "Imagine Dragons｜力強いドラムが特徴的な人気曲。",
+    "detail": "Imagine Dragonsの『Believer』を1曲だけ聴いてみる。力強いドラムが特徴的な人気曲。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Believer Imagine Dragons」と検索して聴く。",
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_196_thunder",
+    "title": "『Thunder』を聴いてみる",
+    "description": "Imagine Dragons｜キャッチーなフレーズが耳に残る一曲。",
+    "detail": "Imagine Dragonsの『Thunder』を1曲だけ聴いてみる。キャッチーなフレーズが耳に残る一曲。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Thunder Imagine Dragons」と検索して聴く。",
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_197_cantstopthefeeling",
+    "title": "『Can't Stop the Feeling!』を聴いてみる",
+    "description": "Justin Timberlake｜聴くだけで踊りたくなる陽気な一曲。",
+    "detail": "Justin Timberlakeの『Can't Stop the Feeling!』を1曲だけ聴いてみる。聴くだけで踊りたくなる陽気な一曲。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Can't Stop the Feeling! Justin Timberlake」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_198_mrbrightside",
+    "title": "『Mr. Brightside』を聴いてみる",
+    "description": "The Killers｜ライブで大合唱になる定番ロックアンセム。",
+    "detail": "The Killersの『Mr. Brightside』を1曲だけ聴いてみる。ライブで大合唱になる定番ロックアンセム。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Mr. Brightside The Killers」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
     "id": "cook_01_item",
     "title": "鮭の塩焼き定食を作ってみる",
     "description": "和食の一品。焼くだけで完成する、ほっとする定番おかず。",
