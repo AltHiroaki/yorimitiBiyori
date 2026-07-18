@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../app/theme_mode_scope.dart';
 import '../features/notifications/notification_service.dart';
+import '../models/hour_minute.dart';
 import '../models/user_settings.dart';
 import '../repositories/records_repository.dart';
 import '../repositories/settings_repository.dart';
@@ -332,16 +333,17 @@ class _SettingsPageState extends State<SettingsPage> {
       return;
     }
 
-    final endMinutes = _notificationTimeToMinutes(
-      _settings.notificationEndTime,
-    );
-    if (_timeOfDayToMinutes(pickedTime) > endMinutes) {
+    final endMinutes =
+        parseNotificationTime(_settings.notificationEndTime).totalMinutes;
+    if (_fromTimeOfDay(pickedTime).totalMinutes > endMinutes) {
       _showRangeValidationError('開始時刻は終了時刻より後にできません');
       return;
     }
 
     await _saveNotificationSettings(
-      _settings.copyWith(notificationStartTime: _formatTimeOfDay(pickedTime)),
+      _settings.copyWith(
+        notificationStartTime: _fromTimeOfDay(pickedTime).format(),
+      ),
     );
   }
 
@@ -355,16 +357,17 @@ class _SettingsPageState extends State<SettingsPage> {
       return;
     }
 
-    final startMinutes = _notificationTimeToMinutes(
-      _settings.notificationStartTime,
-    );
-    if (_timeOfDayToMinutes(pickedTime) < startMinutes) {
+    final startMinutes =
+        parseNotificationTime(_settings.notificationStartTime).totalMinutes;
+    if (_fromTimeOfDay(pickedTime).totalMinutes < startMinutes) {
       _showRangeValidationError('終了時刻は開始時刻より前にできません');
       return;
     }
 
     await _saveNotificationSettings(
-      _settings.copyWith(notificationEndTime: _formatTimeOfDay(pickedTime)),
+      _settings.copyWith(
+        notificationEndTime: _fromTimeOfDay(pickedTime).format(),
+      ),
     );
   }
 
@@ -446,6 +449,8 @@ class _SettingsPageState extends State<SettingsPage> {
     ).showSnackBar(const SnackBar(content: Text('通知設定を保存しました')));
   }
 
+  /// TimeOfDay はタイムピッカー（UI）都合の型なので、[HourMinute] との
+  /// 相互変換だけをこの page に残す。時刻処理そのものは [HourMinute] に任せる。
   TimeOfDay _parseTimeOfDay(String source) {
     final notificationTime = parseNotificationTime(source);
     return TimeOfDay(
@@ -454,17 +459,8 @@ class _SettingsPageState extends State<SettingsPage> {
     );
   }
 
-  String _formatTimeOfDay(TimeOfDay time) {
-    final hour = time.hour.toString().padLeft(2, '0');
-    final minute = time.minute.toString().padLeft(2, '0');
-    return '$hour:$minute';
-  }
-
-  int _timeOfDayToMinutes(TimeOfDay time) => time.hour * 60 + time.minute;
-
-  int _notificationTimeToMinutes(String source) {
-    final time = parseNotificationTime(source);
-    return time.hour * 60 + time.minute;
+  HourMinute _fromTimeOfDay(TimeOfDay time) {
+    return HourMinute(hour: time.hour, minute: time.minute);
   }
 
   /// 履歴削除カード：通常時は「削除」ボタン、タップするとインライン確認に切り替わる。

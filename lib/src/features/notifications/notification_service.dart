@@ -7,6 +7,7 @@ import 'package:flutter_timezone/flutter_timezone.dart';
 import 'package:timezone/data/latest.dart' as timezone_data;
 import 'package:timezone/timezone.dart' as timezone;
 
+import '../../models/hour_minute.dart';
 import '../../models/user_settings.dart';
 import 'scheduled_notification_plan_store.dart';
 
@@ -46,35 +47,15 @@ abstract class NotificationController {
   Future<void> cancelDailyNotifications();
 }
 
-class DailyNotificationTime {
-  const DailyNotificationTime({required this.hour, required this.minute});
-
-  final int hour;
-  final int minute;
-}
-
-DailyNotificationTime parseNotificationTime(
+/// `HH:mm` 文字列をパースする。不正なら [fallbackTime]、それも不正なら
+/// デフォルトの通知開始時刻へフォールバックする（保存データ破損時の防御）。
+HourMinute parseNotificationTime(
   String source, {
   String fallbackTime = defaultNotificationStartTime,
 }) {
-  final parts = source.split(':');
-  if (parts.length != 2) {
-    return parseNotificationTime(fallbackTime);
-  }
-
-  final hour = int.tryParse(parts[0]);
-  final minute = int.tryParse(parts[1]);
-  final isValidTime = hour != null &&
-      minute != null &&
-      hour >= 0 &&
-      hour <= 23 &&
-      minute >= 0 &&
-      minute <= 59;
-  if (!isValidTime) {
-    return parseNotificationTime(fallbackTime);
-  }
-
-  return DailyNotificationTime(hour: hour, minute: minute);
+  return HourMinute.tryParse(source) ??
+      HourMinute.tryParse(fallbackTime) ??
+      HourMinute.tryParse(defaultNotificationStartTime)!;
 }
 
 /// [dayCount] 日分の通知予定時刻を返す。各日 1 件、時間帯
@@ -92,20 +73,18 @@ DailyNotificationTime parseNotificationTime(
 List<timezone.TZDateTime> computeNotificationSchedule({
   required timezone.Location location,
   required timezone.TZDateTime now,
-  required DailyNotificationTime startTime,
-  required DailyNotificationTime endTime,
+  required HourMinute startTime,
+  required HourMinute endTime,
   required math.Random random,
   List<timezone.TZDateTime> previousPlan = const [],
   int dayCount = scheduledNotificationDayCount,
 }) {
-  var startMinutes = startTime.hour * 60 + startTime.minute;
-  var endMinutes = endTime.hour * 60 + endTime.minute;
+  var startMinutes = startTime.totalMinutes;
+  var endMinutes = endTime.totalMinutes;
   if (startMinutes > endMinutes) {
     // 保存データが壊れている場合の防御。デフォルトの時間帯に置き換える。
-    final defaultStart = parseNotificationTime(defaultNotificationStartTime);
-    final defaultEnd = parseNotificationTime(defaultNotificationEndTime);
-    startMinutes = defaultStart.hour * 60 + defaultStart.minute;
-    endMinutes = defaultEnd.hour * 60 + defaultEnd.minute;
+    startMinutes = HourMinute.tryParse(defaultNotificationStartTime)!.totalMinutes;
+    endMinutes = HourMinute.tryParse(defaultNotificationEndTime)!.totalMinutes;
   }
 
   final nowMinutes = now.hour * 60 + now.minute;

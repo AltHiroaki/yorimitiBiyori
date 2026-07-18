@@ -4,6 +4,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 
 import '../features/recommendation/suggestion_picker.dart';
+import '../models/hour_minute.dart';
 import '../models/interest_category.dart';
 import '../models/ongoing_suggestion.dart';
 import '../models/suggestion.dart';
@@ -519,13 +520,6 @@ class _SuggestionPageState extends State<SuggestionPage> {
     );
   }
 
-  /// 実施中カードに表示する「HH:mm」形式の開始時刻。
-  String _formatStartTime(DateTime startedAt) {
-    final hour = startedAt.hour.toString().padLeft(2, '0');
-    final minute = startedAt.minute.toString().padLeft(2, '0');
-    return '$hour:$minute';
-  }
-
   /// 有効な詳細設定の選択値を「／」で連結した要約（例：ジャズ／作業向け）。
   String _buildDetailSummary() {
     final selectedValues = <String>[];
@@ -657,7 +651,7 @@ class _SuggestionPageState extends State<SuggestionPage> {
             if (startedAt != null) ...[
               const SizedBox(height: 4),
               Text(
-                '開始：${_formatStartTime(startedAt)}',
+                '開始：${HourMinute.fromDateTime(startedAt).format()}',
                 style: TextStyle(
                   fontSize: 13,
                   color: colorScheme.onSurfaceVariant,

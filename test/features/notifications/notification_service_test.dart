@@ -6,6 +6,7 @@ import 'package:timezone/data/latest.dart' as timezone_data;
 import 'package:timezone/timezone.dart' as timezone;
 import 'package:yorimiti_biyori/src/features/notifications/notification_service.dart';
 import 'package:yorimiti_biyori/src/features/notifications/scheduled_notification_plan_store.dart';
+import 'package:yorimiti_biyori/src/models/hour_minute.dart';
 
 /// キューに積んだ値を順に返すスクリプト化 Random。
 /// nextInt に渡された max も記録し、境界値のアサーションに使う。
@@ -66,8 +67,8 @@ void main() {
   });
 
   group('computeNotificationSchedule', () {
-    const start = DailyNotificationTime(hour: 17, minute: 0);
-    const end = DailyNotificationTime(hour: 21, minute: 0);
+    const start = HourMinute(hour: 17, minute: 0);
+    const end = HourMinute(hour: 21, minute: 0);
 
     test('7 日連続・各日 1 件・すべて時間帯の範囲内になる', () {
       final now = timezone.TZDateTime(location, 2026, 7, 12, 10);
@@ -191,7 +192,7 @@ void main() {
 
     test('開始 == 終了の縮退範囲は常にその時刻になる（固定時刻通知）', () {
       final now = timezone.TZDateTime(location, 2026, 7, 12, 10);
-      const fixedTime = DailyNotificationTime(hour: 17, minute: 30);
+      const fixedTime = HourMinute(hour: 17, minute: 30);
 
       final schedule = computeNotificationSchedule(
         location: location,
@@ -213,8 +214,8 @@ void main() {
       final schedule = computeNotificationSchedule(
         location: location,
         now: now,
-        startTime: const DailyNotificationTime(hour: 22, minute: 0),
-        endTime: const DailyNotificationTime(hour: 8, minute: 0),
+        startTime: const HourMinute(hour: 22, minute: 0),
+        endTime: const HourMinute(hour: 8, minute: 0),
         random: math.Random(42),
       );
 
