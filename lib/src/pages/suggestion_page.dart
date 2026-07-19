@@ -525,8 +525,9 @@ class _OngoingCard extends StatelessWidget {
     final colorScheme = Theme.of(context).colorScheme;
     final startedAt = this.startedAt;
 
-    return Card(
+    return NeumorphicSurface(
       key: cardKey,
+      radius: 32,
       child: Padding(
         padding: const EdgeInsets.all(20),
         child: Column(
@@ -537,6 +538,8 @@ class _OngoingCard extends StatelessWidget {
               headerLabel: '実施中のよりみち',
               title: suggestion.title,
               description: suggestion.description,
+              tags: suggestion.tags,
+              estimatedMinutes: suggestion.estimatedMinutes,
               whereToTry: suggestion.whereToTry,
               footnote: startedAt == null
                   ? null
@@ -552,16 +555,21 @@ class _OngoingCard extends StatelessWidget {
             Row(
               children: [
                 Expanded(
-                  child: FilledButton(
-                    onPressed: onComplete,
-                    child: const Text('完了'),
+                  child: NeumorphicButtonFrame(
+                    isPrimary: true,
+                    child: FilledButton(
+                      onPressed: onComplete,
+                      child: const Text('完了'),
+                    ),
                   ),
                 ),
                 const SizedBox(width: 8),
                 Expanded(
-                  child: OutlinedButton(
-                    onPressed: onSkip,
-                    child: const Text('スキップ'),
+                  child: NeumorphicButtonFrame(
+                    child: OutlinedButton(
+                      onPressed: onSkip,
+                      child: const Text('スキップ'),
+                    ),
                   ),
                 ),
               ],
