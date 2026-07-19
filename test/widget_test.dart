@@ -5,6 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import 'package:yorimiti_biyori/src/app/app_shell.dart';
 import 'package:yorimiti_biyori/src/app/yorimiti_biyori_app.dart';
 import 'package:yorimiti_biyori/src/features/notifications/notification_service.dart';
 import 'package:yorimiti_biyori/src/models/suggestion_record.dart';
