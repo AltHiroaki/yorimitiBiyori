@@ -1,3 +1,5 @@
+import 'hour_minute.dart';
+
 /// 初回起動時・保存データが壊れているときに使うデフォルトの選択カテゴリ。
 /// 企画書 ver6 の MVP コアカテゴリ（音楽・料理・読書・映画）から選ぶ。
 const List<String> defaultSelectedCategoryIds = ['music', 'read', 'movie'];
@@ -167,7 +169,9 @@ _NotificationRange _parseNotificationRange(Map<String, dynamic> json) {
     end = defaultNotificationEndTime;
   }
 
-  if (_notificationTimeToMinutes(start) > _notificationTimeToMinutes(end)) {
+  final startMinutes = HourMinute.tryParse(start)!.totalMinutes;
+  final endMinutes = HourMinute.tryParse(end)!.totalMinutes;
+  if (startMinutes > endMinutes) {
     return const _NotificationRange(
       defaultNotificationStartTime,
       defaultNotificationEndTime,
@@ -176,31 +180,9 @@ _NotificationRange _parseNotificationRange(Map<String, dynamic> json) {
   return _NotificationRange(start, end);
 }
 
-/// `HH:mm` 形式（hour 0〜23・minute 0〜59）かどうか。
-/// notification_service 側の parseNotificationTime と同じ規則だが、
-/// モデル → サービスの import 循環を避けるためここで独自に判定する。
+/// 保存値が `HH:mm` 形式の文字列かどうか。
 bool _isValidNotificationTime(dynamic value) {
-  if (value is! String) {
-    return false;
-  }
-  final parts = value.split(':');
-  if (parts.length != 2) {
-    return false;
-  }
-  final hour = int.tryParse(parts[0]);
-  final minute = int.tryParse(parts[1]);
-  return hour != null &&
-      minute != null &&
-      hour >= 0 &&
-      hour <= 23 &&
-      minute >= 0 &&
-      minute <= 59;
-}
-
-/// 有効な `HH:mm` 文字列を 0 時からの経過分に変換する（範囲の前後比較用）。
-int _notificationTimeToMinutes(String time) {
-  final parts = time.split(':');
-  return int.parse(parts[0]) * 60 + int.parse(parts[1]);
+  return value is String && HourMinute.tryParse(value) != null;
 }
 
 List<String> _parseStringList(dynamic value, List<String> fallback) {
