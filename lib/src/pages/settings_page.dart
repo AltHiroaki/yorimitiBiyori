@@ -176,6 +176,9 @@ class _SettingsPageState extends State<SettingsPage> {
               width: double.infinity,
               child: NeumorphicRecessedSurface(
                 child: SegmentedButton<ThemeModeSetting>(
+                  // アイコンを付けず、選択時のチェックも出さないことで
+                  // どのセグメントを選んでもラベルが折り返さないようにする。
+                  showSelectedIcon: false,
                   segments: const [
                     ButtonSegment(
                       value: ThemeModeSetting.system,
@@ -184,12 +187,10 @@ class _SettingsPageState extends State<SettingsPage> {
                     ButtonSegment(
                       value: ThemeModeSetting.light,
                       label: Text('ライト'),
-                      icon: Icon(Icons.light_mode_outlined),
                     ),
                     ButtonSegment(
                       value: ThemeModeSetting.dark,
                       label: Text('ダーク'),
-                      icon: Icon(Icons.dark_mode_outlined),
                     ),
                   ],
                   selected: {_settings.themeMode},
