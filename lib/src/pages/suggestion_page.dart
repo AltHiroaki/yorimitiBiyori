@@ -155,6 +155,8 @@ class _SuggestionPageState extends State<SuggestionPage> {
           feedback: feedback,
           recordId: completedRecordId,
         );
+        // スキップからの復活なら、挽回された元のスキップ履歴を削除する。
+        await _flowService.removeRevivedSkipRecord();
         _settings = _flowService.appendRecentSuggestionId(
           _settings,
           suggestion.id,

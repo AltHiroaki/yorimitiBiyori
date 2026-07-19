@@ -45,6 +45,11 @@ class _FakeRecordsRepository implements RecordsRepository {
   }
 
   @override
+  Future<void> deleteRecord(String recordId) async {
+    addedRecords.removeWhere((record) => record.id == recordId);
+  }
+
+  @override
   Future<void> deleteAllRecords() async {
     addedRecords.clear();
   }
@@ -402,6 +407,91 @@ void main() {
     expect(completedRecordId, savedRecord.id);
     // 保存成功のフィードバックとして SnackBar を表示する（issue #44）。
     expect(find.text('履歴に保存しました'), findsOneWidget);
+  });
+
+  testWidgets('スキップから復活した実施中を完了すると元のスキップ履歴が削除される',
+      (tester) async {
+    final skippedRecord = SuggestionRecord(
+      id: 'record_skip',
+      suggestionId: 'music_a',
+      suggestionTitle: 'ジャズを1曲流す',
+      category: 'music',
+      estimatedMinutes: 5,
+      status: SuggestionRecordStatus.skipped,
+      feedback: null,
+      createdAt: DateTime(2026, 7, 10),
+    );
+    final recordsRepository = _FakeRecordsRepository()
+      ..addedRecords.add(skippedRecord);
+    final ongoingRepository = _FakeOngoingSuggestionRepository(
+      OngoingSuggestion(
+        suggestionId: 'music_a',
+        startedAt: DateTime(2026, 7, 15, 17, 30),
+        revivedFromRecordId: 'record_skip',
+      ),
+    );
+    await _pumpPage(
+      tester,
+      suggestions: [
+        _suggestionJson(id: 'music_a', title: 'ジャズを1曲流す', tags: ['ジャズ']),
+      ],
+      settings: const UserSettings(selectedCategories: ['music']),
+      recordsRepository: recordsRepository,
+      ongoingSuggestionRepository: ongoingRepository,
+    );
+
+    await tester.tap(find.text('完了'));
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('履歴に保存'));
+    await tester.pumpAndSettle();
+
+    // 元のスキップ履歴は消え、done レコードだけが残る。
+    expect(recordsRepository.addedRecords, hasLength(1));
+    final savedRecord = recordsRepository.addedRecords.single;
+    expect(savedRecord.status, SuggestionRecordStatus.done);
+    expect(savedRecord.suggestionId, 'music_a');
+  });
+
+  testWidgets('スキップから復活した実施中を再スキップした場合は元のスキップ履歴を残す',
+      (tester) async {
+    final skippedRecord = SuggestionRecord(
+      id: 'record_skip',
+      suggestionId: 'music_a',
+      suggestionTitle: 'ジャズを1曲流す',
+      category: 'music',
+      estimatedMinutes: 5,
+      status: SuggestionRecordStatus.skipped,
+      feedback: null,
+      createdAt: DateTime(2026, 7, 10),
+    );
+    final recordsRepository = _FakeRecordsRepository()
+      ..addedRecords.add(skippedRecord);
+    final ongoingRepository = _FakeOngoingSuggestionRepository(
+      OngoingSuggestion(
+        suggestionId: 'music_a',
+        startedAt: DateTime(2026, 7, 15, 17, 30),
+        revivedFromRecordId: 'record_skip',
+      ),
+    );
+    await _pumpPage(
+      tester,
+      suggestions: [
+        _suggestionJson(id: 'music_a', title: 'ジャズを1曲流す', tags: ['ジャズ']),
+      ],
+      settings: const UserSettings(selectedCategories: ['music']),
+      recordsRepository: recordsRepository,
+      ongoingSuggestionRepository: ongoingRepository,
+    );
+
+    await tester.tap(find.text('スキップ'));
+    await tester.pumpAndSettle();
+
+    // 完了には至っていないので、元のスキップ履歴は削除しない。
+    expect(
+      recordsRepository.addedRecords.map((record) => record.id),
+      contains('record_skip'),
+    );
+    expect(recordsRepository.addedRecords, hasLength(2));
   });
 
   testWidgets('完了モーダルを保存せず閉じると履歴は保存されず実施中のまま', (tester) async {

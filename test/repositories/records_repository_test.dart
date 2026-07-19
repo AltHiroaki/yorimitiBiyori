@@ -62,6 +62,31 @@ void main() {
     expect(loadedRecords, isEmpty);
   });
 
+  test('指定 ID の履歴だけを1件削除できる', () async {
+    SharedPreferences.setMockInitialValues({});
+    final repository = RecordsRepository();
+
+    await repository.addRecord(doneRecord);
+    await repository.addRecord(skippedRecord);
+    await repository.deleteRecord('record_2');
+    final loadedRecords = await repository.loadRecords();
+
+    expect(loadedRecords, hasLength(1));
+    expect(loadedRecords.single.id, 'record_1');
+  });
+
+  test('存在しない ID の削除は何もしない', () async {
+    SharedPreferences.setMockInitialValues({});
+    final repository = RecordsRepository();
+
+    await repository.addRecord(doneRecord);
+    await repository.deleteRecord('missing_record');
+    final loadedRecords = await repository.loadRecords();
+
+    expect(loadedRecords, hasLength(1));
+    expect(loadedRecords.single.id, 'record_1');
+  });
+
   test('全削除すると履歴が空になる', () async {
     SharedPreferences.setMockInitialValues({});
     final repository = RecordsRepository();

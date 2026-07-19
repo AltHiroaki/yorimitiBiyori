@@ -25,6 +25,11 @@ class _FakeRecordsRepository implements RecordsRepository {
   }
 
   @override
+  Future<void> deleteRecord(String recordId) async {
+    records.removeWhere((record) => record.id == recordId);
+  }
+
+  @override
   Future<void> deleteAllRecords() async {
     records.clear();
   }
@@ -319,6 +324,8 @@ void main() {
 
     expect(ongoingRepository.ongoing, isNotNull);
     expect(ongoingRepository.ongoing!.suggestionId, 'music_a');
+    // 完了時に元のスキップ履歴を削除できるよう、復活元の履歴 ID を記録する。
+    expect(ongoingRepository.ongoing!.revivedFromRecordId, 'skipped');
     expect(wasRevived, isTrue);
     expect(records, hasLength(1));
     expect(records.single.status, SuggestionRecordStatus.skipped);
