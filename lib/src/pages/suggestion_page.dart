@@ -538,6 +538,8 @@ class _OngoingCard extends StatelessWidget {
               headerLabel: '実施中のよりみち',
               title: suggestion.title,
               description: suggestion.description,
+              tags: suggestion.tags,
+              estimatedMinutes: suggestion.estimatedMinutes,
               whereToTry: suggestion.whereToTry,
               footnote: startedAt == null
                   ? null
