@@ -32,6 +32,18 @@ class RecordsRepository {
     await _saveRecords(records);
   }
 
+  /// 指定 ID の履歴を1件削除する（該当なしなら何もしない）。
+  /// スキップから復活したよりみちの完了時に、元のスキップ履歴を消すために使う。
+  Future<void> deleteRecord(String recordId) async {
+    final records = await loadRecords();
+    final lengthBefore = records.length;
+    records.removeWhere((record) => record.id == recordId);
+    if (records.length == lengthBefore) {
+      return;
+    }
+    await _saveRecords(records);
+  }
+
   /// 履歴を全件削除する（設定画面の履歴削除。取り消しできない）。
   Future<void> deleteAllRecords() async {
     final preferences = await SharedPreferences.getInstance();

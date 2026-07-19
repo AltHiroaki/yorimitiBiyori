@@ -114,7 +114,7 @@ class _HistoryPageState extends State<HistoryPage> {
         return;
       }
 
-      await _continueReviveFlow(suggestion);
+      await _continueReviveFlow(suggestion, record);
     } catch (_) {
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
@@ -137,7 +137,10 @@ class _HistoryPageState extends State<HistoryPage> {
   }
 
   /// スキップした提案の復活フロー後半：詳細 → 確認 → 実施中として保存。
-  Future<void> _continueReviveFlow(Suggestion suggestion) async {
+  Future<void> _continueReviveFlow(
+    Suggestion suggestion,
+    SuggestionRecord record,
+  ) async {
     final shouldTry = await showReviveSuggestionDetailDialog(
       context: context,
       suggestion: suggestion,
@@ -160,10 +163,12 @@ class _HistoryPageState extends State<HistoryPage> {
       return;
     }
 
+    // 復活元のスキップ履歴 ID を添えて保存し、完了時にその1件を削除できるようにする。
     await _ongoingSuggestionRepository.saveOngoingSuggestion(
       OngoingSuggestion(
         suggestionId: suggestion.id,
         startedAt: DateTime.now(),
+        revivedFromRecordId: record.id,
       ),
     );
     if (!mounted) {

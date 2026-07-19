@@ -206,6 +206,24 @@ class SuggestionFlowService {
     await _recordsRepository.addRecord(record);
   }
 
+  /// スキップ履歴からの復活で実施中になっていた場合、元のスキップ履歴を
+  /// 1件削除する（issue #101）。実施まで至ったのでスキップは挽回されたとみなす。
+  /// done 履歴の保存後に呼ぶ。削除に失敗しても done の保存は成立しているため、
+  /// 例外は投げず握りつぶす（スキップ行が残るだけで実害はない）。
+  Future<void> removeRevivedSkipRecord() async {
+    try {
+      final ongoing =
+          await _ongoingSuggestionRepository.loadOngoingSuggestion();
+      final recordId = ongoing?.revivedFromRecordId;
+      if (recordId == null) {
+        return;
+      }
+      await _recordsRepository.deleteRecord(recordId);
+    } catch (_) {
+      // 何もしない。
+    }
+  }
+
   /// 実施中のよりみちを永続化する（タブ切替・アプリ再起動でも維持するため）。
   /// 永続化の失敗で UI を止めないため、保存は待たずに実行する。
   void startOngoing(Suggestion suggestion, DateTime startedAt) {
