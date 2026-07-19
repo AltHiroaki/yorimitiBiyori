@@ -37,6 +37,13 @@ const List<_FeedbackChoice> _feedbackChoices = [
   _FeedbackChoice(SuggestionFeedback.bad, '😐', '合わなかった'),
 ];
 
+/// フィードバックの表示ラベル（絵文字付き）。履歴詳細ダイアログでも使う。
+String feedbackDisplayLabel(SuggestionFeedback feedback) {
+  final choice = _feedbackChoices
+      .firstWhere((choice) => choice.feedback == feedback);
+  return '${choice.emoji} ${choice.label}';
+}
+
 /// 「やってみる」後に表示するフィードバック入力モーダル。
 /// 保存の実処理は [onSave] に委ね、ここでは保存中のボタン無効化と
 /// 成否の SnackBar 表示だけを担う（issue #44）。
