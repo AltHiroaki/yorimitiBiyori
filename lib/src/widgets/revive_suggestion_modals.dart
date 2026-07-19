@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../models/suggestion.dart';
-import 'neumorphic_surface.dart';
+import 'suggestion_card_content.dart';
 
 /// スキップした提案の詳細を表示し、「やってみる」が押されたら true を返す。
 Future<bool> showReviveSuggestionDetailDialog({
@@ -77,8 +77,6 @@ class _ReviveSuggestionDetailDialog extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;
-    final budgetLabel =
-        suggestion.budgetYen == 0 ? '無料' : '¥${suggestion.budgetYen}';
 
     return Dialog(
       key: const ValueKey<String>('revive-suggestion-detail-dialog'),
@@ -129,31 +127,19 @@ class _ReviveSuggestionDetailDialog extends StatelessWidget {
                 ],
               ),
               const SizedBox(height: 14),
-              Text(
-                suggestion.title,
-                style: const TextStyle(
-                  fontSize: 22,
-                  fontWeight: FontWeight.bold,
-                ),
+              // 既存の見た目を保つため、ダイアログはやや広めの余白を指定する。
+              // タイトルはスクロールできるため折り返しを制限しない。
+              SuggestionCardContent(
+                title: suggestion.title,
+                titleMaxLines: null,
+                description: suggestion.description,
+                tags: suggestion.tags,
+                estimatedMinutes: suggestion.estimatedMinutes,
+                whereToTry: suggestion.whereToTry,
+                budgetYen: suggestion.budgetYen,
+                titleSpacing: 10,
+                sectionSpacing: 14,
               ),
-              const SizedBox(height: 10),
-              Text(suggestion.description),
-              const SizedBox(height: 14),
-              Wrap(
-                spacing: 8,
-                runSpacing: 8,
-                children: [
-                  for (final tag in suggestion.tags)
-                    NeumorphicChipFrame(child: Chip(label: Text(tag))),
-                  NeumorphicChipFrame(
-                    child: Chip(label: Text('約${suggestion.estimatedMinutes}分')),
-                  ),
-                ],
-              ),
-              const SizedBox(height: 14),
-              Text('入手先：${suggestion.whereToTry}'),
-              const SizedBox(height: 4),
-              Text('予算：$budgetLabel'),
               const SizedBox(height: 20),
               SizedBox(
                 width: double.infinity,
