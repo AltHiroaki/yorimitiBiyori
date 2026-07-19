@@ -180,6 +180,7 @@ class _SettingsPageState extends State<SettingsPage> {
                     ButtonSegment(
                       value: ThemeModeSetting.system,
                       label: Text('システム'),
+                      icon: Icon(Icons.brightness_auto_outlined),
                     ),
                     ButtonSegment(
                       value: ThemeModeSetting.light,
