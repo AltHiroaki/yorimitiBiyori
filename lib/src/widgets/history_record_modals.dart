@@ -1,7 +1,24 @@
 import 'package:flutter/material.dart';
 
 import '../models/suggestion.dart';
+import '../models/suggestion_record.dart';
+import 'completion_modal.dart';
 import 'suggestion_card_content.dart';
+
+/// 実施した履歴の提案内容を表示する（閲覧のみ）。
+Future<void> showDoneSuggestionRecordDetailDialog({
+  required BuildContext context,
+  required Suggestion suggestion,
+  required SuggestionRecord record,
+}) {
+  return showDialog<void>(
+    context: context,
+    builder: (_) => _DoneSuggestionRecordDetailDialog(
+      suggestion: suggestion,
+      record: record,
+    ),
+  );
+}
 
 /// スキップした提案の詳細を表示し、「やってみる」が押されたら true を返す。
 Future<bool> showReviveSuggestionDetailDialog({
@@ -67,6 +84,101 @@ Future<void> showReviveSuggestionUnavailableDialog({
       );
     },
   );
+}
+
+class _DoneSuggestionRecordDetailDialog extends StatelessWidget {
+  const _DoneSuggestionRecordDetailDialog({
+    required this.suggestion,
+    required this.record,
+  });
+
+  final Suggestion suggestion;
+  final SuggestionRecord record;
+
+  @override
+  Widget build(BuildContext context) {
+    final colorScheme = Theme.of(context).colorScheme;
+    final feedback = record.feedback;
+
+    return Dialog(
+      key: const ValueKey<String>('done-record-detail-dialog'),
+      child: ConstrainedBox(
+        constraints: const BoxConstraints(maxWidth: 420),
+        child: SingleChildScrollView(
+          padding: const EdgeInsets.all(20),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                children: [
+                  CircleAvatar(
+                    backgroundColor: colorScheme.primaryContainer,
+                    foregroundColor: colorScheme.onPrimaryContainer,
+                    child: const Icon(Icons.check),
+                  ),
+                  const SizedBox(width: 12),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          '実施したよりみち',
+                          style: TextStyle(
+                            fontSize: 13,
+                            fontWeight: FontWeight.bold,
+                            color: colorScheme.primary,
+                          ),
+                        ),
+                        const SizedBox(height: 2),
+                        Text(
+                          '${record.createdAt.month}月'
+                          '${record.createdAt.day}日に実施',
+                          style: TextStyle(
+                            fontSize: 12,
+                            color: colorScheme.onSurfaceVariant,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  IconButton(
+                    tooltip: '閉じる',
+                    onPressed: () => Navigator.of(context).pop(),
+                    icon: const Icon(Icons.close),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 14),
+              // 復活ダイアログと同じ広めの余白でそろえる。
+              SuggestionCardContent(
+                title: suggestion.title,
+                titleMaxLines: null,
+                description: suggestion.description,
+                tags: suggestion.tags,
+                estimatedMinutes: suggestion.estimatedMinutes,
+                whereToTry: suggestion.whereToTry,
+                budgetYen: suggestion.budgetYen,
+                footnote: feedback == null
+                    ? null
+                    : Text('感想：${feedbackDisplayLabel(feedback)}'),
+                titleSpacing: 10,
+                sectionSpacing: 14,
+              ),
+              const SizedBox(height: 20),
+              SizedBox(
+                width: double.infinity,
+                child: FilledButton.tonal(
+                  onPressed: () => Navigator.of(context).pop(),
+                  child: const Text('閉じる'),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
 }
 
 class _ReviveSuggestionDetailDialog extends StatelessWidget {

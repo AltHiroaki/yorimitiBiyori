@@ -8,8 +8,8 @@ import '../models/suggestion_record.dart';
 import '../repositories/ongoing_suggestion_repository.dart';
 import '../repositories/records_repository.dart';
 import '../repositories/suggestion_repository.dart';
+import '../widgets/history_record_modals.dart';
 import '../widgets/neumorphic_surface.dart';
-import '../widgets/revive_suggestion_modals.dart';
 
 const Duration historyNewRecordHighlightDuration =
     Duration(milliseconds: 1500);
@@ -52,7 +52,7 @@ class _HistoryPageState extends State<HistoryPage> {
   late final OngoingSuggestionRepository _ongoingSuggestionRepository;
 
   bool _isLoading = true;
-  bool _isReviveFlowOpen = false;
+  bool _isRecordDialogOpen = false;
   List<SuggestionRecord> _newestFirstRecords = const [];
   RecordSummary _summary = summarizeRecords(const []);
 
@@ -80,14 +80,16 @@ class _HistoryPageState extends State<HistoryPage> {
     });
   }
 
-  Future<void> _openReviveFlow(SuggestionRecord record) async {
-    if (_isReviveFlowOpen ||
-        record.status != SuggestionRecordStatus.skipped) {
+  /// 履歴行タップの入口。実施済みは内容の閲覧ダイアログ、
+  /// スキップは復活フロー（詳細 → 確認 → 実施中へ保存）を開く。
+  Future<void> _openRecordDetail(SuggestionRecord record) async {
+    if (_isRecordDialogOpen) {
       return;
     }
 
+    final isDone = record.status == SuggestionRecordStatus.done;
     setState(() {
-      _isReviveFlowOpen = true;
+      _isRecordDialogOpen = true;
     });
     try {
       final suggestions = await _suggestionRepository.loadSuggestions();
@@ -103,53 +105,71 @@ class _HistoryPageState extends State<HistoryPage> {
         return;
       }
 
-      final shouldTry = await showReviveSuggestionDetailDialog(
-        context: context,
-        suggestion: suggestion,
-      );
-      if (!mounted || !shouldTry) {
+      if (isDone) {
+        await showDoneSuggestionRecordDetailDialog(
+          context: context,
+          suggestion: suggestion,
+          record: record,
+        );
         return;
       }
 
-      final ongoingSuggestion =
-          await _ongoingSuggestionRepository.loadOngoingSuggestion();
-      if (!mounted) {
-        return;
-      }
-      final shouldRevive = await showReviveSuggestionConfirmDialog(
-        context: context,
-        suggestion: suggestion,
-        hasOngoingSuggestion: ongoingSuggestion != null,
-      );
-      if (!mounted || !shouldRevive) {
-        return;
-      }
-
-      await _ongoingSuggestionRepository.saveOngoingSuggestion(
-        OngoingSuggestion(
-          suggestionId: suggestion.id,
-          startedAt: DateTime.now(),
-        ),
-      );
-      if (!mounted) {
-        return;
-      }
-      widget.onSuggestionRevived?.call();
+      await _continueReviveFlow(suggestion);
     } catch (_) {
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(
-            content: Text('提案を復活できませんでした。もう一度お試しください。'),
+          SnackBar(
+            content: Text(
+              isDone
+                  ? '履歴の内容を表示できませんでした。もう一度お試しください。'
+                  : '提案を復活できませんでした。もう一度お試しください。',
+            ),
           ),
         );
       }
     } finally {
       if (mounted) {
         setState(() {
-          _isReviveFlowOpen = false;
+          _isRecordDialogOpen = false;
         });
       }
     }
+  }
+
+  /// スキップした提案の復活フロー後半：詳細 → 確認 → 実施中として保存。
+  Future<void> _continueReviveFlow(Suggestion suggestion) async {
+    final shouldTry = await showReviveSuggestionDetailDialog(
+      context: context,
+      suggestion: suggestion,
+    );
+    if (!mounted || !shouldTry) {
+      return;
+    }
+
+    final ongoingSuggestion =
+        await _ongoingSuggestionRepository.loadOngoingSuggestion();
+    if (!mounted) {
+      return;
+    }
+    final shouldRevive = await showReviveSuggestionConfirmDialog(
+      context: context,
+      suggestion: suggestion,
+      hasOngoingSuggestion: ongoingSuggestion != null,
+    );
+    if (!mounted || !shouldRevive) {
+      return;
+    }
+
+    await _ongoingSuggestionRepository.saveOngoingSuggestion(
+      OngoingSuggestion(
+        suggestionId: suggestion.id,
+        startedAt: DateTime.now(),
+      ),
+    );
+    if (!mounted) {
+      return;
+    }
+    widget.onSuggestionRevived?.call();
   }
 
   Suggestion? _findSuggestionById(
@@ -298,9 +318,9 @@ class _HistoryPageState extends State<HistoryPage> {
       child: Material(
         color: backgroundColor ?? Colors.transparent,
         child: InkWell(
-          onTap: isDone || _isReviveFlowOpen
+          onTap: _isRecordDialogOpen
               ? null
-              : () => _openReviveFlow(record),
+              : () => _openRecordDetail(record),
           child: Padding(
             padding: const EdgeInsets.all(16),
             child: Row(
@@ -361,14 +381,12 @@ class _HistoryPageState extends State<HistoryPage> {
                     ),
                   ),
                 ),
-                if (!isDone) ...[
-                  const SizedBox(width: 4),
-                  Icon(
-                    Icons.chevron_right,
-                    size: 20,
-                    color: colorScheme.onSurfaceVariant,
-                  ),
-                ],
+                const SizedBox(width: 4),
+                Icon(
+                  Icons.chevron_right,
+                  size: 20,
+                  color: colorScheme.onSurfaceVariant,
+                ),
               ],
             ),
           ),

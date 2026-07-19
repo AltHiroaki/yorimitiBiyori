@@ -210,7 +210,8 @@ void main() {
     expect(find.text('スキップ'), findsNWidgets(2));
     expect(find.text('6月7日　音楽・5分'), findsOneWidget);
     expect(find.text('6月5日　音楽・5分'), findsOneWidget);
-    expect(find.byIcon(Icons.chevron_right), findsOneWidget);
+    // 実施済み・スキップともタップで詳細を開けるため、両行にシェブロンが付く。
+    expect(find.byIcon(Icons.chevron_right), findsNWidgets(2));
   });
 
   testWidgets('履歴 0 件のときは空状態とサマリー 0 が表示される', (tester) async {
@@ -377,26 +378,57 @@ void main() {
     expect(find.text('提案データの更新により、この提案は削除されました。'), findsOneWidget);
   });
 
-  testWidgets('実施済み行はタップしても復活フローを開かない', (tester) async {
+  testWidgets('実施済み行をタップするとやった内容と感想を閲覧できる', (tester) async {
     await _pumpPage(
       tester,
       records: [
         _record(
           id: 'done',
           suggestionId: 'music_a',
-          title: '実施済みの提案',
+          title: 'ジャズを1曲流す',
           status: SuggestionRecordStatus.done,
+          createdAt: DateTime(2026, 6, 5),
         ),
       ],
       suggestions: [
-        _suggestionJson(id: 'music_a', title: '実施済みの提案'),
+        _suggestionJson(id: 'music_a', title: 'ジャズを1曲流す'),
       ],
     );
 
-    await tester.tap(find.text('実施済みの提案'));
+    await tester.tap(find.text('ジャズを1曲流す'));
     await tester.pumpAndSettle();
 
+    expect(find.text('実施したよりみち'), findsOneWidget);
+    expect(find.text('6月5日に実施'), findsOneWidget);
+    expect(find.text('入手先：音楽配信アプリで検索する。'), findsOneWidget);
+    expect(find.text('予算：無料'), findsOneWidget);
+    expect(find.text('感想：😊 よかった'), findsOneWidget);
+    // 閲覧専用：復活フローのボタンは出さない。
+    expect(find.text('やってみる'), findsNothing);
     expect(find.text('スキップした提案'), findsNothing);
-    expect(find.byIcon(Icons.chevron_right), findsNothing);
+
+    await tester.tap(find.widgetWithText(FilledButton, '閉じる'));
+    await tester.pumpAndSettle();
+
+    expect(find.text('実施したよりみち'), findsNothing);
+  });
+
+  testWidgets('提案IDが現行データにない実施済み履歴は利用不可を表示する', (tester) async {
+    await _pumpPage(
+      tester,
+      records: [
+        _record(
+          id: 'done-deleted',
+          suggestionId: 'deleted_suggestion',
+          title: '削除済みの実施提案',
+          status: SuggestionRecordStatus.done,
+        ),
+      ],
+    );
+
+    await tester.tap(find.text('削除済みの実施提案'));
+    await tester.pumpAndSettle();
+
+    expect(find.text('この提案は現在利用できません'), findsOneWidget);
   });
 }
