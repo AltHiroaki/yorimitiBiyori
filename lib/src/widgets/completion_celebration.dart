@@ -3,6 +3,8 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
+import 'suggestion_card_content.dart';
+
 const Duration completionCheckDuration = Duration(milliseconds: 1000);
 const Duration completionCardFlightDuration = Duration(milliseconds: 800);
 
@@ -277,37 +279,11 @@ class _CompletionCardFlightOverlayState
                       clipBehavior: Clip.antiAlias,
                       child: Padding(
                         padding: const EdgeInsets.all(20),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Row(
-                              children: [
-                                Icon(
-                                  Icons.check_circle,
-                                  size: 18,
-                                  color: colorScheme.primary,
-                                ),
-                                const SizedBox(width: 6),
-                                Text(
-                                  'よりみち完了',
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    color: colorScheme.primary,
-                                  ),
-                                ),
-                              ],
-                            ),
-                            const SizedBox(height: 10),
-                            Text(
-                              widget.suggestionTitle,
-                              maxLines: 2,
-                              overflow: TextOverflow.ellipsis,
-                              style: const TextStyle(
-                                fontSize: 22,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ],
+                        child: SuggestionCardContent(
+                          headerIcon: Icons.check_circle,
+                          headerLabel: 'よりみち完了',
+                          title: widget.suggestionTitle,
+                          titleSpacing: 10,
                         ),
                       ),
                     ),

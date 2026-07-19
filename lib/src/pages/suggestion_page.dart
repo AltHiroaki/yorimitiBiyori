@@ -18,6 +18,7 @@ import '../widgets/completion_celebration.dart';
 import '../widgets/completion_modal.dart';
 import '../widgets/neumorphic_surface.dart';
 import '../widgets/section_card.dart';
+import '../widgets/suggestion_card_content.dart';
 import 'suggestion_settings_page.dart';
 
 enum _LoadStatus { loading, loaded, error }
@@ -455,8 +456,6 @@ class _SuggestionCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final colorScheme = Theme.of(context).colorScheme;
-
     return NeumorphicSurface(
       radius: 32,
       child: Padding(
@@ -464,39 +463,14 @@ class _SuggestionCard extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              '今日のよりみち',
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                color: colorScheme.primary,
-              ),
-            ),
-            const SizedBox(height: 8),
-            Text(
-              suggestion.title,
-              maxLines: 2,
-              overflow: TextOverflow.ellipsis,
-              style: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
-            ),
-            const SizedBox(height: 8),
-            Text(suggestion.description),
-            const SizedBox(height: 12),
-            Wrap(
-              spacing: 8,
-              runSpacing: 8,
-              children: [
-                for (final tag in suggestion.tags)
-                  NeumorphicChipFrame(child: Chip(label: Text(tag))),
-                NeumorphicChipFrame(
-                  child: Chip(label: Text('約${suggestion.estimatedMinutes}分')),
-                ),
-              ],
-            ),
-            const SizedBox(height: 12),
-            Text('入手先：${suggestion.whereToTry}'),
-            const SizedBox(height: 4),
-            Text(
-              '予算：${suggestion.budgetYen == 0 ? '無料' : '¥${suggestion.budgetYen}'}',
+            SuggestionCardContent(
+              headerLabel: '今日のよりみち',
+              title: suggestion.title,
+              description: suggestion.description,
+              tags: suggestion.tags,
+              estimatedMinutes: suggestion.estimatedMinutes,
+              whereToTry: suggestion.whereToTry,
+              budgetYen: suggestion.budgetYen,
             ),
             const SizedBox(height: 16),
             Row(
@@ -558,47 +532,22 @@ class _OngoingCard extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Row(
-              children: [
-                Icon(
-                  Icons.directions_walk,
-                  size: 18,
-                  color: colorScheme.primary,
-                ),
-                const SizedBox(width: 6),
-                Expanded(
-                  child: Text(
-                    '実施中のよりみち',
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      color: colorScheme.primary,
+            SuggestionCardContent(
+              headerIcon: Icons.directions_walk,
+              headerLabel: '実施中のよりみち',
+              title: suggestion.title,
+              description: suggestion.description,
+              whereToTry: suggestion.whereToTry,
+              footnote: startedAt == null
+                  ? null
+                  : Text(
+                      '開始：${HourMinute.fromDateTime(startedAt).format()}',
+                      style: TextStyle(
+                        fontSize: 13,
+                        color: colorScheme.onSurfaceVariant,
+                      ),
                     ),
-                  ),
-                ),
-              ],
             ),
-            const SizedBox(height: 8),
-            Text(
-              suggestion.title,
-              maxLines: 2,
-              overflow: TextOverflow.ellipsis,
-              style:
-                  const TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
-            ),
-            const SizedBox(height: 8),
-            Text(suggestion.description),
-            const SizedBox(height: 12),
-            Text('入手先：${suggestion.whereToTry}'),
-            if (startedAt != null) ...[
-              const SizedBox(height: 4),
-              Text(
-                '開始：${HourMinute.fromDateTime(startedAt).format()}',
-                style: TextStyle(
-                  fontSize: 13,
-                  color: colorScheme.onSurfaceVariant,
-                ),
-              ),
-            ],
             const SizedBox(height: 16),
             Row(
               children: [
