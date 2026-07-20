@@ -67,7 +67,7 @@ There is **no difficulty, no universal time condition, and no travel-distance co
 
 1. **Stage 1 — category selection** (multi-select, MVP 4 categories): music 音楽 / cook 料理 / read 読書 / movie 映画. walk 散歩 is an advanced-phase category (definition + data retained in `InterestCategories.developmentCategories`).
 2. **Stage 2 — per-category detail settings** (each group is multi-select; unselected = 指定なし = no filtering). **In the MVP each category exposes a single "genre" group:**
-   - 音楽: ジャンル(ポップス/ジャズ/クラシック/洋楽)
+   - 音楽: ジャンル(ポップス/ジャズ/クラシック/洋楽/ロック/ヒップホップ・R&B/アニソン・ゲーム音楽/EDM・テクノ)
    - 料理: 味覚・ジャンル(和食/洋食/中華/イタリアン/アジア風/激辛/さっぱり/ガッツリ)
    - 読書: ジャンル(エッセイ/小説/ノンフィクション/詩集)
    - 映画: ジャンル(アクション/コメディ/ドラマ/SF/サスペンス/ファンタジー/恋愛/アニメ/ミステリー) — a single suggestion's `tags` may hold more than one of these values, since one movie can span multiple genres
