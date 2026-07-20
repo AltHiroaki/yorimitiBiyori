@@ -60,6 +60,11 @@ class InterestCategories {
           label: '味覚・ジャンル',
           options: ['和食', '洋食', '中華', 'イタリアン', 'アジア風', '激辛', 'さっぱり', 'ガッツリ'],
         ),
+        DetailSettingGroup(
+          id: 'cooking_method',
+          label: '調理法',
+          options: ['蒸す', '炒める', '揚げる', '煮る', '焼く', '生・和える', 'レンジ・時短'],
+        ),
       ],
     ),
     InterestCategory(

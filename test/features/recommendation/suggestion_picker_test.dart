@@ -54,6 +54,41 @@ void main() {
       ]);
     });
 
+    test('料理はジャンル×調理法の2グループをAND条件で絞り込む', () {
+      final suggestions = [
+        _suggestion(
+          id: 'matched',
+          category: 'cook',
+          tags: ['和食', '焼く'],
+        ),
+        _suggestion(
+          id: 'wrong_genre',
+          category: 'cook',
+          tags: ['洋食', '焼く'],
+        ),
+        _suggestion(
+          id: 'wrong_method',
+          category: 'cook',
+          tags: ['和食', '煮る'],
+        ),
+      ];
+      const settings = UserSettings(
+        selectedCategories: ['cook'],
+        detailSettings: {
+          'cook': {
+            'genre': ['和食'],
+            'cooking_method': ['焼く'],
+          },
+        },
+      );
+
+      final filteredSuggestions = filterSuggestions(suggestions, settings);
+
+      expect(filteredSuggestions.map((suggestion) => suggestion.id), [
+        'matched',
+      ]);
+    });
+
     test('未選択グループと問わないは絞り込まない', () {
       final suggestions = [
         _suggestion(id: 'free', category: 'movie', tags: ['コメディ', 'Netflix']),
