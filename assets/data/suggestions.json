@@ -4507,6 +4507,3006 @@
     "weight": 1.0
   },
   {
+    "id": "read_051_item",
+    "title": "『そして誰もいなくなった』を読んでみる",
+    "description": "アガサ・クリスティ｜ミステリー・サスペンス。ミステリーの金字塔と呼ばれる孤島サスペンス。",
+    "detail": "『そして誰もいなくなった』（アガサ・クリスティ）を1冊だけ読んでみる。ミステリーの金字塔と呼ばれる孤島サスペンス。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_052_item",
+    "title": "『オリエント急行殺人事件』を読んでみる",
+    "description": "アガサ・クリスティ｜ミステリー・サスペンス。名探偵ポワロが挑む列車内の密室殺人。",
+    "detail": "『オリエント急行殺人事件』（アガサ・クリスティ）を1冊だけ読んでみる。名探偵ポワロが挑む列車内の密室殺人。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_053_item",
+    "title": "『アクロイド殺し』を読んでみる",
+    "description": "アガサ・クリスティ｜ミステリー・サスペンス。衝撃の結末で知られる本格ミステリーの傑作。",
+    "detail": "『アクロイド殺し』（アガサ・クリスティ）を1冊だけ読んでみる。衝撃の結末で知られる本格ミステリーの傑作。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_054_item",
+    "title": "『ナイルに死す』を読んでみる",
+    "description": "アガサ・クリスティ｜ミステリー・サスペンス。エジプトを舞台にした優雅で緊迫感ある推理劇。",
+    "detail": "『ナイルに死す』（アガサ・クリスティ）を1冊だけ読んでみる。エジプトを舞台にした優雅で緊迫感ある推理劇。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_055_abc",
+    "title": "『ABC殺人事件』を読んでみる",
+    "description": "アガサ・クリスティ｜ミステリー・サスペンス。アルファベット順に起きる連続殺人の謎に挑む。",
+    "detail": "『ABC殺人事件』（アガサ・クリスティ）を1冊だけ読んでみる。アルファベット順に起きる連続殺人の謎に挑む。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_056_item",
+    "title": "『十角館の殺人』を読んでみる",
+    "description": "綾辻行人｜ミステリー・サスペンス。新本格ミステリーの金字塔と呼ばれる衝撃作。",
+    "detail": "『十角館の殺人』（綾辻行人）を1冊だけ読んでみる。新本格ミステリーの金字塔と呼ばれる衝撃作。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_057_item",
+    "title": "『霧越邸殺人事件』を読んでみる",
+    "description": "綾辻行人｜ミステリー・サスペンス。雪の山荘で起こる連続殺人を描く本格ミステリー。",
+    "detail": "『霧越邸殺人事件』（綾辻行人）を1冊だけ読んでみる。雪の山荘で起こる連続殺人を描く本格ミステリー。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_058_item",
+    "title": "『占星術殺人事件』を読んでみる",
+    "description": "島田荘司｜ミステリー・サスペンス。トリックの独創性で名高い本格推理小説の名作。",
+    "detail": "『占星術殺人事件』（島田荘司）を1冊だけ読んでみる。トリックの独創性で名高い本格推理小説の名作。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_059_item",
+    "title": "『白夜行』を読んでみる",
+    "description": "東野圭吾｜ミステリー・サスペンス。20年にわたる男女の運命を描く長編ミステリー。",
+    "detail": "『白夜行』（東野圭吾）を1冊だけ読んでみる。20年にわたる男女の運命を描く長編ミステリー。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 25,
+    "weight": 1.0
+  },
+  {
+    "id": "read_060_item",
+    "title": "『新参者』を読んでみる",
+    "description": "東野圭吾｜ミステリー・サスペンス。加賀恭一郎シリーズ、下町の人間模様を描く連作。",
+    "detail": "『新参者』（東野圭吾）を1冊だけ読んでみる。加賀恭一郎シリーズ、下町の人間模様を描く連作。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_061_item",
+    "title": "『悪意』を読んでみる",
+    "description": "東野圭吾｜ミステリー・サスペンス。動機の謎を追う心理描写の巧みなミステリー。",
+    "detail": "『悪意』（東野圭吾）を1冊だけ読んでみる。動機の謎を追う心理描写の巧みなミステリー。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_062_item",
+    "title": "『秘密』を読んでみる",
+    "description": "東野圭吾｜ミステリー・サスペンス。入れ替わった母娘の秘密を描く感動ミステリー。",
+    "detail": "『秘密』（東野圭吾）を1冊だけ読んでみる。入れ替わった母娘の秘密を描く感動ミステリー。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_063_item",
+    "title": "『流星の絆』を読んでみる",
+    "description": "東野圭吾｜ミステリー・サスペンス。兄妹3人が真相を追う復讐劇のミステリー。",
+    "detail": "『流星の絆』（東野圭吾）を1冊だけ読んでみる。兄妹3人が真相を追う復讐劇のミステリー。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_064_item",
+    "title": "『マスカレード・ホテル』を読んでみる",
+    "description": "東野圭吾｜ミステリー・サスペンス。刑事とホテルマンが連続殺人に挑む人気シリーズ。",
+    "detail": "『マスカレード・ホテル』（東野圭吾）を1冊だけ読んでみる。刑事とホテルマンが連続殺人に挑む人気シリーズ。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_065_item",
+    "title": "『火車』を読んでみる",
+    "description": "宮部みゆき｜ミステリー・サスペンス。失踪した女性の正体を追うサスペンスの傑作。",
+    "detail": "『火車』（宮部みゆき）を1冊だけ読んでみる。失踪した女性の正体を追うサスペンスの傑作。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_066_item",
+    "title": "『模倣犯』を読んでみる",
+    "description": "宮部みゆき｜ミステリー・サスペンス。連続殺人犯の心理を描いた重厚な長編サスペンス。",
+    "detail": "『模倣犯』（宮部みゆき）を1冊だけ読んでみる。連続殺人犯の心理を描いた重厚な長編サスペンス。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 25,
+    "weight": 1.0
+  },
+  {
+    "id": "read_067_item",
+    "title": "『理由』を読んでみる",
+    "description": "宮部みゆき｜ミステリー・サスペンス。一家殺害事件の真相に迫る社会派ミステリー。",
+    "detail": "『理由』（宮部みゆき）を1冊だけ読んでみる。一家殺害事件の真相に迫る社会派ミステリー。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_068_item",
+    "title": "『半落ち』を読んでみる",
+    "description": "横山秀夫｜ミステリー・サスペンス。警察小説の傑作、自首した刑事の空白の時間を追う。",
+    "detail": "『半落ち』（横山秀夫）を1冊だけ読んでみる。警察小説の傑作、自首した刑事の空白の時間を追う。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_069_item",
+    "title": "『クライマーズ・ハイ』を読んでみる",
+    "description": "横山秀夫｜ミステリー・サスペンス。新聞社を舞台にした緊迫感あふれる群像劇。",
+    "detail": "『クライマーズ・ハイ』（横山秀夫）を1冊だけ読んでみる。新聞社を舞台にした緊迫感あふれる群像劇。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_070_item",
+    "title": "『点と線』を読んでみる",
+    "description": "松本清張｜ミステリー・サスペンス。社会派ミステリーの先駆けとなった不朽の名作。",
+    "detail": "『点と線』（松本清張）を1冊だけ読んでみる。社会派ミステリーの先駆けとなった不朽の名作。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_071_item",
+    "title": "『砂の器』を読んでみる",
+    "description": "松本清張｜ミステリー・サスペンス。方言をヒントに真相へ迫る社会派推理の傑作。",
+    "detail": "『砂の器』（松本清張）を1冊だけ読んでみる。方言をヒントに真相へ迫る社会派推理の傑作。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_072_item",
+    "title": "『ゼロの焦点』を読んでみる",
+    "description": "松本清張｜ミステリー・サスペンス。失踪した夫の過去を追うサスペンスミステリー。",
+    "detail": "『ゼロの焦点』（松本清張）を1冊だけ読んでみる。失踪した夫の過去を追うサスペンスミステリー。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_073_item",
+    "title": "『白ゆき姫殺人事件』を読んでみる",
+    "description": "湊かなえ｜ミステリー・サスペンス。SNSでの憶測が事件を歪めていく群像劇ミステリー。",
+    "detail": "『白ゆき姫殺人事件』（湊かなえ）を1冊だけ読んでみる。SNSでの憶測が事件を歪めていく群像劇ミステリー。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_074_item",
+    "title": "『贖罪』を読んでみる",
+    "description": "湊かなえ｜ミステリー・サスペンス。少女の死をめぐる4人の女性の贖罪を描く連作。",
+    "detail": "『贖罪』（湊かなえ）を1冊だけ読んでみる。少女の死をめぐる4人の女性の贖罪を描く連作。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_075_item",
+    "title": "『ストロベリーナイト』を読んでみる",
+    "description": "誉田哲也｜ミステリー・サスペンス。女性刑事・姫川玲子が活躍する警察小説シリーズ。",
+    "detail": "『ストロベリーナイト』（誉田哲也）を1冊だけ読んでみる。女性刑事・姫川玲子が活躍する警察小説シリーズ。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_076_item",
+    "title": "『悪の教典』を読んでみる",
+    "description": "貴志祐介｜ミステリー・サスペンス。教師の凶行を描く戦慄のサイコサスペンス。",
+    "detail": "『悪の教典』（貴志祐介）を1冊だけ読んでみる。教師の凶行を描く戦慄のサイコサスペンス。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 25,
+    "weight": 1.0
+  },
+  {
+    "id": "read_077_item",
+    "title": "『黒い家』を読んでみる",
+    "description": "貴志祐介｜ミステリー・サスペンス。保険金殺人をめぐる恐怖のサスペンス。",
+    "detail": "『黒い家』（貴志祐介）を1冊だけ読んでみる。保険金殺人をめぐる恐怖のサスペンス。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_078_item",
+    "title": "『向日葵の咲かない夏』を読んでみる",
+    "description": "道尾秀介｜ミステリー・サスペンス。少年の死の真相を追うミステリー。",
+    "detail": "『向日葵の咲かない夏』（道尾秀介）を1冊だけ読んでみる。少年の死の真相を追うミステリー。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_079_item",
+    "title": "『氷菓』を読んでみる",
+    "description": "米澤穂信｜ミステリー・サスペンス。〈古典部〉シリーズ第1作、日常の謎を描く青春ミステリー。",
+    "detail": "『氷菓』（米澤穂信）を1冊だけ読んでみる。〈古典部〉シリーズ第1作、日常の謎を描く青春ミステリー。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_080_item",
+    "title": "『満願』を読んでみる",
+    "description": "米澤穂信｜ミステリー・サスペンス。短編集ながら高い評価を受けるミステリーの傑作。",
+    "detail": "『満願』（米澤穂信）を1冊だけ読んでみる。短編集ながら高い評価を受けるミステリーの傑作。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_081_item",
+    "title": "『ゴールデンスランバー』を読んでみる",
+    "description": "伊坂幸太郎｜ミステリー・サスペンス。無実の罪を着せられた男の逃亡を描くサスペンス。",
+    "detail": "『ゴールデンスランバー』（伊坂幸太郎）を1冊だけ読んでみる。無実の罪を着せられた男の逃亡を描くサスペンス。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_082_item",
+    "title": "『重力ピエロ』を読んでみる",
+    "description": "伊坂幸太郎｜ミステリー・サスペンス。兄弟が連続放火事件の謎を追うミステリー。",
+    "detail": "『重力ピエロ』（伊坂幸太郎）を1冊だけ読んでみる。兄弟が連続放火事件の謎を追うミステリー。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_083_item",
+    "title": "『アヒルと鴨のコインロッカー』を読んでみる",
+    "description": "伊坂幸太郎｜ミステリー・サスペンス。巧みな構成で読ませる青春ミステリー。",
+    "detail": "『アヒルと鴨のコインロッカー』（伊坂幸太郎）を1冊だけ読んでみる。巧みな構成で読ませる青春ミステリー。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_084_f",
+    "title": "『すべてがFになる』を読んでみる",
+    "description": "森博嗣｜ミステリー・サスペンス。理系ミステリーの先駆けとなった人気シリーズ第1作。",
+    "detail": "『すべてがFになる』（森博嗣）を1冊だけ読んでみる。理系ミステリーの先駆けとなった人気シリーズ第1作。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_085_item",
+    "title": "『姑獲鳥の夏』を読んでみる",
+    "description": "京極夏彦｜ミステリー・サスペンス。妖怪と事件が交差する独特な世界観のミステリー。",
+    "detail": "『姑獲鳥の夏』（京極夏彦）を1冊だけ読んでみる。妖怪と事件が交差する独特な世界観のミステリー。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 25,
+    "weight": 1.0
+  },
+  {
+    "id": "read_086_46",
+    "title": "『46番目の密室』を読んでみる",
+    "description": "有栖川有栖｜ミステリー・サスペンス。本格推理作家・有栖川有栖のデビュー作。",
+    "detail": "『46番目の密室』（有栖川有栖）を1冊だけ読んでみる。本格推理作家・有栖川有栖のデビュー作。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_087_item",
+    "title": "『麒麟の翼』を読んでみる",
+    "description": "東野圭吾｜ミステリー・サスペンス。加賀恭一郎シリーズ、日本橋を舞台にした人情ミステリー。",
+    "detail": "『麒麟の翼』（東野圭吾）を1冊だけ読んでみる。加賀恭一郎シリーズ、日本橋を舞台にした人情ミステリー。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_088_item",
+    "title": "『シャーロック・ホームズの冒険』を読んでみる",
+    "description": "コナン・ドイル｜ミステリー・サスペンス。名探偵ホームズの活躍を描く短編集の傑作。",
+    "detail": "『シャーロック・ホームズの冒険』（コナン・ドイル）を1冊だけ読んでみる。名探偵ホームズの活躍を描く短編集の傑作。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_089_item",
+    "title": "『バスカヴィル家の犬』を読んでみる",
+    "description": "コナン・ドイル｜ミステリー・サスペンス。ホームズシリーズ屈指の怪奇色あふれる長編。",
+    "detail": "『バスカヴィル家の犬』（コナン・ドイル）を1冊だけ読んでみる。ホームズシリーズ屈指の怪奇色あふれる長編。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_090_x",
+    "title": "『Xの悲劇』を読んでみる",
+    "description": "エラリー・クイーン｜ミステリー・サスペンス。本格推理小説の古典として名高い一冊。",
+    "detail": "『Xの悲劇』（エラリー・クイーン）を1冊だけ読んでみる。本格推理小説の古典として名高い一冊。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_091_item",
+    "title": "『ダ・ヴィンチ・コード』を読んでみる",
+    "description": "ダン・ブラウン｜ミステリー・サスペンス。美術と宗教の謎を追う世界的ベストセラー。",
+    "detail": "『ダ・ヴィンチ・コード』（ダン・ブラウン）を1冊だけ読んでみる。美術と宗教の謎を追う世界的ベストセラー。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 25,
+    "weight": 1.0
+  },
+  {
+    "id": "read_092_item",
+    "title": "『天使と悪魔』を読んでみる",
+    "description": "ダン・ブラウン｜ミステリー・サスペンス。バチカンを舞台にした緊迫のサスペンス。",
+    "detail": "『天使と悪魔』（ダン・ブラウン）を1冊だけ読んでみる。バチカンを舞台にした緊迫のサスペンス。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 25,
+    "weight": 1.0
+  },
+  {
+    "id": "read_093_item",
+    "title": "『ゴーン・ガール』を読んでみる",
+    "description": "ギリアン・フリン｜ミステリー・サスペンス。夫婦の視点が交錯する心理サスペンスの傑作。",
+    "detail": "『ゴーン・ガール』（ギリアン・フリン）を1冊だけ読んでみる。夫婦の視点が交錯する心理サスペンスの傑作。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_094_item",
+    "title": "『ミレニアム ドラゴン・タトゥーの女』を読んでみる",
+    "description": "スティーグ・ラーソン｜ミステリー・サスペンス。ジャーナリストとハッカーが挑む北欧ミステリー。",
+    "detail": "『ミレニアム ドラゴン・タトゥーの女』（スティーグ・ラーソン）を1冊だけ読んでみる。ジャーナリストとハッカーが挑む北欧ミステリー。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 25,
+    "weight": 1.0
+  },
+  {
+    "id": "read_095_item",
+    "title": "『ボーン・コレクター』を読んでみる",
+    "description": "ジェフリー・ディーヴァー｜ミステリー・サスペンス。緻密な科学捜査が光るサスペンスの人気シリーズ。",
+    "detail": "『ボーン・コレクター』（ジェフリー・ディーヴァー）を1冊だけ読んでみる。緻密な科学捜査が光るサスペンスの人気シリーズ。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_096_item",
+    "title": "『羊たちの沈黙』を読んでみる",
+    "description": "トマス・ハリス｜ミステリー・サスペンス。猟奇殺人犯と対峙する心理サスペンスの金字塔。",
+    "detail": "『羊たちの沈黙』（トマス・ハリス）を1冊だけ読んでみる。猟奇殺人犯と対峙する心理サスペンスの金字塔。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_097_item",
+    "title": "『太陽がいっぱい』を読んでみる",
+    "description": "パトリシア・ハイスミス｜ミステリー・サスペンス。青年の欲望と犯罪を描くサスペンスの古典。",
+    "detail": "『太陽がいっぱい』（パトリシア・ハイスミス）を1冊だけ読んでみる。青年の欲望と犯罪を描くサスペンスの古典。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_098_i",
+    "title": "『Iの悲劇』を読んでみる",
+    "description": "米澤穂信｜ミステリー・サスペンス。過疎の村再生をめぐる連作ミステリー。",
+    "detail": "『Iの悲劇』（米澤穂信）を1冊だけ読んでみる。過疎の村再生をめぐる連作ミステリー。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_099_item",
+    "title": "『七回死んだ男』を読んでみる",
+    "description": "西澤保彦｜ミステリー・サスペンス。同じ日を繰り返すタイムループ設定の異色ミステリー。",
+    "detail": "『七回死んだ男』（西澤保彦）を1冊だけ読んでみる。同じ日を繰り返すタイムループ設定の異色ミステリー。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_100_item",
+    "title": "『黒革の手帖』を読んでみる",
+    "description": "松本清張｜ミステリー・サスペンス。銀行員の女性が仕掛ける復讐劇を描くサスペンス。",
+    "detail": "『黒革の手帖』（松本清張）を1冊だけ読んでみる。銀行員の女性が仕掛ける復讐劇を描くサスペンス。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_101_item",
+    "title": "『ボッコちゃん』を読んでみる",
+    "description": "星新一｜SF・ファンタジー。ショートショートの名手による有名短編集。",
+    "detail": "『ボッコちゃん』（星新一）を1冊だけ読んでみる。ショートショートの名手による有名短編集。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_102_item",
+    "title": "『きまぐれロボット』を読んでみる",
+    "description": "星新一｜SF・ファンタジー。軽妙な語り口で楽しめるSFショートショート集。",
+    "detail": "『きまぐれロボット』（星新一）を1冊だけ読んでみる。軽妙な語り口で楽しめるSFショートショート集。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_103_item",
+    "title": "『日本沈没』を読んでみる",
+    "description": "小松左京｜SF・ファンタジー。日本列島の危機を描いた日本SFの金字塔。",
+    "detail": "『日本沈没』（小松左京）を1冊だけ読んでみる。日本列島の危機を描いた日本SFの金字塔。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 25,
+    "weight": 1.0
+  },
+  {
+    "id": "read_104_item",
+    "title": "『時をかける少女』を読んでみる",
+    "description": "筒井康隆｜SF・ファンタジー。タイムリープを描いた青春SFの名作。",
+    "detail": "『時をかける少女』（筒井康隆）を1冊だけ読んでみる。タイムリープを描いた青春SFの名作。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_105_item",
+    "title": "『虐殺器官』を読んでみる",
+    "description": "伊藤計劃｜SF・ファンタジー。近未来を舞台にした衝撃的な戦争SF。",
+    "detail": "『虐殺器官』（伊藤計劃）を1冊だけ読んでみる。近未来を舞台にした衝撃的な戦争SF。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_106_item",
+    "title": "『ハーモニー』を読んでみる",
+    "description": "伊藤計劃｜SF・ファンタジー。健康至上主義の未来社会を描くSFの傑作。",
+    "detail": "『ハーモニー』（伊藤計劃）を1冊だけ読んでみる。健康至上主義の未来社会を描くSFの傑作。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_107_item",
+    "title": "『マルドゥック・スクランブル』を読んでみる",
+    "description": "冲方丁｜SF・ファンタジー。サイバーパンク色の強い異色のSF長編。",
+    "detail": "『マルドゥック・スクランブル』（冲方丁）を1冊だけ読んでみる。サイバーパンク色の強い異色のSF長編。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 25,
+    "weight": 1.0
+  },
+  {
+    "id": "read_108_item",
+    "title": "『新世界より』を読んでみる",
+    "description": "貴志祐介｜SF・ファンタジー。超能力社会の闇を描く壮大なSF。",
+    "detail": "『新世界より』（貴志祐介）を1冊だけ読んでみる。超能力社会の闇を描く壮大なSF。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 25,
+    "weight": 1.0
+  },
+  {
+    "id": "read_109_item",
+    "title": "『精霊の守り人』を読んでみる",
+    "description": "上橋菜穂子｜SF・ファンタジー。異世界を舞台にした女用心棒の物語。",
+    "detail": "『精霊の守り人』（上橋菜穂子）を1冊だけ読んでみる。異世界を舞台にした女用心棒の物語。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_110_item",
+    "title": "『空色勾玉』を読んでみる",
+    "description": "荻原規子｜SF・ファンタジー。和風ファンタジーの人気シリーズ第1作。",
+    "detail": "『空色勾玉』（荻原規子）を1冊だけ読んでみる。和風ファンタジーの人気シリーズ第1作。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_111_item",
+    "title": "『月の影 影の海』を読んでみる",
+    "description": "小野不由美｜SF・ファンタジー。〈十二国記〉シリーズの幕開けとなる異世界ファンタジー。",
+    "detail": "『月の影 影の海』（小野不由美）を1冊だけ読んでみる。〈十二国記〉シリーズの幕開けとなる異世界ファンタジー。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 25,
+    "weight": 1.0
+  },
+  {
+    "id": "read_112_item",
+    "title": "『ロードス島戦記』を読んでみる",
+    "description": "水野良｜SF・ファンタジー。国産ファンタジー小説の先駆けとなった人気作。",
+    "detail": "『ロードス島戦記』（水野良）を1冊だけ読んでみる。国産ファンタジー小説の先駆けとなった人気作。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_113_item",
+    "title": "『図書館戦争』を読んでみる",
+    "description": "有川浩｜SF・ファンタジー。本を守る自衛隊組織を描くエンタメ小説。",
+    "detail": "『図書館戦争』（有川浩）を1冊だけ読んでみる。本を守る自衛隊組織を描くエンタメ小説。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_114_item",
+    "title": "『ハリー・ポッターと賢者の石』を読んでみる",
+    "description": "J.K.ローリング｜SF・ファンタジー。魔法学校を舞台にした世界的ベストセラー。",
+    "detail": "『ハリー・ポッターと賢者の石』（J.K.ローリング）を1冊だけ読んでみる。魔法学校を舞台にした世界的ベストセラー。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 25,
+    "weight": 1.0
+  },
+  {
+    "id": "read_115_item",
+    "title": "『われはロボット』を読んでみる",
+    "description": "アイザック・アシモフ｜SF・ファンタジー。ロボット三原則で知られるSFの古典。",
+    "detail": "『われはロボット』（アイザック・アシモフ）を1冊だけ読んでみる。ロボット三原則で知られるSFの古典。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_116_item",
+    "title": "『ファウンデーション』を読んでみる",
+    "description": "アイザック・アシモフ｜SF・ファンタジー。銀河帝国の興亡を描く壮大なSF叙事詩。",
+    "detail": "『ファウンデーション』（アイザック・アシモフ）を1冊だけ読んでみる。銀河帝国の興亡を描く壮大なSF叙事詩。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 25,
+    "weight": 1.0
+  },
+  {
+    "id": "read_117_2001",
+    "title": "『2001年宇宙の旅』を読んでみる",
+    "description": "アーサー・C・クラーク｜SF・ファンタジー。映画の原作としても知られるSFの金字塔。",
+    "detail": "『2001年宇宙の旅』（アーサー・C・クラーク）を1冊だけ読んでみる。映画の原作としても知られるSFの金字塔。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_118_item",
+    "title": "『幼年期の終わり』を読んでみる",
+    "description": "アーサー・C・クラーク｜SF・ファンタジー。人類進化を壮大なスケールで描くSF。",
+    "detail": "『幼年期の終わり』（アーサー・C・クラーク）を1冊だけ読んでみる。人類進化を壮大なスケールで描くSF。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_119_item",
+    "title": "『アンドロイドは電気羊の夢を見るか？』を読んでみる",
+    "description": "フィリップ・K・ディック｜SF・ファンタジー。映画「ブレードランナー」原作のSF。",
+    "detail": "『アンドロイドは電気羊の夢を見るか？』（フィリップ・K・ディック）を1冊だけ読んでみる。映画「ブレードランナー」原作のSF。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_120_451",
+    "title": "『華氏451度』を読んでみる",
+    "description": "レイ・ブラッドベリ｜SF・ファンタジー。本が禁じられた社会を描くディストピアSF。",
+    "detail": "『華氏451度』（レイ・ブラッドベリ）を1冊だけ読んでみる。本が禁じられた社会を描くディストピアSF。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_121_item",
+    "title": "『デューン 砂の惑星』を読んでみる",
+    "description": "フランク・ハーバート｜SF・ファンタジー。壮大な世界観を持つSFの金字塔。",
+    "detail": "『デューン 砂の惑星』（フランク・ハーバート）を1冊だけ読んでみる。壮大な世界観を持つSFの金字塔。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 25,
+    "weight": 1.0
+  },
+  {
+    "id": "read_122_1984",
+    "title": "『1984年』を読んでみる",
+    "description": "ジョージ・オーウェル｜SF・ファンタジー。監視社会を描いたディストピア小説の代表作。",
+    "detail": "『1984年』（ジョージ・オーウェル）を1冊だけ読んでみる。監視社会を描いたディストピア小説の代表作。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_123_item",
+    "title": "『すばらしい新世界』を読んでみる",
+    "description": "オルダス・ハクスリー｜SF・ファンタジー。管理社会を描くディストピアSFの古典。",
+    "detail": "『すばらしい新世界』（オルダス・ハクスリー）を1冊だけ読んでみる。管理社会を描くディストピアSFの古典。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_124_item",
+    "title": "『銀河ヒッチハイク・ガイド』を読んでみる",
+    "description": "ダグラス・アダムス｜SF・ファンタジー。ユーモアあふれる宇宙冒険コメディSF。",
+    "detail": "『銀河ヒッチハイク・ガイド』（ダグラス・アダムス）を1冊だけ読んでみる。ユーモアあふれる宇宙冒険コメディSF。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_125_item",
+    "title": "『火星の人』を読んでみる",
+    "description": "アンディ・ウィアー｜SF・ファンタジー。火星に取り残された宇宙飛行士のサバイバルSF。",
+    "detail": "『火星の人』（アンディ・ウィアー）を1冊だけ読んでみる。火星に取り残された宇宙飛行士のサバイバルSF。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 25,
+    "weight": 1.0
+  },
+  {
+    "id": "read_126_item",
+    "title": "『指輪物語 旅の仲間』を読んでみる",
+    "description": "J.R.R.トールキン｜SF・ファンタジー。ファンタジー小説の原点と呼ばれる大長編。",
+    "detail": "『指輪物語 旅の仲間』（J.R.R.トールキン）を1冊だけ読んでみる。ファンタジー小説の原点と呼ばれる大長編。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 25,
+    "weight": 1.0
+  },
+  {
+    "id": "read_127_item",
+    "title": "『ホビットの冒険』を読んでみる",
+    "description": "J.R.R.トールキン｜SF・ファンタジー。指輪物語の前日譚となる冒険ファンタジー。",
+    "detail": "『ホビットの冒険』（J.R.R.トールキン）を1冊だけ読んでみる。指輪物語の前日譚となる冒険ファンタジー。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_128_item",
+    "title": "『ライオンと魔女』を読んでみる",
+    "description": "C.S.ルイス｜SF・ファンタジー。〈ナルニア国物語〉シリーズ第1作。",
+    "detail": "『ライオンと魔女』（C.S.ルイス）を1冊だけ読んでみる。〈ナルニア国物語〉シリーズ第1作。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_129_item",
+    "title": "『ゲド戦記 影との戦い』を読んでみる",
+    "description": "アーシュラ・K・ル=グウィン｜SF・ファンタジー。魔法使いの成長を描くファンタジーの名作。",
+    "detail": "『ゲド戦記 影との戦い』（アーシュラ・K・ル=グウィン）を1冊だけ読んでみる。魔法使いの成長を描くファンタジーの名作。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_130_item",
+    "title": "『氷と炎の歌 七王国の玉座』を読んでみる",
+    "description": "ジョージ・R・R・マーティン｜SF・ファンタジー。ドラマ化でも話題になった重厚な叙事詩。",
+    "detail": "『氷と炎の歌 七王国の玉座』（ジョージ・R・R・マーティン）を1冊だけ読んでみる。ドラマ化でも話題になった重厚な叙事詩。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 25,
+    "weight": 1.0
+  },
+  {
+    "id": "read_131_item",
+    "title": "『わたしを離さないで』を読んでみる",
+    "description": "カズオ・イシグロ｜SF・ファンタジー。静かな筆致で人間の存在を問うSF的長編。",
+    "detail": "『わたしを離さないで』（カズオ・イシグロ）を1冊だけ読んでみる。静かな筆致で人間の存在を問うSF的長編。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_132_item",
+    "title": "『攻殻機動隊』を読んでみる",
+    "description": "士郎正宗｜SF・ファンタジー。サイバーパンクの金字塔となったグラフィックノベル。",
+    "detail": "『攻殻機動隊』（士郎正宗）を1冊だけ読んでみる。サイバーパンクの金字塔となったグラフィックノベル。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_133_item",
+    "title": "『ソードアート・オンライン』を読んでみる",
+    "description": "川原礫｜SF・ファンタジー。VRMMOを舞台にしたライトノベルの人気作。",
+    "detail": "『ソードアート・オンライン』（川原礫）を1冊だけ読んでみる。VRMMOを舞台にしたライトノベルの人気作。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_134_item",
+    "title": "『ノーゲーム・ノーライフ』を読んでみる",
+    "description": "榎宮祐｜SF・ファンタジー。異世界でのゲーム対決を描くライトノベル。",
+    "detail": "『ノーゲーム・ノーライフ』（榎宮祐）を1冊だけ読んでみる。異世界でのゲーム対決を描くライトノベル。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_135_re",
+    "title": "『Re:ゼロから始める異世界生活』を読んでみる",
+    "description": "長月達平｜SF・ファンタジー。死に戻りの能力を持つ主人公の異世界ファンタジー。",
+    "detail": "『Re:ゼロから始める異世界生活』（長月達平）を1冊だけ読んでみる。死に戻りの能力を持つ主人公の異世界ファンタジー。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_136_item",
+    "title": "『君の名は。』を読んでみる",
+    "description": "新海誠｜SF・ファンタジー。入れ替わりを描いた大ヒット映画のノベライズ。",
+    "detail": "『君の名は。』（新海誠）を1冊だけ読んでみる。入れ替わりを描いた大ヒット映画のノベライズ。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_137_item",
+    "title": "『リング』を読んでみる",
+    "description": "鈴木光司｜SF・ファンタジー。呪いのビデオを描くホラーSFの金字塔。",
+    "detail": "『リング』（鈴木光司）を1冊だけ読んでみる。呪いのビデオを描くホラーSFの金字塔。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_138_item",
+    "title": "『パラサイト・イヴ』を読んでみる",
+    "description": "瀬名秀明｜SF・ファンタジー。ミトコンドリアの反乱を描く日本SFホラーの傑作。",
+    "detail": "『パラサイト・イヴ』（瀬名秀明）を1冊だけ読んでみる。ミトコンドリアの反乱を描く日本SFホラーの傑作。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_139_brainvalley",
+    "title": "『BRAIN VALLEY』を読んでみる",
+    "description": "瀬名秀明｜SF・ファンタジー。脳科学と信仰をテーマにした壮大なSF。",
+    "detail": "『BRAIN VALLEY』（瀬名秀明）を1冊だけ読んでみる。脳科学と信仰をテーマにした壮大なSF。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 25,
+    "weight": 1.0
+  },
+  {
+    "id": "read_140_allyouneediskill",
+    "title": "『All You Need Is Kill』を読んでみる",
+    "description": "桜坂洋｜SF・ファンタジー。タイムループ設定で知られる人気SFライトノベル。",
+    "detail": "『All You Need Is Kill』（桜坂洋）を1冊だけ読んでみる。タイムループ設定で知られる人気SFライトノベル。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_141_item",
+    "title": "『都市と都市』を読んでみる",
+    "description": "チャイナ・ミエヴィル｜SF・ファンタジー。2つの都市が重なる独特な世界観のSFミステリー。",
+    "detail": "『都市と都市』（チャイナ・ミエヴィル）を1冊だけ読んでみる。2つの都市が重なる独特な世界観のSFミステリー。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_142_ii",
+    "title": "『三体II 黒暗森林』を読んでみる",
+    "description": "劉慈欣｜SF・ファンタジー。『三体』続編、宇宙的な戦略を描くSF大作。",
+    "detail": "『三体II 黒暗森林』（劉慈欣）を1冊だけ読んでみる。『三体』続編、宇宙的な戦略を描くSF大作。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 25,
+    "weight": 1.0
+  },
+  {
+    "id": "read_143_iii",
+    "title": "『三体III 死神永生』を読んでみる",
+    "description": "劉慈欣｜SF・ファンタジー。三体三部作の完結編、壮大なスケールの物語。",
+    "detail": "『三体III 死神永生』（劉慈欣）を1冊だけ読んでみる。三体三部作の完結編、壮大なスケールの物語。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 25,
+    "weight": 1.0
+  },
+  {
+    "id": "read_144_item",
+    "title": "『マーダーボット・ダイアリー』を読んでみる",
+    "description": "マーサ・ウェルズ｜SF・ファンタジー。感情豊かな警備ロボットが主人公の人気SF。",
+    "detail": "『マーダーボット・ダイアリー』（マーサ・ウェルズ）を1冊だけ読んでみる。感情豊かな警備ロボットが主人公の人気SF。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_145_item",
+    "title": "『プロジェクト・ヘイル・メアリー』を読んでみる",
+    "description": "アンディ・ウィアー｜SF・ファンタジー。記憶を失った宇宙飛行士が挑む壮大なSF。",
+    "detail": "『プロジェクト・ヘイル・メアリー』（アンディ・ウィアー）を1冊だけ読んでみる。記憶を失った宇宙飛行士が挑む壮大なSF。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 25,
+    "weight": 1.0
+  },
+  {
+    "id": "read_146_item",
+    "title": "『クラウド・アトラス』を読んでみる",
+    "description": "デイヴィッド・ミッチェル｜SF・ファンタジー。時代を超えて連鎖する6つの物語。",
+    "detail": "『クラウド・アトラス』（デイヴィッド・ミッチェル）を1冊だけ読んでみる。時代を超えて連鎖する6つの物語。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 25,
+    "weight": 1.0
+  },
+  {
+    "id": "read_147_item",
+    "title": "『侍女の物語』を読んでみる",
+    "description": "マーガレット・アトウッド｜SF・ファンタジー。管理社会を描くディストピアSFの傑作。",
+    "detail": "『侍女の物語』（マーガレット・アトウッド）を1冊だけ読んでみる。管理社会を描くディストピアSFの傑作。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_148_item",
+    "title": "『神々自身』を読んでみる",
+    "description": "アイザック・アシモフ｜SF・ファンタジー。並行宇宙をテーマにしたハードSFの名作。",
+    "detail": "『神々自身』（アイザック・アシモフ）を1冊だけ読んでみる。並行宇宙をテーマにしたハードSFの名作。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_149_item",
+    "title": "『アルジャーノンに花束を』を読んでみる",
+    "description": "ダニエル・キイス｜SF・ファンタジー。知能が変化していく主人公を描くSFの金字塔。",
+    "detail": "『アルジャーノンに花束を』（ダニエル・キイス）を1冊だけ読んでみる。知能が変化していく主人公を描くSFの金字塔。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_150_item",
+    "title": "『すずめの戸締まり』を読んでみる",
+    "description": "新海誠｜SF・ファンタジー。災害と喪失をテーマにした映画のノベライズ。",
+    "detail": "『すずめの戸締まり』（新海誠）を1冊だけ読んでみる。災害と喪失をテーマにした映画のノベライズ。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_151_7",
+    "title": "『7つの習慣』を読んでみる",
+    "description": "スティーブン・R・コヴィー｜ビジネス・自己啓発。世界的ベストセラーとなった自己啓発の定番。",
+    "detail": "『7つの習慣』（スティーブン・R・コヴィー）を1冊だけ読んでみる。世界的ベストセラーとなった自己啓発の定番。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_152_item",
+    "title": "『金持ち父さん貧乏父さん』を読んでみる",
+    "description": "ロバート・キヨサキ｜ビジネス・自己啓発。お金の考え方を平易に説く人気の入門書。",
+    "detail": "『金持ち父さん貧乏父さん』（ロバート・キヨサキ）を1冊だけ読んでみる。お金の考え方を平易に説く人気の入門書。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_153_item",
+    "title": "『イシューからはじめよ』を読んでみる",
+    "description": "安宅和人｜ビジネス・自己啓発。問題設定の重要性を説く思考法の指南書。",
+    "detail": "『イシューからはじめよ』（安宅和人）を1冊だけ読んでみる。問題設定の重要性を説く思考法の指南書。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_154_item",
+    "title": "『人を動かす』を読んでみる",
+    "description": "デール・カーネギー｜ビジネス・自己啓発。人間関係の名著として読み継がれる一冊。",
+    "detail": "『人を動かす』（デール・カーネギー）を1冊だけ読んでみる。人間関係の名著として読み継がれる一冊。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_155_item",
+    "title": "『道は開ける』を読んでみる",
+    "description": "デール・カーネギー｜ビジネス・自己啓発。悩みとの向き合い方を説く自己啓発の古典。",
+    "detail": "『道は開ける』（デール・カーネギー）を1冊だけ読んでみる。悩みとの向き合い方を説く自己啓発の古典。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_156_item",
+    "title": "『思考は現実化する』を読んでみる",
+    "description": "ナポレオン・ヒル｜ビジネス・自己啓発。成功哲学の原点として知られる一冊。",
+    "detail": "『思考は現実化する』（ナポレオン・ヒル）を1冊だけ読んでみる。成功哲学の原点として知られる一冊。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_157_item",
+    "title": "『幸せになる勇気』を読んでみる",
+    "description": "岸見一郎・古賀史健｜ビジネス・自己啓発。『嫌われる勇気』続編、アドラー心理学の実践編。",
+    "detail": "『幸せになる勇気』（岸見一郎・古賀史健）を1冊だけ読んでみる。『嫌われる勇気』続編、アドラー心理学の実践編。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_158_item",
+    "title": "『エッセンシャル思考』を読んでみる",
+    "description": "グレッグ・マキューン｜ビジネス・自己啓発。「より少なく、しかしより良く」を説く一冊。",
+    "detail": "『エッセンシャル思考』（グレッグ・マキューン）を1冊だけ読んでみる。「より少なく、しかしより良く」を説く一冊。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_159_item",
+    "title": "『ゼロ・トゥ・ワン』を読んでみる",
+    "description": "ピーター・ティール｜ビジネス・自己啓発。スタートアップ思考を説くシリコンバレーの必読書。",
+    "detail": "『ゼロ・トゥ・ワン』（ピーター・ティール）を1冊だけ読んでみる。スタートアップ思考を説くシリコンバレーの必読書。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_160_lifeshift",
+    "title": "『LIFE SHIFT』を読んでみる",
+    "description": "リンダ・グラットン｜ビジネス・自己啓発。人生100年時代の生き方・働き方を提案する一冊。",
+    "detail": "『LIFE SHIFT』（リンダ・グラットン）を1冊だけ読んでみる。人生100年時代の生き方・働き方を提案する一冊。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_161_grit",
+    "title": "『GRIT やり抜く力』を読んでみる",
+    "description": "アンジェラ・ダックワース｜ビジネス・自己啓発。才能よりも継続力の重要性を説く一冊。",
+    "detail": "『GRIT やり抜く力』（アンジェラ・ダックワース）を1冊だけ読んでみる。才能よりも継続力の重要性を説く一冊。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_162_item",
+    "title": "『イノベーションのジレンマ』を読んでみる",
+    "description": "クレイトン・クリステンセン｜ビジネス・自己啓発。経営学の必読書とされる破壊的イノベーション論。",
+    "detail": "『イノベーションのジレンマ』（クレイトン・クリステンセン）を1冊だけ読んでみる。経営学の必読書とされる破壊的イノベーション論。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_163_item",
+    "title": "『ビジョナリー・カンパニー』を読んでみる",
+    "description": "ジム・コリンズ｜ビジネス・自己啓発。長く繁栄する企業の共通点を分析した名著。",
+    "detail": "『ビジョナリー・カンパニー』（ジム・コリンズ）を1冊だけ読んでみる。長く繁栄する企業の共通点を分析した名著。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_164_item",
+    "title": "『マインドセット』を読んでみる",
+    "description": "キャロル・S・ドゥエック｜ビジネス・自己啓発。成長思考の重要性を説く心理学的自己啓発書。",
+    "detail": "『マインドセット』（キャロル・S・ドゥエック）を1冊だけ読んでみる。成長思考の重要性を説く心理学的自己啓発書。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_165_item",
+    "title": "『マネジメント』を読んでみる",
+    "description": "ピーター・ドラッカー｜ビジネス・自己啓発。経営学の父による組織論の古典的名著。",
+    "detail": "『マネジメント』（ピーター・ドラッカー）を1冊だけ読んでみる。経営学の父による組織論の古典的名著。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_166_item",
+    "title": "『チーズはどこへ消えた？』を読んでみる",
+    "description": "スペンサー・ジョンソン｜ビジネス・自己啓発。変化への向き合い方を寓話で説く世界的ベストセラー。",
+    "detail": "『チーズはどこへ消えた？』（スペンサー・ジョンソン）を1冊だけ読んでみる。変化への向き合い方を寓話で説く世界的ベストセラー。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_167_item",
+    "title": "『メモの魔力』を読んでみる",
+    "description": "前田裕二｜ビジネス・自己啓発。メモを通じた自己分析法を説く人気の一冊。",
+    "detail": "『メモの魔力』（前田裕二）を1冊だけ読んでみる。メモを通じた自己分析法を説く人気の一冊。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_168_item",
+    "title": "『多動力』を読んでみる",
+    "description": "堀江貴文｜ビジネス・自己啓発。複数の分野を掛け合わせる働き方を提案する一冊。",
+    "detail": "『多動力』（堀江貴文）を1冊だけ読んでみる。複数の分野を掛け合わせる働き方を提案する一冊。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_169_item",
+    "title": "『さあ、才能に目覚めよう』を読んでみる",
+    "description": "トム・ラス｜ビジネス・自己啓発。強みを見つけるための診断ツール付きの一冊。",
+    "detail": "『さあ、才能に目覚めよう』（トム・ラス）を1冊だけ読んでみる。強みを見つけるための診断ツール付きの一冊。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_170_item",
+    "title": "『反応しない練習』を読んでみる",
+    "description": "草薙龍瞬｜ビジネス・自己啓発。仏教の考え方をもとに心の整え方を説く一冊。",
+    "detail": "『反応しない練習』（草薙龍瞬）を1冊だけ読んでみる。仏教の考え方をもとに心の整え方を説く一冊。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_171_item",
+    "title": "『置かれた場所で咲きなさい』を読んでみる",
+    "description": "渡辺和子｜ビジネス・自己啓発。穏やかな言葉で生き方を見つめ直す一冊。",
+    "detail": "『置かれた場所で咲きなさい』（渡辺和子）を1冊だけ読んでみる。穏やかな言葉で生き方を見つめ直す一冊。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_172_item",
+    "title": "『夢をかなえるゾウ』を読んでみる",
+    "description": "水野敬也｜ビジネス・自己啓発。関西弁の神様ガネーシャが教える成功哲学。",
+    "detail": "『夢をかなえるゾウ』（水野敬也）を1冊だけ読んでみる。関西弁の神様ガネーシャが教える成功哲学。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_173_item",
+    "title": "『仕事は楽しいかね？』を読んでみる",
+    "description": "デイル・ドーテン｜ビジネス・自己啓発。試行錯誤の大切さを説く物語形式の自己啓発書。",
+    "detail": "『仕事は楽しいかね？』（デイル・ドーテン）を1冊だけ読んでみる。試行錯誤の大切さを説く物語形式の自己啓発書。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_174_8020",
+    "title": "『人生を変える80対20の法則』を読んでみる",
+    "description": "リチャード・コッホ｜ビジネス・自己啓発。パレートの法則をビジネスに応用した一冊。",
+    "detail": "『人生を変える80対20の法則』（リチャード・コッホ）を1冊だけ読んでみる。パレートの法則をビジネスに応用した一冊。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_175_howgoogleworks",
+    "title": "『How Google Works』を読んでみる",
+    "description": "エリック・シュミット｜ビジネス・自己啓発。グーグル流のマネジメント論を語る一冊。",
+    "detail": "『How Google Works』（エリック・シュミット）を1冊だけ読んでみる。グーグル流のマネジメント論を語る一冊。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_176_item",
+    "title": "『ワーク・シフト』を読んでみる",
+    "description": "リンダ・グラットン｜ビジネス・自己啓発。働き方の未来予測を描くベストセラー。",
+    "detail": "『ワーク・シフト』（リンダ・グラットン）を1冊だけ読んでみる。働き方の未来予測を描くベストセラー。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_177_item",
+    "title": "『武器としての決断思考』を読んでみる",
+    "description": "瀧本哲史｜ビジネス・自己啓発。ディベートの技術から学ぶ意思決定論。",
+    "detail": "『武器としての決断思考』（瀧本哲史）を1冊だけ読んでみる。ディベートの技術から学ぶ意思決定論。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_178_item",
+    "title": "『論語と算盤』を読んでみる",
+    "description": "渋沢栄一｜ビジネス・自己啓発。道徳と経済の両立を説く実業家の名著。",
+    "detail": "『論語と算盤』（渋沢栄一）を1冊だけ読んでみる。道徳と経済の両立を説く実業家の名著。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_179_item",
+    "title": "『失敗の本質』を読んでみる",
+    "description": "戸部良一ほか｜ビジネス・自己啓発。組織論として読み継がれる日本軍研究の名著。",
+    "detail": "『失敗の本質』（戸部良一ほか）を1冊だけ読んでみる。組織論として読み継がれる日本軍研究の名著。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_180_item",
+    "title": "『ストーリーとしての競争戦略』を読んでみる",
+    "description": "楠木建｜ビジネス・自己啓発。優れた戦略を「物語」として捉え直す経営書。",
+    "detail": "『ストーリーとしての競争戦略』（楠木建）を1冊だけ読んでみる。優れた戦略を「物語」として捉え直す経営書。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_181_item",
+    "title": "『ビジネスモデル・ジェネレーション』を読んでみる",
+    "description": "アレックス・オスターワルダー｜ビジネス・自己啓発。ビジネスモデルを可視化するフレームワーク本。",
+    "detail": "『ビジネスモデル・ジェネレーション』（アレックス・オスターワルダー）を1冊だけ読んでみる。ビジネスモデルを可視化するフレームワーク本。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_182_item",
+    "title": "『インサイト』を読んでみる",
+    "description": "タシャ・ユーリック｜ビジネス・自己啓発。自己認識力を高める方法を説く一冊。",
+    "detail": "『インサイト』（タシャ・ユーリック）を1冊だけ読んでみる。自己認識力を高める方法を説く一冊。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_183_givetake",
+    "title": "『GIVE & TAKE』を読んでみる",
+    "description": "アダム・グラント｜ビジネス・自己啓発。「与える人」が成功する理由を説く一冊。",
+    "detail": "『GIVE & TAKE』（アダム・グラント）を1冊だけ読んでみる。「与える人」が成功する理由を説く一冊。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_184_deepwork",
+    "title": "『Deep Work 大事なことに集中する』を読んでみる",
+    "description": "カル・ニューポート｜ビジネス・自己啓発。深い集中力を取り戻すための実践書。",
+    "detail": "『Deep Work 大事なことに集中する』（カル・ニューポート）を1冊だけ読んでみる。深い集中力を取り戻すための実践書。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_185_item",
+    "title": "『時間術大全』を読んでみる",
+    "description": "ジェイク・ナップ｜ビジネス・自己啓発。Google発の時間管理メソッドを紹介する一冊。",
+    "detail": "『時間術大全』（ジェイク・ナップ）を1冊だけ読んでみる。Google発の時間管理メソッドを紹介する一冊。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_186_0",
+    "title": "『0秒思考』を読んでみる",
+    "description": "赤羽雄二｜ビジネス・自己啓発。メモ書きによる思考整理術を説く一冊。",
+    "detail": "『0秒思考』（赤羽雄二）を1冊だけ読んでみる。メモ書きによる思考整理術を説く一冊。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_187_item",
+    "title": "『稼ぐ言葉の法則』を読んでみる",
+    "description": "神田昌典｜ビジネス・自己啓発。マーケティングにおける言葉の力を説く一冊。",
+    "detail": "『稼ぐ言葉の法則』（神田昌典）を1冊だけ読んでみる。マーケティングにおける言葉の力を説く一冊。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_188_22",
+    "title": "『マーケティング22の法則』を読んでみる",
+    "description": "アル・ライズ&ジャック・トラウト｜ビジネス・自己啓発。マーケティングの原理原則をまとめた古典。",
+    "detail": "『マーケティング22の法則』（アル・ライズ&ジャック・トラウト）を1冊だけ読んでみる。マーケティングの原理原則をまとめた古典。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_189_item",
+    "title": "『非常識な成功法則』を読んでみる",
+    "description": "神田昌典｜ビジネス・自己啓発。独自の視点で語られる成功哲学の一冊。",
+    "detail": "『非常識な成功法則』（神田昌典）を1冊だけ読んでみる。独自の視点で語られる成功哲学の一冊。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_190_item",
+    "title": "『影響力の武器』を読んでみる",
+    "description": "ロバート・チャルディーニ｜ビジネス・自己啓発。人が説得される心理を分析した社会心理学の名著。",
+    "detail": "『影響力の武器』（ロバート・チャルディーニ）を1冊だけ読んでみる。人が説得される心理を分析した社会心理学の名著。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_191_free",
+    "title": "『FREE〈無料〉からお金を生みだす新戦略』を読んでみる",
+    "description": "クリス・アンダーソン｜ビジネス・自己啓発。フリーミアム戦略を説くビジネス書。",
+    "detail": "『FREE〈無料〉からお金を生みだす新戦略』（クリス・アンダーソン）を1冊だけ読んでみる。フリーミアム戦略を説くビジネス書。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_192_leanin",
+    "title": "『LEAN IN』を読んでみる",
+    "description": "シェリル・サンドバーグ｜ビジネス・自己啓発。女性のキャリア論を語ったベストセラー。",
+    "detail": "『LEAN IN』（シェリル・サンドバーグ）を1冊だけ読んでみる。女性のキャリア論を語ったベストセラー。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_193_item",
+    "title": "『予想どおりに不合理』を読んでみる",
+    "description": "ダン・アリエリー｜ビジネス・自己啓発。行動経済学の入門書として人気の一冊。",
+    "detail": "『予想どおりに不合理』（ダン・アリエリー）を1冊だけ読んでみる。行動経済学の入門書として人気の一冊。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_194_item",
+    "title": "『ファスト&スロー』を読んでみる",
+    "description": "ダニエル・カーネマン｜ビジネス・自己啓発。2つの思考モードを説く行動経済学の名著。",
+    "detail": "『ファスト&スロー』（ダニエル・カーネマン）を1冊だけ読んでみる。2つの思考モードを説く行動経済学の名著。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 25,
+    "weight": 1.0
+  },
+  {
+    "id": "read_195_nudge",
+    "title": "『NUDGE 実践 行動経済学』を読んでみる",
+    "description": "リチャード・セイラー｜ビジネス・自己啓発。ナッジ理論を提唱したノーベル賞学者の代表作。",
+    "detail": "『NUDGE 実践 行動経済学』（リチャード・セイラー）を1冊だけ読んでみる。ナッジ理論を提唱したノーベル賞学者の代表作。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_196_item",
+    "title": "『アウトプット大全』を読んでみる",
+    "description": "樺沢紫苑｜ビジネス・自己啓発。学びを結果に変えるアウトプット術の解説書。",
+    "detail": "『アウトプット大全』（樺沢紫苑）を1冊だけ読んでみる。学びを結果に変えるアウトプット術の解説書。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_197_item",
+    "title": "『インプット大全』を読んでみる",
+    "description": "樺沢紫苑｜ビジネス・自己啓発。効率的な学び方をまとめた実践書。",
+    "detail": "『インプット大全』（樺沢紫苑）を1冊だけ読んでみる。効率的な学び方をまとめた実践書。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_198_theonething",
+    "title": "『The ONE Thing 一点集中主義』を読んでみる",
+    "description": "ゲイリー・ケラー｜ビジネス・自己啓発。最も重要な一つに集中する考え方を説く一冊。",
+    "detail": "『The ONE Thing 一点集中主義』（ゲイリー・ケラー）を1冊だけ読んでみる。最も重要な一つに集中する考え方を説く一冊。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_199_item",
+    "title": "『これからの「正義」の話をしよう』を読んでみる",
+    "description": "マイケル・サンデル｜ビジネス・自己啓発。哲学的な問いを通じて思考力を鍛える一冊。",
+    "detail": "『これからの「正義」の話をしよう』（マイケル・サンデル）を1冊だけ読んでみる。哲学的な問いを通じて思考力を鍛える一冊。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_200_item",
+    "title": "『多様性の科学』を読んでみる",
+    "description": "マシュー・サイド｜ビジネス・自己啓発。多様な視点がもたらす力を説くビジネス書。",
+    "detail": "『多様性の科学』（マシュー・サイド）を1冊だけ読んでみる。多様な視点がもたらす力を説くビジネス書。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_201_item",
+    "title": "『ローマ人の物語 ローマは一日にして成らず』を読んでみる",
+    "description": "塩野七生｜歴史・教養。ローマ史を人物中心に描く長編歴史文学。",
+    "detail": "『ローマ人の物語 ローマは一日にして成らず』（塩野七生）を1冊だけ読んでみる。ローマ史を人物中心に描く長編歴史文学。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "歴史・教養"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 25,
+    "weight": 1.0
+  },
+  {
+    "id": "read_202_item",
+    "title": "『十字軍物語』を読んでみる",
+    "description": "塩野七生｜歴史・教養。中世ヨーロッパの十字軍の実像を描く歴史文学。",
+    "detail": "『十字軍物語』（塩野七生）を1冊だけ読んでみる。中世ヨーロッパの十字軍の実像を描く歴史文学。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "歴史・教養"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 25,
+    "weight": 1.0
+  },
+  {
+    "id": "read_203_item",
+    "title": "『中国の歴史』を読んでみる",
+    "description": "陳舜臣｜歴史・教養。中国四千年の歴史を通観できる読み物。",
+    "detail": "『中国の歴史』（陳舜臣）を1冊だけ読んでみる。中国四千年の歴史を通観できる読み物。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "歴史・教養"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_204_item",
+    "title": "『竜馬がゆく』を読んでみる",
+    "description": "司馬遼太郎｜歴史・教養。幕末を駆け抜けた坂本龍馬を描く歴史小説の名作。",
+    "detail": "『竜馬がゆく』（司馬遼太郎）を1冊だけ読んでみる。幕末を駆け抜けた坂本龍馬を描く歴史小説の名作。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "歴史・教養"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 25,
+    "weight": 1.0
+  },
+  {
+    "id": "read_205_item",
+    "title": "『坂の上の雲』を読んでみる",
+    "description": "司馬遼太郎｜歴史・教養。明治日本の躍動を描いた国民的歴史小説。",
+    "detail": "『坂の上の雲』（司馬遼太郎）を1冊だけ読んでみる。明治日本の躍動を描いた国民的歴史小説。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "歴史・教養"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 25,
+    "weight": 1.0
+  },
+  {
+    "id": "read_206_item",
+    "title": "『翔ぶが如く』を読んでみる",
+    "description": "司馬遼太郎｜歴史・教養。西郷隆盛と大久保利通を軸に描く幕末維新の物語。",
+    "detail": "『翔ぶが如く』（司馬遼太郎）を1冊だけ読んでみる。西郷隆盛と大久保利通を軸に描く幕末維新の物語。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "歴史・教養"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 25,
+    "weight": 1.0
+  },
+  {
+    "id": "read_207_item",
+    "title": "『燃えよ剣』を読んでみる",
+    "description": "司馬遼太郎｜歴史・教養。新選組副長・土方歳三の生涯を描く歴史小説。",
+    "detail": "『燃えよ剣』（司馬遼太郎）を1冊だけ読んでみる。新選組副長・土方歳三の生涯を描く歴史小説。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "歴史・教養"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_208_item",
+    "title": "『敦煌』を読んでみる",
+    "description": "井上靖｜歴史・教養。西域を舞台にした壮大な歴史ロマン。",
+    "detail": "『敦煌』（井上靖）を1冊だけ読んでみる。西域を舞台にした壮大な歴史ロマン。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "歴史・教養"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_209_item",
+    "title": "『歴史とは何か』を読んでみる",
+    "description": "E.H.カー｜歴史・教養。歴史学の古典として読み継がれる名著。",
+    "detail": "『歴史とは何か』（E.H.カー）を1冊だけ読んでみる。歴史学の古典として読み継がれる名著。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "歴史・教養"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_210_item",
+    "title": "『ホモ・デウス』を読んでみる",
+    "description": "ユヴァル・ノア・ハラリ｜歴史・教養。『サピエンス全史』著者による未来史の考察。",
+    "detail": "『ホモ・デウス』（ユヴァル・ノア・ハラリ）を1冊だけ読んでみる。『サピエンス全史』著者による未来史の考察。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "歴史・教養"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_211_item",
+    "title": "『日本のいちばん長い日』を読んでみる",
+    "description": "半藤一利｜歴史・教養。終戦をめぐる24時間を描いたノンフィクション。",
+    "detail": "『日本のいちばん長い日』（半藤一利）を1冊だけ読んでみる。終戦をめぐる24時間を描いたノンフィクション。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "歴史・教養"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_212_item",
+    "title": "『昭和史』を読んでみる",
+    "description": "半藤一利｜歴史・教養。激動の昭和を丁寧にたどる歴史読み物。",
+    "detail": "『昭和史』（半藤一利）を1冊だけ読んでみる。激動の昭和を丁寧にたどる歴史読み物。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "歴史・教養"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 25,
+    "weight": 1.0
+  },
+  {
+    "id": "read_213_item",
+    "title": "『中世を旅する人びと』を読んでみる",
+    "description": "阿部謹也｜歴史・教養。ヨーロッパ中世の庶民の暮らしを描く一冊。",
+    "detail": "『中世を旅する人びと』（阿部謹也）を1冊だけ読んでみる。ヨーロッパ中世の庶民の暮らしを描く一冊。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "歴史・教養"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_214_item",
+    "title": "『「空気」の研究』を読んでみる",
+    "description": "山本七平｜歴史・教養。日本社会特有の同調圧力を論じた名著。",
+    "detail": "『「空気」の研究』（山本七平）を1冊だけ読んでみる。日本社会特有の同調圧力を論じた名著。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "歴史・教養"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_215_item",
+    "title": "『それでも、日本人は「戦争」を選んだ』を読んでみる",
+    "description": "加藤陽子｜歴史・教養。近代日本の戦争への道のりを読み解く歴史書。",
+    "detail": "『それでも、日本人は「戦争」を選んだ』（加藤陽子）を1冊だけ読んでみる。近代日本の戦争への道のりを読み解く歴史書。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "歴史・教養"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_216_item",
+    "title": "『哲学物語』を読んでみる",
+    "description": "ウィル・デュラント｜歴史・教養。西洋哲学の流れを平易に語る入門書。",
+    "detail": "『哲学物語』（ウィル・デュラント）を1冊だけ読んでみる。西洋哲学の流れを平易に語る入門書。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "歴史・教養"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_217_item",
+    "title": "『若い読者のための世界史』を読んでみる",
+    "description": "E.H.ゴンブリッチ｜歴史・教養。世界史全体を物語として語る名著。",
+    "detail": "『若い読者のための世界史』（E.H.ゴンブリッチ）を1冊だけ読んでみる。世界史全体を物語として語る名著。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "歴史・教養"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_218_item",
+    "title": "『全世界史』を読んでみる",
+    "description": "出口治明｜歴史・教養。古代から現代までを一気に俯瞰する歴史書。",
+    "detail": "『全世界史』（出口治明）を1冊だけ読んでみる。古代から現代までを一気に俯瞰する歴史書。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "歴史・教養"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_219_item",
+    "title": "『そうだったのか！現代史』を読んでみる",
+    "description": "池上彰｜歴史・教養。現代史をわかりやすく解説する入門書。",
+    "detail": "『そうだったのか！現代史』（池上彰）を1冊だけ読んでみる。現代史をわかりやすく解説する入門書。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "歴史・教養"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_220_item",
+    "title": "『世界史の極意』を読んでみる",
+    "description": "佐藤優｜歴史・教養。歴史を読み解く視点を提供する一冊。",
+    "detail": "『世界史の極意』（佐藤優）を1冊だけ読んでみる。歴史を読み解く視点を提供する一冊。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "歴史・教養"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_221_item",
+    "title": "『歴史』を読んでみる",
+    "description": "ヘロドトス｜歴史・教養。「歴史の父」による古代地中海世界の記録。",
+    "detail": "『歴史』（ヘロドトス）を1冊だけ読んでみる。「歴史の父」による古代地中海世界の記録。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "歴史・教養"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_222_item",
+    "title": "『戦史』を読んでみる",
+    "description": "トゥキディデス｜歴史・教養。ペロポネソス戦争を記した古代史の古典。",
+    "detail": "『戦史』（トゥキディデス）を1冊だけ読んでみる。ペロポネソス戦争を記した古代史の古典。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "歴史・教養"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_223_item",
+    "title": "『自省録』を読んでみる",
+    "description": "マルクス・アウレリウス｜歴史・教養。ローマ皇帝が綴った内省の記録。",
+    "detail": "『自省録』（マルクス・アウレリウス）を1冊だけ読んでみる。ローマ皇帝が綴った内省の記録。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "歴史・教養"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_224_item",
+    "title": "『孫子の兵法』を読んでみる",
+    "description": "孫武｜歴史・教養。戦略論の古典として世界中で読まれる名著。",
+    "detail": "『孫子の兵法』（孫武）を1冊だけ読んでみる。戦略論の古典として世界中で読まれる名著。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "歴史・教養"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_225_item",
+    "title": "『学問のすすめ』を読んでみる",
+    "description": "福沢諭吉｜歴史・教養。近代日本の思想に影響を与えた啓蒙書。",
+    "detail": "『学問のすすめ』（福沢諭吉）を1冊だけ読んでみる。近代日本の思想に影響を与えた啓蒙書。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "歴史・教養"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_226_item",
+    "title": "『武士道』を読んでみる",
+    "description": "新渡戸稲造｜歴史・教養。日本人の精神性を海外に紹介した名著。",
+    "detail": "『武士道』（新渡戸稲造）を1冊だけ読んでみる。日本人の精神性を海外に紹介した名著。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "歴史・教養"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_227_item",
+    "title": "『代表的日本人』を読んでみる",
+    "description": "内村鑑三｜歴史・教養。西郷隆盛ら日本の偉人を紹介する古典。",
+    "detail": "『代表的日本人』（内村鑑三）を1冊だけ読んでみる。西郷隆盛ら日本の偉人を紹介する古典。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "歴史・教養"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_228_item",
+    "title": "『全体主義の起源』を読んでみる",
+    "description": "ハンナ・アーレント｜歴史・教養。20世紀の全体主義を分析した政治哲学の名著。",
+    "detail": "『全体主義の起源』（ハンナ・アーレント）を1冊だけ読んでみる。20世紀の全体主義を分析した政治哲学の名著。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "歴史・教養"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 25,
+    "weight": 1.0
+  },
+  {
+    "id": "read_229_item",
+    "title": "『文明』を読んでみる",
+    "description": "ニーアル・ファーガソン｜歴史・教養。西洋と東洋の興亡を分析した歴史書。",
+    "detail": "『文明』（ニーアル・ファーガソン）を1冊だけ読んでみる。西洋と東洋の興亡を分析した歴史書。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "歴史・教養"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_230_item",
+    "title": "『昨日までの世界』を読んでみる",
+    "description": "ジャレド・ダイアモンド｜歴史・教養。伝統的社会から学ぶ人類史の考察。",
+    "detail": "『昨日までの世界』（ジャレド・ダイアモンド）を1冊だけ読んでみる。伝統的社会から学ぶ人類史の考察。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "歴史・教養"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_231_item",
+    "title": "『日本の歴史をよみなおす』を読んでみる",
+    "description": "網野善彦｜歴史・教養。通説を覆す視点で日本史を読み解く一冊。",
+    "detail": "『日本の歴史をよみなおす』（網野善彦）を1冊だけ読んでみる。通説を覆す視点で日本史を読み解く一冊。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "歴史・教養"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_232_item",
+    "title": "『応仁の乱』を読んでみる",
+    "description": "呉座勇一｜歴史・教養。ベストセラーとなった中世日本史の解説書。",
+    "detail": "『応仁の乱』（呉座勇一）を1冊だけ読んでみる。ベストセラーとなった中世日本史の解説書。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "歴史・教養"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_233_item",
+    "title": "『武士の家計簿』を読んでみる",
+    "description": "磯田道史｜歴史・教養。加賀藩士の家計簿から見える江戸時代の暮らし。",
+    "detail": "『武士の家計簿』（磯田道史）を1冊だけ読んでみる。加賀藩士の家計簿から見える江戸時代の暮らし。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "歴史・教養"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_234_item",
+    "title": "『逆説の日本史』を読んでみる",
+    "description": "井沢元彦｜歴史・教養。独自の視点で日本史を読み解くシリーズ。",
+    "detail": "『逆説の日本史』（井沢元彦）を1冊だけ読んでみる。独自の視点で日本史を読み解くシリーズ。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "歴史・教養"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_235_item",
+    "title": "『武器になる哲学』を読んでみる",
+    "description": "山口周｜歴史・教養。ビジネスに役立つ哲学の考え方をまとめた一冊。",
+    "detail": "『武器になる哲学』（山口周）を1冊だけ読んでみる。ビジネスに役立つ哲学の考え方をまとめた一冊。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "歴史・教養"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_236_item",
+    "title": "『哲学と宗教全史』を読んでみる",
+    "description": "出口治明｜歴史・教養。哲学と宗教の歴史を一望する大著。",
+    "detail": "『哲学と宗教全史』（出口治明）を1冊だけ読んでみる。哲学と宗教の歴史を一望する大著。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "歴史・教養"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 25,
+    "weight": 1.0
+  },
+  {
+    "id": "read_237_item",
+    "title": "『第三帝国の興亡』を読んでみる",
+    "description": "ウィリアム・シャイラー｜歴史・教養。ナチス・ドイツの興亡を描いた歴史書の古典。",
+    "detail": "『第三帝国の興亡』（ウィリアム・シャイラー）を1冊だけ読んでみる。ナチス・ドイツの興亡を描いた歴史書の古典。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "歴史・教養"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 25,
+    "weight": 1.0
+  },
+  {
+    "id": "read_238_item",
+    "title": "『逆説の世界史』を読んでみる",
+    "description": "井沢元彦｜歴史・教養。世界史を独自の視点で読み解くシリーズ。",
+    "detail": "『逆説の世界史』（井沢元彦）を1冊だけ読んでみる。世界史を独自の視点で読み解くシリーズ。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "歴史・教養"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_239_item",
+    "title": "『日本史の内幕』を読んでみる",
+    "description": "磯田道史｜歴史・教養。古文書から読み解く日本史の裏側。",
+    "detail": "『日本史の内幕』（磯田道史）を1冊だけ読んでみる。古文書から読み解く日本史の裏側。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "歴史・教養"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_240_item",
+    "title": "『物語 フランス革命』を読んでみる",
+    "description": "安達正勝｜歴史・教養。フランス革命の展開を丁寧にたどる一冊。",
+    "detail": "『物語 フランス革命』（安達正勝）を1冊だけ読んでみる。フランス革命の展開を丁寧にたどる一冊。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "歴史・教養"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_241_item",
+    "title": "『物語 イギリスの歴史』を読んでみる",
+    "description": "君塚直隆｜歴史・教養。イギリス史をわかりやすく解説する入門書。",
+    "detail": "『物語 イギリスの歴史』（君塚直隆）を1冊だけ読んでみる。イギリス史をわかりやすく解説する入門書。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "歴史・教養"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_242_item",
+    "title": "『物語 ドイツの歴史』を読んでみる",
+    "description": "阿部謹也｜歴史・教養。ドイツ史の流れを概観できる一冊。",
+    "detail": "『物語 ドイツの歴史』（阿部謹也）を1冊だけ読んでみる。ドイツ史の流れを概観できる一冊。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "歴史・教養"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_243_item",
+    "title": "『三国志』を読んでみる",
+    "description": "吉川英治｜歴史・教養。中国史を舞台にした国民的歴史小説。",
+    "detail": "『三国志』（吉川英治）を1冊だけ読んでみる。中国史を舞台にした国民的歴史小説。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "歴史・教養"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 25,
+    "weight": 1.0
+  },
+  {
+    "id": "read_244_item",
+    "title": "『徳川家康』を読んでみる",
+    "description": "山岡荘八｜歴史・教養。徳川家康の生涯を描いた大河歴史小説。",
+    "detail": "『徳川家康』（山岡荘八）を1冊だけ読んでみる。徳川家康の生涯を描いた大河歴史小説。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "歴史・教養"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 25,
+    "weight": 1.0
+  },
+  {
+    "id": "read_245_item",
+    "title": "『峠』を読んでみる",
+    "description": "司馬遼太郎｜歴史・教養。幕末の武士・河井継之助を描いた歴史小説。",
+    "detail": "『峠』（司馬遼太郎）を1冊だけ読んでみる。幕末の武士・河井継之助を描いた歴史小説。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "歴史・教養"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_246_item",
+    "title": "『関ヶ原』を読んでみる",
+    "description": "司馬遼太郎｜歴史・教養。天下分け目の戦いを描いた歴史小説の名作。",
+    "detail": "『関ヶ原』（司馬遼太郎）を1冊だけ読んでみる。天下分け目の戦いを描いた歴史小説の名作。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "歴史・教養"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 25,
+    "weight": 1.0
+  },
+  {
+    "id": "read_247_item",
+    "title": "『項羽と劉邦』を読んでみる",
+    "description": "司馬遼太郎｜歴史・教養。楚漢戦争を描いた壮大な中国歴史小説。",
+    "detail": "『項羽と劉邦』（司馬遼太郎）を1冊だけ読んでみる。楚漢戦争を描いた壮大な中国歴史小説。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "歴史・教養"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 25,
+    "weight": 1.0
+  },
+  {
+    "id": "read_248_100",
+    "title": "『世界がもし100人の村だったら』を読んでみる",
+    "description": "池田香代子｜歴史・教養。世界の縮図を通じて社会を考えるロングセラー。",
+    "detail": "『世界がもし100人の村だったら』（池田香代子）を1冊だけ読んでみる。世界の縮図を通じて社会を考えるロングセラー。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "歴史・教養"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_249_item",
+    "title": "『物語 韓国史』を読んでみる",
+    "description": "金両基｜歴史・教養。韓国の歴史をわかりやすく解説する入門書。",
+    "detail": "『物語 韓国史』（金両基）を1冊だけ読んでみる。韓国の歴史をわかりやすく解説する入門書。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "歴史・教養"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_250_item",
+    "title": "『一気読み世界史』を読んでみる",
+    "description": "出口治明｜歴史・教養。世界史全体を通して読める入門書。",
+    "detail": "『一気読み世界史』（出口治明）を1冊だけ読んでみる。世界史全体を通して読める入門書。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "歴史・教養"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Kindle・書店・図書館で読める。まず冒頭だけ開いてみる。",
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
     "id": "movie_01_item",
     "title": "『少林サッカー』を観る",
     "description": "チャウ・シンチー主演・チャウ・シンチー監督。破天荒なサッカーアクションで笑える快作。",
