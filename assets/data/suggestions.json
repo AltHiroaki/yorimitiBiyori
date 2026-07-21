@@ -5251,5 +5251,2589 @@
     "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
     "estimated_minutes": 120,
     "weight": 1.0
+  },
+  {
+    "id": "movie_051_item",
+    "title": "『セブン』を観る",
+    "description": "モーガン・フリーマン主演・デヴィッド・フィンチャー監督。猟奇殺人犯を追う刑事たちを描く戦慄のサスペンス。",
+    "detail": "『セブン』（モーガン・フリーマン主演・デヴィッド・フィンチャー監督）を候補に入れる。猟奇殺人犯を追う刑事たちを描く戦慄のサスペンス。",
+    "category": "movie",
+    "tags": [
+      "ミステリー",
+      "サスペンス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 127,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_052_item",
+    "title": "『ゾディアック』を観る",
+    "description": "ジェイク・ジレンホール主演・デヴィッド・フィンチャー監督。未解決の連続殺人事件を追う記者たちの執念を描く。",
+    "detail": "『ゾディアック』（ジェイク・ジレンホール主演・デヴィッド・フィンチャー監督）を候補に入れる。未解決の連続殺人事件を追う記者たちの執念を描く。",
+    "category": "movie",
+    "tags": [
+      "ミステリー",
+      "サスペンス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 157,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_053_item",
+    "title": "『シャッター アイランド』を観る",
+    "description": "レオナルド・ディカプリオ主演・マーティン・スコセッシ監督。孤島の精神病院を舞台にした衝撃の心理サスペンス。",
+    "detail": "『シャッター アイランド』（レオナルド・ディカプリオ主演・マーティン・スコセッシ監督）を候補に入れる。孤島の精神病院を舞台にした衝撃の心理サスペンス。",
+    "category": "movie",
+    "tags": [
+      "ミステリー",
+      "サスペンス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 138,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_054_item",
+    "title": "『メメント』を観る",
+    "description": "ガイ・ピアース主演・クリストファー・ノーラン監督。記憶が10分しか持たない主人公が真相を追う異色ミステリー。",
+    "detail": "『メメント』（ガイ・ピアース主演・クリストファー・ノーラン監督）を候補に入れる。記憶が10分しか持たない主人公が真相を追う異色ミステリー。",
+    "category": "movie",
+    "tags": [
+      "ミステリー",
+      "サスペンス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 113,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_055_item",
+    "title": "『ユージュアル・サスペクツ』を観る",
+    "description": "ケヴィン・スペイシー主演・ブライアン・シンガー監督。衝撃のどんでん返しで知られる犯罪ミステリー。",
+    "detail": "『ユージュアル・サスペクツ』（ケヴィン・スペイシー主演・ブライアン・シンガー監督）を候補に入れる。衝撃のどんでん返しで知られる犯罪ミステリー。",
+    "category": "movie",
+    "tags": [
+      "ミステリー",
+      "サスペンス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 106,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_056_item",
+    "title": "『ゴーン・ガール』を観る",
+    "description": "ベン・アフレック主演・デヴィッド・フィンチャー監督。失踪した妻をめぐる夫婦の嘘を描く心理サスペンス。",
+    "detail": "『ゴーン・ガール』（ベン・アフレック主演・デヴィッド・フィンチャー監督）を候補に入れる。失踪した妻をめぐる夫婦の嘘を描く心理サスペンス。",
+    "category": "movie",
+    "tags": [
+      "ミステリー",
+      "サスペンス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 149,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_057_item",
+    "title": "『プリズナーズ』を観る",
+    "description": "ヒュー・ジャックマン主演・ドゥニ・ヴィルヌーヴ監督。娘の誘拐事件をめぐる父親の葛藤を描く重厚なサスペンス。",
+    "detail": "『プリズナーズ』（ヒュー・ジャックマン主演・ドゥニ・ヴィルヌーヴ監督）を候補に入れる。娘の誘拐事件をめぐる父親の葛藤を描く重厚なサスペンス。",
+    "category": "movie",
+    "tags": [
+      "ミステリー",
+      "サスペンス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 153,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_058_item",
+    "title": "『ナイブス・アウト 名探偵と刃の館の秘密』を観る",
+    "description": "ダニエル・クレイグ主演・ライアン・ジョンソン監督。資産家の遺産をめぐる現代版本格ミステリー。",
+    "detail": "『ナイブス・アウト 名探偵と刃の館の秘密』（ダニエル・クレイグ主演・ライアン・ジョンソン監督）を候補に入れる。資産家の遺産をめぐる現代版本格ミステリー。",
+    "category": "movie",
+    "tags": [
+      "ミステリー",
+      "コメディ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 131,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_059_item",
+    "title": "『カメラを止めるな!』を観る",
+    "description": "濱津隆之主演・上田慎一郎監督。低予算ながら緻密などんでん返しが話題になった作品。",
+    "detail": "『カメラを止めるな!』（濱津隆之主演・上田慎一郎監督）を候補に入れる。低予算ながら緻密などんでん返しが話題になった作品。",
+    "category": "movie",
+    "tags": [
+      "ミステリー",
+      "コメディ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 96,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_060_item",
+    "title": "『犬神家の一族』を観る",
+    "description": "石坂浩二主演・市川崑監督。横溝正史原作、遺産相続をめぐる連続殺人を描く名作。",
+    "detail": "『犬神家の一族』（石坂浩二主演・市川崑監督）を候補に入れる。横溝正史原作、遺産相続をめぐる連続殺人を描く名作。",
+    "category": "movie",
+    "tags": [
+      "ミステリー",
+      "ドラマ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 132,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_061_item",
+    "title": "『ダ・ヴィンチ・コード』を観る",
+    "description": "トム・ハンクス主演・ロン・ハワード監督。美術と宗教の謎を追う世界的ベストセラーの映画化。",
+    "detail": "『ダ・ヴィンチ・コード』（トム・ハンクス主演・ロン・ハワード監督）を候補に入れる。美術と宗教の謎を追う世界的ベストセラーの映画化。",
+    "category": "movie",
+    "tags": [
+      "ミステリー",
+      "サスペンス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 149,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_062_item",
+    "title": "『天使と悪魔』を観る",
+    "description": "トム・ハンクス主演・ロン・ハワード監督。バチカンを舞台にした緊迫感あふれるサスペンス。",
+    "detail": "『天使と悪魔』（トム・ハンクス主演・ロン・ハワード監督）を候補に入れる。バチカンを舞台にした緊迫感あふれるサスペンス。",
+    "category": "movie",
+    "tags": [
+      "ミステリー",
+      "サスペンス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 138,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_063_item",
+    "title": "『インサイド・マン』を観る",
+    "description": "デンゼル・ワシントン主演・スパイク・リー監督。銀行強盗をめぐる駆け引きを描く知能犯サスペンス。",
+    "detail": "『インサイド・マン』（デンゼル・ワシントン主演・スパイク・リー監督）を候補に入れる。銀行強盗をめぐる駆け引きを描く知能犯サスペンス。",
+    "category": "movie",
+    "tags": [
+      "ミステリー",
+      "サスペンス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 129,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_064_item",
+    "title": "『アイデンティティー』を観る",
+    "description": "ジョン・キューザック主演・ジェームズ・マンゴールド監督。モーテルに集まった見知らぬ客たちを襲う連続殺人。",
+    "detail": "『アイデンティティー』（ジョン・キューザック主演・ジェームズ・マンゴールド監督）を候補に入れる。モーテルに集まった見知らぬ客たちを襲う連続殺人。",
+    "category": "movie",
+    "tags": [
+      "ミステリー",
+      "サスペンス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 90,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_065_item",
+    "title": "『シックス・センス』を観る",
+    "description": "ブルース・ウィリス主演・M・ナイト・シャマラン監督。衝撃の結末で知られるサイコロジカルサスペンス。",
+    "detail": "『シックス・センス』（ブルース・ウィリス主演・M・ナイト・シャマラン監督）を候補に入れる。衝撃の結末で知られるサイコロジカルサスペンス。",
+    "category": "movie",
+    "tags": [
+      "ミステリー",
+      "サスペンス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 107,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_066_item",
+    "title": "『ミッドサマー』を観る",
+    "description": "フローレンス・ピュー主演・アリ・アスター監督。白夜の村で行われる奇祭を描く異色のサスペンス。",
+    "detail": "『ミッドサマー』（フローレンス・ピュー主演・アリ・アスター監督）を候補に入れる。白夜の村で行われる奇祭を描く異色のサスペンス。",
+    "category": "movie",
+    "tags": [
+      "サスペンス",
+      "ドラマ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 148,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_067_item",
+    "title": "『オールドボーイ』を観る",
+    "description": "チェ・ミンシク主演・パク・チャヌク監督。理由も分からず監禁された男の復讐を描く韓国映画。",
+    "detail": "『オールドボーイ』（チェ・ミンシク主演・パク・チャヌク監督）を候補に入れる。理由も分からず監禁された男の復讐を描く韓国映画。",
+    "category": "movie",
+    "tags": [
+      "ミステリー",
+      "サスペンス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 120,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_068_item",
+    "title": "『羊たちの沈黙』を観る",
+    "description": "ジョディ・フォスター主演・ジョナサン・デミ監督。猟奇殺人犯と対峙する新人捜査官を描く金字塔。",
+    "detail": "『羊たちの沈黙』（ジョディ・フォスター主演・ジョナサン・デミ監督）を候補に入れる。猟奇殺人犯と対峙する新人捜査官を描く金字塔。",
+    "category": "movie",
+    "tags": [
+      "ミステリー",
+      "サスペンス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 118,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_069_item",
+    "title": "『検察側の証人』を観る",
+    "description": "タイロン・パワー主演・ビリー・ワイルダー監督。法廷でのどんでん返しが光る古典ミステリー。",
+    "detail": "『検察側の証人』（タイロン・パワー主演・ビリー・ワイルダー監督）を候補に入れる。法廷でのどんでん返しが光る古典ミステリー。",
+    "category": "movie",
+    "tags": [
+      "ミステリー",
+      "ドラマ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 116,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_070_item",
+    "title": "『フィロミナの祈り』を観る",
+    "description": "ジュディ・デンチ主演・スティーヴン・フリアーズ監督。生き別れた息子を探す母親と記者の旅を描く実話。",
+    "detail": "『フィロミナの祈り』（ジュディ・デンチ主演・スティーヴン・フリアーズ監督）を候補に入れる。生き別れた息子を探す母親と記者の旅を描く実話。",
+    "category": "movie",
+    "tags": [
+      "ミステリー",
+      "ドラマ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 98,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_071_item",
+    "title": "『スポットライト 世紀のスクープ』を観る",
+    "description": "マーク・ラファロ主演・トム・マッカーシー監督。新聞記者たちが真相を追う調査報道サスペンス。",
+    "detail": "『スポットライト 世紀のスクープ』（マーク・ラファロ主演・トム・マッカーシー監督）を候補に入れる。新聞記者たちが真相を追う調査報道サスペンス。",
+    "category": "movie",
+    "tags": [
+      "ミステリー",
+      "ドラマ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 128,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_072_item",
+    "title": "『リンカーン弁護士』を観る",
+    "description": "マシュー・マコノヒー主演・ブラッド・ファーマン監督。車を法律事務所代わりにする弁護士のサスペンス劇。",
+    "detail": "『リンカーン弁護士』（マシュー・マコノヒー主演・ブラッド・ファーマン監督）を候補に入れる。車を法律事務所代わりにする弁護士のサスペンス劇。",
+    "category": "movie",
+    "tags": [
+      "ミステリー",
+      "サスペンス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 118,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_073_64",
+    "title": "『64-ロクヨン-』を観る",
+    "description": "佐藤浩市主演・瀬々敬久監督。未解決事件と広報官の葛藤を描く重厚な警察ドラマ。",
+    "detail": "『64-ロクヨン-』（佐藤浩市主演・瀬々敬久監督）を候補に入れる。未解決事件と広報官の葛藤を描く重厚な警察ドラマ。",
+    "category": "movie",
+    "tags": [
+      "ミステリー",
+      "ドラマ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 137,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_074_item",
+    "title": "『パーフェクトブルー』を観る",
+    "description": "岩男潤子主演・今敏監督。アイドルの精神が崩壊していく様を描くサスペンスアニメ。",
+    "detail": "『パーフェクトブルー』（岩男潤子主演・今敏監督）を候補に入れる。アイドルの精神が崩壊していく様を描くサスペンスアニメ。",
+    "category": "movie",
+    "tags": [
+      "アニメ",
+      "サスペンス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 81,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_075_2",
+    "title": "『ターミネーター2』を観る",
+    "description": "アーノルド・シュワルツェネッガー主演・ジェームズ・キャメロン監督。SFアクション映画の金字塔として知られる続編。",
+    "detail": "『ターミネーター2』（アーノルド・シュワルツェネッガー主演・ジェームズ・キャメロン監督）を候補に入れる。SFアクション映画の金字塔として知られる続編。",
+    "category": "movie",
+    "tags": [
+      "アクション",
+      "SF"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 137,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_076_2",
+    "title": "『エイリアン2』を観る",
+    "description": "シガニー・ウィーバー主演・ジェームズ・キャメロン監督。異星生物との戦いを描くSFアクションの名作。",
+    "detail": "『エイリアン2』（シガニー・ウィーバー主演・ジェームズ・キャメロン監督）を候補に入れる。異星生物との戦いを描くSFアクションの名作。",
+    "category": "movie",
+    "tags": [
+      "アクション",
+      "SF"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 137,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_077_item",
+    "title": "『スター・ウォーズ 新たなる希望』を観る",
+    "description": "マーク・ハミル主演・ジョージ・ルーカス監督。銀河を舞台にした宇宙SF活劇シリーズの第1作。",
+    "detail": "『スター・ウォーズ 新たなる希望』（マーク・ハミル主演・ジョージ・ルーカス監督）を候補に入れる。銀河を舞台にした宇宙SF活劇シリーズの第1作。",
+    "category": "movie",
+    "tags": [
+      "アクション",
+      "SF"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 121,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_078_item",
+    "title": "『アベンジャーズ』を観る",
+    "description": "ロバート・ダウニー・Jr主演・ジョス・ウィードン監督。ヒーローたちが集結する大人気アクション超大作。",
+    "detail": "『アベンジャーズ』（ロバート・ダウニー・Jr主演・ジョス・ウィードン監督）を候補に入れる。ヒーローたちが集結する大人気アクション超大作。",
+    "category": "movie",
+    "tags": [
+      "アクション",
+      "SF"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 143,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_079_item",
+    "title": "『アイアンマン』を観る",
+    "description": "ロバート・ダウニー・Jr主演・ジョン・ファヴロー監督。MCU第1作、天才発明家がヒーローになるまでを描く。",
+    "detail": "『アイアンマン』（ロバート・ダウニー・Jr主演・ジョン・ファヴロー監督）を候補に入れる。MCU第1作、天才発明家がヒーローになるまでを描く。",
+    "category": "movie",
+    "tags": [
+      "アクション",
+      "SF"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 126,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_080_item",
+    "title": "『トランスフォーマー』を観る",
+    "description": "シャイア・ラブーフ主演・マイケル・ベイ監督。変形するロボットたちの激しい戦いを描くSF大作。",
+    "detail": "『トランスフォーマー』（シャイア・ラブーフ主演・マイケル・ベイ監督）を候補に入れる。変形するロボットたちの激しい戦いを描くSF大作。",
+    "category": "movie",
+    "tags": [
+      "アクション",
+      "SF"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 144,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_081_xmen",
+    "title": "『X-MEN』を観る",
+    "description": "ヒュー・ジャックマン主演・ブライアン・シンガー監督。特殊能力を持つミュータントたちの戦いを描く。",
+    "detail": "『X-MEN』（ヒュー・ジャックマン主演・ブライアン・シンガー監督）を候補に入れる。特殊能力を持つミュータントたちの戦いを描く。",
+    "category": "movie",
+    "tags": [
+      "アクション",
+      "SF"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 104,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_082_item",
+    "title": "『パシフィック・リム』を観る",
+    "description": "チャーリー・ハナム主演・ギレルモ・デル・トロ監督。巨大ロボットと怪獣が激突するSFアクション大作。",
+    "detail": "『パシフィック・リム』（チャーリー・ハナム主演・ギレルモ・デル・トロ監督）を候補に入れる。巨大ロボットと怪獣が激突するSFアクション大作。",
+    "category": "movie",
+    "tags": [
+      "アクション",
+      "SF"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 132,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_083_item",
+    "title": "『エッジ・オブ・トゥモロー』を観る",
+    "description": "トム・クルーズ主演・ダグ・リーマン監督。同じ一日を繰り返しながら戦う異色のSFアクション。",
+    "detail": "『エッジ・オブ・トゥモロー』（トム・クルーズ主演・ダグ・リーマン監督）を候補に入れる。同じ一日を繰り返しながら戦う異色のSFアクション。",
+    "category": "movie",
+    "tags": [
+      "アクション",
+      "SF"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 113,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_084_rrr",
+    "title": "『RRR』を観る",
+    "description": "N・T・ラーマ・ラオ・Jr主演・S・S・ラージャマウリ監督。実在の英雄をモデルにしたインド発の大迫力アクション。",
+    "detail": "『RRR』（N・T・ラーマ・ラオ・Jr主演・S・S・ラージャマウリ監督）を候補に入れる。実在の英雄をモデルにしたインド発の大迫力アクション。",
+    "category": "movie",
+    "tags": [
+      "アクション",
+      "ドラマ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 179,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_085_item",
+    "title": "『ミッション:インポッシブル』を観る",
+    "description": "トム・クルーズ主演・ブライアン・デ・パルマ監督。スパイ映画シリーズの第1作、緊迫の潜入アクション。",
+    "detail": "『ミッション:インポッシブル』（トム・クルーズ主演・ブライアン・デ・パルマ監督）を候補に入れる。スパイ映画シリーズの第1作、緊迫の潜入アクション。",
+    "category": "movie",
+    "tags": [
+      "アクション",
+      "サスペンス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 110,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_086_item",
+    "title": "『キングスマン』を観る",
+    "description": "コリン・ファース主演・マシュー・ヴォーン監督。スタイリッシュな英国紳士スパイを描くアクションコメディ。",
+    "detail": "『キングスマン』（コリン・ファース主演・マシュー・ヴォーン監督）を候補に入れる。スタイリッシュな英国紳士スパイを描くアクションコメディ。",
+    "category": "movie",
+    "tags": [
+      "アクション",
+      "コメディ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 129,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_087_item",
+    "title": "『ジョン・ウィック』を観る",
+    "description": "キアヌ・リーブス主演・チャド・スタエルスキ監督。伝説の殺し屋が復讐に挑むスタイリッシュアクション。",
+    "detail": "『ジョン・ウィック』（キアヌ・リーブス主演・チャド・スタエルスキ監督）を候補に入れる。伝説の殺し屋が復讐に挑むスタイリッシュアクション。",
+    "category": "movie",
+    "tags": [
+      "アクション",
+      "サスペンス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 101,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_088_96",
+    "title": "『96時間』を観る",
+    "description": "リーアム・ニーソン主演・ピエール・モレル監督。誘拐された娘を救うため元エージェントが奮闘する。",
+    "detail": "『96時間』（リーアム・ニーソン主演・ピエール・モレル監督）を候補に入れる。誘拐された娘を救うため元エージェントが奮闘する。",
+    "category": "movie",
+    "tags": [
+      "アクション",
+      "サスペンス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 93,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_089_item",
+    "title": "『ダイ・ハード』を観る",
+    "description": "ブルース・ウィリス主演・ジョン・マクティアナン監督。高層ビルに立てこもったテロリストと戦う刑事の物語。",
+    "detail": "『ダイ・ハード』（ブルース・ウィリス主演・ジョン・マクティアナン監督）を候補に入れる。高層ビルに立てこもったテロリストと戦う刑事の物語。",
+    "category": "movie",
+    "tags": [
+      "アクション",
+      "サスペンス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 132,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_090_item",
+    "title": "『マッドマックス 怒りのデス・ロード』を観る",
+    "description": "トム・ハーディ主演・ジョージ・ミラー監督。荒廃した近未来を舞台にした疾走感あふれるSF活劇。",
+    "detail": "『マッドマックス 怒りのデス・ロード』（トム・ハーディ主演・ジョージ・ミラー監督）を候補に入れる。荒廃した近未来を舞台にした疾走感あふれるSF活劇。",
+    "category": "movie",
+    "tags": [
+      "アクション",
+      "SF"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 120,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_091_item",
+    "title": "『ガーディアンズ・オブ・ギャラクシー』を観る",
+    "description": "クリス・プラット主演・ジェームズ・ガン監督。個性豊かなヒーローたちが銀河を守るSFコメディ。",
+    "detail": "『ガーディアンズ・オブ・ギャラクシー』（クリス・プラット主演・ジェームズ・ガン監督）を候補に入れる。個性豊かなヒーローたちが銀河を守るSFコメディ。",
+    "category": "movie",
+    "tags": [
+      "アクション",
+      "SF",
+      "コメディ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 121,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_092_item",
+    "title": "『プリティ・ウーマン』を観る",
+    "description": "ジュリア・ロバーツ主演・ゲイリー・マーシャル監督。大富豪と女性の身分違いの恋を描くラブコメの名作。",
+    "detail": "『プリティ・ウーマン』（ジュリア・ロバーツ主演・ゲイリー・マーシャル監督）を候補に入れる。大富豪と女性の身分違いの恋を描くラブコメの名作。",
+    "category": "movie",
+    "tags": [
+      "恋愛",
+      "コメディ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 119,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_093_item",
+    "title": "『ノッティングヒルの恋人』を観る",
+    "description": "ヒュー・グラント主演・ロジャー・ミッチェル監督。書店員と大女優の恋を描くロマンティックコメディ。",
+    "detail": "『ノッティングヒルの恋人』（ヒュー・グラント主演・ロジャー・ミッチェル監督）を候補に入れる。書店員と大女優の恋を描くロマンティックコメディ。",
+    "category": "movie",
+    "tags": [
+      "恋愛",
+      "コメディ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 124,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_094_item",
+    "title": "『ブリジット・ジョーンズの日記』を観る",
+    "description": "レニー・ゼルウィガー主演・シャロン・マグワイア監督。不器用な独身女性の恋愛模様を描くコメディの人気作。",
+    "detail": "『ブリジット・ジョーンズの日記』（レニー・ゼルウィガー主演・シャロン・マグワイア監督）を候補に入れる。不器用な独身女性の恋愛模様を描くコメディの人気作。",
+    "category": "movie",
+    "tags": [
+      "恋愛",
+      "コメディ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 97,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_095_item",
+    "title": "『恋愛適齢期』を観る",
+    "description": "ジャック・ニコルソン主演・ナンシー・マイヤーズ監督。大人の男女の恋愛模様を描く上質なラブコメディ。",
+    "detail": "『恋愛適齢期』（ジャック・ニコルソン主演・ナンシー・マイヤーズ監督）を候補に入れる。大人の男女の恋愛模様を描く上質なラブコメディ。",
+    "category": "movie",
+    "tags": [
+      "恋愛",
+      "コメディ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 128,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_096_500",
+    "title": "『500日のサマー』を観る",
+    "description": "ジョセフ・ゴードン=レヴィット主演・マーク・ウェブ監督。時系列を入れ替えた構成が特徴的な恋愛映画。",
+    "detail": "『500日のサマー』（ジョセフ・ゴードン=レヴィット主演・マーク・ウェブ監督）を候補に入れる。時系列を入れ替えた構成が特徴的な恋愛映画。",
+    "category": "movie",
+    "tags": [
+      "恋愛",
+      "コメディ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 95,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_097_item",
+    "title": "『アバウト・タイム 愛おしい時間について』を観る",
+    "description": "ドーナル・グリーソン主演・リチャード・カーティス監督。時間を巻き戻す能力を持つ青年の恋と家族を描く。",
+    "detail": "『アバウト・タイム 愛おしい時間について』（ドーナル・グリーソン主演・リチャード・カーティス監督）を候補に入れる。時間を巻き戻す能力を持つ青年の恋と家族を描く。",
+    "category": "movie",
+    "tags": [
+      "恋愛",
+      "ファンタジー"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 123,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_098_item",
+    "title": "『ラブ・アクチュアリー』を観る",
+    "description": "ヒュー・グラント主演・リチャード・カーティス監督。クリスマスを舞台に交錯する群像恋愛コメディ。",
+    "detail": "『ラブ・アクチュアリー』（ヒュー・グラント主演・リチャード・カーティス監督）を候補に入れる。クリスマスを舞台に交錯する群像恋愛コメディ。",
+    "category": "movie",
+    "tags": [
+      "恋愛",
+      "コメディ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 135,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_099_item",
+    "title": "『クレイジー・リッチ!』を観る",
+    "description": "コンスタンス・ウー主演・ジョン・M・チュウ監督。シンガポールの大富豪一家を舞台にしたラブコメ。",
+    "detail": "『クレイジー・リッチ!』（コンスタンス・ウー主演・ジョン・M・チュウ監督）を候補に入れる。シンガポールの大富豪一家を舞台にしたラブコメ。",
+    "category": "movie",
+    "tags": [
+      "恋愛",
+      "コメディ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 121,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_100_item",
+    "title": "『君の膵臓をたべたい』を観る",
+    "description": "浜辺美波主演・月川翔監督。余命宣告を受けた少女と同級生の交流を描く感動作。",
+    "detail": "『君の膵臓をたべたい』（浜辺美波主演・月川翔監督）を候補に入れる。余命宣告を受けた少女と同級生の交流を描く感動作。",
+    "category": "movie",
+    "tags": [
+      "恋愛",
+      "ドラマ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 117,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_101_item",
+    "title": "『花束みたいな恋をした』を観る",
+    "description": "菅田将暉主演・土井裕泰監督。出会いから別れまでの5年間を丁寧に描く恋愛映画。",
+    "detail": "『花束みたいな恋をした』（菅田将暉主演・土井裕泰監督）を候補に入れる。出会いから別れまでの5年間を丁寧に描く恋愛映画。",
+    "category": "movie",
+    "tags": [
+      "恋愛",
+      "ドラマ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 124,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_102_item",
+    "title": "『ローマの休日』を観る",
+    "description": "オードリー・ヘプバーン主演・ウィリアム・ワイラー監督。王女と新聞記者のひとときの恋を描く不朽の名作。",
+    "detail": "『ローマの休日』（オードリー・ヘプバーン主演・ウィリアム・ワイラー監督）を候補に入れる。王女と新聞記者のひとときの恋を描く不朽の名作。",
+    "category": "movie",
+    "tags": [
+      "恋愛",
+      "コメディ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 118,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_103_item",
+    "title": "『めぐり逢えたら』を観る",
+    "description": "トム・ハンクス主演・ノーラ・エフロン監督。ラジオ番組をきっかけに惹かれ合う男女を描く。",
+    "detail": "『めぐり逢えたら』（トム・ハンクス主演・ノーラ・エフロン監督）を候補に入れる。ラジオ番組をきっかけに惹かれ合う男女を描く。",
+    "category": "movie",
+    "tags": [
+      "恋愛",
+      "ドラマ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 105,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_104_item",
+    "title": "『シェイプ・オブ・ウォーター』を観る",
+    "description": "サリー・ホーキンス主演・ギレルモ・デル・トロ監督。声を持たない女性と不思議な生物の恋を描くファンタジー。",
+    "detail": "『シェイプ・オブ・ウォーター』（サリー・ホーキンス主演・ギレルモ・デル・トロ監督）を候補に入れる。声を持たない女性と不思議な生物の恋を描くファンタジー。",
+    "category": "movie",
+    "tags": [
+      "恋愛",
+      "ファンタジー",
+      "ドラマ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 123,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_105_item",
+    "title": "『アメリ』を観る",
+    "description": "オドレイ・トトゥ主演・ジャン=ピエール・ジュネ監督。空想好きな女性がパリで巻き起こす奇跡の物語。",
+    "detail": "『アメリ』（オドレイ・トトゥ主演・ジャン=ピエール・ジュネ監督）を候補に入れる。空想好きな女性がパリで巻き起こす奇跡の物語。",
+    "category": "movie",
+    "tags": [
+      "恋愛",
+      "コメディ",
+      "ファンタジー"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 122,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_106_item",
+    "title": "『ブロークバック・マウンテン』を観る",
+    "description": "ヒース・レジャー主演・アン・リー監督。2人の男性カウボーイの秘めた恋を描いた話題作。",
+    "detail": "『ブロークバック・マウンテン』（ヒース・レジャー主演・アン・リー監督）を候補に入れる。2人の男性カウボーイの秘めた恋を描いた話題作。",
+    "category": "movie",
+    "tags": [
+      "恋愛",
+      "ドラマ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 134,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_107_item",
+    "title": "『ラ・ラ・ランド』を観る",
+    "description": "ライアン・ゴズリング主演・デイミアン・チャゼル監督。夢を追う男女の恋と葛藤を描くミュージカル。",
+    "detail": "『ラ・ラ・ランド』（ライアン・ゴズリング主演・デイミアン・チャゼル監督）を候補に入れる。夢を追う男女の恋と葛藤を描くミュージカル。",
+    "category": "movie",
+    "tags": [
+      "恋愛",
+      "ドラマ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 128,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_108_item",
+    "title": "『マディソン郡の橋』を観る",
+    "description": "メリル・ストリープ主演・クリント・イーストウッド監督。4日間だけの運命的な恋を描く大人のラブストーリー。",
+    "detail": "『マディソン郡の橋』（メリル・ストリープ主演・クリント・イーストウッド監督）を候補に入れる。4日間だけの運命的な恋を描く大人のラブストーリー。",
+    "category": "movie",
+    "tags": [
+      "恋愛",
+      "ドラマ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 135,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_109_item",
+    "title": "『となりのトトロ』を観る",
+    "description": "日高のり子主演・宮崎駿監督。田舎に引っ越した姉妹と不思議な生き物の交流を描く。",
+    "detail": "『となりのトトロ』（日高のり子主演・宮崎駿監督）を候補に入れる。田舎に引っ越した姉妹と不思議な生き物の交流を描く。",
+    "category": "movie",
+    "tags": [
+      "アニメ",
+      "ファンタジー"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 86,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_110_item",
+    "title": "『千と千尋の神隠し』を観る",
+    "description": "柊瑠美主演・宮崎駿監督。不思議な世界に迷い込んだ少女の成長を描く傑作。",
+    "detail": "『千と千尋の神隠し』（柊瑠美主演・宮崎駿監督）を候補に入れる。不思議な世界に迷い込んだ少女の成長を描く傑作。",
+    "category": "movie",
+    "tags": [
+      "アニメ",
+      "ファンタジー"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 125,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_111_item",
+    "title": "『もののけ姫』を観る",
+    "description": "松田洋治主演・宮崎駿監督。森の神々と人間の争いを壮大に描くファンタジー。",
+    "detail": "『もののけ姫』（松田洋治主演・宮崎駿監督）を候補に入れる。森の神々と人間の争いを壮大に描くファンタジー。",
+    "category": "movie",
+    "tags": [
+      "アニメ",
+      "ファンタジー"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 133,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_112_item",
+    "title": "『ハウルの動く城』を観る",
+    "description": "倍賞千恵子主演・宮崎駿監督。魔法をかけられた少女と動く城の魔法使いの物語。",
+    "detail": "『ハウルの動く城』（倍賞千恵子主演・宮崎駿監督）を候補に入れる。魔法をかけられた少女と動く城の魔法使いの物語。",
+    "category": "movie",
+    "tags": [
+      "アニメ",
+      "ファンタジー"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 119,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_113_item",
+    "title": "『崖の上のポニョ』を観る",
+    "description": "奈良柚莉愛主演・宮崎駿監督。人間になりたい魚の子ポニョと少年の交流を描く。",
+    "detail": "『崖の上のポニョ』（奈良柚莉愛主演・宮崎駿監督）を候補に入れる。人間になりたい魚の子ポニョと少年の交流を描く。",
+    "category": "movie",
+    "tags": [
+      "アニメ",
+      "ファンタジー"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 101,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_114_item",
+    "title": "『天空の城ラピュタ』を観る",
+    "description": "田中真弓主演・宮崎駿監督。空に浮かぶ伝説の島を探す冒険ファンタジー。",
+    "detail": "『天空の城ラピュタ』（田中真弓主演・宮崎駿監督）を候補に入れる。空に浮かぶ伝説の島を探す冒険ファンタジー。",
+    "category": "movie",
+    "tags": [
+      "アニメ",
+      "ファンタジー"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 124,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_115_item",
+    "title": "『サマーウォーズ』を観る",
+    "description": "神木隆之介主演・細田守監督。仮想世界と大家族の絆を描くひと夏の物語。",
+    "detail": "『サマーウォーズ』（神木隆之介主演・細田守監督）を候補に入れる。仮想世界と大家族の絆を描くひと夏の物語。",
+    "category": "movie",
+    "tags": [
+      "アニメ",
+      "SF"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 114,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_116_item",
+    "title": "『おおかみこどもの雨と雪』を観る",
+    "description": "宮崎あおい主演・細田守監督。人間と狼の血を引く子どもたちを育てる母の物語。",
+    "detail": "『おおかみこどもの雨と雪』（宮崎あおい主演・細田守監督）を候補に入れる。人間と狼の血を引く子どもたちを育てる母の物語。",
+    "category": "movie",
+    "tags": [
+      "アニメ",
+      "ファンタジー",
+      "ドラマ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 117,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_117_item",
+    "title": "『未来のミライ』を観る",
+    "description": "上白石萌歌主演・細田守監督。妹が生まれた少年が不思議な時間旅行をする物語。",
+    "detail": "『未来のミライ』（上白石萌歌主演・細田守監督）を候補に入れる。妹が生まれた少年が不思議な時間旅行をする物語。",
+    "category": "movie",
+    "tags": [
+      "アニメ",
+      "ファンタジー"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 100,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_118_item",
+    "title": "『バケモノの子』を観る",
+    "description": "役所広司主演・細田守監督。異世界で武術を学ぶ少年の成長を描くファンタジー。",
+    "detail": "『バケモノの子』（役所広司主演・細田守監督）を候補に入れる。異世界で武術を学ぶ少年の成長を描くファンタジー。",
+    "category": "movie",
+    "tags": [
+      "アニメ",
+      "ファンタジー"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 119,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_119_item",
+    "title": "『竜とそばかすの姫』を観る",
+    "description": "中村佳穂主演・細田守監督。仮想世界での歌声がきっかけで奇跡が起こる物語。",
+    "detail": "『竜とそばかすの姫』（中村佳穂主演・細田守監督）を候補に入れる。仮想世界での歌声がきっかけで奇跡が起こる物語。",
+    "category": "movie",
+    "tags": [
+      "アニメ",
+      "ファンタジー"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 122,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_120_item",
+    "title": "『シュレック』を観る",
+    "description": "マイク・マイヤーズ主演・アンドリュー・アダムソン監督。不器用な怪物と仲間たちが繰り広げるコメディ。",
+    "detail": "『シュレック』（マイク・マイヤーズ主演・アンドリュー・アダムソン監督）を候補に入れる。不器用な怪物と仲間たちが繰り広げるコメディ。",
+    "category": "movie",
+    "tags": [
+      "アニメ",
+      "コメディ",
+      "ファンタジー"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 90,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_121_item",
+    "title": "『アナと雪の女王』を観る",
+    "description": "イディナ・メンゼル主演・クリス・バック監督。氷の力を持つ姉と妹の絆を描く大ヒットミュージカル。",
+    "detail": "『アナと雪の女王』（イディナ・メンゼル主演・クリス・バック監督）を候補に入れる。氷の力を持つ姉と妹の絆を描く大ヒットミュージカル。",
+    "category": "movie",
+    "tags": [
+      "アニメ",
+      "ファンタジー"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 102,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_122_item",
+    "title": "『リトル・マーメイド』を観る",
+    "description": "ジョディ・ベンソン主演・ロン・クレメンツ監督。人間に憧れる人魚姫の恋と冒険を描く名作。",
+    "detail": "『リトル・マーメイド』（ジョディ・ベンソン主演・ロン・クレメンツ監督）を候補に入れる。人間に憧れる人魚姫の恋と冒険を描く名作。",
+    "category": "movie",
+    "tags": [
+      "アニメ",
+      "ファンタジー"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 83,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_123_item",
+    "title": "『美女と野獣』を観る",
+    "description": "ペイジ・オハラ主演・ゲイリー・トラウズデール監督。呪いをかけられた野獣と本好きの娘の恋を描く。",
+    "detail": "『美女と野獣』（ペイジ・オハラ主演・ゲイリー・トラウズデール監督）を候補に入れる。呪いをかけられた野獣と本好きの娘の恋を描く。",
+    "category": "movie",
+    "tags": [
+      "アニメ",
+      "ファンタジー",
+      "恋愛"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 84,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_124_akira",
+    "title": "『AKIRA』を観る",
+    "description": "岩田光央主演・大友克洋監督。ネオ東京を舞台にした伝説的サイバーパンクアニメ。",
+    "detail": "『AKIRA』（岩田光央主演・大友克洋監督）を候補に入れる。ネオ東京を舞台にした伝説的サイバーパンクアニメ。",
+    "category": "movie",
+    "tags": [
+      "アニメ",
+      "SF"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 124,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_125_ghostintheshell",
+    "title": "『GHOST IN THE SHELL/攻殻機動隊』を観る",
+    "description": "田中敦子主演・押井守監督。義体化社会での自我を問うサイバーパンクの金字塔。",
+    "detail": "『GHOST IN THE SHELL/攻殻機動隊』（田中敦子主演・押井守監督）を候補に入れる。義体化社会での自我を問うサイバーパンクの金字塔。",
+    "category": "movie",
+    "tags": [
+      "アニメ",
+      "SF"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 83,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_126_item",
+    "title": "『天気の子』を観る",
+    "description": "醍醐虎汰朗主演・新海誠監督。雨が降り続く東京で出会った少年少女を描く。",
+    "detail": "『天気の子』（醍醐虎汰朗主演・新海誠監督）を候補に入れる。雨が降り続く東京で出会った少年少女を描く。",
+    "category": "movie",
+    "tags": [
+      "アニメ",
+      "ファンタジー",
+      "ドラマ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 112,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_127_item",
+    "title": "『君の名は。』を観る",
+    "description": "神木隆之介主演・新海誠監督。入れ替わりを通じて惹かれ合う少年少女の物語。",
+    "detail": "『君の名は。』（神木隆之介主演・新海誠監督）を候補に入れる。入れ替わりを通じて惹かれ合う少年少女の物語。",
+    "category": "movie",
+    "tags": [
+      "アニメ",
+      "ファンタジー",
+      "恋愛"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 106,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_128_item",
+    "title": "『時をかける少女』を観る",
+    "description": "仲里依紗主演・細田守監督。時間を飛び越える力を得た女子高生の青春を描く。",
+    "detail": "『時をかける少女』（仲里依紗主演・細田守監督）を候補に入れる。時間を飛び越える力を得た女子高生の青春を描く。",
+    "category": "movie",
+    "tags": [
+      "アニメ",
+      "SF",
+      "ドラマ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 98,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_129_item",
+    "title": "『この世界の片隅に』を観る",
+    "description": "のん主演・片渕須直監督。戦時中の広島・呉を舞台にした日常を描くアニメ。",
+    "detail": "『この世界の片隅に』（のん主演・片渕須直監督）を候補に入れる。戦時中の広島・呉を舞台にした日常を描くアニメ。",
+    "category": "movie",
+    "tags": [
+      "アニメ",
+      "ドラマ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 126,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_130_item",
+    "title": "『聲の形』を観る",
+    "description": "入野自由主演・山田尚子監督。いじめと贖罪をテーマにした青春アニメーション。",
+    "detail": "『聲の形』（入野自由主演・山田尚子監督）を候補に入れる。いじめと贖罪をテーマにした青春アニメーション。",
+    "category": "movie",
+    "tags": [
+      "アニメ",
+      "ドラマ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 130,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_131_item",
+    "title": "『ゼロ・グラビティ』を観る",
+    "description": "サンドラ・ブロック主演・アルフォンソ・キュアロン監督。宇宙空間で漂流する飛行士のサバイバルを描く。",
+    "detail": "『ゼロ・グラビティ』（サンドラ・ブロック主演・アルフォンソ・キュアロン監督）を候補に入れる。宇宙空間で漂流する飛行士のサバイバルを描く。",
+    "category": "movie",
+    "tags": [
+      "SF",
+      "ドラマ",
+      "サスペンス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 91,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_132_item",
+    "title": "『オデッセイ』を観る",
+    "description": "マット・デイモン主演・リドリー・スコット監督。火星に取り残された宇宙飛行士の知恵と工夫を描く。",
+    "detail": "『オデッセイ』（マット・デイモン主演・リドリー・スコット監督）を候補に入れる。火星に取り残された宇宙飛行士の知恵と工夫を描く。",
+    "category": "movie",
+    "tags": [
+      "SF",
+      "ドラマ",
+      "コメディ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 144,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_133_item",
+    "title": "『パッセンジャー』を観る",
+    "description": "ジェニファー・ローレンス主演・モルテン・ティルドゥム監督。目覚めが早すぎた宇宙船の乗客2人を描くSFロマンス。",
+    "detail": "『パッセンジャー』（ジェニファー・ローレンス主演・モルテン・ティルドゥム監督）を候補に入れる。目覚めが早すぎた宇宙船の乗客2人を描くSFロマンス。",
+    "category": "movie",
+    "tags": [
+      "SF",
+      "恋愛",
+      "ドラマ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 116,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_134_item",
+    "title": "『メッセージ』を観る",
+    "description": "エイミー・アダムス主演・ドゥニ・ヴィルヌーヴ監督。異星人とのコミュニケーションを描く知的なSF。",
+    "detail": "『メッセージ』（エイミー・アダムス主演・ドゥニ・ヴィルヌーヴ監督）を候補に入れる。異星人とのコミュニケーションを描く知的なSF。",
+    "category": "movie",
+    "tags": [
+      "SF",
+      "ドラマ",
+      "ミステリー"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 116,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_135_item",
+    "title": "『トゥモローランド』を観る",
+    "description": "ジョージ・クルーニー主演・ブラッド・バード監督。理想郷を目指す少女と発明家の冒険を描くSF。",
+    "detail": "『トゥモローランド』（ジョージ・クルーニー主演・ブラッド・バード監督）を候補に入れる。理想郷を目指す少女と発明家の冒険を描くSF。",
+    "category": "movie",
+    "tags": [
+      "SF",
+      "ファンタジー",
+      "アクション"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 130,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_136_item",
+    "title": "『エターナル・サンシャイン』を観る",
+    "description": "ジム・キャリー主演・ミシェル・ゴンドリー監督。記憶を消す技術をめぐる恋人たちの物語。",
+    "detail": "『エターナル・サンシャイン』（ジム・キャリー主演・ミシェル・ゴンドリー監督）を候補に入れる。記憶を消す技術をめぐる恋人たちの物語。",
+    "category": "movie",
+    "tags": [
+      "SF",
+      "恋愛",
+      "ドラマ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 108,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_137_item",
+    "title": "『ハリー・ポッターと賢者の石』を観る",
+    "description": "ダニエル・ラドクリフ主演・クリス・コロンバス監督。魔法学校に入学した少年の冒険が始まる第1作。",
+    "detail": "『ハリー・ポッターと賢者の石』（ダニエル・ラドクリフ主演・クリス・コロンバス監督）を候補に入れる。魔法学校に入学した少年の冒険が始まる第1作。",
+    "category": "movie",
+    "tags": [
+      "ファンタジー",
+      "アクション"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 152,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_138_item",
+    "title": "『パイレーツ・オブ・カリビアン』を観る",
+    "description": "ジョニー・デップ主演・ゴア・ヴァービンスキー監督。海賊たちが宝を巡って繰り広げる痛快アドベンチャー。",
+    "detail": "『パイレーツ・オブ・カリビアン』（ジョニー・デップ主演・ゴア・ヴァービンスキー監督）を候補に入れる。海賊たちが宝を巡って繰り広げる痛快アドベンチャー。",
+    "category": "movie",
+    "tags": [
+      "ファンタジー",
+      "アクション",
+      "コメディ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 143,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_139_item",
+    "title": "『ナルニア国物語/ライオンと魔女』を観る",
+    "description": "ジョージー・ヘンリー主演・アンドリュー・アダムソン監督。衣装だんすの奥に広がる異世界を巡る冒険物語。",
+    "detail": "『ナルニア国物語/ライオンと魔女』（ジョージー・ヘンリー主演・アンドリュー・アダムソン監督）を候補に入れる。衣装だんすの奥に広がる異世界を巡る冒険物語。",
+    "category": "movie",
+    "tags": [
+      "ファンタジー",
+      "アクション"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 143,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_140_item",
+    "title": "『パンズ・ラビリンス』を観る",
+    "description": "イバナ・バケロ主演・ギレルモ・デル・トロ監督。内戦下のスペインを舞台にした少女の幻想物語。",
+    "detail": "『パンズ・ラビリンス』（イバナ・バケロ主演・ギレルモ・デル・トロ監督）を候補に入れる。内戦下のスペインを舞台にした少女の幻想物語。",
+    "category": "movie",
+    "tags": [
+      "ファンタジー",
+      "ドラマ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 118,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_141_item",
+    "title": "『スターダスト』を観る",
+    "description": "クレア・デインズ主演・マシュー・ヴォーン監督。流れ星を探す青年が繰り広げるロマンティックな冒険。",
+    "detail": "『スターダスト』（クレア・デインズ主演・マシュー・ヴォーン監督）を候補に入れる。流れ星を探す青年が繰り広げるロマンティックな冒険。",
+    "category": "movie",
+    "tags": [
+      "ファンタジー",
+      "恋愛",
+      "コメディ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 127,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_142_item",
+    "title": "『プリンセス・ブライド・ストーリー』を観る",
+    "description": "ケーリー・エルウィス主演・ロブ・ライナー監督。祖父が孫に語るおとぎ話仕立ての冒険ラブコメディ。",
+    "detail": "『プリンセス・ブライド・ストーリー』（ケーリー・エルウィス主演・ロブ・ライナー監督）を候補に入れる。祖父が孫に語るおとぎ話仕立ての冒険ラブコメディ。",
+    "category": "movie",
+    "tags": [
+      "ファンタジー",
+      "コメディ",
+      "恋愛"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 98,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_143_item",
+    "title": "『ロード・オブ・ザ・リング』を観る",
+    "description": "イライジャ・ウッド主演・ピーター・ジャクソン監督。指輪を巡る壮大な冒険を描くファンタジー叙事詩。",
+    "detail": "『ロード・オブ・ザ・リング』（イライジャ・ウッド主演・ピーター・ジャクソン監督）を候補に入れる。指輪を巡る壮大な冒険を描くファンタジー叙事詩。",
+    "category": "movie",
+    "tags": [
+      "ファンタジー",
+      "アクション"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 178,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_200_item",
+    "title": "『白夜行』を観る",
+    "description": "堀北真希主演・深川栄洋監督。20年にわたる男女の運命を描く長編ミステリーの映画化。",
+    "detail": "『白夜行』（堀北真希主演・深川栄洋監督）を候補に入れる。20年にわたる男女の運命を描く長編ミステリーの映画化。",
+    "category": "movie",
+    "tags": [
+      "ミステリー",
+      "ドラマ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 121,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_201_x",
+    "title": "『容疑者Xの献身』を観る",
+    "description": "福山雅治主演・西谷弘監督。天才数学者の緻密な計画が光る本格ミステリーの映画化。",
+    "detail": "『容疑者Xの献身』（福山雅治主演・西谷弘監督）を候補に入れる。天才数学者の緻密な計画が光る本格ミステリーの映画化。",
+    "category": "movie",
+    "tags": [
+      "ミステリー",
+      "ドラマ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 129,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_202_item",
+    "title": "『悪人』を観る",
+    "description": "妻夫木聡主演・李相日監督。一つの事件をめぐる加害者と被害者双方の視点を描く。",
+    "detail": "『悪人』（妻夫木聡主演・李相日監督）を候補に入れる。一つの事件をめぐる加害者と被害者双方の視点を描く。",
+    "category": "movie",
+    "tags": [
+      "ミステリー",
+      "ドラマ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 139,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_203_item",
+    "title": "『告白』を観る",
+    "description": "松たか子主演・中島哲也監督。娘を失った教師の復讐劇を描く衝撃のサスペンス。",
+    "detail": "『告白』（松たか子主演・中島哲也監督）を候補に入れる。娘を失った教師の復讐劇を描く衝撃のサスペンス。",
+    "category": "movie",
+    "tags": [
+      "ミステリー",
+      "サスペンス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 106,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_204_item",
+    "title": "『天空の蜂』を観る",
+    "description": "江口洋介主演・堤幸彦監督。原発を舞台にしたテロ計画に立ち向かう人々を描く。",
+    "detail": "『天空の蜂』（江口洋介主演・堤幸彦監督）を候補に入れる。原発を舞台にしたテロ計画に立ち向かう人々を描く。",
+    "category": "movie",
+    "tags": [
+      "ミステリー",
+      "サスペンス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 129,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_205_item",
+    "title": "『ソロモンの偽証』を観る",
+    "description": "藤野涼子主演・成島出監督。生徒の死をめぐり中学生たちが開く学内裁判を描く。",
+    "detail": "『ソロモンの偽証』（藤野涼子主演・成島出監督）を候補に入れる。生徒の死をめぐり中学生たちが開く学内裁判を描く。",
+    "category": "movie",
+    "tags": [
+      "ミステリー",
+      "ドラマ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 154,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_206_item",
+    "title": "『麒麟の翼』を観る",
+    "description": "阿部寛主演・土井裕泰監督。加賀恭一郎シリーズ、日本橋を舞台にした人情ミステリー映画。",
+    "detail": "『麒麟の翼』（阿部寛主演・土井裕泰監督）を候補に入れる。加賀恭一郎シリーズ、日本橋を舞台にした人情ミステリー映画。",
+    "category": "movie",
+    "tags": [
+      "ミステリー",
+      "ドラマ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 129,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_207_item",
+    "title": "『名探偵コナン 紺青の拳』を観る",
+    "description": "高山みなみ主演・永岡智佳監督。シンガポールを舞台にした名探偵コナンの劇場版。",
+    "detail": "『名探偵コナン 紺青の拳』（高山みなみ主演・永岡智佳監督）を候補に入れる。シンガポールを舞台にした名探偵コナンの劇場版。",
+    "category": "movie",
+    "tags": [
+      "アニメ",
+      "ミステリー",
+      "アクション"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 110,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_208_item",
+    "title": "『名探偵コナン ゼロの執行人』を観る",
+    "description": "高山みなみ主演・立川譲監督。警視庁を巻き込む大規模テロ計画を描く劇場版。",
+    "detail": "『名探偵コナン ゼロの執行人』（高山みなみ主演・立川譲監督）を候補に入れる。警視庁を巻き込む大規模テロ計画を描く劇場版。",
+    "category": "movie",
+    "tags": [
+      "アニメ",
+      "ミステリー",
+      "アクション"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 111,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_209_item",
+    "title": "『相棒 劇場版』を観る",
+    "description": "水谷豊主演・和泉聖治監督。人気刑事ドラマの映画版、巧妙な事件を追う。",
+    "detail": "『相棒 劇場版』（水谷豊主演・和泉聖治監督）を候補に入れる。人気刑事ドラマの映画版、巧妙な事件を追う。",
+    "category": "movie",
+    "tags": [
+      "ミステリー",
+      "ドラマ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 121,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_210_22",
+    "title": "『22年目の告白-私が殺人犯です-』を観る",
+    "description": "藤原竜也主演・入江悠監督。時効成立後に自ら名乗り出た男をめぐるサスペンス。",
+    "detail": "『22年目の告白-私が殺人犯です-』（藤原竜也主演・入江悠監督）を候補に入れる。時効成立後に自ら名乗り出た男をめぐるサスペンス。",
+    "category": "movie",
+    "tags": [
+      "ミステリー",
+      "サスペンス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 127,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_211_7",
+    "title": "『インシテミル 7日間のデス・ゲーム』を観る",
+    "description": "藤原竜也主演・中村義洋監督。密室に集められた参加者たちが疑心暗鬼になるミステリー。",
+    "detail": "『インシテミル 7日間のデス・ゲーム』（藤原竜也主演・中村義洋監督）を候補に入れる。密室に集められた参加者たちが疑心暗鬼になるミステリー。",
+    "category": "movie",
+    "tags": [
+      "ミステリー",
+      "サスペンス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 129,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_212_item",
+    "title": "『リング』を観る",
+    "description": "松嶋菜々子主演・中田秀夫監督。呪いのビデオをめぐるJホラー・サスペンスの金字塔。",
+    "detail": "『リング』（松嶋菜々子主演・中田秀夫監督）を候補に入れる。呪いのビデオをめぐるJホラー・サスペンスの金字塔。",
+    "category": "movie",
+    "tags": [
+      "ミステリー",
+      "サスペンス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 96,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_213_item",
+    "title": "『ワイルド・スピード』を観る",
+    "description": "ヴィン・ディーゼル主演・ロブ・コーエン監督。ストリートレースを舞台にした疾走感あるアクション。",
+    "detail": "『ワイルド・スピード』（ヴィン・ディーゼル主演・ロブ・コーエン監督）を候補に入れる。ストリートレースを舞台にした疾走感あるアクション。",
+    "category": "movie",
+    "tags": [
+      "アクション"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 106,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_214_item",
+    "title": "『キル・ビル』を観る",
+    "description": "ユマ・サーマン主演・クエンティン・タランティーノ監督。復讐に燃える女性剣士を描くスタイリッシュアクション。",
+    "detail": "『キル・ビル』（ユマ・サーマン主演・クエンティン・タランティーノ監督）を候補に入れる。復讐に燃える女性剣士を描くスタイリッシュアクション。",
+    "category": "movie",
+    "tags": [
+      "アクション"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 111,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_215_item",
+    "title": "『グラディエーター』を観る",
+    "description": "ラッセル・クロウ主演・リドリー・スコット監督。古代ローマの剣闘士の復讐を描く壮大な歴史アクション。",
+    "detail": "『グラディエーター』（ラッセル・クロウ主演・リドリー・スコット監督）を候補に入れる。古代ローマの剣闘士の復讐を描く壮大な歴史アクション。",
+    "category": "movie",
+    "tags": [
+      "アクション",
+      "ドラマ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 155,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_216_item",
+    "title": "『レオン』を観る",
+    "description": "ジャン・レノ主演・リュック・ベッソン監督。殺し屋と少女の絆を描く切なさ漂うアクション。",
+    "detail": "『レオン』（ジャン・レノ主演・リュック・ベッソン監督）を候補に入れる。殺し屋と少女の絆を描く切なさ漂うアクション。",
+    "category": "movie",
+    "tags": [
+      "アクション",
+      "ドラマ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 110,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_217_007",
+    "title": "『007 スカイフォール』を観る",
+    "description": "ダニエル・クレイグ主演・サム・メンデス監督。MI6を狙う陰謀に立ち向かうスパイアクション。",
+    "detail": "『007 スカイフォール』（ダニエル・クレイグ主演・サム・メンデス監督）を候補に入れる。MI6を狙う陰謀に立ち向かうスパイアクション。",
+    "category": "movie",
+    "tags": [
+      "アクション",
+      "サスペンス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 143,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_218_item",
+    "title": "『ボーン・アイデンティティー』を観る",
+    "description": "マット・デイモン主演・ダグ・リーマン監督。記憶を失った元エージェントの正体を追うアクション。",
+    "detail": "『ボーン・アイデンティティー』（マット・デイモン主演・ダグ・リーマン監督）を候補に入れる。記憶を失った元エージェントの正体を追うアクション。",
+    "category": "movie",
+    "tags": [
+      "アクション",
+      "サスペンス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 119,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_219_item",
+    "title": "『インディ・ジョーンズ 失われたアーク』を観る",
+    "description": "ハリソン・フォード主演・スティーヴン・スピルバーグ監督。考古学者が聖櫃を探す痛快アドベンチャー。",
+    "detail": "『インディ・ジョーンズ 失われたアーク』（ハリソン・フォード主演・スティーヴン・スピルバーグ監督）を候補に入れる。考古学者が聖櫃を探す痛快アドベンチャー。",
+    "category": "movie",
+    "tags": [
+      "アクション",
+      "ファンタジー"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 115,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_220_item",
+    "title": "『るろうに剣心』を観る",
+    "description": "佐藤健主演・大友啓史監督。幕末を生きた剣客の姿を描く実写時代劇アクション。",
+    "detail": "『るろうに剣心』（佐藤健主演・大友啓史監督）を候補に入れる。幕末を生きた剣客の姿を描く実写時代劇アクション。",
+    "category": "movie",
+    "tags": [
+      "アクション",
+      "ドラマ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 134,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_221_item",
+    "title": "『ベイビー・ドライバー』を観る",
+    "description": "アンセル・エルゴート主演・エドガー・ライト監督。音楽に合わせた爽快なカーアクションが魅力の一作。",
+    "detail": "『ベイビー・ドライバー』（アンセル・エルゴート主演・エドガー・ライト監督）を候補に入れる。音楽に合わせた爽快なカーアクションが魅力の一作。",
+    "category": "movie",
+    "tags": [
+      "アクション",
+      "コメディ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 113,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_222_item",
+    "title": "『ジュラシック・パーク』を観る",
+    "description": "サム・ニール主演・スティーヴン・スピルバーグ監督。恐竜が蘇るテーマパークを描くSF超大作。",
+    "detail": "『ジュラシック・パーク』（サム・ニール主演・スティーヴン・スピルバーグ監督）を候補に入れる。恐竜が蘇るテーマパークを描くSF超大作。",
+    "category": "movie",
+    "tags": [
+      "SF",
+      "アクション"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 127,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_223_et",
+    "title": "『E.T.』を観る",
+    "description": "ヘンリー・トーマス主演・スティーヴン・スピルバーグ監督。少年と宇宙人の友情を描く不朽の名作。",
+    "detail": "『E.T.』（ヘンリー・トーマス主演・スティーヴン・スピルバーグ監督）を候補に入れる。少年と宇宙人の友情を描く不朽の名作。",
+    "category": "movie",
+    "tags": [
+      "SF",
+      "ファンタジー",
+      "ドラマ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 115,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_224_item",
+    "title": "『バック・トゥ・ザ・フューチャー』を観る",
+    "description": "マイケル・J・フォックス主演・ロバート・ゼメキス監督。タイムマシンで過去に行った少年のドタバタ劇。",
+    "detail": "『バック・トゥ・ザ・フューチャー』（マイケル・J・フォックス主演・ロバート・ゼメキス監督）を候補に入れる。タイムマシンで過去に行った少年のドタバタ劇。",
+    "category": "movie",
+    "tags": [
+      "SF",
+      "コメディ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 116,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_225_item",
+    "title": "『インデペンデンス・デイ』を観る",
+    "description": "ウィル・スミス主演・ローランド・エメリッヒ監督。地球を襲う異星人との攻防を描くSF大作。",
+    "detail": "『インデペンデンス・デイ』（ウィル・スミス主演・ローランド・エメリッヒ監督）を候補に入れる。地球を襲う異星人との攻防を描くSF大作。",
+    "category": "movie",
+    "tags": [
+      "SF",
+      "アクション"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 145,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_226_item",
+    "title": "『アバター』を観る",
+    "description": "サム・ワーシントン主演・ジェームズ・キャメロン監督。異星の惑星を舞台にした壮大なSF叙事詩。",
+    "detail": "『アバター』（サム・ワーシントン主演・ジェームズ・キャメロン監督）を候補に入れる。異星の惑星を舞台にした壮大なSF叙事詩。",
+    "category": "movie",
+    "tags": [
+      "SF",
+      "アクション"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 162,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_227_item",
+    "title": "『スパイダーマン:スパイダーバース』を観る",
+    "description": "シャメイク・ムーア主演・ボブ・パーシケッティ監督。多次元のスパイダーマンたちが共演するSFアニメ。",
+    "detail": "『スパイダーマン:スパイダーバース』（シャメイク・ムーア主演・ボブ・パーシケッティ監督）を候補に入れる。多次元のスパイダーマンたちが共演するSFアニメ。",
+    "category": "movie",
+    "tags": [
+      "SF",
+      "アニメ",
+      "アクション"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 117,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_228_1",
+    "title": "『レディ・プレイヤー1』を観る",
+    "description": "タイ・シェリダン主演・スティーヴン・スピルバーグ監督。仮想現実世界を舞台にした宝探しSFアクション。",
+    "detail": "『レディ・プレイヤー1』（タイ・シェリダン主演・スティーヴン・スピルバーグ監督）を候補に入れる。仮想現実世界を舞台にした宝探しSFアクション。",
+    "category": "movie",
+    "tags": [
+      "SF",
+      "アクション"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 140,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_229_item",
+    "title": "『ダークナイト』を観る",
+    "description": "クリスチャン・ベール主演・クリストファー・ノーラン監督。ジョーカーとの死闘を描くヒーローアクションの傑作。",
+    "detail": "『ダークナイト』（クリスチャン・ベール主演・クリストファー・ノーラン監督）を候補に入れる。ジョーカーとの死闘を描くヒーローアクションの傑作。",
+    "category": "movie",
+    "tags": [
+      "アクション",
+      "サスペンス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 152,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_230_item",
+    "title": "『ある愛の詩』を観る",
+    "description": "ライアン・オニール主演・アーサー・ヒラー監督。身分違いの恋人たちの愛と別れを描く恋愛映画の名作。",
+    "detail": "『ある愛の詩』（ライアン・オニール主演・アーサー・ヒラー監督）を候補に入れる。身分違いの恋人たちの愛と別れを描く恋愛映画の名作。",
+    "category": "movie",
+    "tags": [
+      "恋愛",
+      "ドラマ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 100,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_231_item",
+    "title": "『ノーカントリー』を観る",
+    "description": "トミー・リー・ジョーンズ主演・コーエン兄弟監督。追う者と追われる者の緊迫した攻防を描く。",
+    "detail": "『ノーカントリー』（トミー・リー・ジョーンズ主演・コーエン兄弟監督）を候補に入れる。追う者と追われる者の緊迫した攻防を描く。",
+    "category": "movie",
+    "tags": [
+      "サスペンス",
+      "ドラマ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 122,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_232_item",
+    "title": "『フォーン・ブース』を観る",
+    "description": "コリン・ファレル主演・ジョエル・シューマカー監督。公衆電話に縛り付けられた男の一夜を描くサスペンス。",
+    "detail": "『フォーン・ブース』（コリン・ファレル主演・ジョエル・シューマカー監督）を候補に入れる。公衆電話に縛り付けられた男の一夜を描くサスペンス。",
+    "category": "movie",
+    "tags": [
+      "サスペンス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 81,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_233_item",
+    "title": "『パニック・ルーム』を観る",
+    "description": "ジョディ・フォスター主演・デヴィッド・フィンチャー監督。自宅に侵入した強盗との攻防を描くサスペンス。",
+    "detail": "『パニック・ルーム』（ジョディ・フォスター主演・デヴィッド・フィンチャー監督）を候補に入れる。自宅に侵入した強盗との攻防を描くサスペンス。",
+    "category": "movie",
+    "tags": [
+      "サスペンス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 112,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_234_item",
+    "title": "『メリー・ポピンズ』を観る",
+    "description": "ジュリー・アンドリュース主演・ロバート・スティーヴンソン監督。魔法使いの乳母が子どもたちに奇跡を届ける物語。",
+    "detail": "『メリー・ポピンズ』（ジュリー・アンドリュース主演・ロバート・スティーヴンソン監督）を候補に入れる。魔法使いの乳母が子どもたちに奇跡を届ける物語。",
+    "category": "movie",
+    "tags": [
+      "ファンタジー",
+      "コメディ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 139,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_235_item",
+    "title": "『チャーリーとチョコレート工場』を観る",
+    "description": "ジョニー・デップ主演・ティム・バートン監督。謎多きチョコレート工場を巡る奇想天外な物語。",
+    "detail": "『チャーリーとチョコレート工場』（ジョニー・デップ主演・ティム・バートン監督）を候補に入れる。謎多きチョコレート工場を巡る奇想天外な物語。",
+    "category": "movie",
+    "tags": [
+      "ファンタジー",
+      "コメディ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 115,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_236_item",
+    "title": "『ジュマンジ』を観る",
+    "description": "ロビン・ウィリアムズ主演・ジョー・ジョンストン監督。魔法のボードゲームが引き起こす大騒動を描く。",
+    "detail": "『ジュマンジ』（ロビン・ウィリアムズ主演・ジョー・ジョンストン監督）を候補に入れる。魔法のボードゲームが引き起こす大騒動を描く。",
+    "category": "movie",
+    "tags": [
+      "ファンタジー",
+      "アクション"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 104,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_237_item",
+    "title": "『オズの魔法使』を観る",
+    "description": "ジュディ・ガーランド主演・ヴィクター・フレミング監督。竜巻に飛ばされた少女が不思議の国を旅する古典。",
+    "detail": "『オズの魔法使』（ジュディ・ガーランド主演・ヴィクター・フレミング監督）を候補に入れる。竜巻に飛ばされた少女が不思議の国を旅する古典。",
+    "category": "movie",
+    "tags": [
+      "ファンタジー"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 102,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_238_item",
+    "title": "『マレフィセント』を観る",
+    "description": "アンジェリーナ・ジョリー主演・ロバート・ストロンバーグ監督。眠れる森の美女を悪役視点から描くダークファンタジー。",
+    "detail": "『マレフィセント』（アンジェリーナ・ジョリー主演・ロバート・ストロンバーグ監督）を候補に入れる。眠れる森の美女を悪役視点から描くダークファンタジー。",
+    "category": "movie",
+    "tags": [
+      "ファンタジー",
+      "ドラマ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 97,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_239_item",
+    "title": "『初恋のきた道』を観る",
+    "description": "チャン・ツィイー主演・チャン・イーモウ監督。中国の農村を舞台にした純愛物語。",
+    "detail": "『初恋のきた道』（チャン・ツィイー主演・チャン・イーモウ監督）を候補に入れる。中国の農村を舞台にした純愛物語。",
+    "category": "movie",
+    "tags": [
+      "恋愛",
+      "ドラマ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 89,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_240_item",
+    "title": "『ショコラ』を観る",
+    "description": "ジュリエット・ビノシュ主演・ラッセ・ハルストレム監督。チョコレート店をめぐる村人たちの心の変化を描く。",
+    "detail": "『ショコラ』（ジュリエット・ビノシュ主演・ラッセ・ハルストレム監督）を候補に入れる。チョコレート店をめぐる村人たちの心の変化を描く。",
+    "category": "movie",
+    "tags": [
+      "恋愛",
+      "ドラマ",
+      "コメディ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 121,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_241_item",
+    "title": "『サブリナ』を観る",
+    "description": "オードリー・ヘプバーン主演・ビリー・ワイルダー監督。運転手の娘と兄弟の三角関係を描くロマンティックコメディ。",
+    "detail": "『サブリナ』（オードリー・ヘプバーン主演・ビリー・ワイルダー監督）を候補に入れる。運転手の娘と兄弟の三角関係を描くロマンティックコメディ。",
+    "category": "movie",
+    "tags": [
+      "恋愛",
+      "コメディ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 113,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_242_item",
+    "title": "『火垂るの墓』を観る",
+    "description": "辰巳努主演・高畑勲監督。戦時中を生きる兄妹の姿を描く不朽のアニメーション。",
+    "detail": "『火垂るの墓』（辰巳努主演・高畑勲監督）を候補に入れる。戦時中を生きる兄妹の姿を描く不朽のアニメーション。",
+    "category": "movie",
+    "tags": [
+      "アニメ",
+      "ドラマ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 89,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_243_item",
+    "title": "『借りぐらしのアリエッティ』を観る",
+    "description": "志田未来主演・米林宏昌監督。小人の少女と人間の少年の交流を描くファンタジー。",
+    "detail": "『借りぐらしのアリエッティ』（志田未来主演・米林宏昌監督）を候補に入れる。小人の少女と人間の少年の交流を描くファンタジー。",
+    "category": "movie",
+    "tags": [
+      "アニメ",
+      "ファンタジー"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 94,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_244_item",
+    "title": "『思い出のマーニー』を観る",
+    "description": "高月彩良主演・米林宏昌監督。孤独な少女と不思議な少女マーニーの交流を描く。",
+    "detail": "『思い出のマーニー』（高月彩良主演・米林宏昌監督）を候補に入れる。孤独な少女と不思議な少女マーニーの交流を描く。",
+    "category": "movie",
+    "tags": [
+      "アニメ",
+      "ドラマ",
+      "ファンタジー"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 103,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_245_item",
+    "title": "『かぐや姫の物語』を観る",
+    "description": "朝倉あき主演・高畑勲監督。竹取物語を情感豊かに描いたアニメーション。",
+    "detail": "『かぐや姫の物語』（朝倉あき主演・高畑勲監督）を候補に入れる。竹取物語を情感豊かに描いたアニメーション。",
+    "category": "movie",
+    "tags": [
+      "アニメ",
+      "ドラマ",
+      "ファンタジー"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 137,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_246_standbyme",
+    "title": "『STAND BY ME ドラえもん』を観る",
+    "description": "水田わさび主演・八木竜一監督。のび太とドラえもんの絆を3DCGで描いた劇場版。",
+    "detail": "『STAND BY ME ドラえもん』（水田わさび主演・八木竜一監督）を候補に入れる。のび太とドラえもんの絆を3DCGで描いた劇場版。",
+    "category": "movie",
+    "tags": [
+      "アニメ",
+      "ファンタジー",
+      "コメディ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 100,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_247_item",
+    "title": "『名探偵コナン 業火の向日葵』を観る",
+    "description": "高山みなみ主演・静野孔文監督。美術品盗難事件を追う名探偵コナンの劇場版。",
+    "detail": "『名探偵コナン 業火の向日葵』（高山みなみ主演・静野孔文監督）を候補に入れる。美術品盗難事件を追う名探偵コナンの劇場版。",
+    "category": "movie",
+    "tags": [
+      "アニメ",
+      "ミステリー",
+      "アクション"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 111,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_248_filmred",
+    "title": "『ワンピース FILM RED』を観る",
+    "description": "田中真弓主演・谷口悟朗監督。歌姫ウタをめぐる大冒険を描く劇場版アニメ。",
+    "detail": "『ワンピース FILM RED』（田中真弓主演・谷口悟朗監督）を候補に入れる。歌姫ウタをめぐる大冒険を描く劇場版アニメ。",
+    "category": "movie",
+    "tags": [
+      "アニメ",
+      "アクション"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 115,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_249_item",
+    "title": "『鬼滅の刃 無限列車編』を観る",
+    "description": "花江夏樹主演・外崎春雄監督。無限列車での激闘を描く大ヒット劇場版アニメ。",
+    "detail": "『鬼滅の刃 無限列車編』（花江夏樹主演・外崎春雄監督）を候補に入れる。無限列車での激闘を描く大ヒット劇場版アニメ。",
+    "category": "movie",
+    "tags": [
+      "アニメ",
+      "アクション",
+      "ドラマ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 117,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_300_item",
+    "title": "『猿の惑星』を観る",
+    "description": "チャールトン・ヘストン主演・フランクリン・J・シャフナー監督。猿が支配する惑星に漂着した宇宙飛行士を描くSFの古典。",
+    "detail": "『猿の惑星』（チャールトン・ヘストン主演・フランクリン・J・シャフナー監督）を候補に入れる。猿が支配する惑星に漂着した宇宙飛行士を描くSFの古典。",
+    "category": "movie",
+    "tags": [
+      "SF",
+      "ドラマ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 112,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_301_item",
+    "title": "『メン・イン・ブラック』を観る",
+    "description": "ウィル・スミス主演・バリー・ソネンフェルド監督。地球に潜む異星人を取り締まる秘密組織を描くSFコメディ。",
+    "detail": "『メン・イン・ブラック』（ウィル・スミス主演・バリー・ソネンフェルド監督）を候補に入れる。地球に潜む異星人を取り締まる秘密組織を描くSFコメディ。",
+    "category": "movie",
+    "tags": [
+      "SF",
+      "コメディ",
+      "アクション"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 98,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_302_item",
+    "title": "『ミノリティ・リポート』を観る",
+    "description": "トム・クルーズ主演・スティーヴン・スピルバーグ監督。犯罪を予知するシステムに追われる男を描くSFサスペンス。",
+    "detail": "『ミノリティ・リポート』（トム・クルーズ主演・スティーヴン・スピルバーグ監督）を候補に入れる。犯罪を予知するシステムに追われる男を描くSFサスペンス。",
+    "category": "movie",
+    "tags": [
+      "SF",
+      "サスペンス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 145,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_303_item",
+    "title": "『トータル・リコール』を観る",
+    "description": "アーノルド・シュワルツェネッガー主演・ポール・バーホーベン監督。偽の記憶が現実を侵食するSFアクション。",
+    "detail": "『トータル・リコール』（アーノルド・シュワルツェネッガー主演・ポール・バーホーベン監督）を候補に入れる。偽の記憶が現実を侵食するSFアクション。",
+    "category": "movie",
+    "tags": [
+      "SF",
+      "アクション"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 113,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_304_item",
+    "title": "『エクス・マキナ』を観る",
+    "description": "アリシア・ヴィキャンデル主演・アレックス・ガーランド監督。人工知能の心を試すプログラマーを描く静かなSF。",
+    "detail": "『エクス・マキナ』（アリシア・ヴィキャンデル主演・アレックス・ガーランド監督）を候補に入れる。人工知能の心を試すプログラマーを描く静かなSF。",
+    "category": "movie",
+    "tags": [
+      "SF",
+      "サスペンス",
+      "ドラマ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 108,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_305_item",
+    "title": "『ドント・ルック・アップ』を観る",
+    "description": "レオナルド・ディカプリオ主演・アダム・マッケイ監督。地球に迫る彗星をめぐる社会風刺SFコメディ。",
+    "detail": "『ドント・ルック・アップ』（レオナルド・ディカプリオ主演・アダム・マッケイ監督）を候補に入れる。地球に迫る彗星をめぐる社会風刺SFコメディ。",
+    "category": "movie",
+    "tags": [
+      "SF",
+      "コメディ",
+      "ドラマ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 138,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_306_item",
+    "title": "『ゴーン・ベイビー・ゴーン』を観る",
+    "description": "ケイシー・アフレック主演・ベン・アフレック監督。少女失踪事件を追う私立探偵の葛藤を描くミステリー。",
+    "detail": "『ゴーン・ベイビー・ゴーン』（ケイシー・アフレック主演・ベン・アフレック監督）を候補に入れる。少女失踪事件を追う私立探偵の葛藤を描くミステリー。",
+    "category": "movie",
+    "tags": [
+      "サスペンス",
+      "ミステリー",
+      "ドラマ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 114,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_307_item",
+    "title": "『シークレット・ウィンドウ』を観る",
+    "description": "ジョニー・デップ主演・デヴィッド・ケップ監督。盗作疑惑をめぐる小説家の恐怖を描くサスペンス。",
+    "detail": "『シークレット・ウィンドウ』（ジョニー・デップ主演・デヴィッド・ケップ監督）を候補に入れる。盗作疑惑をめぐる小説家の恐怖を描くサスペンス。",
+    "category": "movie",
+    "tags": [
+      "サスペンス",
+      "ミステリー"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 96,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_308_item",
+    "title": "『ドント・ブリーズ』を観る",
+    "description": "ステファニー・シガー主演・フェデ・アルバレス監督。盲目の元軍人の家に忍び込んだ若者たちを描くサスペンス。",
+    "detail": "『ドント・ブリーズ』（ステファニー・シガー主演・フェデ・アルバレス監督）を候補に入れる。盲目の元軍人の家に忍び込んだ若者たちを描くサスペンス。",
+    "category": "movie",
+    "tags": [
+      "サスペンス"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 88,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_309_item",
+    "title": "『フライトプラン』を観る",
+    "description": "ジョディ・フォスター主演・ロベルト・シュヴェンケ監督。機内で消えた娘を探す母親を描くサスペンス。",
+    "detail": "『フライトプラン』（ジョディ・フォスター主演・ロベルト・シュヴェンケ監督）を候補に入れる。機内で消えた娘を探す母親を描くサスペンス。",
+    "category": "movie",
+    "tags": [
+      "サスペンス",
+      "ミステリー"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 98,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_310_item",
+    "title": "『ザ・ゲーム』を観る",
+    "description": "マイケル・ダグラス主演・デヴィッド・フィンチャー監督。謎のゲームに巻き込まれる富豪を描くサスペンス。",
+    "detail": "『ザ・ゲーム』（マイケル・ダグラス主演・デヴィッド・フィンチャー監督）を候補に入れる。謎のゲームに巻き込まれる富豪を描くサスペンス。",
+    "category": "movie",
+    "tags": [
+      "サスペンス",
+      "ミステリー"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 129,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_311_item",
+    "title": "『グランド・イリュージョン』を観る",
+    "description": "ジェシー・アイゼンバーグ主演・ルイ・ルテリエ監督。マジックを使った銀行強盗をめぐる知能犯ミステリー。",
+    "detail": "『グランド・イリュージョン』（ジェシー・アイゼンバーグ主演・ルイ・ルテリエ監督）を候補に入れる。マジックを使った銀行強盗をめぐる知能犯ミステリー。",
+    "category": "movie",
+    "tags": [
+      "ミステリー",
+      "サスペンス",
+      "コメディ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 116,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_312_item",
+    "title": "『ダウト~あるカトリック学校で~』を観る",
+    "description": "メリル・ストリープ主演・ジョン・パトリック・シャンリー監督。神父への疑惑をめぐる修道女の葛藤を描くミステリー。",
+    "detail": "『ダウト~あるカトリック学校で~』（メリル・ストリープ主演・ジョン・パトリック・シャンリー監督）を候補に入れる。神父への疑惑をめぐる修道女の葛藤を描くミステリー。",
+    "category": "movie",
+    "tags": [
+      "ミステリー",
+      "ドラマ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 104,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_313_item",
+    "title": "『追憶』を観る",
+    "description": "バーブラ・ストライサンド主演・シドニー・ポラック監督。価値観の異なる男女の長い恋愛模様を描く。",
+    "detail": "『追憶』（バーブラ・ストライサンド主演・シドニー・ポラック監督）を候補に入れる。価値観の異なる男女の長い恋愛模様を描く。",
+    "category": "movie",
+    "tags": [
+      "恋愛",
+      "ドラマ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 118,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_314_item",
+    "title": "『卒業』を観る",
+    "description": "ダスティン・ホフマン主演・マイク・ニコルズ監督。将来に悩む青年の恋と反抗を描いた青春恋愛映画の古典。",
+    "detail": "『卒業』（ダスティン・ホフマン主演・マイク・ニコルズ監督）を候補に入れる。将来に悩む青年の恋と反抗を描いた青春恋愛映画の古典。",
+    "category": "movie",
+    "tags": [
+      "恋愛",
+      "ドラマ",
+      "コメディ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 106,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_315_item",
+    "title": "『セレンディピティ』を観る",
+    "description": "ジョン・キューザック主演・ピーター・チェルソム監督。運命を信じる男女の再会を描くロマンティックコメディ。",
+    "detail": "『セレンディピティ』（ジョン・キューザック主演・ピーター・チェルソム監督）を候補に入れる。運命を信じる男女の再会を描くロマンティックコメディ。",
+    "category": "movie",
+    "tags": [
+      "恋愛",
+      "コメディ",
+      "ファンタジー"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 90,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_316_item",
+    "title": "『バレンタインデー』を観る",
+    "description": "ジュリア・ロバーツ主演・ゲイリー・マーシャル監督。バレンタインデーに交錯する恋人たちの群像コメディ。",
+    "detail": "『バレンタインデー』（ジュリア・ロバーツ主演・ゲイリー・マーシャル監督）を候補に入れる。バレンタインデーに交錯する恋人たちの群像コメディ。",
+    "category": "movie",
+    "tags": [
+      "恋愛",
+      "コメディ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 125,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_317_item",
+    "title": "『世界一キライなあなたに』を観る",
+    "description": "エミリア・クラーク主演・テア・シャロック監督。介護をきっかけに惹かれ合う男女の恋を描く感動作。",
+    "detail": "『世界一キライなあなたに』（エミリア・クラーク主演・テア・シャロック監督）を候補に入れる。介護をきっかけに惹かれ合う男女の恋を描く感動作。",
+    "category": "movie",
+    "tags": [
+      "恋愛",
+      "ドラマ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 110,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_318_item",
+    "title": "『イルマーレ』を観る",
+    "description": "キアヌ・リーブス主演・アレハンドロ・アグレスティ監督。時空を超えた手紙のやり取りで結ばれる恋を描く。",
+    "detail": "『イルマーレ』（キアヌ・リーブス主演・アレハンドロ・アグレスティ監督）を候補に入れる。時空を超えた手紙のやり取りで結ばれる恋を描く。",
+    "category": "movie",
+    "tags": [
+      "恋愛",
+      "ファンタジー",
+      "ドラマ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 99,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_319_item",
+    "title": "『ラブソングができるまで』を観る",
+    "description": "ヒュー・グラント主演・マーク・ローレンス監督。落ち目のミュージシャンと作詞家の恋を描くコメディ。",
+    "detail": "『ラブソングができるまで』（ヒュー・グラント主演・マーク・ローレンス監督）を候補に入れる。落ち目のミュージシャンと作詞家の恋を描くコメディ。",
+    "category": "movie",
+    "tags": [
+      "恋愛",
+      "コメディ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 104,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_320_item",
+    "title": "『プロポーズ』を観る",
+    "description": "サンドラ・ブロック主演・アン・フレッチャー監督。偽装婚約から始まる上司と部下の恋を描くコメディ。",
+    "detail": "『プロポーズ』（サンドラ・ブロック主演・アン・フレッチャー監督）を候補に入れる。偽装婚約から始まる上司と部下の恋を描くコメディ。",
+    "category": "movie",
+    "tags": [
+      "恋愛",
+      "コメディ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 108,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_321_item",
+    "title": "『ペンギン・ハイウェイ』を観る",
+    "description": "石橋陽彩主演・石田祐康監督。町に現れたペンギンの謎を追う少年の物語。",
+    "detail": "『ペンギン・ハイウェイ』（石橋陽彩主演・石田祐康監督）を候補に入れる。町に現れたペンギンの謎を追う少年の物語。",
+    "category": "movie",
+    "tags": [
+      "アニメ",
+      "SF",
+      "ファンタジー"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 118,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_322_item",
+    "title": "『心が叫びたがってるんだ』を観る",
+    "description": "入野自由主演・長井龍雪監督。話せなくなった少女の恋と成長を描く青春アニメ。",
+    "detail": "『心が叫びたがってるんだ』（入野自由主演・長井龍雪監督）を候補に入れる。話せなくなった少女の恋と成長を描く青春アニメ。",
+    "category": "movie",
+    "tags": [
+      "アニメ",
+      "ドラマ",
+      "恋愛"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 119,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_323_item",
+    "title": "『リズと青い鳥』を観る",
+    "description": "種﨑敦美主演・山田尚子監督。吹奏楽部の少女2人の繊細な関係を描くアニメ。",
+    "detail": "『リズと青い鳥』（種﨑敦美主演・山田尚子監督）を候補に入れる。吹奏楽部の少女2人の繊細な関係を描くアニメ。",
+    "category": "movie",
+    "tags": [
+      "アニメ",
+      "ドラマ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 90,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_324_item",
+    "title": "『メアリと魔女の花』を観る",
+    "description": "杉咲花主演・米林宏昌監督。魔法の花を手にした少女の冒険を描くファンタジーアニメ。",
+    "detail": "『メアリと魔女の花』（杉咲花主演・米林宏昌監督）を候補に入れる。魔法の花を手にした少女の冒険を描くファンタジーアニメ。",
+    "category": "movie",
+    "tags": [
+      "アニメ",
+      "ファンタジー"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 103,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_325_item",
+    "title": "『ソードアート・オンライン -オーディナル・スケール-』を観る",
+    "description": "松岡禎丞主演・伊藤智彦監督。AR技術を巡る事件に挑む劇場版アニメ。",
+    "detail": "『ソードアート・オンライン -オーディナル・スケール-』（松岡禎丞主演・伊藤智彦監督）を候補に入れる。AR技術を巡る事件に挑む劇場版アニメ。",
+    "category": "movie",
+    "tags": [
+      "アニメ",
+      "SF",
+      "アクション"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 119,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_326_item",
+    "title": "『名探偵コナン から紅の恋歌』を観る",
+    "description": "高山みなみ主演・静野孔文監督。京都を舞台にした恋も絡む名探偵コナンの劇場版。",
+    "detail": "『名探偵コナン から紅の恋歌』（高山みなみ主演・静野孔文監督）を候補に入れる。京都を舞台にした恋も絡む名探偵コナンの劇場版。",
+    "category": "movie",
+    "tags": [
+      "アニメ",
+      "ミステリー",
+      "恋愛"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "Netflix・Amazon Prime Videoなど主要サブスクの配信状況を確認して視聴する。",
+    "estimated_minutes": 111,
+    "weight": 1.0
   }
 ]
