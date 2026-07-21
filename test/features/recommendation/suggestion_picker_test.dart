@@ -193,6 +193,44 @@ void main() {
         'movie_match',
       ]);
     });
+
+    test('音楽の追加ジャンルごとにタグが一致する提案だけを返す', () {
+      const addedGenres = [
+        'ロック',
+        'ヒップホップ・R&B',
+        'アニソン・ゲーム音楽',
+        'EDM・テクノ',
+      ];
+      final suggestions = [
+        for (final genre in addedGenres)
+          _suggestion(id: genre, category: 'music', tags: [genre]),
+        _suggestion(
+          id: 'existing_genre',
+          category: 'music',
+          tags: ['ポップス'],
+        ),
+      ];
+
+      for (final genre in addedGenres) {
+        final filteredSuggestions = filterSuggestions(
+          suggestions,
+          UserSettings(
+            selectedCategories: const ['music'],
+            detailSettings: {
+              'music': {
+                'genre': [genre],
+              },
+            },
+          ),
+        );
+
+        expect(
+          filteredSuggestions.map((suggestion) => suggestion.id),
+          [genre],
+          reason: '$genre の選択時は同じタグの提案だけが残るはず',
+        );
+      }
+    });
   });
 
   group('excludeRecent', () {

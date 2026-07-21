@@ -52,10 +52,20 @@ void main() {
     expect(InterestCategories.findById('unknown'), isNull);
   });
 
-  test('音楽カテゴリの MVP 詳細設定はジャンルのみ', () {
+  test('音楽カテゴリの MVP 詳細設定は8種類のジャンルのみ', () {
     final music = InterestCategories.findById('music')!;
-    final groupIds = music.detailSettingGroups.map((group) => group.id);
+    final genreGroup = music.detailSettingGroups.single;
 
-    expect(groupIds, ['genre']);
+    expect(genreGroup.id, 'genre');
+    expect(genreGroup.options, [
+      'ポップス',
+      'ジャズ',
+      'クラシック',
+      '洋楽',
+      'ロック',
+      'ヒップホップ・R&B',
+      'アニソン・ゲーム音楽',
+      'EDM・テクノ',
+    ]);
   });
 }
