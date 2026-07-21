@@ -134,14 +134,16 @@ Map<String, dynamic> _suggestionJson({
   required String id,
   required String title,
   required List<String> tags,
+  String? detail,
+  String category = 'music',
   int budgetYen = 0,
 }) {
   return {
     'id': id,
     'title': title,
     'description': '$titleの説明文。',
-    'detail': '$titleの補足。',
-    'category': 'music',
+    'detail': detail ?? '$titleの補足。',
+    'category': category,
     'tags': tags,
     'budget_yen': budgetYen,
     'where_to_try': '音楽配信アプリで検索する。',
@@ -167,8 +169,9 @@ Future<_FakeSettingsRepository> _pumpPage(
 
   final settingsRepository = _FakeSettingsRepository(settings);
   final suggestionRepository = SuggestionRepository(
-    assetBundle:
-        _FakeAssetBundle(failAssetLoad ? null : jsonEncode(suggestions)),
+    assetBundle: _FakeAssetBundle(
+      failAssetLoad ? null : jsonEncode(suggestions),
+    ),
   );
   await tester.pumpWidget(
     MaterialApp(
@@ -177,8 +180,8 @@ Future<_FakeSettingsRepository> _pumpPage(
           suggestionRepository: suggestionRepository,
           settingsRepository: settingsRepository,
           recordsRepository: recordsRepository ?? _FakeRecordsRepository(),
-          currentSuggestionRepository: currentSuggestionRepository ??
-              _FakeCurrentSuggestionRepository(),
+          currentSuggestionRepository:
+              currentSuggestionRepository ?? _FakeCurrentSuggestionRepository(),
           ongoingSuggestionRepository:
               ongoingSuggestionRepository ?? _FakeOngoingSuggestionRepository(),
           random: Random(0),
@@ -250,6 +253,59 @@ void main() {
     expect(find.text('予算：¥300'), findsOneWidget);
   });
 
+  testWidgets('詳しく見るをタップすると提案のdetailを展開・収納できる', (tester) async {
+    const recipe = '材料：卵2個、だし大さじ2。\n手順：1. 材料を混ぜる。2. 弱火で焼く。';
+    await _pumpPage(
+      tester,
+      suggestions: [
+        _suggestionJson(
+          id: 'cook_recipe',
+          title: '卵焼きを作る',
+          tags: ['和食', '焼く'],
+          detail: recipe,
+          category: 'cook',
+        ),
+      ],
+      settings: const UserSettings(selectedCategories: ['cook']),
+    );
+
+    expect(find.text('詳しく見る'), findsOneWidget);
+    expect(find.text(recipe), findsNothing);
+
+    await tester.tap(find.text('詳しく見る'));
+    await tester.pumpAndSettle();
+
+    expect(find.text('詳しい内容'), findsOneWidget);
+    expect(find.text(recipe), findsOneWidget);
+
+    await tester.tap(find.text('詳しい内容を閉じる'));
+    await tester.pumpAndSettle();
+
+    expect(find.text(recipe), findsNothing);
+    expect(find.text('詳しく見る'), findsOneWidget);
+  });
+
+  testWidgets('detailが空または空白のみなら詳細UIを表示しない', (tester) async {
+    await _pumpPage(
+      tester,
+      suggestions: [
+        _suggestionJson(
+          id: 'music_without_detail',
+          title: '詳細のない提案',
+          tags: ['ポップス'],
+          detail: '   ',
+        ),
+      ],
+      settings: const UserSettings(selectedCategories: ['music']),
+    );
+
+    expect(find.text('詳しく見る'), findsNothing);
+    expect(
+      find.byKey(const ValueKey<String>('suggestion-detail-content')),
+      findsNothing,
+    );
+  });
+
   testWidgets('「別の提案」で直近と異なる提案に切り替わる', (tester) async {
     await _pumpPage(
       tester,
@@ -266,10 +322,7 @@ void main() {
     await tester.pumpAndSettle();
 
     // 候補2件では直近除外により必ずもう一方に切り替わる。
-    expect(
-      find.text(firstWasA ? 'ポップスを1曲流す' : 'ジャズを1曲流す'),
-      findsOneWidget,
-    );
+    expect(find.text(firstWasA ? 'ポップスを1曲流す' : 'ジャズを1曲流す'), findsOneWidget);
   });
 
   testWidgets('表示した提案IDが recent_suggestion_ids として3件まで保存される', (tester) async {
@@ -366,8 +419,7 @@ void main() {
     expect(ongoingRepository.ongoing!.suggestionId, 'music_a');
   });
 
-  testWidgets('実施中の完了→履歴に保存で done レコードが保存され、完了演出後に履歴IDが渡る',
-      (tester) async {
+  testWidgets('実施中の完了→履歴に保存で done レコードが保存され、完了演出後に履歴IDが渡る', (tester) async {
     final recordsRepository = _FakeRecordsRepository();
     final ongoingRepository = _FakeOngoingSuggestionRepository();
     String? completedRecordId;
@@ -409,8 +461,7 @@ void main() {
     expect(find.text('履歴に保存しました'), findsOneWidget);
   });
 
-  testWidgets('スキップから復活した実施中を完了すると元のスキップ履歴が削除される',
-      (tester) async {
+  testWidgets('スキップから復活した実施中を完了すると元のスキップ履歴が削除される', (tester) async {
     final skippedRecord = SuggestionRecord(
       id: 'record_skip',
       suggestionId: 'music_a',
@@ -452,8 +503,7 @@ void main() {
     expect(savedRecord.suggestionId, 'music_a');
   });
 
-  testWidgets('スキップから復活した実施中を再スキップした場合は元のスキップ履歴を残す',
-      (tester) async {
+  testWidgets('スキップから復活した実施中を再スキップした場合は元のスキップ履歴を残す', (tester) async {
     final skippedRecord = SuggestionRecord(
       id: 'record_skip',
       suggestionId: 'music_a',
@@ -574,8 +624,7 @@ void main() {
     expect(find.text('スキップ'), findsOneWidget);
   });
 
-  testWidgets('実施中の提案IDが提案データに存在しない場合は実施中を解除して通常表示に戻る',
-      (tester) async {
+  testWidgets('実施中の提案IDが提案データに存在しない場合は実施中を解除して通常表示に戻る', (tester) async {
     final ongoingRepository = _FakeOngoingSuggestionRepository(
       OngoingSuggestion(
         suggestionId: 'deleted_id',
@@ -652,8 +701,9 @@ void main() {
   });
 
   testWidgets('表示中提案IDが復元され、直近リストを消費しない', (tester) async {
-    final currentSuggestionRepository =
-        _FakeCurrentSuggestionRepository('music_b');
+    final currentSuggestionRepository = _FakeCurrentSuggestionRepository(
+      'music_b',
+    );
     final settingsRepository = await _pumpPage(
       tester,
       suggestions: [
@@ -671,8 +721,9 @@ void main() {
   });
 
   testWidgets('保存された表示中提案が現在条件に合わなければ再抽選する', (tester) async {
-    final currentSuggestionRepository =
-        _FakeCurrentSuggestionRepository('music_b');
+    final currentSuggestionRepository = _FakeCurrentSuggestionRepository(
+      'music_b',
+    );
     await _pumpPage(
       tester,
       suggestions: [

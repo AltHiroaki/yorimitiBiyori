@@ -49,8 +49,9 @@ void main() {
       ...InterestCategories.all,
       ...InterestCategories.developmentCategories,
     ].map((category) => category.id).toSet();
-    final suggestionIds =
-        suggestions.map((suggestion) => suggestion.id).toList();
+    final suggestionIds = suggestions
+        .map((suggestion) => suggestion.id)
+        .toList();
 
     expect(suggestions, isNotEmpty);
     expect(suggestionIds.toSet(), hasLength(suggestionIds.length));
@@ -102,12 +103,45 @@ void main() {
           expect(
             hasMatchingSuggestion,
             isTrue,
-            reason: '${category.label}（${category.id}）の選択肢「$option」'
+            reason:
+                '${category.label}（${category.id}）の選択肢「$option」'
                 'に一致する提案が suggestions.json にない。'
                 '該当タグを持つ提案を追加するか、選択肢を見直すこと。',
           );
         }
       }
+    }
+  });
+
+  test('料理データのdetailは材料と2〜4手順の軽いレシピ形式になっている', () async {
+    final source = await rootBundle.loadString(suggestionsAssetPath);
+    final suggestions = parseSuggestionsJson(source);
+    final cookingSuggestions = suggestions.where(
+      (suggestion) => suggestion.category == 'cook',
+    );
+
+    expect(cookingSuggestions, isNotEmpty);
+    for (final suggestion in cookingSuggestions) {
+      expect(
+        suggestion.detail,
+        contains('材料：'),
+        reason: '${suggestion.id} のdetailに材料がない。',
+      );
+      expect(
+        suggestion.detail,
+        contains('手順：1.'),
+        reason: '${suggestion.id} のdetailに手順1がない。',
+      );
+      expect(
+        suggestion.detail,
+        contains('2.'),
+        reason: '${suggestion.id} のdetailは2手順以上必要。',
+      );
+      expect(
+        suggestion.detail,
+        isNot(contains('5.')),
+        reason: '${suggestion.id} のdetailは4手順以内にする。',
+      );
     }
   });
 }

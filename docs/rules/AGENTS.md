@@ -38,7 +38,7 @@ The core experience is:
 2. In 提案設定, the user picks categories, then sets each category's detail settings.
 3. The app sends one local notification per day at a random time within the user-configured range (default 17:00–21:00). The wording is a soft invitation that does NOT name a duration (e.g. "暇な時間って存在しますか？"). There are no time-selection notification actions.
 4. The user taps the notification body, which opens the suggestion screen (suggestion produced from the saved category + detail settings).
-5. The suggestion screen shows one matching suggestion with title, description, tags, where-to-try, and budget.
+5. The suggestion screen shows one matching suggestion with title, description, tags, where-to-try, and budget. When a non-empty `detail` exists, the user can expand "詳しく見る" to read it.
 6. "やってみる" opens a completion modal with feedback chips (よかった / 普通 / 合わなかった) and saves a done record.
 7. "別の提案" records the current suggestion as skipped and re-draws with the same conditions.
 
@@ -54,7 +54,7 @@ Do not implement or generate iOS platform files for the MVP unless explicitly re
 
 Bottom NavigationBar with exactly 3 tabs. There is **no home screen**; the suggestion tab is the top screen.
 
-- Tab 1 提案 (suggestion): current-conditions card (selected categories + active detail settings) + "今日のよりみち" suggestion card (title, description, tags, where-to-try, budget) + info card
+- Tab 1 提案 (suggestion): current-conditions card (selected categories + active detail settings) + "今日のよりみち" suggestion card (title, description, expandable detail when present, tags, where-to-try, budget) + info card
 - Tab 2 履歴 (history): summary (done count / skipped count / total minutes) + recent records list; empty state with CTA to the suggestion tab
 - Tab 3 設定 (settings): Google account row (advanced phase, show as 未連携), suggestion settings row, interest categories, notification time, notification toggle, history deletion with inline confirm, about
 - Sub screen 提案設定 (suggestion settings): **two-stage** editor — stage 1 category multi-select, stage 2 per-category detail-setting groups — with AppBar back button, reachable from both the suggestion tab and the settings tab
@@ -67,7 +67,7 @@ There is **no difficulty, no universal time condition, and no travel-distance co
 
 1. **Stage 1 — category selection** (multi-select, MVP 4 categories): music 音楽 / cook 料理 / read 読書 / movie 映画. walk 散歩 is an advanced-phase category (definition + data retained in `InterestCategories.developmentCategories`).
 2. **Stage 2 — per-category detail settings** (each group is multi-select; unselected = 指定なし = no filtering). **In the MVP each category exposes a single "genre" group, except cook which has two (genre AND cooking_method, AND'd together):**
-   - 音楽: ジャンル(ポップス/ジャズ/クラシック/洋楽)
+   - 音楽: ジャンル(ポップス/ジャズ/クラシック/洋楽/ロック/ヒップホップ・R&B/アニソン・ゲーム音楽/EDM・テクノ)
    - 料理: 味覚・ジャンル(和食/洋食/中華/イタリアン/アジア風/激辛/さっぱり/ガッツリ) + 調理法(蒸す/炒める/揚げる/煮る/焼く/生・和える/レンジ・時短)
    - 読書: ジャンル(エッセイ/小説/ノンフィクション/詩集/ミステリー・サスペンス/SF・ファンタジー/ビジネス・自己啓発/歴史・教養)
    - 映画: ジャンル(アクション/コメディ/ドラマ/SF/サスペンス/ファンタジー/恋愛/アニメ/ミステリー) — a single suggestion's `tags` may hold more than one of these values, since one movie can span multiple genres
@@ -201,6 +201,7 @@ When editing suggestion data:
 - each suggestion must have a stable unique `id`
 - titles should be short and understandable
 - descriptions should be useful to the user
+- every `cook` entry's `detail` must be a lightweight recipe that includes rough ingredients and 2–4 numbered steps, written so a beginner can act without looking up a separate recipe
 - required fields must not be missing
 - `category` must be one of the known category ids (`music` / `cook` / `read` / `movie`; `walk` is retained as an advanced-phase category)
 - `tags` holds the values that correspond to the category's detail-setting options (this is what the filter matches against)
