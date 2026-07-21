@@ -3107,6 +3107,2806 @@
     "weight": 1.0
   },
   {
+    "id": "music_199_rewrite",
+    "title": "『リライト』を聴いてみる",
+    "description": "ASIAN KUNG-FU GENERATION｜勢いのあるギターサウンドで気分を切り替えられるロックナンバー。",
+    "detail": "ASIAN KUNG-FU GENERATIONの『リライト』を1曲だけ聴いてみる。勢いのあるギターサウンドで気分を切り替えられるロックナンバー。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「リライト ASIAN KUNG-FU GENERATION」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_200_chiisana_koi_no_uta",
+    "title": "『小さな恋のうた』を聴いてみる",
+    "description": "MONGOL800｜印象的なバンドサウンドとメロディーを楽しめる一曲。",
+    "detail": "MONGOL800の『小さな恋のうた』を1曲だけ聴いてみる。印象的なバンドサウンドとメロディーを楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「小さな恋のうた MONGOL800」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_201_tentai_kansoku",
+    "title": "『天体観測』を聴いてみる",
+    "description": "BUMP OF CHICKEN｜ライブ感のある演奏が気持ちを前向きにしてくれる一曲。",
+    "detail": "BUMP OF CHICKENの『天体観測』を1曲だけ聴いてみる。ライブ感のある演奏が気持ちを前向きにしてくれる一曲。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「天体観測 BUMP OF CHICKEN」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_202_kanzen_kankaku_dreamer",
+    "title": "『完全感覚Dreamer』を聴いてみる",
+    "description": "ONE OK ROCK｜力強いリズムと歌声が耳に残る定番ロック。",
+    "detail": "ONE OK ROCKの『完全感覚Dreamer』を1曲だけ聴いてみる。力強いリズムと歌声が耳に残る定番ロック。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「完全感覚Dreamer ONE OK ROCK」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_203_the_beginning",
+    "title": "『The Beginning』を聴いてみる",
+    "description": "ONE OK ROCK｜短い時間でもバンドの熱量を味わえる一曲。",
+    "detail": "ONE OK ROCKの『The Beginning』を1曲だけ聴いてみる。短い時間でもバンドの熱量を味わえる一曲。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「The Beginning ONE OK ROCK」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1
+  },
+  {
+    "id": "music_204_haikei_shonenyo",
+    "title": "『拝啓、少年よ』を聴いてみる",
+    "description": "Hump Back｜勢いのあるギターサウンドで気分を切り替えられるロックナンバー。",
+    "detail": "Hump Backの『拝啓、少年よ』を1曲だけ聴いてみる。勢いのあるギターサウンドで気分を切り替えられるロックナンバー。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「拝啓、少年よ Hump Back」と検索して聴く。",
+    "estimated_minutes": 3,
+    "weight": 1
+  },
+  {
+    "id": "music_205_shin_takarajima",
+    "title": "『新宝島』を聴いてみる",
+    "description": "サカナクション｜印象的なバンドサウンドとメロディーを楽しめる一曲。",
+    "detail": "サカナクションの『新宝島』を1曲だけ聴いてみる。印象的なバンドサウンドとメロディーを楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「新宝島 サカナクション」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1
+  },
+  {
+    "id": "music_206_wakamono_no_subete",
+    "title": "『若者のすべて』を聴いてみる",
+    "description": "フジファブリック｜ライブ感のある演奏が気持ちを前向きにしてくれる一曲。",
+    "detail": "フジファブリックの『若者のすべて』を1曲だけ聴いてみる。ライブ感のある演奏が気持ちを前向きにしてくれる一曲。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「若者のすべて フジファブリック」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1
+  },
+  {
+    "id": "music_207_donten",
+    "title": "『曇天』を聴いてみる",
+    "description": "DOES｜力強いリズムと歌声が耳に残る定番ロック。",
+    "detail": "DOESの『曇天』を1曲だけ聴いてみる。力強いリズムと歌声が耳に残る定番ロック。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「曇天 DOES」と検索して聴く。",
+    "estimated_minutes": 3,
+    "weight": 1
+  },
+  {
+    "id": "music_208_shura",
+    "title": "『修羅』を聴いてみる",
+    "description": "DOES｜短い時間でもバンドの熱量を味わえる一曲。",
+    "detail": "DOESの『修羅』を1曲だけ聴いてみる。短い時間でもバンドの熱量を味わえる一曲。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「修羅 DOES」と検索して聴く。",
+    "estimated_minutes": 3,
+    "weight": 1
+  },
+  {
+    "id": "music_209_kaze_fukeba_koi",
+    "title": "『風吹けば恋』を聴いてみる",
+    "description": "チャットモンチー｜勢いのあるギターサウンドで気分を切り替えられるロックナンバー。",
+    "detail": "チャットモンチーの『風吹けば恋』を1曲だけ聴いてみる。勢いのあるギターサウンドで気分を切り替えられるロックナンバー。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「風吹けば恋 チャットモンチー」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_210_shangri_la",
+    "title": "『シャングリラ』を聴いてみる",
+    "description": "チャットモンチー｜印象的なバンドサウンドとメロディーを楽しめる一曲。",
+    "detail": "チャットモンチーの『シャングリラ』を1曲だけ聴いてみる。印象的なバンドサウンドとメロディーを楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「シャングリラ チャットモンチー」と検索して聴く。",
+    "estimated_minutes": 3,
+    "weight": 1
+  },
+  {
+    "id": "music_211_sekai_wa_sorewo_ai_to_yobundaze",
+    "title": "『世界はそれを愛と呼ぶんだぜ』を聴いてみる",
+    "description": "サンボマスター｜ライブ感のある演奏が気持ちを前向きにしてくれる一曲。",
+    "detail": "サンボマスターの『世界はそれを愛と呼ぶんだぜ』を1曲だけ聴いてみる。ライブ感のある演奏が気持ちを前向きにしてくれる一曲。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「世界はそれを愛と呼ぶんだぜ サンボマスター」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1
+  },
+  {
+    "id": "music_212_dekikkonai_wo_yaranakucha",
+    "title": "『できっこないを やらなくちゃ』を聴いてみる",
+    "description": "サンボマスター｜力強いリズムと歌声が耳に残る定番ロック。",
+    "detail": "サンボマスターの『できっこないを やらなくちゃ』を1曲だけ聴いてみる。力強いリズムと歌声が耳に残る定番ロック。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「できっこないを やらなくちゃ サンボマスター」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_213_naimononedari",
+    "title": "『ないものねだり』を聴いてみる",
+    "description": "KANA-BOON｜短い時間でもバンドの熱量を味わえる一曲。",
+    "detail": "KANA-BOONの『ないものねだり』を1曲だけ聴いてみる。短い時間でもバンドの熱量を味わえる一曲。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「ないものねだり KANA-BOON」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_214_silhouette",
+    "title": "『シルエット』を聴いてみる",
+    "description": "KANA-BOON｜勢いのあるギターサウンドで気分を切り替えられるロックナンバー。",
+    "detail": "KANA-BOONの『シルエット』を1曲だけ聴いてみる。勢いのあるギターサウンドで気分を切り替えられるロックナンバー。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「シルエット KANA-BOON」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_215_odorloop",
+    "title": "『オドループ』を聴いてみる",
+    "description": "フレデリック｜印象的なバンドサウンドとメロディーを楽しめる一曲。",
+    "detail": "フレデリックの『オドループ』を1曲だけ聴いてみる。印象的なバンドサウンドとメロディーを楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「オドループ フレデリック」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_216_cry_baby",
+    "title": "『Cry Baby』を聴いてみる",
+    "description": "Official髭男dism｜ライブ感のある演奏が気持ちを前向きにしてくれる一曲。",
+    "detail": "Official髭男dismの『Cry Baby』を1曲だけ聴いてみる。ライブ感のある演奏が気持ちを前向きにしてくれる一曲。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Cry Baby Official髭男dism」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_217_inferno",
+    "title": "『インフェルノ』を聴いてみる",
+    "description": "Mrs. GREEN APPLE｜力強いリズムと歌声が耳に残る定番ロック。",
+    "detail": "Mrs. GREEN APPLEの『インフェルノ』を1曲だけ聴いてみる。力強いリズムと歌声が耳に残る定番ロック。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「インフェルノ Mrs. GREEN APPLE」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_218_ao_to_natsu",
+    "title": "『青と夏』を聴いてみる",
+    "description": "Mrs. GREEN APPLE｜短い時間でもバンドの熱量を味わえる一曲。",
+    "detail": "Mrs. GREEN APPLEの『青と夏』を1曲だけ聴いてみる。短い時間でもバンドの熱量を味わえる一曲。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「青と夏 Mrs. GREEN APPLE」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_219_peace_sign",
+    "title": "『ピースサイン』を聴いてみる",
+    "description": "米津玄師｜勢いのあるギターサウンドで気分を切り替えられるロックナンバー。",
+    "detail": "米津玄師の『ピースサイン』を1曲だけ聴いてみる。勢いのあるギターサウンドで気分を切り替えられるロックナンバー。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「ピースサイン 米津玄師」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_220_kick_back",
+    "title": "『KICK BACK』を聴いてみる",
+    "description": "米津玄師｜印象的なバンドサウンドとメロディーを楽しめる一曲。",
+    "detail": "米津玄師の『KICK BACK』を1曲だけ聴いてみる。印象的なバンドサウンドとメロディーを楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「KICK BACK 米津玄師」と検索して聴く。",
+    "estimated_minutes": 3,
+    "weight": 1
+  },
+  {
+    "id": "music_221_gyakumu",
+    "title": "『逆夢』を聴いてみる",
+    "description": "King Gnu｜ライブ感のある演奏が気持ちを前向きにしてくれる一曲。",
+    "detail": "King Gnuの『逆夢』を1曲だけ聴いてみる。ライブ感のある演奏が気持ちを前向きにしてくれる一曲。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「逆夢 King Gnu」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1
+  },
+  {
+    "id": "music_222_teenager_forever",
+    "title": "『Teenager Forever』を聴いてみる",
+    "description": "King Gnu｜力強いリズムと歌声が耳に残る定番ロック。",
+    "detail": "King Gnuの『Teenager Forever』を1曲だけ聴いてみる。力強いリズムと歌声が耳に残る定番ロック。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Teenager Forever King Gnu」と検索して聴く。",
+    "estimated_minutes": 3,
+    "weight": 1
+  },
+  {
+    "id": "music_223_bakuchi_dancer",
+    "title": "『バクチ・ダンサー』を聴いてみる",
+    "description": "DOES｜短い時間でもバンドの熱量を味わえる一曲。",
+    "detail": "DOESの『バクチ・ダンサー』を1曲だけ聴いてみる。短い時間でもバンドの熱量を味わえる一曲。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「バクチ・ダンサー DOES」と検索して聴く。",
+    "estimated_minutes": 3,
+    "weight": 1
+  },
+  {
+    "id": "music_224_sobakasu",
+    "title": "『そばかす』を聴いてみる",
+    "description": "JUDY AND MARY｜勢いのあるギターサウンドで気分を切り替えられるロックナンバー。",
+    "detail": "JUDY AND MARYの『そばかす』を1曲だけ聴いてみる。勢いのあるギターサウンドで気分を切り替えられるロックナンバー。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「そばかす JUDY AND MARY」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_225_over_drive",
+    "title": "『Over Drive』を聴いてみる",
+    "description": "JUDY AND MARY｜印象的なバンドサウンドとメロディーを楽しめる一曲。",
+    "detail": "JUDY AND MARYの『Over Drive』を1曲だけ聴いてみる。印象的なバンドサウンドとメロディーを楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Over Drive JUDY AND MARY」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_226_glamorous_sky",
+    "title": "『GLAMOROUS SKY』を聴いてみる",
+    "description": "NANA starring MIKA NAKASHIMA｜ライブ感のある演奏が気持ちを前向きにしてくれる一曲。",
+    "detail": "NANA starring MIKA NAKASHIMAの『GLAMOROUS SKY』を1曲だけ聴いてみる。ライブ感のある演奏が気持ちを前向きにしてくれる一曲。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「GLAMOROUS SKY NANA starring MIKA NAKASHIMA」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_227_ready_steady_go",
+    "title": "『READY STEADY GO』を聴いてみる",
+    "description": "L'Arc-en-Ciel｜力強いリズムと歌声が耳に残る定番ロック。",
+    "detail": "L'Arc-en-Cielの『READY STEADY GO』を1曲だけ聴いてみる。力強いリズムと歌声が耳に残る定番ロック。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「READY STEADY GO L'Arc-en-Ciel」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_228_drivers_high",
+    "title": "『Driver's High』を聴いてみる",
+    "description": "L'Arc-en-Ciel｜短い時間でもバンドの熱量を味わえる一曲。",
+    "detail": "L'Arc-en-Cielの『Driver's High』を1曲だけ聴いてみる。短い時間でもバンドの熱量を味わえる一曲。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Driver's High L'Arc-en-Ciel」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_229_kurenai",
+    "title": "『紅』を聴いてみる",
+    "description": "X JAPAN｜勢いのあるギターサウンドで気分を切り替えられるロックナンバー。",
+    "detail": "X JAPANの『紅』を1曲だけ聴いてみる。勢いのあるギターサウンドで気分を切り替えられるロックナンバー。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「紅 X JAPAN」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1
+  },
+  {
+    "id": "music_230_rusty_nail",
+    "title": "『Rusty Nail』を聴いてみる",
+    "description": "X JAPAN｜印象的なバンドサウンドとメロディーを楽しめる一曲。",
+    "detail": "X JAPANの『Rusty Nail』を1曲だけ聴いてみる。印象的なバンドサウンドとメロディーを楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Rusty Nail X JAPAN」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1
+  },
+  {
+    "id": "music_231_marionette",
+    "title": "『MARIONETTE』を聴いてみる",
+    "description": "BOØWY｜ライブ感のある演奏が気持ちを前向きにしてくれる一曲。",
+    "detail": "BOØWYの『MARIONETTE』を1曲だけ聴いてみる。ライブ感のある演奏が気持ちを前向きにしてくれる一曲。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「MARIONETTE BOØWY」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_232_dreamin",
+    "title": "『DREAMIN'』を聴いてみる",
+    "description": "BOØWY｜力強いリズムと歌声が耳に残る定番ロック。",
+    "detail": "BOØWYの『DREAMIN'』を1曲だけ聴いてみる。力強いリズムと歌声が耳に残る定番ロック。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「DREAMIN' BOØWY」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_233_train_train",
+    "title": "『TRAIN-TRAIN』を聴いてみる",
+    "description": "THE BLUE HEARTS｜短い時間でもバンドの熱量を味わえる一曲。",
+    "detail": "THE BLUE HEARTSの『TRAIN-TRAIN』を1曲だけ聴いてみる。短い時間でもバンドの熱量を味わえる一曲。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「TRAIN-TRAIN THE BLUE HEARTS」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_234_linda_linda",
+    "title": "『リンダ リンダ』を聴いてみる",
+    "description": "THE BLUE HEARTS｜勢いのあるギターサウンドで気分を切り替えられるロックナンバー。",
+    "detail": "THE BLUE HEARTSの『リンダ リンダ』を1曲だけ聴いてみる。勢いのあるギターサウンドで気分を切り替えられるロックナンバー。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「リンダ リンダ THE BLUE HEARTS」と検索して聴く。",
+    "estimated_minutes": 3,
+    "weight": 1
+  },
+  {
+    "id": "music_235_owarinaki_tabi",
+    "title": "『終わりなき旅』を聴いてみる",
+    "description": "Mr.Children｜印象的なバンドサウンドとメロディーを楽しめる一曲。",
+    "detail": "Mr.Childrenの『終わりなき旅』を1曲だけ聴いてみる。印象的なバンドサウンドとメロディーを楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「終わりなき旅 Mr.Children」と検索して聴く。",
+    "estimated_minutes": 7,
+    "weight": 1
+  },
+  {
+    "id": "music_236_namonaki_uta",
+    "title": "『名もなき詩』を聴いてみる",
+    "description": "Mr.Children｜ライブ感のある演奏が気持ちを前向きにしてくれる一曲。",
+    "detail": "Mr.Childrenの『名もなき詩』を1曲だけ聴いてみる。ライブ感のある演奏が気持ちを前向きにしてくれる一曲。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「名もなき詩 Mr.Children」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1
+  },
+  {
+    "id": "music_237_banzai",
+    "title": "『バンザイ～好きでよかった～』を聴いてみる",
+    "description": "ウルフルズ｜力強いリズムと歌声が耳に残る定番ロック。",
+    "detail": "ウルフルズの『バンザイ～好きでよかった～』を1曲だけ聴いてみる。力強いリズムと歌声が耳に残る定番ロック。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「バンザイ～好きでよかった～ ウルフルズ」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_238_guts_daze",
+    "title": "『ガッツだぜ!!』を聴いてみる",
+    "description": "ウルフルズ｜短い時間でもバンドの熱量を味わえる一曲。",
+    "detail": "ウルフルズの『ガッツだぜ!!』を1曲だけ聴いてみる。短い時間でもバンドの熱量を味わえる一曲。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「ガッツだぜ!! ウルフルズ」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_239_wherever_you_are",
+    "title": "『Wherever you are』を聴いてみる",
+    "description": "ONE OK ROCK｜勢いのあるギターサウンドで気分を切り替えられるロックナンバー。",
+    "detail": "ONE OK ROCKの『Wherever you are』を1曲だけ聴いてみる。勢いのあるギターサウンドで気分を切り替えられるロックナンバー。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Wherever you are ONE OK ROCK」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1
+  },
+  {
+    "id": "music_240_numb",
+    "title": "『Numb』を聴いてみる",
+    "description": "Linkin Park｜印象的なバンドサウンドとメロディーを楽しめる一曲。",
+    "detail": "Linkin Parkの『Numb』を1曲だけ聴いてみる。印象的なバンドサウンドとメロディーを楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Numb Linkin Park」と検索して聴く。",
+    "estimated_minutes": 3,
+    "weight": 1
+  },
+  {
+    "id": "music_241_in_the_end",
+    "title": "『In the End』を聴いてみる",
+    "description": "Linkin Park｜ライブ感のある演奏が気持ちを前向きにしてくれる一曲。",
+    "detail": "Linkin Parkの『In the End』を1曲だけ聴いてみる。ライブ感のある演奏が気持ちを前向きにしてくれる一曲。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「In the End Linkin Park」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_242_smells_like_teen_spirit",
+    "title": "『Smells Like Teen Spirit』を聴いてみる",
+    "description": "Nirvana｜力強いリズムと歌声が耳に残る定番ロック。",
+    "detail": "Nirvanaの『Smells Like Teen Spirit』を1曲だけ聴いてみる。力強いリズムと歌声が耳に残る定番ロック。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Smells Like Teen Spirit Nirvana」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1
+  },
+  {
+    "id": "music_243_basket_case",
+    "title": "『Basket Case』を聴いてみる",
+    "description": "Green Day｜短い時間でもバンドの熱量を味わえる一曲。",
+    "detail": "Green Dayの『Basket Case』を1曲だけ聴いてみる。短い時間でもバンドの熱量を味わえる一曲。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Basket Case Green Day」と検索して聴く。",
+    "estimated_minutes": 3,
+    "weight": 1
+  },
+  {
+    "id": "music_244_seven_nation_army",
+    "title": "『Seven Nation Army』を聴いてみる",
+    "description": "The White Stripes｜勢いのあるギターサウンドで気分を切り替えられるロックナンバー。",
+    "detail": "The White Stripesの『Seven Nation Army』を1曲だけ聴いてみる。勢いのあるギターサウンドで気分を切り替えられるロックナンバー。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Seven Nation Army The White Stripes」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_245_are_you_gonna_be_my_girl",
+    "title": "『Are You Gonna Be My Girl』を聴いてみる",
+    "description": "Jet｜印象的なバンドサウンドとメロディーを楽しめる一曲。",
+    "detail": "Jetの『Are You Gonna Be My Girl』を1曲だけ聴いてみる。印象的なバンドサウンドとメロディーを楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Are You Gonna Be My Girl Jet」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_246_we_will_rock_you",
+    "title": "『We Will Rock You』を聴いてみる",
+    "description": "Queen｜ライブ感のある演奏が気持ちを前向きにしてくれる一曲。",
+    "detail": "Queenの『We Will Rock You』を1曲だけ聴いてみる。ライブ感のある演奏が気持ちを前向きにしてくれる一曲。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「We Will Rock You Queen」と検索して聴く。",
+    "estimated_minutes": 2,
+    "weight": 1
+  },
+  {
+    "id": "music_247_back_in_black",
+    "title": "『Back in Black』を聴いてみる",
+    "description": "AC/DC｜力強いリズムと歌声が耳に残る定番ロック。",
+    "detail": "AC/DCの『Back in Black』を1曲だけ聴いてみる。力強いリズムと歌声が耳に残る定番ロック。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Back in Black AC/DC」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_248_paint_it_black",
+    "title": "『Paint It, Black』を聴いてみる",
+    "description": "The Rolling Stones｜短い時間でもバンドの熱量を味わえる一曲。",
+    "detail": "The Rolling Stonesの『Paint It, Black』を1曲だけ聴いてみる。短い時間でもバンドの熱量を味わえる一曲。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Paint It, Black The Rolling Stones」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_249_nobishiro",
+    "title": "『のびしろ』を聴いてみる",
+    "description": "Creepy Nuts｜言葉のリズムとビートの重なりを楽しめる一曲。",
+    "detail": "Creepy Nutsの『のびしろ』を1曲だけ聴いてみる。言葉のリズムとビートの重なりを楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「のびしろ Creepy Nuts」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_250_bling_bang_bang_born",
+    "title": "『Bling-Bang-Bang-Born』を聴いてみる",
+    "description": "Creepy Nuts｜グルーヴのあるトラックが自然に気分を切り替えてくれる一曲。",
+    "detail": "Creepy Nutsの『Bling-Bang-Bang-Born』を1曲だけ聴いてみる。グルーヴのあるトラックが自然に気分を切り替えてくれる一曲。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Bling-Bang-Bang-Born Creepy Nuts」と検索して聴く。",
+    "estimated_minutes": 3,
+    "weight": 1
+  },
+  {
+    "id": "music_251_otonoke",
+    "title": "『オトノケ』を聴いてみる",
+    "description": "Creepy Nuts｜ラップや歌声の表情をじっくり味わえるナンバー。",
+    "detail": "Creepy Nutsの『オトノケ』を1曲だけ聴いてみる。ラップや歌声の表情をじっくり味わえるナンバー。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「オトノケ Creepy Nuts」と検索して聴く。",
+    "estimated_minutes": 3,
+    "weight": 1
+  },
+  {
+    "id": "music_252_marche",
+    "title": "『マルシェ』を聴いてみる",
+    "description": "KICK THE CAN CREW｜印象的なビートとフロウが耳に残る一曲。",
+    "detail": "KICK THE CAN CREWの『マルシェ』を1曲だけ聴いてみる。印象的なビートとフロウが耳に残る一曲。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「マルシェ KICK THE CAN CREW」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_253_rakuen_baby",
+    "title": "『楽園ベイベー』を聴いてみる",
+    "description": "RIP SLYME｜心地よいリズムに身を任せて聴ける一曲。",
+    "detail": "RIP SLYMEの『楽園ベイベー』を1曲だけ聴いてみる。心地よいリズムに身を任せて聴ける一曲。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「楽園ベイベー RIP SLYME」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1
+  },
+  {
+    "id": "music_254_joint",
+    "title": "『JOINT』を聴いてみる",
+    "description": "RIP SLYME｜言葉のリズムとビートの重なりを楽しめる一曲。",
+    "detail": "RIP SLYMEの『JOINT』を1曲だけ聴いてみる。言葉のリズムとビートの重なりを楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「JOINT RIP SLYME」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1
+  },
+  {
+    "id": "music_255_grateful_days",
+    "title": "『Grateful Days』を聴いてみる",
+    "description": "Dragon Ash｜グルーヴのあるトラックが自然に気分を切り替えてくれる一曲。",
+    "detail": "Dragon Ashの『Grateful Days』を1曲だけ聴いてみる。グルーヴのあるトラックが自然に気分を切り替えてくれる一曲。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Grateful Days Dragon Ash」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1
+  },
+  {
+    "id": "music_256_life_goes_on_dragon_ash",
+    "title": "『Life goes on』を聴いてみる",
+    "description": "Dragon Ash｜ラップや歌声の表情をじっくり味わえるナンバー。",
+    "detail": "Dragon Ashの『Life goes on』を1曲だけ聴いてみる。ラップや歌声の表情をじっくり味わえるナンバー。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Life goes on Dragon Ash」と検索して聴く。",
+    "estimated_minutes": 6,
+    "weight": 1
+  },
+  {
+    "id": "music_257_come_again",
+    "title": "『come again』を聴いてみる",
+    "description": "m-flo｜印象的なビートとフロウが耳に残る一曲。",
+    "detail": "m-floの『come again』を1曲だけ聴いてみる。印象的なビートとフロウが耳に残る一曲。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「come again m-flo」と検索して聴く。",
+    "estimated_minutes": 6,
+    "weight": 1
+  },
+  {
+    "id": "music_258_gila_gila",
+    "title": "『GILA GILA』を聴いてみる",
+    "description": "Awich｜心地よいリズムに身を任せて聴ける一曲。",
+    "detail": "Awichの『GILA GILA』を1曲だけ聴いてみる。心地よいリズムに身を任せて聴ける一曲。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「GILA GILA Awich」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_259_kawasaki_drift",
+    "title": "『Kawasaki Drift』を聴いてみる",
+    "description": "BAD HOP｜言葉のリズムとビートの重なりを楽しめる一曲。",
+    "detail": "BAD HOPの『Kawasaki Drift』を1曲だけ聴いてみる。言葉のリズムとビートの重なりを楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Kawasaki Drift BAD HOP」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1
+  },
+  {
+    "id": "music_260_flying_b",
+    "title": "『Flying B』を聴いてみる",
+    "description": "AK-69｜グルーヴのあるトラックが自然に気分を切り替えてくれる一曲。",
+    "detail": "AK-69の『Flying B』を1曲だけ聴いてみる。グルーヴのあるトラックが自然に気分を切り替えてくれる一曲。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Flying B AK-69」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_261_otoiro",
+    "title": "『音色』を聴いてみる",
+    "description": "KREVA｜ラップや歌声の表情をじっくり味わえるナンバー。",
+    "detail": "KREVAの『音色』を1曲だけ聴いてみる。ラップや歌声の表情をじっくり味わえるナンバー。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「音色 KREVA」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_262_issai_gassai",
+    "title": "『イッサイガッサイ』を聴いてみる",
+    "description": "KREVA｜印象的なビートとフロウが耳に残る一曲。",
+    "detail": "KREVAの『イッサイガッサイ』を1曲だけ聴いてみる。印象的なビートとフロウが耳に残る一曲。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「イッサイガッサイ KREVA」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1
+  },
+  {
+    "id": "music_263_bboy_ism",
+    "title": "『B-BOYイズム』を聴いてみる",
+    "description": "RHYMESTER｜心地よいリズムに身を任せて聴ける一曲。",
+    "detail": "RHYMESTERの『B-BOYイズム』を1曲だけ聴いてみる。心地よいリズムに身を任せて聴ける一曲。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「B-BOYイズム RHYMESTER」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1
+  },
+  {
+    "id": "music_264_konya_wa_boogie_back",
+    "title": "『今夜はブギー・バック』を聴いてみる",
+    "description": "小沢健二 featuring スチャダラパー｜言葉のリズムとビートの重なりを楽しめる一曲。",
+    "detail": "小沢健二 featuring スチャダラパーの『今夜はブギー・バック』を1曲だけ聴いてみる。言葉のリズムとビートの重なりを楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「今夜はブギー・バック 小沢健二 featuring スチャダラパー」と検索して聴く。",
+    "estimated_minutes": 6,
+    "weight": 1
+  },
+  {
+    "id": "music_265_time_machine_ni_notte",
+    "title": "『タイムマシーンにのって』を聴いてみる",
+    "description": "PUNPEE｜グルーヴのあるトラックが自然に気分を切り替えてくれる一曲。",
+    "detail": "PUNPEEの『タイムマシーンにのって』を1曲だけ聴いてみる。グルーヴのあるトラックが自然に気分を切り替えてくれる一曲。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「タイムマシーンにのって PUNPEE」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1
+  },
+  {
+    "id": "music_266_good_vibes_only",
+    "title": "『Good Vibes Only』を聴いてみる",
+    "description": "SALU｜ラップや歌声の表情をじっくり味わえるナンバー。",
+    "detail": "SALUの『Good Vibes Only』を1曲だけ聴いてみる。ラップや歌声の表情をじっくり味わえるナンバー。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Good Vibes Only SALU」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_267_cho_wavy_de_gomenne",
+    "title": "『Cho Wavy De Gomenne』を聴いてみる",
+    "description": "JP THE WAVY｜印象的なビートとフロウが耳に残る一曲。",
+    "detail": "JP THE WAVYの『Cho Wavy De Gomenne』を1曲だけ聴いてみる。印象的なビートとフロウが耳に残る一曲。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Cho Wavy De Gomenne JP THE WAVY」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_268_never_grow_up",
+    "title": "『Never Grow Up』を聴いてみる",
+    "description": "ちゃんみな｜心地よいリズムに身を任せて聴ける一曲。",
+    "detail": "ちゃんみなの『Never Grow Up』を1曲だけ聴いてみる。心地よいリズムに身を任せて聴ける一曲。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Never Grow Up ちゃんみな」と検索して聴く。",
+    "estimated_minutes": 3,
+    "weight": 1
+  },
+  {
+    "id": "music_269_wonderland_iri",
+    "title": "『Wonderland』を聴いてみる",
+    "description": "iri｜言葉のリズムとビートの重なりを楽しめる一曲。",
+    "detail": "iriの『Wonderland』を1曲だけ聴いてみる。言葉のリズムとビートの重なりを楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Wonderland iri」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_270_do_well",
+    "title": "『Do Well』を聴いてみる",
+    "description": "SIRUP｜グルーヴのあるトラックが自然に気分を切り替えてくれる一曲。",
+    "detail": "SIRUPの『Do Well』を1曲だけ聴いてみる。グルーヴのあるトラックが自然に気分を切り替えてくれる一曲。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Do Well SIRUP」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_271_new_era_nulbarich",
+    "title": "『NEW ERA』を聴いてみる",
+    "description": "Nulbarich｜ラップや歌声の表情をじっくり味わえるナンバー。",
+    "detail": "Nulbarichの『NEW ERA』を1曲だけ聴いてみる。ラップや歌声の表情をじっくり味わえるナンバー。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「NEW ERA Nulbarich」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_272_stay_tune_suchmos",
+    "title": "『STAY TUNE』を聴いてみる",
+    "description": "Suchmos｜印象的なビートとフロウが耳に残る一曲。",
+    "detail": "Suchmosの『STAY TUNE』を1曲だけ聴いてみる。印象的なビートとフロウが耳に残る一曲。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「STAY TUNE Suchmos」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1
+  },
+  {
+    "id": "music_273_addicted_to_you",
+    "title": "『Addicted To You』を聴いてみる",
+    "description": "宇多田ヒカル｜心地よいリズムに身を任せて聴ける一曲。",
+    "detail": "宇多田ヒカルの『Addicted To You』を1曲だけ聴いてみる。心地よいリズムに身を任せて聴ける一曲。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Addicted To You 宇多田ヒカル」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1
+  },
+  {
+    "id": "music_274_jonetsu_ua",
+    "title": "『情熱』を聴いてみる",
+    "description": "UA｜言葉のリズムとビートの重なりを楽しめる一曲。",
+    "detail": "UAの『情熱』を1曲だけ聴いてみる。言葉のリズムとビートの重なりを楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「情熱 UA」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_275_tsutsumikomu_youni",
+    "title": "『つつみ込むように…』を聴いてみる",
+    "description": "MISIA｜グルーヴのあるトラックが自然に気分を切り替えてくれる一曲。",
+    "detail": "MISIAの『つつみ込むように…』を1曲だけ聴いてみる。グルーヴのあるトラックが自然に気分を切り替えてくれる一曲。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「つつみ込むように… MISIA」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1
+  },
+  {
+    "id": "music_276_story_ai",
+    "title": "『Story』を聴いてみる",
+    "description": "AI｜ラップや歌声の表情をじっくり味わえるナンバー。",
+    "detail": "AIの『Story』を1曲だけ聴いてみる。ラップや歌声の表情をじっくり味わえるナンバー。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Story AI」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1
+  },
+  {
+    "id": "music_277_home_shimizu",
+    "title": "『HOME』を聴いてみる",
+    "description": "清水翔太｜印象的なビートとフロウが耳に残る一曲。",
+    "detail": "清水翔太の『HOME』を1曲だけ聴いてみる。印象的なビートとフロウが耳に残る一曲。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「HOME 清水翔太」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1
+  },
+  {
+    "id": "music_278_rakuen_hirai",
+    "title": "『楽園』を聴いてみる",
+    "description": "平井堅｜心地よいリズムに身を任せて聴ける一曲。",
+    "detail": "平井堅の『楽園』を1曲だけ聴いてみる。心地よいリズムに身を任せて聴ける一曲。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「楽園 平井堅」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1
+  },
+  {
+    "id": "music_279_luv_sic_part3",
+    "title": "『Luv(sic) Part 3』を聴いてみる",
+    "description": "Nujabes feat. Shing02｜言葉のリズムとビートの重なりを楽しめる一曲。",
+    "detail": "Nujabes feat. Shing02の『Luv(sic) Part 3』を1曲だけ聴いてみる。言葉のリズムとビートの重なりを楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Luv(sic) Part 3 Nujabes feat. Shing02」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1
+  },
+  {
+    "id": "music_280_humble",
+    "title": "『HUMBLE.』を聴いてみる",
+    "description": "Kendrick Lamar｜グルーヴのあるトラックが自然に気分を切り替えてくれる一曲。",
+    "detail": "Kendrick Lamarの『HUMBLE.』を1曲だけ聴いてみる。グルーヴのあるトラックが自然に気分を切り替えてくれる一曲。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「HUMBLE. Kendrick Lamar」と検索して聴く。",
+    "estimated_minutes": 3,
+    "weight": 1
+  },
+  {
+    "id": "music_281_lose_yourself",
+    "title": "『Lose Yourself』を聴いてみる",
+    "description": "Eminem｜ラップや歌声の表情をじっくり味わえるナンバー。",
+    "detail": "Eminemの『Lose Yourself』を1曲だけ聴いてみる。ラップや歌声の表情をじっくり味わえるナンバー。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Lose Yourself Eminem」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1
+  },
+  {
+    "id": "music_282_still_dre",
+    "title": "『Still D.R.E.』を聴いてみる",
+    "description": "Dr. Dre feat. Snoop Dogg｜印象的なビートとフロウが耳に残る一曲。",
+    "detail": "Dr. Dre feat. Snoop Doggの『Still D.R.E.』を1曲だけ聴いてみる。印象的なビートとフロウが耳に残る一曲。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Still D.R.E. Dr. Dre feat. Snoop Dogg」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_283_california_love",
+    "title": "『California Love』を聴いてみる",
+    "description": "2Pac feat. Dr. Dre｜心地よいリズムに身を任せて聴ける一曲。",
+    "detail": "2Pac feat. Dr. Dreの『California Love』を1曲だけ聴いてみる。心地よいリズムに身を任せて聴ける一曲。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「California Love 2Pac feat. Dr. Dre」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1
+  },
+  {
+    "id": "music_284_juicy",
+    "title": "『Juicy』を聴いてみる",
+    "description": "The Notorious B.I.G.｜言葉のリズムとビートの重なりを楽しめる一曲。",
+    "detail": "The Notorious B.I.G.の『Juicy』を1曲だけ聴いてみる。言葉のリズムとビートの重なりを楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Juicy The Notorious B.I.G.」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1
+  },
+  {
+    "id": "music_285_ny_state_of_mind",
+    "title": "『N.Y. State of Mind』を聴いてみる",
+    "description": "Nas｜グルーヴのあるトラックが自然に気分を切り替えてくれる一曲。",
+    "detail": "Nasの『N.Y. State of Mind』を1曲だけ聴いてみる。グルーヴのあるトラックが自然に気分を切り替えてくれる一曲。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「N.Y. State of Mind Nas」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1
+  },
+  {
+    "id": "music_286_empire_state_of_mind",
+    "title": "『Empire State of Mind』を聴いてみる",
+    "description": "JAY-Z feat. Alicia Keys｜ラップや歌声の表情をじっくり味わえるナンバー。",
+    "detail": "JAY-Z feat. Alicia Keysの『Empire State of Mind』を1曲だけ聴いてみる。ラップや歌声の表情をじっくり味わえるナンバー。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Empire State of Mind JAY-Z feat. Alicia Keys」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1
+  },
+  {
+    "id": "music_287_stronger_kanye",
+    "title": "『Stronger』を聴いてみる",
+    "description": "Kanye West｜印象的なビートとフロウが耳に残る一曲。",
+    "detail": "Kanye Westの『Stronger』を1曲だけ聴いてみる。印象的なビートとフロウが耳に残る一曲。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Stronger Kanye West」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1
+  },
+  {
+    "id": "music_288_sicko_mode",
+    "title": "『SICKO MODE』を聴いてみる",
+    "description": "Travis Scott｜心地よいリズムに身を任せて聴ける一曲。",
+    "detail": "Travis Scottの『SICKO MODE』を1曲だけ聴いてみる。心地よいリズムに身を任せて聴ける一曲。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「SICKO MODE Travis Scott」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1
+  },
+  {
+    "id": "music_289_rockstar_post_malone",
+    "title": "『rockstar』を聴いてみる",
+    "description": "Post Malone feat. 21 Savage｜言葉のリズムとビートの重なりを楽しめる一曲。",
+    "detail": "Post Malone feat. 21 Savageの『rockstar』を1曲だけ聴いてみる。言葉のリズムとビートの重なりを楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「rockstar Post Malone feat. 21 Savage」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_290_hey_ya",
+    "title": "『Hey Ya!』を聴いてみる",
+    "description": "Outkast｜グルーヴのあるトラックが自然に気分を切り替えてくれる一曲。",
+    "detail": "Outkastの『Hey Ya!』を1曲だけ聴いてみる。グルーヴのあるトラックが自然に気分を切り替えてくれる一曲。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Hey Ya! Outkast」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_291_doo_wop",
+    "title": "『Doo Wop (That Thing)』を聴いてみる",
+    "description": "Ms. Lauryn Hill｜ラップや歌声の表情をじっくり味わえるナンバー。",
+    "detail": "Ms. Lauryn Hillの『Doo Wop (That Thing)』を1曲だけ聴いてみる。ラップや歌声の表情をじっくり味わえるナンバー。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Doo Wop (That Thing) Ms. Lauryn Hill」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1
+  },
+  {
+    "id": "music_292_if_i_aint_got_you",
+    "title": "『If I Ain't Got You』を聴いてみる",
+    "description": "Alicia Keys｜印象的なビートとフロウが耳に残る一曲。",
+    "detail": "Alicia Keysの『If I Ain't Got You』を1曲だけ聴いてみる。印象的なビートとフロウが耳に残る一曲。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「If I Ain't Got You Alicia Keys」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_293_crazy_in_love",
+    "title": "『Crazy in Love』を聴いてみる",
+    "description": "Beyoncé feat. JAY-Z｜心地よいリズムに身を任せて聴ける一曲。",
+    "detail": "Beyoncé feat. JAY-Zの『Crazy in Love』を1曲だけ聴いてみる。心地よいリズムに身を任せて聴ける一曲。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Crazy in Love Beyoncé feat. JAY-Z」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_294_yeah_usher",
+    "title": "『Yeah!』を聴いてみる",
+    "description": "Usher feat. Lil Jon & Ludacris｜言葉のリズムとビートの重なりを楽しめる一曲。",
+    "detail": "Usher feat. Lil Jon & Ludacrisの『Yeah!』を1曲だけ聴いてみる。言葉のリズムとビートの重なりを楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Yeah! Usher feat. Lil Jon & Ludacris」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_295_thinkin_bout_you",
+    "title": "『Thinkin Bout You』を聴いてみる",
+    "description": "Frank Ocean｜グルーヴのあるトラックが自然に気分を切り替えてくれる一曲。",
+    "detail": "Frank Oceanの『Thinkin Bout You』を1曲だけ聴いてみる。グルーヴのあるトラックが自然に気分を切り替えてくれる一曲。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Thinkin Bout You Frank Ocean」と検索して聴く。",
+    "estimated_minutes": 3,
+    "weight": 1
+  },
+  {
+    "id": "music_296_kill_bill",
+    "title": "『Kill Bill』を聴いてみる",
+    "description": "SZA｜ラップや歌声の表情をじっくり味わえるナンバー。",
+    "detail": "SZAの『Kill Bill』を1曲だけ聴いてみる。ラップや歌声の表情をじっくり味わえるナンバー。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Kill Bill SZA」と検索して聴く。",
+    "estimated_minutes": 3,
+    "weight": 1
+  },
+  {
+    "id": "music_297_starboy",
+    "title": "『Starboy』を聴いてみる",
+    "description": "The Weeknd feat. Daft Punk｜印象的なビートとフロウが耳に残る一曲。",
+    "detail": "The Weeknd feat. Daft Punkの『Starboy』を1曲だけ聴いてみる。印象的なビートとフロウが耳に残る一曲。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Starboy The Weeknd feat. Daft Punk」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_298_24k_magic",
+    "title": "『24K Magic』を聴いてみる",
+    "description": "Bruno Mars｜心地よいリズムに身を任せて聴ける一曲。",
+    "detail": "Bruno Marsの『24K Magic』を1曲だけ聴いてみる。心地よいリズムに身を任せて聴ける一曲。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「24K Magic Bruno Mars」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_299_zankoku_na_tenshi_no_these",
+    "title": "『残酷な天使のテーゼ』を聴いてみる",
+    "description": "高橋洋子｜作品の世界観を思い出しながら楽しめる一曲。",
+    "detail": "高橋洋子の『残酷な天使のテーゼ』を1曲だけ聴いてみる。作品の世界観を思い出しながら楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「残酷な天使のテーゼ 高橋洋子」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_300_tamashii_no_refrain",
+    "title": "『魂のルフラン』を聴いてみる",
+    "description": "高橋洋子｜印象的なメロディーが物語の場面をよみがえらせる一曲。",
+    "detail": "高橋洋子の『魂のルフラン』を1曲だけ聴いてみる。印象的なメロディーが物語の場面をよみがえらせる一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「魂のルフラン 高橋洋子」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1
+  },
+  {
+    "id": "music_301_butter_fly",
+    "title": "『Butter-Fly』を聴いてみる",
+    "description": "和田光司｜アニメやゲームを知らなくても音楽として楽しめる一曲。",
+    "detail": "和田光司の『Butter-Fly』を1曲だけ聴いてみる。アニメやゲームを知らなくても音楽として楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Butter-Fly 和田光司」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_302_brave_heart",
+    "title": "『brave heart』を聴いてみる",
+    "description": "宮崎歩｜物語への高揚感を短い時間で味わえる一曲。",
+    "detail": "宮崎歩の『brave heart』を1曲だけ聴いてみる。物語への高揚感を短い時間で味わえる一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「brave heart 宮崎歩」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_303_cha_la_head_cha_la",
+    "title": "『CHA-LA HEAD-CHA-LA』を聴いてみる",
+    "description": "影山ヒロノブ｜作品を彩る歌声や演奏に耳を傾けたい一曲。",
+    "detail": "影山ヒロノブの『CHA-LA HEAD-CHA-LA』を1曲だけ聴いてみる。作品を彩る歌声や演奏に耳を傾けたい一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「CHA-LA HEAD-CHA-LA 影山ヒロノブ」と検索して聴く。",
+    "estimated_minutes": 3,
+    "weight": 1
+  },
+  {
+    "id": "music_304_we_gotta_power",
+    "title": "『WE GOTTA POWER』を聴いてみる",
+    "description": "影山ヒロノブ｜作品の世界観を思い出しながら楽しめる一曲。",
+    "detail": "影山ヒロノブの『WE GOTTA POWER』を1曲だけ聴いてみる。作品の世界観を思い出しながら楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「WE GOTTA POWER 影山ヒロノブ」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_305_we_are",
+    "title": "『ウィーアー！』を聴いてみる",
+    "description": "きただにひろし｜印象的なメロディーが物語の場面をよみがえらせる一曲。",
+    "detail": "きただにひろしの『ウィーアー！』を1曲だけ聴いてみる。印象的なメロディーが物語の場面をよみがえらせる一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「ウィーアー！ きただにひろし」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_306_believe_folder5",
+    "title": "『Believe』を聴いてみる",
+    "description": "Folder5｜アニメやゲームを知らなくても音楽として楽しめる一曲。",
+    "detail": "Folder5の『Believe』を1曲だけ聴いてみる。アニメやゲームを知らなくても音楽として楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Believe Folder5」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_307_go_flow",
+    "title": "『GO!!!』を聴いてみる",
+    "description": "FLOW｜物語への高揚感を短い時間で味わえる一曲。",
+    "detail": "FLOWの『GO!!!』を1曲だけ聴いてみる。物語への高揚感を短い時間で味わえる一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「GO!!! FLOW」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_308_sign_flow",
+    "title": "『Sign』を聴いてみる",
+    "description": "FLOW｜作品を彩る歌声や演奏に耳を傾けたい一曲。",
+    "detail": "FLOWの『Sign』を1曲だけ聴いてみる。作品を彩る歌声や演奏に耳を傾けたい一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Sign FLOW」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_309_colors_flow",
+    "title": "『COLORS』を聴いてみる",
+    "description": "FLOW｜作品の世界観を思い出しながら楽しめる一曲。",
+    "detail": "FLOWの『COLORS』を1曲だけ聴いてみる。作品の世界観を思い出しながら楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「COLORS FLOW」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_310_again_yui",
+    "title": "『again』を聴いてみる",
+    "description": "YUI｜印象的なメロディーが物語の場面をよみがえらせる一曲。",
+    "detail": "YUIの『again』を1曲だけ聴いてみる。印象的なメロディーが物語の場面をよみがえらせる一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「again YUI」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_311_melissa",
+    "title": "『メリッサ』を聴いてみる",
+    "description": "ポルノグラフィティ｜アニメやゲームを知らなくても音楽として楽しめる一曲。",
+    "detail": "ポルノグラフィティの『メリッサ』を1曲だけ聴いてみる。アニメやゲームを知らなくても音楽として楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「メリッサ ポルノグラフィティ」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_312_only_my_railgun",
+    "title": "『only my railgun』を聴いてみる",
+    "description": "fripSide｜物語への高揚感を短い時間で味わえる一曲。",
+    "detail": "fripSideの『only my railgun』を1曲だけ聴いてみる。物語への高揚感を短い時間で味わえる一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「only my railgun fripSide」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_313_level5_judgelight",
+    "title": "『LEVEL5-judgelight-』を聴いてみる",
+    "description": "fripSide｜作品を彩る歌声や演奏に耳を傾けたい一曲。",
+    "detail": "fripSideの『LEVEL5-judgelight-』を1曲だけ聴いてみる。作品を彩る歌声や演奏に耳を傾けたい一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「LEVEL5-judgelight- fripSide」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_314_god_knows",
+    "title": "『God knows...』を聴いてみる",
+    "description": "涼宮ハルヒ（平野綾）｜作品の世界観を思い出しながら楽しめる一曲。",
+    "detail": "涼宮ハルヒ（平野綾）の『God knows...』を1曲だけ聴いてみる。作品の世界観を思い出しながら楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「God knows... 涼宮ハルヒ（平野綾）」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1
+  },
+  {
+    "id": "music_315_hare_hare_yukai",
+    "title": "『ハレ晴レユカイ』を聴いてみる",
+    "description": "平野綾・茅原実里・後藤邑子｜印象的なメロディーが物語の場面をよみがえらせる一曲。",
+    "detail": "平野綾・茅原実里・後藤邑子の『ハレ晴レユカイ』を1曲だけ聴いてみる。印象的なメロディーが物語の場面をよみがえらせる一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「ハレ晴レユカイ 平野綾・茅原実里・後藤邑子」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_316_kimi_no_shiranai_monogatari",
+    "title": "『君の知らない物語』を聴いてみる",
+    "description": "supercell｜アニメやゲームを知らなくても音楽として楽しめる一曲。",
+    "detail": "supercellの『君の知らない物語』を1曲だけ聴いてみる。アニメやゲームを知らなくても音楽として楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「君の知らない物語 supercell」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1
+  },
+  {
+    "id": "music_317_crossing_field",
+    "title": "『crossing field』を聴いてみる",
+    "description": "LiSA｜物語への高揚感を短い時間で味わえる一曲。",
+    "detail": "LiSAの『crossing field』を1曲だけ聴いてみる。物語への高揚感を短い時間で味わえる一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「crossing field LiSA」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_318_catch_the_moment",
+    "title": "『Catch the Moment』を聴いてみる",
+    "description": "LiSA｜作品を彩る歌声や演奏に耳を傾けたい一曲。",
+    "detail": "LiSAの『Catch the Moment』を1曲だけ聴いてみる。作品を彩る歌声や演奏に耳を傾けたい一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Catch the Moment LiSA」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1
+  },
+  {
+    "id": "music_319_homura",
+    "title": "『炎』を聴いてみる",
+    "description": "LiSA｜作品の世界観を思い出しながら楽しめる一曲。",
+    "detail": "LiSAの『炎』を1曲だけ聴いてみる。作品の世界観を思い出しながら楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「炎 LiSA」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1
+  },
+  {
+    "id": "music_320_unravel",
+    "title": "『unravel』を聴いてみる",
+    "description": "TK from 凛として時雨｜印象的なメロディーが物語の場面をよみがえらせる一曲。",
+    "detail": "TK from 凛として時雨の『unravel』を1曲だけ聴いてみる。印象的なメロディーが物語の場面をよみがえらせる一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「unravel TK from 凛として時雨」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_321_katharsis",
+    "title": "『katharsis』を聴いてみる",
+    "description": "TK from 凛として時雨｜アニメやゲームを知らなくても音楽として楽しめる一曲。",
+    "detail": "TK from 凛として時雨の『katharsis』を1曲だけ聴いてみる。アニメやゲームを知らなくても音楽として楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「katharsis TK from 凛として時雨」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_322_the_rumbling",
+    "title": "『The Rumbling』を聴いてみる",
+    "description": "SiM｜物語への高揚感を短い時間で味わえる一曲。",
+    "detail": "SiMの『The Rumbling』を1曲だけ聴いてみる。物語への高揚感を短い時間で味わえる一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「The Rumbling SiM」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_323_kaikai_kitan",
+    "title": "『廻廻奇譚』を聴いてみる",
+    "description": "Eve｜作品を彩る歌声や演奏に耳を傾けたい一曲。",
+    "detail": "Eveの『廻廻奇譚』を1曲だけ聴いてみる。作品を彩る歌声や演奏に耳を傾けたい一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「廻廻奇譚 Eve」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_324_specialz",
+    "title": "『SPECIALZ』を聴いてみる",
+    "description": "King Gnu｜作品の世界観を思い出しながら楽しめる一曲。",
+    "detail": "King Gnuの『SPECIALZ』を1曲だけ聴いてみる。作品の世界観を思い出しながら楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「SPECIALZ King Gnu」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_325_onegai_muscle",
+    "title": "『お願いマッスル』を聴いてみる",
+    "description": "紗倉ひびき＆街雄鳴造｜印象的なメロディーが物語の場面をよみがえらせる一曲。",
+    "detail": "紗倉ひびき＆街雄鳴造の『お願いマッスル』を1曲だけ聴いてみる。印象的なメロディーが物語の場面をよみがえらせる一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「お願いマッスル 紗倉ひびき＆街雄鳴造」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_326_lion_macross",
+    "title": "『ライオン』を聴いてみる",
+    "description": "May’n／中島愛｜アニメやゲームを知らなくても音楽として楽しめる一曲。",
+    "detail": "May’n／中島愛の『ライオン』を1曲だけ聴いてみる。アニメやゲームを知らなくても音楽として楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「ライオン May’n／中島愛」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1
+  },
+  {
+    "id": "music_327_seikan_hikou",
+    "title": "『星間飛行』を聴いてみる",
+    "description": "中島愛｜物語への高揚感を短い時間で味わえる一曲。",
+    "detail": "中島愛の『星間飛行』を1曲だけ聴いてみる。物語への高揚感を短い時間で味わえる一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「星間飛行 中島愛」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_328_triangler",
+    "title": "『トライアングラー』を聴いてみる",
+    "description": "坂本真綾｜作品を彩る歌声や演奏に耳を傾けたい一曲。",
+    "detail": "坂本真綾の『トライアングラー』を1曲だけ聴いてみる。作品を彩る歌声や演奏に耳を傾けたい一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「トライアングラー 坂本真綾」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1
+  },
+  {
+    "id": "music_329_sousei_no_aquarion",
+    "title": "『創聖のアクエリオン』を聴いてみる",
+    "description": "AKINO｜作品の世界観を思い出しながら楽しめる一曲。",
+    "detail": "AKINOの『創聖のアクエリオン』を1曲だけ聴いてみる。作品の世界観を思い出しながら楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「創聖のアクエリオン AKINO」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1
+  },
+  {
+    "id": "music_330_platinum",
+    "title": "『プラチナ』を聴いてみる",
+    "description": "坂本真綾｜印象的なメロディーが物語の場面をよみがえらせる一曲。",
+    "detail": "坂本真綾の『プラチナ』を1曲だけ聴いてみる。印象的なメロディーが物語の場面をよみがえらせる一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「プラチナ 坂本真綾」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_331_catch_you_catch_me",
+    "title": "『Catch You Catch Me』を聴いてみる",
+    "description": "グミ｜アニメやゲームを知らなくても音楽として楽しめる一曲。",
+    "detail": "グミの『Catch You Catch Me』を1曲だけ聴いてみる。アニメやゲームを知らなくても音楽として楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Catch You Catch Me グミ」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_332_tank",
+    "title": "『Tank!』を聴いてみる",
+    "description": "SEATBELTS｜物語への高揚感を短い時間で味わえる一曲。",
+    "detail": "SEATBELTSの『Tank!』を1曲だけ聴いてみる。物語への高揚感を短い時間で味わえる一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Tank! SEATBELTS」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_333_the_real_folk_blues",
+    "title": "『The Real Folk Blues』を聴いてみる",
+    "description": "山根麻衣｜作品を彩る歌声や演奏に耳を傾けたい一曲。",
+    "detail": "山根麻衣の『The Real Folk Blues』を1曲だけ聴いてみる。作品を彩る歌声や演奏に耳を傾けたい一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「The Real Folk Blues 山根麻衣」と検索して聴く。",
+    "estimated_minutes": 6,
+    "weight": 1
+  },
+  {
+    "id": "music_334_lupin_the_third_80",
+    "title": "『ルパン三世のテーマ ’80』を聴いてみる",
+    "description": "大野雄二｜作品の世界観を思い出しながら楽しめる一曲。",
+    "detail": "大野雄二の『ルパン三世のテーマ ’80』を1曲だけ聴いてみる。作品の世界観を思い出しながら楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「ルパン三世のテーマ ’80 大野雄二」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_335_get_wild",
+    "title": "『Get Wild』を聴いてみる",
+    "description": "TM NETWORK｜印象的なメロディーが物語の場面をよみがえらせる一曲。",
+    "detail": "TM NETWORKの『Get Wild』を1曲だけ聴いてみる。印象的なメロディーが物語の場面をよみがえらせる一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Get Wild TM NETWORK」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_336_still_alive_portal",
+    "title": "『Still Alive』を聴いてみる",
+    "description": "Ellen McLain｜アニメやゲームを知らなくても音楽として楽しめる一曲。",
+    "detail": "Ellen McLainの『Still Alive』を1曲だけ聴いてみる。アニメやゲームを知らなくても音楽として楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Still Alive Ellen McLain」と検索して聴く。",
+    "estimated_minutes": 3,
+    "weight": 1
+  },
+  {
+    "id": "music_337_want_you_gone",
+    "title": "『Want You Gone』を聴いてみる",
+    "description": "Ellen McLain｜物語への高揚感を短い時間で味わえる一曲。",
+    "detail": "Ellen McLainの『Want You Gone』を1曲だけ聴いてみる。物語への高揚感を短い時間で味わえる一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Want You Gone Ellen McLain」と検索して聴く。",
+    "estimated_minutes": 2,
+    "weight": 1
+  },
+  {
+    "id": "music_338_baba_yetu",
+    "title": "『Baba Yetu』を聴いてみる",
+    "description": "Christopher Tin｜作品を彩る歌声や演奏に耳を傾けたい一曲。",
+    "detail": "Christopher Tinの『Baba Yetu』を1曲だけ聴いてみる。作品を彩る歌声や演奏に耳を傾けたい一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Baba Yetu Christopher Tin」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_339_simple_and_clean",
+    "title": "『Simple And Clean』を聴いてみる",
+    "description": "Hikaru Utada｜作品の世界観を思い出しながら楽しめる一曲。",
+    "detail": "Hikaru Utadaの『Simple And Clean』を1曲だけ聴いてみる。作品の世界観を思い出しながら楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Simple And Clean Hikaru Utada」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1
+  },
+  {
+    "id": "music_340_eyes_on_me",
+    "title": "『Eyes On Me』を聴いてみる",
+    "description": "Faye Wong｜印象的なメロディーが物語の場面をよみがえらせる一曲。",
+    "detail": "Faye Wongの『Eyes On Me』を1曲だけ聴いてみる。印象的なメロディーが物語の場面をよみがえらせる一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Eyes On Me Faye Wong」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1
+  },
+  {
+    "id": "music_341_melodies_of_life",
+    "title": "『Melodies Of Life』を聴いてみる",
+    "description": "白鳥英美子｜アニメやゲームを知らなくても音楽として楽しめる一曲。",
+    "detail": "白鳥英美子の『Melodies Of Life』を1曲だけ聴いてみる。アニメやゲームを知らなくても音楽として楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Melodies Of Life 白鳥英美子」と検索して聴く。",
+    "estimated_minutes": 6,
+    "weight": 1
+  },
+  {
+    "id": "music_342_to_zanarkand",
+    "title": "『ザナルカンドにて』を聴いてみる",
+    "description": "植松伸夫｜物語への高揚感を短い時間で味わえる一曲。",
+    "detail": "植松伸夫の『ザナルカンドにて』を1曲だけ聴いてみる。物語への高揚感を短い時間で味わえる一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「ザナルカンドにて 植松伸夫」と検索して聴く。",
+    "estimated_minutes": 3,
+    "weight": 1
+  },
+  {
+    "id": "music_343_weight_of_the_world",
+    "title": "『Weight of the World』を聴いてみる",
+    "description": "J'Nique Nicole｜作品を彩る歌声や演奏に耳を傾けたい一曲。",
+    "detail": "J'Nique Nicoleの『Weight of the World』を1曲だけ聴いてみる。作品を彩る歌声や演奏に耳を傾けたい一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Weight of the World J'Nique Nicole」と検索して聴く。",
+    "estimated_minutes": 6,
+    "weight": 1
+  },
+  {
+    "id": "music_344_jump_up_super_star",
+    "title": "『Jump Up, Super Star!』を聴いてみる",
+    "description": "The Super Mario Players feat. Kate Higgins｜作品の世界観を思い出しながら楽しめる一曲。",
+    "detail": "The Super Mario Players feat. Kate Higginsの『Jump Up, Super Star!』を1曲だけ聴いてみる。作品の世界観を思い出しながら楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Jump Up, Super Star! The Super Mario Players feat. Kate Higgins」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_345_bury_the_light",
+    "title": "『Bury the Light』を聴いてみる",
+    "description": "Casey Edwards feat. Victor Borba｜印象的なメロディーが物語の場面をよみがえらせる一曲。",
+    "detail": "Casey Edwards feat. Victor Borbaの『Bury the Light』を1曲だけ聴いてみる。印象的なメロディーが物語の場面をよみがえらせる一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Bury the Light Casey Edwards feat. Victor Borba」と検索して聴く。",
+    "estimated_minutes": 9,
+    "weight": 1
+  },
+  {
+    "id": "music_346_live_and_learn",
+    "title": "『Live & Learn』を聴いてみる",
+    "description": "Crush 40｜アニメやゲームを知らなくても音楽として楽しめる一曲。",
+    "detail": "Crush 40の『Live & Learn』を1曲だけ聴いてみる。アニメやゲームを知らなくても音楽として楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Live & Learn Crush 40」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_347_snake_eater",
+    "title": "『Snake Eater』を聴いてみる",
+    "description": "Cynthia Harrell｜物語への高揚感を短い時間で味わえる一曲。",
+    "detail": "Cynthia Harrellの『Snake Eater』を1曲だけ聴いてみる。物語への高揚感を短い時間で味わえる一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Snake Eater Cynthia Harrell」と検索して聴く。",
+    "estimated_minutes": 3,
+    "weight": 1
+  },
+  {
+    "id": "music_348_devils_never_cry",
+    "title": "『Devils Never Cry』を聴いてみる",
+    "description": "Tetsuya Shibata｜作品を彩る歌声や演奏に耳を傾けたい一曲。",
+    "detail": "Tetsuya Shibataの『Devils Never Cry』を1曲だけ聴いてみる。作品を彩る歌声や演奏に耳を傾けたい一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Devils Never Cry Tetsuya Shibata」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1
+  },
+  {
+    "id": "music_349_wake_me_up",
+    "title": "『Wake Me Up』を聴いてみる",
+    "description": "Avicii｜反復するビートと電子音で気分を切り替えられる一曲。",
+    "detail": "Aviciiの『Wake Me Up』を1曲だけ聴いてみる。反復するビートと電子音で気分を切り替えられる一曲。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Wake Me Up Avicii」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_350_levels",
+    "title": "『Levels』を聴いてみる",
+    "description": "Avicii｜高揚感のあるサウンドを短い時間で楽しめる一曲。",
+    "detail": "Aviciiの『Levels』を1曲だけ聴いてみる。高揚感のあるサウンドを短い時間で楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Levels Avicii」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_351_the_nights",
+    "title": "『The Nights』を聴いてみる",
+    "description": "Avicii｜リズムの変化と音の広がりに身を任せたい一曲。",
+    "detail": "Aviciiの『The Nights』を1曲だけ聴いてみる。リズムの変化と音の広がりに身を任せたい一曲。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「The Nights Avicii」と検索して聴く。",
+    "estimated_minutes": 3,
+    "weight": 1
+  },
+  {
+    "id": "music_352_animals_martin_garrix",
+    "title": "『Animals』を聴いてみる",
+    "description": "Martin Garrix｜作業前や移動中のスイッチに向くダンスナンバー。",
+    "detail": "Martin Garrixの『Animals』を1曲だけ聴いてみる。作業前や移動中のスイッチに向くダンスナンバー。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Animals Martin Garrix」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1
+  },
+  {
+    "id": "music_353_scared_to_be_lonely",
+    "title": "『Scared to Be Lonely』を聴いてみる",
+    "description": "Martin Garrix & Dua Lipa｜電子音とビートの組み立てをじっくり味わえる一曲。",
+    "detail": "Martin Garrix & Dua Lipaの『Scared to Be Lonely』を1曲だけ聴いてみる。電子音とビートの組み立てをじっくり味わえる一曲。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Scared to Be Lonely Martin Garrix & Dua Lipa」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_354_titanium",
+    "title": "『Titanium』を聴いてみる",
+    "description": "David Guetta feat. Sia｜反復するビートと電子音で気分を切り替えられる一曲。",
+    "detail": "David Guetta feat. Siaの『Titanium』を1曲だけ聴いてみる。反復するビートと電子音で気分を切り替えられる一曲。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Titanium David Guetta feat. Sia」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_355_without_you_guetta",
+    "title": "『Without You』を聴いてみる",
+    "description": "David Guetta feat. Usher｜高揚感のあるサウンドを短い時間で楽しめる一曲。",
+    "detail": "David Guetta feat. Usherの『Without You』を1曲だけ聴いてみる。高揚感のあるサウンドを短い時間で楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Without You David Guetta feat. Usher」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_356_clarity",
+    "title": "『Clarity』を聴いてみる",
+    "description": "Zedd feat. Foxes｜リズムの変化と音の広がりに身を任せたい一曲。",
+    "detail": "Zedd feat. Foxesの『Clarity』を1曲だけ聴いてみる。リズムの変化と音の広がりに身を任せたい一曲。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Clarity Zedd feat. Foxes」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_357_stay_zedd",
+    "title": "『Stay』を聴いてみる",
+    "description": "Zedd & Alessia Cara｜作業前や移動中のスイッチに向くダンスナンバー。",
+    "detail": "Zedd & Alessia Caraの『Stay』を1曲だけ聴いてみる。作業前や移動中のスイッチに向くダンスナンバー。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Stay Zedd & Alessia Cara」と検索して聴く。",
+    "estimated_minutes": 3,
+    "weight": 1
+  },
+  {
+    "id": "music_358_spectrum_zedd",
+    "title": "『Spectrum』を聴いてみる",
+    "description": "Zedd feat. Matthew Koma｜電子音とビートの組み立てをじっくり味わえる一曲。",
+    "detail": "Zedd feat. Matthew Komaの『Spectrum』を1曲だけ聴いてみる。電子音とビートの組み立てをじっくり味わえる一曲。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Spectrum Zedd feat. Matthew Koma」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_359_dont_you_worry_child",
+    "title": "『Don't You Worry Child』を聴いてみる",
+    "description": "Swedish House Mafia feat. John Martin｜反復するビートと電子音で気分を切り替えられる一曲。",
+    "detail": "Swedish House Mafia feat. John Martinの『Don't You Worry Child』を1曲だけ聴いてみる。反復するビートと電子音で気分を切り替えられる一曲。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Don't You Worry Child Swedish House Mafia feat. John Martin」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_360_greyhound",
+    "title": "『Greyhound』を聴いてみる",
+    "description": "Swedish House Mafia｜高揚感のあるサウンドを短い時間で楽しめる一曲。",
+    "detail": "Swedish House Mafiaの『Greyhound』を1曲だけ聴いてみる。高揚感のあるサウンドを短い時間で楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Greyhound Swedish House Mafia」と検索して聴く。",
+    "estimated_minutes": 7,
+    "weight": 1
+  },
+  {
+    "id": "music_361_one_your_name",
+    "title": "『One (Your Name)』を聴いてみる",
+    "description": "Swedish House Mafia feat. Pharrell｜リズムの変化と音の広がりに身を任せたい一曲。",
+    "detail": "Swedish House Mafia feat. Pharrellの『One (Your Name)』を1曲だけ聴いてみる。リズムの変化と音の広がりに身を任せたい一曲。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「One (Your Name) Swedish House Mafia feat. Pharrell」と検索して聴く。",
+    "estimated_minutes": 3,
+    "weight": 1
+  },
+  {
+    "id": "music_362_closer_chainsmokers",
+    "title": "『Closer』を聴いてみる",
+    "description": "The Chainsmokers feat. Halsey｜作業前や移動中のスイッチに向くダンスナンバー。",
+    "detail": "The Chainsmokers feat. Halseyの『Closer』を1曲だけ聴いてみる。作業前や移動中のスイッチに向くダンスナンバー。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Closer The Chainsmokers feat. Halsey」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_363_something_just_like_this",
+    "title": "『Something Just Like This』を聴いてみる",
+    "description": "The Chainsmokers & Coldplay｜電子音とビートの組み立てをじっくり味わえる一曲。",
+    "detail": "The Chainsmokers & Coldplayの『Something Just Like This』を1曲だけ聴いてみる。電子音とビートの組み立てをじっくり味わえる一曲。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Something Just Like This The Chainsmokers & Coldplay」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_364_paris_chainsmokers",
+    "title": "『Paris』を聴いてみる",
+    "description": "The Chainsmokers｜反復するビートと電子音で気分を切り替えられる一曲。",
+    "detail": "The Chainsmokersの『Paris』を1曲だけ聴いてみる。反復するビートと電子音で気分を切り替えられる一曲。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Paris The Chainsmokers」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_365_lean_on",
+    "title": "『Lean On』を聴いてみる",
+    "description": "Major Lazer & DJ Snake feat. MØ｜高揚感のあるサウンドを短い時間で楽しめる一曲。",
+    "detail": "Major Lazer & DJ Snake feat. MØの『Lean On』を1曲だけ聴いてみる。高揚感のあるサウンドを短い時間で楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Lean On Major Lazer & DJ Snake feat. MØ」と検索して聴く。",
+    "estimated_minutes": 3,
+    "weight": 1
+  },
+  {
+    "id": "music_366_turn_down_for_what",
+    "title": "『Turn Down for What』を聴いてみる",
+    "description": "DJ Snake & Lil Jon｜リズムの変化と音の広がりに身を任せたい一曲。",
+    "detail": "DJ Snake & Lil Jonの『Turn Down for What』を1曲だけ聴いてみる。リズムの変化と音の広がりに身を任せたい一曲。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Turn Down for What DJ Snake & Lil Jon」と検索して聴く。",
+    "estimated_minutes": 3,
+    "weight": 1
+  },
+  {
+    "id": "music_367_taki_taki",
+    "title": "『Taki Taki』を聴いてみる",
+    "description": "DJ Snake feat. Selena Gomez, Ozuna & Cardi B｜作業前や移動中のスイッチに向くダンスナンバー。",
+    "detail": "DJ Snake feat. Selena Gomez, Ozuna & Cardi Bの『Taki Taki』を1曲だけ聴いてみる。作業前や移動中のスイッチに向くダンスナンバー。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Taki Taki DJ Snake feat. Selena Gomez, Ozuna & Cardi B」と検索して聴く。",
+    "estimated_minutes": 3,
+    "weight": 1
+  },
+  {
+    "id": "music_368_this_is_what_you_came_for",
+    "title": "『This Is What You Came For』を聴いてみる",
+    "description": "Calvin Harris feat. Rihanna｜電子音とビートの組み立てをじっくり味わえる一曲。",
+    "detail": "Calvin Harris feat. Rihannaの『This Is What You Came For』を1曲だけ聴いてみる。電子音とビートの組み立てをじっくり味わえる一曲。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「This Is What You Came For Calvin Harris feat. Rihanna」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_369_summer_calvin_harris",
+    "title": "『Summer』を聴いてみる",
+    "description": "Calvin Harris｜反復するビートと電子音で気分を切り替えられる一曲。",
+    "detail": "Calvin Harrisの『Summer』を1曲だけ聴いてみる。反復するビートと電子音で気分を切り替えられる一曲。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Summer Calvin Harris」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_370_feel_so_close",
+    "title": "『Feel So Close』を聴いてみる",
+    "description": "Calvin Harris｜高揚感のあるサウンドを短い時間で楽しめる一曲。",
+    "detail": "Calvin Harrisの『Feel So Close』を1曲だけ聴いてみる。高揚感のあるサウンドを短い時間で楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Feel So Close Calvin Harris」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_371_rather_be",
+    "title": "『Rather Be』を聴いてみる",
+    "description": "Clean Bandit feat. Jess Glynne｜リズムの変化と音の広がりに身を任せたい一曲。",
+    "detail": "Clean Bandit feat. Jess Glynneの『Rather Be』を1曲だけ聴いてみる。リズムの変化と音の広がりに身を任せたい一曲。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Rather Be Clean Bandit feat. Jess Glynne」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_372_rockabye",
+    "title": "『Rockabye』を聴いてみる",
+    "description": "Clean Bandit feat. Sean Paul & Anne-Marie｜作業前や移動中のスイッチに向くダンスナンバー。",
+    "detail": "Clean Bandit feat. Sean Paul & Anne-Marieの『Rockabye』を1曲だけ聴いてみる。作業前や移動中のスイッチに向くダンスナンバー。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Rockabye Clean Bandit feat. Sean Paul & Anne-Marie」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_373_firestone",
+    "title": "『Firestone』を聴いてみる",
+    "description": "Kygo feat. Conrad Sewell｜電子音とビートの組み立てをじっくり味わえる一曲。",
+    "detail": "Kygo feat. Conrad Sewellの『Firestone』を1曲だけ聴いてみる。電子音とビートの組み立てをじっくり味わえる一曲。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Firestone Kygo feat. Conrad Sewell」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_374_stole_the_show",
+    "title": "『Stole the Show』を聴いてみる",
+    "description": "Kygo feat. Parson James｜反復するビートと電子音で気分を切り替えられる一曲。",
+    "detail": "Kygo feat. Parson Jamesの『Stole the Show』を1曲だけ聴いてみる。反復するビートと電子音で気分を切り替えられる一曲。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Stole the Show Kygo feat. Parson James」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_375_it_aint_me",
+    "title": "『It Ain't Me』を聴いてみる",
+    "description": "Kygo & Selena Gomez｜高揚感のあるサウンドを短い時間で楽しめる一曲。",
+    "detail": "Kygo & Selena Gomezの『It Ain't Me』を1曲だけ聴いてみる。高揚感のあるサウンドを短い時間で楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「It Ain't Me Kygo & Selena Gomez」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_376_faded",
+    "title": "『Faded』を聴いてみる",
+    "description": "Alan Walker｜リズムの変化と音の広がりに身を任せたい一曲。",
+    "detail": "Alan Walkerの『Faded』を1曲だけ聴いてみる。リズムの変化と音の広がりに身を任せたい一曲。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Faded Alan Walker」と検索して聴く。",
+    "estimated_minutes": 3,
+    "weight": 1
+  },
+  {
+    "id": "music_377_alone_alan_walker",
+    "title": "『Alone』を聴いてみる",
+    "description": "Alan Walker｜作業前や移動中のスイッチに向くダンスナンバー。",
+    "detail": "Alan Walkerの『Alone』を1曲だけ聴いてみる。作業前や移動中のスイッチに向くダンスナンバー。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Alone Alan Walker」と検索して聴く。",
+    "estimated_minutes": 3,
+    "weight": 1
+  },
+  {
+    "id": "music_378_shelter",
+    "title": "『Shelter』を聴いてみる",
+    "description": "Porter Robinson & Madeon｜電子音とビートの組み立てをじっくり味わえる一曲。",
+    "detail": "Porter Robinson & Madeonの『Shelter』を1曲だけ聴いてみる。電子音とビートの組み立てをじっくり味わえる一曲。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Shelter Porter Robinson & Madeon」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_379_language_porter_robinson",
+    "title": "『Language』を聴いてみる",
+    "description": "Porter Robinson｜反復するビートと電子音で気分を切り替えられる一曲。",
+    "detail": "Porter Robinsonの『Language』を1曲だけ聴いてみる。反復するビートと電子音で気分を切り替えられる一曲。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Language Porter Robinson」と検索して聴く。",
+    "estimated_minutes": 6,
+    "weight": 1
+  },
+  {
+    "id": "music_380_sad_machine",
+    "title": "『Sad Machine』を聴いてみる",
+    "description": "Porter Robinson｜高揚感のあるサウンドを短い時間で楽しめる一曲。",
+    "detail": "Porter Robinsonの『Sad Machine』を1曲だけ聴いてみる。高揚感のあるサウンドを短い時間で楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Sad Machine Porter Robinson」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1
+  },
+  {
+    "id": "music_381_ghosts_n_stuff",
+    "title": "『Ghosts 'n' Stuff』を聴いてみる",
+    "description": "deadmau5 feat. Rob Swire｜リズムの変化と音の広がりに身を任せたい一曲。",
+    "detail": "deadmau5 feat. Rob Swireの『Ghosts 'n' Stuff』を1曲だけ聴いてみる。リズムの変化と音の広がりに身を任せたい一曲。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Ghosts 'n' Stuff deadmau5 feat. Rob Swire」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_382_strobe",
+    "title": "『Strobe』を聴いてみる",
+    "description": "deadmau5｜作業前や移動中のスイッチに向くダンスナンバー。",
+    "detail": "deadmau5の『Strobe』を1曲だけ聴いてみる。作業前や移動中のスイッチに向くダンスナンバー。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Strobe deadmau5」と検索して聴く。",
+    "estimated_minutes": 10,
+    "weight": 1
+  },
+  {
+    "id": "music_383_around_the_world",
+    "title": "『Around the World』を聴いてみる",
+    "description": "Daft Punk｜電子音とビートの組み立てをじっくり味わえる一曲。",
+    "detail": "Daft Punkの『Around the World』を1曲だけ聴いてみる。電子音とビートの組み立てをじっくり味わえる一曲。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Around the World Daft Punk」と検索して聴く。",
+    "estimated_minutes": 7,
+    "weight": 1
+  },
+  {
+    "id": "music_384_one_more_time",
+    "title": "『One More Time』を聴いてみる",
+    "description": "Daft Punk｜反復するビートと電子音で気分を切り替えられる一曲。",
+    "detail": "Daft Punkの『One More Time』を1曲だけ聴いてみる。反復するビートと電子音で気分を切り替えられる一曲。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「One More Time Daft Punk」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1
+  },
+  {
+    "id": "music_385_harder_better_faster_stronger",
+    "title": "『Harder, Better, Faster, Stronger』を聴いてみる",
+    "description": "Daft Punk｜高揚感のあるサウンドを短い時間で楽しめる一曲。",
+    "detail": "Daft Punkの『Harder, Better, Faster, Stronger』を1曲だけ聴いてみる。高揚感のあるサウンドを短い時間で楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Harder, Better, Faster, Stronger Daft Punk」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_386_sandstorm",
+    "title": "『Sandstorm』を聴いてみる",
+    "description": "Darude｜リズムの変化と音の広がりに身を任せたい一曲。",
+    "detail": "Darudeの『Sandstorm』を1曲だけ聴いてみる。リズムの変化と音の広がりに身を任せたい一曲。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Sandstorm Darude」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_387_insomnia",
+    "title": "『Insomnia』を聴いてみる",
+    "description": "Faithless｜作業前や移動中のスイッチに向くダンスナンバー。",
+    "detail": "Faithlessの『Insomnia』を1曲だけ聴いてみる。作業前や移動中のスイッチに向くダンスナンバー。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Insomnia Faithless」と検索して聴く。",
+    "estimated_minutes": 9,
+    "weight": 1
+  },
+  {
+    "id": "music_388_born_slippy_nuxx",
+    "title": "『Born Slippy .NUXX』を聴いてみる",
+    "description": "Underworld｜電子音とビートの組み立てをじっくり味わえる一曲。",
+    "detail": "Underworldの『Born Slippy .NUXX』を1曲だけ聴いてみる。電子音とビートの組み立てをじっくり味わえる一曲。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Born Slippy .NUXX Underworld」と検索して聴く。",
+    "estimated_minutes": 10,
+    "weight": 1
+  },
+  {
+    "id": "music_389_galvanize",
+    "title": "『Galvanize』を聴いてみる",
+    "description": "The Chemical Brothers｜反復するビートと電子音で気分を切り替えられる一曲。",
+    "detail": "The Chemical Brothersの『Galvanize』を1曲だけ聴いてみる。反復するビートと電子音で気分を切り替えられる一曲。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Galvanize The Chemical Brothers」と検索して聴く。",
+    "estimated_minutes": 6,
+    "weight": 1
+  },
+  {
+    "id": "music_390_block_rockin_beats",
+    "title": "『Block Rockin' Beats』を聴いてみる",
+    "description": "The Chemical Brothers｜高揚感のあるサウンドを短い時間で楽しめる一曲。",
+    "detail": "The Chemical Brothersの『Block Rockin' Beats』を1曲だけ聴いてみる。高揚感のあるサウンドを短い時間で楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Block Rockin' Beats The Chemical Brothers」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1
+  },
+  {
+    "id": "music_391_porcelain",
+    "title": "『Porcelain』を聴いてみる",
+    "description": "Moby｜リズムの変化と音の広がりに身を任せたい一曲。",
+    "detail": "Mobyの『Porcelain』を1曲だけ聴いてみる。リズムの変化と音の広がりに身を任せたい一曲。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Porcelain Moby」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_392_windowlicker",
+    "title": "『Windowlicker』を聴いてみる",
+    "description": "Aphex Twin｜作業前や移動中のスイッチに向くダンスナンバー。",
+    "detail": "Aphex Twinの『Windowlicker』を1曲だけ聴いてみる。作業前や移動中のスイッチに向くダンスナンバー。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Windowlicker Aphex Twin」と検索して聴く。",
+    "estimated_minutes": 6,
+    "weight": 1
+  },
+  {
+    "id": "music_393_rydeen",
+    "title": "『RYDEEN』を聴いてみる",
+    "description": "YELLOW MAGIC ORCHESTRA｜電子音とビートの組み立てをじっくり味わえる一曲。",
+    "detail": "YELLOW MAGIC ORCHESTRAの『RYDEEN』を1曲だけ聴いてみる。電子音とビートの組み立てをじっくり味わえる一曲。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「RYDEEN YELLOW MAGIC ORCHESTRA」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_394_technopolis",
+    "title": "『TECHNOPOLIS』を聴いてみる",
+    "description": "YELLOW MAGIC ORCHESTRA｜反復するビートと電子音で気分を切り替えられる一曲。",
+    "detail": "YELLOW MAGIC ORCHESTRAの『TECHNOPOLIS』を1曲だけ聴いてみる。反復するビートと電子音で気分を切り替えられる一曲。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「TECHNOPOLIS YELLOW MAGIC ORCHESTRA」と検索して聴く。",
+    "estimated_minutes": 5,
+    "weight": 1
+  },
+  {
+    "id": "music_395_flash_perfume",
+    "title": "『FLASH』を聴いてみる",
+    "description": "Perfume｜高揚感のあるサウンドを短い時間で楽しめる一曲。",
+    "detail": "Perfumeの『FLASH』を1曲だけ聴いてみる。高揚感のあるサウンドを短い時間で楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「FLASH Perfume」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_396_polyrhythm",
+    "title": "『ポリリズム』を聴いてみる",
+    "description": "Perfume｜リズムの変化と音の広がりに身を任せたい一曲。",
+    "detail": "Perfumeの『ポリリズム』を1曲だけ聴いてみる。リズムの変化と音の広がりに身を任せたい一曲。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「ポリリズム Perfume」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
+    "id": "music_397_laser_beam",
+    "title": "『レーザービーム』を聴いてみる",
+    "description": "Perfume｜作業前や移動中のスイッチに向くダンスナンバー。",
+    "detail": "Perfumeの『レーザービーム』を1曲だけ聴いてみる。作業前や移動中のスイッチに向くダンスナンバー。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「レーザービーム Perfume」と検索して聴く。",
+    "estimated_minutes": 3,
+    "weight": 1
+  },
+  {
+    "id": "music_398_bangarang",
+    "title": "『Bangarang』を聴いてみる",
+    "description": "Skrillex feat. Sirah｜電子音とビートの組み立てをじっくり味わえる一曲。",
+    "detail": "Skrillex feat. Sirahの『Bangarang』を1曲だけ聴いてみる。電子音とビートの組み立てをじっくり味わえる一曲。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "budget_yen": 0,
+    "where_to_try": "音楽配信アプリ（Spotify・YouTube Musicなど）で「Bangarang Skrillex feat. Sirah」と検索して聴く。",
+    "estimated_minutes": 4,
+    "weight": 1
+  },
+  {
     "id": "cook_01_item",
     "title": "鮭の塩焼き定食を作ってみる",
     "description": "和食の一品。焼くだけで完成する、ほっとする定番おかず。",

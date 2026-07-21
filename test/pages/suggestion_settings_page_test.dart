@@ -64,10 +64,18 @@ void main() {
     expect(find.widgetWithText(FilterChip, '🍳 料理'), findsOneWidget);
     expect(find.widgetWithText(FilterChip, '📖 読書'), findsOneWidget);
     expect(find.widgetWithText(FilterChip, '🎬 映画'), findsOneWidget);
-    expect(find.byType(FilterChip), findsNWidgets(8));
+    expect(find.byType(FilterChip), findsNWidgets(12));
 
     // 選択中カテゴリの詳細設定セクションと、保存済みの選択が反映される。
     expect(find.text('🎵 音楽の詳細設定'), findsOneWidget);
+    for (final genre in [
+      'ロック',
+      'ヒップホップ・R&B',
+      'アニソン・ゲーム音楽',
+      'EDM・テクノ',
+    ]) {
+      expect(find.widgetWithText(FilterChip, genre), findsOneWidget);
+    }
     final jazzChip = tester.widget<FilterChip>(
       find.widgetWithText(FilterChip, 'ジャズ'),
     );

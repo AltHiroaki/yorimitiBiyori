@@ -46,7 +46,16 @@ class InterestCategories {
         DetailSettingGroup(
           id: 'genre',
           label: 'ジャンル',
-          options: ['ポップス', 'ジャズ', 'クラシック', '洋楽'],
+          options: [
+            'ポップス',
+            'ジャズ',
+            'クラシック',
+            '洋楽',
+            'ロック',
+            'ヒップホップ・R&B',
+            'アニソン・ゲーム音楽',
+            'EDM・テクノ',
+          ],
         ),
       ],
     ),
