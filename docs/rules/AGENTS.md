@@ -69,7 +69,7 @@ There is **no difficulty, no universal time condition, and no travel-distance co
 2. **Stage 2 — per-category detail settings** (each group is multi-select; unselected = 指定なし = no filtering). **In the MVP each category exposes a single "genre" group:**
    - 音楽: ジャンル(ポップス/ジャズ/クラシック/洋楽)
    - 料理: 味覚・ジャンル(和食/洋食/中華/イタリアン/アジア風/激辛/さっぱり/ガッツリ)
-   - 読書: ジャンル(エッセイ/小説/ノンフィクション/詩集)
+   - 読書: ジャンル(エッセイ/小説/ノンフィクション/詩集/ミステリー・サスペンス/SF・ファンタジー/ビジネス・自己啓発/歴史・教養) — a single suggestion's `tags` may hold more than one of these values (e.g. a mystery novel tagged both 小説 and ミステリー・サスペンス)
    - 映画: ジャンル(アクション/コメディ/ドラマ/SF/サスペンス/ファンタジー/恋愛/アニメ/ミステリー) — a single suggestion's `tags` may hold more than one of these values, since one movie can span multiple genres
    - 散歩 (advanced): 目的(気分転換/運動/発見)
 

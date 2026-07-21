@@ -70,7 +70,16 @@ class InterestCategories {
         DetailSettingGroup(
           id: 'genre',
           label: 'ジャンル',
-          options: ['エッセイ', '小説', 'ノンフィクション', '詩集'],
+          options: [
+            'エッセイ',
+            '小説',
+            'ノンフィクション',
+            '詩集',
+            'ミステリー・サスペンス',
+            'SF・ファンタジー',
+            'ビジネス・自己啓発',
+            '歴史・教養',
+          ],
         ),
       ],
     ),
