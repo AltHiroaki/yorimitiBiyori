@@ -101,6 +101,21 @@ void main() {
     expect(find.text('🍳 料理の詳細設定'), findsNothing);
   });
 
+  testWidgets('料理を選択すると味覚・ジャンルと調理法の2グループが表示される', (tester) async {
+    await _pumpPage(
+      tester,
+      const UserSettings(selectedCategories: ['music']),
+    );
+
+    await tester.tap(find.widgetWithText(FilterChip, '🍳 料理'));
+    await tester.pumpAndSettle();
+
+    expect(find.text('味覚・ジャンル'), findsOneWidget);
+    expect(find.text('調理法'), findsOneWidget);
+    expect(find.widgetWithText(FilterChip, '和食'), findsOneWidget);
+    expect(find.widgetWithText(FilterChip, '焼く'), findsOneWidget);
+  });
+
   testWidgets('詳細設定を選んで保存すると選択内容だけが保存される', (tester) async {
     final repository = await _pumpPage(
       tester,

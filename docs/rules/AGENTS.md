@@ -66,14 +66,16 @@ Bottom NavigationBar with exactly 3 tabs. There is **no home screen**; the sugge
 There is **no difficulty, no universal time condition, and no travel-distance condition** (removed from the old model; the ver6 PDF `difficulty` field is not implemented in this project). Conditions are set in two stages:
 
 1. **Stage 1 — category selection** (multi-select, MVP 4 categories): music 音楽 / cook 料理 / read 読書 / movie 映画. walk 散歩 is an advanced-phase category (definition + data retained in `InterestCategories.developmentCategories`).
-2. **Stage 2 — per-category detail settings** (each group is multi-select; unselected = 指定なし = no filtering). **In the MVP each category exposes a single "genre" group:**
-   - 音楽: ジャンル(ポップス/ジャズ/クラシック/洋楽/ロック/ヒップホップ・R&B/アニソン・ゲーム音楽/EDM・テクノ)
-   - 料理: 味覚・ジャンル(和食/洋食/中華/イタリアン/アジア風/激辛/さっぱり/ガッツリ)
-   - 読書: ジャンル(エッセイ/小説/ノンフィクション/詩集/ミステリー・サスペンス/SF・ファンタジー/ビジネス・自己啓発/歴史・教養) — a single suggestion's `tags` may hold more than one of these values (e.g. a mystery novel tagged both 小説 and ミステリー・サスペンス)
+2. **Stage 2 — per-category detail settings** (each group is multi-select; unselected = 指定なし = no filtering). **In the MVP each category exposes a single "genre" group, except cook which has two (genre AND cooking_method, AND'd together):**
+   - 音楽: ジャンル(ポップス/ジャズ/クラシック/洋楽)
+   - 料理: 味覚・ジャンル(和食/洋食/中華/イタリアン/アジア風/激辛/さっぱり/ガッツリ) + 調理法(蒸す/炒める/揚げる/煮る/焼く/生・和える/レンジ・時短)
+   - 読書: ジャンル(エッセイ/小説/ノンフィクション/詩集/ミステリー・サスペンス/SF・ファンタジー/ビジネス・自己啓発/歴史・教養)
    - 映画: ジャンル(アクション/コメディ/ドラマ/SF/サスペンス/ファンタジー/恋愛/アニメ/ミステリー) — a single suggestion's `tags` may hold more than one of these values, since one movie can span multiple genres
    - 散歩 (advanced): 目的(気分転換/運動/発見)
 
-   Advanced-phase detail settings (企画書 ver6 表3 "発展版で追加"): 音楽=言語・気分, 料理=栄養素・ダイエット, 読書=読書時間・入手予算, 映画=上映時間・視聴先.
+   Advanced-phase detail settings (企画書 ver6 表3 "発展版で追加"): 音楽=言語・気分, 料理=栄養素・ダイエット, 読書=読書時間・入手予算, 映画=上映時間・視聴先. The 料理 cooking_method group is a different axis from 栄養素・ダイエット and was implemented ahead of the advanced phase because it only required tagging existing data, not a new detail-setting group data model.
+
+   **Every `cook` suggestion in `assets/data/suggestions.json` must carry a `cooking_method` tag.** A missing tag means that suggestion can never surface once a user filters by that cooking method — treat this the same as a missing required field when adding new 料理 data.
 
 See `docs/spec/仕様書.md` §3.4 for the master table. Default categories are [music, read, movie]; detail settings default to all-unselected (指定なし). Categories and detail-setting groups must be driven from a master definition so more can be added later (散歩, 運動, 芸術, etc.).
 
@@ -202,6 +204,7 @@ When editing suggestion data:
 - required fields must not be missing
 - `category` must be one of the known category ids (`music` / `cook` / `read` / `movie`; `walk` is retained as an advanced-phase category)
 - `tags` holds the values that correspond to the category's detail-setting options (this is what the filter matches against)
+- every `cook` entry's `tags` must include one of the `cooking_method` options (蒸す/炒める/揚げる/煮る/焼く/生・和える/レンジ・時短) in addition to its 味覚・ジャンル tag — a 料理 entry missing this tag can never be selected once a user filters by cooking method
 - `budget_yen` must be a non-negative number (0 means free)
 - `estimated_minutes` is the rough duration used for history total-minutes aggregation
 - there is **no** `min_minutes` / `max_minutes` / `intensity` / `location_type`

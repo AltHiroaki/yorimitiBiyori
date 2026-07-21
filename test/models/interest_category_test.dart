@@ -16,10 +16,21 @@ void main() {
     expect(developmentIds, ['walk']);
   });
 
-  test('MVP の各カテゴリの詳細設定はジャンル1グループに絞る', () {
+  test('MVP の各カテゴリの詳細設定はジャンル1グループに絞る（料理は調理法グループを追加で持つ）', () {
     for (final category in InterestCategories.all) {
+      if (category.id == 'cook') {
+        expect(category.detailSettingGroups, hasLength(2));
+        continue;
+      }
       expect(category.detailSettingGroups, hasLength(1));
     }
+  });
+
+  test('料理カテゴリの詳細設定はジャンルと調理法の2グループ', () {
+    final cook = InterestCategories.findById('cook')!;
+    final groupIds = cook.detailSettingGroups.map((group) => group.id);
+
+    expect(groupIds, ['genre', 'cooking_method']);
   });
 
   test('findById で id からカテゴリを取得できる', () {
