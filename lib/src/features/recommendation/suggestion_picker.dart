@@ -97,10 +97,6 @@ bool _matchesDetailSettings(
     if (!hasMatchingTag) {
       return false;
     }
-
-    if (!_matchesBudgetCap(suggestion, effectiveOptions)) {
-      return false;
-    }
   }
   return true;
 }
@@ -109,32 +105,6 @@ List<String> _effectiveOptions(List<String> selectedOptions) {
   return selectedOptions.where((option) {
     return option != noPreferenceOption;
   }).toList();
-}
-
-bool _matchesBudgetCap(Suggestion suggestion, List<String> selectedOptions) {
-  final budgetCaps = selectedOptions
-      .map(_budgetCapFromOption)
-      .whereType<int>()
-      .toList();
-
-  if (budgetCaps.isEmpty) {
-    return true;
-  }
-
-  final widestBudgetCap = budgetCaps.reduce(max);
-  return suggestion.budgetYen <= widestBudgetCap;
-}
-
-int? _budgetCapFromOption(String option) {
-  if (option == '無料') {
-    return 0;
-  }
-
-  final match = RegExp(r'(\d+)円').firstMatch(option);
-  if (match == null) {
-    return null;
-  }
-  return int.parse(match.group(1)!);
 }
 
 List<T> _lastItems<T>(List<T> items, int count) {

@@ -113,44 +113,6 @@ void main() {
       expect(filteredSuggestions, hasLength(2));
     });
 
-    test('予算項目はタグ一致に加えて budgetYen の上限でも判定する', () {
-      final suggestions = [
-        _suggestion(
-          id: 'under_budget',
-          category: 'read',
-          tags: ['エッセイ', '〜500円'],
-          budgetYen: 500,
-        ),
-        _suggestion(
-          id: 'over_budget',
-          category: 'read',
-          tags: ['エッセイ', '〜500円'],
-          budgetYen: 700,
-        ),
-        _suggestion(
-          id: 'wrong_tag',
-          category: 'read',
-          tags: ['エッセイ', '〜1000円'],
-          budgetYen: 500,
-        ),
-      ];
-      const settings = UserSettings(
-        selectedCategories: ['read'],
-        detailSettings: {
-          'read': {
-            'genre': ['エッセイ'],
-            'budget': ['〜500円'],
-          },
-        },
-      );
-
-      final filteredSuggestions = filterSuggestions(suggestions, settings);
-
-      expect(filteredSuggestions.map((suggestion) => suggestion.id), [
-        'under_budget',
-      ]);
-    });
-
     test('複数カテゴリ選択時はカテゴリごとの詳細設定を OR で扱う', () {
       final suggestions = [
         _suggestion(
@@ -311,18 +273,14 @@ Suggestion _suggestion({
   required String id,
   String category = 'music',
   List<String> tags = const [],
-  int budgetYen = 0,
   double weight = 1,
 }) {
   return Suggestion(
     id: id,
     title: id,
     description: 'description',
-    detail: 'detail',
     category: category,
     tags: tags,
-    budgetYen: budgetYen,
-    whereToTry: 'whereToTry',
     estimatedMinutes: 10,
     weight: weight,
   );

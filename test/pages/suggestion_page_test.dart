@@ -134,21 +134,18 @@ Map<String, dynamic> _suggestionJson({
   required String id,
   required String title,
   required List<String> tags,
-  String? detail,
+  String? recipe,
   String category = 'music',
-  int budgetYen = 0,
 }) {
   return {
     'id': id,
     'title': title,
     'description': '$titleの説明文。',
-    'detail': detail ?? '$titleの補足。',
     'category': category,
     'tags': tags,
-    'budget_yen': budgetYen,
-    'where_to_try': '音楽配信アプリで検索する。',
     'estimated_minutes': 5,
     'weight': 1.0,
+    'recipe': ?recipe,
   };
 }
 
@@ -200,12 +197,7 @@ void main() {
       tester,
       suggestions: [
         _suggestionJson(id: 'music_a', title: 'ジャズを1曲流す', tags: ['ジャズ']),
-        _suggestionJson(
-          id: 'music_b',
-          title: 'ポップスを1曲流す',
-          tags: ['ポップス'],
-          budgetYen: 300,
-        ),
+        _suggestionJson(id: 'music_b', title: 'ポップスを1曲流す', tags: ['ポップス']),
       ],
       settings: const UserSettings(
         selectedCategories: ['music'],
@@ -229,32 +221,24 @@ void main() {
     expect(find.text('ジャズを1曲流すの説明文。'), findsOneWidget);
     expect(find.widgetWithText(Chip, 'ジャズ'), findsOneWidget);
     expect(find.text('約5分'), findsOneWidget);
-    expect(find.text('入手先：音楽配信アプリで検索する。'), findsOneWidget);
-    expect(find.text('予算：無料'), findsOneWidget);
     expect(find.text('やってみる'), findsOneWidget);
     expect(find.text('別の提案'), findsOneWidget);
   });
 
-  testWidgets('詳細設定が未設定なら「指定なし」、予算は金額表示になる', (tester) async {
+  testWidgets('詳細設定が未設定なら「指定なし」と表示される', (tester) async {
     await _pumpPage(
       tester,
       suggestions: [
-        _suggestionJson(
-          id: 'music_b',
-          title: 'ポップスを1曲流す',
-          tags: ['ポップス'],
-          budgetYen: 300,
-        ),
+        _suggestionJson(id: 'music_b', title: 'ポップスを1曲流す', tags: ['ポップス']),
       ],
       settings: const UserSettings(selectedCategories: ['music']),
     );
 
     expect(find.text('詳細設定：指定なし'), findsOneWidget);
-    expect(find.text('予算：¥300'), findsOneWidget);
   });
 
-  testWidgets('詳しく見るをタップすると提案のdetailを展開・収納できる', (tester) async {
-    const recipe = '材料：卵2個、だし大さじ2。\n手順：1. 材料を混ぜる。2. 弱火で焼く。';
+  testWidgets('詳しく見るをタップすると料理のレシピを展開・収納できる', (tester) async {
+    const recipe = '材料：\n卵2個、だし大さじ2\n\n手順：\n1. 材料を混ぜる。\n2. 弱火で焼く。';
     await _pumpPage(
       tester,
       suggestions: [
@@ -262,7 +246,7 @@ void main() {
           id: 'cook_recipe',
           title: '卵焼きを作る',
           tags: ['和食', '焼く'],
-          detail: recipe,
+          recipe: recipe,
           category: 'cook',
         ),
       ],
@@ -275,25 +259,24 @@ void main() {
     await tester.tap(find.text('詳しく見る'));
     await tester.pumpAndSettle();
 
-    expect(find.text('詳しい内容'), findsOneWidget);
+    expect(find.text('レシピ'), findsOneWidget);
     expect(find.text(recipe), findsOneWidget);
 
-    await tester.tap(find.text('詳しい内容を閉じる'));
+    await tester.tap(find.text('レシピを閉じる'));
     await tester.pumpAndSettle();
 
     expect(find.text(recipe), findsNothing);
     expect(find.text('詳しく見る'), findsOneWidget);
   });
 
-  testWidgets('detailが空または空白のみなら詳細UIを表示しない', (tester) async {
+  testWidgets('レシピを持たない提案（料理以外）では詳しく見るを表示しない', (tester) async {
     await _pumpPage(
       tester,
       suggestions: [
         _suggestionJson(
-          id: 'music_without_detail',
-          title: '詳細のない提案',
+          id: 'music_without_recipe',
+          title: 'レシピのない提案',
           tags: ['ポップス'],
-          detail: '   ',
         ),
       ],
       settings: const UserSettings(selectedCategories: ['music']),
@@ -301,7 +284,29 @@ void main() {
 
     expect(find.text('詳しく見る'), findsNothing);
     expect(
-      find.byKey(const ValueKey<String>('suggestion-detail-content')),
+      find.byKey(const ValueKey<String>('suggestion-recipe-content')),
+      findsNothing,
+    );
+  });
+
+  testWidgets('recipeが空白のみなら詳しく見るを表示しない', (tester) async {
+    await _pumpPage(
+      tester,
+      suggestions: [
+        _suggestionJson(
+          id: 'cook_blank_recipe',
+          title: 'レシピが空白の提案',
+          tags: ['和食'],
+          recipe: '   ',
+          category: 'cook',
+        ),
+      ],
+      settings: const UserSettings(selectedCategories: ['cook']),
+    );
+
+    expect(find.text('詳しく見る'), findsNothing);
+    expect(
+      find.byKey(const ValueKey<String>('suggestion-recipe-content')),
       findsNothing,
     );
   });
@@ -325,22 +330,34 @@ void main() {
     expect(find.text(firstWasA ? 'ポップスを1曲流す' : 'ジャズを1曲流す'), findsOneWidget);
   });
 
-  testWidgets('詳細を展開したまま別の提案に切り替えると詳細が閉じる', (tester) async {
+  testWidgets('レシピを展開したまま別の提案に切り替えるとレシピが閉じる', (tester) async {
     await _pumpPage(
       tester,
       suggestions: [
-        _suggestionJson(id: 'music_a', title: 'ジャズを1曲流す', tags: ['ジャズ']),
-        _suggestionJson(id: 'music_b', title: 'ポップスを1曲流す', tags: ['ポップス']),
+        _suggestionJson(
+          id: 'cook_a',
+          title: '卵焼きを作る',
+          tags: ['和食'],
+          recipe: '材料：\n卵2個\n\n手順：\n1. 混ぜる。\n2. 焼く。',
+          category: 'cook',
+        ),
+        _suggestionJson(
+          id: 'cook_b',
+          title: 'スープを作る',
+          tags: ['洋食'],
+          recipe: '材料：\n野菜200g\n\n手順：\n1. 切る。\n2. 煮る。',
+          category: 'cook',
+        ),
       ],
-      settings: const UserSettings(selectedCategories: ['music']),
+      settings: const UserSettings(selectedCategories: ['cook']),
     );
 
     await tester.tap(find.text('詳しく見る'));
     await tester.pumpAndSettle();
 
-    expect(find.text('詳しい内容を閉じる'), findsOneWidget);
+    expect(find.text('レシピを閉じる'), findsOneWidget);
     expect(
-      find.byKey(const ValueKey<String>('suggestion-detail-content')),
+      find.byKey(const ValueKey<String>('suggestion-recipe-content')),
       findsOneWidget,
     );
 
@@ -348,9 +365,9 @@ void main() {
     await tester.pumpAndSettle();
 
     expect(find.text('詳しく見る'), findsOneWidget);
-    expect(find.text('詳しい内容を閉じる'), findsNothing);
+    expect(find.text('レシピを閉じる'), findsNothing);
     expect(
-      find.byKey(const ValueKey<String>('suggestion-detail-content')),
+      find.byKey(const ValueKey<String>('suggestion-recipe-content')),
       findsNothing,
     );
   });

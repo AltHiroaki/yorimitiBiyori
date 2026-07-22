@@ -467,11 +467,9 @@ class _SuggestionCard extends StatelessWidget {
               headerLabel: '今日のよりみち',
               title: suggestion.title,
               description: suggestion.description,
-              detail: suggestion.detail,
+              recipe: suggestion.recipe,
               tags: suggestion.tags,
               estimatedMinutes: suggestion.estimatedMinutes,
-              whereToTry: suggestion.whereToTry,
-              budgetYen: suggestion.budgetYen,
             ),
             const SizedBox(height: 16),
             Row(
@@ -539,10 +537,9 @@ class _OngoingCard extends StatelessWidget {
               headerLabel: '実施中のよりみち',
               title: suggestion.title,
               description: suggestion.description,
-              detail: suggestion.detail,
+              recipe: suggestion.recipe,
               tags: suggestion.tags,
               estimatedMinutes: suggestion.estimatedMinutes,
-              whereToTry: suggestion.whereToTry,
               footnote: startedAt == null
                   ? null
                   : Text(

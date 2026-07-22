@@ -38,7 +38,7 @@ The core experience is:
 2. In 提案設定, the user picks categories, then sets each category's detail settings.
 3. The app sends one local notification per day at a random time within the user-configured range (default 17:00–21:00). The wording is a soft invitation that does NOT name a duration (e.g. "暇な時間って存在しますか？"). There are no time-selection notification actions.
 4. The user taps the notification body, which opens the suggestion screen (suggestion produced from the saved category + detail settings).
-5. The suggestion screen shows one matching suggestion with title, description, tags, where-to-try, and budget. When a non-empty `detail` exists, the user can expand "詳しく見る" to read it.
+5. The suggestion screen shows one matching suggestion with title, description, and tags. Cook suggestions additionally carry a `recipe`, which the user can expand via "詳しく見る"; other categories have no expandable detail.
 6. "やってみる" opens a completion modal with feedback chips (よかった / 普通 / 合わなかった) and saves a done record.
 7. "別の提案" records the current suggestion as skipped and re-draws with the same conditions.
 
@@ -54,7 +54,7 @@ Do not implement or generate iOS platform files for the MVP unless explicitly re
 
 Bottom NavigationBar with exactly 3 tabs. There is **no home screen**; the suggestion tab is the top screen.
 
-- Tab 1 提案 (suggestion): current-conditions card (selected categories + active detail settings) + "今日のよりみち" suggestion card (title, description, expandable detail when present, tags, where-to-try, budget) + info card
+- Tab 1 提案 (suggestion): current-conditions card (selected categories + active detail settings) + "今日のよりみち" suggestion card (title, description, expandable recipe for cook suggestions, tags) + info card
 - Tab 2 履歴 (history): summary (done count / skipped count / total minutes) + recent records list; empty state with CTA to the suggestion tab
 - Tab 3 設定 (settings): Google account row (advanced phase, show as 未連携), suggestion settings row, interest categories, notification time, notification toggle, history deletion with inline confirm, about
 - Sub screen 提案設定 (suggestion settings): **two-stage** editor — stage 1 category multi-select, stage 2 per-category detail-setting groups — with AppBar back button, reachable from both the suggestion tab and the settings tab
@@ -87,7 +87,7 @@ The MVP includes only:
 - interest category registration (MVP 4 categories, multi-select)
 - suggestion settings screen (two-stage: category selection → per-category detail settings; MVP is one "genre" group per category)
 - local notification once per day at a random time within the configured range, soft wording without naming a duration, no time-selection actions
-- suggestion display matching the category + detail-setting conditions (card shows where-to-try and budget)
+- suggestion display matching the category + detail-setting conditions
 - re-suggestion ("別の提案", records the shown suggestion as skipped)
 - completion modal with feedback (good / normal / bad) saving a done record
 - history display (done count, skipped count, total minutes, recent list, empty state)
@@ -194,21 +194,21 @@ Move these operations out of page widgets when they grow:
 
 Manage suggestion candidates in `assets/data/suggestions.json`. Grow toward 50+ entries per category as an advanced goal.
 
-> `assets/data/suggestions.json` is on the ver6 schema (per-category ids, `tags` = detail-setting values, `budget_yen`, `estimated_minutes`, `weight`). It no longer uses `min_minutes` / `max_minutes` / `intensity` / `location_type`. The ver6 PDF `difficulty` field is not used in this project.
+> `assets/data/suggestions.json` is on the ver6 schema (per-category ids, `tags` = detail-setting values, `estimated_minutes`, `weight`, plus `recipe` on cook entries only). It no longer uses `min_minutes` / `max_minutes` / `intensity` / `location_type` / `detail` / `budget_yen` / `where_to_try`. The ver6 PDF `difficulty` field is not used in this project.
 
 When editing suggestion data:
 
 - each suggestion must have a stable unique `id`
 - titles should be short and understandable
 - descriptions should be useful to the user
-- every `cook` entry's `detail` must be a lightweight recipe that includes rough ingredients and 2–4 numbered steps, written so a beginner can act without looking up a separate recipe
+- only `cook` entries carry a `recipe`; every `cook` entry's `recipe` must be a lightweight recipe with rough ingredients and 2–4 numbered steps, written so a beginner can act without looking up a separate recipe. Format it for readability: `材料：` section, a blank line, then `手順：` with one numbered step per line (newlines stored as `\n` in JSON)
+- entries of other categories must NOT have `recipe` (nor the removed `detail`)
 - required fields must not be missing
 - `category` must be one of the known category ids (`music` / `cook` / `read` / `movie`; `walk` is retained as an advanced-phase category)
 - `tags` holds the values that correspond to the category's detail-setting options (this is what the filter matches against)
 - every `cook` entry's `tags` must include one of the `cooking_method` options (蒸す/炒める/揚げる/煮る/焼く/生・和える/レンジ・時短) in addition to its 味覚・ジャンル tag — a 料理 entry missing this tag can never be selected once a user filters by cooking method
-- `budget_yen` must be a non-negative number (0 means free)
 - `estimated_minutes` is the rough duration used for history total-minutes aggregation
-- there is **no** `min_minutes` / `max_minutes` / `intensity` / `location_type`
+- there is **no** `min_minutes` / `max_minutes` / `intensity` / `location_type` / `detail` / `budget_yen` / `where_to_try`
 - update Dart models when the JSON structure changes
 
 Representative data shape:
@@ -218,13 +218,18 @@ Representative data shape:
   "id": "music_jazz_focus",
   "title": "作業用にジャズを1曲だけ流す",
   "description": "歌詞のないジャズを1曲、作業や勉強のBGMにしてみる。集中したいときに向いた軽いよりみちです。",
-  "detail": "配信サービスの「作業用ジャズ」プレイリストから1曲選ぶだけでOK。",
   "category": "music",
   "tags": ["ジャズ", "作業向け", "無料"],
-  "budget_yen": 0,
-  "where_to_try": "音楽配信アプリで「作業用 ジャズ」と検索してプレイリストを開く。",
   "estimated_minutes": 5,
   "weight": 1.2
+}
+```
+
+Cook entries additionally include:
+
+```json
+{
+  "recipe": "材料：\nご飯1膳、鶏むね肉100g、卵1個、しょうゆ少々\n\n手順：\n1. 鶏肉を一口大に切り、火が通るまで焼く。\n2. 卵を好みの固さに焼く。\n3. ご飯に鶏肉と卵をのせ、しょうゆをかける。"
 }
 ```
 
@@ -239,8 +244,7 @@ Rules:
 
 - Load suggestions from `assets/data/suggestions.json`.
 - Filter: `category` must be one of the user's selected categories.
-- Filter: for the matched category, for each detail-setting group the user has selected values in, at least one selected value must be in the suggestion's `tags` (OR within a group, AND across groups). Unselected groups do not filter. Across categories the match is OR.
-- Filter: if a budget detail-setting is selected, also apply `budget_yen <=` the cap.
+- Filter: for the matched category, for each detail-setting group the user has selected values in, at least one selected value must be in the suggestion's `tags` (OR within a group, AND across groups). Unselected groups do not filter. Across categories the match is OR. There is no budget-based filtering (`budget_yen` was removed from the schema).
 - Exclude the last 3 shown suggestion ids (`recent_suggestion_ids`).
 - Select one suggestion by weighted random (`weight`).
 - If no candidates remain, temporarily lift the recent-exclusion (still avoid showing the same suggestion twice in a row).

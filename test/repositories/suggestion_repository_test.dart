@@ -14,11 +14,8 @@ void main() {
     "id": "music_jazz_focus",
     "title": "作業用にジャズを1曲だけ流す",
     "description": "歌詞のないジャズを1曲だけ流す。",
-    "detail": "作業用ジャズのプレイリストから1曲選ぶ。",
     "category": "music",
     "tags": ["ジャズ", "作業向け", "無料"],
-    "budget_yen": 0,
-    "where_to_try": "音楽配信アプリで検索する。",
     "estimated_minutes": 5,
     "weight": 1.2
   },
@@ -69,18 +66,21 @@ void main() {
       suggestions.every((suggestion) {
         return suggestion.title.isNotEmpty &&
             suggestion.description.isNotEmpty &&
-            suggestion.detail.isNotEmpty &&
-            suggestion.whereToTry.isNotEmpty &&
             suggestion.tags.isNotEmpty;
       }),
       isTrue,
     );
     expect(
-      suggestions.every((suggestion) => suggestion.budgetYen >= 0),
+      suggestions.every((suggestion) => suggestion.estimatedMinutes > 0),
       isTrue,
     );
+    // recipe は料理カテゴリだけが持つ。
     expect(
-      suggestions.every((suggestion) => suggestion.estimatedMinutes > 0),
+      suggestions.every((suggestion) {
+        return suggestion.category == 'cook'
+            ? suggestion.recipe != null && suggestion.recipe!.isNotEmpty
+            : suggestion.recipe == null;
+      }),
       isTrue,
     );
   });
@@ -113,7 +113,7 @@ void main() {
     }
   });
 
-  test('料理データのdetailは材料と2〜4手順の軽いレシピ形式になっている', () async {
+  test('料理データのrecipeは材料と2〜4手順が改行区切りのレシピ形式になっている', () async {
     final source = await rootBundle.loadString(suggestionsAssetPath);
     final suggestions = parseSuggestionsJson(source);
     final cookingSuggestions = suggestions.where(
@@ -122,25 +122,26 @@ void main() {
 
     expect(cookingSuggestions, isNotEmpty);
     for (final suggestion in cookingSuggestions) {
+      final recipe = suggestion.recipe!;
       expect(
-        suggestion.detail,
-        contains('材料：'),
-        reason: '${suggestion.id} のdetailに材料がない。',
+        recipe,
+        startsWith('材料：\n'),
+        reason: '${suggestion.id} のrecipeは「材料：」と改行で始める。',
       );
       expect(
-        suggestion.detail,
-        contains('手順：1.'),
-        reason: '${suggestion.id} のdetailに手順1がない。',
+        recipe,
+        contains('\n\n手順：\n1. '),
+        reason: '${suggestion.id} のrecipeは空行を挟んで「手順：」を分け、手順1を改行する。',
       );
       expect(
-        suggestion.detail,
-        contains('2.'),
-        reason: '${suggestion.id} のdetailは2手順以上必要。',
+        recipe,
+        contains('\n2. '),
+        reason: '${suggestion.id} のrecipeは2手順以上を番号ごとに改行する。',
       );
       expect(
-        suggestion.detail,
-        isNot(contains('5.')),
-        reason: '${suggestion.id} のdetailは4手順以内にする。',
+        recipe,
+        isNot(contains('\n5. ')),
+        reason: '${suggestion.id} のrecipeは4手順以内にする。',
       );
     }
   });
