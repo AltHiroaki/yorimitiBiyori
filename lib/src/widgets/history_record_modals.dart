@@ -157,8 +157,6 @@ class _DoneSuggestionRecordDetailDialog extends StatelessWidget {
                 description: suggestion.description,
                 tags: suggestion.tags,
                 estimatedMinutes: suggestion.estimatedMinutes,
-                whereToTry: suggestion.whereToTry,
-                budgetYen: suggestion.budgetYen,
                 footnote: feedback == null
                     ? null
                     : Text('感想：${feedbackDisplayLabel(feedback)}'),
@@ -247,8 +245,6 @@ class _ReviveSuggestionDetailDialog extends StatelessWidget {
                 description: suggestion.description,
                 tags: suggestion.tags,
                 estimatedMinutes: suggestion.estimatedMinutes,
-                whereToTry: suggestion.whereToTry,
-                budgetYen: suggestion.budgetYen,
                 titleSpacing: 10,
                 sectionSpacing: 14,
               ),

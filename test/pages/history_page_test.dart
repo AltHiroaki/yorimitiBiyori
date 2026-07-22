@@ -141,11 +141,8 @@ Map<String, dynamic> _suggestionJson({
     'id': id,
     'title': title,
     'description': '$titleの説明文。',
-    'detail': '$titleの補足。',
     'category': 'music',
     'tags': ['ジャズ'],
-    'budget_yen': 0,
-    'where_to_try': '音楽配信アプリで検索する。',
     'estimated_minutes': 5,
     'weight': 1.0,
   };
@@ -307,8 +304,7 @@ void main() {
     await tester.pumpAndSettle();
 
     expect(find.text('スキップした提案'), findsOneWidget);
-    expect(find.text('入手先：音楽配信アプリで検索する。'), findsOneWidget);
-    expect(find.text('予算：無料'), findsOneWidget);
+    expect(find.text('ジャズを1曲流すの説明文。'), findsOneWidget);
     expect(find.text('やってみる'), findsOneWidget);
     expect(find.text('別の提案'), findsNothing);
 
@@ -407,8 +403,7 @@ void main() {
 
     expect(find.text('実施したよりみち'), findsOneWidget);
     expect(find.text('6月5日に実施'), findsOneWidget);
-    expect(find.text('入手先：音楽配信アプリで検索する。'), findsOneWidget);
-    expect(find.text('予算：無料'), findsOneWidget);
+    expect(find.text('ジャズを1曲流すの説明文。'), findsOneWidget);
     expect(find.text('感想：😊 よかった'), findsOneWidget);
     // 閲覧専用：復活フローのボタンは出さない。
     expect(find.text('やってみる'), findsNothing);
