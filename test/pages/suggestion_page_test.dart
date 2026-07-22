@@ -325,6 +325,36 @@ void main() {
     expect(find.text(firstWasA ? 'ポップスを1曲流す' : 'ジャズを1曲流す'), findsOneWidget);
   });
 
+  testWidgets('詳細を展開したまま別の提案に切り替えると詳細が閉じる', (tester) async {
+    await _pumpPage(
+      tester,
+      suggestions: [
+        _suggestionJson(id: 'music_a', title: 'ジャズを1曲流す', tags: ['ジャズ']),
+        _suggestionJson(id: 'music_b', title: 'ポップスを1曲流す', tags: ['ポップス']),
+      ],
+      settings: const UserSettings(selectedCategories: ['music']),
+    );
+
+    await tester.tap(find.text('詳しく見る'));
+    await tester.pumpAndSettle();
+
+    expect(find.text('詳しい内容を閉じる'), findsOneWidget);
+    expect(
+      find.byKey(const ValueKey<String>('suggestion-detail-content')),
+      findsOneWidget,
+    );
+
+    await tester.tap(find.text('別の提案'));
+    await tester.pumpAndSettle();
+
+    expect(find.text('詳しく見る'), findsOneWidget);
+    expect(find.text('詳しい内容を閉じる'), findsNothing);
+    expect(
+      find.byKey(const ValueKey<String>('suggestion-detail-content')),
+      findsNothing,
+    );
+  });
+
   testWidgets('表示した提案IDが recent_suggestion_ids として3件まで保存される', (tester) async {
     final repository = await _pumpPage(
       tester,

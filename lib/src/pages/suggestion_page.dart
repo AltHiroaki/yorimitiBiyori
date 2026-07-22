@@ -463,6 +463,7 @@ class _SuggestionCard extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SuggestionCardContent(
+              key: ValueKey<String>(suggestion.id),
               headerLabel: '今日のよりみち',
               title: suggestion.title,
               description: suggestion.description,
