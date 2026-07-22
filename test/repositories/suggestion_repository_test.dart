@@ -145,4 +145,62 @@ void main() {
       );
     }
   });
+
+  test('料理データは各ジャンルに50件以上あり、タイトルが重複していない', () async {
+    final source = await rootBundle.loadString(suggestionsAssetPath);
+    final suggestions = parseSuggestionsJson(source);
+    final cookingSuggestions = suggestions
+        .where((suggestion) => suggestion.category == 'cook')
+        .toList();
+    final cookingCategory = InterestCategories.all.singleWhere(
+      (category) => category.id == 'cook',
+    );
+    final genreGroup = cookingCategory.detailSettingGroups.singleWhere(
+      (group) => group.id == 'genre',
+    );
+
+    for (final genre in genreGroup.options) {
+      final matchingCount = cookingSuggestions.where((suggestion) {
+        return suggestion.tags.contains(genre);
+      }).length;
+      expect(
+        matchingCount,
+        greaterThanOrEqualTo(50),
+        reason: '料理ジャンル「$genre」の提案は50件以上必要。',
+      );
+    }
+
+    final cookingTitles = cookingSuggestions
+        .map((suggestion) => suggestion.title)
+        .toSet();
+    expect(
+      cookingTitles,
+      hasLength(cookingSuggestions.length),
+      reason: '料理の提案タイトルは重複させない。',
+    );
+  });
+
+  test('すべての料理データに有効な調理法タグがある', () async {
+    final source = await rootBundle.loadString(suggestionsAssetPath);
+    final suggestions = parseSuggestionsJson(source);
+    final cookingCategory = InterestCategories.all.singleWhere(
+      (category) => category.id == 'cook',
+    );
+    final cookingMethodGroup = cookingCategory.detailSettingGroups.singleWhere(
+      (group) => group.id == 'cooking_method',
+    );
+
+    for (final suggestion in suggestions.where(
+      (suggestion) => suggestion.category == 'cook',
+    )) {
+      final hasCookingMethod = cookingMethodGroup.options.any(
+        suggestion.tags.contains,
+      );
+      expect(
+        hasCookingMethod,
+        isTrue,
+        reason: '${suggestion.id} に有効な調理法タグがない。',
+      );
+    }
+  });
 }
