@@ -100,7 +100,7 @@ MVP では **Android 版のみ**を実装・検証対象にします。iOS は M
 | 通知 | flutter_local_notifications 予定 | ローカル通知（通知タップで提案画面を開く） |
 | 画面遷移 | Flutter 標準 / 将来的に go_router | 提案・履歴・設定画面と提案設定サブ画面を切り替える |
 | 状態管理 | 初期は StatefulWidget、必要に応じて Riverpod | MVP では複雑化を避ける |
-| 提案データ | `assets/data/suggestions.json` | 提案候補を管理する（category＋tags＝詳細設定値） |
+| 提案データ | `assets/data/suggestions/<category>.json` | 提案候補をカテゴリ別に管理する（category＋tags＝詳細設定値） |
 | 履歴保存 | shared_preferences 予定 | ログインなしで端末内に履歴を保存する |
 | テスト | flutter_test | ロジック・Widget のテストを行う |
 
@@ -120,7 +120,7 @@ MVP では、Flutter アプリ内で完結させます。
 フロントエンド: Flutter アプリ
 バックエンド: なし
 データベース: 端末内保存
-初期提案データ: assets/data/suggestions.json
+初期提案データ: assets/data/suggestions/<category>.json
 ```
 
 AI 提案を入れる発展 Phase では、以下の構成を検討します。
@@ -170,7 +170,12 @@ yorimichiBiyori/
 ├─ analysis_options.yaml
 ├─ assets/
 │  └─ data/
-│     └─ suggestions.json
+│     └─ suggestions/
+│        ├─ music.json
+│        ├─ cook.json
+│        ├─ read.json
+│        ├─ movie.json
+│        └─ walk.json
 ├─ lib/
 │  ├─ main.dart
 │  └─ src/
@@ -311,7 +316,7 @@ flutter test
 
 1. Flutter プロジェクトとして起動できる状態にする
 2. 提案・履歴・設定の 3 タブと提案設定サブ画面の骨格を作る
-3. `suggestions.json` を新スキーマで整備する（category＋tags＝詳細設定値・estimated_minutes）
+3. カテゴリ別の提案JSONを新スキーマで整備する（category＋tags＝詳細設定値・estimated_minutes）
 4. 提案ロジック（カテゴリ＋カテゴリ別詳細設定タグ・予算・直近除外・weight）を実装する
 5. オンボーディング（初回起動 → カテゴリ選択 → 通知許可）を作る
 6. 提案設定画面（二段階）と「現在の提案条件」カードを作る

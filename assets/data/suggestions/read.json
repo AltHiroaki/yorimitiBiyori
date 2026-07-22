@@ -1,0 +1,3886 @@
+[
+  {
+    "id": "read_essay_sample",
+    "title": "エッセイの無料サンプルを読む",
+    "description": "電子書籍の無料サンプルで、日常エッセイを1話だけ読む。",
+    "category": "read",
+    "tags": [
+      "エッセイ",
+      "10分以内",
+      "電子書籍",
+      "無料"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.2
+  },
+  {
+    "id": "read_library_nonfiction",
+    "title": "図書館でノンフィクションを1章読む",
+    "description": "図書館の棚から薄めのノンフィクションを選び、1章だけ読んでみる。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "30分",
+      "図書館",
+      "無料"
+    ],
+    "estimated_minutes": 30,
+    "weight": 1.0
+  },
+  {
+    "id": "read_poem_one",
+    "title": "詩を1編だけ読む",
+    "description": "詩集やWebで詩を1編だけ読み、言葉のリズムを味わう。",
+    "category": "read",
+    "tags": [
+      "詩集",
+      "10分以内",
+      "〜500円"
+    ],
+    "estimated_minutes": 5,
+    "weight": 0.9
+  },
+  {
+    "id": "read_novel_opening",
+    "title": "小説の冒頭だけ読んでみる",
+    "description": "気になっていた小説の冒頭数ページだけ読んで、続きを読むか決める。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "10分以内",
+      "無料"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_01_item",
+    "title": "『流星ワゴン』を読んでみる",
+    "description": "重松清｜小説。父と子の関係を見つめ直すヒューマンドラマ。",
+    "category": "read",
+    "tags": [
+      "小説"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_02_item",
+    "title": "『コンビニ人間』を読んでみる",
+    "description": "村田沙耶香｜小説。「普通」とは何かを問いかける芥川賞受賞作。",
+    "category": "read",
+    "tags": [
+      "小説"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_03_item",
+    "title": "『博士の愛した数式』を読んでみる",
+    "description": "小川洋子｜小説。記憶が80分しかもたない博士と家政婦の温かい物語。",
+    "category": "read",
+    "tags": [
+      "小説"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_04_x",
+    "title": "『容疑者Xの献身』を読んでみる",
+    "description": "東野圭吾｜小説。切なくも緻密なトリックが光る本格ミステリー。",
+    "category": "read",
+    "tags": [
+      "小説"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_05_item",
+    "title": "『世界の中心で、愛をさけぶ』を読んでみる",
+    "description": "片山恭一｜小説。純愛と喪失を描いたベストセラー恋愛小説。",
+    "category": "read",
+    "tags": [
+      "小説"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_06_item",
+    "title": "『火花』を読んでみる",
+    "description": "又吉直樹｜小説。芸人同士の師弟関係を描いた芥川賞受賞作。",
+    "category": "read",
+    "tags": [
+      "小説"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_07_item",
+    "title": "『蜜蜂と遠雷』を読んでみる",
+    "description": "恩田陸｜小説。ピアノコンクールを舞台にした音楽小説の傑作。",
+    "category": "read",
+    "tags": [
+      "小説"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_08_item",
+    "title": "『かがみの孤城』を読んでみる",
+    "description": "辻村深月｜小説。居場所のない子どもたちが集う不思議な城の物語。",
+    "category": "read",
+    "tags": [
+      "小説"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_09_item",
+    "title": "『存在のすべてを』を読んでみる",
+    "description": "塩田武士｜小説。誘拐事件の真相を追うミステリー巨編。",
+    "category": "read",
+    "tags": [
+      "小説"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_10_item",
+    "title": "『三体』を読んでみる",
+    "description": "劉慈欣｜小説。中国発、世界的ヒットとなったSF大作。",
+    "category": "read",
+    "tags": [
+      "小説"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_11_item",
+    "title": "『ノルウェイの森』を読んでみる",
+    "description": "村上春樹｜小説。青春の喪失と再生を描いた代表的恋愛小説。",
+    "category": "read",
+    "tags": [
+      "小説"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_12_item",
+    "title": "『羊と鋼の森』を読んでみる",
+    "description": "宮下奈都｜小説。ピアノ調律師の成長を描いた静かな物語。",
+    "category": "read",
+    "tags": [
+      "小説"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_13_item",
+    "title": "『告白』を読んでみる",
+    "description": "湊かなえ｜小説。衝撃の展開が続くイヤミス系ベストセラー。",
+    "category": "read",
+    "tags": [
+      "小説"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_14_item",
+    "title": "『陰陽師』を読んでみる",
+    "description": "夢枕獏｜小説。平安京を舞台にした幻想的な伝奇小説。",
+    "category": "read",
+    "tags": [
+      "小説"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_15_item",
+    "title": "『きらきらひかる』を読んでみる",
+    "description": "江國香織｜小説。不器用な夫婦の関係を描いた繊細な物語。",
+    "category": "read",
+    "tags": [
+      "小説"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_16_item",
+    "title": "『万引き家族』を読んでみる",
+    "description": "是枝裕和｜小説。映画のノベライズ、疑似家族の絆を描く。",
+    "category": "read",
+    "tags": [
+      "小説"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_17_item",
+    "title": "『夜のピクニック』を読んでみる",
+    "description": "恩田陸｜小説。夜通し歩く高校行事を描いた青春小説。",
+    "category": "read",
+    "tags": [
+      "小説"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_18_5",
+    "title": "『秒速5センチメートル』を読んでみる",
+    "description": "新海誠｜小説。すれ違う想いを描いた切ないノベライズ。",
+    "category": "read",
+    "tags": [
+      "小説"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_19_item",
+    "title": "『阪急電車』を読んでみる",
+    "description": "有川浩｜小説。小さな私鉄沿線を舞台にした連作短編集。",
+    "category": "read",
+    "tags": [
+      "小説"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_20_item",
+    "title": "『天気の子』を読んでみる",
+    "description": "新海誠｜小説。少年少女の選択を描いた映画のノベライズ。",
+    "category": "read",
+    "tags": [
+      "小説"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_21_item",
+    "title": "『もものかんづめ』を読んでみる",
+    "description": "さくらももこ｜エッセイ。独特のユーモアが詰まった人気エッセイ集。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_22_item",
+    "title": "『たいのおかしら』を読んでみる",
+    "description": "さくらももこ｜エッセイ。日常の些細な出来事を面白く描く一冊。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_23_2",
+    "title": "『第2図書係補佐』を読んでみる",
+    "description": "又吉直樹｜エッセイ。読書好きの著者による本にまつわるエッセイ。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_24_item",
+    "title": "『そして生活はつづく』を読んでみる",
+    "description": "星野源｜エッセイ。日常の観察眼が光る、飾らない語り口のエッセイ。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_25_item",
+    "title": "『社会人大学人見知り学部卒業見込』を読んでみる",
+    "description": "若林正恭｜エッセイ。人見知りならではの視点で綴られる痛快エッセイ。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_26_item",
+    "title": "『ボクたちはみんな大人になれなかった』を読んでみる",
+    "description": "燃え殻｜エッセイ。90年代を懐かしむ大人に刺さる一冊。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_27_item",
+    "title": "『マイ仏教』を読んでみる",
+    "description": "みうらじゅん｜エッセイ。独自の視点で仏教を語るユニークなエッセイ。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_28_item",
+    "title": "『聞く力』を読んでみる",
+    "description": "阿川佐和子｜エッセイ。会話上手になるヒントが詰まった対談エッセイ。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_29_item",
+    "title": "『妻のトリセツ』を読んでみる",
+    "description": "黒川伊保子｜エッセイ。脳科学の視点からパートナーとの関係を考える。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_30_item",
+    "title": "『夫のトリセツ』を読んでみる",
+    "description": "黒川伊保子｜エッセイ。「妻のトリセツ」の対になる、夫向けの一冊。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_31_item",
+    "title": "『家族という病』を読んでみる",
+    "description": "下重暁子｜エッセイ。家族との距離感を見つめ直すエッセイ。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_32_item",
+    "title": "『大人の言い訳』を読んでみる",
+    "description": "みうらじゅん｜エッセイ。肩の力が抜けるユーモラスな語り口。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_33_item",
+    "title": "『サピエンス全史』を読んでみる",
+    "description": "ユヴァル・ノア・ハラリ｜ノンフィクション。人類の歴史を大きな視点で描く話題の一冊。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_34_factfulness",
+    "title": "『FACTFULNESS』を読んでみる",
+    "description": "ハンス・ロスリング｜ノンフィクション。データに基づいて世界を正しく見る方法を学べる。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_35_item",
+    "title": "『銃・病原菌・鉄』を読んでみる",
+    "description": "ジャレド・ダイアモンド｜ノンフィクション。文明の差がなぜ生まれたかを解き明かす大著。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_36_item",
+    "title": "『夜と霧』を読んでみる",
+    "description": "ヴィクトール・E・フランクル｜ノンフィクション。強制収容所を生き抜いた著者による深い人生論。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_37_item",
+    "title": "『生物と無生物のあいだ』を読んでみる",
+    "description": "福岡伸一｜ノンフィクション。生命とは何かを平易な言葉で語る科学エッセイ。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_38_item",
+    "title": "『東京タワー』を読んでみる",
+    "description": "リリー・フランキー｜ノンフィクション。母と子の絆を描いた自伝的作品。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_39_item",
+    "title": "『進化しすぎた脳』を読んでみる",
+    "description": "池谷裕二｜ノンフィクション。脳科学の面白さを対話形式で学べる一冊。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_40_item",
+    "title": "『学び方の学び方』を読んでみる",
+    "description": "バーバラ・オークリー｜ノンフィクション。効率的な学習法を科学的に解説する一冊。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_41_item",
+    "title": "『医者が教える食事術』を読んでみる",
+    "description": "牧田善二｜ノンフィクション。血糖値コントロールを軸にした食事の知識本。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_42_item",
+    "title": "『スタンフォード式最高の睡眠』を読んでみる",
+    "description": "西野精治｜ノンフィクション。科学的根拠に基づいた快眠のコツをまとめた一冊。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_43_9",
+    "title": "『人は聞き方が9割』を読んでみる",
+    "description": "永松茂久｜ノンフィクション。コミュニケーションの基本を分かりやすく解説。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_44_item",
+    "title": "『嫌われる勇気』を読んでみる",
+    "description": "岸見一郎・古賀史健｜ノンフィクション。アドラー心理学を対話形式で学べるロングセラー。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_45_item",
+    "title": "『道程』を読んでみる",
+    "description": "高村光太郎｜詩集。力強い生き方を歌った代表的な詩集。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "read_46_item",
+    "title": "『智恵子抄』を読んでみる",
+    "description": "高村光太郎｜詩集。妻・智恵子への想いを綴った詩集。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "read_47_item",
+    "title": "『山羊の歌』を読んでみる",
+    "description": "中原中也｜詩集。独特のリズムを持つ中也の代表詩集。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "read_48_item",
+    "title": "『二十億光年の孤独』を読んでみる",
+    "description": "谷川俊太郎｜詩集。みずみずしい言葉で綴られたデビュー詩集。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "read_49_item",
+    "title": "『谷川俊太郎詩選集』を読んでみる",
+    "description": "谷川俊太郎｜詩集。やわらかな言葉づかいが魅力の詩を集めた一冊。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "read_50_item",
+    "title": "『わたしと小鳥とすずと』を読んでみる",
+    "description": "金子みすゞ｜詩集。優しいまなざしが感じられる童謡詩集。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "read_051_item",
+    "title": "『そして誰もいなくなった』を読んでみる",
+    "description": "アガサ・クリスティ｜ミステリー・サスペンス。ミステリーの金字塔と呼ばれる孤島サスペンス。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_052_item",
+    "title": "『オリエント急行殺人事件』を読んでみる",
+    "description": "アガサ・クリスティ｜ミステリー・サスペンス。名探偵ポワロが挑む列車内の密室殺人。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_053_item",
+    "title": "『アクロイド殺し』を読んでみる",
+    "description": "アガサ・クリスティ｜ミステリー・サスペンス。衝撃の結末で知られる本格ミステリーの傑作。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_054_item",
+    "title": "『ナイルに死す』を読んでみる",
+    "description": "アガサ・クリスティ｜ミステリー・サスペンス。エジプトを舞台にした優雅で緊迫感ある推理劇。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_055_abc",
+    "title": "『ABC殺人事件』を読んでみる",
+    "description": "アガサ・クリスティ｜ミステリー・サスペンス。アルファベット順に起きる連続殺人の謎に挑む。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_056_item",
+    "title": "『十角館の殺人』を読んでみる",
+    "description": "綾辻行人｜ミステリー・サスペンス。新本格ミステリーの金字塔と呼ばれる衝撃作。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_057_item",
+    "title": "『霧越邸殺人事件』を読んでみる",
+    "description": "綾辻行人｜ミステリー・サスペンス。雪の山荘で起こる連続殺人を描く本格ミステリー。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_058_item",
+    "title": "『占星術殺人事件』を読んでみる",
+    "description": "島田荘司｜ミステリー・サスペンス。トリックの独創性で名高い本格推理小説の名作。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_059_item",
+    "title": "『白夜行』を読んでみる",
+    "description": "東野圭吾｜ミステリー・サスペンス。20年にわたる男女の運命を描く長編ミステリー。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "estimated_minutes": 25,
+    "weight": 1.0
+  },
+  {
+    "id": "read_060_item",
+    "title": "『新参者』を読んでみる",
+    "description": "東野圭吾｜ミステリー・サスペンス。加賀恭一郎シリーズ、下町の人間模様を描く連作。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_061_item",
+    "title": "『悪意』を読んでみる",
+    "description": "東野圭吾｜ミステリー・サスペンス。動機の謎を追う心理描写の巧みなミステリー。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_062_item",
+    "title": "『秘密』を読んでみる",
+    "description": "東野圭吾｜ミステリー・サスペンス。入れ替わった母娘の秘密を描く感動ミステリー。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_063_item",
+    "title": "『流星の絆』を読んでみる",
+    "description": "東野圭吾｜ミステリー・サスペンス。兄妹3人が真相を追う復讐劇のミステリー。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_064_item",
+    "title": "『マスカレード・ホテル』を読んでみる",
+    "description": "東野圭吾｜ミステリー・サスペンス。刑事とホテルマンが連続殺人に挑む人気シリーズ。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_065_item",
+    "title": "『火車』を読んでみる",
+    "description": "宮部みゆき｜ミステリー・サスペンス。失踪した女性の正体を追うサスペンスの傑作。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_066_item",
+    "title": "『模倣犯』を読んでみる",
+    "description": "宮部みゆき｜ミステリー・サスペンス。連続殺人犯の心理を描いた重厚な長編サスペンス。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "estimated_minutes": 25,
+    "weight": 1.0
+  },
+  {
+    "id": "read_067_item",
+    "title": "『理由』を読んでみる",
+    "description": "宮部みゆき｜ミステリー・サスペンス。一家殺害事件の真相に迫る社会派ミステリー。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_068_item",
+    "title": "『半落ち』を読んでみる",
+    "description": "横山秀夫｜ミステリー・サスペンス。警察小説の傑作、自首した刑事の空白の時間を追う。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_069_item",
+    "title": "『クライマーズ・ハイ』を読んでみる",
+    "description": "横山秀夫｜ミステリー・サスペンス。新聞社を舞台にした緊迫感あふれる群像劇。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_070_item",
+    "title": "『点と線』を読んでみる",
+    "description": "松本清張｜ミステリー・サスペンス。社会派ミステリーの先駆けとなった不朽の名作。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_071_item",
+    "title": "『砂の器』を読んでみる",
+    "description": "松本清張｜ミステリー・サスペンス。方言をヒントに真相へ迫る社会派推理の傑作。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_072_item",
+    "title": "『ゼロの焦点』を読んでみる",
+    "description": "松本清張｜ミステリー・サスペンス。失踪した夫の過去を追うサスペンスミステリー。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_073_item",
+    "title": "『白ゆき姫殺人事件』を読んでみる",
+    "description": "湊かなえ｜ミステリー・サスペンス。SNSでの憶測が事件を歪めていく群像劇ミステリー。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_074_item",
+    "title": "『贖罪』を読んでみる",
+    "description": "湊かなえ｜ミステリー・サスペンス。少女の死をめぐる4人の女性の贖罪を描く連作。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_075_item",
+    "title": "『ストロベリーナイト』を読んでみる",
+    "description": "誉田哲也｜ミステリー・サスペンス。女性刑事・姫川玲子が活躍する警察小説シリーズ。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_076_item",
+    "title": "『悪の教典』を読んでみる",
+    "description": "貴志祐介｜ミステリー・サスペンス。教師の凶行を描く戦慄のサイコサスペンス。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "estimated_minutes": 25,
+    "weight": 1.0
+  },
+  {
+    "id": "read_077_item",
+    "title": "『黒い家』を読んでみる",
+    "description": "貴志祐介｜ミステリー・サスペンス。保険金殺人をめぐる恐怖のサスペンス。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_078_item",
+    "title": "『向日葵の咲かない夏』を読んでみる",
+    "description": "道尾秀介｜ミステリー・サスペンス。少年の死の真相を追うミステリー。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_079_item",
+    "title": "『氷菓』を読んでみる",
+    "description": "米澤穂信｜ミステリー・サスペンス。〈古典部〉シリーズ第1作、日常の謎を描く青春ミステリー。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_080_item",
+    "title": "『満願』を読んでみる",
+    "description": "米澤穂信｜ミステリー・サスペンス。短編集ながら高い評価を受けるミステリーの傑作。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_081_item",
+    "title": "『ゴールデンスランバー』を読んでみる",
+    "description": "伊坂幸太郎｜ミステリー・サスペンス。無実の罪を着せられた男の逃亡を描くサスペンス。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_082_item",
+    "title": "『重力ピエロ』を読んでみる",
+    "description": "伊坂幸太郎｜ミステリー・サスペンス。兄弟が連続放火事件の謎を追うミステリー。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_083_item",
+    "title": "『アヒルと鴨のコインロッカー』を読んでみる",
+    "description": "伊坂幸太郎｜ミステリー・サスペンス。巧みな構成で読ませる青春ミステリー。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_084_f",
+    "title": "『すべてがFになる』を読んでみる",
+    "description": "森博嗣｜ミステリー・サスペンス。理系ミステリーの先駆けとなった人気シリーズ第1作。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_085_item",
+    "title": "『姑獲鳥の夏』を読んでみる",
+    "description": "京極夏彦｜ミステリー・サスペンス。妖怪と事件が交差する独特な世界観のミステリー。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "estimated_minutes": 25,
+    "weight": 1.0
+  },
+  {
+    "id": "read_086_46",
+    "title": "『46番目の密室』を読んでみる",
+    "description": "有栖川有栖｜ミステリー・サスペンス。本格推理作家・有栖川有栖のデビュー作。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_087_item",
+    "title": "『麒麟の翼』を読んでみる",
+    "description": "東野圭吾｜ミステリー・サスペンス。加賀恭一郎シリーズ、日本橋を舞台にした人情ミステリー。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_088_item",
+    "title": "『シャーロック・ホームズの冒険』を読んでみる",
+    "description": "コナン・ドイル｜ミステリー・サスペンス。名探偵ホームズの活躍を描く短編集の傑作。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_089_item",
+    "title": "『バスカヴィル家の犬』を読んでみる",
+    "description": "コナン・ドイル｜ミステリー・サスペンス。ホームズシリーズ屈指の怪奇色あふれる長編。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_090_x",
+    "title": "『Xの悲劇』を読んでみる",
+    "description": "エラリー・クイーン｜ミステリー・サスペンス。本格推理小説の古典として名高い一冊。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_091_item",
+    "title": "『ダ・ヴィンチ・コード』を読んでみる",
+    "description": "ダン・ブラウン｜ミステリー・サスペンス。美術と宗教の謎を追う世界的ベストセラー。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "estimated_minutes": 25,
+    "weight": 1.0
+  },
+  {
+    "id": "read_092_item",
+    "title": "『天使と悪魔』を読んでみる",
+    "description": "ダン・ブラウン｜ミステリー・サスペンス。バチカンを舞台にした緊迫のサスペンス。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "estimated_minutes": 25,
+    "weight": 1.0
+  },
+  {
+    "id": "read_093_item",
+    "title": "『ゴーン・ガール』を読んでみる",
+    "description": "ギリアン・フリン｜ミステリー・サスペンス。夫婦の視点が交錯する心理サスペンスの傑作。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_094_item",
+    "title": "『ミレニアム ドラゴン・タトゥーの女』を読んでみる",
+    "description": "スティーグ・ラーソン｜ミステリー・サスペンス。ジャーナリストとハッカーが挑む北欧ミステリー。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "estimated_minutes": 25,
+    "weight": 1.0
+  },
+  {
+    "id": "read_095_item",
+    "title": "『ボーン・コレクター』を読んでみる",
+    "description": "ジェフリー・ディーヴァー｜ミステリー・サスペンス。緻密な科学捜査が光るサスペンスの人気シリーズ。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_096_item",
+    "title": "『羊たちの沈黙』を読んでみる",
+    "description": "トマス・ハリス｜ミステリー・サスペンス。猟奇殺人犯と対峙する心理サスペンスの金字塔。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_097_item",
+    "title": "『太陽がいっぱい』を読んでみる",
+    "description": "パトリシア・ハイスミス｜ミステリー・サスペンス。青年の欲望と犯罪を描くサスペンスの古典。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_098_i",
+    "title": "『Iの悲劇』を読んでみる",
+    "description": "米澤穂信｜ミステリー・サスペンス。過疎の村再生をめぐる連作ミステリー。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_099_item",
+    "title": "『七回死んだ男』を読んでみる",
+    "description": "西澤保彦｜ミステリー・サスペンス。同じ日を繰り返すタイムループ設定の異色ミステリー。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_100_item",
+    "title": "『黒革の手帖』を読んでみる",
+    "description": "松本清張｜ミステリー・サスペンス。銀行員の女性が仕掛ける復讐劇を描くサスペンス。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "ミステリー・サスペンス"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_101_item",
+    "title": "『ボッコちゃん』を読んでみる",
+    "description": "星新一｜SF・ファンタジー。ショートショートの名手による有名短編集。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_102_item",
+    "title": "『きまぐれロボット』を読んでみる",
+    "description": "星新一｜SF・ファンタジー。軽妙な語り口で楽しめるSFショートショート集。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_103_item",
+    "title": "『日本沈没』を読んでみる",
+    "description": "小松左京｜SF・ファンタジー。日本列島の危機を描いた日本SFの金字塔。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "estimated_minutes": 25,
+    "weight": 1.0
+  },
+  {
+    "id": "read_104_item",
+    "title": "『時をかける少女』を読んでみる",
+    "description": "筒井康隆｜SF・ファンタジー。タイムリープを描いた青春SFの名作。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_105_item",
+    "title": "『虐殺器官』を読んでみる",
+    "description": "伊藤計劃｜SF・ファンタジー。近未来を舞台にした衝撃的な戦争SF。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_106_item",
+    "title": "『ハーモニー』を読んでみる",
+    "description": "伊藤計劃｜SF・ファンタジー。健康至上主義の未来社会を描くSFの傑作。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_107_item",
+    "title": "『マルドゥック・スクランブル』を読んでみる",
+    "description": "冲方丁｜SF・ファンタジー。サイバーパンク色の強い異色のSF長編。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "estimated_minutes": 25,
+    "weight": 1.0
+  },
+  {
+    "id": "read_108_item",
+    "title": "『新世界より』を読んでみる",
+    "description": "貴志祐介｜SF・ファンタジー。超能力社会の闇を描く壮大なSF。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "estimated_minutes": 25,
+    "weight": 1.0
+  },
+  {
+    "id": "read_109_item",
+    "title": "『精霊の守り人』を読んでみる",
+    "description": "上橋菜穂子｜SF・ファンタジー。異世界を舞台にした女用心棒の物語。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_110_item",
+    "title": "『空色勾玉』を読んでみる",
+    "description": "荻原規子｜SF・ファンタジー。和風ファンタジーの人気シリーズ第1作。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_111_item",
+    "title": "『月の影 影の海』を読んでみる",
+    "description": "小野不由美｜SF・ファンタジー。〈十二国記〉シリーズの幕開けとなる異世界ファンタジー。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "estimated_minutes": 25,
+    "weight": 1.0
+  },
+  {
+    "id": "read_112_item",
+    "title": "『ロードス島戦記』を読んでみる",
+    "description": "水野良｜SF・ファンタジー。国産ファンタジー小説の先駆けとなった人気作。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_113_item",
+    "title": "『図書館戦争』を読んでみる",
+    "description": "有川浩｜SF・ファンタジー。本を守る自衛隊組織を描くエンタメ小説。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_114_item",
+    "title": "『ハリー・ポッターと賢者の石』を読んでみる",
+    "description": "J.K.ローリング｜SF・ファンタジー。魔法学校を舞台にした世界的ベストセラー。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "estimated_minutes": 25,
+    "weight": 1.0
+  },
+  {
+    "id": "read_115_item",
+    "title": "『われはロボット』を読んでみる",
+    "description": "アイザック・アシモフ｜SF・ファンタジー。ロボット三原則で知られるSFの古典。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_116_item",
+    "title": "『ファウンデーション』を読んでみる",
+    "description": "アイザック・アシモフ｜SF・ファンタジー。銀河帝国の興亡を描く壮大なSF叙事詩。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "estimated_minutes": 25,
+    "weight": 1.0
+  },
+  {
+    "id": "read_117_2001",
+    "title": "『2001年宇宙の旅』を読んでみる",
+    "description": "アーサー・C・クラーク｜SF・ファンタジー。映画の原作としても知られるSFの金字塔。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_118_item",
+    "title": "『幼年期の終わり』を読んでみる",
+    "description": "アーサー・C・クラーク｜SF・ファンタジー。人類進化を壮大なスケールで描くSF。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_119_item",
+    "title": "『アンドロイドは電気羊の夢を見るか？』を読んでみる",
+    "description": "フィリップ・K・ディック｜SF・ファンタジー。映画「ブレードランナー」原作のSF。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_120_451",
+    "title": "『華氏451度』を読んでみる",
+    "description": "レイ・ブラッドベリ｜SF・ファンタジー。本が禁じられた社会を描くディストピアSF。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_121_item",
+    "title": "『デューン 砂の惑星』を読んでみる",
+    "description": "フランク・ハーバート｜SF・ファンタジー。壮大な世界観を持つSFの金字塔。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "estimated_minutes": 25,
+    "weight": 1.0
+  },
+  {
+    "id": "read_122_1984",
+    "title": "『1984年』を読んでみる",
+    "description": "ジョージ・オーウェル｜SF・ファンタジー。監視社会を描いたディストピア小説の代表作。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_123_item",
+    "title": "『すばらしい新世界』を読んでみる",
+    "description": "オルダス・ハクスリー｜SF・ファンタジー。管理社会を描くディストピアSFの古典。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_124_item",
+    "title": "『銀河ヒッチハイク・ガイド』を読んでみる",
+    "description": "ダグラス・アダムス｜SF・ファンタジー。ユーモアあふれる宇宙冒険コメディSF。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_125_item",
+    "title": "『火星の人』を読んでみる",
+    "description": "アンディ・ウィアー｜SF・ファンタジー。火星に取り残された宇宙飛行士のサバイバルSF。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "estimated_minutes": 25,
+    "weight": 1.0
+  },
+  {
+    "id": "read_126_item",
+    "title": "『指輪物語 旅の仲間』を読んでみる",
+    "description": "J.R.R.トールキン｜SF・ファンタジー。ファンタジー小説の原点と呼ばれる大長編。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "estimated_minutes": 25,
+    "weight": 1.0
+  },
+  {
+    "id": "read_127_item",
+    "title": "『ホビットの冒険』を読んでみる",
+    "description": "J.R.R.トールキン｜SF・ファンタジー。指輪物語の前日譚となる冒険ファンタジー。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_128_item",
+    "title": "『ライオンと魔女』を読んでみる",
+    "description": "C.S.ルイス｜SF・ファンタジー。〈ナルニア国物語〉シリーズ第1作。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_129_item",
+    "title": "『ゲド戦記 影との戦い』を読んでみる",
+    "description": "アーシュラ・K・ル=グウィン｜SF・ファンタジー。魔法使いの成長を描くファンタジーの名作。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_130_item",
+    "title": "『氷と炎の歌 七王国の玉座』を読んでみる",
+    "description": "ジョージ・R・R・マーティン｜SF・ファンタジー。ドラマ化でも話題になった重厚な叙事詩。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "estimated_minutes": 25,
+    "weight": 1.0
+  },
+  {
+    "id": "read_131_item",
+    "title": "『わたしを離さないで』を読んでみる",
+    "description": "カズオ・イシグロ｜SF・ファンタジー。静かな筆致で人間の存在を問うSF的長編。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_132_item",
+    "title": "『攻殻機動隊』を読んでみる",
+    "description": "士郎正宗｜SF・ファンタジー。サイバーパンクの金字塔となったグラフィックノベル。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_133_item",
+    "title": "『ソードアート・オンライン』を読んでみる",
+    "description": "川原礫｜SF・ファンタジー。VRMMOを舞台にしたライトノベルの人気作。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_134_item",
+    "title": "『ノーゲーム・ノーライフ』を読んでみる",
+    "description": "榎宮祐｜SF・ファンタジー。異世界でのゲーム対決を描くライトノベル。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_135_re",
+    "title": "『Re:ゼロから始める異世界生活』を読んでみる",
+    "description": "長月達平｜SF・ファンタジー。死に戻りの能力を持つ主人公の異世界ファンタジー。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_136_item",
+    "title": "『君の名は。』を読んでみる",
+    "description": "新海誠｜SF・ファンタジー。入れ替わりを描いた大ヒット映画のノベライズ。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_137_item",
+    "title": "『リング』を読んでみる",
+    "description": "鈴木光司｜SF・ファンタジー。呪いのビデオを描くホラーSFの金字塔。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_138_item",
+    "title": "『パラサイト・イヴ』を読んでみる",
+    "description": "瀬名秀明｜SF・ファンタジー。ミトコンドリアの反乱を描く日本SFホラーの傑作。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_139_brainvalley",
+    "title": "『BRAIN VALLEY』を読んでみる",
+    "description": "瀬名秀明｜SF・ファンタジー。脳科学と信仰をテーマにした壮大なSF。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "estimated_minutes": 25,
+    "weight": 1.0
+  },
+  {
+    "id": "read_140_allyouneediskill",
+    "title": "『All You Need Is Kill』を読んでみる",
+    "description": "桜坂洋｜SF・ファンタジー。タイムループ設定で知られる人気SFライトノベル。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_141_item",
+    "title": "『都市と都市』を読んでみる",
+    "description": "チャイナ・ミエヴィル｜SF・ファンタジー。2つの都市が重なる独特な世界観のSFミステリー。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_142_ii",
+    "title": "『三体II 黒暗森林』を読んでみる",
+    "description": "劉慈欣｜SF・ファンタジー。『三体』続編、宇宙的な戦略を描くSF大作。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "estimated_minutes": 25,
+    "weight": 1.0
+  },
+  {
+    "id": "read_143_iii",
+    "title": "『三体III 死神永生』を読んでみる",
+    "description": "劉慈欣｜SF・ファンタジー。三体三部作の完結編、壮大なスケールの物語。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "estimated_minutes": 25,
+    "weight": 1.0
+  },
+  {
+    "id": "read_144_item",
+    "title": "『マーダーボット・ダイアリー』を読んでみる",
+    "description": "マーサ・ウェルズ｜SF・ファンタジー。感情豊かな警備ロボットが主人公の人気SF。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_145_item",
+    "title": "『プロジェクト・ヘイル・メアリー』を読んでみる",
+    "description": "アンディ・ウィアー｜SF・ファンタジー。記憶を失った宇宙飛行士が挑む壮大なSF。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "estimated_minutes": 25,
+    "weight": 1.0
+  },
+  {
+    "id": "read_146_item",
+    "title": "『クラウド・アトラス』を読んでみる",
+    "description": "デイヴィッド・ミッチェル｜SF・ファンタジー。時代を超えて連鎖する6つの物語。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "estimated_minutes": 25,
+    "weight": 1.0
+  },
+  {
+    "id": "read_147_item",
+    "title": "『侍女の物語』を読んでみる",
+    "description": "マーガレット・アトウッド｜SF・ファンタジー。管理社会を描くディストピアSFの傑作。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_148_item",
+    "title": "『神々自身』を読んでみる",
+    "description": "アイザック・アシモフ｜SF・ファンタジー。並行宇宙をテーマにしたハードSFの名作。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_149_item",
+    "title": "『アルジャーノンに花束を』を読んでみる",
+    "description": "ダニエル・キイス｜SF・ファンタジー。知能が変化していく主人公を描くSFの金字塔。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_150_item",
+    "title": "『すずめの戸締まり』を読んでみる",
+    "description": "新海誠｜SF・ファンタジー。災害と喪失をテーマにした映画のノベライズ。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "SF・ファンタジー"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_151_7",
+    "title": "『7つの習慣』を読んでみる",
+    "description": "スティーブン・R・コヴィー｜ビジネス・自己啓発。世界的ベストセラーとなった自己啓発の定番。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_152_item",
+    "title": "『金持ち父さん貧乏父さん』を読んでみる",
+    "description": "ロバート・キヨサキ｜ビジネス・自己啓発。お金の考え方を平易に説く人気の入門書。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_153_item",
+    "title": "『イシューからはじめよ』を読んでみる",
+    "description": "安宅和人｜ビジネス・自己啓発。問題設定の重要性を説く思考法の指南書。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_154_item",
+    "title": "『人を動かす』を読んでみる",
+    "description": "デール・カーネギー｜ビジネス・自己啓発。人間関係の名著として読み継がれる一冊。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_155_item",
+    "title": "『道は開ける』を読んでみる",
+    "description": "デール・カーネギー｜ビジネス・自己啓発。悩みとの向き合い方を説く自己啓発の古典。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_156_item",
+    "title": "『思考は現実化する』を読んでみる",
+    "description": "ナポレオン・ヒル｜ビジネス・自己啓発。成功哲学の原点として知られる一冊。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_157_item",
+    "title": "『幸せになる勇気』を読んでみる",
+    "description": "岸見一郎・古賀史健｜ビジネス・自己啓発。『嫌われる勇気』続編、アドラー心理学の実践編。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_158_item",
+    "title": "『エッセンシャル思考』を読んでみる",
+    "description": "グレッグ・マキューン｜ビジネス・自己啓発。「より少なく、しかしより良く」を説く一冊。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_159_item",
+    "title": "『ゼロ・トゥ・ワン』を読んでみる",
+    "description": "ピーター・ティール｜ビジネス・自己啓発。スタートアップ思考を説くシリコンバレーの必読書。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_160_lifeshift",
+    "title": "『LIFE SHIFT』を読んでみる",
+    "description": "リンダ・グラットン｜ビジネス・自己啓発。人生100年時代の生き方・働き方を提案する一冊。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_161_grit",
+    "title": "『GRIT やり抜く力』を読んでみる",
+    "description": "アンジェラ・ダックワース｜ビジネス・自己啓発。才能よりも継続力の重要性を説く一冊。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_162_item",
+    "title": "『イノベーションのジレンマ』を読んでみる",
+    "description": "クレイトン・クリステンセン｜ビジネス・自己啓発。経営学の必読書とされる破壊的イノベーション論。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_163_item",
+    "title": "『ビジョナリー・カンパニー』を読んでみる",
+    "description": "ジム・コリンズ｜ビジネス・自己啓発。長く繁栄する企業の共通点を分析した名著。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_164_item",
+    "title": "『マインドセット』を読んでみる",
+    "description": "キャロル・S・ドゥエック｜ビジネス・自己啓発。成長思考の重要性を説く心理学的自己啓発書。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_165_item",
+    "title": "『マネジメント』を読んでみる",
+    "description": "ピーター・ドラッカー｜ビジネス・自己啓発。経営学の父による組織論の古典的名著。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_166_item",
+    "title": "『チーズはどこへ消えた？』を読んでみる",
+    "description": "スペンサー・ジョンソン｜ビジネス・自己啓発。変化への向き合い方を寓話で説く世界的ベストセラー。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_167_item",
+    "title": "『メモの魔力』を読んでみる",
+    "description": "前田裕二｜ビジネス・自己啓発。メモを通じた自己分析法を説く人気の一冊。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_168_item",
+    "title": "『多動力』を読んでみる",
+    "description": "堀江貴文｜ビジネス・自己啓発。複数の分野を掛け合わせる働き方を提案する一冊。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_169_item",
+    "title": "『さあ、才能に目覚めよう』を読んでみる",
+    "description": "トム・ラス｜ビジネス・自己啓発。強みを見つけるための診断ツール付きの一冊。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_170_item",
+    "title": "『反応しない練習』を読んでみる",
+    "description": "草薙龍瞬｜ビジネス・自己啓発。仏教の考え方をもとに心の整え方を説く一冊。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_171_item",
+    "title": "『置かれた場所で咲きなさい』を読んでみる",
+    "description": "渡辺和子｜ビジネス・自己啓発。穏やかな言葉で生き方を見つめ直す一冊。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_172_item",
+    "title": "『夢をかなえるゾウ』を読んでみる",
+    "description": "水野敬也｜ビジネス・自己啓発。関西弁の神様ガネーシャが教える成功哲学。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_173_item",
+    "title": "『仕事は楽しいかね？』を読んでみる",
+    "description": "デイル・ドーテン｜ビジネス・自己啓発。試行錯誤の大切さを説く物語形式の自己啓発書。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_174_8020",
+    "title": "『人生を変える80対20の法則』を読んでみる",
+    "description": "リチャード・コッホ｜ビジネス・自己啓発。パレートの法則をビジネスに応用した一冊。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_175_howgoogleworks",
+    "title": "『How Google Works』を読んでみる",
+    "description": "エリック・シュミット｜ビジネス・自己啓発。グーグル流のマネジメント論を語る一冊。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_176_item",
+    "title": "『ワーク・シフト』を読んでみる",
+    "description": "リンダ・グラットン｜ビジネス・自己啓発。働き方の未来予測を描くベストセラー。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_177_item",
+    "title": "『武器としての決断思考』を読んでみる",
+    "description": "瀧本哲史｜ビジネス・自己啓発。ディベートの技術から学ぶ意思決定論。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_178_item",
+    "title": "『論語と算盤』を読んでみる",
+    "description": "渋沢栄一｜ビジネス・自己啓発。道徳と経済の両立を説く実業家の名著。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_179_item",
+    "title": "『失敗の本質』を読んでみる",
+    "description": "戸部良一ほか｜ビジネス・自己啓発。組織論として読み継がれる日本軍研究の名著。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_180_item",
+    "title": "『ストーリーとしての競争戦略』を読んでみる",
+    "description": "楠木建｜ビジネス・自己啓発。優れた戦略を「物語」として捉え直す経営書。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_181_item",
+    "title": "『ビジネスモデル・ジェネレーション』を読んでみる",
+    "description": "アレックス・オスターワルダー｜ビジネス・自己啓発。ビジネスモデルを可視化するフレームワーク本。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_182_item",
+    "title": "『インサイト』を読んでみる",
+    "description": "タシャ・ユーリック｜ビジネス・自己啓発。自己認識力を高める方法を説く一冊。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_183_givetake",
+    "title": "『GIVE & TAKE』を読んでみる",
+    "description": "アダム・グラント｜ビジネス・自己啓発。「与える人」が成功する理由を説く一冊。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_184_deepwork",
+    "title": "『Deep Work 大事なことに集中する』を読んでみる",
+    "description": "カル・ニューポート｜ビジネス・自己啓発。深い集中力を取り戻すための実践書。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_185_item",
+    "title": "『時間術大全』を読んでみる",
+    "description": "ジェイク・ナップ｜ビジネス・自己啓発。Google発の時間管理メソッドを紹介する一冊。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_186_0",
+    "title": "『0秒思考』を読んでみる",
+    "description": "赤羽雄二｜ビジネス・自己啓発。メモ書きによる思考整理術を説く一冊。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_187_item",
+    "title": "『稼ぐ言葉の法則』を読んでみる",
+    "description": "神田昌典｜ビジネス・自己啓発。マーケティングにおける言葉の力を説く一冊。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_188_22",
+    "title": "『マーケティング22の法則』を読んでみる",
+    "description": "アル・ライズ&ジャック・トラウト｜ビジネス・自己啓発。マーケティングの原理原則をまとめた古典。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_189_item",
+    "title": "『非常識な成功法則』を読んでみる",
+    "description": "神田昌典｜ビジネス・自己啓発。独自の視点で語られる成功哲学の一冊。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_190_item",
+    "title": "『影響力の武器』を読んでみる",
+    "description": "ロバート・チャルディーニ｜ビジネス・自己啓発。人が説得される心理を分析した社会心理学の名著。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_191_free",
+    "title": "『FREE〈無料〉からお金を生みだす新戦略』を読んでみる",
+    "description": "クリス・アンダーソン｜ビジネス・自己啓発。フリーミアム戦略を説くビジネス書。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_192_leanin",
+    "title": "『LEAN IN』を読んでみる",
+    "description": "シェリル・サンドバーグ｜ビジネス・自己啓発。女性のキャリア論を語ったベストセラー。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_193_item",
+    "title": "『予想どおりに不合理』を読んでみる",
+    "description": "ダン・アリエリー｜ビジネス・自己啓発。行動経済学の入門書として人気の一冊。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_194_item",
+    "title": "『ファスト&スロー』を読んでみる",
+    "description": "ダニエル・カーネマン｜ビジネス・自己啓発。2つの思考モードを説く行動経済学の名著。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "estimated_minutes": 25,
+    "weight": 1.0
+  },
+  {
+    "id": "read_195_nudge",
+    "title": "『NUDGE 実践 行動経済学』を読んでみる",
+    "description": "リチャード・セイラー｜ビジネス・自己啓発。ナッジ理論を提唱したノーベル賞学者の代表作。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_196_item",
+    "title": "『アウトプット大全』を読んでみる",
+    "description": "樺沢紫苑｜ビジネス・自己啓発。学びを結果に変えるアウトプット術の解説書。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_197_item",
+    "title": "『インプット大全』を読んでみる",
+    "description": "樺沢紫苑｜ビジネス・自己啓発。効率的な学び方をまとめた実践書。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_198_theonething",
+    "title": "『The ONE Thing 一点集中主義』を読んでみる",
+    "description": "ゲイリー・ケラー｜ビジネス・自己啓発。最も重要な一つに集中する考え方を説く一冊。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_199_item",
+    "title": "『これからの「正義」の話をしよう』を読んでみる",
+    "description": "マイケル・サンデル｜ビジネス・自己啓発。哲学的な問いを通じて思考力を鍛える一冊。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_200_item",
+    "title": "『多様性の科学』を読んでみる",
+    "description": "マシュー・サイド｜ビジネス・自己啓発。多様な視点がもたらす力を説くビジネス書。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "ビジネス・自己啓発"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_201_item",
+    "title": "『ローマ人の物語 ローマは一日にして成らず』を読んでみる",
+    "description": "塩野七生｜歴史・教養。ローマ史を人物中心に描く長編歴史文学。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "歴史・教養"
+    ],
+    "estimated_minutes": 25,
+    "weight": 1.0
+  },
+  {
+    "id": "read_202_item",
+    "title": "『十字軍物語』を読んでみる",
+    "description": "塩野七生｜歴史・教養。中世ヨーロッパの十字軍の実像を描く歴史文学。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "歴史・教養"
+    ],
+    "estimated_minutes": 25,
+    "weight": 1.0
+  },
+  {
+    "id": "read_203_item",
+    "title": "『中国の歴史』を読んでみる",
+    "description": "陳舜臣｜歴史・教養。中国四千年の歴史を通観できる読み物。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "歴史・教養"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_204_item",
+    "title": "『竜馬がゆく』を読んでみる",
+    "description": "司馬遼太郎｜歴史・教養。幕末を駆け抜けた坂本龍馬を描く歴史小説の名作。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "歴史・教養"
+    ],
+    "estimated_minutes": 25,
+    "weight": 1.0
+  },
+  {
+    "id": "read_205_item",
+    "title": "『坂の上の雲』を読んでみる",
+    "description": "司馬遼太郎｜歴史・教養。明治日本の躍動を描いた国民的歴史小説。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "歴史・教養"
+    ],
+    "estimated_minutes": 25,
+    "weight": 1.0
+  },
+  {
+    "id": "read_206_item",
+    "title": "『翔ぶが如く』を読んでみる",
+    "description": "司馬遼太郎｜歴史・教養。西郷隆盛と大久保利通を軸に描く幕末維新の物語。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "歴史・教養"
+    ],
+    "estimated_minutes": 25,
+    "weight": 1.0
+  },
+  {
+    "id": "read_207_item",
+    "title": "『燃えよ剣』を読んでみる",
+    "description": "司馬遼太郎｜歴史・教養。新選組副長・土方歳三の生涯を描く歴史小説。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "歴史・教養"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_208_item",
+    "title": "『敦煌』を読んでみる",
+    "description": "井上靖｜歴史・教養。西域を舞台にした壮大な歴史ロマン。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "歴史・教養"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_209_item",
+    "title": "『歴史とは何か』を読んでみる",
+    "description": "E.H.カー｜歴史・教養。歴史学の古典として読み継がれる名著。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "歴史・教養"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_210_item",
+    "title": "『ホモ・デウス』を読んでみる",
+    "description": "ユヴァル・ノア・ハラリ｜歴史・教養。『サピエンス全史』著者による未来史の考察。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "歴史・教養"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_211_item",
+    "title": "『日本のいちばん長い日』を読んでみる",
+    "description": "半藤一利｜歴史・教養。終戦をめぐる24時間を描いたノンフィクション。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "歴史・教養"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_212_item",
+    "title": "『昭和史』を読んでみる",
+    "description": "半藤一利｜歴史・教養。激動の昭和を丁寧にたどる歴史読み物。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "歴史・教養"
+    ],
+    "estimated_minutes": 25,
+    "weight": 1.0
+  },
+  {
+    "id": "read_213_item",
+    "title": "『中世を旅する人びと』を読んでみる",
+    "description": "阿部謹也｜歴史・教養。ヨーロッパ中世の庶民の暮らしを描く一冊。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "歴史・教養"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_214_item",
+    "title": "『「空気」の研究』を読んでみる",
+    "description": "山本七平｜歴史・教養。日本社会特有の同調圧力を論じた名著。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "歴史・教養"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_215_item",
+    "title": "『それでも、日本人は「戦争」を選んだ』を読んでみる",
+    "description": "加藤陽子｜歴史・教養。近代日本の戦争への道のりを読み解く歴史書。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "歴史・教養"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_216_item",
+    "title": "『哲学物語』を読んでみる",
+    "description": "ウィル・デュラント｜歴史・教養。西洋哲学の流れを平易に語る入門書。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "歴史・教養"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_217_item",
+    "title": "『若い読者のための世界史』を読んでみる",
+    "description": "E.H.ゴンブリッチ｜歴史・教養。世界史全体を物語として語る名著。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "歴史・教養"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_218_item",
+    "title": "『全世界史』を読んでみる",
+    "description": "出口治明｜歴史・教養。古代から現代までを一気に俯瞰する歴史書。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "歴史・教養"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_219_item",
+    "title": "『そうだったのか！現代史』を読んでみる",
+    "description": "池上彰｜歴史・教養。現代史をわかりやすく解説する入門書。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "歴史・教養"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_220_item",
+    "title": "『世界史の極意』を読んでみる",
+    "description": "佐藤優｜歴史・教養。歴史を読み解く視点を提供する一冊。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "歴史・教養"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_221_item",
+    "title": "『歴史』を読んでみる",
+    "description": "ヘロドトス｜歴史・教養。「歴史の父」による古代地中海世界の記録。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "歴史・教養"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_222_item",
+    "title": "『戦史』を読んでみる",
+    "description": "トゥキディデス｜歴史・教養。ペロポネソス戦争を記した古代史の古典。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "歴史・教養"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_223_item",
+    "title": "『自省録』を読んでみる",
+    "description": "マルクス・アウレリウス｜歴史・教養。ローマ皇帝が綴った内省の記録。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "歴史・教養"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_224_item",
+    "title": "『孫子の兵法』を読んでみる",
+    "description": "孫武｜歴史・教養。戦略論の古典として世界中で読まれる名著。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "歴史・教養"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_225_item",
+    "title": "『学問のすすめ』を読んでみる",
+    "description": "福沢諭吉｜歴史・教養。近代日本の思想に影響を与えた啓蒙書。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "歴史・教養"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_226_item",
+    "title": "『武士道』を読んでみる",
+    "description": "新渡戸稲造｜歴史・教養。日本人の精神性を海外に紹介した名著。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "歴史・教養"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_227_item",
+    "title": "『代表的日本人』を読んでみる",
+    "description": "内村鑑三｜歴史・教養。西郷隆盛ら日本の偉人を紹介する古典。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "歴史・教養"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_228_item",
+    "title": "『全体主義の起源』を読んでみる",
+    "description": "ハンナ・アーレント｜歴史・教養。20世紀の全体主義を分析した政治哲学の名著。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "歴史・教養"
+    ],
+    "estimated_minutes": 25,
+    "weight": 1.0
+  },
+  {
+    "id": "read_229_item",
+    "title": "『文明』を読んでみる",
+    "description": "ニーアル・ファーガソン｜歴史・教養。西洋と東洋の興亡を分析した歴史書。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "歴史・教養"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_230_item",
+    "title": "『昨日までの世界』を読んでみる",
+    "description": "ジャレド・ダイアモンド｜歴史・教養。伝統的社会から学ぶ人類史の考察。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "歴史・教養"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_231_item",
+    "title": "『日本の歴史をよみなおす』を読んでみる",
+    "description": "網野善彦｜歴史・教養。通説を覆す視点で日本史を読み解く一冊。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "歴史・教養"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_232_item",
+    "title": "『応仁の乱』を読んでみる",
+    "description": "呉座勇一｜歴史・教養。ベストセラーとなった中世日本史の解説書。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "歴史・教養"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_233_item",
+    "title": "『武士の家計簿』を読んでみる",
+    "description": "磯田道史｜歴史・教養。加賀藩士の家計簿から見える江戸時代の暮らし。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "歴史・教養"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_234_item",
+    "title": "『逆説の日本史』を読んでみる",
+    "description": "井沢元彦｜歴史・教養。独自の視点で日本史を読み解くシリーズ。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "歴史・教養"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_235_item",
+    "title": "『武器になる哲学』を読んでみる",
+    "description": "山口周｜歴史・教養。ビジネスに役立つ哲学の考え方をまとめた一冊。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "歴史・教養"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_236_item",
+    "title": "『哲学と宗教全史』を読んでみる",
+    "description": "出口治明｜歴史・教養。哲学と宗教の歴史を一望する大著。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "歴史・教養"
+    ],
+    "estimated_minutes": 25,
+    "weight": 1.0
+  },
+  {
+    "id": "read_237_item",
+    "title": "『第三帝国の興亡』を読んでみる",
+    "description": "ウィリアム・シャイラー｜歴史・教養。ナチス・ドイツの興亡を描いた歴史書の古典。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "歴史・教養"
+    ],
+    "estimated_minutes": 25,
+    "weight": 1.0
+  },
+  {
+    "id": "read_238_item",
+    "title": "『逆説の世界史』を読んでみる",
+    "description": "井沢元彦｜歴史・教養。世界史を独自の視点で読み解くシリーズ。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "歴史・教養"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_239_item",
+    "title": "『日本史の内幕』を読んでみる",
+    "description": "磯田道史｜歴史・教養。古文書から読み解く日本史の裏側。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "歴史・教養"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_240_item",
+    "title": "『物語 フランス革命』を読んでみる",
+    "description": "安達正勝｜歴史・教養。フランス革命の展開を丁寧にたどる一冊。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "歴史・教養"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_241_item",
+    "title": "『物語 イギリスの歴史』を読んでみる",
+    "description": "君塚直隆｜歴史・教養。イギリス史をわかりやすく解説する入門書。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "歴史・教養"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_242_item",
+    "title": "『物語 ドイツの歴史』を読んでみる",
+    "description": "阿部謹也｜歴史・教養。ドイツ史の流れを概観できる一冊。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "歴史・教養"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_243_item",
+    "title": "『三国志』を読んでみる",
+    "description": "吉川英治｜歴史・教養。中国史を舞台にした国民的歴史小説。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "歴史・教養"
+    ],
+    "estimated_minutes": 25,
+    "weight": 1.0
+  },
+  {
+    "id": "read_244_item",
+    "title": "『徳川家康』を読んでみる",
+    "description": "山岡荘八｜歴史・教養。徳川家康の生涯を描いた大河歴史小説。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "歴史・教養"
+    ],
+    "estimated_minutes": 25,
+    "weight": 1.0
+  },
+  {
+    "id": "read_245_item",
+    "title": "『峠』を読んでみる",
+    "description": "司馬遼太郎｜歴史・教養。幕末の武士・河井継之助を描いた歴史小説。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "歴史・教養"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_246_item",
+    "title": "『関ヶ原』を読んでみる",
+    "description": "司馬遼太郎｜歴史・教養。天下分け目の戦いを描いた歴史小説の名作。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "歴史・教養"
+    ],
+    "estimated_minutes": 25,
+    "weight": 1.0
+  },
+  {
+    "id": "read_247_item",
+    "title": "『項羽と劉邦』を読んでみる",
+    "description": "司馬遼太郎｜歴史・教養。楚漢戦争を描いた壮大な中国歴史小説。",
+    "category": "read",
+    "tags": [
+      "小説",
+      "歴史・教養"
+    ],
+    "estimated_minutes": 25,
+    "weight": 1.0
+  },
+  {
+    "id": "read_248_100",
+    "title": "『世界がもし100人の村だったら』を読んでみる",
+    "description": "池田香代子｜歴史・教養。世界の縮図を通じて社会を考えるロングセラー。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "歴史・教養"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_249_item",
+    "title": "『物語 韓国史』を読んでみる",
+    "description": "金両基｜歴史・教養。韓国の歴史をわかりやすく解説する入門書。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "歴史・教養"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_250_item",
+    "title": "『一気読み世界史』を読んでみる",
+    "description": "出口治明｜歴史・教養。世界史全体を通して読める入門書。",
+    "category": "read",
+    "tags": [
+      "ノンフィクション",
+      "歴史・教養"
+    ],
+    "estimated_minutes": 20,
+    "weight": 1.0
+  },
+  {
+    "id": "read_essay_makura_no_soshi",
+    "title": "『枕草子』を読んでみる",
+    "description": "清少納言｜エッセイ。宮廷の日々や四季の美意識を、鋭い観察で記した古典随筆。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_essay_tsurezuregusa",
+    "title": "『徒然草』を読んでみる",
+    "description": "兼好法師｜エッセイ。暮らしや人間関係への考察を、短い段ごとに味わえる古典随筆。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_essay_hojoki",
+    "title": "『方丈記』を読んでみる",
+    "description": "鴨長明｜エッセイ。災害と無常を見つめながら、静かな暮らしについて考える随筆。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_essay_oku_no_hosomichi",
+    "title": "『奥の細道』を読んでみる",
+    "description": "松尾芭蕉｜エッセイ。旅先の景色や出会いを、俳句と文章でたどる紀行作品。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_essay_inei_raisan",
+    "title": "『陰翳礼讃』を読んでみる",
+    "description": "谷崎潤一郎｜エッセイ。光と影から日本の住まいや美意識を考える文化随筆。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_essay_book_of_tea",
+    "title": "『茶の本』を読んでみる",
+    "description": "岡倉天心｜エッセイ。茶を入り口に、日本文化と美の考え方を伝える一冊。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_essay_what_i_talk_about_running",
+    "title": "『走ることについて語るときに僕の語ること』を読んでみる",
+    "description": "村上春樹｜エッセイ。走る習慣と小説を書く仕事の関係を率直に綴った回想的エッセイ。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_essay_murakami_asahido",
+    "title": "『村上朝日堂』を読んでみる",
+    "description": "村上春樹｜エッセイ。日常の小さな疑問や好みを軽やかな文章で楽しめるエッセイ集。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_essay_if_our_language_were_whisky",
+    "title": "『もし僕らのことばがウィスキーであったなら』を読んでみる",
+    "description": "村上春樹｜エッセイ。ウィスキーの土地を訪ね、風景と味わいを言葉にした旅のエッセイ。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_essay_tabi_wo_suru_ki",
+    "title": "『旅をする木』を読んでみる",
+    "description": "星野道夫｜エッセイ。アラスカの自然と人々を穏やかなまなざしで描いたエッセイ集。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_essay_nagai_tabi_no_tojo",
+    "title": "『長い旅の途上』を読んでみる",
+    "description": "星野道夫｜エッセイ。自然の中で得た出会いと思索を、写真家の視点で綴った一冊。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_essay_kokoro_no_shohosen",
+    "title": "『こころの処方箋』を読んでみる",
+    "description": "河合隼雄｜エッセイ。心の動きを理解するヒントを、短い文章でやさしく示すエッセイ。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_essay_taiga_no_hitoshizuku",
+    "title": "『大河の一滴』を読んでみる",
+    "description": "五木寛之｜エッセイ。生きることや苦しみとの向き合い方を静かに考える随想集。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_essay_mendou_dakara_shiyou",
+    "title": "『面倒だから、しよう。』を読んでみる",
+    "description": "渡辺和子｜エッセイ。日々の小さな行いを大切にする姿勢を、穏やかな言葉で伝える人生エッセイ。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_essay_kyo_mo_teinei_ni",
+    "title": "『今日もていねいに。』を読んでみる",
+    "description": "松浦弥太郎｜エッセイ。毎日の習慣を少し整えるための、小さな工夫を綴った一冊。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_essay_sense_nyumon",
+    "title": "『センス入門』を読んでみる",
+    "description": "松浦弥太郎｜エッセイ。観察と経験から自分の感覚を育てる考え方を紹介するエッセイ。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_essay_shigoto_kurashi_100",
+    "title": "『しごとのきほん くらしのきほん 100』を読んでみる",
+    "description": "松浦弥太郎｜エッセイ。仕事と暮らしを整える短い言葉を、一項目ずつ読める一冊。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_essay_saru_no_koshikake",
+    "title": "『さるのこしかけ』を読んでみる",
+    "description": "さくらももこ｜エッセイ。身の回りの出来事を独特の観察眼とユーモアで描くエッセイ集。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_essay_ano_koro",
+    "title": "『あのころ』を読んでみる",
+    "description": "さくらももこ｜エッセイ。子ども時代の記憶を、懐かしさと笑いを交えて綴った一冊。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_essay_hitori_zumo",
+    "title": "『ひとりずもう』を読んでみる",
+    "description": "さくらももこ｜エッセイ。思春期から漫画家を目指すまでを率直に振り返る自伝的エッセイ。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_essay_yomigaeru_hentai",
+    "title": "『蘇える変態』を読んでみる",
+    "description": "星野源｜エッセイ。仕事や療養の日々を、飾らない言葉とユーモアで綴った一冊。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_essay_inochi_no_shaso_kara",
+    "title": "『いのちの車窓から』を読んでみる",
+    "description": "星野源｜エッセイ。音楽や芝居、日常の出会いをやわらかな視点で描くエッセイ集。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_essay_omotesando_celeb_dog",
+    "title": "『表参道のセレブ犬とカバーニャ要塞の野良犬』を読んでみる",
+    "description": "若林正恭｜エッセイ。キューバへの旅を通して、自分の暮らしや社会を見つめ直す紀行文。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_essay_naname_no_yugure",
+    "title": "『ナナメの夕暮れ』を読んでみる",
+    "description": "若林正恭｜エッセイ。他人との距離や生きづらさを、自省と笑いを交えて綴ったエッセイ。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_essay_tokyo_hyakkei",
+    "title": "『東京百景』を読んでみる",
+    "description": "又吉直樹｜エッセイ。東京のさまざまな場所と、芸人としての日々を重ねたエッセイ集。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_essay_subete_wasurete_shimau_kara",
+    "title": "『すべて忘れてしまうから』を読んでみる",
+    "description": "燃え殻｜エッセイ。日常の記憶や人との別れを、短い文章で静かにすくい取る一冊。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_essay_yume_ni_mayotte_taxi",
+    "title": "『夢に迷って、タクシーを呼んだ』を読んでみる",
+    "description": "燃え殻｜エッセイ。過去の記憶と現在の暮らしを行き来する、余韻のあるエッセイ集。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_essay_yellow_white_blue",
+    "title": "『ぼくはイエローでホワイトで、ちょっとブルー』を読んでみる",
+    "description": "ブレイディみかこ｜エッセイ。英国の学校生活から、多様性や格差を身近な言葉で考える一冊。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_essay_nanraka_no_jijo",
+    "title": "『なんらかの事情』を読んでみる",
+    "description": "岸本佐知子｜エッセイ。日常と空想の境目がゆらぐ、不思議で可笑しい文章を集めた一冊。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_essay_nanimotsu_type",
+    "title": "『ねにもつタイプ』を読んでみる",
+    "description": "岸本佐知子｜エッセイ。翻訳家ならではの言葉への感覚で、奇妙な日常を描くエッセイ集。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_essay_kisama_itsu_made_joshi",
+    "title": "『貴様いつまで女子でいるつもりだ問題』を読んでみる",
+    "description": "ジェーン・スー｜エッセイ。年齢や性別をめぐる違和感を、率直さとユーモアで考える一冊。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_essay_ikiru_shinu_chichioya",
+    "title": "『生きるとか死ぬとか父親とか』を読んでみる",
+    "description": "ジェーン・スー｜エッセイ。父との関係をたどりながら、家族の記憶を見つめ直すエッセイ。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_essay_3652",
+    "title": "『3652―伊坂幸太郎エッセイ集―』を読んでみる",
+    "description": "伊坂幸太郎｜エッセイ。本や映画、創作の日々を独自の視点で綴ったエッセイ集。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_essay_nyokki",
+    "title": "『にょっ記』を読んでみる",
+    "description": "穂村弘｜エッセイ。日常の小さな違和感を、短い日記のような文章で楽しめる一冊。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_essay_zekkyo_iinkai",
+    "title": "『絶叫委員会』を読んでみる",
+    "description": "穂村弘｜エッセイ。街や会話で出会った忘れがたい言葉を拾い、その面白さを味わうエッセイ。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_essay_fuji_nikki",
+    "title": "『富士日記』を読んでみる",
+    "description": "武田百合子｜エッセイ。富士山麓の山荘での食事や季節を、細やかに記録した日記文学。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_essay_kotoba_no_shokutaku",
+    "title": "『ことばの食卓』を読んでみる",
+    "description": "武田百合子｜エッセイ。食べ物の記憶と人の気配を、簡潔で鮮やかな文章にした随筆集。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_poetry_haru_to_shura",
+    "title": "『春と修羅』を読んでみる",
+    "description": "宮沢賢治｜詩集。自然と心象が響き合う、独自の言葉づかいを味わえる詩集。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_poetry_tsuki_ni_hoeru",
+    "title": "『月に吠える』を読んでみる",
+    "description": "萩原朔太郎｜詩集。孤独や不安を口語のリズムで表した、日本近代詩の代表的詩集。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_poetry_aoneko",
+    "title": "『青猫』を読んでみる",
+    "description": "萩原朔太郎｜詩集。都市の憂鬱と繊細な感覚を、幻想的な言葉で描いた詩集。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_poetry_arishi_hi_no_uta",
+    "title": "『在りし日の歌』を読んでみる",
+    "description": "中原中也｜詩集。喪失や青春の記憶を、音楽的な言葉で綴った詩集。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_poetry_sokuryosen",
+    "title": "『測量船』を読んでみる",
+    "description": "三好達治｜詩集。自然の景色と静かな抒情を、端正な日本語で味わえる詩集。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_poetry_wasuregusa_ni_yosu",
+    "title": "『萱草に寄す』を読んでみる",
+    "description": "立原道造｜詩集。風景と恋の感情を、透明感のある言葉で表した詩集。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_poetry_akatsuki_to_yu_no_uta",
+    "title": "『暁と夕の詩』を読んでみる",
+    "description": "立原道造｜詩集。朝夕の光や季節を、繊細なリズムで描いた詩集。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_poetry_waga_hito_ni_atauru_aika",
+    "title": "『わがひとに与ふる哀歌』を読んでみる",
+    "description": "伊東静雄｜詩集。自然と生の緊張を、格調ある言葉で表現した詩集。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_poetry_tabibito_kaerazu",
+    "title": "『旅人かへらず』を読んでみる",
+    "description": "西脇順三郎｜詩集。旅と記憶を断片的なイメージでつなぐ、モダンな長編詩。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_poetry_yonsen_no_hi_to_yoru",
+    "title": "『四千の日と夜』を読んでみる",
+    "description": "田村隆一｜詩集。戦後の感覚と存在への問いを、硬質な言葉で刻んだ詩集。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_poetry_jibun_no_kanjusei_kurai",
+    "title": "『自分の感受性くらい』を読んでみる",
+    "description": "茨木のり子｜詩集。自分の足で生きる姿勢を、まっすぐな言葉で伝える詩集。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_poetry_yorikakarazu",
+    "title": "『倚りかからず』を読んでみる",
+    "description": "茨木のり子｜詩集。自立した生き方への思いを、簡潔で強い言葉にした詩集。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_poetry_mienai_haitatsufu",
+    "title": "『見えない配達夫』を読んでみる",
+    "description": "茨木のり子｜詩集。日常の奥にある感情を、静かな視線ですくい上げた詩集。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_poetry_hyosatsu_nado",
+    "title": "『表札など』を読んでみる",
+    "description": "石垣りん｜詩集。働くことや暮らしを、生活者の実感から見つめた詩集。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_poetry_watashi_no_mae_no_nabe",
+    "title": "『私の前にある鍋とお釜と燃える火と』を読んでみる",
+    "description": "石垣りん｜詩集。台所や仕事の風景から、女性の生活と尊厳を描いた詩集。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_poetry_kotoba_asobi_uta",
+    "title": "『ことばあそびうた』を読んでみる",
+    "description": "谷川俊太郎｜詩集。声に出すと楽しい、日本語の音とリズムを生かした詩集。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_poetry_teigi",
+    "title": "『定義』を読んでみる",
+    "description": "谷川俊太郎｜詩集。身近な言葉を捉え直し、世界の見え方を揺さぶる詩集。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_poetry_hadaka",
+    "title": "『はだか』を読んでみる",
+    "description": "谷川俊太郎｜詩集。飾らない言葉で、人の心と日常を率直に描いた詩集。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_poetry_mimi_wo_sumasu",
+    "title": "『みみをすます』を読んでみる",
+    "description": "谷川俊太郎｜詩集。周囲の音や沈黙に耳を傾ける、ゆっくり味わいたい長編詩。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_poetry_yonaka_no_daidokoro",
+    "title": "『夜中に台所でぼくはきみに話しかけたかった』を読んでみる",
+    "description": "谷川俊太郎｜詩集。愛や孤独を、会話のように親密な言葉で綴った詩集。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_poetry_kujikenai_de",
+    "title": "『くじけないで』を読んでみる",
+    "description": "柴田トヨ｜詩集。日々への感謝と希望を、素直であたたかな言葉にした詩集。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_poetry_good_morning",
+    "title": "『グッドモーニング』を読んでみる",
+    "description": "最果タヒ｜詩集。現代の感情を鋭い言葉と速度感で描く、初期の詩集。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_poetry_shinde_shimau_kei",
+    "title": "『死んでしまう系のぼくらに』を読んでみる",
+    "description": "最果タヒ｜詩集。孤独やつながりを、現代的な語り口で切り取った詩集。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_poetry_yozora_saiko_mitsudo",
+    "title": "『夜空はいつでも最高密度の青色だ』を読んでみる",
+    "description": "最果タヒ｜詩集。都市で生きる感覚と恋を、鮮烈な言葉で描いた詩集。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_poetry_suijo_bus_asakusa",
+    "title": "『水上バス浅草行き』を読んでみる",
+    "description": "岡本真帆｜詩集。仕事や東京の日常を、親しみやすい言葉で詠んだ歌集。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_poetry_akarui_hanataba",
+    "title": "『あかるい花束』を読んでみる",
+    "description": "岡本真帆｜詩集。暮らしの小さな場面を、明るさと余韻のある短歌にした歌集。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_poetry_tsumujikaze_koko",
+    "title": "『つむじ風、ここにあります』を読んでみる",
+    "description": "木下龍也｜詩集。日常の驚きや感情を、鮮やかな比喩で表した歌集。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_poetry_all_around_you",
+    "title": "『オールアラウンドユー』を読んでみる",
+    "description": "木下龍也｜詩集。誰かを思う気持ちを、現代の言葉で丁寧にすくった歌集。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_poetry_siren_to_sai",
+    "title": "『サイレンと犀』を読んでみる",
+    "description": "岡野大嗣｜詩集。街と生活の風景を、静かなユーモアのある短歌で描く歌集。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_poetry_syndicate",
+    "title": "『シンジケート』を読んでみる",
+    "description": "穂村弘｜詩集。恋愛と都市生活の感覚を、意外な言葉の組み合わせで詠んだ歌集。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_poetry_tegamima_mami",
+    "title": "『手紙魔まみ、夏の引越し（ウサギ連れ）』を読んでみる",
+    "description": "穂村弘｜詩集。物語のような連作で、不思議な恋と日常を描いた歌集。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_poetry_leaves_of_grass",
+    "title": "『草の葉』を読んでみる",
+    "description": "ウォルト・ホイットマン｜詩集。個人の自由と生命の広がりを、大らかな言葉で歌った詩集。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_poetry_les_fleurs_du_mal",
+    "title": "『悪の華』を読んでみる",
+    "description": "シャルル・ボードレール｜詩集。都市の美と倦怠を、緊張感のある言葉で描いた象徴詩の古典。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_poetry_a_season_in_hell",
+    "title": "『地獄の季節』を読んでみる",
+    "description": "アルチュール・ランボー｜詩集。反抗と自己探求を、激しいイメージで綴った散文詩集。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_poetry_illuminations",
+    "title": "『イリュミナシオン』を読んでみる",
+    "description": "アルチュール・ランボー｜詩集。色彩豊かなイメージが連なる、短い散文詩を集めた一冊。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_poetry_duino_elegies",
+    "title": "『ドゥイノの悲歌』を読んでみる",
+    "description": "ライナー・マリア・リルケ｜詩集。人間の孤独と生の意味を、壮大な比喩で問う連作詩。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_poetry_sonnets_to_orpheus",
+    "title": "『オルフォイスへのソネット』を読んでみる",
+    "description": "ライナー・マリア・リルケ｜詩集。歌や変容を主題に、端正な形式で綴られた連作詩。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_poetry_the_waste_land",
+    "title": "『荒地』を読んでみる",
+    "description": "T・S・エリオット｜詩集。断片的な声と引用で、近代社会の不安を描いた長編詩。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_poetry_twenty_love_poems",
+    "title": "『二十の愛の詩と一つの絶望の歌』を読んでみる",
+    "description": "パブロ・ネルーダ｜詩集。愛と喪失を、自然のイメージとともに情熱的に歌った詩集。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_poetry_gitanjali",
+    "title": "『ギタンジャリ』を読んでみる",
+    "description": "ラビンドラナート・タゴール｜詩集。自然と祈りを通して、生命への敬意を歌った詩集。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_poetry_rubaiyat",
+    "title": "『ルバイヤート』を読んでみる",
+    "description": "オマル・ハイヤーム｜詩集。人生の短さや喜びを、四行詩の簡潔な形で味わえる詩集。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_poetry_shakespeare_sonnets",
+    "title": "『ソネット集』を読んでみる",
+    "description": "ウィリアム・シェイクスピア｜詩集。愛や時間、美をめぐる思索を定型詩で綴った連作。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_poetry_ariel",
+    "title": "『アリエル』を読んでみる",
+    "description": "シルヴィア・プラス｜詩集。自己と家族、生の緊張を、鋭いイメージで描いた詩集。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  }
+]

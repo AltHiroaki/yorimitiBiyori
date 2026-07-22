@@ -1,0 +1,2829 @@
+[
+  {
+    "id": "movie_netflix_laugh",
+    "title": "短めのコメディ映画を候補に入れる",
+    "description": "笑える映画を1本だけウォッチリストに追加する。観る前の準備だけでも気分が軽くなります。",
+    "category": "movie",
+    "tags": [
+      "コメディ",
+      "90分以内",
+      "Netflix"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_prime_thoughtful",
+    "title": "考えさせる映画の予告編を見る",
+    "description": "気になっていた映画の予告編を1本だけ観て、次に観たい作品を探す。",
+    "category": "movie",
+    "tags": [
+      "ドラマ",
+      "問わない",
+      "Amazon Prime"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_tearful_watchlist",
+    "title": "泣ける映画を1本だけメモする",
+    "description": "レビューを少し眺めて、泣ける映画を次に観る候補としてメモする。",
+    "category": "movie",
+    "tags": [
+      "ドラマ",
+      "問わない",
+      "問わない"
+    ],
+    "estimated_minutes": 10,
+    "weight": 0.9
+  },
+  {
+    "id": "movie_01_item",
+    "title": "『少林サッカー』を観る",
+    "description": "チャウ・シンチー主演・チャウ・シンチー監督。破天荒なサッカーアクションで笑える快作。",
+    "category": "movie",
+    "tags": [
+      "アクション",
+      "コメディ"
+    ],
+    "estimated_minutes": 87,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_02_item",
+    "title": "『カンフーハッスル』を観る",
+    "description": "チャウ・シンチー主演・チャウ・シンチー監督。アクションとギャグが詰め込まれた娯楽作。",
+    "category": "movie",
+    "tags": [
+      "アクション",
+      "コメディ"
+    ],
+    "estimated_minutes": 99,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_03_item",
+    "title": "『スーパーの女』を観る",
+    "description": "宮本信子主演・伊丹十三監督。スーパーの舞台裏を痛快に描くコメディ。",
+    "category": "movie",
+    "tags": [
+      "コメディ"
+    ],
+    "estimated_minutes": 126,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_04_item",
+    "title": "『テルマエ・ロマエ』を観る",
+    "description": "阿部寛主演・武内英樹監督。古代ローマと現代を行き来する温泉コメディ。",
+    "category": "movie",
+    "tags": [
+      "コメディ",
+      "ファンタジー"
+    ],
+    "estimated_minutes": 108,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_05_item",
+    "title": "『舞妓はレディ』を観る",
+    "description": "上白石萌音主演・周防正行監督。方言修行を描くミュージカルコメディ。",
+    "category": "movie",
+    "tags": [
+      "コメディ"
+    ],
+    "estimated_minutes": 135,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_06_item",
+    "title": "『有頂天ホテル』を観る",
+    "description": "役所広司主演・三谷幸喜監督。大晦日のホテルを舞台にした群像喜劇。",
+    "category": "movie",
+    "tags": [
+      "コメディ"
+    ],
+    "estimated_minutes": 136,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_07_themovie",
+    "title": "『踊る大捜査線 THE MOVIE』を観る",
+    "description": "織田裕二主演・本広克行監督。刑事ドラマならではのテンポのいい掛け合いが魅力。",
+    "category": "movie",
+    "tags": [
+      "アクション",
+      "コメディ"
+    ],
+    "estimated_minutes": 119,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_08_item",
+    "title": "『ザ・マジックアワー』を観る",
+    "description": "妻夫木聡主演・三谷幸喜監督。勘違いから始まる連続コメディの傑作。",
+    "category": "movie",
+    "tags": [
+      "コメディ"
+    ],
+    "estimated_minutes": 136,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_09_item",
+    "title": "『幕が上がる』を観る",
+    "description": "ももいろクローバーZ主演・本広克行監督。高校演劇部の奮闘を描く青春コメディ。",
+    "category": "movie",
+    "tags": [
+      "コメディ",
+      "ドラマ"
+    ],
+    "estimated_minutes": 119,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_10_item",
+    "title": "『モンスターズ・インク』を観る",
+    "description": "ジョン・グッドマン主演・ピート・ドクター監督。怖がらせ屋のモンスターたちが繰り広げる愉快な物語。",
+    "category": "movie",
+    "tags": [
+      "アニメ",
+      "コメディ",
+      "ファンタジー"
+    ],
+    "estimated_minutes": 92,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_11_item",
+    "title": "『インターンシップ』を観る",
+    "description": "ヴィンス・ヴォーン主演・ショーン・レヴィ監督。中年男性たちがIT企業に挑む痛快コメディ。",
+    "category": "movie",
+    "tags": [
+      "コメディ"
+    ],
+    "estimated_minutes": 119,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_12_item",
+    "title": "『ドラえもん のび太の宝島』を観る",
+    "description": "大原めぐみ主演・今井一暁監督。冒険と笑いが詰まったファミリー向けアニメ。",
+    "category": "movie",
+    "tags": [
+      "アニメ",
+      "コメディ",
+      "ファンタジー"
+    ],
+    "estimated_minutes": 111,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_13_item",
+    "title": "『モンティ・パイソン・アンド・ホーリー・グレイル』を観る",
+    "description": "グラハム・チャップマン主演・テリー・ギリアム監督。不条理なギャグが連発するカルト的コメディ。",
+    "category": "movie",
+    "tags": [
+      "コメディ",
+      "ファンタジー"
+    ],
+    "estimated_minutes": 91,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_14_item",
+    "title": "『ホーム・アローン』を観る",
+    "description": "マコーレー・カルキン主演・クリス・コロンバス監督。留守番中の少年が仕掛ける罠が笑いを誘う。",
+    "category": "movie",
+    "tags": [
+      "コメディ",
+      "ドラマ"
+    ],
+    "estimated_minutes": 103,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_15_item",
+    "title": "『ミスター・ビーン カンヌで大迷惑』を観る",
+    "description": "ローワン・アトキンソン主演・スティーヴ・ベンデラック監督。セリフ少なめでも笑える定番シリーズ。",
+    "category": "movie",
+    "tags": [
+      "コメディ"
+    ],
+    "estimated_minutes": 90,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_16_item",
+    "title": "『名探偵ピカチュウ』を観る",
+    "description": "ライアン・レイノルズ主演・ロブ・レターマン監督。軽快な掛け合いが楽しいポケモン実写作品。",
+    "category": "movie",
+    "tags": [
+      "ミステリー",
+      "コメディ"
+    ],
+    "estimated_minutes": 104,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_17_item",
+    "title": "『パディントン』を観る",
+    "description": "ベン・ウィショー主演・ポール・キング監督。心温まるくまのパディントンの実写化作品。",
+    "category": "movie",
+    "tags": [
+      "コメディ",
+      "ドラマ"
+    ],
+    "estimated_minutes": 95,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_18_item",
+    "title": "『世界の中心で、愛をさけぶ』を観る",
+    "description": "柴咲コウ主演・行定勲監督。純愛と喪失を描いた邦画の代表的恋愛映画。",
+    "category": "movie",
+    "tags": [
+      "恋愛",
+      "ドラマ"
+    ],
+    "estimated_minutes": 138,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_19_item",
+    "title": "『いま、会いにゆきます』を観る",
+    "description": "竹内結子主演・土井裕泰監督。亡き妻との再会を描く切ないファンタジー。",
+    "category": "movie",
+    "tags": [
+      "恋愛",
+      "ファンタジー",
+      "ドラマ"
+    ],
+    "estimated_minutes": 119,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_20_always",
+    "title": "『ALWAYS 三丁目の夕日』を観る",
+    "description": "吉岡秀隆主演・山崎貴監督。昭和の下町を舞台にした人情ドラマ。",
+    "category": "movie",
+    "tags": [
+      "ドラマ"
+    ],
+    "estimated_minutes": 133,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_21_item",
+    "title": "『きみに読む物語』を観る",
+    "description": "ライアン・ゴズリング主演・ニック・カサヴェテス監督。生涯にわたる愛を描いたラブストーリーの名作。",
+    "category": "movie",
+    "tags": [
+      "恋愛",
+      "ドラマ"
+    ],
+    "estimated_minutes": 123,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_22_item",
+    "title": "『タイタニック』を観る",
+    "description": "レオナルド・ディカプリオ主演・ジェームズ・キャメロン監督。実話を基にした壮大な悲恋の物語。",
+    "category": "movie",
+    "tags": [
+      "恋愛",
+      "ドラマ"
+    ],
+    "estimated_minutes": 195,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_23_item",
+    "title": "『ライフ・イズ・ビューティフル』を観る",
+    "description": "ロベルト・ベニーニ主演・ロベルト・ベニーニ監督。過酷な状況でも家族を思う父の愛を描く。",
+    "category": "movie",
+    "tags": [
+      "ドラマ",
+      "コメディ"
+    ],
+    "estimated_minutes": 116,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_24_item",
+    "title": "『ショーシャンクの空に』を観る",
+    "description": "ティム・ロビンス主演・フランク・ダラボン監督。希望を失わない主人公の姿に胸を打たれる名作。",
+    "category": "movie",
+    "tags": [
+      "ドラマ"
+    ],
+    "estimated_minutes": 143,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_25_1",
+    "title": "『余命1ヶ月の花嫁』を観る",
+    "description": "榮倉奈々主演・廣木隆一監督。実話を基にした、限られた時間を生きる物語。",
+    "category": "movie",
+    "tags": [
+      "ドラマ",
+      "恋愛"
+    ],
+    "estimated_minutes": 118,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_26_15",
+    "title": "『阪急電車 片道15分の奇跡』を観る",
+    "description": "中谷美紀主演・三宅喜重監督。小さな私鉄沿線で交錯する人生模様を描く。",
+    "category": "movie",
+    "tags": [
+      "ドラマ"
+    ],
+    "estimated_minutes": 119,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_27_item",
+    "title": "『岳 -ガク-』を観る",
+    "description": "小栗旬主演・片山修監督。山岳救助を題材にした感動の人間ドラマ。",
+    "category": "movie",
+    "tags": [
+      "ドラマ"
+    ],
+    "estimated_minutes": 129,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_28_item",
+    "title": "『東京タワー ~オカンとボクと、時々、オトン~』を観る",
+    "description": "オダギリジョー主演・松岡錠司監督。母と息子の絆を描いた実話ベースの物語。",
+    "category": "movie",
+    "tags": [
+      "ドラマ"
+    ],
+    "estimated_minutes": 142,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_29_8",
+    "title": "『8年越しの花嫁』を観る",
+    "description": "佐藤健主演・瀬々敬久監督。実話を基にした夫婦の絆を描く感動作。",
+    "category": "movie",
+    "tags": [
+      "ドラマ",
+      "恋愛"
+    ],
+    "estimated_minutes": 128,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_30_item",
+    "title": "『あん』を観る",
+    "description": "樹木希林主演・河瀬直美監督。どら焼き屋を舞台にした静かな人間ドラマ。",
+    "category": "movie",
+    "tags": [
+      "ドラマ"
+    ],
+    "estimated_minutes": 113,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_31_item",
+    "title": "『コクリコ坂から』を観る",
+    "description": "長澤まさみ主演・宮崎吾朗監督。昭和の横浜を舞台にした青春アニメーション。",
+    "category": "movie",
+    "tags": [
+      "アニメ",
+      "ドラマ",
+      "恋愛"
+    ],
+    "estimated_minutes": 91,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_32_item",
+    "title": "『きっと、うまくいく』を観る",
+    "description": "アーミル・カーン主演・ラージクマール・ヒラーニ監督。友情と挑戦を描くインド映画の傑作。",
+    "category": "movie",
+    "tags": [
+      "コメディ",
+      "ドラマ"
+    ],
+    "estimated_minutes": 170,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_33_item",
+    "title": "『リメンバー・ミー』を観る",
+    "description": "アンソニー・ゴンザレス主演・リー・アンクリッチ監督。家族への想いを描くピクサーの感動作。",
+    "category": "movie",
+    "tags": [
+      "アニメ",
+      "ファンタジー",
+      "ドラマ"
+    ],
+    "estimated_minutes": 105,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_34_item",
+    "title": "『ソウルフル・ワールド』を観る",
+    "description": "ジェイミー・フォックス主演・ピート・ドクター監督。人生の意味を問いかけるピクサーの意欲作。",
+    "category": "movie",
+    "tags": [
+      "アニメ",
+      "ファンタジー",
+      "ドラマ"
+    ],
+    "estimated_minutes": 100,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_35_item",
+    "title": "『パラサイト 半地下の家族』を観る",
+    "description": "ソン・ガンホ主演・ポン・ジュノ監督。格差社会を鋭く描くアカデミー賞受賞作。",
+    "category": "movie",
+    "tags": [
+      "ドラマ",
+      "サスペンス"
+    ],
+    "estimated_minutes": 132,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_36_item",
+    "title": "『マトリックス』を観る",
+    "description": "キアヌ・リーブス主演・リリー&ラナ・ウォシャウスキー監督。現実とは何かを問いかけるSFの金字塔。",
+    "category": "movie",
+    "tags": [
+      "アクション",
+      "SF"
+    ],
+    "estimated_minutes": 136,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_37_item",
+    "title": "『インセプション』を観る",
+    "description": "レオナルド・ディカプリオ主演・クリストファー・ノーラン監督。夢と現実が入り組む頭を使うSF大作。",
+    "category": "movie",
+    "tags": [
+      "アクション",
+      "SF",
+      "サスペンス"
+    ],
+    "estimated_minutes": 148,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_38_item",
+    "title": "『万引き家族』を観る",
+    "description": "リリー・フランキー主演・是枝裕和監督。血のつながらない家族の絆と社会問題を描く。",
+    "category": "movie",
+    "tags": [
+      "ドラマ"
+    ],
+    "estimated_minutes": 121,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_39_es",
+    "title": "『es[エス]』を観る",
+    "description": "モーリッツ・ブライブトロイ主演・オリヴァー・ヒルシュビーゲル監督。実験を題材に人間の心理の危うさを描く。",
+    "category": "movie",
+    "tags": [
+      "サスペンス",
+      "ドラマ"
+    ],
+    "estimated_minutes": 121,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_40_item",
+    "title": "『シン・ゴジラ』を観る",
+    "description": "長谷川博己主演・庵野秀明・樋口真嗣監督。危機管理のリアリティを描いた社会派怪獣映画。",
+    "category": "movie",
+    "tags": [
+      "アクション",
+      "SF"
+    ],
+    "estimated_minutes": 120,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_41_her",
+    "title": "『her/世界でひとつの彼女』を観る",
+    "description": "ホアキン・フェニックス主演・スパイク・ジョーンズ監督。AIとの関係を通じて愛の形を問いかける。",
+    "category": "movie",
+    "tags": [
+      "SF",
+      "恋愛",
+      "ドラマ"
+    ],
+    "estimated_minutes": 126,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_42_2049",
+    "title": "『ブレードランナー2049』を観る",
+    "description": "ライアン・ゴズリング主演・ドゥニ・ヴィルヌーヴ監督。人間とは何かを問い続けるSFの続編作。",
+    "category": "movie",
+    "tags": [
+      "SF",
+      "サスペンス"
+    ],
+    "estimated_minutes": 164,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_43_item",
+    "title": "『アイ,ロボット』を観る",
+    "description": "ウィル・スミス主演・アレックス・プロヤス監督。AIと人間の共存を考えさせるアクションSF。",
+    "category": "movie",
+    "tags": [
+      "アクション",
+      "SF",
+      "ミステリー"
+    ],
+    "estimated_minutes": 115,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_44_item",
+    "title": "『コンタクト』を観る",
+    "description": "ジョディ・フォスター主演・ロバート・ゼメキス監督。科学と信仰の間で揺れる主人公を描く。",
+    "category": "movie",
+    "tags": [
+      "SF",
+      "ドラマ"
+    ],
+    "estimated_minutes": 150,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_45_item",
+    "title": "『インターステラー』を観る",
+    "description": "マシュー・マコノヒー主演・クリストファー・ノーラン監督。時間と家族愛を描く壮大なSF叙事詩。",
+    "category": "movie",
+    "tags": [
+      "SF",
+      "ドラマ"
+    ],
+    "estimated_minutes": 169,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_46_12",
+    "title": "『12人の怒れる男』を観る",
+    "description": "ヘンリー・フォンダ主演・シドニー・ルメット監督。密室での議論だけで見せる法廷劇の傑作。",
+    "category": "movie",
+    "tags": [
+      "ドラマ",
+      "サスペンス"
+    ],
+    "estimated_minutes": 96,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_47_item",
+    "title": "『すずめの戸締まり』を観る",
+    "description": "原菜乃華主演・新海誠監督。災害と喪失をテーマにしたアニメーション。",
+    "category": "movie",
+    "tags": [
+      "アニメ",
+      "ファンタジー",
+      "ドラマ"
+    ],
+    "estimated_minutes": 122,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_48_item",
+    "title": "『ドライブ・マイ・カー』を観る",
+    "description": "西島秀俊主演・濱口竜介監督。喪失と再生を静かに描くカンヌ受賞作。",
+    "category": "movie",
+    "tags": [
+      "ドラマ"
+    ],
+    "estimated_minutes": 179,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_49_item",
+    "title": "『マネー・ショート 華麗なる大逆転』を観る",
+    "description": "クリスチャン・ベール主演・アダム・マッケイ監督。金融危機の裏側を描く社会派ドラマ。",
+    "category": "movie",
+    "tags": [
+      "ドラマ",
+      "コメディ"
+    ],
+    "estimated_minutes": 130,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_50_ai",
+    "title": "『AI崩壊』を観る",
+    "description": "大沢たかお主演・入江悠監督。AIと社会の在り方を問いかける邦画サスペンス。",
+    "category": "movie",
+    "tags": [
+      "SF",
+      "サスペンス"
+    ],
+    "estimated_minutes": 120,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_051_item",
+    "title": "『セブン』を観る",
+    "description": "モーガン・フリーマン主演・デヴィッド・フィンチャー監督。猟奇殺人犯を追う刑事たちを描く戦慄のサスペンス。",
+    "category": "movie",
+    "tags": [
+      "ミステリー",
+      "サスペンス"
+    ],
+    "estimated_minutes": 127,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_052_item",
+    "title": "『ゾディアック』を観る",
+    "description": "ジェイク・ジレンホール主演・デヴィッド・フィンチャー監督。未解決の連続殺人事件を追う記者たちの執念を描く。",
+    "category": "movie",
+    "tags": [
+      "ミステリー",
+      "サスペンス"
+    ],
+    "estimated_minutes": 157,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_053_item",
+    "title": "『シャッター アイランド』を観る",
+    "description": "レオナルド・ディカプリオ主演・マーティン・スコセッシ監督。孤島の精神病院を舞台にした衝撃の心理サスペンス。",
+    "category": "movie",
+    "tags": [
+      "ミステリー",
+      "サスペンス"
+    ],
+    "estimated_minutes": 138,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_054_item",
+    "title": "『メメント』を観る",
+    "description": "ガイ・ピアース主演・クリストファー・ノーラン監督。記憶が10分しか持たない主人公が真相を追う異色ミステリー。",
+    "category": "movie",
+    "tags": [
+      "ミステリー",
+      "サスペンス"
+    ],
+    "estimated_minutes": 113,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_055_item",
+    "title": "『ユージュアル・サスペクツ』を観る",
+    "description": "ケヴィン・スペイシー主演・ブライアン・シンガー監督。衝撃のどんでん返しで知られる犯罪ミステリー。",
+    "category": "movie",
+    "tags": [
+      "ミステリー",
+      "サスペンス"
+    ],
+    "estimated_minutes": 106,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_056_item",
+    "title": "『ゴーン・ガール』を観る",
+    "description": "ベン・アフレック主演・デヴィッド・フィンチャー監督。失踪した妻をめぐる夫婦の嘘を描く心理サスペンス。",
+    "category": "movie",
+    "tags": [
+      "ミステリー",
+      "サスペンス"
+    ],
+    "estimated_minutes": 149,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_057_item",
+    "title": "『プリズナーズ』を観る",
+    "description": "ヒュー・ジャックマン主演・ドゥニ・ヴィルヌーヴ監督。娘の誘拐事件をめぐる父親の葛藤を描く重厚なサスペンス。",
+    "category": "movie",
+    "tags": [
+      "ミステリー",
+      "サスペンス"
+    ],
+    "estimated_minutes": 153,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_058_item",
+    "title": "『ナイブス・アウト 名探偵と刃の館の秘密』を観る",
+    "description": "ダニエル・クレイグ主演・ライアン・ジョンソン監督。資産家の遺産をめぐる現代版本格ミステリー。",
+    "category": "movie",
+    "tags": [
+      "ミステリー",
+      "コメディ"
+    ],
+    "estimated_minutes": 131,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_059_item",
+    "title": "『カメラを止めるな!』を観る",
+    "description": "濱津隆之主演・上田慎一郎監督。低予算ながら緻密などんでん返しが話題になった作品。",
+    "category": "movie",
+    "tags": [
+      "ミステリー",
+      "コメディ"
+    ],
+    "estimated_minutes": 96,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_060_item",
+    "title": "『犬神家の一族』を観る",
+    "description": "石坂浩二主演・市川崑監督。横溝正史原作、遺産相続をめぐる連続殺人を描く名作。",
+    "category": "movie",
+    "tags": [
+      "ミステリー",
+      "ドラマ"
+    ],
+    "estimated_minutes": 132,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_061_item",
+    "title": "『ダ・ヴィンチ・コード』を観る",
+    "description": "トム・ハンクス主演・ロン・ハワード監督。美術と宗教の謎を追う世界的ベストセラーの映画化。",
+    "category": "movie",
+    "tags": [
+      "ミステリー",
+      "サスペンス"
+    ],
+    "estimated_minutes": 149,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_062_item",
+    "title": "『天使と悪魔』を観る",
+    "description": "トム・ハンクス主演・ロン・ハワード監督。バチカンを舞台にした緊迫感あふれるサスペンス。",
+    "category": "movie",
+    "tags": [
+      "ミステリー",
+      "サスペンス"
+    ],
+    "estimated_minutes": 138,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_063_item",
+    "title": "『インサイド・マン』を観る",
+    "description": "デンゼル・ワシントン主演・スパイク・リー監督。銀行強盗をめぐる駆け引きを描く知能犯サスペンス。",
+    "category": "movie",
+    "tags": [
+      "ミステリー",
+      "サスペンス"
+    ],
+    "estimated_minutes": 129,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_064_item",
+    "title": "『アイデンティティー』を観る",
+    "description": "ジョン・キューザック主演・ジェームズ・マンゴールド監督。モーテルに集まった見知らぬ客たちを襲う連続殺人。",
+    "category": "movie",
+    "tags": [
+      "ミステリー",
+      "サスペンス"
+    ],
+    "estimated_minutes": 90,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_065_item",
+    "title": "『シックス・センス』を観る",
+    "description": "ブルース・ウィリス主演・M・ナイト・シャマラン監督。衝撃の結末で知られるサイコロジカルサスペンス。",
+    "category": "movie",
+    "tags": [
+      "ミステリー",
+      "サスペンス"
+    ],
+    "estimated_minutes": 107,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_066_item",
+    "title": "『ミッドサマー』を観る",
+    "description": "フローレンス・ピュー主演・アリ・アスター監督。白夜の村で行われる奇祭を描く異色のサスペンス。",
+    "category": "movie",
+    "tags": [
+      "サスペンス",
+      "ドラマ"
+    ],
+    "estimated_minutes": 148,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_067_item",
+    "title": "『オールドボーイ』を観る",
+    "description": "チェ・ミンシク主演・パク・チャヌク監督。理由も分からず監禁された男の復讐を描く韓国映画。",
+    "category": "movie",
+    "tags": [
+      "ミステリー",
+      "サスペンス"
+    ],
+    "estimated_minutes": 120,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_068_item",
+    "title": "『羊たちの沈黙』を観る",
+    "description": "ジョディ・フォスター主演・ジョナサン・デミ監督。猟奇殺人犯と対峙する新人捜査官を描く金字塔。",
+    "category": "movie",
+    "tags": [
+      "ミステリー",
+      "サスペンス"
+    ],
+    "estimated_minutes": 118,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_069_item",
+    "title": "『検察側の証人』を観る",
+    "description": "タイロン・パワー主演・ビリー・ワイルダー監督。法廷でのどんでん返しが光る古典ミステリー。",
+    "category": "movie",
+    "tags": [
+      "ミステリー",
+      "ドラマ"
+    ],
+    "estimated_minutes": 116,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_070_item",
+    "title": "『フィロミナの祈り』を観る",
+    "description": "ジュディ・デンチ主演・スティーヴン・フリアーズ監督。生き別れた息子を探す母親と記者の旅を描く実話。",
+    "category": "movie",
+    "tags": [
+      "ミステリー",
+      "ドラマ"
+    ],
+    "estimated_minutes": 98,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_071_item",
+    "title": "『スポットライト 世紀のスクープ』を観る",
+    "description": "マーク・ラファロ主演・トム・マッカーシー監督。新聞記者たちが真相を追う調査報道サスペンス。",
+    "category": "movie",
+    "tags": [
+      "ミステリー",
+      "ドラマ"
+    ],
+    "estimated_minutes": 128,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_072_item",
+    "title": "『リンカーン弁護士』を観る",
+    "description": "マシュー・マコノヒー主演・ブラッド・ファーマン監督。車を法律事務所代わりにする弁護士のサスペンス劇。",
+    "category": "movie",
+    "tags": [
+      "ミステリー",
+      "サスペンス"
+    ],
+    "estimated_minutes": 118,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_073_64",
+    "title": "『64-ロクヨン-』を観る",
+    "description": "佐藤浩市主演・瀬々敬久監督。未解決事件と広報官の葛藤を描く重厚な警察ドラマ。",
+    "category": "movie",
+    "tags": [
+      "ミステリー",
+      "ドラマ"
+    ],
+    "estimated_minutes": 137,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_074_item",
+    "title": "『パーフェクトブルー』を観る",
+    "description": "岩男潤子主演・今敏監督。アイドルの精神が崩壊していく様を描くサスペンスアニメ。",
+    "category": "movie",
+    "tags": [
+      "アニメ",
+      "サスペンス"
+    ],
+    "estimated_minutes": 81,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_075_2",
+    "title": "『ターミネーター2』を観る",
+    "description": "アーノルド・シュワルツェネッガー主演・ジェームズ・キャメロン監督。SFアクション映画の金字塔として知られる続編。",
+    "category": "movie",
+    "tags": [
+      "アクション",
+      "SF"
+    ],
+    "estimated_minutes": 137,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_076_2",
+    "title": "『エイリアン2』を観る",
+    "description": "シガニー・ウィーバー主演・ジェームズ・キャメロン監督。異星生物との戦いを描くSFアクションの名作。",
+    "category": "movie",
+    "tags": [
+      "アクション",
+      "SF"
+    ],
+    "estimated_minutes": 137,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_077_item",
+    "title": "『スター・ウォーズ 新たなる希望』を観る",
+    "description": "マーク・ハミル主演・ジョージ・ルーカス監督。銀河を舞台にした宇宙SF活劇シリーズの第1作。",
+    "category": "movie",
+    "tags": [
+      "アクション",
+      "SF"
+    ],
+    "estimated_minutes": 121,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_078_item",
+    "title": "『アベンジャーズ』を観る",
+    "description": "ロバート・ダウニー・Jr主演・ジョス・ウィードン監督。ヒーローたちが集結する大人気アクション超大作。",
+    "category": "movie",
+    "tags": [
+      "アクション",
+      "SF"
+    ],
+    "estimated_minutes": 143,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_079_item",
+    "title": "『アイアンマン』を観る",
+    "description": "ロバート・ダウニー・Jr主演・ジョン・ファヴロー監督。MCU第1作、天才発明家がヒーローになるまでを描く。",
+    "category": "movie",
+    "tags": [
+      "アクション",
+      "SF"
+    ],
+    "estimated_minutes": 126,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_080_item",
+    "title": "『トランスフォーマー』を観る",
+    "description": "シャイア・ラブーフ主演・マイケル・ベイ監督。変形するロボットたちの激しい戦いを描くSF大作。",
+    "category": "movie",
+    "tags": [
+      "アクション",
+      "SF"
+    ],
+    "estimated_minutes": 144,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_081_xmen",
+    "title": "『X-MEN』を観る",
+    "description": "ヒュー・ジャックマン主演・ブライアン・シンガー監督。特殊能力を持つミュータントたちの戦いを描く。",
+    "category": "movie",
+    "tags": [
+      "アクション",
+      "SF"
+    ],
+    "estimated_minutes": 104,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_082_item",
+    "title": "『パシフィック・リム』を観る",
+    "description": "チャーリー・ハナム主演・ギレルモ・デル・トロ監督。巨大ロボットと怪獣が激突するSFアクション大作。",
+    "category": "movie",
+    "tags": [
+      "アクション",
+      "SF"
+    ],
+    "estimated_minutes": 132,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_083_item",
+    "title": "『エッジ・オブ・トゥモロー』を観る",
+    "description": "トム・クルーズ主演・ダグ・リーマン監督。同じ一日を繰り返しながら戦う異色のSFアクション。",
+    "category": "movie",
+    "tags": [
+      "アクション",
+      "SF"
+    ],
+    "estimated_minutes": 113,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_084_rrr",
+    "title": "『RRR』を観る",
+    "description": "N・T・ラーマ・ラオ・Jr主演・S・S・ラージャマウリ監督。実在の英雄をモデルにしたインド発の大迫力アクション。",
+    "category": "movie",
+    "tags": [
+      "アクション",
+      "ドラマ"
+    ],
+    "estimated_minutes": 179,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_085_item",
+    "title": "『ミッション:インポッシブル』を観る",
+    "description": "トム・クルーズ主演・ブライアン・デ・パルマ監督。スパイ映画シリーズの第1作、緊迫の潜入アクション。",
+    "category": "movie",
+    "tags": [
+      "アクション",
+      "サスペンス"
+    ],
+    "estimated_minutes": 110,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_086_item",
+    "title": "『キングスマン』を観る",
+    "description": "コリン・ファース主演・マシュー・ヴォーン監督。スタイリッシュな英国紳士スパイを描くアクションコメディ。",
+    "category": "movie",
+    "tags": [
+      "アクション",
+      "コメディ"
+    ],
+    "estimated_minutes": 129,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_087_item",
+    "title": "『ジョン・ウィック』を観る",
+    "description": "キアヌ・リーブス主演・チャド・スタエルスキ監督。伝説の殺し屋が復讐に挑むスタイリッシュアクション。",
+    "category": "movie",
+    "tags": [
+      "アクション",
+      "サスペンス"
+    ],
+    "estimated_minutes": 101,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_088_96",
+    "title": "『96時間』を観る",
+    "description": "リーアム・ニーソン主演・ピエール・モレル監督。誘拐された娘を救うため元エージェントが奮闘する。",
+    "category": "movie",
+    "tags": [
+      "アクション",
+      "サスペンス"
+    ],
+    "estimated_minutes": 93,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_089_item",
+    "title": "『ダイ・ハード』を観る",
+    "description": "ブルース・ウィリス主演・ジョン・マクティアナン監督。高層ビルに立てこもったテロリストと戦う刑事の物語。",
+    "category": "movie",
+    "tags": [
+      "アクション",
+      "サスペンス"
+    ],
+    "estimated_minutes": 132,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_090_item",
+    "title": "『マッドマックス 怒りのデス・ロード』を観る",
+    "description": "トム・ハーディ主演・ジョージ・ミラー監督。荒廃した近未来を舞台にした疾走感あふれるSF活劇。",
+    "category": "movie",
+    "tags": [
+      "アクション",
+      "SF"
+    ],
+    "estimated_minutes": 120,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_091_item",
+    "title": "『ガーディアンズ・オブ・ギャラクシー』を観る",
+    "description": "クリス・プラット主演・ジェームズ・ガン監督。個性豊かなヒーローたちが銀河を守るSFコメディ。",
+    "category": "movie",
+    "tags": [
+      "アクション",
+      "SF",
+      "コメディ"
+    ],
+    "estimated_minutes": 121,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_092_item",
+    "title": "『プリティ・ウーマン』を観る",
+    "description": "ジュリア・ロバーツ主演・ゲイリー・マーシャル監督。大富豪と女性の身分違いの恋を描くラブコメの名作。",
+    "category": "movie",
+    "tags": [
+      "恋愛",
+      "コメディ"
+    ],
+    "estimated_minutes": 119,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_093_item",
+    "title": "『ノッティングヒルの恋人』を観る",
+    "description": "ヒュー・グラント主演・ロジャー・ミッチェル監督。書店員と大女優の恋を描くロマンティックコメディ。",
+    "category": "movie",
+    "tags": [
+      "恋愛",
+      "コメディ"
+    ],
+    "estimated_minutes": 124,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_094_item",
+    "title": "『ブリジット・ジョーンズの日記』を観る",
+    "description": "レニー・ゼルウィガー主演・シャロン・マグワイア監督。不器用な独身女性の恋愛模様を描くコメディの人気作。",
+    "category": "movie",
+    "tags": [
+      "恋愛",
+      "コメディ"
+    ],
+    "estimated_minutes": 97,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_095_item",
+    "title": "『恋愛適齢期』を観る",
+    "description": "ジャック・ニコルソン主演・ナンシー・マイヤーズ監督。大人の男女の恋愛模様を描く上質なラブコメディ。",
+    "category": "movie",
+    "tags": [
+      "恋愛",
+      "コメディ"
+    ],
+    "estimated_minutes": 128,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_096_500",
+    "title": "『500日のサマー』を観る",
+    "description": "ジョセフ・ゴードン=レヴィット主演・マーク・ウェブ監督。時系列を入れ替えた構成が特徴的な恋愛映画。",
+    "category": "movie",
+    "tags": [
+      "恋愛",
+      "コメディ"
+    ],
+    "estimated_minutes": 95,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_097_item",
+    "title": "『アバウト・タイム 愛おしい時間について』を観る",
+    "description": "ドーナル・グリーソン主演・リチャード・カーティス監督。時間を巻き戻す能力を持つ青年の恋と家族を描く。",
+    "category": "movie",
+    "tags": [
+      "恋愛",
+      "ファンタジー"
+    ],
+    "estimated_minutes": 123,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_098_item",
+    "title": "『ラブ・アクチュアリー』を観る",
+    "description": "ヒュー・グラント主演・リチャード・カーティス監督。クリスマスを舞台に交錯する群像恋愛コメディ。",
+    "category": "movie",
+    "tags": [
+      "恋愛",
+      "コメディ"
+    ],
+    "estimated_minutes": 135,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_099_item",
+    "title": "『クレイジー・リッチ!』を観る",
+    "description": "コンスタンス・ウー主演・ジョン・M・チュウ監督。シンガポールの大富豪一家を舞台にしたラブコメ。",
+    "category": "movie",
+    "tags": [
+      "恋愛",
+      "コメディ"
+    ],
+    "estimated_minutes": 121,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_100_item",
+    "title": "『君の膵臓をたべたい』を観る",
+    "description": "浜辺美波主演・月川翔監督。余命宣告を受けた少女と同級生の交流を描く感動作。",
+    "category": "movie",
+    "tags": [
+      "恋愛",
+      "ドラマ"
+    ],
+    "estimated_minutes": 117,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_101_item",
+    "title": "『花束みたいな恋をした』を観る",
+    "description": "菅田将暉主演・土井裕泰監督。出会いから別れまでの5年間を丁寧に描く恋愛映画。",
+    "category": "movie",
+    "tags": [
+      "恋愛",
+      "ドラマ"
+    ],
+    "estimated_minutes": 124,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_102_item",
+    "title": "『ローマの休日』を観る",
+    "description": "オードリー・ヘプバーン主演・ウィリアム・ワイラー監督。王女と新聞記者のひとときの恋を描く不朽の名作。",
+    "category": "movie",
+    "tags": [
+      "恋愛",
+      "コメディ"
+    ],
+    "estimated_minutes": 118,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_103_item",
+    "title": "『めぐり逢えたら』を観る",
+    "description": "トム・ハンクス主演・ノーラ・エフロン監督。ラジオ番組をきっかけに惹かれ合う男女を描く。",
+    "category": "movie",
+    "tags": [
+      "恋愛",
+      "ドラマ"
+    ],
+    "estimated_minutes": 105,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_104_item",
+    "title": "『シェイプ・オブ・ウォーター』を観る",
+    "description": "サリー・ホーキンス主演・ギレルモ・デル・トロ監督。声を持たない女性と不思議な生物の恋を描くファンタジー。",
+    "category": "movie",
+    "tags": [
+      "恋愛",
+      "ファンタジー",
+      "ドラマ"
+    ],
+    "estimated_minutes": 123,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_105_item",
+    "title": "『アメリ』を観る",
+    "description": "オドレイ・トトゥ主演・ジャン=ピエール・ジュネ監督。空想好きな女性がパリで巻き起こす奇跡の物語。",
+    "category": "movie",
+    "tags": [
+      "恋愛",
+      "コメディ",
+      "ファンタジー"
+    ],
+    "estimated_minutes": 122,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_106_item",
+    "title": "『ブロークバック・マウンテン』を観る",
+    "description": "ヒース・レジャー主演・アン・リー監督。2人の男性カウボーイの秘めた恋を描いた話題作。",
+    "category": "movie",
+    "tags": [
+      "恋愛",
+      "ドラマ"
+    ],
+    "estimated_minutes": 134,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_107_item",
+    "title": "『ラ・ラ・ランド』を観る",
+    "description": "ライアン・ゴズリング主演・デイミアン・チャゼル監督。夢を追う男女の恋と葛藤を描くミュージカル。",
+    "category": "movie",
+    "tags": [
+      "恋愛",
+      "ドラマ"
+    ],
+    "estimated_minutes": 128,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_108_item",
+    "title": "『マディソン郡の橋』を観る",
+    "description": "メリル・ストリープ主演・クリント・イーストウッド監督。4日間だけの運命的な恋を描く大人のラブストーリー。",
+    "category": "movie",
+    "tags": [
+      "恋愛",
+      "ドラマ"
+    ],
+    "estimated_minutes": 135,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_109_item",
+    "title": "『となりのトトロ』を観る",
+    "description": "日高のり子主演・宮崎駿監督。田舎に引っ越した姉妹と不思議な生き物の交流を描く。",
+    "category": "movie",
+    "tags": [
+      "アニメ",
+      "ファンタジー"
+    ],
+    "estimated_minutes": 86,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_110_item",
+    "title": "『千と千尋の神隠し』を観る",
+    "description": "柊瑠美主演・宮崎駿監督。不思議な世界に迷い込んだ少女の成長を描く傑作。",
+    "category": "movie",
+    "tags": [
+      "アニメ",
+      "ファンタジー"
+    ],
+    "estimated_minutes": 125,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_111_item",
+    "title": "『もののけ姫』を観る",
+    "description": "松田洋治主演・宮崎駿監督。森の神々と人間の争いを壮大に描くファンタジー。",
+    "category": "movie",
+    "tags": [
+      "アニメ",
+      "ファンタジー"
+    ],
+    "estimated_minutes": 133,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_112_item",
+    "title": "『ハウルの動く城』を観る",
+    "description": "倍賞千恵子主演・宮崎駿監督。魔法をかけられた少女と動く城の魔法使いの物語。",
+    "category": "movie",
+    "tags": [
+      "アニメ",
+      "ファンタジー"
+    ],
+    "estimated_minutes": 119,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_113_item",
+    "title": "『崖の上のポニョ』を観る",
+    "description": "奈良柚莉愛主演・宮崎駿監督。人間になりたい魚の子ポニョと少年の交流を描く。",
+    "category": "movie",
+    "tags": [
+      "アニメ",
+      "ファンタジー"
+    ],
+    "estimated_minutes": 101,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_114_item",
+    "title": "『天空の城ラピュタ』を観る",
+    "description": "田中真弓主演・宮崎駿監督。空に浮かぶ伝説の島を探す冒険ファンタジー。",
+    "category": "movie",
+    "tags": [
+      "アニメ",
+      "ファンタジー"
+    ],
+    "estimated_minutes": 124,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_115_item",
+    "title": "『サマーウォーズ』を観る",
+    "description": "神木隆之介主演・細田守監督。仮想世界と大家族の絆を描くひと夏の物語。",
+    "category": "movie",
+    "tags": [
+      "アニメ",
+      "SF"
+    ],
+    "estimated_minutes": 114,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_116_item",
+    "title": "『おおかみこどもの雨と雪』を観る",
+    "description": "宮崎あおい主演・細田守監督。人間と狼の血を引く子どもたちを育てる母の物語。",
+    "category": "movie",
+    "tags": [
+      "アニメ",
+      "ファンタジー",
+      "ドラマ"
+    ],
+    "estimated_minutes": 117,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_117_item",
+    "title": "『未来のミライ』を観る",
+    "description": "上白石萌歌主演・細田守監督。妹が生まれた少年が不思議な時間旅行をする物語。",
+    "category": "movie",
+    "tags": [
+      "アニメ",
+      "ファンタジー"
+    ],
+    "estimated_minutes": 100,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_118_item",
+    "title": "『バケモノの子』を観る",
+    "description": "役所広司主演・細田守監督。異世界で武術を学ぶ少年の成長を描くファンタジー。",
+    "category": "movie",
+    "tags": [
+      "アニメ",
+      "ファンタジー"
+    ],
+    "estimated_minutes": 119,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_119_item",
+    "title": "『竜とそばかすの姫』を観る",
+    "description": "中村佳穂主演・細田守監督。仮想世界での歌声がきっかけで奇跡が起こる物語。",
+    "category": "movie",
+    "tags": [
+      "アニメ",
+      "ファンタジー"
+    ],
+    "estimated_minutes": 122,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_120_item",
+    "title": "『シュレック』を観る",
+    "description": "マイク・マイヤーズ主演・アンドリュー・アダムソン監督。不器用な怪物と仲間たちが繰り広げるコメディ。",
+    "category": "movie",
+    "tags": [
+      "アニメ",
+      "コメディ",
+      "ファンタジー"
+    ],
+    "estimated_minutes": 90,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_121_item",
+    "title": "『アナと雪の女王』を観る",
+    "description": "イディナ・メンゼル主演・クリス・バック監督。氷の力を持つ姉と妹の絆を描く大ヒットミュージカル。",
+    "category": "movie",
+    "tags": [
+      "アニメ",
+      "ファンタジー"
+    ],
+    "estimated_minutes": 102,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_122_item",
+    "title": "『リトル・マーメイド』を観る",
+    "description": "ジョディ・ベンソン主演・ロン・クレメンツ監督。人間に憧れる人魚姫の恋と冒険を描く名作。",
+    "category": "movie",
+    "tags": [
+      "アニメ",
+      "ファンタジー"
+    ],
+    "estimated_minutes": 83,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_123_item",
+    "title": "『美女と野獣』を観る",
+    "description": "ペイジ・オハラ主演・ゲイリー・トラウズデール監督。呪いをかけられた野獣と本好きの娘の恋を描く。",
+    "category": "movie",
+    "tags": [
+      "アニメ",
+      "ファンタジー",
+      "恋愛"
+    ],
+    "estimated_minutes": 84,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_124_akira",
+    "title": "『AKIRA』を観る",
+    "description": "岩田光央主演・大友克洋監督。ネオ東京を舞台にした伝説的サイバーパンクアニメ。",
+    "category": "movie",
+    "tags": [
+      "アニメ",
+      "SF"
+    ],
+    "estimated_minutes": 124,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_125_ghostintheshell",
+    "title": "『GHOST IN THE SHELL/攻殻機動隊』を観る",
+    "description": "田中敦子主演・押井守監督。義体化社会での自我を問うサイバーパンクの金字塔。",
+    "category": "movie",
+    "tags": [
+      "アニメ",
+      "SF"
+    ],
+    "estimated_minutes": 83,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_126_item",
+    "title": "『天気の子』を観る",
+    "description": "醍醐虎汰朗主演・新海誠監督。雨が降り続く東京で出会った少年少女を描く。",
+    "category": "movie",
+    "tags": [
+      "アニメ",
+      "ファンタジー",
+      "ドラマ"
+    ],
+    "estimated_minutes": 112,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_127_item",
+    "title": "『君の名は。』を観る",
+    "description": "神木隆之介主演・新海誠監督。入れ替わりを通じて惹かれ合う少年少女の物語。",
+    "category": "movie",
+    "tags": [
+      "アニメ",
+      "ファンタジー",
+      "恋愛"
+    ],
+    "estimated_minutes": 106,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_128_item",
+    "title": "『時をかける少女』を観る",
+    "description": "仲里依紗主演・細田守監督。時間を飛び越える力を得た女子高生の青春を描く。",
+    "category": "movie",
+    "tags": [
+      "アニメ",
+      "SF",
+      "ドラマ"
+    ],
+    "estimated_minutes": 98,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_129_item",
+    "title": "『この世界の片隅に』を観る",
+    "description": "のん主演・片渕須直監督。戦時中の広島・呉を舞台にした日常を描くアニメ。",
+    "category": "movie",
+    "tags": [
+      "アニメ",
+      "ドラマ"
+    ],
+    "estimated_minutes": 126,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_130_item",
+    "title": "『聲の形』を観る",
+    "description": "入野自由主演・山田尚子監督。いじめと贖罪をテーマにした青春アニメーション。",
+    "category": "movie",
+    "tags": [
+      "アニメ",
+      "ドラマ"
+    ],
+    "estimated_minutes": 130,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_131_item",
+    "title": "『ゼロ・グラビティ』を観る",
+    "description": "サンドラ・ブロック主演・アルフォンソ・キュアロン監督。宇宙空間で漂流する飛行士のサバイバルを描く。",
+    "category": "movie",
+    "tags": [
+      "SF",
+      "ドラマ",
+      "サスペンス"
+    ],
+    "estimated_minutes": 91,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_132_item",
+    "title": "『オデッセイ』を観る",
+    "description": "マット・デイモン主演・リドリー・スコット監督。火星に取り残された宇宙飛行士の知恵と工夫を描く。",
+    "category": "movie",
+    "tags": [
+      "SF",
+      "ドラマ",
+      "コメディ"
+    ],
+    "estimated_minutes": 144,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_133_item",
+    "title": "『パッセンジャー』を観る",
+    "description": "ジェニファー・ローレンス主演・モルテン・ティルドゥム監督。目覚めが早すぎた宇宙船の乗客2人を描くSFロマンス。",
+    "category": "movie",
+    "tags": [
+      "SF",
+      "恋愛",
+      "ドラマ"
+    ],
+    "estimated_minutes": 116,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_134_item",
+    "title": "『メッセージ』を観る",
+    "description": "エイミー・アダムス主演・ドゥニ・ヴィルヌーヴ監督。異星人とのコミュニケーションを描く知的なSF。",
+    "category": "movie",
+    "tags": [
+      "SF",
+      "ドラマ",
+      "ミステリー"
+    ],
+    "estimated_minutes": 116,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_135_item",
+    "title": "『トゥモローランド』を観る",
+    "description": "ジョージ・クルーニー主演・ブラッド・バード監督。理想郷を目指す少女と発明家の冒険を描くSF。",
+    "category": "movie",
+    "tags": [
+      "SF",
+      "ファンタジー",
+      "アクション"
+    ],
+    "estimated_minutes": 130,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_136_item",
+    "title": "『エターナル・サンシャイン』を観る",
+    "description": "ジム・キャリー主演・ミシェル・ゴンドリー監督。記憶を消す技術をめぐる恋人たちの物語。",
+    "category": "movie",
+    "tags": [
+      "SF",
+      "恋愛",
+      "ドラマ"
+    ],
+    "estimated_minutes": 108,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_137_item",
+    "title": "『ハリー・ポッターと賢者の石』を観る",
+    "description": "ダニエル・ラドクリフ主演・クリス・コロンバス監督。魔法学校に入学した少年の冒険が始まる第1作。",
+    "category": "movie",
+    "tags": [
+      "ファンタジー",
+      "アクション"
+    ],
+    "estimated_minutes": 152,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_138_item",
+    "title": "『パイレーツ・オブ・カリビアン』を観る",
+    "description": "ジョニー・デップ主演・ゴア・ヴァービンスキー監督。海賊たちが宝を巡って繰り広げる痛快アドベンチャー。",
+    "category": "movie",
+    "tags": [
+      "ファンタジー",
+      "アクション",
+      "コメディ"
+    ],
+    "estimated_minutes": 143,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_139_item",
+    "title": "『ナルニア国物語/ライオンと魔女』を観る",
+    "description": "ジョージー・ヘンリー主演・アンドリュー・アダムソン監督。衣装だんすの奥に広がる異世界を巡る冒険物語。",
+    "category": "movie",
+    "tags": [
+      "ファンタジー",
+      "アクション"
+    ],
+    "estimated_minutes": 143,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_140_item",
+    "title": "『パンズ・ラビリンス』を観る",
+    "description": "イバナ・バケロ主演・ギレルモ・デル・トロ監督。内戦下のスペインを舞台にした少女の幻想物語。",
+    "category": "movie",
+    "tags": [
+      "ファンタジー",
+      "ドラマ"
+    ],
+    "estimated_minutes": 118,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_141_item",
+    "title": "『スターダスト』を観る",
+    "description": "クレア・デインズ主演・マシュー・ヴォーン監督。流れ星を探す青年が繰り広げるロマンティックな冒険。",
+    "category": "movie",
+    "tags": [
+      "ファンタジー",
+      "恋愛",
+      "コメディ"
+    ],
+    "estimated_minutes": 127,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_142_item",
+    "title": "『プリンセス・ブライド・ストーリー』を観る",
+    "description": "ケーリー・エルウィス主演・ロブ・ライナー監督。祖父が孫に語るおとぎ話仕立ての冒険ラブコメディ。",
+    "category": "movie",
+    "tags": [
+      "ファンタジー",
+      "コメディ",
+      "恋愛"
+    ],
+    "estimated_minutes": 98,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_143_item",
+    "title": "『ロード・オブ・ザ・リング』を観る",
+    "description": "イライジャ・ウッド主演・ピーター・ジャクソン監督。指輪を巡る壮大な冒険を描くファンタジー叙事詩。",
+    "category": "movie",
+    "tags": [
+      "ファンタジー",
+      "アクション"
+    ],
+    "estimated_minutes": 178,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_200_item",
+    "title": "『白夜行』を観る",
+    "description": "堀北真希主演・深川栄洋監督。20年にわたる男女の運命を描く長編ミステリーの映画化。",
+    "category": "movie",
+    "tags": [
+      "ミステリー",
+      "ドラマ"
+    ],
+    "estimated_minutes": 121,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_201_x",
+    "title": "『容疑者Xの献身』を観る",
+    "description": "福山雅治主演・西谷弘監督。天才数学者の緻密な計画が光る本格ミステリーの映画化。",
+    "category": "movie",
+    "tags": [
+      "ミステリー",
+      "ドラマ"
+    ],
+    "estimated_minutes": 129,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_202_item",
+    "title": "『悪人』を観る",
+    "description": "妻夫木聡主演・李相日監督。一つの事件をめぐる加害者と被害者双方の視点を描く。",
+    "category": "movie",
+    "tags": [
+      "ミステリー",
+      "ドラマ"
+    ],
+    "estimated_minutes": 139,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_203_item",
+    "title": "『告白』を観る",
+    "description": "松たか子主演・中島哲也監督。娘を失った教師の復讐劇を描く衝撃のサスペンス。",
+    "category": "movie",
+    "tags": [
+      "ミステリー",
+      "サスペンス"
+    ],
+    "estimated_minutes": 106,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_204_item",
+    "title": "『天空の蜂』を観る",
+    "description": "江口洋介主演・堤幸彦監督。原発を舞台にしたテロ計画に立ち向かう人々を描く。",
+    "category": "movie",
+    "tags": [
+      "ミステリー",
+      "サスペンス"
+    ],
+    "estimated_minutes": 129,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_205_item",
+    "title": "『ソロモンの偽証』を観る",
+    "description": "藤野涼子主演・成島出監督。生徒の死をめぐり中学生たちが開く学内裁判を描く。",
+    "category": "movie",
+    "tags": [
+      "ミステリー",
+      "ドラマ"
+    ],
+    "estimated_minutes": 154,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_206_item",
+    "title": "『麒麟の翼』を観る",
+    "description": "阿部寛主演・土井裕泰監督。加賀恭一郎シリーズ、日本橋を舞台にした人情ミステリー映画。",
+    "category": "movie",
+    "tags": [
+      "ミステリー",
+      "ドラマ"
+    ],
+    "estimated_minutes": 129,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_207_item",
+    "title": "『名探偵コナン 紺青の拳』を観る",
+    "description": "高山みなみ主演・永岡智佳監督。シンガポールを舞台にした名探偵コナンの劇場版。",
+    "category": "movie",
+    "tags": [
+      "アニメ",
+      "ミステリー",
+      "アクション"
+    ],
+    "estimated_minutes": 110,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_208_item",
+    "title": "『名探偵コナン ゼロの執行人』を観る",
+    "description": "高山みなみ主演・立川譲監督。警視庁を巻き込む大規模テロ計画を描く劇場版。",
+    "category": "movie",
+    "tags": [
+      "アニメ",
+      "ミステリー",
+      "アクション"
+    ],
+    "estimated_minutes": 111,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_209_item",
+    "title": "『相棒 劇場版』を観る",
+    "description": "水谷豊主演・和泉聖治監督。人気刑事ドラマの映画版、巧妙な事件を追う。",
+    "category": "movie",
+    "tags": [
+      "ミステリー",
+      "ドラマ"
+    ],
+    "estimated_minutes": 121,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_210_22",
+    "title": "『22年目の告白-私が殺人犯です-』を観る",
+    "description": "藤原竜也主演・入江悠監督。時効成立後に自ら名乗り出た男をめぐるサスペンス。",
+    "category": "movie",
+    "tags": [
+      "ミステリー",
+      "サスペンス"
+    ],
+    "estimated_minutes": 127,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_211_7",
+    "title": "『インシテミル 7日間のデス・ゲーム』を観る",
+    "description": "藤原竜也主演・中村義洋監督。密室に集められた参加者たちが疑心暗鬼になるミステリー。",
+    "category": "movie",
+    "tags": [
+      "ミステリー",
+      "サスペンス"
+    ],
+    "estimated_minutes": 129,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_212_item",
+    "title": "『リング』を観る",
+    "description": "松嶋菜々子主演・中田秀夫監督。呪いのビデオをめぐるJホラー・サスペンスの金字塔。",
+    "category": "movie",
+    "tags": [
+      "ミステリー",
+      "サスペンス"
+    ],
+    "estimated_minutes": 96,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_213_item",
+    "title": "『ワイルド・スピード』を観る",
+    "description": "ヴィン・ディーゼル主演・ロブ・コーエン監督。ストリートレースを舞台にした疾走感あるアクション。",
+    "category": "movie",
+    "tags": [
+      "アクション"
+    ],
+    "estimated_minutes": 106,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_214_item",
+    "title": "『キル・ビル』を観る",
+    "description": "ユマ・サーマン主演・クエンティン・タランティーノ監督。復讐に燃える女性剣士を描くスタイリッシュアクション。",
+    "category": "movie",
+    "tags": [
+      "アクション"
+    ],
+    "estimated_minutes": 111,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_215_item",
+    "title": "『グラディエーター』を観る",
+    "description": "ラッセル・クロウ主演・リドリー・スコット監督。古代ローマの剣闘士の復讐を描く壮大な歴史アクション。",
+    "category": "movie",
+    "tags": [
+      "アクション",
+      "ドラマ"
+    ],
+    "estimated_minutes": 155,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_216_item",
+    "title": "『レオン』を観る",
+    "description": "ジャン・レノ主演・リュック・ベッソン監督。殺し屋と少女の絆を描く切なさ漂うアクション。",
+    "category": "movie",
+    "tags": [
+      "アクション",
+      "ドラマ"
+    ],
+    "estimated_minutes": 110,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_217_007",
+    "title": "『007 スカイフォール』を観る",
+    "description": "ダニエル・クレイグ主演・サム・メンデス監督。MI6を狙う陰謀に立ち向かうスパイアクション。",
+    "category": "movie",
+    "tags": [
+      "アクション",
+      "サスペンス"
+    ],
+    "estimated_minutes": 143,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_218_item",
+    "title": "『ボーン・アイデンティティー』を観る",
+    "description": "マット・デイモン主演・ダグ・リーマン監督。記憶を失った元エージェントの正体を追うアクション。",
+    "category": "movie",
+    "tags": [
+      "アクション",
+      "サスペンス"
+    ],
+    "estimated_minutes": 119,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_219_item",
+    "title": "『インディ・ジョーンズ 失われたアーク』を観る",
+    "description": "ハリソン・フォード主演・スティーヴン・スピルバーグ監督。考古学者が聖櫃を探す痛快アドベンチャー。",
+    "category": "movie",
+    "tags": [
+      "アクション",
+      "ファンタジー"
+    ],
+    "estimated_minutes": 115,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_220_item",
+    "title": "『るろうに剣心』を観る",
+    "description": "佐藤健主演・大友啓史監督。幕末を生きた剣客の姿を描く実写時代劇アクション。",
+    "category": "movie",
+    "tags": [
+      "アクション",
+      "ドラマ"
+    ],
+    "estimated_minutes": 134,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_221_item",
+    "title": "『ベイビー・ドライバー』を観る",
+    "description": "アンセル・エルゴート主演・エドガー・ライト監督。音楽に合わせた爽快なカーアクションが魅力の一作。",
+    "category": "movie",
+    "tags": [
+      "アクション",
+      "コメディ"
+    ],
+    "estimated_minutes": 113,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_222_item",
+    "title": "『ジュラシック・パーク』を観る",
+    "description": "サム・ニール主演・スティーヴン・スピルバーグ監督。恐竜が蘇るテーマパークを描くSF超大作。",
+    "category": "movie",
+    "tags": [
+      "SF",
+      "アクション"
+    ],
+    "estimated_minutes": 127,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_223_et",
+    "title": "『E.T.』を観る",
+    "description": "ヘンリー・トーマス主演・スティーヴン・スピルバーグ監督。少年と宇宙人の友情を描く不朽の名作。",
+    "category": "movie",
+    "tags": [
+      "SF",
+      "ファンタジー",
+      "ドラマ"
+    ],
+    "estimated_minutes": 115,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_224_item",
+    "title": "『バック・トゥ・ザ・フューチャー』を観る",
+    "description": "マイケル・J・フォックス主演・ロバート・ゼメキス監督。タイムマシンで過去に行った少年のドタバタ劇。",
+    "category": "movie",
+    "tags": [
+      "SF",
+      "コメディ"
+    ],
+    "estimated_minutes": 116,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_225_item",
+    "title": "『インデペンデンス・デイ』を観る",
+    "description": "ウィル・スミス主演・ローランド・エメリッヒ監督。地球を襲う異星人との攻防を描くSF大作。",
+    "category": "movie",
+    "tags": [
+      "SF",
+      "アクション"
+    ],
+    "estimated_minutes": 145,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_226_item",
+    "title": "『アバター』を観る",
+    "description": "サム・ワーシントン主演・ジェームズ・キャメロン監督。異星の惑星を舞台にした壮大なSF叙事詩。",
+    "category": "movie",
+    "tags": [
+      "SF",
+      "アクション"
+    ],
+    "estimated_minutes": 162,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_227_item",
+    "title": "『スパイダーマン:スパイダーバース』を観る",
+    "description": "シャメイク・ムーア主演・ボブ・パーシケッティ監督。多次元のスパイダーマンたちが共演するSFアニメ。",
+    "category": "movie",
+    "tags": [
+      "SF",
+      "アニメ",
+      "アクション"
+    ],
+    "estimated_minutes": 117,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_228_1",
+    "title": "『レディ・プレイヤー1』を観る",
+    "description": "タイ・シェリダン主演・スティーヴン・スピルバーグ監督。仮想現実世界を舞台にした宝探しSFアクション。",
+    "category": "movie",
+    "tags": [
+      "SF",
+      "アクション"
+    ],
+    "estimated_minutes": 140,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_229_item",
+    "title": "『ダークナイト』を観る",
+    "description": "クリスチャン・ベール主演・クリストファー・ノーラン監督。ジョーカーとの死闘を描くヒーローアクションの傑作。",
+    "category": "movie",
+    "tags": [
+      "アクション",
+      "サスペンス"
+    ],
+    "estimated_minutes": 152,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_230_item",
+    "title": "『ある愛の詩』を観る",
+    "description": "ライアン・オニール主演・アーサー・ヒラー監督。身分違いの恋人たちの愛と別れを描く恋愛映画の名作。",
+    "category": "movie",
+    "tags": [
+      "恋愛",
+      "ドラマ"
+    ],
+    "estimated_minutes": 100,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_231_item",
+    "title": "『ノーカントリー』を観る",
+    "description": "トミー・リー・ジョーンズ主演・コーエン兄弟監督。追う者と追われる者の緊迫した攻防を描く。",
+    "category": "movie",
+    "tags": [
+      "サスペンス",
+      "ドラマ"
+    ],
+    "estimated_minutes": 122,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_232_item",
+    "title": "『フォーン・ブース』を観る",
+    "description": "コリン・ファレル主演・ジョエル・シューマカー監督。公衆電話に縛り付けられた男の一夜を描くサスペンス。",
+    "category": "movie",
+    "tags": [
+      "サスペンス"
+    ],
+    "estimated_minutes": 81,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_233_item",
+    "title": "『パニック・ルーム』を観る",
+    "description": "ジョディ・フォスター主演・デヴィッド・フィンチャー監督。自宅に侵入した強盗との攻防を描くサスペンス。",
+    "category": "movie",
+    "tags": [
+      "サスペンス"
+    ],
+    "estimated_minutes": 112,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_234_item",
+    "title": "『メリー・ポピンズ』を観る",
+    "description": "ジュリー・アンドリュース主演・ロバート・スティーヴンソン監督。魔法使いの乳母が子どもたちに奇跡を届ける物語。",
+    "category": "movie",
+    "tags": [
+      "ファンタジー",
+      "コメディ"
+    ],
+    "estimated_minutes": 139,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_235_item",
+    "title": "『チャーリーとチョコレート工場』を観る",
+    "description": "ジョニー・デップ主演・ティム・バートン監督。謎多きチョコレート工場を巡る奇想天外な物語。",
+    "category": "movie",
+    "tags": [
+      "ファンタジー",
+      "コメディ"
+    ],
+    "estimated_minutes": 115,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_236_item",
+    "title": "『ジュマンジ』を観る",
+    "description": "ロビン・ウィリアムズ主演・ジョー・ジョンストン監督。魔法のボードゲームが引き起こす大騒動を描く。",
+    "category": "movie",
+    "tags": [
+      "ファンタジー",
+      "アクション"
+    ],
+    "estimated_minutes": 104,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_237_item",
+    "title": "『オズの魔法使』を観る",
+    "description": "ジュディ・ガーランド主演・ヴィクター・フレミング監督。竜巻に飛ばされた少女が不思議の国を旅する古典。",
+    "category": "movie",
+    "tags": [
+      "ファンタジー"
+    ],
+    "estimated_minutes": 102,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_238_item",
+    "title": "『マレフィセント』を観る",
+    "description": "アンジェリーナ・ジョリー主演・ロバート・ストロンバーグ監督。眠れる森の美女を悪役視点から描くダークファンタジー。",
+    "category": "movie",
+    "tags": [
+      "ファンタジー",
+      "ドラマ"
+    ],
+    "estimated_minutes": 97,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_239_item",
+    "title": "『初恋のきた道』を観る",
+    "description": "チャン・ツィイー主演・チャン・イーモウ監督。中国の農村を舞台にした純愛物語。",
+    "category": "movie",
+    "tags": [
+      "恋愛",
+      "ドラマ"
+    ],
+    "estimated_minutes": 89,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_240_item",
+    "title": "『ショコラ』を観る",
+    "description": "ジュリエット・ビノシュ主演・ラッセ・ハルストレム監督。チョコレート店をめぐる村人たちの心の変化を描く。",
+    "category": "movie",
+    "tags": [
+      "恋愛",
+      "ドラマ",
+      "コメディ"
+    ],
+    "estimated_minutes": 121,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_241_item",
+    "title": "『サブリナ』を観る",
+    "description": "オードリー・ヘプバーン主演・ビリー・ワイルダー監督。運転手の娘と兄弟の三角関係を描くロマンティックコメディ。",
+    "category": "movie",
+    "tags": [
+      "恋愛",
+      "コメディ"
+    ],
+    "estimated_minutes": 113,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_242_item",
+    "title": "『火垂るの墓』を観る",
+    "description": "辰巳努主演・高畑勲監督。戦時中を生きる兄妹の姿を描く不朽のアニメーション。",
+    "category": "movie",
+    "tags": [
+      "アニメ",
+      "ドラマ"
+    ],
+    "estimated_minutes": 89,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_243_item",
+    "title": "『借りぐらしのアリエッティ』を観る",
+    "description": "志田未来主演・米林宏昌監督。小人の少女と人間の少年の交流を描くファンタジー。",
+    "category": "movie",
+    "tags": [
+      "アニメ",
+      "ファンタジー"
+    ],
+    "estimated_minutes": 94,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_244_item",
+    "title": "『思い出のマーニー』を観る",
+    "description": "高月彩良主演・米林宏昌監督。孤独な少女と不思議な少女マーニーの交流を描く。",
+    "category": "movie",
+    "tags": [
+      "アニメ",
+      "ドラマ",
+      "ファンタジー"
+    ],
+    "estimated_minutes": 103,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_245_item",
+    "title": "『かぐや姫の物語』を観る",
+    "description": "朝倉あき主演・高畑勲監督。竹取物語を情感豊かに描いたアニメーション。",
+    "category": "movie",
+    "tags": [
+      "アニメ",
+      "ドラマ",
+      "ファンタジー"
+    ],
+    "estimated_minutes": 137,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_246_standbyme",
+    "title": "『STAND BY ME ドラえもん』を観る",
+    "description": "水田わさび主演・八木竜一監督。のび太とドラえもんの絆を3DCGで描いた劇場版。",
+    "category": "movie",
+    "tags": [
+      "アニメ",
+      "ファンタジー",
+      "コメディ"
+    ],
+    "estimated_minutes": 100,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_247_item",
+    "title": "『名探偵コナン 業火の向日葵』を観る",
+    "description": "高山みなみ主演・静野孔文監督。美術品盗難事件を追う名探偵コナンの劇場版。",
+    "category": "movie",
+    "tags": [
+      "アニメ",
+      "ミステリー",
+      "アクション"
+    ],
+    "estimated_minutes": 111,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_248_filmred",
+    "title": "『ワンピース FILM RED』を観る",
+    "description": "田中真弓主演・谷口悟朗監督。歌姫ウタをめぐる大冒険を描く劇場版アニメ。",
+    "category": "movie",
+    "tags": [
+      "アニメ",
+      "アクション"
+    ],
+    "estimated_minutes": 115,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_249_item",
+    "title": "『鬼滅の刃 無限列車編』を観る",
+    "description": "花江夏樹主演・外崎春雄監督。無限列車での激闘を描く大ヒット劇場版アニメ。",
+    "category": "movie",
+    "tags": [
+      "アニメ",
+      "アクション",
+      "ドラマ"
+    ],
+    "estimated_minutes": 117,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_300_item",
+    "title": "『猿の惑星』を観る",
+    "description": "チャールトン・ヘストン主演・フランクリン・J・シャフナー監督。猿が支配する惑星に漂着した宇宙飛行士を描くSFの古典。",
+    "category": "movie",
+    "tags": [
+      "SF",
+      "ドラマ"
+    ],
+    "estimated_minutes": 112,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_301_item",
+    "title": "『メン・イン・ブラック』を観る",
+    "description": "ウィル・スミス主演・バリー・ソネンフェルド監督。地球に潜む異星人を取り締まる秘密組織を描くSFコメディ。",
+    "category": "movie",
+    "tags": [
+      "SF",
+      "コメディ",
+      "アクション"
+    ],
+    "estimated_minutes": 98,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_302_item",
+    "title": "『ミノリティ・リポート』を観る",
+    "description": "トム・クルーズ主演・スティーヴン・スピルバーグ監督。犯罪を予知するシステムに追われる男を描くSFサスペンス。",
+    "category": "movie",
+    "tags": [
+      "SF",
+      "サスペンス"
+    ],
+    "estimated_minutes": 145,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_303_item",
+    "title": "『トータル・リコール』を観る",
+    "description": "アーノルド・シュワルツェネッガー主演・ポール・バーホーベン監督。偽の記憶が現実を侵食するSFアクション。",
+    "category": "movie",
+    "tags": [
+      "SF",
+      "アクション"
+    ],
+    "estimated_minutes": 113,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_304_item",
+    "title": "『エクス・マキナ』を観る",
+    "description": "アリシア・ヴィキャンデル主演・アレックス・ガーランド監督。人工知能の心を試すプログラマーを描く静かなSF。",
+    "category": "movie",
+    "tags": [
+      "SF",
+      "サスペンス",
+      "ドラマ"
+    ],
+    "estimated_minutes": 108,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_305_item",
+    "title": "『ドント・ルック・アップ』を観る",
+    "description": "レオナルド・ディカプリオ主演・アダム・マッケイ監督。地球に迫る彗星をめぐる社会風刺SFコメディ。",
+    "category": "movie",
+    "tags": [
+      "SF",
+      "コメディ",
+      "ドラマ"
+    ],
+    "estimated_minutes": 138,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_306_item",
+    "title": "『ゴーン・ベイビー・ゴーン』を観る",
+    "description": "ケイシー・アフレック主演・ベン・アフレック監督。少女失踪事件を追う私立探偵の葛藤を描くミステリー。",
+    "category": "movie",
+    "tags": [
+      "サスペンス",
+      "ミステリー",
+      "ドラマ"
+    ],
+    "estimated_minutes": 114,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_307_item",
+    "title": "『シークレット・ウィンドウ』を観る",
+    "description": "ジョニー・デップ主演・デヴィッド・ケップ監督。盗作疑惑をめぐる小説家の恐怖を描くサスペンス。",
+    "category": "movie",
+    "tags": [
+      "サスペンス",
+      "ミステリー"
+    ],
+    "estimated_minutes": 96,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_308_item",
+    "title": "『ドント・ブリーズ』を観る",
+    "description": "ステファニー・シガー主演・フェデ・アルバレス監督。盲目の元軍人の家に忍び込んだ若者たちを描くサスペンス。",
+    "category": "movie",
+    "tags": [
+      "サスペンス"
+    ],
+    "estimated_minutes": 88,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_309_item",
+    "title": "『フライトプラン』を観る",
+    "description": "ジョディ・フォスター主演・ロベルト・シュヴェンケ監督。機内で消えた娘を探す母親を描くサスペンス。",
+    "category": "movie",
+    "tags": [
+      "サスペンス",
+      "ミステリー"
+    ],
+    "estimated_minutes": 98,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_310_item",
+    "title": "『ザ・ゲーム』を観る",
+    "description": "マイケル・ダグラス主演・デヴィッド・フィンチャー監督。謎のゲームに巻き込まれる富豪を描くサスペンス。",
+    "category": "movie",
+    "tags": [
+      "サスペンス",
+      "ミステリー"
+    ],
+    "estimated_minutes": 129,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_311_item",
+    "title": "『グランド・イリュージョン』を観る",
+    "description": "ジェシー・アイゼンバーグ主演・ルイ・ルテリエ監督。マジックを使った銀行強盗をめぐる知能犯ミステリー。",
+    "category": "movie",
+    "tags": [
+      "ミステリー",
+      "サスペンス",
+      "コメディ"
+    ],
+    "estimated_minutes": 116,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_312_item",
+    "title": "『ダウト~あるカトリック学校で~』を観る",
+    "description": "メリル・ストリープ主演・ジョン・パトリック・シャンリー監督。神父への疑惑をめぐる修道女の葛藤を描くミステリー。",
+    "category": "movie",
+    "tags": [
+      "ミステリー",
+      "ドラマ"
+    ],
+    "estimated_minutes": 104,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_313_item",
+    "title": "『追憶』を観る",
+    "description": "バーブラ・ストライサンド主演・シドニー・ポラック監督。価値観の異なる男女の長い恋愛模様を描く。",
+    "category": "movie",
+    "tags": [
+      "恋愛",
+      "ドラマ"
+    ],
+    "estimated_minutes": 118,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_314_item",
+    "title": "『卒業』を観る",
+    "description": "ダスティン・ホフマン主演・マイク・ニコルズ監督。将来に悩む青年の恋と反抗を描いた青春恋愛映画の古典。",
+    "category": "movie",
+    "tags": [
+      "恋愛",
+      "ドラマ",
+      "コメディ"
+    ],
+    "estimated_minutes": 106,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_315_item",
+    "title": "『セレンディピティ』を観る",
+    "description": "ジョン・キューザック主演・ピーター・チェルソム監督。運命を信じる男女の再会を描くロマンティックコメディ。",
+    "category": "movie",
+    "tags": [
+      "恋愛",
+      "コメディ",
+      "ファンタジー"
+    ],
+    "estimated_minutes": 90,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_316_item",
+    "title": "『バレンタインデー』を観る",
+    "description": "ジュリア・ロバーツ主演・ゲイリー・マーシャル監督。バレンタインデーに交錯する恋人たちの群像コメディ。",
+    "category": "movie",
+    "tags": [
+      "恋愛",
+      "コメディ"
+    ],
+    "estimated_minutes": 125,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_317_item",
+    "title": "『世界一キライなあなたに』を観る",
+    "description": "エミリア・クラーク主演・テア・シャロック監督。介護をきっかけに惹かれ合う男女の恋を描く感動作。",
+    "category": "movie",
+    "tags": [
+      "恋愛",
+      "ドラマ"
+    ],
+    "estimated_minutes": 110,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_318_item",
+    "title": "『イルマーレ』を観る",
+    "description": "キアヌ・リーブス主演・アレハンドロ・アグレスティ監督。時空を超えた手紙のやり取りで結ばれる恋を描く。",
+    "category": "movie",
+    "tags": [
+      "恋愛",
+      "ファンタジー",
+      "ドラマ"
+    ],
+    "estimated_minutes": 99,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_319_item",
+    "title": "『ラブソングができるまで』を観る",
+    "description": "ヒュー・グラント主演・マーク・ローレンス監督。落ち目のミュージシャンと作詞家の恋を描くコメディ。",
+    "category": "movie",
+    "tags": [
+      "恋愛",
+      "コメディ"
+    ],
+    "estimated_minutes": 104,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_320_item",
+    "title": "『プロポーズ』を観る",
+    "description": "サンドラ・ブロック主演・アン・フレッチャー監督。偽装婚約から始まる上司と部下の恋を描くコメディ。",
+    "category": "movie",
+    "tags": [
+      "恋愛",
+      "コメディ"
+    ],
+    "estimated_minutes": 108,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_321_item",
+    "title": "『ペンギン・ハイウェイ』を観る",
+    "description": "石橋陽彩主演・石田祐康監督。町に現れたペンギンの謎を追う少年の物語。",
+    "category": "movie",
+    "tags": [
+      "アニメ",
+      "SF",
+      "ファンタジー"
+    ],
+    "estimated_minutes": 118,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_322_item",
+    "title": "『心が叫びたがってるんだ』を観る",
+    "description": "入野自由主演・長井龍雪監督。話せなくなった少女の恋と成長を描く青春アニメ。",
+    "category": "movie",
+    "tags": [
+      "アニメ",
+      "ドラマ",
+      "恋愛"
+    ],
+    "estimated_minutes": 119,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_323_item",
+    "title": "『リズと青い鳥』を観る",
+    "description": "種﨑敦美主演・山田尚子監督。吹奏楽部の少女2人の繊細な関係を描くアニメ。",
+    "category": "movie",
+    "tags": [
+      "アニメ",
+      "ドラマ"
+    ],
+    "estimated_minutes": 90,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_324_item",
+    "title": "『メアリと魔女の花』を観る",
+    "description": "杉咲花主演・米林宏昌監督。魔法の花を手にした少女の冒険を描くファンタジーアニメ。",
+    "category": "movie",
+    "tags": [
+      "アニメ",
+      "ファンタジー"
+    ],
+    "estimated_minutes": 103,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_325_item",
+    "title": "『ソードアート・オンライン -オーディナル・スケール-』を観る",
+    "description": "松岡禎丞主演・伊藤智彦監督。AR技術を巡る事件に挑む劇場版アニメ。",
+    "category": "movie",
+    "tags": [
+      "アニメ",
+      "SF",
+      "アクション"
+    ],
+    "estimated_minutes": 119,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_326_item",
+    "title": "『名探偵コナン から紅の恋歌』を観る",
+    "description": "高山みなみ主演・静野孔文監督。京都を舞台にした恋も絡む名探偵コナンの劇場版。",
+    "category": "movie",
+    "tags": [
+      "アニメ",
+      "ミステリー",
+      "恋愛"
+    ],
+    "estimated_minutes": 111,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_327_hello_world",
+    "title": "『HELLO WORLD』を観る",
+    "description": "北村匠海主演・伊藤智彦監督。未来の自分とともに同級生の運命を変えようとする高校生を描くSF青春恋愛アニメ。",
+    "category": "movie",
+    "tags": [
+      "アニメ",
+      "SF",
+      "恋愛"
+    ],
+    "estimated_minutes": 98,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_328_time_of_eve",
+    "title": "『イヴの時間 劇場版』を観る",
+    "description": "福山潤主演・吉浦康裕監督。人間とアンドロイドを区別しない喫茶店で、両者の関係を見つめ直すSFアニメ。",
+    "category": "movie",
+    "tags": [
+      "アニメ",
+      "SF",
+      "ドラマ"
+    ],
+    "estimated_minutes": 106,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_329_harmony",
+    "title": "『ハーモニー』を観る",
+    "description": "沢城みゆき主演・なかむらたかし／マイケル・アリアス監督。徹底した健康管理社会で起きる異変を追うSFサスペンス。",
+    "category": "movie",
+    "tags": [
+      "アニメ",
+      "SF",
+      "サスペンス"
+    ],
+    "estimated_minutes": 120,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_330_paprika",
+    "title": "『パプリカ』を観る",
+    "description": "林原めぐみ主演・今敏監督。夢に入り込む装置をめぐり、現実と夢の境界が崩れていくSFミステリー。",
+    "category": "movie",
+    "tags": [
+      "アニメ",
+      "SF",
+      "ミステリー"
+    ],
+    "estimated_minutes": 90,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_331_patlabor2",
+    "title": "『機動警察パトレイバー2 the Movie』を観る",
+    "description": "押井守監督。東京で相次ぐ事件を通して、平和と戦争の境界を問うSFポリティカルサスペンス。",
+    "category": "movie",
+    "tags": [
+      "アニメ",
+      "SF",
+      "サスペンス"
+    ],
+    "estimated_minutes": 113,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_332_vertigo",
+    "title": "『めまい』を観る",
+    "description": "ジェームズ・スチュワート主演・アルフレッド・ヒッチコック監督。高所恐怖症の元刑事が謎めいた女性を追う恋愛ミステリー。",
+    "category": "movie",
+    "tags": [
+      "ミステリー",
+      "サスペンス",
+      "恋愛"
+    ],
+    "estimated_minutes": 128,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_333_rebecca",
+    "title": "『レベッカ』を観る",
+    "description": "ジョーン・フォンテイン主演・アルフレッド・ヒッチコック監督。亡き前妻の影が残る大邸宅で、新妻を包む謎と不安を描く恋愛サスペンス。",
+    "category": "movie",
+    "tags": [
+      "ミステリー",
+      "サスペンス",
+      "恋愛"
+    ],
+    "estimated_minutes": 130,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_334_charade",
+    "title": "『シャレード』を観る",
+    "description": "オードリー・ヘプバーン主演・スタンリー・ドーネン監督。亡き夫の秘密と大金をめぐる追跡を軽妙に描く恋愛ミステリー。",
+    "category": "movie",
+    "tags": [
+      "ミステリー",
+      "サスペンス",
+      "恋愛",
+      "コメディ"
+    ],
+    "estimated_minutes": 113,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_335_rear_window",
+    "title": "『裏窓』を観る",
+    "description": "ジェームズ・スチュワート主演・アルフレッド・ヒッチコック監督。部屋の窓から殺人の疑いを見つけた写真家を描く恋愛サスペンス。",
+    "category": "movie",
+    "tags": [
+      "ミステリー",
+      "サスペンス",
+      "恋愛"
+    ],
+    "estimated_minutes": 112,
+    "weight": 1.0
+  }
+]

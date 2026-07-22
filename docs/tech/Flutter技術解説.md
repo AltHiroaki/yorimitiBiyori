@@ -124,7 +124,7 @@ MVP では、外部サービス連携やクラウド保存は使いません。
 提案候補は以下で管理します。
 
 ```text
-assets/data/suggestions.json
+assets/data/suggestions/<category>.json
 ```
 
 MVP では、ユーザーが登録した興味カテゴリと、通知で選んだ時間をもとに候補を絞ります。

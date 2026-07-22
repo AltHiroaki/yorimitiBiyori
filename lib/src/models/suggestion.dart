@@ -1,4 +1,4 @@
-/// 提案候補データ（assets/data/suggestions.json の1件）を表すモデル。
+/// 提案候補データ（assets/data/suggestions/*.json の1件）を表すモデル。
 class Suggestion {
   const Suggestion({
     required this.id,
@@ -23,7 +23,7 @@ class Suggestion {
   final String? recipe;
 
   /// 必須フィールドが欠損・不正な場合は例外を投げず null を返す。
-  /// 呼び出し側（suggestions.json 読み込み処理）はこの1件をスキップできる。
+  /// 呼び出し側（提案JSON読み込み処理）はこの1件をスキップできる。
   static Suggestion? fromJson(Map<String, dynamic> json) {
     try {
       return Suggestion(

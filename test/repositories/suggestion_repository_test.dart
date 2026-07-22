@@ -1,7 +1,10 @@
+import 'dart:convert';
+
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:yorimichi_biyori/src/features/recommendation/suggestion_picker.dart';
 import 'package:yorimichi_biyori/src/models/interest_category.dart';
+import 'package:yorimichi_biyori/src/models/suggestion.dart';
 import 'package:yorimichi_biyori/src/repositories/suggestion_repository.dart';
 
 void main() {
@@ -38,10 +41,38 @@ void main() {
     );
   });
 
-  test('assets/data/suggestions.json は新スキーマの提案として読み込める', () async {
-    final source = await rootBundle.loadString(suggestionsAssetPath);
+  test('カテゴリ別JSONはファイル名とcategoryが一致し、全件を結合して読み込める', () async {
+    expect(
+      suggestionAssetPathsByCategory.keys,
+      orderedEquals(['music', 'cook', 'read', 'movie', 'walk']),
+    );
 
-    final suggestions = parseSuggestionsJson(source);
+    final suggestionsByFile = <Suggestion>[];
+    for (final entry in suggestionAssetPathsByCategory.entries) {
+      final source = await _loadAssetSource(entry.value);
+      final decodedJson = jsonDecode(source);
+      expect(
+        decodedJson,
+        isA<List<dynamic>>(),
+        reason: '${entry.value} はJSON配列にする。',
+      );
+
+      final decodedSuggestions = decodedJson as List<dynamic>;
+      final suggestions = parseSuggestionsJson(source, sourceName: entry.value);
+      expect(
+        suggestions,
+        hasLength(decodedSuggestions.length),
+        reason: '${entry.value} に必須フィールド欠け・型不一致のデータがある。',
+      );
+      expect(
+        suggestions.every((suggestion) => suggestion.category == entry.key),
+        isTrue,
+        reason: '${entry.value} にはcategory=${entry.key}のデータだけを置く。',
+      );
+      suggestionsByFile.addAll(suggestions);
+    }
+
+    final suggestions = await SuggestionRepository().loadSuggestions();
     final knownCategoryIds = [
       ...InterestCategories.all,
       ...InterestCategories.developmentCategories,
@@ -51,7 +82,16 @@ void main() {
         .toList();
 
     expect(suggestions, isNotEmpty);
+    expect(suggestions, hasLength(suggestionsByFile.length));
+    expect(
+      suggestions.map((suggestion) => suggestion.id).toSet(),
+      suggestionsByFile.map((suggestion) => suggestion.id).toSet(),
+    );
     expect(suggestionIds.toSet(), hasLength(suggestionIds.length));
+    expect(
+      suggestions.map((suggestion) => suggestion.title).toSet(),
+      hasLength(suggestions.length),
+    );
     expect(
       suggestions.map((suggestion) => suggestion.category).toSet(),
       containsAll(['music', 'cook', 'read', 'movie', 'walk']),
@@ -71,7 +111,10 @@ void main() {
       isTrue,
     );
     expect(
-      suggestions.every((suggestion) => suggestion.estimatedMinutes > 0),
+      suggestions.every(
+        (suggestion) =>
+            suggestion.estimatedMinutes > 0 && suggestion.weight > 0,
+      ),
       isTrue,
     );
     // recipe は料理カテゴリだけが持つ。
@@ -85,9 +128,51 @@ void main() {
     );
   });
 
+  test('各提案のtagsは所属カテゴリの全詳細設定グループと矛盾しない', () async {
+    final suggestions = await SuggestionRepository().loadSuggestions();
+    final categories = [
+      ...InterestCategories.all,
+      ...InterestCategories.developmentCategories,
+    ];
+    final optionsByCategory = {
+      for (final category in categories)
+        category.id: category.detailSettingGroups
+            .expand((group) => group.options)
+            .toSet(),
+    };
+    final allDefinedOptions = optionsByCategory.values
+        .expand((options) => options)
+        .toSet();
+
+    for (final suggestion in suggestions) {
+      final category = categories.singleWhere(
+        (category) => category.id == suggestion.category,
+      );
+      for (final group in category.detailSettingGroups) {
+        expect(
+          suggestion.tags.any(group.options.contains),
+          isTrue,
+          reason:
+              '${suggestion.id} に${category.label}の'
+              '「${group.label}」タグがない。',
+        );
+      }
+
+      final categoryOptions = optionsByCategory[suggestion.category]!;
+      final conflictingTags = suggestion.tags.where(
+        (tag) =>
+            allDefinedOptions.contains(tag) && !categoryOptions.contains(tag),
+      );
+      expect(
+        conflictingTags,
+        isEmpty,
+        reason: '${suggestion.id} に他カテゴリの詳細設定タグが含まれている。',
+      );
+    }
+  });
+
   test('MVP 全カテゴリの全詳細設定選択肢に、タグが一致する提案が50件以上ある', () async {
-    final source = await rootBundle.loadString(suggestionsAssetPath);
-    final suggestions = parseSuggestionsJson(source);
+    final suggestions = await SuggestionRepository().loadSuggestions();
 
     for (final category in InterestCategories.all) {
       for (final group in category.detailSettingGroups) {
@@ -115,8 +200,7 @@ void main() {
   });
 
   test('料理データのrecipeは材料と2〜4手順が改行区切りのレシピ形式になっている', () async {
-    final source = await rootBundle.loadString(suggestionsAssetPath);
-    final suggestions = parseSuggestionsJson(source);
+    final suggestions = await SuggestionRepository().loadSuggestions();
     final cookingSuggestions = suggestions.where(
       (suggestion) => suggestion.category == 'cook',
     );
@@ -148,8 +232,7 @@ void main() {
   });
 
   test('料理データは各ジャンルに50件以上あり、タイトルが重複していない', () async {
-    final source = await rootBundle.loadString(suggestionsAssetPath);
-    final suggestions = parseSuggestionsJson(source);
+    final suggestions = await SuggestionRepository().loadSuggestions();
     final cookingSuggestions = suggestions
         .where((suggestion) => suggestion.category == 'cook')
         .toList();
@@ -182,8 +265,7 @@ void main() {
   });
 
   test('読書データは各ジャンルに50件以上あり、タイトルが重複していない', () async {
-    final source = await rootBundle.loadString(suggestionsAssetPath);
-    final suggestions = parseSuggestionsJson(source);
+    final suggestions = await SuggestionRepository().loadSuggestions();
     final readingSuggestions = suggestions
         .where((suggestion) => suggestion.category == 'read')
         .toList();
@@ -216,8 +298,7 @@ void main() {
   });
 
   test('すべての料理データに有効な調理法タグがある', () async {
-    final source = await rootBundle.loadString(suggestionsAssetPath);
-    final suggestions = parseSuggestionsJson(source);
+    final suggestions = await SuggestionRepository().loadSuggestions();
     final cookingCategory = InterestCategories.all.singleWhere(
       (category) => category.id == 'cook',
     );
@@ -238,4 +319,9 @@ void main() {
       );
     }
   });
+}
+
+Future<String> _loadAssetSource(String assetPath) async {
+  final data = await rootBundle.load(assetPath);
+  return utf8.decode(Uint8List.sublistView(data));
 }

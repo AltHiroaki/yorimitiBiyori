@@ -92,6 +92,7 @@ Future<void> _pumpPage(
     assetBundle: _FakeAssetBundle(
       failSuggestionLoad ? null : jsonEncode(suggestions),
     ),
+    assetPaths: const ['test/suggestions.json'],
   );
   await tester.pumpWidget(
     MaterialApp(
