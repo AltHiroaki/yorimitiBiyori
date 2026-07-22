@@ -1,9 +1,9 @@
 import 'dart:math';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:yorimiti_biyori/src/features/recommendation/suggestion_picker.dart';
-import 'package:yorimiti_biyori/src/models/suggestion.dart';
-import 'package:yorimiti_biyori/src/models/user_settings.dart';
+import 'package:yorimichi_biyori/src/features/recommendation/suggestion_picker.dart';
+import 'package:yorimichi_biyori/src/models/suggestion.dart';
+import 'package:yorimichi_biyori/src/models/user_settings.dart';
 
 void main() {
   group('filterSuggestions', () {

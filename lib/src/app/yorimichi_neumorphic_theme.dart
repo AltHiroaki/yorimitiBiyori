@@ -5,8 +5,8 @@ import 'package:flutter/material.dart';
 /// Material の elevation では表現できない、左上の光と右下の影を
 /// [ThemeExtension] として一元管理する。
 @immutable
-class YorimitiNeumorphicTheme extends ThemeExtension<YorimitiNeumorphicTheme> {
-  const YorimitiNeumorphicTheme({
+class YorimichiNeumorphicTheme extends ThemeExtension<YorimichiNeumorphicTheme> {
+  const YorimichiNeumorphicTheme({
     required this.surfaceColor,
     required this.recessedColor,
     required this.convexShadows,
@@ -32,14 +32,14 @@ class YorimitiNeumorphicTheme extends ThemeExtension<YorimitiNeumorphicTheme> {
   final LinearGradient recessedGradient;
   final LinearGradient selectedRecessedGradient;
 
-  static YorimitiNeumorphicTheme of(BuildContext context) {
+  static YorimichiNeumorphicTheme of(BuildContext context) {
     final materialTheme = Theme.of(context);
-    return materialTheme.extension<YorimitiNeumorphicTheme>() ??
-        buildYorimitiNeumorphicTheme(brightness: materialTheme.brightness);
+    return materialTheme.extension<YorimichiNeumorphicTheme>() ??
+        buildYorimichiNeumorphicTheme(brightness: materialTheme.brightness);
   }
 
   @override
-  YorimitiNeumorphicTheme copyWith({
+  YorimichiNeumorphicTheme copyWith({
     Color? surfaceColor,
     Color? recessedColor,
     List<BoxShadow>? convexShadows,
@@ -49,7 +49,7 @@ class YorimitiNeumorphicTheme extends ThemeExtension<YorimitiNeumorphicTheme> {
     LinearGradient? recessedGradient,
     LinearGradient? selectedRecessedGradient,
   }) {
-    return YorimitiNeumorphicTheme(
+    return YorimichiNeumorphicTheme(
       surfaceColor: surfaceColor ?? this.surfaceColor,
       recessedColor: recessedColor ?? this.recessedColor,
       convexShadows: convexShadows ?? this.convexShadows,
@@ -64,14 +64,14 @@ class YorimitiNeumorphicTheme extends ThemeExtension<YorimitiNeumorphicTheme> {
   }
 
   @override
-  YorimitiNeumorphicTheme lerp(
-    covariant YorimitiNeumorphicTheme? other,
+  YorimichiNeumorphicTheme lerp(
+    covariant YorimichiNeumorphicTheme? other,
     double t,
   ) {
     if (other == null) {
       return this;
     }
-    return YorimitiNeumorphicTheme(
+    return YorimichiNeumorphicTheme(
       surfaceColor: Color.lerp(surfaceColor, other.surfaceColor, t)!,
       recessedColor: Color.lerp(recessedColor, other.recessedColor, t)!,
       convexShadows: BoxShadow.lerpList(convexShadows, other.convexShadows, t)!,
@@ -104,13 +104,13 @@ class YorimitiNeumorphicTheme extends ThemeExtension<YorimitiNeumorphicTheme> {
   }
 }
 
-YorimitiNeumorphicTheme buildYorimitiNeumorphicTheme({
+YorimichiNeumorphicTheme buildYorimichiNeumorphicTheme({
   required Brightness brightness,
 }) {
   if (brightness == Brightness.dark) {
     const surfaceColor = Color(0xFF1D221C);
     const recessedColor = Color(0xFF242B23);
-    return const YorimitiNeumorphicTheme(
+    return const YorimichiNeumorphicTheme(
       surfaceColor: surfaceColor,
       recessedColor: recessedColor,
       convexShadows: [
@@ -176,7 +176,7 @@ YorimitiNeumorphicTheme buildYorimitiNeumorphicTheme({
 
   const surfaceColor = Color(0xFFF8FBF3);
   const recessedColor = Color(0xFFEEF5E8);
-  return const YorimitiNeumorphicTheme(
+  return const YorimichiNeumorphicTheme(
     surfaceColor: surfaceColor,
     recessedColor: recessedColor,
     convexShadows: [

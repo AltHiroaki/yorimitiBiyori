@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-import '../app/yorimiti_neumorphic_theme.dart';
+import '../app/yorimichi_neumorphic_theme.dart';
 
 /// 左上のハイライトと右下の影で、背景から浮き上がる面を描画する。
 class NeumorphicSurface extends StatelessWidget {
   const NeumorphicSurface({
     required this.child,
-    this.radius = YorimitiNeumorphicTheme.cardRadius,
+    this.radius = YorimichiNeumorphicTheme.cardRadius,
     this.padding,
     super.key,
   });
@@ -17,7 +17,7 @@ class NeumorphicSurface extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final neumorphicTheme = YorimitiNeumorphicTheme.of(context);
+    final neumorphicTheme = YorimichiNeumorphicTheme.of(context);
     return Container(
       padding: padding,
       clipBehavior: Clip.antiAlias,
@@ -46,11 +46,11 @@ class NeumorphicButtonFrame extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final neumorphicTheme = YorimitiNeumorphicTheme.of(context);
+    final neumorphicTheme = YorimichiNeumorphicTheme.of(context);
     return DecoratedBox(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(
-          YorimitiNeumorphicTheme.buttonRadius,
+          YorimichiNeumorphicTheme.buttonRadius,
         ),
         boxShadow: isEnabled
             ? (isPrimary
@@ -81,8 +81,8 @@ class NeumorphicChipFrame extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final neumorphicTheme = YorimitiNeumorphicTheme.of(context);
-    final radius = BorderRadius.circular(YorimitiNeumorphicTheme.chipRadius);
+    final neumorphicTheme = YorimichiNeumorphicTheme.of(context);
+    final radius = BorderRadius.circular(YorimichiNeumorphicTheme.chipRadius);
     return Container(
       padding: const EdgeInsets.all(2),
       decoration: BoxDecoration(
@@ -110,7 +110,7 @@ class NeumorphicChipFrame extends StatelessWidget {
 class NeumorphicRecessedSurface extends StatelessWidget {
   const NeumorphicRecessedSurface({
     required this.child,
-    this.radius = YorimitiNeumorphicTheme.buttonRadius,
+    this.radius = YorimichiNeumorphicTheme.buttonRadius,
     super.key,
   });
 
@@ -119,7 +119,7 @@ class NeumorphicRecessedSurface extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final neumorphicTheme = YorimitiNeumorphicTheme.of(context);
+    final neumorphicTheme = YorimichiNeumorphicTheme.of(context);
     final borderRadius = BorderRadius.circular(radius);
     return Container(
       padding: const EdgeInsets.all(2),
@@ -146,7 +146,7 @@ class NeumorphicNavigationSurface extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final neumorphicTheme = YorimitiNeumorphicTheme.of(context);
+    final neumorphicTheme = YorimichiNeumorphicTheme.of(context);
     return DecoratedBox(
       decoration: BoxDecoration(
         color: neumorphicTheme.surfaceColor,

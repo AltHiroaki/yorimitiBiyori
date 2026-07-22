@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:yorimiti_biyori/src/features/onboarding/category_select_page.dart';
+import 'package:yorimichi_biyori/src/features/onboarding/category_select_page.dart';
 
 void main() {
   testWidgets('カテゴリ0件のときは次へが無効になる', (tester) async {

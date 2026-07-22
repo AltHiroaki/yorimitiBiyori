@@ -4,16 +4,16 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:yorimiti_biyori/src/models/ongoing_suggestion.dart';
-import 'package:yorimiti_biyori/src/models/suggestion_record.dart';
-import 'package:yorimiti_biyori/src/models/user_settings.dart';
-import 'package:yorimiti_biyori/src/pages/suggestion_page.dart';
-import 'package:yorimiti_biyori/src/pages/suggestion_settings_page.dart';
-import 'package:yorimiti_biyori/src/repositories/current_suggestion_repository.dart';
-import 'package:yorimiti_biyori/src/repositories/ongoing_suggestion_repository.dart';
-import 'package:yorimiti_biyori/src/repositories/records_repository.dart';
-import 'package:yorimiti_biyori/src/repositories/settings_repository.dart';
-import 'package:yorimiti_biyori/src/repositories/suggestion_repository.dart';
+import 'package:yorimichi_biyori/src/models/ongoing_suggestion.dart';
+import 'package:yorimichi_biyori/src/models/suggestion_record.dart';
+import 'package:yorimichi_biyori/src/models/user_settings.dart';
+import 'package:yorimichi_biyori/src/pages/suggestion_page.dart';
+import 'package:yorimichi_biyori/src/pages/suggestion_settings_page.dart';
+import 'package:yorimichi_biyori/src/repositories/current_suggestion_repository.dart';
+import 'package:yorimichi_biyori/src/repositories/ongoing_suggestion_repository.dart';
+import 'package:yorimichi_biyori/src/repositories/records_repository.dart';
+import 'package:yorimichi_biyori/src/repositories/settings_repository.dart';
+import 'package:yorimichi_biyori/src/repositories/suggestion_repository.dart';
 
 /// 設定の読込値と保存履歴を差し替え・記録できるテスト用フェイク。
 class _FakeSettingsRepository implements SettingsRepository {

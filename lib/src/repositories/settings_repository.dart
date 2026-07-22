@@ -5,7 +5,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../models/user_settings.dart';
 
 /// shared_preferences の保存キー（仕様書 5.4）。
-const String settingsPreferenceKey = 'yorimiti_biyori_settings';
+const String settingsPreferenceKey = 'yorimichi_biyori_settings';
 
 /// ユーザー設定を shared_preferences に JSON 文字列で保存・復元する repository。
 class SettingsRepository {

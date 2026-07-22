@@ -5,7 +5,7 @@ import 'package:timezone/timezone.dart' as timezone;
 
 /// スケジュール済み通知プランの保存キー。
 const String scheduledNotificationPlanPreferenceKey =
-    'yorimiti_biyori_scheduled_notification_plan';
+    'yorimichi_biyori_scheduled_notification_plan';
 
 /// スケジュール済みの通知予定時刻を shared_preferences に保存・復元する store。
 /// 値はエポックミリ秒の JSON 配列。Android には「通知が発火した」ことを知る

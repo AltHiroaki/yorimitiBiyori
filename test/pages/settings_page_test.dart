@@ -3,14 +3,14 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:yorimiti_biyori/src/app/theme_mode_scope.dart';
-import 'package:yorimiti_biyori/src/features/notifications/notification_service.dart';
-import 'package:yorimiti_biyori/src/models/suggestion_record.dart';
-import 'package:yorimiti_biyori/src/models/user_settings.dart';
-import 'package:yorimiti_biyori/src/pages/settings_page.dart';
-import 'package:yorimiti_biyori/src/pages/suggestion_settings_page.dart';
-import 'package:yorimiti_biyori/src/repositories/records_repository.dart';
-import 'package:yorimiti_biyori/src/repositories/settings_repository.dart';
+import 'package:yorimichi_biyori/src/app/theme_mode_scope.dart';
+import 'package:yorimichi_biyori/src/features/notifications/notification_service.dart';
+import 'package:yorimichi_biyori/src/models/suggestion_record.dart';
+import 'package:yorimichi_biyori/src/models/user_settings.dart';
+import 'package:yorimichi_biyori/src/pages/settings_page.dart';
+import 'package:yorimichi_biyori/src/pages/suggestion_settings_page.dart';
+import 'package:yorimichi_biyori/src/repositories/records_repository.dart';
+import 'package:yorimichi_biyori/src/repositories/settings_repository.dart';
 
 class _FakeNotificationController implements NotificationController {
   _FakeNotificationController({this.permissionResult = true});

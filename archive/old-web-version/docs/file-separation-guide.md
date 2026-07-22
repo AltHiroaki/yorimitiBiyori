@@ -1,6 +1,6 @@
 # ファイル分けを行う理由
 
-このドキュメントは、`yorimitiBiyori` でなぜファイル分けを行うのかを説明するためのものです。
+このドキュメントは、`yorimichiBiyori` でなぜファイル分けを行うのかを説明するためのものです。
 
 ファイル分けは、単に「きれいに見せるため」の作業ではありません。  
 実装が進んだあとに、コードを探しやすくし、直しやすくし、壊しにくくするための設計です。
@@ -16,7 +16,7 @@
 3. 変更したときの影響範囲を小さくするため
 4. AI agent やチームメンバーが迷わず作業できるようにするため
 
-特に `yorimitiBiyori` では、画面、行動データ、提案ロジック、履歴保存、共通 UI を分けておくことが重要です。
+特に `yorimichiBiyori` では、画面、行動データ、提案ロジック、履歴保存、共通 UI を分けておくことが重要です。
 
 ---
 
@@ -130,7 +130,7 @@ src/features/recommendation/
 例えば、履歴を localStorage から読む処理を、履歴画面と設定画面でそれぞれ書くかもしれません。
 
 ```ts
-const records = JSON.parse(localStorage.getItem("yorimiti-biyori-records") || "[]");
+const records = JSON.parse(localStorage.getItem("yorimichi-biyori-records") || "[]");
 ```
 
 これを複数箇所に直接書くと、保存キーを変更したいときにすべて修正する必要があります。  
@@ -212,7 +212,7 @@ src/types/record.ts
 
 ## ファイル分けを行う世界線
 
-ファイル分けを行う場合、`yorimitiBiyori` では次のような構成を目指します。
+ファイル分けを行う場合、`yorimichiBiyori` では次のような構成を目指します。
 
 ```text
 src/
@@ -254,7 +254,7 @@ src/
 
 ---
 
-## yorimitiBiyori での具体例
+## yorimichiBiyori での具体例
 
 ### ホーム画面
 

@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:yorimiti_biyori/src/models/interest_category.dart';
+import 'package:yorimichi_biyori/src/models/interest_category.dart';
 
 void main() {
   test('MVP コアカテゴリは音楽・料理・読書・映画の4種類', () {

@@ -4,7 +4,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 /// shared_preferences に保存する表示中提案 ID のキー。
 const String currentSuggestionPreferenceKey =
-    'yorimiti_biyori_current_suggestion';
+    'yorimichi_biyori_current_suggestion';
 
 /// 表示中提案 JSON の現行スキーマバージョン。
 const int currentSuggestionSchemaVersion = 1;

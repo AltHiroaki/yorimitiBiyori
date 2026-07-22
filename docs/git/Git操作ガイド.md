@@ -1,6 +1,6 @@
 # Git 操作ガイド（コマンド & VS Code）
 
-このドキュメントは、`yorimitiBiyori` の開発で Git を使うときの操作をまとめたものです。
+このドキュメントは、`yorimichiBiyori` の開発で Git を使うときの操作をまとめたものです。
 
 Git はターミナルのコマンドで操作できますが、VS Code の Source Control 機能を使うと、変更内容の確認、stage、commit、push、pull、ブランチ切り替えなどを画面上で行えます。どちらで操作しても裏側は同じ Git なので、このガイドではコマンドと VS Code 操作を対応させて説明します。
 

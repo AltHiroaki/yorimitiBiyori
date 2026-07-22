@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:yorimiti_biyori/src/models/user_settings.dart';
+import 'package:yorimichi_biyori/src/models/user_settings.dart';
 
 void main() {
   test('デフォルト値がカテゴリ [music, read, movie] ・詳細設定は指定なしになる', () {

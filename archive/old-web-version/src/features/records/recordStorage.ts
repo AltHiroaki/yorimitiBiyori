@@ -1,6 +1,6 @@
 import type { ActivityRecord } from '../../types/record';
 
-const STORAGE_KEY = 'yorimiti-biyori-records';
+const STORAGE_KEY = 'yorimichi-biyori-records';
 
 export function loadRecords(): ActivityRecord[] {
   const rawRecords = localStorage.getItem(STORAGE_KEY);

@@ -2,8 +2,8 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:yorimiti_biyori/src/models/suggestion_record.dart';
-import 'package:yorimiti_biyori/src/widgets/completion_modal.dart';
+import 'package:yorimichi_biyori/src/models/suggestion_record.dart';
+import 'package:yorimichi_biyori/src/widgets/completion_modal.dart';
 
 /// モーダルを開くボタンだけを持つテスト用ページを組み立て、
 /// onSave に渡されたフィードバックを [savedFeedbackLog] に記録する。
