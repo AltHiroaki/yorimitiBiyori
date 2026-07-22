@@ -22,6 +22,7 @@ class SuggestionCardContent extends StatelessWidget {
     this.headerLabel,
     this.titleMaxLines = 2,
     this.description,
+    this.detail,
     this.tags,
     this.estimatedMinutes,
     this.whereToTry,
@@ -44,6 +45,9 @@ class SuggestionCardContent extends StatelessWidget {
   final int? titleMaxLines;
 
   final String? description;
+
+  /// 始め方やコツなどの詳細説明。空・空白のみなら詳細ボタンを表示しない。
+  final String? detail;
 
   /// タグ Chip の一覧。null ならタグ行なし。
   final List<String>? tags;
@@ -69,6 +73,7 @@ class SuggestionCardContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;
+    final normalizedDetail = detail?.trim();
 
     return Column(
       mainAxisSize: MainAxisSize.min,
@@ -104,6 +109,10 @@ class SuggestionCardContent extends StatelessWidget {
           SizedBox(height: titleSpacing),
           Text(description),
         ],
+        if (normalizedDetail != null && normalizedDetail.isNotEmpty) ...[
+          SizedBox(height: sectionSpacing),
+          _SuggestionDetailSection(detail: normalizedDetail),
+        ],
         if (tags case final List<String> tags) ...[
           SizedBox(height: sectionSpacing),
           Wrap(
@@ -130,6 +139,57 @@ class SuggestionCardContent extends StatelessWidget {
         if (footnote case final Widget footnote) ...[
           const SizedBox(height: 4),
           footnote,
+        ],
+      ],
+    );
+  }
+}
+
+class _SuggestionDetailSection extends StatefulWidget {
+  const _SuggestionDetailSection({required this.detail});
+
+  final String detail;
+
+  @override
+  State<_SuggestionDetailSection> createState() =>
+      _SuggestionDetailSectionState();
+}
+
+class _SuggestionDetailSectionState extends State<_SuggestionDetailSection> {
+  bool _isExpanded = false;
+
+  @override
+  Widget build(BuildContext context) {
+    final colorScheme = Theme.of(context).colorScheme;
+
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        TextButton.icon(
+          key: const ValueKey<String>('suggestion-detail-toggle'),
+          onPressed: () {
+            setState(() {
+              _isExpanded = !_isExpanded;
+            });
+          },
+          icon: Icon(_isExpanded ? Icons.expand_less : Icons.expand_more),
+          label: Text(_isExpanded ? '詳しい内容を閉じる' : '詳しく見る'),
+        ),
+        if (_isExpanded) ...[
+          const SizedBox(height: 4),
+          Text(
+            '詳しい内容',
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              color: colorScheme.primary,
+            ),
+          ),
+          const SizedBox(height: 6),
+          Text(
+            widget.detail,
+            key: const ValueKey<String>('suggestion-detail-content'),
+            style: TextStyle(color: colorScheme.onSurfaceVariant),
+          ),
         ],
       ],
     );

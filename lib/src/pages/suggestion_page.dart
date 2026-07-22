@@ -361,10 +361,7 @@ class _SuggestionPageState extends State<SuggestionPage> {
 
 /// 現在の提案条件カード：選択カテゴリのチップ＋有効な詳細設定の要約。
 class _ConditionCard extends StatelessWidget {
-  const _ConditionCard({
-    required this.settings,
-    required this.onOpenSettings,
-  });
+  const _ConditionCard({required this.settings, required this.onOpenSettings});
 
   final UserSettings settings;
   final VoidCallback onOpenSettings;
@@ -466,9 +463,11 @@ class _SuggestionCard extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SuggestionCardContent(
+              key: ValueKey<String>(suggestion.id),
               headerLabel: '今日のよりみち',
               title: suggestion.title,
               description: suggestion.description,
+              detail: suggestion.detail,
               tags: suggestion.tags,
               estimatedMinutes: suggestion.estimatedMinutes,
               whereToTry: suggestion.whereToTry,
@@ -540,6 +539,7 @@ class _OngoingCard extends StatelessWidget {
               headerLabel: '実施中のよりみち',
               title: suggestion.title,
               description: suggestion.description,
+              detail: suggestion.detail,
               tags: suggestion.tags,
               estimatedMinutes: suggestion.estimatedMinutes,
               whereToTry: suggestion.whereToTry,
