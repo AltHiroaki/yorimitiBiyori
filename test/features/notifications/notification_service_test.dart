@@ -4,9 +4,9 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:timezone/data/latest.dart' as timezone_data;
 import 'package:timezone/timezone.dart' as timezone;
-import 'package:yorimiti_biyori/src/features/notifications/notification_service.dart';
-import 'package:yorimiti_biyori/src/features/notifications/scheduled_notification_plan_store.dart';
-import 'package:yorimiti_biyori/src/models/hour_minute.dart';
+import 'package:yorimichi_biyori/src/features/notifications/notification_service.dart';
+import 'package:yorimichi_biyori/src/features/notifications/scheduled_notification_plan_store.dart';
+import 'package:yorimichi_biyori/src/models/hour_minute.dart';
 
 /// キューに積んだ値を順に返すスクリプト化 Random。
 /// nextInt に渡された max も記録し、境界値のアサーションに使う。

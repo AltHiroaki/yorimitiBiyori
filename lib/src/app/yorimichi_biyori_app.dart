@@ -9,8 +9,8 @@ import 'theme_mode_scope.dart';
 
 /// アプリのルート。テーマ・テーマモードの適用と、
 /// オンボーディング分岐（[OnboardingGate]）への引き渡しだけを行う。
-class YorimitiBiyoriApp extends StatefulWidget {
-  const YorimitiBiyoriApp({
+class YorimichiBiyoriApp extends StatefulWidget {
+  const YorimichiBiyoriApp({
     super.key,
     this.settingsRepository,
     this.notificationController,
@@ -21,10 +21,10 @@ class YorimitiBiyoriApp extends StatefulWidget {
   final NotificationController? notificationController;
 
   @override
-  State<YorimitiBiyoriApp> createState() => _YorimitiBiyoriAppState();
+  State<YorimichiBiyoriApp> createState() => _YorimichiBiyoriAppState();
 }
 
-class _YorimitiBiyoriAppState extends State<YorimitiBiyoriApp> {
+class _YorimichiBiyoriAppState extends State<YorimichiBiyoriApp> {
   late final SettingsRepository _settingsRepository;
   ThemeModeSetting _themeModeSetting = ThemeModeSetting.system;
 
@@ -61,8 +61,8 @@ class _YorimitiBiyoriAppState extends State<YorimitiBiyoriApp> {
       child: MaterialApp(
         title: 'よりみち日和',
         debugShowCheckedModeBanner: false,
-        theme: buildYorimitiBiyoriTheme(),
-        darkTheme: buildYorimitiBiyoriTheme(brightness: Brightness.dark),
+        theme: buildYorimichiBiyoriTheme(),
+        darkTheme: buildYorimichiBiyoriTheme(brightness: Brightness.dark),
         themeMode: themeModeFromSetting(_themeModeSetting),
         home: OnboardingGate(
           settingsRepository: _settingsRepository,

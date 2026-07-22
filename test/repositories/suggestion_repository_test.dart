@@ -1,8 +1,8 @@
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:yorimiti_biyori/src/features/recommendation/suggestion_picker.dart';
-import 'package:yorimiti_biyori/src/models/interest_category.dart';
-import 'package:yorimiti_biyori/src/repositories/suggestion_repository.dart';
+import 'package:yorimichi_biyori/src/features/recommendation/suggestion_picker.dart';
+import 'package:yorimichi_biyori/src/models/interest_category.dart';
+import 'package:yorimichi_biyori/src/repositories/suggestion_repository.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();

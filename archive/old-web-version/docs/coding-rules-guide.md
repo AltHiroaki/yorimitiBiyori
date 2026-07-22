@@ -1,11 +1,11 @@
 # コーディング規則の考え方
 
-このドキュメントは、開発者が `yorimitiBiyori` のコーディング規則を理解するための説明です。
+このドキュメントは、開発者が `yorimichiBiyori` のコーディング規則を理解するための説明です。
 
 AI agent に直接読ませる規則は、以下の2つにまとめています。
 
 - [General Coding Skill](./SKILL.md)
-- [AI Agent Rules for yorimitiBiyori](./AGENTS.md)
+- [AI Agent Rules for yorimichiBiyori](./AGENTS.md)
 
 このファイルでは、規則そのものだけでなく「なぜそうするのか」を説明します。
 
@@ -179,9 +179,9 @@ const suggestedActivity = getRandomActivity(matchedActivities);
 
 ---
 
-## yorimitiBiyori のプロダクト目標
+## yorimichiBiyori のプロダクト目標
 
-`yorimitiBiyori` は、短い空き時間にできる小さな行動を提案するアプリです。
+`yorimichiBiyori` は、短い空き時間にできる小さな行動を提案するアプリです。
 
 提案に使う主な条件は以下です。
 
@@ -201,7 +201,7 @@ const suggestedActivity = getRandomActivity(matchedActivities);
 
 ## MVP を優先する理由
 
-`yorimitiBiyori` では、まず授業内で完成できる範囲の MVP を作ることを優先します。
+`yorimichiBiyori` では、まず授業内で完成できる範囲の MVP を作ることを優先します。
 
 Google ログイン、Google Calendar API、Firebase、Google Maps API、位置情報取得などは便利ですが、初期段階では実装難度が上がります。  
 これらを早く入れすぎると、中心機能である「条件入力 → 行動提案 → 履歴保存」が完成しない可能性があります。
@@ -426,7 +426,7 @@ MVP ではログイン機能やクラウド保存を使わないため、履歴�
 保存キーは定数にします。
 
 ```ts
-const STORAGE_KEY = "yorimiti-biyori-records";
+const STORAGE_KEY = "yorimichi-biyori-records";
 ```
 
 直接あちこちに文字列を書くと、キーを変更したいときに修正漏れが起きます。

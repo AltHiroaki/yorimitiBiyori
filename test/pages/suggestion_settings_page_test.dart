@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:yorimiti_biyori/src/models/user_settings.dart';
-import 'package:yorimiti_biyori/src/pages/suggestion_settings_page.dart';
-import 'package:yorimiti_biyori/src/repositories/settings_repository.dart';
+import 'package:yorimichi_biyori/src/models/user_settings.dart';
+import 'package:yorimichi_biyori/src/pages/suggestion_settings_page.dart';
+import 'package:yorimichi_biyori/src/repositories/settings_repository.dart';
 
 /// 保存された設定を記録するテスト用フェイク。
 class _FakeSettingsRepository implements SettingsRepository {

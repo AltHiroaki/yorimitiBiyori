@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'yorimiti_neumorphic_theme.dart';
+import 'yorimichi_neumorphic_theme.dart';
 
 /// UI プロトタイプのカラーパレット（`よりみち日和 UIプロトタイプ/` の定数 C に対応）。
 const Color _primarySeedColor = Color(0xFF3F6F44);
@@ -11,7 +11,7 @@ const Color _darkPageBackgroundColor = Color(0xFF1D221C);
 const Color _darkSurfaceVariantColor = Color(0xFF242B23);
 
 /// Issue #66 のニューモーフィズムトークンを集約したアプリテーマ。
-ThemeData buildYorimitiBiyoriTheme({Brightness brightness = Brightness.light}) {
+ThemeData buildYorimichiBiyoriTheme({Brightness brightness = Brightness.light}) {
   final baseColorScheme = ColorScheme.fromSeed(
     seedColor: _primarySeedColor,
     brightness: brightness,
@@ -34,7 +34,7 @@ ThemeData buildYorimitiBiyoriTheme({Brightness brightness = Brightness.light}) {
     surfaceContainerHighest: surfaceVariantColor,
   );
   final roundedButtonShape = RoundedRectangleBorder(
-    borderRadius: BorderRadius.circular(YorimitiNeumorphicTheme.buttonRadius),
+    borderRadius: BorderRadius.circular(YorimichiNeumorphicTheme.buttonRadius),
   );
 
   return ThemeData(
@@ -44,14 +44,14 @@ ThemeData buildYorimitiBiyoriTheme({Brightness brightness = Brightness.light}) {
     fontFamilyFallback: const ['Noto Sans JP', 'sans-serif'],
     scaffoldBackgroundColor: surfaceColor,
     canvasColor: surfaceColor,
-    extensions: [buildYorimitiNeumorphicTheme(brightness: brightness)],
+    extensions: [buildYorimichiNeumorphicTheme(brightness: brightness)],
     cardTheme: CardThemeData(
       elevation: 0,
       color: surfaceColor,
       surfaceTintColor: Colors.transparent,
       margin: EdgeInsets.zero,
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(YorimitiNeumorphicTheme.cardRadius),
+        borderRadius: BorderRadius.circular(YorimichiNeumorphicTheme.cardRadius),
       ),
     ),
     appBarTheme: AppBarTheme(
@@ -64,7 +64,7 @@ ThemeData buildYorimitiBiyoriTheme({Brightness brightness = Brightness.light}) {
       elevation: 0,
       indicatorColor: colorScheme.primaryContainer,
       indicatorShape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(YorimitiNeumorphicTheme.pillRadius),
+        borderRadius: BorderRadius.circular(YorimichiNeumorphicTheme.pillRadius),
       ),
     ),
     chipTheme: ChipThemeData(
@@ -75,7 +75,7 @@ ThemeData buildYorimitiBiyoriTheme({Brightness brightness = Brightness.light}) {
       showCheckmark: false,
       side: BorderSide.none,
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(YorimitiNeumorphicTheme.chipRadius),
+        borderRadius: BorderRadius.circular(YorimichiNeumorphicTheme.chipRadius),
       ),
     ),
     filledButtonTheme: FilledButtonThemeData(
@@ -109,7 +109,7 @@ ThemeData buildYorimitiBiyoriTheme({Brightness brightness = Brightness.light}) {
       surfaceTintColor: Colors.transparent,
       elevation: 0,
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(YorimitiNeumorphicTheme.heroRadius),
+        borderRadius: BorderRadius.circular(YorimichiNeumorphicTheme.heroRadius),
       ),
     ),
     bottomSheetTheme: BottomSheetThemeData(
@@ -117,7 +117,7 @@ ThemeData buildYorimitiBiyoriTheme({Brightness brightness = Brightness.light}) {
       surfaceTintColor: Colors.transparent,
       shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.vertical(
-          top: Radius.circular(YorimitiNeumorphicTheme.heroRadius),
+          top: Radius.circular(YorimichiNeumorphicTheme.heroRadius),
         ),
       ),
     ),

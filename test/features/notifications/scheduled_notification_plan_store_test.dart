@@ -2,7 +2,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:timezone/data/latest.dart' as timezone_data;
 import 'package:timezone/timezone.dart' as timezone;
-import 'package:yorimiti_biyori/src/features/notifications/scheduled_notification_plan_store.dart';
+import 'package:yorimichi_biyori/src/features/notifications/scheduled_notification_plan_store.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();

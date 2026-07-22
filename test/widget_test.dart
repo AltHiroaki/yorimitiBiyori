@@ -5,15 +5,15 @@ import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import 'package:yorimiti_biyori/src/app/app_shell.dart';
-import 'package:yorimiti_biyori/src/app/yorimiti_biyori_app.dart';
-import 'package:yorimiti_biyori/src/features/notifications/notification_service.dart';
-import 'package:yorimiti_biyori/src/models/suggestion_record.dart';
-import 'package:yorimiti_biyori/src/models/user_settings.dart';
-import 'package:yorimiti_biyori/src/pages/history_page.dart';
-import 'package:yorimiti_biyori/src/repositories/ongoing_suggestion_repository.dart';
-import 'package:yorimiti_biyori/src/repositories/records_repository.dart';
-import 'package:yorimiti_biyori/src/repositories/settings_repository.dart';
+import 'package:yorimichi_biyori/src/app/app_shell.dart';
+import 'package:yorimichi_biyori/src/app/yorimichi_biyori_app.dart';
+import 'package:yorimichi_biyori/src/features/notifications/notification_service.dart';
+import 'package:yorimichi_biyori/src/models/suggestion_record.dart';
+import 'package:yorimichi_biyori/src/models/user_settings.dart';
+import 'package:yorimichi_biyori/src/pages/history_page.dart';
+import 'package:yorimichi_biyori/src/repositories/ongoing_suggestion_repository.dart';
+import 'package:yorimichi_biyori/src/repositories/records_repository.dart';
+import 'package:yorimichi_biyori/src/repositories/settings_repository.dart';
 
 class _FakeNotificationController implements NotificationController {
   NotificationTapCallback? onNotificationTap;
@@ -60,7 +60,7 @@ void main() {
   });
 
   testWidgets('アプリが起動して提案タブが表示される', (WidgetTester tester) async {
-    await tester.pumpWidget(const YorimitiBiyoriApp());
+    await tester.pumpWidget(const YorimichiBiyoriApp());
     // 提案データ・設定の非同期読込を完了させる。
     await tester.pumpAndSettle();
 
@@ -75,7 +75,7 @@ void main() {
     tester.platformDispatcher.platformBrightnessTestValue = Brightness.dark;
     addTearDown(tester.platformDispatcher.clearPlatformBrightnessTestValue);
 
-    await tester.pumpWidget(const YorimitiBiyoriApp());
+    await tester.pumpWidget(const YorimichiBiyoriApp());
     await tester.pumpAndSettle();
 
     final materialApp = tester.widget<MaterialApp>(find.byType(MaterialApp));
@@ -94,7 +94,7 @@ void main() {
     tester.platformDispatcher.platformBrightnessTestValue = Brightness.dark;
     addTearDown(tester.platformDispatcher.clearPlatformBrightnessTestValue);
 
-    await tester.pumpWidget(const YorimitiBiyoriApp());
+    await tester.pumpWidget(const YorimichiBiyoriApp());
     await tester.pumpAndSettle();
 
     expect(find.text('空いた時間に、小さなよりみちを。'), findsOneWidget);
@@ -132,7 +132,7 @@ void main() {
     tester.view.devicePixelRatio = 1.0;
     addTearDown(tester.view.reset);
 
-    await tester.pumpWidget(const YorimitiBiyoriApp());
+    await tester.pumpWidget(const YorimichiBiyoriApp());
     await tester.pumpAndSettle();
 
     await tester.tap(find.text('設定'));
@@ -168,7 +168,7 @@ void main() {
     });
     rootBundle.clear();
 
-    await tester.pumpWidget(const YorimitiBiyoriApp());
+    await tester.pumpWidget(const YorimichiBiyoriApp());
     await tester.pumpAndSettle();
 
     final materialApp = tester.widget<MaterialApp>(find.byType(MaterialApp));
@@ -188,7 +188,7 @@ void main() {
     });
     rootBundle.clear();
 
-    await tester.pumpWidget(const YorimitiBiyoriApp());
+    await tester.pumpWidget(const YorimichiBiyoriApp());
     await tester.pumpAndSettle();
 
     expect(find.text('よりみち日和へようこそ'), findsOneWidget);
@@ -203,7 +203,7 @@ void main() {
   });
 
   testWidgets('ボトムナビゲーションは提案・履歴・設定の3タブ', (WidgetTester tester) async {
-    await tester.pumpWidget(const YorimitiBiyoriApp());
+    await tester.pumpWidget(const YorimichiBiyoriApp());
     await tester.pumpAndSettle();
 
     expect(find.text('提案'), findsOneWidget);
@@ -212,7 +212,7 @@ void main() {
   });
 
   testWidgets('タブ切替は200msのフェードで表示を切り替える', (WidgetTester tester) async {
-    await tester.pumpWidget(const YorimitiBiyoriApp());
+    await tester.pumpWidget(const YorimichiBiyoriApp());
     await tester.pumpAndSettle();
 
     final appShellSwitcher = find.byWidgetPredicate((widget) {
@@ -240,7 +240,7 @@ void main() {
     tester.view.devicePixelRatio = 1.0;
     addTearDown(tester.view.reset);
 
-    await tester.pumpWidget(const YorimitiBiyoriApp());
+    await tester.pumpWidget(const YorimichiBiyoriApp());
     await tester.pumpAndSettle();
 
     final tryButton = find.widgetWithText(FilledButton, 'やってみる');
@@ -270,7 +270,7 @@ void main() {
   });
 
   testWidgets('履歴タブに切り替えると空状態が表示される', (WidgetTester tester) async {
-    await tester.pumpWidget(const YorimitiBiyoriApp());
+    await tester.pumpWidget(const YorimichiBiyoriApp());
     await tester.pumpAndSettle();
 
     await tester.tap(find.text('履歴'));
@@ -299,7 +299,7 @@ void main() {
     });
     rootBundle.clear();
 
-    await tester.pumpWidget(const YorimitiBiyoriApp());
+    await tester.pumpWidget(const YorimichiBiyoriApp());
     await tester.pumpAndSettle();
 
     await tester.tap(find.text('履歴'));
@@ -345,7 +345,7 @@ void main() {
     });
     rootBundle.clear();
 
-    await tester.pumpWidget(const YorimitiBiyoriApp());
+    await tester.pumpWidget(const YorimichiBiyoriApp());
     await tester.pumpAndSettle();
 
     await tester.tap(find.text('履歴'));
@@ -374,7 +374,7 @@ void main() {
     final notificationController = _FakeNotificationController();
 
     await tester.pumpWidget(
-      YorimitiBiyoriApp(notificationController: notificationController),
+      YorimichiBiyoriApp(notificationController: notificationController),
     );
     await tester.pumpAndSettle();
 

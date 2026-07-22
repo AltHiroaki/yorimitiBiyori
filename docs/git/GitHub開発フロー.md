@@ -1,6 +1,6 @@
 # GitHub 開発フロー：Issue・Branch・Pull Request の理由
 
-このドキュメントは、`yorimitiBiyori` の開発で **Issue、Branch、Pull Request** をなぜ使うのかを説明するためのものです。
+このドキュメントは、`yorimichiBiyori` の開発で **Issue、Branch、Pull Request** をなぜ使うのかを説明するためのものです。
 
 Git や GitHub の操作は、最初は手順だけを覚えがちです。  
 しかし、なぜその手順を踏むのかを理解しておくと、チーム開発で迷いにくくなります。
@@ -414,7 +414,7 @@ Close #12
 
 ---
 
-## yorimitiBiyori でのおすすめ作業フロー
+## yorimichiBiyori でのおすすめ作業フロー
 
 このプロジェクトでは、次の流れを基本にします。
 
@@ -524,7 +524,7 @@ Branch = main を壊さずに作業する
 Pull Request = 変更を確認してから取り込む
 ```
 
-`yorimitiBiyori` では、MVP を確実に完成させるために、作業の目的と変更範囲を小さく保つことが重要です。
+`yorimichiBiyori` では、MVP を確実に完成させるために、作業の目的と変更範囲を小さく保つことが重要です。
 
 そのため、画面追加やロジック変更など、アプリの動作に関わる作業では、次の流れを基本にします。
 

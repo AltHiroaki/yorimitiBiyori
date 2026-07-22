@@ -1,17 +1,17 @@
-# AI Agent Rules for yorimitiBiyori
+# AI Agent Rules for yorimichiBiyori
 
-This document contains project-specific rules for AI agents working on `yorimitiBiyori`.
+This document contains project-specific rules for AI agents working on `yorimichiBiyori`.
 
 The rules below are written in English so they can be copied directly into AI agent instructions.
 
 ## Copyable instruction
 
 ~~~md
-# AI Agent Rules for yorimitiBiyori
+# AI Agent Rules for yorimichiBiyori
 
 ## Scope
 
-This file defines project-specific rules for `yorimitiBiyori`.
+This file defines project-specific rules for `yorimichiBiyori`.
 
 For general coding quality rules, also follow `docs/rules/SKILL.md`.
 
@@ -28,7 +28,7 @@ When they conflict, follow the proposal for the suggestion-conditions model (two
 
 ## Product Goal
 
-`yorimitiBiyori` is a Flutter mobile app. The MVP targets Android only; iOS support is a post-MVP advanced phase.
+`yorimichiBiyori` is a Flutter mobile app. The MVP targets Android only; iOS support is a post-MVP advanced phase.
 
 The app suggests one small "yorimichi" (detour) action that fits the user's interest categories and per-category detail settings during short free-time gaps. The model is **two-stage**: the user picks categories, then refines each with a category-specific detail setting. In the MVP each category exposes a single "genre" group; multiple detail-setting groups (language, mood, time, budget, source, etc.) are an advanced-phase extension.
 
@@ -269,8 +269,8 @@ Rules:
 Suggested storage keys:
 
 ```dart
-const recordsStorageKey = 'yorimiti_biyori_records';
-const settingsStorageKey = 'yorimiti_biyori_settings';
+const recordsStorageKey = 'yorimichi_biyori_records';
+const settingsStorageKey = 'yorimichi_biyori_settings';
 ```
 
 ## Notification Flow
@@ -281,7 +281,7 @@ The notification is the entry point that nudges the user to open the app. The su
 - There are **no time-selection notification actions** (the old 15 / 30 / 60 minute actions are removed, because time is no longer a universal condition).
 - Tapping the notification body opens the suggestion screen.
 
-Notifications fire once per day at a random time within a user-selected bounded range (`notification_start_time`–`notification_end_time`, default 17:00–21:00; start == end means a fixed time and is how the legacy single `notification_time` is migrated). Because Android provides no delivery callback, the implementation pre-schedules 7 single-shot notifications (IDs 4101–4107, one per day) and re-schedules them on every app launch via `applySettings`; a persisted plan (`yorimiti_biyori_scheduled_notification_plan`) prevents scheduling a second notification for a day whose planned time has already passed. Known limitation: if the app is not opened for 7+ days, notifications stop until the next launch. Do not use a fully random time, multiple notifications per day, or `matchDateTimeComponents` daily repeats.
+Notifications fire once per day at a random time within a user-selected bounded range (`notification_start_time`–`notification_end_time`, default 17:00–21:00; start == end means a fixed time and is how the legacy single `notification_time` is migrated). Because Android provides no delivery callback, the implementation pre-schedules 7 single-shot notifications (IDs 4101–4107, one per day) and re-schedules them on every app launch via `applySettings`; a persisted plan (`yorimichi_biyori_scheduled_notification_plan`) prevents scheduling a second notification for a day whose planned time has already passed. Known limitation: if the app is not opened for 7+ days, notifications stop until the next launch. Do not use a fully random time, multiple notifications per day, or `matchDateTimeComponents` daily repeats.
 
 If notification permission is denied, the app must remain fully usable with manual suggestions.
 

@@ -2,7 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:yorimiti_biyori/src/repositories/current_suggestion_repository.dart';
+import 'package:yorimichi_biyori/src/repositories/current_suggestion_repository.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();

@@ -163,7 +163,7 @@ UI プロトタイプ（`よりみち日和 UIプロトタイプ/`）の 3 タ�
 ## ディレクトリ構成
 
 ```text
-yorimitiBiyori/
+yorimichiBiyori/
 ├─ README.md
 ├─ CLAUDE.md                  ← AI agent 向けの入口（docs/rules/AGENTS.md へ誘導）
 ├─ pubspec.yaml
@@ -175,7 +175,7 @@ yorimitiBiyori/
 │  ├─ main.dart
 │  └─ src/
 │     ├─ app/
-│     │  └─ yorimiti_biyori_app.dart
+│     │  └─ yorimichi_biyori_app.dart
 │     ├─ pages/
 │     │  ├─ suggestion_page.dart
 │     │  ├─ history_page.dart

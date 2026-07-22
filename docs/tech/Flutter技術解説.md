@@ -150,7 +150,7 @@ lib/
 ├─ main.dart
 └─ src/
    ├─ app/
-   │  └─ yorimiti_biyori_app.dart
+   │  └─ yorimichi_biyori_app.dart
    ├─ pages/
    │  ├─ home_page.dart
    │  ├─ suggestion_page.dart

@@ -21,7 +21,7 @@ const String notificationPayloadSuggestion = 'open_suggestion';
 const String notificationTitle = '暇な時間って存在しますか？';
 const String notificationBody = '好きなことの中から、小さなよりみちを提案します。';
 
-const String _androidChannelId = 'yorimiti_daily_invitation';
+const String _androidChannelId = 'yorimichi_daily_invitation';
 const String _androidChannelName = 'よりみちのきっかけ';
 const String _androidChannelDescription = '空き時間によりみち提案を届ける通知';
 const String _androidDefaultIcon = '@mipmap/ic_launcher';

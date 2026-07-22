@@ -6,7 +6,7 @@ import '../models/ongoing_suggestion.dart';
 
 /// shared_preferences に保存する実施中よりみちのキー。
 const String ongoingSuggestionPreferenceKey =
-    'yorimiti_biyori_ongoing_suggestion';
+    'yorimichi_biyori_ongoing_suggestion';
 
 /// 実施中よりみち JSON の現行スキーマバージョン。
 const int ongoingSuggestionSchemaVersion = 1;

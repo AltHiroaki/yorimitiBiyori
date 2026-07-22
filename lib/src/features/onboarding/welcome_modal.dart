@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../app/yorimiti_neumorphic_theme.dart';
+import '../../app/yorimichi_neumorphic_theme.dart';
 import '../../widgets/neumorphic_surface.dart';
 
 /// 初回起動時に表示するウェルカムモーダル。
@@ -15,7 +15,7 @@ class WelcomeModal extends StatelessWidget {
       backgroundColor: Colors.transparent,
       elevation: 0,
       child: NeumorphicSurface(
-        radius: YorimitiNeumorphicTheme.heroRadius,
+        radius: YorimichiNeumorphicTheme.heroRadius,
         padding: const EdgeInsets.all(24),
         child: Column(
           mainAxisSize: MainAxisSize.min,

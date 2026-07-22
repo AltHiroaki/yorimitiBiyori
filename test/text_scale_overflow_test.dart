@@ -5,11 +5,11 @@ import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import 'package:yorimiti_biyori/src/app/yorimiti_biyori_app.dart';
-import 'package:yorimiti_biyori/src/models/suggestion_record.dart';
-import 'package:yorimiti_biyori/src/models/user_settings.dart';
-import 'package:yorimiti_biyori/src/repositories/records_repository.dart';
-import 'package:yorimiti_biyori/src/repositories/settings_repository.dart';
+import 'package:yorimichi_biyori/src/app/yorimichi_biyori_app.dart';
+import 'package:yorimichi_biyori/src/models/suggestion_record.dart';
+import 'package:yorimichi_biyori/src/models/user_settings.dart';
+import 'package:yorimichi_biyori/src/repositories/records_repository.dart';
+import 'package:yorimichi_biyori/src/repositories/settings_repository.dart';
 
 /// OS の「フォントサイズ最大」相当のストレス値。
 /// Android 14 の非線形スケールの上限に合わせて 2.0 とする。
@@ -27,7 +27,7 @@ Future<void> _pumpAppAtMaxTextScale(WidgetTester tester) async {
   tester.platformDispatcher.textScaleFactorTestValue = _maxTextScale;
   addTearDown(tester.platformDispatcher.clearTextScaleFactorTestValue);
 
-  await tester.pumpWidget(const YorimitiBiyoriApp());
+  await tester.pumpWidget(const YorimichiBiyoriApp());
   await tester.pumpAndSettle();
 }
 

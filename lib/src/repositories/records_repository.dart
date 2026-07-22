@@ -5,7 +5,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../models/suggestion_record.dart';
 
 /// shared_preferences の保存キー（仕様書 5.4）。
-const String recordsPreferenceKey = 'yorimiti_biyori_records';
+const String recordsPreferenceKey = 'yorimichi_biyori_records';
 
 /// shared_preferences に保存する履歴 JSON の現行スキーマバージョン。
 const int recordsSchemaVersion = 1;
