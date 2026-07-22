@@ -16259,5 +16259,123 @@
     ],
     "estimated_minutes": 10,
     "weight": 1.0
+  },
+  {
+    "id": "movie_327_hello_world",
+    "title": "『HELLO WORLD』を観る",
+    "description": "北村匠海主演・伊藤智彦監督。未来の自分とともに同級生の運命を変えようとする高校生を描くSF青春恋愛アニメ。",
+    "category": "movie",
+    "tags": [
+      "アニメ",
+      "SF",
+      "恋愛"
+    ],
+    "estimated_minutes": 98,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_328_time_of_eve",
+    "title": "『イヴの時間 劇場版』を観る",
+    "description": "福山潤主演・吉浦康裕監督。人間とアンドロイドを区別しない喫茶店で、両者の関係を見つめ直すSFアニメ。",
+    "category": "movie",
+    "tags": [
+      "アニメ",
+      "SF",
+      "ドラマ"
+    ],
+    "estimated_minutes": 106,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_329_harmony",
+    "title": "『ハーモニー』を観る",
+    "description": "沢城みゆき主演・なかむらたかし／マイケル・アリアス監督。徹底した健康管理社会で起きる異変を追うSFサスペンス。",
+    "category": "movie",
+    "tags": [
+      "アニメ",
+      "SF",
+      "サスペンス"
+    ],
+    "estimated_minutes": 120,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_330_paprika",
+    "title": "『パプリカ』を観る",
+    "description": "林原めぐみ主演・今敏監督。夢に入り込む装置をめぐり、現実と夢の境界が崩れていくSFミステリー。",
+    "category": "movie",
+    "tags": [
+      "アニメ",
+      "SF",
+      "ミステリー"
+    ],
+    "estimated_minutes": 90,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_331_patlabor2",
+    "title": "『機動警察パトレイバー2 the Movie』を観る",
+    "description": "押井守監督。東京で相次ぐ事件を通して、平和と戦争の境界を問うSFポリティカルサスペンス。",
+    "category": "movie",
+    "tags": [
+      "アニメ",
+      "SF",
+      "サスペンス"
+    ],
+    "estimated_minutes": 113,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_332_vertigo",
+    "title": "『めまい』を観る",
+    "description": "ジェームズ・スチュワート主演・アルフレッド・ヒッチコック監督。高所恐怖症の元刑事が謎めいた女性を追う恋愛ミステリー。",
+    "category": "movie",
+    "tags": [
+      "ミステリー",
+      "サスペンス",
+      "恋愛"
+    ],
+    "estimated_minutes": 128,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_333_rebecca",
+    "title": "『レベッカ』を観る",
+    "description": "ジョーン・フォンテイン主演・アルフレッド・ヒッチコック監督。亡き前妻の影が残る大邸宅で、新妻を包む謎と不安を描く恋愛サスペンス。",
+    "category": "movie",
+    "tags": [
+      "ミステリー",
+      "サスペンス",
+      "恋愛"
+    ],
+    "estimated_minutes": 130,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_334_charade",
+    "title": "『シャレード』を観る",
+    "description": "オードリー・ヘプバーン主演・スタンリー・ドーネン監督。亡き夫の秘密と大金をめぐる追跡を軽妙に描く恋愛ミステリー。",
+    "category": "movie",
+    "tags": [
+      "ミステリー",
+      "サスペンス",
+      "恋愛",
+      "コメディ"
+    ],
+    "estimated_minutes": 113,
+    "weight": 1.0
+  },
+  {
+    "id": "movie_335_rear_window",
+    "title": "『裏窓』を観る",
+    "description": "ジェームズ・スチュワート主演・アルフレッド・ヒッチコック監督。部屋の窓から殺人の疑いを見つけた写真家を描く恋愛サスペンス。",
+    "category": "movie",
+    "tags": [
+      "ミステリー",
+      "サスペンス",
+      "恋愛"
+    ],
+    "estimated_minutes": 112,
+    "weight": 1.0
   }
 ]
