@@ -192,7 +192,7 @@ Move these operations out of page widgets when they grow:
 
 ## Suggestion Data
 
-Manage suggestion candidates in `assets/data/suggestions.json`. Keep at least 50 matching `cook` suggestions for every cooking genre option. For other categories, grow toward 50+ entries per detail-setting option as an advanced goal.
+Manage suggestion candidates in `assets/data/suggestions.json`. Keep at least 50 matching suggestions for every `cook` and `read` genre option. For other categories, grow toward 50+ entries per detail-setting option as an advanced goal.
 
 > `assets/data/suggestions.json` is on the ver6 schema (per-category ids, `tags` = detail-setting values, `estimated_minutes`, `weight`, plus `recipe` on cook entries only). It no longer uses `min_minutes` / `max_minutes` / `intensity` / `location_type` / `detail` / `budget_yen` / `where_to_try`. The ver6 PDF `difficulty` field is not used in this project.
 
@@ -208,6 +208,7 @@ When editing suggestion data:
 - `tags` holds the values that correspond to the category's detail-setting options (this is what the filter matches against)
 - every `cook` entry's `tags` must include one of the `cooking_method` options (蒸す/炒める/揚げる/煮る/焼く/生・和える/レンジ・時短) in addition to its 味覚・ジャンル tag — a 料理 entry missing this tag can never be selected once a user filters by cooking method
 - every 料理 genre option (和食/洋食/中華/イタリアン/アジア風/激辛/さっぱり/ガッツリ) must have at least 50 matching `cook` entries
+- every 読書 genre option (エッセイ/小説/ノンフィクション/詩集/ミステリー・サスペンス/SF・ファンタジー/ビジネス・自己啓発/歴史・教養) must have at least 50 matching `read` entries
 - `estimated_minutes` is the rough duration used for history total-minutes aggregation
 - there is **no** `min_minutes` / `max_minutes` / `intensity` / `location_type` / `detail` / `budget_yen` / `where_to_try`
 - update Dart models when the JSON structure changes

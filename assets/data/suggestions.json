@@ -15379,5 +15379,885 @@
     ],
     "estimated_minutes": 12,
     "weight": 1.0
+  },
+  {
+    "id": "read_essay_makura_no_soshi",
+    "title": "『枕草子』を読んでみる",
+    "description": "清少納言｜エッセイ。宮廷の日々や四季の美意識を、鋭い観察で記した古典随筆。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_essay_tsurezuregusa",
+    "title": "『徒然草』を読んでみる",
+    "description": "兼好法師｜エッセイ。暮らしや人間関係への考察を、短い段ごとに味わえる古典随筆。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_essay_hojoki",
+    "title": "『方丈記』を読んでみる",
+    "description": "鴨長明｜エッセイ。災害と無常を見つめながら、静かな暮らしについて考える随筆。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_essay_oku_no_hosomichi",
+    "title": "『奥の細道』を読んでみる",
+    "description": "松尾芭蕉｜エッセイ。旅先の景色や出会いを、俳句と文章でたどる紀行作品。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_essay_inei_raisan",
+    "title": "『陰翳礼讃』を読んでみる",
+    "description": "谷崎潤一郎｜エッセイ。光と影から日本の住まいや美意識を考える文化随筆。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_essay_book_of_tea",
+    "title": "『茶の本』を読んでみる",
+    "description": "岡倉天心｜エッセイ。茶を入り口に、日本文化と美の考え方を伝える一冊。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_essay_what_i_talk_about_running",
+    "title": "『走ることについて語るときに僕の語ること』を読んでみる",
+    "description": "村上春樹｜エッセイ。走る習慣と小説を書く仕事の関係を率直に綴った回想的エッセイ。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_essay_murakami_asahido",
+    "title": "『村上朝日堂』を読んでみる",
+    "description": "村上春樹｜エッセイ。日常の小さな疑問や好みを軽やかな文章で楽しめるエッセイ集。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_essay_if_our_language_were_whisky",
+    "title": "『もし僕らのことばがウィスキーであったなら』を読んでみる",
+    "description": "村上春樹｜エッセイ。ウィスキーの土地を訪ね、風景と味わいを言葉にした旅のエッセイ。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_essay_tabi_wo_suru_ki",
+    "title": "『旅をする木』を読んでみる",
+    "description": "星野道夫｜エッセイ。アラスカの自然と人々を穏やかなまなざしで描いたエッセイ集。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_essay_nagai_tabi_no_tojo",
+    "title": "『長い旅の途上』を読んでみる",
+    "description": "星野道夫｜エッセイ。自然の中で得た出会いと思索を、写真家の視点で綴った一冊。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_essay_kokoro_no_shohosen",
+    "title": "『こころの処方箋』を読んでみる",
+    "description": "河合隼雄｜エッセイ。心の動きを理解するヒントを、短い文章でやさしく示すエッセイ。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_essay_taiga_no_hitoshizuku",
+    "title": "『大河の一滴』を読んでみる",
+    "description": "五木寛之｜エッセイ。生きることや苦しみとの向き合い方を静かに考える随想集。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_essay_mendou_dakara_shiyou",
+    "title": "『面倒だから、しよう。』を読んでみる",
+    "description": "渡辺和子｜エッセイ。日々の小さな行いを大切にする姿勢を、穏やかな言葉で伝える人生エッセイ。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_essay_kyo_mo_teinei_ni",
+    "title": "『今日もていねいに。』を読んでみる",
+    "description": "松浦弥太郎｜エッセイ。毎日の習慣を少し整えるための、小さな工夫を綴った一冊。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_essay_sense_nyumon",
+    "title": "『センス入門』を読んでみる",
+    "description": "松浦弥太郎｜エッセイ。観察と経験から自分の感覚を育てる考え方を紹介するエッセイ。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_essay_shigoto_kurashi_100",
+    "title": "『しごとのきほん くらしのきほん 100』を読んでみる",
+    "description": "松浦弥太郎｜エッセイ。仕事と暮らしを整える短い言葉を、一項目ずつ読める一冊。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_essay_saru_no_koshikake",
+    "title": "『さるのこしかけ』を読んでみる",
+    "description": "さくらももこ｜エッセイ。身の回りの出来事を独特の観察眼とユーモアで描くエッセイ集。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_essay_ano_koro",
+    "title": "『あのころ』を読んでみる",
+    "description": "さくらももこ｜エッセイ。子ども時代の記憶を、懐かしさと笑いを交えて綴った一冊。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_essay_hitori_zumo",
+    "title": "『ひとりずもう』を読んでみる",
+    "description": "さくらももこ｜エッセイ。思春期から漫画家を目指すまでを率直に振り返る自伝的エッセイ。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_essay_yomigaeru_hentai",
+    "title": "『蘇える変態』を読んでみる",
+    "description": "星野源｜エッセイ。仕事や療養の日々を、飾らない言葉とユーモアで綴った一冊。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_essay_inochi_no_shaso_kara",
+    "title": "『いのちの車窓から』を読んでみる",
+    "description": "星野源｜エッセイ。音楽や芝居、日常の出会いをやわらかな視点で描くエッセイ集。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_essay_omotesando_celeb_dog",
+    "title": "『表参道のセレブ犬とカバーニャ要塞の野良犬』を読んでみる",
+    "description": "若林正恭｜エッセイ。キューバへの旅を通して、自分の暮らしや社会を見つめ直す紀行文。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_essay_naname_no_yugure",
+    "title": "『ナナメの夕暮れ』を読んでみる",
+    "description": "若林正恭｜エッセイ。他人との距離や生きづらさを、自省と笑いを交えて綴ったエッセイ。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_essay_tokyo_hyakkei",
+    "title": "『東京百景』を読んでみる",
+    "description": "又吉直樹｜エッセイ。東京のさまざまな場所と、芸人としての日々を重ねたエッセイ集。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_essay_subete_wasurete_shimau_kara",
+    "title": "『すべて忘れてしまうから』を読んでみる",
+    "description": "燃え殻｜エッセイ。日常の記憶や人との別れを、短い文章で静かにすくい取る一冊。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_essay_yume_ni_mayotte_taxi",
+    "title": "『夢に迷って、タクシーを呼んだ』を読んでみる",
+    "description": "燃え殻｜エッセイ。過去の記憶と現在の暮らしを行き来する、余韻のあるエッセイ集。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_essay_yellow_white_blue",
+    "title": "『ぼくはイエローでホワイトで、ちょっとブルー』を読んでみる",
+    "description": "ブレイディみかこ｜エッセイ。英国の学校生活から、多様性や格差を身近な言葉で考える一冊。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_essay_nanraka_no_jijo",
+    "title": "『なんらかの事情』を読んでみる",
+    "description": "岸本佐知子｜エッセイ。日常と空想の境目がゆらぐ、不思議で可笑しい文章を集めた一冊。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_essay_nanimotsu_type",
+    "title": "『ねにもつタイプ』を読んでみる",
+    "description": "岸本佐知子｜エッセイ。翻訳家ならではの言葉への感覚で、奇妙な日常を描くエッセイ集。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_essay_kisama_itsu_made_joshi",
+    "title": "『貴様いつまで女子でいるつもりだ問題』を読んでみる",
+    "description": "ジェーン・スー｜エッセイ。年齢や性別をめぐる違和感を、率直さとユーモアで考える一冊。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_essay_ikiru_shinu_chichioya",
+    "title": "『生きるとか死ぬとか父親とか』を読んでみる",
+    "description": "ジェーン・スー｜エッセイ。父との関係をたどりながら、家族の記憶を見つめ直すエッセイ。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_essay_3652",
+    "title": "『3652―伊坂幸太郎エッセイ集―』を読んでみる",
+    "description": "伊坂幸太郎｜エッセイ。本や映画、創作の日々を独自の視点で綴ったエッセイ集。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_essay_nyokki",
+    "title": "『にょっ記』を読んでみる",
+    "description": "穂村弘｜エッセイ。日常の小さな違和感を、短い日記のような文章で楽しめる一冊。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_essay_zekkyo_iinkai",
+    "title": "『絶叫委員会』を読んでみる",
+    "description": "穂村弘｜エッセイ。街や会話で出会った忘れがたい言葉を拾い、その面白さを味わうエッセイ。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_essay_fuji_nikki",
+    "title": "『富士日記』を読んでみる",
+    "description": "武田百合子｜エッセイ。富士山麓の山荘での食事や季節を、細やかに記録した日記文学。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_essay_kotoba_no_shokutaku",
+    "title": "『ことばの食卓』を読んでみる",
+    "description": "武田百合子｜エッセイ。食べ物の記憶と人の気配を、簡潔で鮮やかな文章にした随筆集。",
+    "category": "read",
+    "tags": [
+      "エッセイ"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "read_poetry_haru_to_shura",
+    "title": "『春と修羅』を読んでみる",
+    "description": "宮沢賢治｜詩集。自然と心象が響き合う、独自の言葉づかいを味わえる詩集。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_poetry_tsuki_ni_hoeru",
+    "title": "『月に吠える』を読んでみる",
+    "description": "萩原朔太郎｜詩集。孤独や不安を口語のリズムで表した、日本近代詩の代表的詩集。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_poetry_aoneko",
+    "title": "『青猫』を読んでみる",
+    "description": "萩原朔太郎｜詩集。都市の憂鬱と繊細な感覚を、幻想的な言葉で描いた詩集。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_poetry_arishi_hi_no_uta",
+    "title": "『在りし日の歌』を読んでみる",
+    "description": "中原中也｜詩集。喪失や青春の記憶を、音楽的な言葉で綴った詩集。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_poetry_sokuryosen",
+    "title": "『測量船』を読んでみる",
+    "description": "三好達治｜詩集。自然の景色と静かな抒情を、端正な日本語で味わえる詩集。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_poetry_wasuregusa_ni_yosu",
+    "title": "『萱草に寄す』を読んでみる",
+    "description": "立原道造｜詩集。風景と恋の感情を、透明感のある言葉で表した詩集。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_poetry_akatsuki_to_yu_no_uta",
+    "title": "『暁と夕の詩』を読んでみる",
+    "description": "立原道造｜詩集。朝夕の光や季節を、繊細なリズムで描いた詩集。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_poetry_waga_hito_ni_atauru_aika",
+    "title": "『わがひとに与ふる哀歌』を読んでみる",
+    "description": "伊東静雄｜詩集。自然と生の緊張を、格調ある言葉で表現した詩集。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_poetry_tabibito_kaerazu",
+    "title": "『旅人かへらず』を読んでみる",
+    "description": "西脇順三郎｜詩集。旅と記憶を断片的なイメージでつなぐ、モダンな長編詩。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_poetry_yonsen_no_hi_to_yoru",
+    "title": "『四千の日と夜』を読んでみる",
+    "description": "田村隆一｜詩集。戦後の感覚と存在への問いを、硬質な言葉で刻んだ詩集。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_poetry_jibun_no_kanjusei_kurai",
+    "title": "『自分の感受性くらい』を読んでみる",
+    "description": "茨木のり子｜詩集。自分の足で生きる姿勢を、まっすぐな言葉で伝える詩集。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_poetry_yorikakarazu",
+    "title": "『倚りかからず』を読んでみる",
+    "description": "茨木のり子｜詩集。自立した生き方への思いを、簡潔で強い言葉にした詩集。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_poetry_mienai_haitatsufu",
+    "title": "『見えない配達夫』を読んでみる",
+    "description": "茨木のり子｜詩集。日常の奥にある感情を、静かな視線ですくい上げた詩集。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_poetry_hyosatsu_nado",
+    "title": "『表札など』を読んでみる",
+    "description": "石垣りん｜詩集。働くことや暮らしを、生活者の実感から見つめた詩集。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_poetry_watashi_no_mae_no_nabe",
+    "title": "『私の前にある鍋とお釜と燃える火と』を読んでみる",
+    "description": "石垣りん｜詩集。台所や仕事の風景から、女性の生活と尊厳を描いた詩集。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_poetry_kotoba_asobi_uta",
+    "title": "『ことばあそびうた』を読んでみる",
+    "description": "谷川俊太郎｜詩集。声に出すと楽しい、日本語の音とリズムを生かした詩集。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_poetry_teigi",
+    "title": "『定義』を読んでみる",
+    "description": "谷川俊太郎｜詩集。身近な言葉を捉え直し、世界の見え方を揺さぶる詩集。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_poetry_hadaka",
+    "title": "『はだか』を読んでみる",
+    "description": "谷川俊太郎｜詩集。飾らない言葉で、人の心と日常を率直に描いた詩集。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_poetry_mimi_wo_sumasu",
+    "title": "『みみをすます』を読んでみる",
+    "description": "谷川俊太郎｜詩集。周囲の音や沈黙に耳を傾ける、ゆっくり味わいたい長編詩。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_poetry_yonaka_no_daidokoro",
+    "title": "『夜中に台所でぼくはきみに話しかけたかった』を読んでみる",
+    "description": "谷川俊太郎｜詩集。愛や孤独を、会話のように親密な言葉で綴った詩集。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_poetry_kujikenai_de",
+    "title": "『くじけないで』を読んでみる",
+    "description": "柴田トヨ｜詩集。日々への感謝と希望を、素直であたたかな言葉にした詩集。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_poetry_good_morning",
+    "title": "『グッドモーニング』を読んでみる",
+    "description": "最果タヒ｜詩集。現代の感情を鋭い言葉と速度感で描く、初期の詩集。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_poetry_shinde_shimau_kei",
+    "title": "『死んでしまう系のぼくらに』を読んでみる",
+    "description": "最果タヒ｜詩集。孤独やつながりを、現代的な語り口で切り取った詩集。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_poetry_yozora_saiko_mitsudo",
+    "title": "『夜空はいつでも最高密度の青色だ』を読んでみる",
+    "description": "最果タヒ｜詩集。都市で生きる感覚と恋を、鮮烈な言葉で描いた詩集。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_poetry_suijo_bus_asakusa",
+    "title": "『水上バス浅草行き』を読んでみる",
+    "description": "岡本真帆｜詩集。仕事や東京の日常を、親しみやすい言葉で詠んだ歌集。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_poetry_akarui_hanataba",
+    "title": "『あかるい花束』を読んでみる",
+    "description": "岡本真帆｜詩集。暮らしの小さな場面を、明るさと余韻のある短歌にした歌集。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_poetry_tsumujikaze_koko",
+    "title": "『つむじ風、ここにあります』を読んでみる",
+    "description": "木下龍也｜詩集。日常の驚きや感情を、鮮やかな比喩で表した歌集。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_poetry_all_around_you",
+    "title": "『オールアラウンドユー』を読んでみる",
+    "description": "木下龍也｜詩集。誰かを思う気持ちを、現代の言葉で丁寧にすくった歌集。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_poetry_siren_to_sai",
+    "title": "『サイレンと犀』を読んでみる",
+    "description": "岡野大嗣｜詩集。街と生活の風景を、静かなユーモアのある短歌で描く歌集。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_poetry_syndicate",
+    "title": "『シンジケート』を読んでみる",
+    "description": "穂村弘｜詩集。恋愛と都市生活の感覚を、意外な言葉の組み合わせで詠んだ歌集。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_poetry_tegamima_mami",
+    "title": "『手紙魔まみ、夏の引越し（ウサギ連れ）』を読んでみる",
+    "description": "穂村弘｜詩集。物語のような連作で、不思議な恋と日常を描いた歌集。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_poetry_leaves_of_grass",
+    "title": "『草の葉』を読んでみる",
+    "description": "ウォルト・ホイットマン｜詩集。個人の自由と生命の広がりを、大らかな言葉で歌った詩集。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_poetry_les_fleurs_du_mal",
+    "title": "『悪の華』を読んでみる",
+    "description": "シャルル・ボードレール｜詩集。都市の美と倦怠を、緊張感のある言葉で描いた象徴詩の古典。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_poetry_a_season_in_hell",
+    "title": "『地獄の季節』を読んでみる",
+    "description": "アルチュール・ランボー｜詩集。反抗と自己探求を、激しいイメージで綴った散文詩集。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_poetry_illuminations",
+    "title": "『イリュミナシオン』を読んでみる",
+    "description": "アルチュール・ランボー｜詩集。色彩豊かなイメージが連なる、短い散文詩を集めた一冊。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_poetry_duino_elegies",
+    "title": "『ドゥイノの悲歌』を読んでみる",
+    "description": "ライナー・マリア・リルケ｜詩集。人間の孤独と生の意味を、壮大な比喩で問う連作詩。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_poetry_sonnets_to_orpheus",
+    "title": "『オルフォイスへのソネット』を読んでみる",
+    "description": "ライナー・マリア・リルケ｜詩集。歌や変容を主題に、端正な形式で綴られた連作詩。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_poetry_the_waste_land",
+    "title": "『荒地』を読んでみる",
+    "description": "T・S・エリオット｜詩集。断片的な声と引用で、近代社会の不安を描いた長編詩。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_poetry_twenty_love_poems",
+    "title": "『二十の愛の詩と一つの絶望の歌』を読んでみる",
+    "description": "パブロ・ネルーダ｜詩集。愛と喪失を、自然のイメージとともに情熱的に歌った詩集。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_poetry_gitanjali",
+    "title": "『ギタンジャリ』を読んでみる",
+    "description": "ラビンドラナート・タゴール｜詩集。自然と祈りを通して、生命への敬意を歌った詩集。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_poetry_rubaiyat",
+    "title": "『ルバイヤート』を読んでみる",
+    "description": "オマル・ハイヤーム｜詩集。人生の短さや喜びを、四行詩の簡潔な形で味わえる詩集。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_poetry_shakespeare_sonnets",
+    "title": "『ソネット集』を読んでみる",
+    "description": "ウィリアム・シェイクスピア｜詩集。愛や時間、美をめぐる思索を定型詩で綴った連作。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "read_poetry_ariel",
+    "title": "『アリエル』を読んでみる",
+    "description": "シルヴィア・プラス｜詩集。自己と家族、生の緊張を、鋭いイメージで描いた詩集。",
+    "category": "read",
+    "tags": [
+      "詩集"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
   }
 ]
