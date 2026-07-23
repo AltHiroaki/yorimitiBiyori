@@ -85,7 +85,7 @@ void main() {
     );
   });
 
-  test('MVP 全カテゴリの全詳細設定選択肢に、タグが一致する提案が1件以上ある', () async {
+  test('MVP 全カテゴリの全詳細設定選択肢に、タグが一致する提案が50件以上ある', () async {
     final source = await rootBundle.loadString(suggestionsAssetPath);
     final suggestions = parseSuggestionsJson(source);
 
@@ -95,18 +95,19 @@ void main() {
           if (option == noPreferenceOption) {
             continue;
           }
-          final hasMatchingSuggestion = suggestions.any(
-            (suggestion) =>
-                suggestion.category == category.id &&
-                suggestion.tags.contains(option),
-          );
+          final matchingCount = suggestions
+              .where(
+                (suggestion) =>
+                    suggestion.category == category.id &&
+                    suggestion.tags.contains(option),
+              )
+              .length;
           expect(
-            hasMatchingSuggestion,
-            isTrue,
+            matchingCount,
+            greaterThanOrEqualTo(50),
             reason:
                 '${category.label}（${category.id}）の選択肢「$option」'
-                'に一致する提案が suggestions.json にない。'
-                '該当タグを持つ提案を追加するか、選択肢を見直すこと。',
+                'に一致する提案は50件以上必要。',
           );
         }
       }
