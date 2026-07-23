@@ -180,6 +180,40 @@ void main() {
     );
   });
 
+  test('読書データは各ジャンルに50件以上あり、タイトルが重複していない', () async {
+    final source = await rootBundle.loadString(suggestionsAssetPath);
+    final suggestions = parseSuggestionsJson(source);
+    final readingSuggestions = suggestions
+        .where((suggestion) => suggestion.category == 'read')
+        .toList();
+    final readingCategory = InterestCategories.all.singleWhere(
+      (category) => category.id == 'read',
+    );
+    final genreGroup = readingCategory.detailSettingGroups.singleWhere(
+      (group) => group.id == 'genre',
+    );
+
+    for (final genre in genreGroup.options) {
+      final matchingCount = readingSuggestions.where((suggestion) {
+        return suggestion.tags.contains(genre);
+      }).length;
+      expect(
+        matchingCount,
+        greaterThanOrEqualTo(50),
+        reason: '読書ジャンル「$genre」の提案は50件以上必要。',
+      );
+    }
+
+    final readingTitles = readingSuggestions
+        .map((suggestion) => suggestion.title)
+        .toSet();
+    expect(
+      readingTitles,
+      hasLength(readingSuggestions.length),
+      reason: '読書の提案タイトルは重複させない。',
+    );
+  });
+
   test('すべての料理データに有効な調理法タグがある', () async {
     final source = await rootBundle.loadString(suggestionsAssetPath);
     final suggestions = parseSuggestionsJson(source);
