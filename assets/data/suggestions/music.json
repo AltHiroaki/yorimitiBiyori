@@ -1,0 +1,4432 @@
+[
+  {
+    "id": "music_jazz_focus",
+    "title": "作業用にジャズを1曲だけ流す",
+    "description": "歌詞のないジャズを1曲、作業や勉強のBGMにしてみる。集中したいときに向いた軽いよりみちです。",
+    "category": "music",
+    "tags": [
+      "ジャズ",
+      "作業向け",
+      "無料"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.2
+  },
+  {
+    "id": "music_classic_relax",
+    "title": "クラシックを1曲だけ聴く",
+    "description": "短いクラシック曲を1曲だけ流して、スマホから少し目を離す。落ち着きたいときのよりみちです。",
+    "category": "music",
+    "tags": [
+      "クラシック",
+      "リラックス",
+      "無料"
+    ],
+    "estimated_minutes": 6,
+    "weight": 1.0
+  },
+  {
+    "id": "music_pop_energy",
+    "title": "明るいポップスで気分を切り替える",
+    "description": "いつもより少し明るいポップスを1曲選んで、気持ちを切り替える。",
+    "category": "music",
+    "tags": [
+      "ポップス",
+      "盛り上がりたい",
+      "無料"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_western_new_release",
+    "title": "洋楽の新譜を1曲だけ聴く",
+    "description": "洋楽の新着プレイリストから、知らない曲を1曲だけ聴いてみる。",
+    "category": "music",
+    "tags": [
+      "洋楽",
+      "新しい出会い",
+      "無料"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_01_lemon",
+    "title": "『Lemon』を聴いてみる",
+    "description": "米津玄師｜切なさと透明感のあるメロディが印象的な一曲。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_02_radwimps",
+    "title": "『前前前世』を聴いてみる",
+    "description": "RADWIMPS｜疾走感があって気分がぱっと上向く。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_03_item",
+    "title": "『マリーゴールド』を聴いてみる",
+    "description": "あいみょん｜夏の夕方に聴きたくなる、素直な歌詞が魅力。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_04_foorin",
+    "title": "『パプリカ』を聴いてみる",
+    "description": "Foorin｜明るく弾むリズムで気持ちが軽くなる。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_05_yoasobi",
+    "title": "『夜に駆ける』を聴いてみる",
+    "description": "YOASOBI｜小説原作らしい物語性のあるサウンド。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_06_item",
+    "title": "『恋』を聴いてみる",
+    "description": "星野源｜ドラマ主題歌としても有名な、踊りたくなる一曲。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_07_daoko",
+    "title": "『打上花火』を聴いてみる",
+    "description": "DAOKO×米津玄師｜夏の情景が浮かぶデュエット曲。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_08_kinggnu",
+    "title": "『白日』を聴いてみる",
+    "description": "King Gnu｜静と動の切り替えが気持ちいい一曲。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_09_yoasobi",
+    "title": "『群青』を聴いてみる",
+    "description": "YOASOBI｜青春の切なさが詰まったミディアムテンポの曲。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_10_officialdismpretende",
+    "title": "『Pretender』を聴いてみる",
+    "description": "Official髭男dism｜サビの高音が印象に残るラブソング。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_11_ado",
+    "title": "『うっせぇわ』を聴いてみる",
+    "description": "Ado｜エネルギッシュな歌声でモヤモヤを発散できる。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_12_radwimps",
+    "title": "『愛にできることはまだあるかい』を聴いてみる",
+    "description": "RADWIMPS｜壮大なサウンドで気持ちが引き締まる。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_13_yoasobi",
+    "title": "『アイドル』を聴いてみる",
+    "description": "YOASOBI｜テンポの良さでやる気スイッチが入る一曲。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_14_item",
+    "title": "『酒とバラの日々』を聴いてみる",
+    "description": "オスカー・ピーターソン｜ゆったりとしたピアノトリオの定番曲。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_15_takefive",
+    "title": "『Take Five』を聴いてみる",
+    "description": "デイヴ・ブルーベック・カルテット｜変拍子が心地よい、ジャズ入門にもぴったりの曲。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_16_autumnleaves",
+    "title": "『Autumn Leaves』を聴いてみる",
+    "description": "キャノンボール・アダレイ｜秋の夕暮れによく合うスタンダードナンバー。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "estimated_minutes": 6,
+    "weight": 1.0
+  },
+  {
+    "id": "music_17_myfavoritethings",
+    "title": "『My Favorite Things』を聴いてみる",
+    "description": "ジョン・コルトレーン｜サックスの即興が長く続く聴きごたえのある演奏。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "estimated_minutes": 8,
+    "weight": 1.0
+  },
+  {
+    "id": "music_18_sowhat",
+    "title": "『So What』を聴いてみる",
+    "description": "マイルス・デイビス｜モード・ジャズの代表曲、静かな緊張感がある。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "estimated_minutes": 9,
+    "weight": 1.0
+  },
+  {
+    "id": "music_19_flymetothemoon",
+    "title": "『Fly Me to the Moon』を聴いてみる",
+    "description": "フランク・シナトラ｜誰もが一度は耳にしたことのある名スタンダード。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_20_roundmidnight",
+    "title": "『Round Midnight』を聴いてみる",
+    "description": "セロニアス・モンク｜夜更けにひとり聴きたい、少し不思議な響き。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "estimated_minutes": 6,
+    "weight": 1.0
+  },
+  {
+    "id": "music_21_summertime",
+    "title": "『Summertime』を聴いてみる",
+    "description": "サラ・ヴォーン｜夏の気だるさを歌い上げる名唱。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_22_waltzfordebby",
+    "title": "『Waltz for Debby』を聴いてみる",
+    "description": "ビル・エヴァンス｜3拍子の優しいピアノが心を落ち着かせる。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "estimated_minutes": 6,
+    "weight": 1.0
+  },
+  {
+    "id": "music_23_blueingreen",
+    "title": "『Blue in Green』を聴いてみる",
+    "description": "マイルス・デイビス｜静かで内省的な、夜に合う一曲。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_24_feelinggood",
+    "title": "『Feeling Good』を聴いてみる",
+    "description": "ニーナ・シモン｜力強いボーカルで気持ちが前を向く。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_25_anightintunisia",
+    "title": "『A Night in Tunisia』を聴いてみる",
+    "description": "ディジー・ガレスピー｜疾走感のあるビバップの名曲。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_26_1",
+    "title": "『月光 第1楽章』を聴いてみる",
+    "description": "ベートーヴェン｜静かな夜にそっと寄り添うピアノ曲。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "estimated_minutes": 6,
+    "weight": 1.0
+  },
+  {
+    "id": "music_27_item",
+    "title": "『亡き王女のためのパヴァーヌ』を聴いてみる",
+    "description": "ラヴェル｜優雅で少し切ないメロディが印象的。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "estimated_minutes": 6,
+    "weight": 1.0
+  },
+  {
+    "id": "music_28_g",
+    "title": "『G線上のアリア』を聴いてみる",
+    "description": "バッハ｜弦楽器の温かい響きに包まれる名曲。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_29_item",
+    "title": "『別れの曲』を聴いてみる",
+    "description": "ショパン｜練習曲でありながら深い抒情性を持つ一曲。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_30_item",
+    "title": "『カノン』を聴いてみる",
+    "description": "パッヘルベル｜結婚式などでも定番の、穏やかな旋律。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_31_item",
+    "title": "『白鳥』を聴いてみる",
+    "description": "サン=サーンス｜チェロの旋律が美しい、短くて聴きやすい曲。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_32_item",
+    "title": "『展覧会の絵 プロムナード』を聴いてみる",
+    "description": "ムソルグスキー｜美術館を歩くような気分になれる一曲。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "estimated_minutes": 2,
+    "weight": 1.0
+  },
+  {
+    "id": "music_33_item",
+    "title": "『愛の挨拶』を聴いてみる",
+    "description": "エルガー｜優しく温かい気持ちになれる小品。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_34_item",
+    "title": "『トロイメライ』を聴いてみる",
+    "description": "シューマン｜「子供の情景」の中でも特に有名な夢見るような曲。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_35_item",
+    "title": "『アヴェ・マリア』を聴いてみる",
+    "description": "シューベルト｜静かな祈りのような美しい旋律。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_36_2",
+    "title": "『ノクターン第2番』を聴いてみる",
+    "description": "ショパン｜夜にぴったりの、しっとりとしたピアノ曲。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_37_1",
+    "title": "『四季 春 第1楽章』を聴いてみる",
+    "description": "ヴィヴァルディ｜軽やかで明るい、春を感じるヴァイオリン曲。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_38_edsheeranperfect",
+    "title": "『Perfect』を聴いてみる",
+    "description": "Ed Sheeran｜結婚式の定番にもなった優しいラブソング。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_39_edsheeranshapeofyou",
+    "title": "『Shape of You』を聴いてみる",
+    "description": "Ed Sheeran｜耳に残るビートで気分が上がる一曲。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_40_adelesomeonelikeyou",
+    "title": "『Someone Like You』を聴いてみる",
+    "description": "Adele｜力強い歌声にじんとくるバラード。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_41_theweekndblindinglig",
+    "title": "『Blinding Lights』を聴いてみる",
+    "description": "The Weeknd｜80年代風シンセが効いた高揚感のある曲。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_42_ladygagabradleycoope",
+    "title": "『Shallow』を聴いてみる",
+    "description": "Lady Gaga & Bradley Cooper｜映画「アリー/スター誕生」の名デュエット曲。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_43_coldplayvivalavida",
+    "title": "『Viva La Vida』を聴いてみる",
+    "description": "Coldplay｜壮大なストリングスが印象的なアンセム。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_44_onerepubliccountings",
+    "title": "『Counting Stars』を聴いてみる",
+    "description": "OneRepublic｜軽快なリズムで気持ちが前向きになる。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_45_brunomarsjustthewayy",
+    "title": "『Just the Way You Are』を聴いてみる",
+    "description": "Bruno Mars｜素直な歌詞が心に残るラブソング。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_46_brunomarsuptownfunk",
+    "title": "『Uptown Funk』を聴いてみる",
+    "description": "Bruno Mars｜聴くだけで体が動き出すファンクナンバー。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_47_adelerollinginthedee",
+    "title": "『Rolling in the Deep』を聴いてみる",
+    "description": "Adele｜力強いビートとボーカルが胸に響く。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_48_journeydontstopbelie",
+    "title": "『Don't Stop Believin'』を聴いてみる",
+    "description": "Journey｜サビで自然と口ずさみたくなる定番アンセム。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_49_lewiscapaldisomeoney",
+    "title": "『Someone You Loved』を聴いてみる",
+    "description": "Lewis Capaldi｜しっとりと聴かせるピアノバラード。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_50_mileycyrusflowers",
+    "title": "『Flowers』を聴いてみる",
+    "description": "Miley Cyrus｜前向きな自立をテーマにした軽快な一曲。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_051_item",
+    "title": "『上を向いて歩こう』を聴いてみる",
+    "description": "坂本九｜世界的にも知られる、前向きな気持ちにさせる名曲。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_052_item",
+    "title": "『世界に一つだけの花』を聴いてみる",
+    "description": "SMAP｜ありのままでいいと肯定してくれる定番曲。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_053_item",
+    "title": "『さくら』を聴いてみる",
+    "description": "森山直太朗｜卒業シーズンに聴きたくなる名バラード。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_054_tomorrowneverknows",
+    "title": "『Tomorrow never knows』を聴いてみる",
+    "description": "Mr.Children｜疾走感のあるギターが印象的な代表曲。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_055_hanabi",
+    "title": "『HANABI』を聴いてみる",
+    "description": "Mr.Children｜ドラマ主題歌としても有名な壮大なバラード。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_056_innocentworld",
+    "title": "『innocent world』を聴いてみる",
+    "description": "Mr.Children｜爽やかなメロディが心地よい定番曲。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_057_firstlove",
+    "title": "『First Love』を聴いてみる",
+    "description": "宇多田ヒカル｜切なさの中に強さがあるラブソングの名作。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_058_automatic",
+    "title": "『Automatic』を聴いてみる",
+    "description": "宇多田ヒカル｜デビュー曲ながら完成度の高いR&Bナンバー。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_059_tsunami",
+    "title": "『TSUNAMI』を聴いてみる",
+    "description": "サザンオールスターズ｜壮大なスケール感を持つ夏の定番曲。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "estimated_minutes": 6,
+    "weight": 1.0
+  },
+  {
+    "id": "music_060_item",
+    "title": "『勝手にシンドバッド』を聴いてみる",
+    "description": "サザンオールスターズ｜デビュー曲にして夏歌の金字塔。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_061_item",
+    "title": "『島唄』を聴いてみる",
+    "description": "THE BOOM｜沖縄の情景が浮かぶ国民的な名曲。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_062_lovelovelove",
+    "title": "『LOVE LOVE LOVE』を聴いてみる",
+    "description": "DREAMS COME TRUE｜結婚式の定番としても知られる祝福ソング。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_063_39",
+    "title": "『3月9日』を聴いてみる",
+    "description": "レミオロメン｜卒業式ソングの定番として愛される一曲。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_064_item",
+    "title": "『桜坂』を聴いてみる",
+    "description": "福山雅治｜別れと再会を描いた季節感あるバラード。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_065_item",
+    "title": "『三日月』を聴いてみる",
+    "description": "絢香｜力強い歌声が印象的な応援ソング。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_066_item",
+    "title": "『カブトムシ』を聴いてみる",
+    "description": "aiko｜切なさと甘さが同居する代表曲。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_067_item",
+    "title": "『花火』を聴いてみる",
+    "description": "aiko｜夏の恋心をみずみずしく描いた一曲。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_068_item",
+    "title": "『空も飛べるはず』を聴いてみる",
+    "description": "スピッツ｜青春映画のような爽やかさを持つ名曲。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_069_item",
+    "title": "『チェリー』を聴いてみる",
+    "description": "スピッツ｜シンプルな恋心を歌った国民的ヒット曲。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_070_item",
+    "title": "『ロビンソン』を聴いてみる",
+    "description": "スピッツ｜幻想的な歌詞世界が広がる代表曲。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_071_usa",
+    "title": "『U.S.A.』を聴いてみる",
+    "description": "DA PUMP｜一度聴いたら忘れられない高揚感のあるダンスナンバー。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_072_item",
+    "title": "『キセキ』を聴いてみる",
+    "description": "GReeeeN｜結婚式ソングの定番となった感動のバラード。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_073_item",
+    "title": "『遠く遠く』を聴いてみる",
+    "description": "GReeeeN｜前向きな気持ちにさせてくれる応援ソング。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_074_item",
+    "title": "『会いたかった』を聴いてみる",
+    "description": "AKB48｜グループの原点となった代表曲。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_075_item",
+    "title": "『フライングゲット』を聴いてみる",
+    "description": "AKB48｜軽快なテンポで気分が上がるアイドルソング。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_076_ryusei",
+    "title": "『R.Y.U.S.E.I.』を聴いてみる",
+    "description": "三代目 J Soul Brothers｜ダンスと歌唱が融合した疾走感あるナンバー。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_077_choochootrain",
+    "title": "『Choo Choo TRAIN』を聴いてみる",
+    "description": "ZOO｜イントロだけで盛り上がる定番の一曲。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_078_item",
+    "title": "『ただ君に晴れ』を聴いてみる",
+    "description": "ヨルシカ｜透明感のあるサウンドが印象的な一曲。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_079_item",
+    "title": "『花に亡霊』を聴いてみる",
+    "description": "ヨルシカ｜映画主題歌としても知られる幻想的な楽曲。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_080_item",
+    "title": "『だから僕は音楽を辞めた』を聴いてみる",
+    "description": "ヨルシカ｜疾走感のあるロックサウンドが魅力の一曲。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_081_overdose",
+    "title": "『Overdose』を聴いてみる",
+    "description": "なとり｜中毒性のあるメロディが話題になった楽曲。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_082_item",
+    "title": "『ドライフラワー』を聴いてみる",
+    "description": "優里｜切ない別れを描いた大ヒットバラード。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_083_item",
+    "title": "『猫』を聴いてみる",
+    "description": "DISH//｜軽快なリズムで口ずさみたくなる一曲。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_084_item",
+    "title": "『突然』を聴いてみる",
+    "description": "Da-iCE｜テンポの良さで気分が切り替わるポップナンバー。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_085_item",
+    "title": "『紅蓮華』を聴いてみる",
+    "description": "LiSA｜アニメ主題歌として広く知られる疾走感のある一曲。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_086_item",
+    "title": "『ゴーゴー幽霊船』を聴いてみる",
+    "description": "米津玄師｜独特な世界観に引き込まれる一曲。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_087_item",
+    "title": "『香水』を聴いてみる",
+    "description": "瑛人｜シンプルな歌詞とメロディが中毒的な大ヒット曲。",
+    "category": "music",
+    "tags": [
+      "ポップス"
+    ],
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_088_georgiaonmymind",
+    "title": "『Georgia on My Mind』を聴いてみる",
+    "description": "Ray Charles｜深みのある歌声が心にしみるスタンダード。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_089_whatawonderfulworld",
+    "title": "『What a Wonderful World』を聴いてみる",
+    "description": "Louis Armstrong｜しゃがれ声が温かい、世界的に愛される名曲。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_090_bodyandsoul",
+    "title": "『Body and Soul』を聴いてみる",
+    "description": "Coleman Hawkins｜サックスの表現力が際立つバラード。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_091_allofme",
+    "title": "『All of Me』を聴いてみる",
+    "description": "Billie Holiday｜切ない歌声が印象的なジャズスタンダード。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_092_cheektocheek",
+    "title": "『Cheek to Cheek』を聴いてみる",
+    "description": "Ella Fitzgerald｜軽やかなスウィング感が心地よい定番曲。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_093_thegirlfromipanema",
+    "title": "『The Girl from Ipanema』を聴いてみる",
+    "description": "Stan Getz & Joao Gilberto｜ボサノヴァの代表曲、爽やかな午後に合う。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_094_misty",
+    "title": "『Misty』を聴いてみる",
+    "description": "Erroll Garner｜ロマンティックなピアノが印象的な名曲。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_095_autumninnewyork",
+    "title": "『Autumn in New York』を聴いてみる",
+    "description": "Billie Holiday｜秋の街を思わせるしっとりとした一曲。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_096_stardust",
+    "title": "『Stardust』を聴いてみる",
+    "description": "Hoagy Carmichael｜ジャズスタンダードの中でも特に有名な名曲。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_097_inasentimentalmood",
+    "title": "『In a Sentimental Mood』を聴いてみる",
+    "description": "Duke Ellington & John Coltrane｜2人の巨匠が奏でる甘美な一曲。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_098_taketheatrain",
+    "title": "『Take the A Train』を聴いてみる",
+    "description": "Duke Ellington｜ビッグバンドジャズを代表する軽快な名曲。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_099_caravan",
+    "title": "『Caravan』を聴いてみる",
+    "description": "Duke Ellington｜エキゾチックなリズムが印象的な一曲。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_100_moodindigo",
+    "title": "『Mood Indigo』を聴いてみる",
+    "description": "Duke Ellington｜物憂げな雰囲気が漂うムーディーな一曲。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_101_straightnochaser",
+    "title": "『Straight, No Chaser』を聴いてみる",
+    "description": "Thelonious Monk｜独特なリズム感が癖になる一曲。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_102_wellyouneednt",
+    "title": "『Well You Needn't』を聴いてみる",
+    "description": "Thelonious Monk｜ユーモラスなメロディラインが特徴的。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_103_bagsgroove",
+    "title": "『Bags' Groove』を聴いてみる",
+    "description": "Miles Davis｜リラックスした雰囲気のブルース色の強い一曲。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "estimated_minutes": 6,
+    "weight": 1.0
+  },
+  {
+    "id": "music_104_freddiefreeloader",
+    "title": "『Freddie Freeloader』を聴いてみる",
+    "description": "Miles Davis｜名盤『Kind of Blue』収録の軽快な一曲。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "estimated_minutes": 6,
+    "weight": 1.0
+  },
+  {
+    "id": "music_105_allblues",
+    "title": "『All Blues』を聴いてみる",
+    "description": "Miles Davis｜モーダルジャズの魅力が詰まった一曲。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "estimated_minutes": 7,
+    "weight": 1.0
+  },
+  {
+    "id": "music_106_bluetrain",
+    "title": "『Blue Train』を聴いてみる",
+    "description": "John Coltrane｜ブルースフィーリング溢れる代表曲。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "estimated_minutes": 6,
+    "weight": 1.0
+  },
+  {
+    "id": "music_107_giantsteps",
+    "title": "『Giant Steps』を聴いてみる",
+    "description": "John Coltrane｜複雑なコード進行が有名な革新的な一曲。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_108_naima",
+    "title": "『Naima』を聴いてみる",
+    "description": "John Coltrane｜妻に捧げた美しいバラード。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_109_cantaloupeisland",
+    "title": "『Cantaloupe Island』を聴いてみる",
+    "description": "Herbie Hancock｜クールなピアノリフが印象的な一曲。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_110_watermelonman",
+    "title": "『Watermelon Man』を聴いてみる",
+    "description": "Herbie Hancock｜ファンキーなノリが心地よい一曲。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "estimated_minutes": 6,
+    "weight": 1.0
+  },
+  {
+    "id": "music_111_chameleon",
+    "title": "『Chameleon』を聴いてみる",
+    "description": "Herbie Hancock｜フュージョンの名曲、グルーヴ感抜群。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "estimated_minutes": 8,
+    "weight": 1.0
+  },
+  {
+    "id": "music_112_songformyfather",
+    "title": "『Song for My Father』を聴いてみる",
+    "description": "Horace Silver｜ラテンのリズムを取り入れた温かい一曲。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "estimated_minutes": 6,
+    "weight": 1.0
+  },
+  {
+    "id": "music_113_moanin",
+    "title": "『Moanin'』を聴いてみる",
+    "description": "Art Blakey｜ゴスペルフィーリング溢れるハードバップの名曲。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "estimated_minutes": 6,
+    "weight": 1.0
+  },
+  {
+    "id": "music_114_singsingsing",
+    "title": "『Sing, Sing, Sing』を聴いてみる",
+    "description": "Benny Goodman｜スウィングジャズを象徴する熱狂的な一曲。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "estimated_minutes": 8,
+    "weight": 1.0
+  },
+  {
+    "id": "music_115_inthemood",
+    "title": "『In the Mood』を聴いてみる",
+    "description": "Glenn Miller｜ビッグバンドジャズの代表的な陽気な一曲。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_116_moonlightserenade",
+    "title": "『Moonlight Serenade』を聴いてみる",
+    "description": "Glenn Miller｜甘くロマンティックな夜のスタンダード。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_117_stthomas",
+    "title": "『St. Thomas』を聴いてみる",
+    "description": "Sonny Rollins｜カリプソ調の明るいリズムが魅力。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_118_bluebossa",
+    "title": "『Blue Bossa』を聴いてみる",
+    "description": "Kenny Dorham｜ボサノヴァとハードバップが融合した一曲。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_119_desafinado",
+    "title": "『Desafinado』を聴いてみる",
+    "description": "Antonio Carlos Jobim｜ボサノヴァを世界に広めた名曲。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_120_corcovado",
+    "title": "『Corcovado』を聴いてみる",
+    "description": "Antonio Carlos Jobim｜静かな夜にぴったりの穏やかな一曲。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_121_feelssogood",
+    "title": "『Feels So Good』を聴いてみる",
+    "description": "Chuck Mangione｜フリューゲルホルンの音色が心地よい一曲。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "estimated_minutes": 6,
+    "weight": 1.0
+  },
+  {
+    "id": "music_122_chelseabridge",
+    "title": "『Chelsea Bridge』を聴いてみる",
+    "description": "Billy Strayhorn｜洗練された和声美が魅力の一曲。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_123_nardis",
+    "title": "『Nardis』を聴いてみる",
+    "description": "Bill Evans｜幻想的な雰囲気を持つモード・ジャズの一曲。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "estimated_minutes": 6,
+    "weight": 1.0
+  },
+  {
+    "id": "music_124_conalma",
+    "title": "『Con Alma』を聴いてみる",
+    "description": "Dizzy Gillespie｜ラテンの香り漂うビバップの一曲。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_125_roadsong",
+    "title": "『Road Song』を聴いてみる",
+    "description": "Wes Montgomery｜温かみのあるギターサウンドが特徴の一曲。",
+    "category": "music",
+    "tags": [
+      "ジャズ"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_126_51",
+    "title": "『交響曲第5番「運命」第1楽章』を聴いてみる",
+    "description": "ベートーヴェン｜力強い運命の動機で始まる名曲中の名曲。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "estimated_minutes": 7,
+    "weight": 1.0
+  },
+  {
+    "id": "music_127_9",
+    "title": "『交響曲第9番「歓喜の歌」』を聴いてみる",
+    "description": "ベートーヴェン｜年末の風物詩としても知られる合唱付きの大作。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "estimated_minutes": 8,
+    "weight": 1.0
+  },
+  {
+    "id": "music_128_item",
+    "title": "『エリーゼのために』を聴いてみる",
+    "description": "ベートーヴェン｜ピアノ小品として世界的に親しまれる名曲。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_129_2",
+    "title": "『ピアノソナタ「悲愴」第2楽章』を聴いてみる",
+    "description": "ベートーヴェン｜静かで美しい旋律が心に染みる一曲。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_130_item",
+    "title": "『トルコ行進曲』を聴いてみる",
+    "description": "モーツァルト｜軽快で誰もが知る親しみやすい一曲。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_131_1",
+    "title": "『アイネ・クライネ・ナハトムジーク 第1楽章』を聴いてみる",
+    "description": "モーツァルト｜弦楽合奏の爽やかな響きが心地よい一曲。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "estimated_minutes": 6,
+    "weight": 1.0
+  },
+  {
+    "id": "music_132_lacrimosa",
+    "title": "『レクイエム「Lacrimosa」』を聴いてみる",
+    "description": "モーツァルト｜荘厳で美しい、最晩年に作られた鎮魂曲。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_133_item",
+    "title": "『歌劇「魔笛」より 夜の女王のアリア』を聴いてみる",
+    "description": "モーツァルト｜超絶技巧のソプラノが際立つ名アリア。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_134_item",
+    "title": "『セレナーデ ニ短調』を聴いてみる",
+    "description": "シューベルト｜甘く切ないメロディが印象的な歌曲。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_135_71",
+    "title": "『交響曲第7番「未完成」第1楽章』を聴いてみる",
+    "description": "シューベルト｜未完成ながら深い余韻を残す名曲。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "estimated_minutes": 8,
+    "weight": 1.0
+  },
+  {
+    "id": "music_136_item",
+    "title": "『喜歌劇「天国と地獄」序曲』を聴いてみる",
+    "description": "オッフェンバック｜運動会でもおなじみの軽快な一曲。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_137_1",
+    "title": "『威風堂々 第1番』を聴いてみる",
+    "description": "エルガー｜卒業式でもよく使われる荘厳な行進曲。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_138_item",
+    "title": "『バレエ組曲「くるみ割り人形」花のワルツ』を聴いてみる",
+    "description": "チャイコフスキー｜華やかで優雅なワルツの名曲。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "estimated_minutes": 6,
+    "weight": 1.0
+  },
+  {
+    "id": "music_139_item",
+    "title": "『バレエ組曲「白鳥の湖」情景』を聴いてみる",
+    "description": "チャイコフスキー｜オーボエの旋律が印象的な幻想的な一曲。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_140_1812",
+    "title": "『序曲「1812年」』を聴いてみる",
+    "description": "チャイコフスキー｜大砲の音まで登場する壮大な祝祭序曲。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_141_1",
+    "title": "『弦楽セレナーデ 第1楽章』を聴いてみる",
+    "description": "チャイコフスキー｜弦楽器の温かい響きに包まれる名曲。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "estimated_minutes": 9,
+    "weight": 1.0
+  },
+  {
+    "id": "music_142_5",
+    "title": "『ハンガリー舞曲第5番』を聴いてみる",
+    "description": "ブラームス｜情熱的でテンポの変化が楽しい一曲。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_143_31",
+    "title": "『交響曲第3番「英雄」第1楽章』を聴いてみる",
+    "description": "ベートーヴェン｜古典派からロマン派への転換を告げた大曲。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "estimated_minutes": 14,
+    "weight": 1.0
+  },
+  {
+    "id": "music_144_item",
+    "title": "『子守歌』を聴いてみる",
+    "description": "ブラームス｜世界で最も有名な子守歌のひとつ。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "estimated_minutes": 2,
+    "weight": 1.0
+  },
+  {
+    "id": "music_145_item",
+    "title": "『主よ、人の望みの喜びよ』を聴いてみる",
+    "description": "バッハ｜穏やかで祈りに満ちたコラール曲。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_146_item",
+    "title": "『トッカータとフーガ ニ短調』を聴いてみる",
+    "description": "バッハ｜パイプオルガンの荘厳な響きが印象的。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "estimated_minutes": 9,
+    "weight": 1.0
+  },
+  {
+    "id": "music_147_3",
+    "title": "『管弦楽組曲第3番「エア」』を聴いてみる",
+    "description": "バッハ｜「G線上のアリア」の原曲として知られる名曲。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "estimated_minutes": 6,
+    "weight": 1.0
+  },
+  {
+    "id": "music_148_item",
+    "title": "『水上の音楽』を聴いてみる",
+    "description": "ヘンデル｜宮廷の舟遊びのために書かれた優雅な組曲。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_149_item",
+    "title": "『メサイア「ハレルヤ・コーラス」』を聴いてみる",
+    "description": "ヘンデル｜合唱曲として世界的に有名な祝祭的な一曲。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_150_item",
+    "title": "『ボレロ』を聴いてみる",
+    "description": "ラヴェル｜同じリズムが徐々に盛り上がっていく名曲。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  },
+  {
+    "id": "music_151_10",
+    "title": "『スラブ舞曲第10番』を聴いてみる",
+    "description": "ドヴォルザーク｜哀愁を帯びた美しい旋律が魅力の一曲。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_152_92",
+    "title": "『交響曲第9番「新世界より」第2楽章』を聴いてみる",
+    "description": "ドヴォルザーク｜「家路」としても知られる望郷のメロディ。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_153_item",
+    "title": "『組曲「惑星」より 木星』を聴いてみる",
+    "description": "ホルスト｜壮大でスケールの大きいオーケストラ曲。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "estimated_minutes": 8,
+    "weight": 1.0
+  },
+  {
+    "id": "music_154_item",
+    "title": "『交響詩「モルダウ」』を聴いてみる",
+    "description": "スメタナ｜チェコの大河を描いた雄大な名曲。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "estimated_minutes": 12,
+    "weight": 1.0
+  },
+  {
+    "id": "music_155_item",
+    "title": "『「ペール・ギュント」より 朝』を聴いてみる",
+    "description": "グリーグ｜静かな夜明けを思わせる穏やかな一曲。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_156_item",
+    "title": "『組曲「展覧会の絵」より キエフの大門』を聴いてみる",
+    "description": "ムソルグスキー｜壮大なフィナーレを飾る力強い一曲。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "estimated_minutes": 6,
+    "weight": 1.0
+  },
+  {
+    "id": "music_157_item",
+    "title": "『幻想即興曲』を聴いてみる",
+    "description": "ショパン｜軽やかで華麗なピアノ曲の名作。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_158_item",
+    "title": "『英雄ポロネーズ』を聴いてみる",
+    "description": "ショパン｜力強く堂々としたピアノ独奏曲。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "estimated_minutes": 6,
+    "weight": 1.0
+  },
+  {
+    "id": "music_159_item",
+    "title": "『前奏曲「雨だれ」』を聴いてみる",
+    "description": "ショパン｜静かな雨音を思わせる叙情的な一曲。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_160_5",
+    "title": "『マズルカ第5番』を聴いてみる",
+    "description": "ショパン｜ポーランドの民族舞曲に基づく愛らしい一曲。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_161_item",
+    "title": "『ラ・カンパネラ』を聴いてみる",
+    "description": "リスト｜超絶技巧で知られる華麗なピアノ曲。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_162_3",
+    "title": "『愛の夢 第3番』を聴いてみる",
+    "description": "リスト｜ロマンティックな旋律が美しいピアノ曲。",
+    "category": "music",
+    "tags": [
+      "クラシック"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_163_bohemianrhapsody",
+    "title": "『Bohemian Rhapsody』を聴いてみる",
+    "description": "Queen｜複数の楽曲構成が特徴的な伝説的な一曲。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "estimated_minutes": 6,
+    "weight": 1.0
+  },
+  {
+    "id": "music_164_billiejean",
+    "title": "『Billie Jean』を聴いてみる",
+    "description": "Michael Jackson｜イントロのベースラインだけで盛り上がる名曲。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_165_hotelcalifornia",
+    "title": "『Hotel California』を聴いてみる",
+    "description": "Eagles｜哀愁漂うギターソロが印象的なロックの名曲。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "estimated_minutes": 6,
+    "weight": 1.0
+  },
+  {
+    "id": "music_166_imagine",
+    "title": "『Imagine』を聴いてみる",
+    "description": "John Lennon｜平和への願いを込めたシンプルで美しい一曲。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_167_letitbe",
+    "title": "『Let It Be』を聴いてみる",
+    "description": "The Beatles｜穏やかに背中を押してくれる不朽の名曲。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_168_heyjude",
+    "title": "『Hey Jude』を聴いてみる",
+    "description": "The Beatles｜みんなで口ずさみたくなる長編の名曲。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "estimated_minutes": 7,
+    "weight": 1.0
+  },
+  {
+    "id": "music_169_yesterday",
+    "title": "『Yesterday』を聴いてみる",
+    "description": "The Beatles｜シンプルな旋律が胸に響くバラード。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "estimated_minutes": 2,
+    "weight": 1.0
+  },
+  {
+    "id": "music_170_stairwaytoheaven",
+    "title": "『Stairway to Heaven』を聴いてみる",
+    "description": "Led Zeppelin｜ロック史に残る壮大な構成の名曲。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "estimated_minutes": 8,
+    "weight": 1.0
+  },
+  {
+    "id": "music_171_sweetchildomine",
+    "title": "『Sweet Child O' Mine』を聴いてみる",
+    "description": "Guns N' Roses｜印象的なギターリフから始まるロックの定番。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "estimated_minutes": 6,
+    "weight": 1.0
+  },
+  {
+    "id": "music_172_wonderwall",
+    "title": "『Wonderwall』を聴いてみる",
+    "description": "Oasis｜90年代を代表する切なさのあるロックナンバー。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_173_dontlookbackinanger",
+    "title": "『Don't Look Back in Anger』を聴いてみる",
+    "description": "Oasis｜大合唱が定番になっているアンセム。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_174_thinkingoutloud",
+    "title": "『Thinking Out Loud』を聴いてみる",
+    "description": "Ed Sheeran｜結婚式でも人気の温かいラブソング。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_175_photograph",
+    "title": "『Photograph』を聴いてみる",
+    "description": "Ed Sheeran｜思い出を大切にしたい気持ちに寄り添う一曲。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_176_watermelonsugar",
+    "title": "『Watermelon Sugar』を聴いてみる",
+    "description": "Harry Styles｜夏らしい爽やかなポップナンバー。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_177_asitwas",
+    "title": "『As It Was』を聴いてみる",
+    "description": "Harry Styles｜シンセポップ調の中毒性あるヒット曲。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_178_levitating",
+    "title": "『Levitating』を聴いてみる",
+    "description": "Dua Lipa｜ディスコ調のダンサブルな一曲。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_179_dontstartnow",
+    "title": "『Don't Start Now』を聴いてみる",
+    "description": "Dua Lipa｜ベースラインが印象的なダンスポップ。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_180_badguy",
+    "title": "『Bad Guy』を聴いてみる",
+    "description": "Billie Eilish｜ミニマルなビートが癖になる一曲。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_181_happierthanever",
+    "title": "『Happier Than Ever』を聴いてみる",
+    "description": "Billie Eilish｜静と動が入れ替わる構成が印象的な一曲。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_182_circles",
+    "title": "『Circles』を聴いてみる",
+    "description": "Post Malone｜浮遊感のあるメロディが心地よい一曲。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_183_sunflower",
+    "title": "『Sunflower』を聴いてみる",
+    "description": "Post Malone & Swae Lee｜映画「スパイダーマン」主題歌としても有名。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_184_shakeitoff",
+    "title": "『Shake It Off』を聴いてみる",
+    "description": "Taylor Swift｜前向きな気持ちにさせてくれるポップナンバー。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_185_lovestory",
+    "title": "『Love Story』を聴いてみる",
+    "description": "Taylor Swift｜おとぎ話のような世界観が魅力の一曲。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_186_blankspace",
+    "title": "『Blank Space』を聴いてみる",
+    "description": "Taylor Swift｜キャッチーなサビが耳に残る一曲。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_187_uptowngirl",
+    "title": "『Uptown Girl』を聴いてみる",
+    "description": "Billy Joel｜軽快なメロディが心を弾ませる定番曲。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_188_pianoman",
+    "title": "『Piano Man』を聴いてみる",
+    "description": "Billy Joel｜バーの情景を描いたストーリー性のある名曲。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_189_iwantitthatway",
+    "title": "『I Want It That Way』を聴いてみる",
+    "description": "Backstreet Boys｜90年代ポップスを代表するハーモニーが魅力の一曲。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_190_umbrella",
+    "title": "『Umbrella』を聴いてみる",
+    "description": "Rihanna｜雨の日をテーマにした大ヒットダンスナンバー。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_191_diamonds",
+    "title": "『Diamonds』を聴いてみる",
+    "description": "Rihanna｜壮大なサビが印象的なバラード。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_192_roar",
+    "title": "『Roar』を聴いてみる",
+    "description": "Katy Perry｜自信を取り戻させてくれる応援ソング。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_193_firework",
+    "title": "『Firework』を聴いてみる",
+    "description": "Katy Perry｜前向きなメッセージが込められたアンセム。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_194_radioactive",
+    "title": "『Radioactive』を聴いてみる",
+    "description": "Imagine Dragons｜重厚なビートが印象的なロックナンバー。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_195_believer",
+    "title": "『Believer』を聴いてみる",
+    "description": "Imagine Dragons｜力強いドラムが特徴的な人気曲。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_196_thunder",
+    "title": "『Thunder』を聴いてみる",
+    "description": "Imagine Dragons｜キャッチーなフレーズが耳に残る一曲。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_197_cantstopthefeeling",
+    "title": "『Can't Stop the Feeling!』を聴いてみる",
+    "description": "Justin Timberlake｜聴くだけで踊りたくなる陽気な一曲。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_198_mrbrightside",
+    "title": "『Mr. Brightside』を聴いてみる",
+    "description": "The Killers｜ライブで大合唱になる定番ロックアンセム。",
+    "category": "music",
+    "tags": [
+      "洋楽"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_199_rewrite",
+    "title": "『リライト』を聴いてみる",
+    "description": "ASIAN KUNG-FU GENERATION｜勢いのあるギターサウンドで気分を切り替えられるロックナンバー。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_200_chiisana_koi_no_uta",
+    "title": "『小さな恋のうた』を聴いてみる",
+    "description": "MONGOL800｜印象的なバンドサウンドとメロディーを楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_201_tentai_kansoku",
+    "title": "『天体観測』を聴いてみる",
+    "description": "BUMP OF CHICKEN｜ライブ感のある演奏が気持ちを前向きにしてくれる一曲。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_202_kanzen_kankaku_dreamer",
+    "title": "『完全感覚Dreamer』を聴いてみる",
+    "description": "ONE OK ROCK｜力強いリズムと歌声が耳に残る定番ロック。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_203_the_beginning",
+    "title": "『The Beginning』を聴いてみる",
+    "description": "ONE OK ROCK｜短い時間でもバンドの熱量を味わえる一曲。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_204_haikei_shonenyo",
+    "title": "『拝啓、少年よ』を聴いてみる",
+    "description": "Hump Back｜勢いのあるギターサウンドで気分を切り替えられるロックナンバー。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_205_shin_takarajima",
+    "title": "『新宝島』を聴いてみる",
+    "description": "サカナクション｜印象的なバンドサウンドとメロディーを楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_206_wakamono_no_subete",
+    "title": "『若者のすべて』を聴いてみる",
+    "description": "フジファブリック｜ライブ感のある演奏が気持ちを前向きにしてくれる一曲。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_207_donten",
+    "title": "『曇天』を聴いてみる",
+    "description": "DOES｜力強いリズムと歌声が耳に残る定番ロック。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_208_shura",
+    "title": "『修羅』を聴いてみる",
+    "description": "DOES｜短い時間でもバンドの熱量を味わえる一曲。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_209_kaze_fukeba_koi",
+    "title": "『風吹けば恋』を聴いてみる",
+    "description": "チャットモンチー｜勢いのあるギターサウンドで気分を切り替えられるロックナンバー。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_210_shangri_la",
+    "title": "『シャングリラ』を聴いてみる",
+    "description": "チャットモンチー｜印象的なバンドサウンドとメロディーを楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_211_sekai_wa_sorewo_ai_to_yobundaze",
+    "title": "『世界はそれを愛と呼ぶんだぜ』を聴いてみる",
+    "description": "サンボマスター｜ライブ感のある演奏が気持ちを前向きにしてくれる一曲。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_212_dekikkonai_wo_yaranakucha",
+    "title": "『できっこないを やらなくちゃ』を聴いてみる",
+    "description": "サンボマスター｜力強いリズムと歌声が耳に残る定番ロック。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_213_naimononedari",
+    "title": "『ないものねだり』を聴いてみる",
+    "description": "KANA-BOON｜短い時間でもバンドの熱量を味わえる一曲。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_214_silhouette",
+    "title": "『シルエット』を聴いてみる",
+    "description": "KANA-BOON｜勢いのあるギターサウンドで気分を切り替えられるロックナンバー。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_215_odorloop",
+    "title": "『オドループ』を聴いてみる",
+    "description": "フレデリック｜印象的なバンドサウンドとメロディーを楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_216_cry_baby",
+    "title": "『Cry Baby』を聴いてみる",
+    "description": "Official髭男dism｜ライブ感のある演奏が気持ちを前向きにしてくれる一曲。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_217_inferno",
+    "title": "『インフェルノ』を聴いてみる",
+    "description": "Mrs. GREEN APPLE｜力強いリズムと歌声が耳に残る定番ロック。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_218_ao_to_natsu",
+    "title": "『青と夏』を聴いてみる",
+    "description": "Mrs. GREEN APPLE｜短い時間でもバンドの熱量を味わえる一曲。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_219_peace_sign",
+    "title": "『ピースサイン』を聴いてみる",
+    "description": "米津玄師｜勢いのあるギターサウンドで気分を切り替えられるロックナンバー。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_220_kick_back",
+    "title": "『KICK BACK』を聴いてみる",
+    "description": "米津玄師｜印象的なバンドサウンドとメロディーを楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_221_gyakumu",
+    "title": "『逆夢』を聴いてみる",
+    "description": "King Gnu｜ライブ感のある演奏が気持ちを前向きにしてくれる一曲。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_222_teenager_forever",
+    "title": "『Teenager Forever』を聴いてみる",
+    "description": "King Gnu｜力強いリズムと歌声が耳に残る定番ロック。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_223_bakuchi_dancer",
+    "title": "『バクチ・ダンサー』を聴いてみる",
+    "description": "DOES｜短い時間でもバンドの熱量を味わえる一曲。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_224_sobakasu",
+    "title": "『そばかす』を聴いてみる",
+    "description": "JUDY AND MARY｜勢いのあるギターサウンドで気分を切り替えられるロックナンバー。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_225_over_drive",
+    "title": "『Over Drive』を聴いてみる",
+    "description": "JUDY AND MARY｜印象的なバンドサウンドとメロディーを楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_226_glamorous_sky",
+    "title": "『GLAMOROUS SKY』を聴いてみる",
+    "description": "NANA starring MIKA NAKASHIMA｜ライブ感のある演奏が気持ちを前向きにしてくれる一曲。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_227_ready_steady_go",
+    "title": "『READY STEADY GO』を聴いてみる",
+    "description": "L'Arc-en-Ciel｜力強いリズムと歌声が耳に残る定番ロック。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_228_drivers_high",
+    "title": "『Driver's High』を聴いてみる",
+    "description": "L'Arc-en-Ciel｜短い時間でもバンドの熱量を味わえる一曲。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_229_kurenai",
+    "title": "『紅』を聴いてみる",
+    "description": "X JAPAN｜勢いのあるギターサウンドで気分を切り替えられるロックナンバー。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_230_rusty_nail",
+    "title": "『Rusty Nail』を聴いてみる",
+    "description": "X JAPAN｜印象的なバンドサウンドとメロディーを楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_231_marionette",
+    "title": "『MARIONETTE』を聴いてみる",
+    "description": "BOØWY｜ライブ感のある演奏が気持ちを前向きにしてくれる一曲。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_232_dreamin",
+    "title": "『DREAMIN'』を聴いてみる",
+    "description": "BOØWY｜力強いリズムと歌声が耳に残る定番ロック。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_233_train_train",
+    "title": "『TRAIN-TRAIN』を聴いてみる",
+    "description": "THE BLUE HEARTS｜短い時間でもバンドの熱量を味わえる一曲。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_234_linda_linda",
+    "title": "『リンダ リンダ』を聴いてみる",
+    "description": "THE BLUE HEARTS｜勢いのあるギターサウンドで気分を切り替えられるロックナンバー。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_235_owarinaki_tabi",
+    "title": "『終わりなき旅』を聴いてみる",
+    "description": "Mr.Children｜印象的なバンドサウンドとメロディーを楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "estimated_minutes": 7,
+    "weight": 1.0
+  },
+  {
+    "id": "music_236_namonaki_uta",
+    "title": "『名もなき詩』を聴いてみる",
+    "description": "Mr.Children｜ライブ感のある演奏が気持ちを前向きにしてくれる一曲。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_237_banzai",
+    "title": "『バンザイ～好きでよかった～』を聴いてみる",
+    "description": "ウルフルズ｜力強いリズムと歌声が耳に残る定番ロック。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_238_guts_daze",
+    "title": "『ガッツだぜ!!』を聴いてみる",
+    "description": "ウルフルズ｜短い時間でもバンドの熱量を味わえる一曲。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_239_wherever_you_are",
+    "title": "『Wherever you are』を聴いてみる",
+    "description": "ONE OK ROCK｜勢いのあるギターサウンドで気分を切り替えられるロックナンバー。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_240_numb",
+    "title": "『Numb』を聴いてみる",
+    "description": "Linkin Park｜印象的なバンドサウンドとメロディーを楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_241_in_the_end",
+    "title": "『In the End』を聴いてみる",
+    "description": "Linkin Park｜ライブ感のある演奏が気持ちを前向きにしてくれる一曲。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_242_smells_like_teen_spirit",
+    "title": "『Smells Like Teen Spirit』を聴いてみる",
+    "description": "Nirvana｜力強いリズムと歌声が耳に残る定番ロック。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_243_basket_case",
+    "title": "『Basket Case』を聴いてみる",
+    "description": "Green Day｜短い時間でもバンドの熱量を味わえる一曲。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_244_seven_nation_army",
+    "title": "『Seven Nation Army』を聴いてみる",
+    "description": "The White Stripes｜勢いのあるギターサウンドで気分を切り替えられるロックナンバー。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_245_are_you_gonna_be_my_girl",
+    "title": "『Are You Gonna Be My Girl』を聴いてみる",
+    "description": "Jet｜印象的なバンドサウンドとメロディーを楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_246_we_will_rock_you",
+    "title": "『We Will Rock You』を聴いてみる",
+    "description": "Queen｜ライブ感のある演奏が気持ちを前向きにしてくれる一曲。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "estimated_minutes": 2,
+    "weight": 1.0
+  },
+  {
+    "id": "music_247_back_in_black",
+    "title": "『Back in Black』を聴いてみる",
+    "description": "AC/DC｜力強いリズムと歌声が耳に残る定番ロック。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_248_paint_it_black",
+    "title": "『Paint It, Black』を聴いてみる",
+    "description": "The Rolling Stones｜短い時間でもバンドの熱量を味わえる一曲。",
+    "category": "music",
+    "tags": [
+      "ロック"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_249_nobishiro",
+    "title": "『のびしろ』を聴いてみる",
+    "description": "Creepy Nuts｜言葉のリズムとビートの重なりを楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_250_bling_bang_bang_born",
+    "title": "『Bling-Bang-Bang-Born』を聴いてみる",
+    "description": "Creepy Nuts｜グルーヴのあるトラックが自然に気分を切り替えてくれる一曲。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_251_otonoke",
+    "title": "『オトノケ』を聴いてみる",
+    "description": "Creepy Nuts｜ラップや歌声の表情をじっくり味わえるナンバー。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_252_marche",
+    "title": "『マルシェ』を聴いてみる",
+    "description": "KICK THE CAN CREW｜印象的なビートとフロウが耳に残る一曲。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_253_rakuen_baby",
+    "title": "『楽園ベイベー』を聴いてみる",
+    "description": "RIP SLYME｜心地よいリズムに身を任せて聴ける一曲。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_254_joint",
+    "title": "『JOINT』を聴いてみる",
+    "description": "RIP SLYME｜言葉のリズムとビートの重なりを楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_255_grateful_days",
+    "title": "『Grateful Days』を聴いてみる",
+    "description": "Dragon Ash｜グルーヴのあるトラックが自然に気分を切り替えてくれる一曲。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_256_life_goes_on_dragon_ash",
+    "title": "『Life goes on』を聴いてみる",
+    "description": "Dragon Ash｜ラップや歌声の表情をじっくり味わえるナンバー。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "estimated_minutes": 6,
+    "weight": 1.0
+  },
+  {
+    "id": "music_257_come_again",
+    "title": "『come again』を聴いてみる",
+    "description": "m-flo｜印象的なビートとフロウが耳に残る一曲。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "estimated_minutes": 6,
+    "weight": 1.0
+  },
+  {
+    "id": "music_258_gila_gila",
+    "title": "『GILA GILA』を聴いてみる",
+    "description": "Awich｜心地よいリズムに身を任せて聴ける一曲。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_259_kawasaki_drift",
+    "title": "『Kawasaki Drift』を聴いてみる",
+    "description": "BAD HOP｜言葉のリズムとビートの重なりを楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_260_flying_b",
+    "title": "『Flying B』を聴いてみる",
+    "description": "AK-69｜グルーヴのあるトラックが自然に気分を切り替えてくれる一曲。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_261_otoiro",
+    "title": "『音色』を聴いてみる",
+    "description": "KREVA｜ラップや歌声の表情をじっくり味わえるナンバー。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_262_issai_gassai",
+    "title": "『イッサイガッサイ』を聴いてみる",
+    "description": "KREVA｜印象的なビートとフロウが耳に残る一曲。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_263_bboy_ism",
+    "title": "『B-BOYイズム』を聴いてみる",
+    "description": "RHYMESTER｜心地よいリズムに身を任せて聴ける一曲。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_264_konya_wa_boogie_back",
+    "title": "『今夜はブギー・バック』を聴いてみる",
+    "description": "小沢健二 featuring スチャダラパー｜言葉のリズムとビートの重なりを楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "estimated_minutes": 6,
+    "weight": 1.0
+  },
+  {
+    "id": "music_265_time_machine_ni_notte",
+    "title": "『タイムマシーンにのって』を聴いてみる",
+    "description": "PUNPEE｜グルーヴのあるトラックが自然に気分を切り替えてくれる一曲。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_266_good_vibes_only",
+    "title": "『Good Vibes Only』を聴いてみる",
+    "description": "SALU｜ラップや歌声の表情をじっくり味わえるナンバー。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_267_cho_wavy_de_gomenne",
+    "title": "『Cho Wavy De Gomenne』を聴いてみる",
+    "description": "JP THE WAVY｜印象的なビートとフロウが耳に残る一曲。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_268_never_grow_up",
+    "title": "『Never Grow Up』を聴いてみる",
+    "description": "ちゃんみな｜心地よいリズムに身を任せて聴ける一曲。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_269_wonderland_iri",
+    "title": "『Wonderland』を聴いてみる",
+    "description": "iri｜言葉のリズムとビートの重なりを楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_270_do_well",
+    "title": "『Do Well』を聴いてみる",
+    "description": "SIRUP｜グルーヴのあるトラックが自然に気分を切り替えてくれる一曲。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_271_new_era_nulbarich",
+    "title": "『NEW ERA』を聴いてみる",
+    "description": "Nulbarich｜ラップや歌声の表情をじっくり味わえるナンバー。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_272_stay_tune_suchmos",
+    "title": "『STAY TUNE』を聴いてみる",
+    "description": "Suchmos｜印象的なビートとフロウが耳に残る一曲。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_273_addicted_to_you",
+    "title": "『Addicted To You』を聴いてみる",
+    "description": "宇多田ヒカル｜心地よいリズムに身を任せて聴ける一曲。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_274_jonetsu_ua",
+    "title": "『情熱』を聴いてみる",
+    "description": "UA｜言葉のリズムとビートの重なりを楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_275_tsutsumikomu_youni",
+    "title": "『つつみ込むように…』を聴いてみる",
+    "description": "MISIA｜グルーヴのあるトラックが自然に気分を切り替えてくれる一曲。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_276_story_ai",
+    "title": "『Story』を聴いてみる",
+    "description": "AI｜ラップや歌声の表情をじっくり味わえるナンバー。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_277_home_shimizu",
+    "title": "『HOME』を聴いてみる",
+    "description": "清水翔太｜印象的なビートとフロウが耳に残る一曲。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_278_rakuen_hirai",
+    "title": "『楽園』を聴いてみる",
+    "description": "平井堅｜心地よいリズムに身を任せて聴ける一曲。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_279_luv_sic_part3",
+    "title": "『Luv(sic) Part 3』を聴いてみる",
+    "description": "Nujabes feat. Shing02｜言葉のリズムとビートの重なりを楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_280_humble",
+    "title": "『HUMBLE.』を聴いてみる",
+    "description": "Kendrick Lamar｜グルーヴのあるトラックが自然に気分を切り替えてくれる一曲。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_281_lose_yourself",
+    "title": "『Lose Yourself』を聴いてみる",
+    "description": "Eminem｜ラップや歌声の表情をじっくり味わえるナンバー。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_282_still_dre",
+    "title": "『Still D.R.E.』を聴いてみる",
+    "description": "Dr. Dre feat. Snoop Dogg｜印象的なビートとフロウが耳に残る一曲。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_283_california_love",
+    "title": "『California Love』を聴いてみる",
+    "description": "2Pac feat. Dr. Dre｜心地よいリズムに身を任せて聴ける一曲。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_284_juicy",
+    "title": "『Juicy』を聴いてみる",
+    "description": "The Notorious B.I.G.｜言葉のリズムとビートの重なりを楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_285_ny_state_of_mind",
+    "title": "『N.Y. State of Mind』を聴いてみる",
+    "description": "Nas｜グルーヴのあるトラックが自然に気分を切り替えてくれる一曲。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_286_empire_state_of_mind",
+    "title": "『Empire State of Mind』を聴いてみる",
+    "description": "JAY-Z feat. Alicia Keys｜ラップや歌声の表情をじっくり味わえるナンバー。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_287_stronger_kanye",
+    "title": "『Stronger』を聴いてみる",
+    "description": "Kanye West｜印象的なビートとフロウが耳に残る一曲。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_288_sicko_mode",
+    "title": "『SICKO MODE』を聴いてみる",
+    "description": "Travis Scott｜心地よいリズムに身を任せて聴ける一曲。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_289_rockstar_post_malone",
+    "title": "『rockstar』を聴いてみる",
+    "description": "Post Malone feat. 21 Savage｜言葉のリズムとビートの重なりを楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_290_hey_ya",
+    "title": "『Hey Ya!』を聴いてみる",
+    "description": "Outkast｜グルーヴのあるトラックが自然に気分を切り替えてくれる一曲。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_291_doo_wop",
+    "title": "『Doo Wop (That Thing)』を聴いてみる",
+    "description": "Ms. Lauryn Hill｜ラップや歌声の表情をじっくり味わえるナンバー。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_292_if_i_aint_got_you",
+    "title": "『If I Ain't Got You』を聴いてみる",
+    "description": "Alicia Keys｜印象的なビートとフロウが耳に残る一曲。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_293_crazy_in_love",
+    "title": "『Crazy in Love』を聴いてみる",
+    "description": "Beyoncé feat. JAY-Z｜心地よいリズムに身を任せて聴ける一曲。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_294_yeah_usher",
+    "title": "『Yeah!』を聴いてみる",
+    "description": "Usher feat. Lil Jon & Ludacris｜言葉のリズムとビートの重なりを楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_295_thinkin_bout_you",
+    "title": "『Thinkin Bout You』を聴いてみる",
+    "description": "Frank Ocean｜グルーヴのあるトラックが自然に気分を切り替えてくれる一曲。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_296_kill_bill",
+    "title": "『Kill Bill』を聴いてみる",
+    "description": "SZA｜ラップや歌声の表情をじっくり味わえるナンバー。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_297_starboy",
+    "title": "『Starboy』を聴いてみる",
+    "description": "The Weeknd feat. Daft Punk｜印象的なビートとフロウが耳に残る一曲。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_298_24k_magic",
+    "title": "『24K Magic』を聴いてみる",
+    "description": "Bruno Mars｜心地よいリズムに身を任せて聴ける一曲。",
+    "category": "music",
+    "tags": [
+      "ヒップホップ・R&B"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_299_zankoku_na_tenshi_no_these",
+    "title": "『残酷な天使のテーゼ』を聴いてみる",
+    "description": "高橋洋子｜作品の世界観を思い出しながら楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_300_tamashii_no_refrain",
+    "title": "『魂のルフラン』を聴いてみる",
+    "description": "高橋洋子｜印象的なメロディーが物語の場面をよみがえらせる一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_301_butter_fly",
+    "title": "『Butter-Fly』を聴いてみる",
+    "description": "和田光司｜アニメやゲームを知らなくても音楽として楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_302_brave_heart",
+    "title": "『brave heart』を聴いてみる",
+    "description": "宮崎歩｜物語への高揚感を短い時間で味わえる一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_303_cha_la_head_cha_la",
+    "title": "『CHA-LA HEAD-CHA-LA』を聴いてみる",
+    "description": "影山ヒロノブ｜作品を彩る歌声や演奏に耳を傾けたい一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_304_we_gotta_power",
+    "title": "『WE GOTTA POWER』を聴いてみる",
+    "description": "影山ヒロノブ｜作品の世界観を思い出しながら楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_305_we_are",
+    "title": "『ウィーアー！』を聴いてみる",
+    "description": "きただにひろし｜印象的なメロディーが物語の場面をよみがえらせる一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_306_believe_folder5",
+    "title": "『Believe』を聴いてみる",
+    "description": "Folder5｜アニメやゲームを知らなくても音楽として楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_307_go_flow",
+    "title": "『GO!!!』を聴いてみる",
+    "description": "FLOW｜物語への高揚感を短い時間で味わえる一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_308_sign_flow",
+    "title": "『Sign』を聴いてみる",
+    "description": "FLOW｜作品を彩る歌声や演奏に耳を傾けたい一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_309_colors_flow",
+    "title": "『COLORS』を聴いてみる",
+    "description": "FLOW｜作品の世界観を思い出しながら楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_310_again_yui",
+    "title": "『again』を聴いてみる",
+    "description": "YUI｜印象的なメロディーが物語の場面をよみがえらせる一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_311_melissa",
+    "title": "『メリッサ』を聴いてみる",
+    "description": "ポルノグラフィティ｜アニメやゲームを知らなくても音楽として楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_312_only_my_railgun",
+    "title": "『only my railgun』を聴いてみる",
+    "description": "fripSide｜物語への高揚感を短い時間で味わえる一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_313_level5_judgelight",
+    "title": "『LEVEL5-judgelight-』を聴いてみる",
+    "description": "fripSide｜作品を彩る歌声や演奏に耳を傾けたい一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_314_god_knows",
+    "title": "『God knows...』を聴いてみる",
+    "description": "涼宮ハルヒ（平野綾）｜作品の世界観を思い出しながら楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_315_hare_hare_yukai",
+    "title": "『ハレ晴レユカイ』を聴いてみる",
+    "description": "平野綾・茅原実里・後藤邑子｜印象的なメロディーが物語の場面をよみがえらせる一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_316_kimi_no_shiranai_monogatari",
+    "title": "『君の知らない物語』を聴いてみる",
+    "description": "supercell｜アニメやゲームを知らなくても音楽として楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_317_crossing_field",
+    "title": "『crossing field』を聴いてみる",
+    "description": "LiSA｜物語への高揚感を短い時間で味わえる一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_318_catch_the_moment",
+    "title": "『Catch the Moment』を聴いてみる",
+    "description": "LiSA｜作品を彩る歌声や演奏に耳を傾けたい一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_319_homura",
+    "title": "『炎』を聴いてみる",
+    "description": "LiSA｜作品の世界観を思い出しながら楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_320_unravel",
+    "title": "『unravel』を聴いてみる",
+    "description": "TK from 凛として時雨｜印象的なメロディーが物語の場面をよみがえらせる一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_321_katharsis",
+    "title": "『katharsis』を聴いてみる",
+    "description": "TK from 凛として時雨｜アニメやゲームを知らなくても音楽として楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_322_the_rumbling",
+    "title": "『The Rumbling』を聴いてみる",
+    "description": "SiM｜物語への高揚感を短い時間で味わえる一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_323_kaikai_kitan",
+    "title": "『廻廻奇譚』を聴いてみる",
+    "description": "Eve｜作品を彩る歌声や演奏に耳を傾けたい一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_324_specialz",
+    "title": "『SPECIALZ』を聴いてみる",
+    "description": "King Gnu｜作品の世界観を思い出しながら楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_325_onegai_muscle",
+    "title": "『お願いマッスル』を聴いてみる",
+    "description": "紗倉ひびき＆街雄鳴造｜印象的なメロディーが物語の場面をよみがえらせる一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_326_lion_macross",
+    "title": "『ライオン』を聴いてみる",
+    "description": "May’n／中島愛｜アニメやゲームを知らなくても音楽として楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_327_seikan_hikou",
+    "title": "『星間飛行』を聴いてみる",
+    "description": "中島愛｜物語への高揚感を短い時間で味わえる一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_328_triangler",
+    "title": "『トライアングラー』を聴いてみる",
+    "description": "坂本真綾｜作品を彩る歌声や演奏に耳を傾けたい一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_329_sousei_no_aquarion",
+    "title": "『創聖のアクエリオン』を聴いてみる",
+    "description": "AKINO｜作品の世界観を思い出しながら楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_330_platinum",
+    "title": "『プラチナ』を聴いてみる",
+    "description": "坂本真綾｜印象的なメロディーが物語の場面をよみがえらせる一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_331_catch_you_catch_me",
+    "title": "『Catch You Catch Me』を聴いてみる",
+    "description": "グミ｜アニメやゲームを知らなくても音楽として楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_332_tank",
+    "title": "『Tank!』を聴いてみる",
+    "description": "SEATBELTS｜物語への高揚感を短い時間で味わえる一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_333_the_real_folk_blues",
+    "title": "『The Real Folk Blues』を聴いてみる",
+    "description": "山根麻衣｜作品を彩る歌声や演奏に耳を傾けたい一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "estimated_minutes": 6,
+    "weight": 1.0
+  },
+  {
+    "id": "music_334_lupin_the_third_80",
+    "title": "『ルパン三世のテーマ ’80』を聴いてみる",
+    "description": "大野雄二｜作品の世界観を思い出しながら楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_335_get_wild",
+    "title": "『Get Wild』を聴いてみる",
+    "description": "TM NETWORK｜印象的なメロディーが物語の場面をよみがえらせる一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_336_still_alive_portal",
+    "title": "『Still Alive』を聴いてみる",
+    "description": "Ellen McLain｜アニメやゲームを知らなくても音楽として楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_337_want_you_gone",
+    "title": "『Want You Gone』を聴いてみる",
+    "description": "Ellen McLain｜物語への高揚感を短い時間で味わえる一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "estimated_minutes": 2,
+    "weight": 1.0
+  },
+  {
+    "id": "music_338_baba_yetu",
+    "title": "『Baba Yetu』を聴いてみる",
+    "description": "Christopher Tin｜作品を彩る歌声や演奏に耳を傾けたい一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_339_simple_and_clean",
+    "title": "『Simple And Clean』を聴いてみる",
+    "description": "Hikaru Utada｜作品の世界観を思い出しながら楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_340_eyes_on_me",
+    "title": "『Eyes On Me』を聴いてみる",
+    "description": "Faye Wong｜印象的なメロディーが物語の場面をよみがえらせる一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_341_melodies_of_life",
+    "title": "『Melodies Of Life』を聴いてみる",
+    "description": "白鳥英美子｜アニメやゲームを知らなくても音楽として楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "estimated_minutes": 6,
+    "weight": 1.0
+  },
+  {
+    "id": "music_342_to_zanarkand",
+    "title": "『ザナルカンドにて』を聴いてみる",
+    "description": "植松伸夫｜物語への高揚感を短い時間で味わえる一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_343_weight_of_the_world",
+    "title": "『Weight of the World』を聴いてみる",
+    "description": "J'Nique Nicole｜作品を彩る歌声や演奏に耳を傾けたい一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "estimated_minutes": 6,
+    "weight": 1.0
+  },
+  {
+    "id": "music_344_jump_up_super_star",
+    "title": "『Jump Up, Super Star!』を聴いてみる",
+    "description": "The Super Mario Players feat. Kate Higgins｜作品の世界観を思い出しながら楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_345_bury_the_light",
+    "title": "『Bury the Light』を聴いてみる",
+    "description": "Casey Edwards feat. Victor Borba｜印象的なメロディーが物語の場面をよみがえらせる一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "estimated_minutes": 9,
+    "weight": 1.0
+  },
+  {
+    "id": "music_346_live_and_learn",
+    "title": "『Live & Learn』を聴いてみる",
+    "description": "Crush 40｜アニメやゲームを知らなくても音楽として楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_347_snake_eater",
+    "title": "『Snake Eater』を聴いてみる",
+    "description": "Cynthia Harrell｜物語への高揚感を短い時間で味わえる一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_348_devils_never_cry",
+    "title": "『Devils Never Cry』を聴いてみる",
+    "description": "Tetsuya Shibata｜作品を彩る歌声や演奏に耳を傾けたい一曲。",
+    "category": "music",
+    "tags": [
+      "アニソン・ゲーム音楽"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_349_wake_me_up",
+    "title": "『Wake Me Up』を聴いてみる",
+    "description": "Avicii｜反復するビートと電子音で気分を切り替えられる一曲。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_350_levels",
+    "title": "『Levels』を聴いてみる",
+    "description": "Avicii｜高揚感のあるサウンドを短い時間で楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_351_the_nights",
+    "title": "『The Nights』を聴いてみる",
+    "description": "Avicii｜リズムの変化と音の広がりに身を任せたい一曲。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_352_animals_martin_garrix",
+    "title": "『Animals』を聴いてみる",
+    "description": "Martin Garrix｜作業前や移動中のスイッチに向くダンスナンバー。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_353_scared_to_be_lonely",
+    "title": "『Scared to Be Lonely』を聴いてみる",
+    "description": "Martin Garrix & Dua Lipa｜電子音とビートの組み立てをじっくり味わえる一曲。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_354_titanium",
+    "title": "『Titanium』を聴いてみる",
+    "description": "David Guetta feat. Sia｜反復するビートと電子音で気分を切り替えられる一曲。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_355_without_you_guetta",
+    "title": "『Without You』を聴いてみる",
+    "description": "David Guetta feat. Usher｜高揚感のあるサウンドを短い時間で楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_356_clarity",
+    "title": "『Clarity』を聴いてみる",
+    "description": "Zedd feat. Foxes｜リズムの変化と音の広がりに身を任せたい一曲。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_357_stay_zedd",
+    "title": "『Stay』を聴いてみる",
+    "description": "Zedd & Alessia Cara｜作業前や移動中のスイッチに向くダンスナンバー。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_358_spectrum_zedd",
+    "title": "『Spectrum』を聴いてみる",
+    "description": "Zedd feat. Matthew Koma｜電子音とビートの組み立てをじっくり味わえる一曲。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_359_dont_you_worry_child",
+    "title": "『Don't You Worry Child』を聴いてみる",
+    "description": "Swedish House Mafia feat. John Martin｜反復するビートと電子音で気分を切り替えられる一曲。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_360_greyhound",
+    "title": "『Greyhound』を聴いてみる",
+    "description": "Swedish House Mafia｜高揚感のあるサウンドを短い時間で楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "estimated_minutes": 7,
+    "weight": 1.0
+  },
+  {
+    "id": "music_361_one_your_name",
+    "title": "『One (Your Name)』を聴いてみる",
+    "description": "Swedish House Mafia feat. Pharrell｜リズムの変化と音の広がりに身を任せたい一曲。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_362_closer_chainsmokers",
+    "title": "『Closer』を聴いてみる",
+    "description": "The Chainsmokers feat. Halsey｜作業前や移動中のスイッチに向くダンスナンバー。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_363_something_just_like_this",
+    "title": "『Something Just Like This』を聴いてみる",
+    "description": "The Chainsmokers & Coldplay｜電子音とビートの組み立てをじっくり味わえる一曲。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_364_paris_chainsmokers",
+    "title": "『Paris』を聴いてみる",
+    "description": "The Chainsmokers｜反復するビートと電子音で気分を切り替えられる一曲。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_365_lean_on",
+    "title": "『Lean On』を聴いてみる",
+    "description": "Major Lazer & DJ Snake feat. MØ｜高揚感のあるサウンドを短い時間で楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_366_turn_down_for_what",
+    "title": "『Turn Down for What』を聴いてみる",
+    "description": "DJ Snake & Lil Jon｜リズムの変化と音の広がりに身を任せたい一曲。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_367_taki_taki",
+    "title": "『Taki Taki』を聴いてみる",
+    "description": "DJ Snake feat. Selena Gomez, Ozuna & Cardi B｜作業前や移動中のスイッチに向くダンスナンバー。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_368_this_is_what_you_came_for",
+    "title": "『This Is What You Came For』を聴いてみる",
+    "description": "Calvin Harris feat. Rihanna｜電子音とビートの組み立てをじっくり味わえる一曲。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_369_summer_calvin_harris",
+    "title": "『Summer』を聴いてみる",
+    "description": "Calvin Harris｜反復するビートと電子音で気分を切り替えられる一曲。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_370_feel_so_close",
+    "title": "『Feel So Close』を聴いてみる",
+    "description": "Calvin Harris｜高揚感のあるサウンドを短い時間で楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_371_rather_be",
+    "title": "『Rather Be』を聴いてみる",
+    "description": "Clean Bandit feat. Jess Glynne｜リズムの変化と音の広がりに身を任せたい一曲。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_372_rockabye",
+    "title": "『Rockabye』を聴いてみる",
+    "description": "Clean Bandit feat. Sean Paul & Anne-Marie｜作業前や移動中のスイッチに向くダンスナンバー。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_373_firestone",
+    "title": "『Firestone』を聴いてみる",
+    "description": "Kygo feat. Conrad Sewell｜電子音とビートの組み立てをじっくり味わえる一曲。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_374_stole_the_show",
+    "title": "『Stole the Show』を聴いてみる",
+    "description": "Kygo feat. Parson James｜反復するビートと電子音で気分を切り替えられる一曲。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_375_it_aint_me",
+    "title": "『It Ain't Me』を聴いてみる",
+    "description": "Kygo & Selena Gomez｜高揚感のあるサウンドを短い時間で楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_376_faded",
+    "title": "『Faded』を聴いてみる",
+    "description": "Alan Walker｜リズムの変化と音の広がりに身を任せたい一曲。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_377_alone_alan_walker",
+    "title": "『Alone』を聴いてみる",
+    "description": "Alan Walker｜作業前や移動中のスイッチに向くダンスナンバー。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_378_shelter",
+    "title": "『Shelter』を聴いてみる",
+    "description": "Porter Robinson & Madeon｜電子音とビートの組み立てをじっくり味わえる一曲。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_379_language_porter_robinson",
+    "title": "『Language』を聴いてみる",
+    "description": "Porter Robinson｜反復するビートと電子音で気分を切り替えられる一曲。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "estimated_minutes": 6,
+    "weight": 1.0
+  },
+  {
+    "id": "music_380_sad_machine",
+    "title": "『Sad Machine』を聴いてみる",
+    "description": "Porter Robinson｜高揚感のあるサウンドを短い時間で楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_381_ghosts_n_stuff",
+    "title": "『Ghosts 'n' Stuff』を聴いてみる",
+    "description": "deadmau5 feat. Rob Swire｜リズムの変化と音の広がりに身を任せたい一曲。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_382_strobe",
+    "title": "『Strobe』を聴いてみる",
+    "description": "deadmau5｜作業前や移動中のスイッチに向くダンスナンバー。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "music_383_around_the_world",
+    "title": "『Around the World』を聴いてみる",
+    "description": "Daft Punk｜電子音とビートの組み立てをじっくり味わえる一曲。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "estimated_minutes": 7,
+    "weight": 1.0
+  },
+  {
+    "id": "music_384_one_more_time",
+    "title": "『One More Time』を聴いてみる",
+    "description": "Daft Punk｜反復するビートと電子音で気分を切り替えられる一曲。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_385_harder_better_faster_stronger",
+    "title": "『Harder, Better, Faster, Stronger』を聴いてみる",
+    "description": "Daft Punk｜高揚感のあるサウンドを短い時間で楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_386_sandstorm",
+    "title": "『Sandstorm』を聴いてみる",
+    "description": "Darude｜リズムの変化と音の広がりに身を任せたい一曲。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_387_insomnia",
+    "title": "『Insomnia』を聴いてみる",
+    "description": "Faithless｜作業前や移動中のスイッチに向くダンスナンバー。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "estimated_minutes": 9,
+    "weight": 1.0
+  },
+  {
+    "id": "music_388_born_slippy_nuxx",
+    "title": "『Born Slippy .NUXX』を聴いてみる",
+    "description": "Underworld｜電子音とビートの組み立てをじっくり味わえる一曲。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "estimated_minutes": 10,
+    "weight": 1.0
+  },
+  {
+    "id": "music_389_galvanize",
+    "title": "『Galvanize』を聴いてみる",
+    "description": "The Chemical Brothers｜反復するビートと電子音で気分を切り替えられる一曲。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "estimated_minutes": 6,
+    "weight": 1.0
+  },
+  {
+    "id": "music_390_block_rockin_beats",
+    "title": "『Block Rockin' Beats』を聴いてみる",
+    "description": "The Chemical Brothers｜高揚感のあるサウンドを短い時間で楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_391_porcelain",
+    "title": "『Porcelain』を聴いてみる",
+    "description": "Moby｜リズムの変化と音の広がりに身を任せたい一曲。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_392_windowlicker",
+    "title": "『Windowlicker』を聴いてみる",
+    "description": "Aphex Twin｜作業前や移動中のスイッチに向くダンスナンバー。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "estimated_minutes": 6,
+    "weight": 1.0
+  },
+  {
+    "id": "music_393_rydeen",
+    "title": "『RYDEEN』を聴いてみる",
+    "description": "YELLOW MAGIC ORCHESTRA｜電子音とビートの組み立てをじっくり味わえる一曲。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_394_technopolis",
+    "title": "『TECHNOPOLIS』を聴いてみる",
+    "description": "YELLOW MAGIC ORCHESTRA｜反復するビートと電子音で気分を切り替えられる一曲。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "estimated_minutes": 5,
+    "weight": 1.0
+  },
+  {
+    "id": "music_395_flash_perfume",
+    "title": "『FLASH』を聴いてみる",
+    "description": "Perfume｜高揚感のあるサウンドを短い時間で楽しめる一曲。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_396_polyrhythm",
+    "title": "『ポリリズム』を聴いてみる",
+    "description": "Perfume｜リズムの変化と音の広がりに身を任せたい一曲。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  },
+  {
+    "id": "music_397_laser_beam",
+    "title": "『レーザービーム』を聴いてみる",
+    "description": "Perfume｜作業前や移動中のスイッチに向くダンスナンバー。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "estimated_minutes": 3,
+    "weight": 1.0
+  },
+  {
+    "id": "music_398_bangarang",
+    "title": "『Bangarang』を聴いてみる",
+    "description": "Skrillex feat. Sirah｜電子音とビートの組み立てをじっくり味わえる一曲。",
+    "category": "music",
+    "tags": [
+      "EDM・テクノ"
+    ],
+    "estimated_minutes": 4,
+    "weight": 1.0
+  }
+]

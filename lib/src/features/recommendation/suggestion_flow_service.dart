@@ -60,7 +60,7 @@ class SuggestionFlowService {
 
   /// 初期表示データを読み込む。
   /// 設定の読込は repository 側でデフォルトへフォールバックするため失敗しない。
-  /// 例外になるのは提案データ（suggestions.json）の読込失敗のみ。
+  /// 例外になるのは提案JSONデータの読込失敗のみ。
   Future<SuggestionFlowSnapshot> load() async {
     final settings = await _settingsRepository.loadSettings();
     final currentSuggestionId =

@@ -75,7 +75,7 @@ There is **no difficulty, no universal time condition, and no travel-distance co
 
    Advanced-phase detail settings (企画書 ver6 表3 "発展版で追加"): 音楽=言語・気分, 料理=栄養素・ダイエット, 読書=読書時間・入手予算, 映画=上映時間・視聴先. The 料理 cooking_method group is a different axis from 栄養素・ダイエット and was implemented ahead of the advanced phase because it only required tagging existing data, not a new detail-setting group data model.
 
-   **Every `cook` suggestion in `assets/data/suggestions.json` must carry a `cooking_method` tag.** A missing tag means that suggestion can never surface once a user filters by that cooking method — treat this the same as a missing required field when adding new 料理 data.
+   **Every `cook` suggestion in `assets/data/suggestions/cook.json` must carry a `cooking_method` tag.** A missing tag means that suggestion can never surface once a user filters by that cooking method — treat this the same as a missing required field when adding new 料理 data.
 
 See `docs/spec/仕様書.md` §3.4 for the master table. Default categories are [music, read, movie]; detail settings default to all-unselected (指定なし). Categories and detail-setting groups must be driven from a master definition so more can be added later (散歩, 運動, 芸術, etc.).
 
@@ -119,7 +119,7 @@ Use the Flutter stack:
 - Flutter
 - Dart
 - Material 3 (green theme; seed from the prototype primary `#3F6F44`)
-- JSON asset data (`assets/data/suggestions.json`)
+- category-specific JSON asset data (`assets/data/suggestions/<category>.json`)
 - shared_preferences for MVP settings and records
 - flutter_local_notifications for the MVP notification flow
 - flutter_test for tests
@@ -160,7 +160,7 @@ Follow this project structure.
 
 - `assets/data/`
   - static suggestion data
-  - suggestion candidates should be managed in `assets/data/suggestions.json`
+  - suggestion candidates are split by category under `assets/data/suggestions/`
 
 Do not make large directory-structure changes without a clear reason.
 
@@ -192,12 +192,15 @@ Move these operations out of page widgets when they grow:
 
 ## Suggestion Data
 
-Manage suggestion candidates in `assets/data/suggestions.json`. Keep at least 50 matching suggestions for every detail-setting option in `InterestCategories.all`.
+Manage suggestion candidates in category-specific files under `assets/data/suggestions/`. The filename must match the `category` id: `music.json`, `cook.json`, `read.json`, `movie.json`, or `walk.json`. Keep at least 50 matching suggestions for every detail-setting option in `InterestCategories.all`.
 
-> `assets/data/suggestions.json` is on the ver6 schema (per-category ids, `tags` = detail-setting values, `estimated_minutes`, `weight`, plus `recipe` on cook entries only). It no longer uses `min_minutes` / `max_minutes` / `intensity` / `location_type` / `detail` / `budget_yen` / `where_to_try`. The ver6 PDF `difficulty` field is not used in this project.
+> Every file under `assets/data/suggestions/` uses the same ver6 schema (per-category ids, `tags` = detail-setting values, `estimated_minutes`, `weight`, plus `recipe` on cook entries only). It no longer uses `min_minutes` / `max_minutes` / `intensity` / `location_type` / `detail` / `budget_yen` / `where_to_try`. The ver6 PDF `difficulty` field is not used in this project.
 
 When editing suggestion data:
 
+- add or edit a suggestion only in the file whose name matches its `category`
+- when adding a new category file, also add its category id and asset path to `suggestionAssetPathsByCategory` in `lib/src/repositories/suggestion_repository.dart`
+- run `flutter test test/repositories/suggestion_repository_test.dart` after data changes; it validates every file and cross-file invariants
 - each suggestion must have a stable unique `id`
 - titles should be short and understandable
 - descriptions should be useful to the user
@@ -206,6 +209,7 @@ When editing suggestion data:
 - required fields must not be missing
 - `category` must be one of the known category ids (`music` / `cook` / `read` / `movie`; `walk` is retained as an advanced-phase category)
 - `tags` holds the values that correspond to the category's detail-setting options (this is what the filter matches against)
+- supplemental descriptive tags are allowed, but every detail-setting group for the category must have at least one matching option in `tags`; a tag defined as another category's detail-setting option is invalid
 - every `cook` entry's `tags` must include one of the `cooking_method` options (蒸す/炒める/揚げる/煮る/焼く/生・和える/レンジ・時短) in addition to its 味覚・ジャンル tag — a 料理 entry missing this tag can never be selected once a user filters by cooking method
 - every detail-setting option in `InterestCategories.all` must have at least 50 matching entries in its category
 - `estimated_minutes` is the rough duration used for history total-minutes aggregation
@@ -243,7 +247,7 @@ The suggestion logic should use:
 
 Rules:
 
-- Load suggestions from `assets/data/suggestions.json`.
+- Load every path in `suggestionAssetPathsByCategory` and combine the category files into one `List<Suggestion>`.
 - Filter: `category` must be one of the user's selected categories.
 - Filter: for the matched category, for each detail-setting group the user has selected values in, at least one selected value must be in the suggestion's `tags` (OR within a group, AND across groups). Unselected groups do not filter. Across categories the match is OR. There is no budget-based filtering (`budget_yen` was removed from the schema).
 - Exclude the last 3 shown suggestion ids (`recent_suggestion_ids`).

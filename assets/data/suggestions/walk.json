@@ -1,0 +1,39 @@
+[
+  {
+    "id": "walk_unknown_corner",
+    "title": "曲がったことのない角を1つ曲がる",
+    "description": "いつもの道で、普段は曲がらない角を1つだけ曲がってみる。",
+    "category": "walk",
+    "tags": [
+      "気分転換",
+      "発見",
+      "15分以内"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.2
+  },
+  {
+    "id": "walk_theme_30",
+    "title": "テーマを決めて30分歩く",
+    "description": "空、看板、音など、観察するテーマを1つ決めて歩く。",
+    "category": "walk",
+    "tags": [
+      "発見",
+      "30分"
+    ],
+    "estimated_minutes": 30,
+    "weight": 1.0
+  },
+  {
+    "id": "walk_fast_refresh",
+    "title": "早歩きで気分を切り替える",
+    "description": "少しだけ速いペースで歩いて、体を起こす。運動目的の散歩です。",
+    "category": "walk",
+    "tags": [
+      "運動",
+      "15分以内"
+    ],
+    "estimated_minutes": 15,
+    "weight": 1.0
+  }
+]

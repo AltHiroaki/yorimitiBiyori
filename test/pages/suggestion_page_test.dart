@@ -169,6 +169,7 @@ Future<_FakeSettingsRepository> _pumpPage(
     assetBundle: _FakeAssetBundle(
       failAssetLoad ? null : jsonEncode(suggestions),
     ),
+    assetPaths: const ['test/suggestions.json'],
   );
   await tester.pumpWidget(
     MaterialApp(
