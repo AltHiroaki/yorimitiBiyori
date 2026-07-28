@@ -41,9 +41,9 @@ void main() {
     // ため、実 NotificationService が使う flutter_timezone チャネルをモックする。
     TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
         .setMockMethodCallHandler(
-      const MethodChannel('flutter_timezone'),
-      (methodCall) async => 'Asia/Tokyo',
-    );
+          const MethodChannel('flutter_timezone'),
+          (methodCall) async => 'Asia/Tokyo',
+        );
   });
 
   testWidgets('初回起動でオンボーディングを完了すると提案画面へ進む', (tester) async {
@@ -54,9 +54,7 @@ void main() {
       ),
     );
 
-    await tester.pumpWidget(
-      YorimichiBiyoriApp(settingsRepository: repository),
-    );
+    await tester.pumpWidget(YorimichiBiyoriApp(settingsRepository: repository));
     await tester.pumpAndSettle();
 
     expect(find.text('よりみち日和へようこそ'), findsOneWidget);
@@ -65,6 +63,13 @@ void main() {
     expect(find.text('空き時間にそっと届く'), findsOneWidget);
     expect(find.text('やってみたら記録に残る'), findsOneWidget);
     expect(find.text('気分じゃなければ次へ。送った提案はあとで戻せます。'), findsOneWidget);
+    expect(
+      find.text(
+        'まずはこのまま。細かい好み（ジャンルなど）は、'
+        '提案を見てから絞り込めます。',
+      ),
+      findsOneWidget,
+    );
 
     await tester.tap(find.text('はじめる'));
     await tester.pumpAndSettle();
@@ -125,9 +130,7 @@ void main() {
       ),
     );
 
-    await tester.pumpWidget(
-      YorimichiBiyoriApp(settingsRepository: repository),
-    );
+    await tester.pumpWidget(YorimichiBiyoriApp(settingsRepository: repository));
     await tester.pumpAndSettle();
 
     await tester.tap(find.text('はじめる'));
@@ -215,9 +218,7 @@ void main() {
       const UserSettings(firstLaunchCompleted: false),
     );
 
-    await tester.pumpWidget(
-      YorimichiBiyoriApp(settingsRepository: repository),
-    );
+    await tester.pumpWidget(YorimichiBiyoriApp(settingsRepository: repository));
     await tester.pumpAndSettle();
 
     await tester.tap(find.text('はじめる'));

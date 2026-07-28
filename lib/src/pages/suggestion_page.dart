@@ -430,7 +430,9 @@ class _ConditionCard extends StatelessWidget {
               ),
               const SizedBox(height: 8),
               Text(
-                detailSummary.isEmpty ? '詳細設定：指定なし' : '詳細設定：$detailSummary',
+                detailSummary.isEmpty
+                    ? '詳細設定：すべてのジャンルから'
+                    : '詳細設定：$detailSummary',
                 style: const TextStyle(fontSize: 13),
               ),
             ],
