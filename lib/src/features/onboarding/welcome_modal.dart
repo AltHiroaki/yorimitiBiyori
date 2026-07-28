@@ -65,7 +65,8 @@ class WelcomeModal extends StatelessWidget {
                 ),
                 const SizedBox(height: 20),
                 const Text(
-                  'まずはこのまま。細かい好みは、提案を見てから絞り込めます。',
+                  'まずはこのまま。細かい好み（ジャンルなど）は、'
+                  '提案を見てから絞り込めます。',
                   style: TextStyle(fontSize: 13),
                 ),
                 const SizedBox(height: 24),
