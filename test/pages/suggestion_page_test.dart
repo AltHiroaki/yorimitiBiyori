@@ -294,7 +294,7 @@ void main() {
       settings: const UserSettings(selectedCategories: ['music']),
     );
 
-    expect(find.text('詳細設定：指定なし'), findsOneWidget);
+    expect(find.text('詳細設定：すべてのジャンルから'), findsOneWidget);
   });
 
   testWidgets('詳しく見るをタップすると料理のレシピを展開・収納できる', (tester) async {
