@@ -68,7 +68,7 @@ void main() {
     expect(find.text('よりみち日和'), findsOneWidget);
     expect(find.text('空いた時間に、小さなよりみちを。'), findsOneWidget);
     expect(find.text('やってみる'), findsOneWidget);
-    expect(find.text('別の提案'), findsOneWidget);
+    expect(find.text('スキップして次の提案'), findsOneWidget);
   });
 
   testWidgets('OS のダークモード設定に追従して darkTheme が使われる', (tester) async {

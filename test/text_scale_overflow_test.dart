@@ -94,7 +94,7 @@ void main() {
     await tester.pumpAndSettle();
     expect(find.text('実施中のよりみち'), findsOneWidget);
 
-    // スキップで通常の提案カードに戻し、「別の提案」も描画する。
+    // スキップで通常の提案カードに戻し、次の提案へ進む副操作も描画する。
     final skipButton = find.text('スキップ').hitTestable();
     await tester.dragUntilVisible(
       skipButton,
@@ -105,7 +105,7 @@ void main() {
     await tester.tap(skipButton);
     await tester.pumpAndSettle();
 
-    final anotherButton = find.text('別の提案').hitTestable();
+    final anotherButton = find.text('スキップして次の提案').hitTestable();
     await tester.dragUntilVisible(
       anotherButton,
       find.byType(ListView),

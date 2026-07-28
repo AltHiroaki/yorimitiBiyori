@@ -307,7 +307,7 @@ void main() {
     expect(find.text('スキップした提案'), findsOneWidget);
     expect(find.text('ジャズを1曲流すの説明文。'), findsOneWidget);
     expect(find.text('やってみる'), findsOneWidget);
-    expect(find.text('別の提案'), findsNothing);
+    expect(find.text('スキップして次の提案'), findsNothing);
 
     await tester.tap(find.widgetWithText(FilledButton, 'やってみる'));
     await tester.pumpAndSettle();

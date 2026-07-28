@@ -40,7 +40,7 @@ The core experience is:
 4. The user taps the notification body, which opens the suggestion screen (suggestion produced from the saved category + detail settings).
 5. The suggestion screen shows one matching suggestion with title, description, and tags. Cook suggestions additionally carry a `recipe`, which the user can expand via "詳しく見る"; other categories have no expandable detail.
 6. "やってみる" opens a completion modal with feedback chips (よかった / 普通 / 合わなかった) and saves a done record.
-7. "別の提案" records the current suggestion as skipped and re-draws with the same conditions.
+7. "スキップして次の提案" records the current suggestion as skipped and re-draws with the same conditions.
 
 ## Highest Priority
 
@@ -88,7 +88,7 @@ The MVP includes only:
 - suggestion settings screen (two-stage: category selection → per-category detail settings; MVP is one "genre" group per category)
 - local notification once per day at a random time within the configured range, soft wording without naming a duration, no time-selection actions
 - suggestion display matching the category + detail-setting conditions
-- re-suggestion ("別の提案", records the shown suggestion as skipped)
+- re-suggestion ("スキップして次の提案", records the shown suggestion as skipped)
 - completion modal with feedback (good / normal / bad) saving a done record
 - history display (done count, skipped count, total minutes, recent list, empty state)
 - history deletion with confirmation
@@ -269,7 +269,7 @@ Rules:
 - Be careful when changing the saved data shape.
 - Make history deletion behavior clear to the user (inline confirmation, irreversible).
 - A done record stores feedback (`good` / `normal` / `bad`); a skipped record stores `feedback = null`.
-- "別の提案" records the currently shown suggestion as skipped before re-drawing.
+- "スキップして次の提案" records the currently shown suggestion as skipped before re-drawing.
 
 Suggested storage keys:
 
