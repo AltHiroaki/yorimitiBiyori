@@ -34,7 +34,7 @@ The app suggests one small "yorimichi" (detour) action that fits the user's inte
 
 The core experience is:
 
-1. On first launch the user completes onboarding: welcome modal → interest category selection → notification permission.
+1. On first launch the user completes onboarding: welcome modal → interest category selection → notification permission. All three screens show the current step. The welcome screen explains only the core loop (choose interests → receive one daily suggestion → try and record it, or move it aside and return later).
 2. In 提案設定, the user picks categories, then sets each category's detail settings.
 3. The app sends one local notification per day at a random time within the user-configured range (default 17:00–21:00). The wording is a soft invitation that does NOT name a duration (e.g. "暇な時間って存在しますか？"). There are no time-selection notification actions.
 4. The user taps the notification body, which opens the suggestion screen (suggestion produced from the saved category + detail settings).
@@ -58,7 +58,7 @@ Bottom NavigationBar with exactly 3 tabs. There is **no home screen**; the sugge
 - Tab 2 履歴 (history): summary (done count / skipped count / total minutes) + recent records list; empty state with CTA to the suggestion tab
 - Tab 3 設定 (settings): Google account row (advanced phase, show as 未連携), suggestion settings row, interest categories, notification time, notification toggle, history deletion with inline confirm, about
 - Sub screen 提案設定 (suggestion settings): **two-stage** editor — stage 1 category multi-select, stage 2 per-category detail-setting groups — with AppBar back button, reachable from both the suggestion tab and the settings tab
-- Onboarding (first launch only): welcome modal → category selection (3-step progress indicator) → notification permission dialog (allow / later)
+- Onboarding (first launch only): welcome modal → category selection → notification permission dialog (allow / later). Keep exactly 3 steps and show the shared 3-step progress indicator on every screen. The notification copy identifies 17:00–21:00 as the initial default and says the range can be changed later.
 - Completion modal: ModalBottomSheet after "やってみる" with 3 feedback choices and "履歴に保存"
 
 ## Suggestion Conditions (two-stage)

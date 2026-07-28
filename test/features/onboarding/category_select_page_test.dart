@@ -14,6 +14,14 @@ void main() {
     );
 
     expect(find.text('興味のあるよりみちを選んでください'), findsOneWidget);
+    expect(find.text('ステップ 2 / 3'), findsOneWidget);
+    expect(
+      find.text(
+        '選んだカテゴリの中から提案します。'
+        '多めに選ぶほど、提案の幅が広がります。あとから変えられます。',
+      ),
+      findsOneWidget,
+    );
     expect(find.text('0つ選択中'), findsOneWidget);
 
     final nextButton = tester.widget<FilledButton>(

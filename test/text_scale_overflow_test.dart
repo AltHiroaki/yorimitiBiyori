@@ -176,14 +176,19 @@ void main() {
     await _pumpAppAtMaxTextScale(tester);
 
     expect(find.text('よりみち日和へようこそ'), findsOneWidget);
+    expect(find.text('ステップ 1 / 3'), findsOneWidget);
 
+    await tester.ensureVisible(find.text('はじめる'));
+    await tester.pumpAndSettle();
     await tester.tap(find.text('はじめる'));
     await tester.pumpAndSettle();
     expect(find.text('興味のあるよりみちを選んでください'), findsOneWidget);
+    expect(find.text('ステップ 2 / 3'), findsOneWidget);
 
     await tester.scrollUntilVisible(find.text('次へ'), 200);
     await tester.tap(find.text('次へ'));
     await tester.pumpAndSettle();
     expect(find.text('よりみちのきっかけを通知します'), findsOneWidget);
+    expect(find.text('ステップ 3 / 3'), findsOneWidget);
   });
 }
