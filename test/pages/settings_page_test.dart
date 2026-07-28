@@ -159,13 +159,33 @@ void main() {
     expect(loadedRecords, isEmpty);
   });
 
-  testWidgets('テーマカード（システム／ライト／ダーク）が表示される', (tester) async {
+  testWidgets('テーマカードがライト／ダーク／システムの順で表示される', (tester) async {
     await _pumpPage(tester);
 
     expect(find.text('テーマ'), findsOneWidget);
     expect(find.text('システム'), findsOneWidget);
     expect(find.text('ライト'), findsOneWidget);
     expect(find.text('ダーク'), findsOneWidget);
+
+    final themeButton = tester.widget<SegmentedButton<ThemeModeSetting>>(
+      find.byType(SegmentedButton<ThemeModeSetting>),
+    );
+    expect(themeButton.segments.map((segment) => segment.value).toList(), [
+      ThemeModeSetting.light,
+      ThemeModeSetting.dark,
+      ThemeModeSetting.system,
+    ]);
+  });
+
+  testWidgets('保存済み設定が無いときはライトが選択されている', (tester) async {
+    SharedPreferences.setMockInitialValues({});
+
+    await _pumpPage(tester);
+
+    final themeButton = tester.widget<SegmentedButton<ThemeModeSetting>>(
+      find.byType(SegmentedButton<ThemeModeSetting>),
+    );
+    expect(themeButton.selected, {ThemeModeSetting.light});
   });
 
   testWidgets('「ダーク」を選ぶと設定を保存し、ThemeModeScope へ通知する', (tester) async {

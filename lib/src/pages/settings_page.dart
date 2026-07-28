@@ -149,7 +149,7 @@ class _SettingsPageState extends State<SettingsPage> {
     await _loadSettings();
   }
 
-  /// テーマカード：ライト／ダーク／システム追従を切り替える（issue #40）。
+  /// テーマカード：ライト／ダーク／システム追従を切り替える（issue #40, #131）。
   Widget _buildThemeCard() {
     final colorScheme = Theme.of(context).colorScheme;
 
@@ -179,11 +179,9 @@ class _SettingsPageState extends State<SettingsPage> {
                   // アイコンを付けず、選択時のチェックも出さないことで
                   // どのセグメントを選んでもラベルが折り返さないようにする。
                   showSelectedIcon: false,
+                  // 明るい順（ライト → ダーク）に並べ、既定値のライトを左端に置く。
+                  // 「システム」は他2つのメタ選択肢なので右端にまとめる。
                   segments: const [
-                    ButtonSegment(
-                      value: ThemeModeSetting.system,
-                      label: Text('システム'),
-                    ),
                     ButtonSegment(
                       value: ThemeModeSetting.light,
                       label: Text('ライト'),
@@ -191,6 +189,10 @@ class _SettingsPageState extends State<SettingsPage> {
                     ButtonSegment(
                       value: ThemeModeSetting.dark,
                       label: Text('ダーク'),
+                    ),
+                    ButtonSegment(
+                      value: ThemeModeSetting.system,
+                      label: Text('システム'),
                     ),
                   ],
                   selected: {_settings.themeMode},
