@@ -14,6 +14,7 @@ import 'package:yorimichi_biyori/src/repositories/ongoing_suggestion_repository.
 import 'package:yorimichi_biyori/src/repositories/records_repository.dart';
 import 'package:yorimichi_biyori/src/repositories/settings_repository.dart';
 import 'package:yorimichi_biyori/src/repositories/suggestion_repository.dart';
+import 'package:yorimichi_biyori/src/widgets/neumorphic_surface.dart';
 
 /// 設定の読込値と保存履歴を差し替え・記録できるテスト用フェイク。
 class _FakeSettingsRepository implements SettingsRepository {
@@ -223,7 +224,65 @@ void main() {
     expect(find.widgetWithText(Chip, 'ジャズ'), findsOneWidget);
     expect(find.text('約5分'), findsOneWidget);
     expect(find.text('やってみる'), findsOneWidget);
-    expect(find.text('別の提案'), findsOneWidget);
+    expect(find.text('スキップして次の提案'), findsOneWidget);
+  });
+
+  testWidgets('提案カードでは主操作を全幅56px、副操作を全幅48pxで下に表示する', (tester) async {
+    await _pumpPage(
+      tester,
+      suggestions: [
+        _suggestionJson(id: 'music_a', title: 'ジャズを1曲流す', tags: ['ジャズ']),
+      ],
+      settings: const UserSettings(selectedCategories: ['music']),
+    );
+
+    final primaryButton = find.byKey(
+      const ValueKey<String>('suggestion-primary-action'),
+    );
+    final secondaryButton = find.byKey(
+      const ValueKey<String>('suggestion-secondary-action'),
+    );
+
+    expect(tester.widget(primaryButton), isA<FilledButton>());
+    expect(tester.widget(secondaryButton), isA<TextButton>());
+    expect(
+      find.ancestor(
+        of: primaryButton,
+        matching: find.byType(NeumorphicButtonFrame),
+      ),
+      findsOneWidget,
+    );
+    expect(
+      find.ancestor(
+        of: secondaryButton,
+        matching: find.byType(NeumorphicButtonFrame),
+      ),
+      findsNothing,
+    );
+    expect(tester.getSize(primaryButton).height, 56);
+    expect(tester.getSize(secondaryButton).height, 48);
+    expect(
+      tester.getSize(primaryButton).width,
+      tester.getSize(secondaryButton).width,
+    );
+    expect(
+      tester.getCenter(primaryButton).dy,
+      lessThan(tester.getCenter(secondaryButton).dy),
+    );
+    expect(
+      find.descendant(
+        of: primaryButton,
+        matching: find.byIcon(Icons.play_arrow_rounded),
+      ),
+      findsOneWidget,
+    );
+    expect(
+      find.descendant(
+        of: secondaryButton,
+        matching: find.byIcon(Icons.skip_next_rounded),
+      ),
+      findsOneWidget,
+    );
   });
 
   testWidgets('詳細設定が未設定なら「指定なし」と表示される', (tester) async {
@@ -312,7 +371,7 @@ void main() {
     );
   });
 
-  testWidgets('「別の提案」で直近と異なる提案に切り替わる', (tester) async {
+  testWidgets('「スキップして次の提案」で直近と異なる提案に切り替わる', (tester) async {
     await _pumpPage(
       tester,
       suggestions: [
@@ -324,14 +383,14 @@ void main() {
 
     final firstWasA = find.text('ジャズを1曲流す').evaluate().isNotEmpty;
 
-    await tester.tap(find.text('別の提案'));
+    await tester.tap(find.text('スキップして次の提案'));
     await tester.pumpAndSettle();
 
     // 候補2件では直近除外により必ずもう一方に切り替わる。
     expect(find.text(firstWasA ? 'ポップスを1曲流す' : 'ジャズを1曲流す'), findsOneWidget);
   });
 
-  testWidgets('レシピを展開したまま別の提案に切り替えるとレシピが閉じる', (tester) async {
+  testWidgets('レシピを展開したまま次の提案に切り替えるとレシピが閉じる', (tester) async {
     await _pumpPage(
       tester,
       suggestions: [
@@ -362,7 +421,7 @@ void main() {
       findsOneWidget,
     );
 
-    await tester.tap(find.text('別の提案'));
+    await tester.tap(find.text('スキップして次の提案'));
     await tester.pumpAndSettle();
 
     expect(find.text('詳しく見る'), findsOneWidget);
@@ -386,7 +445,7 @@ void main() {
     expect(repository.savedSettingsLog, isEmpty);
 
     for (var i = 0; i < 3; i++) {
-      await tester.tap(find.text('別の提案'));
+      await tester.tap(find.text('スキップして次の提案'));
       await tester.pumpAndSettle();
     }
 
@@ -462,7 +521,25 @@ void main() {
     expect(find.text('完了'), findsOneWidget);
     expect(find.text('スキップ'), findsOneWidget);
     expect(find.text('やってみる'), findsNothing);
-    expect(find.text('別の提案'), findsNothing);
+    expect(find.text('スキップして次の提案'), findsNothing);
+    final primaryButton = find.byKey(
+      const ValueKey<String>('ongoing-primary-action'),
+    );
+    final secondaryButton = find.byKey(
+      const ValueKey<String>('ongoing-secondary-action'),
+    );
+    expect(tester.widget(primaryButton), isA<FilledButton>());
+    expect(tester.widget(secondaryButton), isA<TextButton>());
+    expect(tester.getSize(primaryButton).height, 56);
+    expect(tester.getSize(secondaryButton).height, 48);
+    expect(
+      tester.getSize(primaryButton).width,
+      tester.getSize(secondaryButton).width,
+    );
+    expect(
+      tester.getCenter(primaryButton).dy,
+      lessThan(tester.getCenter(secondaryButton).dy),
+    );
     expect(ongoingRepository.ongoing, isNotNull);
     expect(ongoingRepository.ongoing!.suggestionId, 'music_a');
   });
@@ -643,10 +720,10 @@ void main() {
       SuggestionRecordStatus.skipped,
     );
     expect(ongoingRepository.ongoing, isNull);
-    // 実施中カードが消え、通常の提案カード（やってみる／別の提案）に戻る。
+    // 実施中カードが消え、通常の提案カードに戻る。
     expect(find.text('実施中のよりみち'), findsNothing);
     expect(find.text('やってみる'), findsOneWidget);
-    expect(find.text('別の提案'), findsOneWidget);
+    expect(find.text('スキップして次の提案'), findsOneWidget);
   });
 
   testWidgets('保存済みの実施中状態が起動時に復元される', (tester) async {
@@ -693,7 +770,7 @@ void main() {
     expect(ongoingRepository.ongoing, isNull);
   });
 
-  testWidgets('別の提案でスキップが記録されてから再抽選される', (tester) async {
+  testWidgets('スキップして次の提案で記録されてから再抽選される', (tester) async {
     final recordsRepository = _FakeRecordsRepository();
     await _pumpPage(
       tester,
@@ -707,7 +784,7 @@ void main() {
 
     final firstWasA = find.text('ジャズを1曲流す').evaluate().isNotEmpty;
 
-    await tester.tap(find.text('別の提案'));
+    await tester.tap(find.text('スキップして次の提案'));
     await tester.pumpAndSettle();
 
     expect(recordsRepository.addedRecords, hasLength(1));

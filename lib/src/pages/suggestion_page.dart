@@ -25,7 +25,7 @@ enum _LoadStatus { loading, loaded, error }
 
 /// 提案タブ（トップ画面）。仕様書 3.1 に対応する。
 /// 現在の提案条件カードと「今日のよりみち」カードを表示し、
-/// 「別の提案」で再抽選、「提案設定 >」で提案設定画面へ遷移する。
+/// 「スキップして次の提案」で再抽選、「提案設定 >」で提案設定画面へ遷移する。
 /// 業務ロジック（読込・抽選・復元・履歴保存）は [SuggestionFlowService] が担う。
 class SuggestionPage extends StatefulWidget {
   const SuggestionPage({
@@ -261,8 +261,8 @@ class _SuggestionPageState extends State<SuggestionPage> {
     });
   }
 
-  /// 別の提案：表示中の提案を skipped として履歴に保存し、同条件で再抽選する（仕様書 6.4）。
-  void _onAnotherSuggestion() {
+  /// スキップして次の提案：表示中の提案を skipped として保存し、同条件で再抽選する。
+  void _onSkipAndDrawAnother() {
     if (_currentSuggestion case final Suggestion suggestion) {
       _settings = _flowService.appendRecentSuggestionId(
         _settings,
@@ -340,7 +340,7 @@ class _SuggestionPageState extends State<SuggestionPage> {
               _SuggestionCard(
                 suggestion: suggestion,
                 onTry: () => _onTrySuggestion(suggestion),
-                onAnother: _onAnotherSuggestion,
+                onSkip: _onSkipAndDrawAnother,
               )
             else
               _EmptyCard(
@@ -448,12 +448,12 @@ class _SuggestionCard extends StatelessWidget {
   const _SuggestionCard({
     required this.suggestion,
     required this.onTry,
-    required this.onAnother,
+    required this.onSkip,
   });
 
   final Suggestion suggestion;
   final VoidCallback onTry;
-  final VoidCallback onAnother;
+  final VoidCallback onSkip;
 
   @override
   Widget build(BuildContext context) {
@@ -474,27 +474,19 @@ class _SuggestionCard extends StatelessWidget {
               estimatedMinutes: suggestion.estimatedMinutes,
             ),
             const SizedBox(height: 16),
-            Row(
-              children: [
-                Expanded(
-                  child: NeumorphicButtonFrame(
-                    isPrimary: true,
-                    child: FilledButton(
-                      onPressed: onTry,
-                      child: const Text('やってみる'),
-                    ),
-                  ),
-                ),
-                const SizedBox(width: 8),
-                Expanded(
-                  child: NeumorphicButtonFrame(
-                    child: OutlinedButton(
-                      onPressed: onAnother,
-                      child: const Text('別の提案'),
-                    ),
-                  ),
-                ),
-              ],
+            _CardActionButtons(
+              primaryButtonKey: const ValueKey<String>(
+                'suggestion-primary-action',
+              ),
+              primaryIcon: Icons.play_arrow_rounded,
+              primaryLabel: 'やってみる',
+              onPrimaryPressed: onTry,
+              secondaryButtonKey: const ValueKey<String>(
+                'suggestion-secondary-action',
+              ),
+              secondaryIcon: Icons.skip_next_rounded,
+              secondaryLabel: 'スキップして次の提案',
+              onSecondaryPressed: onSkip,
             ),
           ],
         ),
@@ -553,31 +545,80 @@ class _OngoingCard extends StatelessWidget {
                     ),
             ),
             const SizedBox(height: 16),
-            Row(
-              children: [
-                Expanded(
-                  child: NeumorphicButtonFrame(
-                    isPrimary: true,
-                    child: FilledButton(
-                      onPressed: onComplete,
-                      child: const Text('完了'),
-                    ),
-                  ),
-                ),
-                const SizedBox(width: 8),
-                Expanded(
-                  child: NeumorphicButtonFrame(
-                    child: OutlinedButton(
-                      onPressed: onSkip,
-                      child: const Text('スキップ'),
-                    ),
-                  ),
-                ),
-              ],
+            _CardActionButtons(
+              primaryButtonKey: const ValueKey<String>(
+                'ongoing-primary-action',
+              ),
+              primaryIcon: Icons.check_rounded,
+              primaryLabel: '完了',
+              onPrimaryPressed: onComplete,
+              secondaryButtonKey: const ValueKey<String>(
+                'ongoing-secondary-action',
+              ),
+              secondaryIcon: Icons.skip_next_rounded,
+              secondaryLabel: 'スキップ',
+              onSecondaryPressed: onSkip,
             ),
           ],
         ),
       ),
+    );
+  }
+}
+
+/// カード内の主操作を強調し、副操作は大きなタップ領域を保ったまま控えめにする。
+class _CardActionButtons extends StatelessWidget {
+  const _CardActionButtons({
+    required this.primaryButtonKey,
+    required this.primaryIcon,
+    required this.primaryLabel,
+    required this.onPrimaryPressed,
+    required this.secondaryButtonKey,
+    required this.secondaryIcon,
+    required this.secondaryLabel,
+    required this.onSecondaryPressed,
+  });
+
+  final Key primaryButtonKey;
+  final IconData primaryIcon;
+  final String primaryLabel;
+  final VoidCallback onPrimaryPressed;
+  final Key secondaryButtonKey;
+  final IconData secondaryIcon;
+  final String secondaryLabel;
+  final VoidCallback onSecondaryPressed;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        SizedBox(
+          height: 56,
+          child: NeumorphicButtonFrame(
+            isPrimary: true,
+            child: FilledButton.icon(
+              key: primaryButtonKey,
+              onPressed: onPrimaryPressed,
+              icon: Icon(primaryIcon),
+              label: Text(
+                primaryLabel,
+                style: const TextStyle(fontWeight: FontWeight.bold),
+              ),
+            ),
+          ),
+        ),
+        const SizedBox(height: 4),
+        SizedBox(
+          height: 48,
+          child: TextButton.icon(
+            key: secondaryButtonKey,
+            onPressed: onSecondaryPressed,
+            icon: Icon(secondaryIcon),
+            label: Text(secondaryLabel),
+          ),
+        ),
+      ],
     );
   }
 }
