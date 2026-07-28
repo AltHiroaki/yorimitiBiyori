@@ -71,9 +71,19 @@ void main() {
     expect(find.text('スキップして次の提案'), findsOneWidget);
   });
 
-  testWidgets('OS のダークモード設定に追従して darkTheme が使われる', (tester) async {
+  testWidgets('「システム」を選んでいると OS のダークモード設定に追従する', (tester) async {
     tester.platformDispatcher.platformBrightnessTestValue = Brightness.dark;
     addTearDown(tester.platformDispatcher.clearPlatformBrightnessTestValue);
+    // デフォルトはライト固定なので、追従させるには system を保存しておく。
+    SharedPreferences.setMockInitialValues({
+      settingsPreferenceKey: jsonEncode(
+        const UserSettings(
+          firstLaunchCompleted: true,
+          themeMode: ThemeModeSetting.system,
+        ).toJson(),
+      ),
+    });
+    rootBundle.clear();
 
     await tester.pumpWidget(const YorimichiBiyoriApp());
     await tester.pumpAndSettle();
@@ -91,8 +101,15 @@ void main() {
     tester.view.physicalSize = const Size(800, 2400);
     tester.view.devicePixelRatio = 1.0;
     addTearDown(tester.view.reset);
-    tester.platformDispatcher.platformBrightnessTestValue = Brightness.dark;
-    addTearDown(tester.platformDispatcher.clearPlatformBrightnessTestValue);
+    SharedPreferences.setMockInitialValues({
+      settingsPreferenceKey: jsonEncode(
+        const UserSettings(
+          firstLaunchCompleted: true,
+          themeMode: ThemeModeSetting.dark,
+        ).toJson(),
+      ),
+    });
+    rootBundle.clear();
 
     await tester.pumpWidget(const YorimichiBiyoriApp());
     await tester.pumpAndSettle();
@@ -157,6 +174,20 @@ void main() {
     );
   });
 
+  testWidgets('テーマ未保存のときは端末設定によらずライトで起動する', (tester) async {
+    SharedPreferences.setMockInitialValues({});
+    rootBundle.clear();
+    // 端末がダークモードでもライト固定になることを確かめる。
+    tester.platformDispatcher.platformBrightnessTestValue = Brightness.dark;
+    addTearDown(tester.platformDispatcher.clearPlatformBrightnessTestValue);
+
+    await tester.pumpWidget(const YorimichiBiyoriApp());
+    await tester.pumpAndSettle();
+
+    final materialApp = tester.widget<MaterialApp>(find.byType(MaterialApp));
+    expect(materialApp.themeMode, ThemeMode.light);
+  });
+
   testWidgets('保存済みのテーマモード（ダーク）で起動できる', (tester) async {
     SharedPreferences.setMockInitialValues({
       settingsPreferenceKey: jsonEncode(
@@ -179,11 +210,12 @@ void main() {
   });
 
   testWidgets('ダークモードでもオンボーディングを描画できる', (tester) async {
-    tester.platformDispatcher.platformBrightnessTestValue = Brightness.dark;
-    addTearDown(tester.platformDispatcher.clearPlatformBrightnessTestValue);
     SharedPreferences.setMockInitialValues({
       settingsPreferenceKey: jsonEncode(
-        const UserSettings(firstLaunchCompleted: false).toJson(),
+        const UserSettings(
+          firstLaunchCompleted: false,
+          themeMode: ThemeModeSetting.dark,
+        ).toJson(),
       ),
     });
     rootBundle.clear();
