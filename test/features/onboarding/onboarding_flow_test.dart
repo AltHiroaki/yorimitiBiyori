@@ -50,17 +50,38 @@ void main() {
     await tester.pumpAndSettle();
 
     expect(find.text('よりみち日和へようこそ'), findsOneWidget);
+    expect(find.text('ステップ 1 / 3'), findsOneWidget);
+    expect(find.text('好きなことを選ぶ'), findsOneWidget);
+    expect(find.text('空き時間にそっと届く'), findsOneWidget);
+    expect(find.text('やってみたら記録に残る'), findsOneWidget);
+    expect(find.text('気分じゃなければ次へ。送った提案はあとで戻せます。'), findsOneWidget);
 
     await tester.tap(find.text('はじめる'));
     await tester.pumpAndSettle();
 
     expect(find.text('興味のあるよりみちを選んでください'), findsOneWidget);
+    expect(find.text('ステップ 2 / 3'), findsOneWidget);
+    expect(
+      find.text(
+        '選んだカテゴリの中から提案します。'
+        '多めに選ぶほど、提案の幅が広がります。あとから変えられます。',
+      ),
+      findsOneWidget,
+    );
     expect(find.text('3つ選択中'), findsOneWidget);
 
     await tester.tap(find.text('次へ'));
     await tester.pumpAndSettle();
 
     expect(find.text('よりみちのきっかけを通知します'), findsOneWidget);
+    expect(find.text('ステップ 3 / 3'), findsOneWidget);
+    expect(
+      find.text(
+        '初期設定では17:00〜21:00の間に、1日1回だけお知らせします。'
+        '時間帯はあとから設定で変えられます。',
+      ),
+      findsOneWidget,
+    );
 
     await tester.tap(find.text('あとで'));
     await tester.pumpAndSettle();

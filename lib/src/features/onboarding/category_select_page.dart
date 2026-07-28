@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../models/interest_category.dart';
 import '../../widgets/neumorphic_surface.dart';
+import 'onboarding_progress.dart';
 
 /// オンボーディングのカテゴリ選択ステップ。
 class CategorySelectPage extends StatefulWidget {
@@ -50,14 +51,14 @@ class _CategorySelectPageState extends State<CategorySelectPage> {
         child: ListView(
           padding: const EdgeInsets.all(24),
           children: [
-            const _OnboardingProgress(currentStep: 2),
+            const OnboardingProgress(currentStep: 2),
             const SizedBox(height: 28),
             const Text(
               '興味のあるよりみちを選んでください',
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 8),
-            const Text('気になるカテゴリを複数選べます。詳細設定はあとから調整できます。'),
+            const Text('選んだカテゴリの中から提案します。多めに選ぶほど、提案の幅が広がります。あとから変えられます。'),
             const SizedBox(height: 24),
             Wrap(
               spacing: 8,
@@ -95,36 +96,6 @@ class _CategorySelectPageState extends State<CategorySelectPage> {
           ),
         ),
       ),
-    );
-  }
-}
-
-class _OnboardingProgress extends StatelessWidget {
-  const _OnboardingProgress({required this.currentStep});
-
-  final int currentStep;
-
-  @override
-  Widget build(BuildContext context) {
-    final colorScheme = Theme.of(context).colorScheme;
-
-    return Row(
-      children: [
-        for (var step = 1; step <= 3; step++) ...[
-          Expanded(
-            child: Container(
-              height: 6,
-              decoration: BoxDecoration(
-                color: step <= currentStep
-                    ? colorScheme.primary
-                    : colorScheme.surfaceContainerHighest,
-                borderRadius: BorderRadius.circular(999),
-              ),
-            ),
-          ),
-          if (step != 3) const SizedBox(width: 8),
-        ],
-      ],
     );
   }
 }

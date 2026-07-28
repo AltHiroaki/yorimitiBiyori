@@ -193,6 +193,8 @@ void main() {
 
     expect(find.text('よりみち日和へようこそ'), findsOneWidget);
 
+    await tester.ensureVisible(find.text('はじめる'));
+    await tester.pumpAndSettle();
     await tester.tap(find.text('はじめる'));
     await tester.pumpAndSettle();
     expect(find.text('興味のあるよりみちを選んでください'), findsOneWidget);
