@@ -4,12 +4,11 @@ import '../models/suggestion_record.dart';
 import 'neumorphic_surface.dart';
 
 /// 選択されたフィードバックで履歴を保存する処理。呼び出し側（提案画面）が渡す。
-typedef CompletionSaveCallback = Future<void> Function(
-  SuggestionFeedback feedback,
-);
+typedef CompletionSaveCallback =
+    Future<void> Function(SuggestionFeedback feedback);
 
 /// 完了モーダル（仕様書 3.6）を表示する。
-/// 「履歴に保存」で [onSave] を実行し、成功したら true を返して閉じる。
+/// 「これで完了」で [onSave] を実行し、成功したら true を返して閉じる。
 /// モーダル外タップなどで閉じた場合は null を返す（履歴には保存しない）。
 Future<bool?> showCompletionModal(
   BuildContext context, {
@@ -39,8 +38,9 @@ const List<_FeedbackChoice> _feedbackChoices = [
 
 /// フィードバックの表示ラベル（絵文字付き）。履歴詳細ダイアログでも使う。
 String feedbackDisplayLabel(SuggestionFeedback feedback) {
-  final choice = _feedbackChoices
-      .firstWhere((choice) => choice.feedback == feedback);
+  final choice = _feedbackChoices.firstWhere(
+    (choice) => choice.feedback == feedback,
+  );
   return '${choice.emoji} ${choice.label}';
 }
 
@@ -60,7 +60,7 @@ class _CompletionModalState extends State<CompletionModal> {
   // UI プロトタイプに合わせ、初期選択は「よかった」にする。
   SuggestionFeedback _selectedFeedback = SuggestionFeedback.good;
 
-  /// 保存処理中は「履歴に保存」を無効化し、連打による二重登録を防ぐ。
+  /// 保存処理中は「これで完了」を無効化し、連打による二重登録を防ぐ。
   bool _isSaving = false;
 
   Future<void> _handleSave() async {
@@ -73,9 +73,9 @@ class _CompletionModalState extends State<CompletionModal> {
         return;
       }
       setState(() => _isSaving = false);
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('保存に失敗しました')),
-      );
+      ScaffoldMessenger.of(
+        context,
+      ).showSnackBar(const SnackBar(content: Text('保存に失敗しました')));
       return;
     }
 
@@ -83,9 +83,9 @@ class _CompletionModalState extends State<CompletionModal> {
       return;
     }
     // ScaffoldMessenger はモーダルより上の階層にあるため、閉じたあとも表示され続ける。
-    ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(content: Text('履歴に保存しました')),
-    );
+    ScaffoldMessenger.of(
+      context,
+    ).showSnackBar(const SnackBar(content: Text('記録しました')));
     Navigator.of(context).pop(true);
   }
 
@@ -139,7 +139,7 @@ class _CompletionModalState extends State<CompletionModal> {
               isEnabled: !_isSaving,
               child: FilledButton(
                 onPressed: _isSaving ? null : _handleSave,
-                child: const Text('履歴に保存'),
+                child: const Text('これで完了'),
               ),
             ),
           ),

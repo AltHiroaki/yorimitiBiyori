@@ -253,9 +253,7 @@ void main() {
       return widget is AnimatedSwitcher && widget.child is KeyedSubtree;
     });
 
-    final animatedSwitcher = tester.widget<AnimatedSwitcher>(
-      appShellSwitcher,
-    );
+    final animatedSwitcher = tester.widget<AnimatedSwitcher>(appShellSwitcher);
     expect(animatedSwitcher.duration, const Duration(milliseconds: 200));
     expect(find.byKey(const ValueKey<int>(0)), findsOneWidget);
 
@@ -268,8 +266,7 @@ void main() {
     expect(find.byKey(const ValueKey<int>(1)), findsOneWidget);
   });
 
-  testWidgets('完了時は履歴タブへ自動遷移し、保存した履歴IDをハイライト対象に渡す',
-      (tester) async {
+  testWidgets('完了時は履歴タブへ自動遷移し、保存した履歴IDをハイライト対象に渡す', (tester) async {
     tester.view.physicalSize = const Size(800, 2400);
     tester.view.devicePixelRatio = 1.0;
     addTearDown(tester.view.reset);
@@ -285,10 +282,13 @@ void main() {
     await tester.pumpAndSettle();
     await tester.tap(find.text('🙂 普通'));
     await tester.pumpAndSettle();
-    await tester.tap(find.text('履歴に保存'));
+    await tester.tap(find.text('これで完了'));
     await tester.pumpAndSettle();
 
-    expect(find.byKey(const ValueKey<String>('completion-history')), findsOneWidget);
+    expect(
+      find.byKey(const ValueKey<String>('completion-history')),
+      findsOneWidget,
+    );
     expect(find.text('最近の履歴'), findsOneWidget);
 
     final historyPage = tester.widget<HistoryPage>(find.byType(HistoryPage));
@@ -313,8 +313,7 @@ void main() {
     expect(find.text('まだ履歴はありません'), findsOneWidget);
   });
 
-  testWidgets('スキップ履歴を復活すると提案タブの実施中カードへ自動遷移する',
-      (tester) async {
+  testWidgets('スキップ履歴を復活すると提案タブの実施中カードへ自動遷移する', (tester) async {
     final skippedRecord = SuggestionRecord(
       id: 'record_skipped',
       suggestionId: 'music_jazz_focus',
@@ -349,10 +348,7 @@ void main() {
     expect(find.text('作業用にジャズを1曲だけ流す'), findsOneWidget);
 
     final preferences = await SharedPreferences.getInstance();
-    expect(
-      preferences.getString(ongoingSuggestionPreferenceKey),
-      isNotNull,
-    );
+    expect(preferences.getString(ongoingSuggestionPreferenceKey), isNotNull);
 
     await tester.tap(find.text('履歴'));
     await tester.pumpAndSettle();
