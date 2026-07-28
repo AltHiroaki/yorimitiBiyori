@@ -222,7 +222,12 @@ void main() {
     expect(find.text('ジャズを1曲流す'), findsOneWidget);
     expect(find.text('ジャズを1曲流すの説明文。'), findsOneWidget);
     expect(find.widgetWithText(Chip, 'ジャズ'), findsOneWidget);
-    expect(find.text('約5分'), findsOneWidget);
+    final estimatedTimeText = find.text('目安 約5分');
+    expect(estimatedTimeText, findsOneWidget);
+    expect(
+      find.ancestor(of: estimatedTimeText, matching: find.byType(Chip)),
+      findsNothing,
+    );
     expect(find.text('やってみる'), findsOneWidget);
     expect(find.text('スキップして次の提案'), findsOneWidget);
   });
