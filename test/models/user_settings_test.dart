@@ -13,7 +13,7 @@ void main() {
     expect(settings.notificationEndTime, '21:00');
     expect(settings.firstLaunchCompleted, isFalse);
     expect(settings.recentSuggestionIds, isEmpty);
-    expect(settings.themeMode, ThemeModeSetting.system);
+    expect(settings.themeMode, ThemeModeSetting.light);
   });
 
   test('fromJson/toJson が往復する', () {
@@ -123,7 +123,7 @@ void main() {
     expect(settings.notificationEndTime, '21:00');
     expect(settings.firstLaunchCompleted, isFalse);
     expect(settings.recentSuggestionIds, isEmpty);
-    expect(settings.themeMode, ThemeModeSetting.system);
+    expect(settings.themeMode, ThemeModeSetting.light);
   });
 
   test('完全に不正な JSON（空 Map）でもクラッシュせずデフォルト値になる', () {
@@ -132,6 +132,13 @@ void main() {
     expect(settings.selectedCategories, ['music', 'read', 'movie']);
     expect(settings.notificationStartTime, '17:00');
     expect(settings.notificationEndTime, '21:00');
+    expect(settings.themeMode, ThemeModeSetting.light);
+  });
+
+  test('保存済みの system は初期値変更後も維持される', () {
+    final settings = UserSettings.fromJson({'theme_mode': 'system'});
+
+    expect(settings.themeMode, ThemeModeSetting.system);
   });
 
   test('copyWith で一部フィールドだけ変更できる', () {

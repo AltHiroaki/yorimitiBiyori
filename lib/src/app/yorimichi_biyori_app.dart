@@ -26,7 +26,9 @@ class YorimichiBiyoriApp extends StatefulWidget {
 
 class _YorimichiBiyoriAppState extends State<YorimichiBiyoriApp> {
   late final SettingsRepository _settingsRepository;
-  ThemeModeSetting _themeModeSetting = ThemeModeSetting.system;
+  /// 保存済み設定を読み込むまでの暫定値。デフォルトと揃えることで、
+  /// 端末がダークでも起動直後に一瞬ダークで描画されるのを防ぐ。
+  ThemeModeSetting _themeModeSetting = defaultThemeMode;
 
   @override
   void initState() {

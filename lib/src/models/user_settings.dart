@@ -17,7 +17,8 @@ enum ThemeModeSetting {
   light,
   dark;
 
-  /// 保存値（`name` 文字列）から復元する。不明な値は [system] にフォールバックする。
+  /// 保存値（`name` 文字列）から復元する。
+  /// 不明な値・未保存は [defaultThemeMode] にフォールバックする。
   static ThemeModeSetting fromJson(dynamic value) {
     if (value is String) {
       for (final setting in ThemeModeSetting.values) {
@@ -26,9 +27,15 @@ enum ThemeModeSetting {
         }
       }
     }
-    return ThemeModeSetting.system;
+    return defaultThemeMode;
   }
 }
+
+/// 表示テーマのデフォルト（issue #131）。
+/// ニューモーフィズムのハイライト・影は明るい背景を前提に設計しているため、
+/// 端末設定に追従せずライトを基本の見た目とする。
+/// 「システム」はユーザーが明示的に選べば引き続き使える。
+const ThemeModeSetting defaultThemeMode = ThemeModeSetting.light;
 
 /// ユーザー設定（選択カテゴリ・カテゴリ別詳細設定・通知設定・直近提案IDなど）。
 class UserSettings {
@@ -40,7 +47,7 @@ class UserSettings {
     this.notificationEndTime = defaultNotificationEndTime,
     this.firstLaunchCompleted = false,
     this.recentSuggestionIds = const [],
-    this.themeMode = ThemeModeSetting.system,
+    this.themeMode = defaultThemeMode,
   });
 
   /// 選択中の興味カテゴリ id（例：`music`）。
