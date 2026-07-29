@@ -472,6 +472,7 @@ class _SuggestionCard extends StatelessWidget {
               recipe: suggestion.recipe,
               tags: suggestion.tags,
               estimatedMinutes: suggestion.estimatedMinutes,
+              whereToTry: suggestion.whereToTry,
             ),
             const SizedBox(height: 16),
             _CardActionButtons(
@@ -534,6 +535,7 @@ class _OngoingCard extends StatelessWidget {
               recipe: suggestion.recipe,
               tags: suggestion.tags,
               estimatedMinutes: suggestion.estimatedMinutes,
+              whereToTry: suggestion.whereToTry,
               footnote: startedAt == null
                   ? null
                   : Text(

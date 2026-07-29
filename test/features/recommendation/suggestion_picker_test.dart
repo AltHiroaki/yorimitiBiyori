@@ -281,6 +281,7 @@ Suggestion _suggestion({
     description: 'description',
     category: category,
     tags: tags,
+    whereToTry: 'where to try',
     estimatedMinutes: 10,
     weight: weight,
   );

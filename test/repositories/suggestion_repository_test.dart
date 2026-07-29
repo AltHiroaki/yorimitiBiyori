@@ -19,6 +19,7 @@ void main() {
     "description": "歌詞のないジャズを1曲だけ流す。",
     "category": "music",
     "tags": ["ジャズ", "作業向け", "無料"],
+    "where_to_try": "音楽配信アプリで「ジャズ」と検索して探す。",
     "estimated_minutes": 5,
     "weight": 1.2
   },
@@ -106,9 +107,11 @@ void main() {
       suggestions.every((suggestion) {
         return suggestion.title.isNotEmpty &&
             suggestion.description.isNotEmpty &&
-            suggestion.tags.isNotEmpty;
+            suggestion.tags.isNotEmpty &&
+            suggestion.whereToTry.isNotEmpty;
       }),
       isTrue,
+      reason: '全提案にtitle・description・tags・where_to_tryが必要。',
     );
     expect(
       suggestions.every(

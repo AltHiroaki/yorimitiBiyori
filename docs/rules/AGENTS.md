@@ -38,7 +38,7 @@ The core experience is:
 2. In 提案設定, the user picks categories, then sets each category's detail settings.
 3. The app sends one local notification per day at a random time within the user-configured range (default 17:00–21:00). The wording is a soft invitation that does NOT name a duration (e.g. "暇な時間って存在しますか？"). There are no time-selection notification actions.
 4. The user taps the notification body, which opens the suggestion screen (suggestion produced from the saved category + detail settings).
-5. The suggestion screen shows one matching suggestion with title, description, tags, and a subtle "目安 約N分" text line. Estimated time is reference information, not a tag, so never render it as a Chip. Cook suggestions additionally carry a `recipe`, which the user can expand via "詳しく見る"; other categories have no expandable detail.
+5. The suggestion screen shows one matching suggestion with title, description, tags, a subtle "目安 約N分" text line, and a where-to-try (入手先) line. Estimated time is reference information, not a tag, so never render it as a Chip. Cook suggestions additionally carry a `recipe`, which the user can expand via "詳しく見る"; other categories have no expandable detail.
 6. "やってみる" opens a completion modal with feedback chips (よかった / 普通 / 合わなかった) and saves a done record.
 7. "スキップして次の提案" records the current suggestion as skipped and re-draws with the same conditions.
 
@@ -54,7 +54,7 @@ Do not implement or generate iOS platform files for the MVP unless explicitly re
 
 Bottom NavigationBar with exactly 3 tabs. There is **no home screen**; the suggestion tab is the top screen.
 
-- Tab 1 提案 (suggestion): current-conditions card (selected categories + active detail settings) + "今日のよりみち" suggestion card (title, description, expandable recipe for cook suggestions, tags, subtle estimated-time text) + info card
+- Tab 1 提案 (suggestion): current-conditions card (selected categories + active detail settings) + "今日のよりみち" suggestion card (title, description, expandable recipe for cook suggestions, tags, subtle estimated-time text, where-to-try text) + info card
 - Tab 2 履歴 (history): summary (done count / skipped count / total minutes) + recent records list; empty state with CTA to the suggestion tab
 - Tab 3 設定 (settings): Google account row (advanced phase, show as 未連携), suggestion settings row, interest categories, notification time, notification toggle, history deletion with inline confirm, about
 - Sub screen 提案設定 (suggestion settings): **two-stage** editor — stage 1 category multi-select, stage 2 per-category detail-setting groups — with AppBar back button, reachable from both the suggestion tab and the settings tab
@@ -87,7 +87,7 @@ The MVP includes only:
 - interest category registration (MVP 4 categories, multi-select)
 - suggestion settings screen (two-stage: category selection → per-category detail settings; MVP is one "genre" group per category)
 - local notification once per day at a random time within the configured range, soft wording without naming a duration, no time-selection actions
-- suggestion display matching the category + detail-setting conditions
+- suggestion display matching the category + detail-setting conditions (card shows where-to-try)
 - re-suggestion ("スキップして次の提案", records the shown suggestion as skipped)
 - completion modal with feedback (good / normal / bad) saving a done record
 - history display (done count, skipped count, total minutes, recent list, empty state)
@@ -194,7 +194,7 @@ Move these operations out of page widgets when they grow:
 
 Manage suggestion candidates in category-specific files under `assets/data/suggestions/`. The filename must match the `category` id: `music.json`, `cook.json`, `read.json`, `movie.json`, or `walk.json`. Keep at least 50 matching suggestions for every detail-setting option in `InterestCategories.all`.
 
-> Every file under `assets/data/suggestions/` uses the same ver6 schema (per-category ids, `tags` = detail-setting values, `estimated_minutes`, `weight`, plus `recipe` on cook entries only). It no longer uses `min_minutes` / `max_minutes` / `intensity` / `location_type` / `detail` / `budget_yen` / `where_to_try`. The ver6 PDF `difficulty` field is not used in this project.
+> Every file under `assets/data/suggestions/` uses the same ver6 schema (per-category ids, `tags` = detail-setting values, `where_to_try`, `estimated_minutes`, `weight`, plus `recipe` on cook entries only). It no longer uses `min_minutes` / `max_minutes` / `intensity` / `location_type` / `detail` / `budget_yen`. The ver6 PDF `difficulty` field is not used in this project.
 
 When editing suggestion data:
 
@@ -212,8 +212,9 @@ When editing suggestion data:
 - supplemental descriptive tags are allowed, but every detail-setting group for the category must have at least one matching option in `tags`; a tag defined as another category's detail-setting option is invalid
 - every `cook` entry's `tags` must include one of the `cooking_method` options (蒸す/炒める/揚げる/煮る/焼く/生・和える/レンジ・時短) in addition to its 味覚・ジャンル tag — a 料理 entry missing this tag can never be selected once a user filters by cooking method
 - every detail-setting option in `InterestCategories.all` must have at least 50 matching entries in its category
+- `where_to_try` is required on every entry (all categories) and must describe where or how to obtain/practice the suggestion (e.g. a search keyword for a streaming app, a store, a genre shelf)
 - `estimated_minutes` is the rough duration used for history total-minutes aggregation
-- there is **no** `min_minutes` / `max_minutes` / `intensity` / `location_type` / `detail` / `budget_yen` / `where_to_try`
+- there is **no** `min_minutes` / `max_minutes` / `intensity` / `location_type` / `detail` / `budget_yen`
 - update Dart models when the JSON structure changes
 
 Representative data shape:
@@ -225,6 +226,7 @@ Representative data shape:
   "description": "歌詞のないジャズを1曲、作業や勉強のBGMにしてみる。集中したいときに向いた軽いよりみちです。",
   "category": "music",
   "tags": ["ジャズ", "作業向け", "無料"],
+  "where_to_try": "音楽配信アプリで「作業用 ジャズ」と検索してプレイリストを開く。",
   "estimated_minutes": 5,
   "weight": 1.2
 }

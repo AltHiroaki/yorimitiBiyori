@@ -9,6 +9,7 @@ void main() {
     'description': '歌詞のないジャズを1曲、作業や勉強のBGMにしてみる。',
     'category': 'music',
     'tags': ['ジャズ', '作業向け', '無料'],
+    'where_to_try': '音楽配信アプリで「ジャズ」と検索して探す。',
     'estimated_minutes': 5,
     'weight': 1.2,
   };
@@ -20,6 +21,7 @@ void main() {
     'recipe': '材料：\nご飯1膳、鶏むね肉100g\n\n手順：\n1. 鶏肉を焼く。\n2. ご飯にのせる。',
     'category': 'cook',
     'tags': ['高タンパク', '丼', '和食'],
+    'where_to_try': '近所のスーパーで材料をそろえて、自宅のキッチンで作る。',
     'estimated_minutes': 20,
     'weight': 1.1,
   };
@@ -42,6 +44,13 @@ void main() {
 
   test('必須フィールドが欠けている場合は null を返す（例外を投げない）', () {
     final brokenJson = Map<String, dynamic>.from(validJson)..remove('title');
+
+    expect(Suggestion.fromJson(brokenJson), isNull);
+  });
+
+  test('where_to_tryが欠けている場合は null を返す（例外を投げない）', () {
+    final brokenJson = Map<String, dynamic>.from(validJson)
+      ..remove('where_to_try');
 
     expect(Suggestion.fromJson(brokenJson), isNull);
   });

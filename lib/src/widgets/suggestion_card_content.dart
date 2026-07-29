@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'neumorphic_surface.dart';
 
 /// 提案カードの共通レイアウト：
-/// ヘッダー → タイトル → 説明 → レシピ → タグ → 目安時間 → 補足行 の並び。
+/// ヘッダー → タイトル → 説明 → レシピ → タグ → 目安時間 → 入手先 → 補足行 の並び。
 /// 提案タブのカード・完了演出の飛行カード・復活ダイアログで共用し、
 /// 表示しない要素は null で省く（箇所ごとの差分はパラメータで吸収する）。
 ///
@@ -20,6 +20,7 @@ class SuggestionCardContent extends StatelessWidget {
     this.recipe,
     this.tags,
     this.estimatedMinutes,
+    this.whereToTry,
     this.footnote,
     this.titleSpacing = 8,
     this.sectionSpacing = 12,
@@ -49,7 +50,10 @@ class SuggestionCardContent extends StatelessWidget {
   /// null なら表示しない。
   final int? estimatedMinutes;
 
-  /// 目安時間の下に表示する補足行（例：実施中カードの「開始：HH:mm」）。
+  /// 入手先・実践先の案内（例：「音楽配信アプリで〜を検索する」）。null なら表示しない。
+  final String? whereToTry;
+
+  /// 入手先の下に表示する補足行（例：実施中カードの「開始：HH:mm」）。
   final Widget? footnote;
 
   /// ヘッダー・タイトル・説明の間の余白。
@@ -119,6 +123,10 @@ class SuggestionCardContent extends StatelessWidget {
             '目安 約$estimatedMinutes分',
             style: TextStyle(fontSize: 13, color: colorScheme.onSurfaceVariant),
           ),
+        ],
+        if (whereToTry case final String whereToTry) ...[
+          const SizedBox(height: 4),
+          Text('入手先：$whereToTry'),
         ],
         if (footnote case final Widget footnote) ...[
           const SizedBox(height: 4),

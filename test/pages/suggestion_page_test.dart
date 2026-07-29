@@ -137,6 +137,7 @@ Map<String, dynamic> _suggestionJson({
   required List<String> tags,
   String? recipe,
   String category = 'music',
+  String whereToTry = '音楽配信アプリで検索する。',
 }) {
   return {
     'id': id,
@@ -144,6 +145,7 @@ Map<String, dynamic> _suggestionJson({
     'description': '$titleの説明文。',
     'category': category,
     'tags': tags,
+    'where_to_try': whereToTry,
     'estimated_minutes': 5,
     'weight': 1.0,
     'recipe': ?recipe,
@@ -228,6 +230,7 @@ void main() {
       find.ancestor(of: estimatedTimeText, matching: find.byType(Chip)),
       findsNothing,
     );
+    expect(find.text('入手先：音楽配信アプリで検索する。'), findsOneWidget);
     expect(find.text('やってみる'), findsOneWidget);
     expect(find.text('スキップして次の提案'), findsOneWidget);
   });
@@ -523,6 +526,7 @@ void main() {
 
     expect(find.text('実施中のよりみち'), findsOneWidget);
     expect(find.text('ジャズを1曲流す'), findsOneWidget);
+    expect(find.text('入手先：音楽配信アプリで検索する。'), findsOneWidget);
     expect(find.text('完了'), findsOneWidget);
     expect(find.text('スキップ'), findsOneWidget);
     expect(find.text('やってみる'), findsNothing);
