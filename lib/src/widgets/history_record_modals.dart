@@ -151,10 +151,13 @@ class _DoneSuggestionRecordDetailDialog extends StatelessWidget {
               ),
               const SizedBox(height: 14),
               // 復活ダイアログと同じ広めの余白でそろえる。
+              // レシピは提案タブと同じ「詳しく見る／レシピを閉じる」で開閉する
+              // （料理以外は recipe が null のため操作自体が出ない）。
               SuggestionCardContent(
                 title: suggestion.title,
                 titleMaxLines: null,
                 description: suggestion.description,
+                recipe: suggestion.recipe,
                 tags: suggestion.tags,
                 estimatedMinutes: suggestion.estimatedMinutes,
                 whereToTry: suggestion.whereToTry,
@@ -240,10 +243,13 @@ class _ReviveSuggestionDetailDialog extends StatelessWidget {
               const SizedBox(height: 14),
               // 既存の見た目を保つため、ダイアログはやや広めの余白を指定する。
               // タイトルはスクロールできるため折り返しを制限しない。
+              // レシピは実施済み詳細・提案タブと同じ操作で開閉する
+              // （料理以外は recipe が null のため操作自体が出ない）。
               SuggestionCardContent(
                 title: suggestion.title,
                 titleMaxLines: null,
                 description: suggestion.description,
+                recipe: suggestion.recipe,
                 tags: suggestion.tags,
                 estimatedMinutes: suggestion.estimatedMinutes,
                 whereToTry: suggestion.whereToTry,

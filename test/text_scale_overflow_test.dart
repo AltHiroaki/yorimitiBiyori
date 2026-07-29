@@ -8,6 +8,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:yorimichi_biyori/src/app/yorimichi_biyori_app.dart';
 import 'package:yorimichi_biyori/src/models/suggestion_record.dart';
 import 'package:yorimichi_biyori/src/models/user_settings.dart';
+import 'package:yorimichi_biyori/src/pages/history_page.dart';
 import 'package:yorimichi_biyori/src/repositories/records_repository.dart';
 import 'package:yorimichi_biyori/src/repositories/settings_repository.dart';
 
@@ -40,7 +41,7 @@ SuggestionRecord _longTitleRecord() {
     estimatedMinutes: 5,
     status: SuggestionRecordStatus.done,
     feedback: SuggestionFeedback.good,
-    createdAt: DateTime.utc(2026, 7, 1, 12),
+    createdAt: DateTime.now().subtract(const Duration(hours: 1)),
   );
 }
 
@@ -50,9 +51,10 @@ void main() {
       settingsPreferenceKey: jsonEncode(
         const UserSettings(firstLaunchCompleted: true).toJson(),
       ),
-      recordsPreferenceKey: jsonEncode(
-        [_longTitleRecord().toJson(), _longTitleRecord().toJson()],
-      ),
+      recordsPreferenceKey: jsonEncode([
+        _longTitleRecord().toJson(),
+        _longTitleRecord().toJson(),
+      ]),
     });
     rootBundle.clear();
   });
@@ -122,7 +124,22 @@ void main() {
     await tester.tap(find.text('履歴'));
     await tester.pumpAndSettle();
 
-    expect(find.text('最近の履歴'), findsOneWidget);
+    expect(find.text('今週'), findsOneWidget);
+    expect(find.text('全期間'), findsOneWidget);
+
+    final skippedFilter = find
+        .byKey(historySkippedStatusFilterKey)
+        .hitTestable();
+    await tester.dragUntilVisible(
+      skippedFilter,
+      find.byType(ListView),
+      const Offset(0, -120),
+    );
+    await tester.pumpAndSettle();
+    await tester.tap(skippedFilter);
+    await tester.pumpAndSettle();
+
+    expect(find.text('この条件の履歴はありません'), findsOneWidget);
   });
 
   testWidgets('文字サイズ最大でも履歴タブの空状態が崩れない', (tester) async {
@@ -137,6 +154,12 @@ void main() {
     await tester.tap(find.text('履歴'));
     await tester.pumpAndSettle();
 
+    await tester.dragUntilVisible(
+      find.text('まだ履歴はありません'),
+      find.byType(ListView),
+      const Offset(0, -120),
+    );
+    await tester.pumpAndSettle();
     expect(find.text('まだ履歴はありません'), findsOneWidget);
   });
 

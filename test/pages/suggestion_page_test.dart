@@ -4,6 +4,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:yorimichi_biyori/src/models/interest_category.dart';
 import 'package:yorimichi_biyori/src/models/ongoing_suggestion.dart';
 import 'package:yorimichi_biyori/src/models/suggestion_record.dart';
 import 'package:yorimichi_biyori/src/models/user_settings.dart';
@@ -152,6 +153,11 @@ Map<String, dynamic> _suggestionJson({
   };
 }
 
+/// 条件カードの中から、指定ラベルの [FilterChip] を取り出す。
+FilterChip _filterChipFor(WidgetTester tester, String label) {
+  return tester.widget<FilterChip>(find.widgetWithText(FilterChip, label));
+}
+
 Future<_FakeSettingsRepository> _pumpPage(
   WidgetTester tester, {
   required List<Map<String, dynamic>> suggestions,
@@ -213,11 +219,14 @@ void main() {
       ),
     );
 
-    // 条件カード：選択カテゴリのチップ＋詳細設定の要約。
+    // 条件カード：全カテゴリのチップ（選択中のみ selected）＋詳細設定の要約。
     expect(find.text('現在の提案条件'), findsOneWidget);
-    expect(find.text('🎵 音楽'), findsOneWidget);
+    expect(find.text('1つ選択中'), findsOneWidget);
+    expect(find.byType(FilterChip), findsNWidgets(InterestCategories.all.length));
+    expect(_filterChipFor(tester, '🎵 音楽').selected, isTrue);
+    expect(_filterChipFor(tester, '🍳 料理').selected, isFalse);
     expect(find.text('詳細設定：ジャズ'), findsOneWidget);
-    expect(find.text('提案設定 >'), findsOneWidget);
+    expect(find.text('変更 >'), findsOneWidget);
 
     // 今日のよりみちカード：ジャズ指定なので music_a が確定で選ばれる。
     expect(find.text('今日のよりみち'), findsOneWidget);
@@ -814,7 +823,7 @@ void main() {
       settings: const UserSettings(selectedCategories: ['music']),
     );
 
-    await tester.tap(find.text('提案設定 >'));
+    await tester.tap(find.text('変更 >'));
     await tester.pumpAndSettle();
     expect(find.byType(SuggestionSettingsPage), findsOneWidget);
 
@@ -830,8 +839,123 @@ void main() {
     await tester.pageBack();
     await tester.pumpAndSettle();
 
-    expect(find.text('🚶 散歩'), findsOneWidget);
+    expect(_filterChipFor(tester, '🚶 散歩').selected, isTrue);
+    expect(find.text('2つ選択中'), findsOneWidget);
     expect(find.text('詳細設定：ジャズ'), findsOneWidget);
+  });
+
+  testWidgets('条件カードのチップをタップするとカテゴリが外れ、保存されて再抽選される', (tester) async {
+    final settingsRepository = await _pumpPage(
+      tester,
+      suggestions: [
+        _suggestionJson(id: 'music_a', title: 'ジャズを1曲流す', tags: ['ジャズ']),
+        _suggestionJson(
+          id: 'cook_a',
+          title: '卵焼きを作る',
+          tags: ['和食'],
+          category: 'cook',
+        ),
+      ],
+      settings: const UserSettings(selectedCategories: ['music', 'cook']),
+    );
+
+    await tester.tap(find.text('🍳 料理'));
+    await tester.pumpAndSettle();
+
+    // 選択解除がその場で保存される。
+    expect(settingsRepository.savedSettingsLog, hasLength(1));
+    expect(settingsRepository.savedSettingsLog.single.selectedCategories, [
+      'music',
+    ]);
+    expect(_filterChipFor(tester, '🍳 料理').selected, isFalse);
+    expect(find.text('1つ選択中'), findsOneWidget);
+    // 音楽だけが条件に残るため、料理の提案は表示されない。
+    expect(find.text('ジャズを1曲流す'), findsOneWidget);
+    expect(find.text('卵焼きを作る'), findsNothing);
+  });
+
+  testWidgets('未選択のチップをタップするとカテゴリが追加され、定義順で保存される', (tester) async {
+    final settingsRepository = await _pumpPage(
+      tester,
+      suggestions: [
+        _suggestionJson(id: 'music_a', title: 'ジャズを1曲流す', tags: ['ジャズ']),
+      ],
+      settings: const UserSettings(selectedCategories: ['movie', 'music']),
+    );
+
+    await tester.tap(find.text('📖 読書'));
+    await tester.pumpAndSettle();
+
+    // 保存順はマスター定義（音楽→料理→読書→映画）に揃える。
+    expect(settingsRepository.savedSettingsLog.single.selectedCategories, [
+      'music',
+      'read',
+      'movie',
+    ]);
+    expect(_filterChipFor(tester, '📖 読書').selected, isTrue);
+    expect(find.text('3つ選択中'), findsOneWidget);
+  });
+
+  testWidgets('`all` にない発展カテゴリの選択もチップに残り、解除できる', (tester) async {
+    final settingsRepository = await _pumpPage(
+      tester,
+      suggestions: [
+        _suggestionJson(id: 'music_a', title: 'ジャズを1曲流す', tags: ['ジャズ']),
+      ],
+      settings: const UserSettings(selectedCategories: ['music', 'walk']),
+    );
+
+    // MVP コア 4 種＋選択中の散歩（発展カテゴリ）で 5 チップになる。
+    expect(
+      find.byType(FilterChip),
+      findsNWidgets(InterestCategories.all.length + 1),
+    );
+    expect(_filterChipFor(tester, '🚶 散歩').selected, isTrue);
+
+    await tester.tap(find.text('🚶 散歩'));
+    await tester.pumpAndSettle();
+
+    expect(settingsRepository.savedSettingsLog.single.selectedCategories, [
+      'music',
+    ]);
+  });
+
+  testWidgets('発展カテゴリを選んだままコアカテゴリを切り替えても選択が消えない', (tester) async {
+    final settingsRepository = await _pumpPage(
+      tester,
+      suggestions: [
+        _suggestionJson(id: 'music_a', title: 'ジャズを1曲流す', tags: ['ジャズ']),
+      ],
+      settings: const UserSettings(selectedCategories: ['music', 'walk']),
+    );
+
+    await tester.tap(find.text('🍳 料理'));
+    await tester.pumpAndSettle();
+
+    // コアは定義順、`all` にない散歩は末尾に残す。
+    expect(settingsRepository.savedSettingsLog.single.selectedCategories, [
+      'music',
+      'cook',
+      'walk',
+    ]);
+  });
+
+  testWidgets('選択中カテゴリが1件のときは解除できず、SnackBarで知らせる', (tester) async {
+    final settingsRepository = await _pumpPage(
+      tester,
+      suggestions: [
+        _suggestionJson(id: 'music_a', title: 'ジャズを1曲流す', tags: ['ジャズ']),
+      ],
+      settings: const UserSettings(selectedCategories: ['music']),
+    );
+
+    await tester.tap(find.text('🎵 音楽'));
+    await tester.pumpAndSettle();
+
+    expect(find.text('カテゴリは1つ以上選んでください'), findsOneWidget);
+    expect(settingsRepository.savedSettingsLog, isEmpty);
+    expect(_filterChipFor(tester, '🎵 音楽').selected, isTrue);
+    expect(find.text('1つ選択中'), findsOneWidget);
   });
 
   testWidgets('表示中提案IDが復元され、直近リストを消費しない', (tester) async {
