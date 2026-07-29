@@ -107,6 +107,10 @@ void main() {
     await tester.tap(skipButton);
     await tester.pumpAndSettle();
 
+    // 提案カードはリスト上部にあるため、いったん先頭まで戻してから探す。
+    await tester.drag(find.byType(ListView), const Offset(0, 600));
+    await tester.pumpAndSettle();
+
     final anotherButton = find.text('スキップして次の提案').hitTestable();
     await tester.dragUntilVisible(
       anotherButton,
@@ -196,6 +200,29 @@ void main() {
     await tester.pumpAndSettle();
 
     expect(find.text('この条件で保存'), findsOneWidget);
+  });
+
+  testWidgets('文字サイズ最大でも使い方ページの5項目を読める', (tester) async {
+    await _pumpAppAtMaxTextScale(tester);
+
+    await tester.tap(find.text('設定'));
+    await tester.pumpAndSettle();
+    await tester.scrollUntilVisible(
+      find.text('使い方'),
+      200,
+      scrollable: find.byType(Scrollable).last,
+    );
+    await tester.tap(find.text('使い方'));
+    await tester.pumpAndSettle();
+
+    expect(find.text('よりみち日和の使い方'), findsOneWidget);
+    await tester.scrollUntilVisible(
+      find.text('通知について'),
+      200,
+      scrollable: find.byType(Scrollable).last,
+    );
+    await tester.pumpAndSettle();
+    expect(find.text('通知について'), findsOneWidget);
   });
 
   testWidgets('文字サイズ最大でもオンボーディング3画面が崩れない', (tester) async {

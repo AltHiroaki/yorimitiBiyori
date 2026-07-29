@@ -376,6 +376,7 @@ Suggestion _suggestion({
     description: 'description',
     category: category,
     tags: tags,
+    whereToTry: 'where to try',
     estimatedMinutes: estimatedMinutes,
     weight: weight,
   );

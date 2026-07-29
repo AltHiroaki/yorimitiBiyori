@@ -6,6 +6,7 @@ class Suggestion {
     required this.description,
     required this.category,
     required this.tags,
+    required this.whereToTry,
     required this.estimatedMinutes,
     required this.weight,
     this.recipe,
@@ -16,6 +17,9 @@ class Suggestion {
   final String description;
   final String category;
   final List<String> tags;
+
+  /// 入手先・実践先の案内（例：「音楽配信アプリで〜を検索する」）。全カテゴリ共通。
+  final String whereToTry;
   final int estimatedMinutes;
   final double weight;
 
@@ -34,6 +38,7 @@ class Suggestion {
         tags: (json['tags'] as List<dynamic>)
             .map((tag) => tag as String)
             .toList(),
+        whereToTry: json['where_to_try'] as String,
         estimatedMinutes: (json['estimated_minutes'] as num).toInt(),
         weight: (json['weight'] as num).toDouble(),
         recipe: json['recipe'] as String?,
@@ -50,6 +55,7 @@ class Suggestion {
       'description': description,
       'category': category,
       'tags': tags,
+      'where_to_try': whereToTry,
       'estimated_minutes': estimatedMinutes,
       'weight': weight,
       if (recipe != null) 'recipe': recipe,

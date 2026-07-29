@@ -159,6 +159,7 @@ Map<String, dynamic> _suggestionJson({
     'description': '$titleの説明文。',
     'category': category,
     'tags': tags,
+    'where_to_try': '音楽配信アプリで検索する。',
     'estimated_minutes': 5,
     'weight': 1.0,
     'recipe': ?recipe,
@@ -279,7 +280,18 @@ void main() {
     expect(find.text('今週の実施'), findsOneWidget);
     expect(find.text('今週のスキップ'), findsOneWidget);
     expect(find.text('以前の実施'), findsNothing);
-    expect(find.text('15'), findsOneWidget);
+    expect(
+      tester.widget<Text>(find.byKey(historySummaryDoneCountKey)).data,
+      '1',
+    );
+    expect(
+      tester.widget<Text>(find.byKey(historySummarySkippedCountKey)).data,
+      '1',
+    );
+    expect(
+      tester.widget<Text>(find.byKey(historySummaryTotalMinutesKey)).data,
+      '15',
+    );
 
     await tester.tap(find.byKey(historyAllPeriodSegmentKey));
     await tester.pumpAndSettle();
@@ -291,7 +303,18 @@ void main() {
       scrollable: find.byType(Scrollable).first,
     );
     expect(find.text('以前の実施'), findsOneWidget);
-    expect(find.text('25'), findsOneWidget);
+    expect(
+      tester.widget<Text>(find.byKey(historySummaryDoneCountKey)).data,
+      '2',
+    );
+    expect(
+      tester.widget<Text>(find.byKey(historySummarySkippedCountKey)).data,
+      '1',
+    );
+    expect(
+      tester.widget<Text>(find.byKey(historySummaryTotalMinutesKey)).data,
+      '25',
+    );
   });
 
   testWidgets('ステータスで一覧だけを絞り込み、期間サマリーは変えない', (tester) async {
@@ -512,6 +535,7 @@ void main() {
     expect(find.text('スキップした提案'), findsOneWidget);
     expect(find.text('ジャズを1曲流すの説明文。'), findsOneWidget);
     expect(find.text('目安 約5分'), findsOneWidget);
+    expect(find.text('入手先：音楽配信アプリで検索する。'), findsOneWidget);
     expect(find.text('やってみる'), findsOneWidget);
     expect(find.text('スキップして次の提案'), findsNothing);
 
@@ -605,6 +629,7 @@ void main() {
     expect(find.text('6月5日に実施'), findsOneWidget);
     expect(find.text('ジャズを1曲流すの説明文。'), findsOneWidget);
     expect(find.text('目安 約5分'), findsOneWidget);
+    expect(find.text('入手先：音楽配信アプリで検索する。'), findsOneWidget);
     expect(find.text('感想：😊 よかった'), findsOneWidget);
     // 閲覧専用：復活フローのボタンは出さない。
     expect(find.text('やってみる'), findsNothing);

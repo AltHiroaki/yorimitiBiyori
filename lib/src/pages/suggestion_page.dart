@@ -21,11 +21,12 @@ import '../widgets/neumorphic_surface.dart';
 import '../widgets/section_card.dart';
 import '../widgets/suggestion_card_content.dart';
 import 'suggestion_settings_page.dart';
+import 'usage_page.dart';
 
 enum _LoadStatus { loading, loaded, error }
 
 /// 提案タブ（トップ画面）。仕様書 3.1 に対応する。
-/// 現在の提案条件カードと「今日のよりみち」カードを表示し、
+/// 「今日のよりみち」カードと現在の提案条件カードを上から順に表示し、
 /// 条件カードのカテゴリチップで絞り込みを即時に切り替え、
 /// 「スキップして次の提案」で再抽選、「変更 >」で提案設定画面へ遷移する。
 /// 業務ロジック（読込・抽選・復元・履歴保存）は [SuggestionFlowService] が担う。
@@ -362,13 +363,7 @@ class _SuggestionPageState extends State<SuggestionPage> {
             ),
             const SizedBox(height: 4),
             const Text('空いた時間に、小さなよりみちを。', style: TextStyle(fontSize: 14)),
-            const SizedBox(height: 16),
-            _ConditionCard(
-              settings: _settings,
-              onToggleCategory: _onToggleCategory,
-              onOpenSettings: _openSuggestionSettings,
-            ),
-            const SizedBox(height: 12),
+            const _HeaderDivider(),
             if (_ongoingSuggestion case final Suggestion ongoing)
               _OngoingCard(
                 suggestion: ongoing,
@@ -392,15 +387,84 @@ class _SuggestionPageState extends State<SuggestionPage> {
                 ),
                 onOpenSettings: _openSuggestionSettings,
               ),
+            const SizedBox(height: 12),
+            _ConditionCard(
+              settings: _settings,
+              onToggleCategory: _onToggleCategory,
+              onOpenSettings: _openSuggestionSettings,
+            ),
             const SizedBox(height: 16),
-            const SectionCard(
+            SectionCard(
               title: '使い方',
               description:
                   'カテゴリは条件カードのチップをタップすると、その場で切り替わります。詳細設定は「変更」から調整できます。通知をタップすると、保存した条件のよりみちが表示されます。',
+              action: TextButton.icon(
+                onPressed: _openUsagePage,
+                icon: const Icon(Icons.arrow_forward),
+                iconAlignment: IconAlignment.end,
+                label: const Text('もっと詳しく'),
+              ),
             ),
           ],
         );
     }
+  }
+
+  Future<void> _openUsagePage() {
+    return Navigator.of(
+      context,
+    ).push(MaterialPageRoute<void>(builder: (_) => const UsagePage()));
+  }
+}
+
+/// 見出しと「今日のよりみち」カードの間に置く区切り装飾。
+/// 中央の葉アイコンと、両側へ薄れていく緑の線で、案内の始まりを区切る。
+class _HeaderDivider extends StatelessWidget {
+  const _HeaderDivider();
+
+  @override
+  Widget build(BuildContext context) {
+    final lineColor = Theme.of(context).colorScheme.primary;
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 20),
+      child: Row(
+        children: [
+          Expanded(child: _FadingLine(color: lineColor, fadeToStart: true)),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 12),
+            child: Icon(Icons.eco_rounded, size: 18, color: lineColor),
+          ),
+          Expanded(child: _FadingLine(color: lineColor, fadeToStart: false)),
+        ],
+      ),
+    );
+  }
+}
+
+/// 片側へ向かって透明になっていく細線。[fadeToStart] が true なら左端が透明。
+class _FadingLine extends StatelessWidget {
+  const _FadingLine({required this.color, required this.fadeToStart});
+
+  final Color color;
+  final bool fadeToStart;
+
+  @override
+  Widget build(BuildContext context) {
+    final gradientColors = <Color>[
+      color.withValues(alpha: 0),
+      color.withValues(alpha: 0.45),
+    ];
+    return Container(
+      height: 1.5,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(1),
+        gradient: LinearGradient(
+          colors: fadeToStart
+              ? gradientColors
+              : gradientColors.reversed.toList(),
+        ),
+      ),
+    );
   }
 }
 
@@ -569,6 +633,7 @@ class _SuggestionCard extends StatelessWidget {
               recipe: suggestion.recipe,
               tags: suggestion.tags,
               estimatedMinutes: suggestion.estimatedMinutes,
+              whereToTry: suggestion.whereToTry,
             ),
             const SizedBox(height: 16),
             _CardActionButtons(
@@ -631,6 +696,7 @@ class _OngoingCard extends StatelessWidget {
               recipe: suggestion.recipe,
               tags: suggestion.tags,
               estimatedMinutes: suggestion.estimatedMinutes,
+              whereToTry: suggestion.whereToTry,
               footnote: startedAt == null
                   ? null
                   : Text(
