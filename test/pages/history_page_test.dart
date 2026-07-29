@@ -280,7 +280,18 @@ void main() {
     expect(find.text('今週の実施'), findsOneWidget);
     expect(find.text('今週のスキップ'), findsOneWidget);
     expect(find.text('以前の実施'), findsNothing);
-    expect(find.text('15'), findsOneWidget);
+    expect(
+      tester.widget<Text>(find.byKey(historySummaryDoneCountKey)).data,
+      '1',
+    );
+    expect(
+      tester.widget<Text>(find.byKey(historySummarySkippedCountKey)).data,
+      '1',
+    );
+    expect(
+      tester.widget<Text>(find.byKey(historySummaryTotalMinutesKey)).data,
+      '15',
+    );
 
     await tester.tap(find.byKey(historyAllPeriodSegmentKey));
     await tester.pumpAndSettle();
@@ -292,7 +303,18 @@ void main() {
       scrollable: find.byType(Scrollable).first,
     );
     expect(find.text('以前の実施'), findsOneWidget);
-    expect(find.text('25'), findsOneWidget);
+    expect(
+      tester.widget<Text>(find.byKey(historySummaryDoneCountKey)).data,
+      '2',
+    );
+    expect(
+      tester.widget<Text>(find.byKey(historySummarySkippedCountKey)).data,
+      '1',
+    );
+    expect(
+      tester.widget<Text>(find.byKey(historySummaryTotalMinutesKey)).data,
+      '25',
+    );
   });
 
   testWidgets('ステータスで一覧だけを絞り込み、期間サマリーは変えない', (tester) async {

@@ -22,6 +22,15 @@ const Key historyDoneStatusFilterKey = ValueKey<String>('history-status-done');
 const Key historySkippedStatusFilterKey = ValueKey<String>(
   'history-status-skipped',
 );
+const Key historySummaryDoneCountKey = ValueKey<String>(
+  'history-summary-done-count',
+);
+const Key historySummarySkippedCountKey = ValueKey<String>(
+  'history-summary-skipped-count',
+);
+const Key historySummaryTotalMinutesKey = ValueKey<String>(
+  'history-summary-total-minutes',
+);
 
 /// 履歴タブ。仕様書 3.2 に対応する。
 /// 今週／全期間とステータスで履歴を絞り込み、期間連動サマリーと
@@ -430,18 +439,21 @@ class _HistoryPageState extends State<HistoryPage> {
         child: Row(
           children: [
             _buildSummaryItem(
+              valueKey: historySummaryDoneCountKey,
               value: '${_summary.doneCount}',
               label: '実施',
               valueColor: colorScheme.primary,
             ),
             const SizedBox(height: 48, child: VerticalDivider(width: 1)),
             _buildSummaryItem(
+              valueKey: historySummarySkippedCountKey,
               value: '${_summary.skippedCount}',
               label: 'スキップ',
               valueColor: colorScheme.tertiary,
             ),
             const SizedBox(height: 48, child: VerticalDivider(width: 1)),
             _buildSummaryItem(
+              valueKey: historySummaryTotalMinutesKey,
               value: '${_summary.totalDoneMinutes}',
               label: '分',
               valueColor: colorScheme.onSurface,
@@ -453,6 +465,7 @@ class _HistoryPageState extends State<HistoryPage> {
   }
 
   Widget _buildSummaryItem({
+    required Key valueKey,
     required String value,
     required String label,
     required Color valueColor,
@@ -462,6 +475,7 @@ class _HistoryPageState extends State<HistoryPage> {
         children: [
           Text(
             value,
+            key: valueKey,
             style: TextStyle(
               fontSize: 32,
               fontWeight: FontWeight.bold,
