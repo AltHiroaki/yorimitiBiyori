@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../features/records/history_filter.dart';
 import '../features/records/record_summary.dart';
 import '../models/interest_category.dart';
 import '../models/ongoing_suggestion.dart';
@@ -11,12 +12,20 @@ import '../repositories/suggestion_repository.dart';
 import '../widgets/history_record_modals.dart';
 import '../widgets/neumorphic_surface.dart';
 
-const Duration historyNewRecordHighlightDuration =
-    Duration(milliseconds: 1500);
+const Duration historyNewRecordHighlightDuration = Duration(milliseconds: 1500);
+const Key historyThisWeekSegmentKey = ValueKey<String>(
+  'history-period-this-week',
+);
+const Key historyAllPeriodSegmentKey = ValueKey<String>('history-period-all');
+const Key historyAllStatusFilterKey = ValueKey<String>('history-status-all');
+const Key historyDoneStatusFilterKey = ValueKey<String>('history-status-done');
+const Key historySkippedStatusFilterKey = ValueKey<String>(
+  'history-status-skipped',
+);
 
 /// 履歴タブ。仕様書 3.2 に対応する。
-/// サマリー（実施／スキップ／合計分）と新しい順の履歴一覧を表示し、
-/// 履歴 0 件のときは空状態と「提案を見てみる」ボタンを表示する。
+/// 今週／全期間とステータスで履歴を絞り込み、期間連動サマリーと
+/// 新しい順の一覧を表示する。全体 0 件と絞り込み 0 件は別の空状態にする。
 class HistoryPage extends StatefulWidget {
   const HistoryPage({
     super.key,
@@ -27,6 +36,7 @@ class HistoryPage extends StatefulWidget {
     this.onSuggestionRevived,
     this.highlightedRecordId,
     this.isActive = true,
+    this.nowProvider,
   });
 
   /// テスト用に差し替え可能。null なら通常の repository を使う。
@@ -49,6 +59,9 @@ class HistoryPage extends StatefulWidget {
   /// 基準で切り替える）。単体で使うときは常に読み込む。
   final bool isActive;
 
+  /// 期間判定に使う現在時刻。テストでは固定時刻へ差し替えられる。
+  final DateTime Function()? nowProvider;
+
   @override
   State<HistoryPage> createState() => _HistoryPageState();
 }
@@ -60,8 +73,12 @@ class _HistoryPageState extends State<HistoryPage> {
 
   bool _isLoading = true;
   bool _isRecordDialogOpen = false;
-  List<SuggestionRecord> _newestFirstRecords = const [];
+  List<SuggestionRecord> _allRecords = const [];
+  List<SuggestionRecord> _visibleRecords = const [];
   RecordSummary _summary = summarizeRecords(const []);
+  HistoryPeriod _selectedPeriod = HistoryPeriod.thisWeek;
+  HistoryStatusFilter _selectedStatus = HistoryStatusFilter.all;
+  String? _handledHighlightedRecordId;
 
   @override
   void initState() {
@@ -81,7 +98,10 @@ class _HistoryPageState extends State<HistoryPage> {
     super.didUpdateWidget(oldWidget);
     // スワイプが履歴タブへ確定した時点で読み込む。途中でやめた場合は
     // isActive が false のままなので、無駄な読み込みは起きない。
-    if (widget.isActive && !oldWidget.isActive) {
+    final becameActive = widget.isActive && !oldWidget.isActive;
+    final highlightedRecordChanged =
+        widget.highlightedRecordId != oldWidget.highlightedRecordId;
+    if (widget.isActive && (becameActive || highlightedRecordChanged)) {
       _loadRecords();
     }
   }
@@ -92,10 +112,78 @@ class _HistoryPageState extends State<HistoryPage> {
     if (!mounted) {
       return;
     }
+    final now = _currentTime();
     setState(() {
-      _newestFirstRecords = sortRecordsByNewest(records);
-      _summary = summarizeRecords(records);
+      _allRecords = sortRecordsByNewest(records);
+      _adjustFiltersForHighlightedRecord(now);
+      _rebuildFilteredRecords(now);
       _isLoading = false;
+    });
+  }
+
+  DateTime _currentTime() {
+    return widget.nowProvider?.call() ?? DateTime.now();
+  }
+
+  void _adjustFiltersForHighlightedRecord(DateTime now) {
+    final highlightedRecordId = widget.highlightedRecordId;
+    if (highlightedRecordId == null ||
+        highlightedRecordId == _handledHighlightedRecordId) {
+      return;
+    }
+
+    SuggestionRecord? highlightedRecord;
+    for (final record in _allRecords) {
+      if (record.id == highlightedRecordId) {
+        highlightedRecord = record;
+        break;
+      }
+    }
+    if (highlightedRecord == null) {
+      return;
+    }
+
+    _selectedStatus = HistoryStatusFilter.all;
+    _selectedPeriod =
+        isRecordInHistoryPeriod(
+          highlightedRecord,
+          period: HistoryPeriod.thisWeek,
+          now: now,
+        )
+        ? HistoryPeriod.thisWeek
+        : HistoryPeriod.all;
+    _handledHighlightedRecordId = highlightedRecordId;
+  }
+
+  void _rebuildFilteredRecords(DateTime now) {
+    final periodRecords = filterRecordsByPeriod(
+      _allRecords,
+      period: _selectedPeriod,
+      now: now,
+    );
+    _summary = summarizeRecords(periodRecords);
+    _visibleRecords = sortRecordsByNewest(
+      filterRecordsByStatus(periodRecords, statusFilter: _selectedStatus),
+    );
+  }
+
+  void _selectPeriod(HistoryPeriod period) {
+    if (_selectedPeriod == period) {
+      return;
+    }
+    setState(() {
+      _selectedPeriod = period;
+      _rebuildFilteredRecords(_currentTime());
+    });
+  }
+
+  void _selectStatus(HistoryStatusFilter status) {
+    if (_selectedStatus == status) {
+      return;
+    }
+    setState(() {
+      _selectedStatus = status;
+      _rebuildFilteredRecords(_currentTime());
     });
   }
 
@@ -115,10 +203,7 @@ class _HistoryPageState extends State<HistoryPage> {
       if (!mounted) {
         return;
       }
-      final suggestion = _findSuggestionById(
-        suggestions,
-        record.suggestionId,
-      );
+      final suggestion = _findSuggestionById(suggestions, record.suggestionId);
       if (suggestion == null) {
         await showReviveSuggestionUnavailableDialog(context: context);
         return;
@@ -168,8 +253,8 @@ class _HistoryPageState extends State<HistoryPage> {
       return;
     }
 
-    final ongoingSuggestion =
-        await _ongoingSuggestionRepository.loadOngoingSuggestion();
+    final ongoingSuggestion = await _ongoingSuggestionRepository
+        .loadOngoingSuggestion();
     if (!mounted) {
       return;
     }
@@ -224,22 +309,114 @@ class _HistoryPageState extends State<HistoryPage> {
         const SizedBox(height: 4),
         const Text('実施したよりみちと、スキップした提案を確認します。', style: TextStyle(fontSize: 14)),
         const SizedBox(height: 16),
+        _buildPeriodSelector(),
+        const SizedBox(height: 16),
         _buildSummaryCard(),
         const SizedBox(height: 24),
-        if (_newestFirstRecords.isEmpty)
+        _buildStatusFilters(),
+        const SizedBox(height: 24),
+        if (_allRecords.isEmpty)
           _buildEmptyState()
+        else if (_visibleRecords.isEmpty)
+          _buildFilteredEmptyState()
         else ...[
-          const Text(
-            '最近の履歴',
-            style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
+          Text(
+            _selectedPeriod == HistoryPeriod.thisWeek ? '今週の履歴' : '最近の履歴',
+            style: const TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
           ),
           const SizedBox(height: 12),
-          for (final record in _newestFirstRecords) ...[
+          for (final record in _visibleRecords) ...[
             _buildRecordRow(record),
             const SizedBox(height: 10),
           ],
         ],
       ],
+    );
+  }
+
+  Widget _buildPeriodSelector() {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        const Text(
+          '期間',
+          style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+        ),
+        const SizedBox(height: 8),
+        SizedBox(
+          width: double.infinity,
+          child: NeumorphicRecessedSurface(
+            child: SegmentedButton<HistoryPeriod>(
+              showSelectedIcon: false,
+              segments: const [
+                ButtonSegment(
+                  value: HistoryPeriod.thisWeek,
+                  label: Text('今週', key: historyThisWeekSegmentKey),
+                ),
+                ButtonSegment(
+                  value: HistoryPeriod.all,
+                  label: Text('全期間', key: historyAllPeriodSegmentKey),
+                ),
+              ],
+              selected: {_selectedPeriod},
+              onSelectionChanged: (selection) {
+                _selectPeriod(selection.first);
+              },
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+
+  Widget _buildStatusFilters() {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        const Text(
+          'ステータス',
+          style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+        ),
+        const SizedBox(height: 8),
+        Wrap(
+          spacing: 8,
+          runSpacing: 8,
+          children: [
+            _buildStatusFilterChip(
+              key: historyAllStatusFilterKey,
+              status: HistoryStatusFilter.all,
+              label: 'すべて',
+            ),
+            _buildStatusFilterChip(
+              key: historyDoneStatusFilterKey,
+              status: HistoryStatusFilter.done,
+              label: '実施',
+            ),
+            _buildStatusFilterChip(
+              key: historySkippedStatusFilterKey,
+              status: HistoryStatusFilter.skipped,
+              label: 'スキップ',
+            ),
+          ],
+        ),
+      ],
+    );
+  }
+
+  Widget _buildStatusFilterChip({
+    required Key key,
+    required HistoryStatusFilter status,
+    required String label,
+  }) {
+    final isSelected = _selectedStatus == status;
+    return NeumorphicChipFrame(
+      isSelected: isSelected,
+      child: FilterChip(
+        key: key,
+        label: Text(label),
+        selected: isSelected,
+        onSelected: (_) => _selectStatus(status),
+      ),
     );
   }
 
@@ -322,10 +499,7 @@ class _HistoryPageState extends State<HistoryPage> {
     );
   }
 
-  Widget _buildRecordCard(
-    SuggestionRecord record, {
-    Color? backgroundColor,
-  }) {
+  Widget _buildRecordCard(SuggestionRecord record, {Color? backgroundColor}) {
     final colorScheme = Theme.of(context).colorScheme;
     final isDone = record.status == SuggestionRecordStatus.done;
     final iconBackground = isDone
@@ -342,9 +516,7 @@ class _HistoryPageState extends State<HistoryPage> {
       child: Material(
         color: backgroundColor ?? Colors.transparent,
         child: InkWell(
-          onTap: _isRecordDialogOpen
-              ? null
-              : () => _openRecordDetail(record),
+          onTap: _isRecordDialogOpen ? null : () => _openRecordDetail(record),
           child: Padding(
             padding: const EdgeInsets.all(16),
             child: Row(
@@ -440,6 +612,44 @@ class _HistoryPageState extends State<HistoryPage> {
               child: FilledButton(
                 onPressed: widget.onGoToSuggestions,
                 child: const Text('提案を見てみる'),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  /// 保存済み履歴はあるが、選択した期間・ステータスでは0件のときの表示。
+  Widget _buildFilteredEmptyState() {
+    final hasStatusFilter = _selectedStatus != HistoryStatusFilter.all;
+    final title = hasStatusFilter ? 'この条件の履歴はありません' : '今週の履歴はありません';
+    final message = switch (_selectedStatus) {
+      HistoryStatusFilter.done => '選択した期間に実施した履歴はありません。',
+      HistoryStatusFilter.skipped => '選択した期間にスキップした履歴はありません。',
+      HistoryStatusFilter.all => '全期間に切り替えると、以前の履歴を確認できます。',
+    };
+    final buttonLabel = hasStatusFilter ? 'すべて表示' : '全期間を見る';
+
+    return NeumorphicSurface(
+      child: Padding(
+        padding: const EdgeInsets.all(20),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              title,
+              style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 8),
+            Text(message),
+            const SizedBox(height: 16),
+            NeumorphicButtonFrame(
+              child: OutlinedButton(
+                onPressed: hasStatusFilter
+                    ? () => _selectStatus(HistoryStatusFilter.all)
+                    : () => _selectPeriod(HistoryPeriod.all),
+                child: Text(buttonLabel),
               ),
             ),
           ],

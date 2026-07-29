@@ -55,7 +55,7 @@ Do not implement or generate iOS platform files for the MVP unless explicitly re
 Bottom NavigationBar with exactly 3 tabs. There is **no home screen**; the suggestion tab is the top screen.
 
 - Tab 1 提案 (suggestion): current-conditions card (selected categories + active detail settings) + "今日のよりみち" suggestion card (title, description, expandable recipe for cook suggestions, tags, subtle estimated-time text) + info card
-- Tab 2 履歴 (history): summary (done count / skipped count / total minutes) + recent records list; empty state with CTA to the suggestion tab
+- Tab 2 履歴 (history): period selector (今週 / 全期間) + period-linked summary (done count / skipped count / total minutes) + single-select status filters (すべて / 実施 / スキップ) + filtered records list. 今週 means local Monday 00:00 through now. Keep the filter state only while HistoryPage State lives; do not persist it. Distinguish the no-records empty state from a zero-result filter state
 - Tab 3 設定 (settings): Google account row (advanced phase, show as 未連携), suggestion settings row, interest categories, notification time, notification toggle, history deletion with inline confirm, about
 - Sub screen 提案設定 (suggestion settings): **two-stage** editor — stage 1 category multi-select, stage 2 per-category detail-setting groups — with AppBar back button, reachable from both the suggestion tab and the settings tab
 - Onboarding (first launch only): welcome modal → category selection → notification permission dialog (allow / later). Keep exactly 3 steps and show the shared 3-step progress indicator on every screen. Do not add a detail-setting step. Preview that details can be narrowed later. The notification copy identifies 17:00–21:00 as the initial default and says the range can be changed later.
@@ -90,7 +90,7 @@ The MVP includes only:
 - suggestion display matching the category + detail-setting conditions
 - re-suggestion ("スキップして次の提案", records the shown suggestion as skipped)
 - completion modal with feedback (good / normal / bad) saving a done record
-- history display (done count, skipped count, total minutes, recent list, empty state)
+- history display (今週 / 全期間, すべて / 実施 / スキップ, period-linked done count / skipped count / total minutes, filtered recent list, distinct no-data and no-match empty states)
 - history deletion with confirmation
 - settings screen
 
