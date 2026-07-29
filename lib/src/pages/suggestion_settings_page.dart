@@ -7,7 +7,8 @@ import '../widgets/neumorphic_surface.dart';
 
 /// 提案設定画面（サブ画面・二段階方式）。
 /// 仕様書 3.4 に対応する。第 1 段階で興味カテゴリを、
-/// 第 2 段階で選択中カテゴリごとの詳細設定グループを FilterChip で編集する。
+/// 第 2 段階で選択中カテゴリごとの詳細設定グループを FilterChip で編集し、
+/// 最後にカテゴリ横断の所要時間上限を任意で設定する。
 class SuggestionSettingsPage extends StatefulWidget {
   const SuggestionSettingsPage({super.key, this.settingsRepository});
 
@@ -30,6 +31,7 @@ class _SuggestionSettingsPageState extends State<SuggestionSettingsPage> {
   /// カテゴリ id → グループ id → 選択値。
   /// カテゴリの選択を外しても編集内容は残し、保存時に選択中カテゴリ分だけ刈り込む。
   final Map<String, Map<String, Set<String>>> _detailSelections = {};
+  int? _maxEstimatedMinutes;
 
   @override
   void initState() {
@@ -54,6 +56,7 @@ class _SuggestionSettingsPageState extends State<SuggestionSettingsPage> {
           for (final entry in groups.entries) entry.key: entry.value.toSet(),
         };
       });
+      _maxEstimatedMinutes = settings.maxEstimatedMinutes;
     });
   }
 
@@ -92,7 +95,7 @@ class _SuggestionSettingsPageState extends State<SuggestionSettingsPage> {
     });
   }
 
-  /// カテゴリを初期値（音楽・読書・散歩）に、詳細設定をすべて未選択（指定なし）に戻す。
+  /// カテゴリを初期値（音楽・読書・映画）に、詳細設定と時間上限を指定なしへ戻す。
   /// 「この条件で保存」を押すまで永続化はしない。
   void _resetToDefaults() {
     setState(() {
@@ -100,6 +103,7 @@ class _SuggestionSettingsPageState extends State<SuggestionSettingsPage> {
         ..clear()
         ..addAll(defaultSelectedCategoryIds);
       _detailSelections.clear();
+      _maxEstimatedMinutes = null;
     });
   }
 
@@ -127,10 +131,12 @@ class _SuggestionSettingsPageState extends State<SuggestionSettingsPage> {
       }
     }
 
-    final settings = (_loadedSettings ?? const UserSettings()).copyWith(
-      selectedCategories: selectedCategories,
-      detailSettings: detailSettings,
-    );
+    final settings = (_loadedSettings ?? const UserSettings())
+        .copyWith(
+          selectedCategories: selectedCategories,
+          detailSettings: detailSettings,
+        )
+        .withMaxEstimatedMinutes(_maxEstimatedMinutes);
     await _settingsRepository.saveSettings(settings);
 
     if (!mounted) {
@@ -156,6 +162,8 @@ class _SuggestionSettingsPageState extends State<SuggestionSettingsPage> {
                     const SizedBox(height: 12),
                     _buildDetailSettingsCard(category),
                   ],
+                const SizedBox(height: 12),
+                _buildDurationLimitCard(),
               ],
             ),
       bottomNavigationBar: SafeArea(
@@ -169,14 +177,15 @@ class _SuggestionSettingsPageState extends State<SuggestionSettingsPage> {
                 child: NeumorphicButtonFrame(
                   isPrimary: true,
                   isEnabled:
-                      _loadedSettings != null && _selectedCategoryIds.isNotEmpty,
+                      _loadedSettings != null &&
+                      _selectedCategoryIds.isNotEmpty,
                   child: FilledButton(
                     // 興味カテゴリは必須のため、0件のときは保存できない（issue #50）。
                     onPressed:
                         (_loadedSettings == null ||
-                                _selectedCategoryIds.isEmpty)
-                            ? null
-                            : _save,
+                            _selectedCategoryIds.isEmpty)
+                        ? null
+                        : _save,
                     child: const Text('この条件で保存'),
                   ),
                 ),
@@ -305,6 +314,82 @@ class _SuggestionSettingsPageState extends State<SuggestionSettingsPage> {
             ],
           ],
         ),
+      ),
+    );
+  }
+
+  /// カテゴリ横断の任意条件。詳細設定で作った候補集合へ最後に適用する。
+  Widget _buildDurationLimitCard() {
+    final shouldShowMovieWarning =
+        _selectedCategoryIds.contains('movie') && _maxEstimatedMinutes != null;
+    final colorScheme = Theme.of(context).colorScheme;
+
+    return NeumorphicSurface(
+      child: Padding(
+        padding: const EdgeInsets.all(20),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const Text(
+              '時間の上限',
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 4),
+            const Text(
+              '目安時間が上限以内の提案だけに絞り込みます。',
+              style: TextStyle(fontSize: 12),
+            ),
+            const SizedBox(height: 12),
+            Wrap(
+              spacing: 8,
+              runSpacing: 8,
+              children: [
+                _buildDurationChoice(
+                  key: const ValueKey<String>('duration-limit-none'),
+                  label: '指定なし',
+                  minutes: null,
+                ),
+                for (final minutes in allowedMaxEstimatedMinutes)
+                  _buildDurationChoice(
+                    key: ValueKey<String>('duration-limit-$minutes'),
+                    label: '〜$minutes分',
+                    minutes: minutes,
+                  ),
+              ],
+            ),
+            if (shouldShowMovieWarning) ...[
+              const SizedBox(height: 12),
+              Text(
+                '映画は〜$_maxEstimatedMinutes分以内の候補が現在少ないため、提案の幅が狭くなります。',
+                style: TextStyle(
+                  color: colorScheme.onSurfaceVariant,
+                  fontSize: 12,
+                ),
+              ),
+            ],
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildDurationChoice({
+    required Key key,
+    required String label,
+    required int? minutes,
+  }) {
+    final isSelected = _maxEstimatedMinutes == minutes;
+    return NeumorphicChipFrame(
+      isSelected: isSelected,
+      child: ChoiceChip(
+        key: key,
+        label: Text(label),
+        selected: isSelected,
+        onSelected: (_) {
+          setState(() {
+            _maxEstimatedMinutes = minutes;
+          });
+        },
       ),
     );
   }

@@ -56,21 +56,9 @@ void main() {
 
     test('料理はジャンル×調理法の2グループをAND条件で絞り込む', () {
       final suggestions = [
-        _suggestion(
-          id: 'matched',
-          category: 'cook',
-          tags: ['和食', '焼く'],
-        ),
-        _suggestion(
-          id: 'wrong_genre',
-          category: 'cook',
-          tags: ['洋食', '焼く'],
-        ),
-        _suggestion(
-          id: 'wrong_method',
-          category: 'cook',
-          tags: ['和食', '煮る'],
-        ),
+        _suggestion(id: 'matched', category: 'cook', tags: ['和食', '焼く']),
+        _suggestion(id: 'wrong_genre', category: 'cook', tags: ['洋食', '焼く']),
+        _suggestion(id: 'wrong_method', category: 'cook', tags: ['和食', '煮る']),
       ];
       const settings = UserSettings(
         selectedCategories: ['cook'],
@@ -115,26 +103,14 @@ void main() {
 
     test('複数カテゴリ選択時はカテゴリごとの詳細設定を OR で扱う', () {
       final suggestions = [
-        _suggestion(
-          id: 'music_match',
-          category: 'music',
-          tags: ['ジャズ'],
-        ),
-        _suggestion(
-          id: 'movie_match',
-          category: 'movie',
-          tags: ['コメディ'],
-        ),
+        _suggestion(id: 'music_match', category: 'music', tags: ['ジャズ']),
+        _suggestion(id: 'movie_match', category: 'movie', tags: ['コメディ']),
         _suggestion(
           id: 'music_wrong_detail',
           category: 'music',
           tags: ['ポップス'],
         ),
-        _suggestion(
-          id: 'cook_unselected',
-          category: 'cook',
-          tags: ['和食'],
-        ),
+        _suggestion(id: 'cook_unselected', category: 'cook', tags: ['和食']),
       ];
       const settings = UserSettings(
         selectedCategories: ['music', 'movie'],
@@ -157,20 +133,11 @@ void main() {
     });
 
     test('音楽の追加ジャンルごとにタグが一致する提案だけを返す', () {
-      const addedGenres = [
-        'ロック',
-        'ヒップホップ・R&B',
-        'アニソン・ゲーム音楽',
-        'EDM・テクノ',
-      ];
+      const addedGenres = ['ロック', 'ヒップホップ・R&B', 'アニソン・ゲーム音楽', 'EDM・テクノ'];
       final suggestions = [
         for (final genre in addedGenres)
           _suggestion(id: genre, category: 'music', tags: [genre]),
-        _suggestion(
-          id: 'existing_genre',
-          category: 'music',
-          tags: ['ポップス'],
-        ),
+        _suggestion(id: 'existing_genre', category: 'music', tags: ['ポップス']),
       ];
 
       for (final genre in addedGenres) {
@@ -192,6 +159,106 @@ void main() {
           reason: '$genre の選択時は同じタグの提案だけが残るはず',
         );
       }
+    });
+
+    test('時間上限を指定すると上限以内の提案だけを返す', () {
+      final suggestions = [
+        _suggestion(id: 'short', estimatedMinutes: 15),
+        _suggestion(id: 'exact', estimatedMinutes: 30),
+        _suggestion(id: 'long', estimatedMinutes: 31),
+      ];
+      const settings = UserSettings(
+        selectedCategories: ['music'],
+        maxEstimatedMinutes: 30,
+      );
+
+      final filteredSuggestions = filterSuggestions(suggestions, settings);
+
+      expect(filteredSuggestions.map((suggestion) => suggestion.id), [
+        'short',
+        'exact',
+      ]);
+    });
+
+    test('時間上限はカテゴリと詳細設定で絞り込んだ後に適用する', () {
+      final suggestions = [
+        _suggestion(
+          id: 'matched',
+          category: 'cook',
+          tags: ['和食', '焼く'],
+          estimatedMinutes: 15,
+        ),
+        _suggestion(
+          id: 'too_long',
+          category: 'cook',
+          tags: ['和食', '焼く'],
+          estimatedMinutes: 20,
+        ),
+        _suggestion(
+          id: 'wrong_detail',
+          category: 'cook',
+          tags: ['洋食', '焼く'],
+          estimatedMinutes: 10,
+        ),
+      ];
+      const settings = UserSettings(
+        selectedCategories: ['cook'],
+        detailSettings: {
+          'cook': {
+            'genre': ['和食'],
+            'cooking_method': ['焼く'],
+          },
+        },
+        maxEstimatedMinutes: 15,
+      );
+
+      final filteredSuggestions = filterSuggestions(suggestions, settings);
+
+      expect(filteredSuggestions.map((suggestion) => suggestion.id), [
+        'matched',
+      ]);
+    });
+
+    test('時間上限を指定しない場合は所要時間で絞り込まない', () {
+      final suggestions = [
+        _suggestion(id: 'short', estimatedMinutes: 5),
+        _suggestion(id: 'long', estimatedMinutes: 180),
+      ];
+      const settings = UserSettings(selectedCategories: ['music']);
+
+      final filteredSuggestions = filterSuggestions(suggestions, settings);
+
+      expect(filteredSuggestions, hasLength(2));
+    });
+
+    test('時間上限の適用前だけ候補がある場合は0件原因として判定する', () {
+      final suggestions = [_suggestion(id: 'long', estimatedMinutes: 60)];
+      const settings = UserSettings(
+        selectedCategories: ['music'],
+        maxEstimatedMinutes: 15,
+      );
+
+      expect(isDurationLimitCausingNoCandidates(suggestions, settings), isTrue);
+    });
+
+    test('カテゴリ・詳細設定の時点で0件なら時間上限原因とは判定しない', () {
+      final suggestions = [
+        _suggestion(id: 'wrong_detail', tags: ['ポップス'], estimatedMinutes: 60),
+      ];
+      const settings = UserSettings(
+        selectedCategories: ['music'],
+        detailSettings: {
+          'music': {
+            'genre': ['ジャズ'],
+          },
+        },
+        maxEstimatedMinutes: 15,
+      );
+
+      expect(
+        isDurationLimitCausingNoCandidates(suggestions, settings),
+        isFalse,
+      );
     });
   });
 
@@ -222,6 +289,33 @@ void main() {
         'a',
         'b',
       ]);
+    });
+
+    test('直近除外を緩和しても時間上限を超える候補は戻さない', () {
+      final suggestions = [
+        _suggestion(id: 'short_a', estimatedMinutes: 15),
+        _suggestion(id: 'short_b', estimatedMinutes: 30),
+        _suggestion(id: 'long', estimatedMinutes: 60),
+      ];
+      const settings = UserSettings(
+        selectedCategories: ['music'],
+        maxEstimatedMinutes: 30,
+      );
+
+      final filteredSuggestions = excludeRecent(
+        filterSuggestions(suggestions, settings),
+        ['short_a', 'short_b'],
+      );
+
+      expect(filteredSuggestions.map((suggestion) => suggestion.id), [
+        'short_a',
+      ]);
+      expect(
+        filteredSuggestions.every(
+          (suggestion) => suggestion.estimatedMinutes <= 30,
+        ),
+        isTrue,
+      );
     });
   });
 
@@ -273,6 +367,7 @@ Suggestion _suggestion({
   required String id,
   String category = 'music',
   List<String> tags = const [],
+  int estimatedMinutes = 10,
   double weight = 1,
 }) {
   return Suggestion(
@@ -282,7 +377,7 @@ Suggestion _suggestion({
     category: category,
     tags: tags,
     whereToTry: 'where to try',
-    estimatedMinutes: 10,
+    estimatedMinutes: estimatedMinutes,
     weight: weight,
   );
 }

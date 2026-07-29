@@ -41,6 +41,10 @@ Future<_FakeSettingsRepository> _pumpPage(
   return repository;
 }
 
+ChoiceChip _durationChoice(WidgetTester tester, String label) {
+  return tester.widget<ChoiceChip>(find.widgetWithText(ChoiceChip, label));
+}
+
 void main() {
   testWidgets('保存済み設定が初期表示に反映される', (tester) async {
     await _pumpPage(
@@ -52,6 +56,7 @@ void main() {
             'genre': ['ジャズ'],
           },
         },
+        maxEstimatedMinutes: 30,
       ),
     );
 
@@ -68,25 +73,21 @@ void main() {
 
     // 選択中カテゴリの詳細設定セクションと、保存済みの選択が反映される。
     expect(find.text('🎵 音楽の詳細設定'), findsOneWidget);
-    for (final genre in [
-      'ロック',
-      'ヒップホップ・R&B',
-      'アニソン・ゲーム音楽',
-      'EDM・テクノ',
-    ]) {
+    for (final genre in ['ロック', 'ヒップホップ・R&B', 'アニソン・ゲーム音楽', 'EDM・テクノ']) {
       expect(find.widgetWithText(FilterChip, genre), findsOneWidget);
     }
     final jazzChip = tester.widget<FilterChip>(
       find.widgetWithText(FilterChip, 'ジャズ'),
     );
     expect(jazzChip.selected, isTrue);
+    expect(find.text('時間の上限'), findsOneWidget);
+    expect(find.byType(ChoiceChip), findsNWidgets(4));
+    expect(_durationChoice(tester, '〜30分').selected, isTrue);
+    expect(_durationChoice(tester, '指定なし').selected, isFalse);
   });
 
   testWidgets('カテゴリの選択で詳細設定セクションが出現・消滅する', (tester) async {
-    await _pumpPage(
-      tester,
-      const UserSettings(selectedCategories: ['music']),
-    );
+    await _pumpPage(tester, const UserSettings(selectedCategories: ['music']));
 
     expect(find.text('🍳 料理の詳細設定'), findsNothing);
 
@@ -102,10 +103,7 @@ void main() {
   });
 
   testWidgets('料理を選択すると味覚・ジャンルと調理法の2グループが表示される', (tester) async {
-    await _pumpPage(
-      tester,
-      const UserSettings(selectedCategories: ['music']),
-    );
+    await _pumpPage(tester, const UserSettings(selectedCategories: ['music']));
 
     await tester.tap(find.widgetWithText(FilterChip, '🍳 料理'));
     await tester.pumpAndSettle();
@@ -131,6 +129,8 @@ void main() {
 
     await tester.tap(find.widgetWithText(FilterChip, 'ジャズ'));
     await tester.pumpAndSettle();
+    await tester.tap(find.widgetWithText(ChoiceChip, '〜30分'));
+    await tester.pumpAndSettle();
     await tester.tap(find.text('この条件で保存'));
     await tester.pumpAndSettle();
 
@@ -142,6 +142,7 @@ void main() {
         'genre': ['ジャズ'],
       },
     });
+    expect(savedSettings.maxEstimatedMinutes, 30);
     // この画面で編集しないフィールドは温存される。
     expect(savedSettings.notificationEnabled, isFalse);
     expect(savedSettings.notificationStartTime, '12:15');
@@ -163,6 +164,7 @@ void main() {
             'genre': ['ドラマ'],
           },
         },
+        maxEstimatedMinutes: 60,
       ),
     );
 
@@ -197,15 +199,58 @@ void main() {
       find.widgetWithText(FilterChip, 'ジャズ'),
     );
     expect(jazzChip.selected, isFalse);
+    expect(_durationChoice(tester, '指定なし').selected, isTrue);
+    expect(_durationChoice(tester, '〜60分').selected, isFalse);
     // リセットだけでは保存されない。
     expect(repository.savedSettingsLog, isEmpty);
   });
 
-  testWidgets('興味カテゴリに必須マーク（赤い *）が表示される', (tester) async {
+  testWidgets('時間上限は単一選択で、指定なしへ戻して保存できる', (tester) async {
+    final repository = await _pumpPage(
+      tester,
+      const UserSettings(
+        selectedCategories: ['music'],
+        maxEstimatedMinutes: 15,
+      ),
+    );
+
+    expect(_durationChoice(tester, '〜15分').selected, isTrue);
+
+    await tester.tap(find.widgetWithText(ChoiceChip, '〜60分'));
+    await tester.pumpAndSettle();
+    expect(_durationChoice(tester, '〜15分').selected, isFalse);
+    expect(_durationChoice(tester, '〜60分').selected, isTrue);
+
+    await tester.tap(find.widgetWithText(ChoiceChip, '指定なし'));
+    await tester.pumpAndSettle();
+    expect(_durationChoice(tester, '指定なし').selected, isTrue);
+    expect(_durationChoice(tester, '〜60分').selected, isFalse);
+
+    await tester.tap(find.text('この条件で保存'));
+    await tester.pumpAndSettle();
+
+    expect(repository.savedSettingsLog.single.maxEstimatedMinutes, isNull);
+  });
+
+  testWidgets('映画と時間上限を選ぶと候補が少ない旨を案内する', (tester) async {
     await _pumpPage(
       tester,
-      const UserSettings(selectedCategories: ['music']),
+      const UserSettings(
+        selectedCategories: ['movie'],
+        maxEstimatedMinutes: 30,
+      ),
     );
+
+    expect(find.text('映画は〜30分以内の候補が現在少ないため、提案の幅が狭くなります。'), findsOneWidget);
+
+    await tester.tap(find.widgetWithText(ChoiceChip, '指定なし'));
+    await tester.pumpAndSettle();
+
+    expect(find.text('映画は〜30分以内の候補が現在少ないため、提案の幅が狭くなります。'), findsNothing);
+  });
+
+  testWidgets('興味カテゴリに必須マーク（赤い *）が表示される', (tester) async {
+    await _pumpPage(tester, const UserSettings(selectedCategories: ['music']));
 
     expect(find.text('興味カテゴリ *', findRichText: true), findsOneWidget);
   });
@@ -238,19 +283,14 @@ void main() {
     expect(find.text('1つ選択中'), findsOneWidget);
     expect(
       tester
-          .widget<FilledButton>(
-            find.widgetWithText(FilledButton, 'この条件で保存'),
-          )
+          .widget<FilledButton>(find.widgetWithText(FilledButton, 'この条件で保存'))
           .onPressed,
       isNotNull,
     );
   });
 
   testWidgets('すべて選択で全カテゴリが選択され、すべて解除で0件になる', (tester) async {
-    await _pumpPage(
-      tester,
-      const UserSettings(selectedCategories: ['music']),
-    );
+    await _pumpPage(tester, const UserSettings(selectedCategories: ['music']));
 
     await tester.tap(find.text('すべて選択'));
     await tester.pumpAndSettle();
@@ -283,9 +323,8 @@ void main() {
               onPressed: () {
                 Navigator.of(context).push(
                   MaterialPageRoute<void>(
-                    builder: (_) => SuggestionSettingsPage(
-                      settingsRepository: repository,
-                    ),
+                    builder: (_) =>
+                        SuggestionSettingsPage(settingsRepository: repository),
                   ),
                 );
               },

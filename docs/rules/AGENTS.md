@@ -35,9 +35,9 @@ The app suggests one small "yorimichi" (detour) action that fits the user's inte
 The core experience is:
 
 1. On first launch the user completes onboarding: welcome modal → interest category selection → notification permission. All three screens show the current step. The welcome screen explains only the core loop (choose interests → receive one daily suggestion → try and record it, or move it aside and return later). Do not ask for per-category detail settings during onboarding; preview that genres and other preferences can be narrowed later from 提案設定.
-2. In 提案設定, the user picks categories, then sets each category's detail settings.
+2. In 提案設定, the user picks categories, sets each category's detail settings, and may set a cross-category maximum estimated duration (`15 / 30 / 60` minutes; default is no limit).
 3. The app sends one local notification per day at a random time within the user-configured range (default 17:00–21:00). The wording is a soft invitation that does NOT name a duration (e.g. "暇な時間って存在しますか？"). There are no time-selection notification actions.
-4. The user taps the notification body, which opens the suggestion screen (suggestion produced from the saved category + detail settings).
+4. The user taps the notification body, which opens the suggestion screen (suggestion produced from the saved category + detail settings + optional maximum duration).
 5. The suggestion screen shows one matching suggestion with title, description, tags, a subtle "目安 約N分" text line, and a where-to-try (入手先) line. Estimated time is reference information, not a tag, so never render it as a Chip. Cook suggestions additionally carry a `recipe`, which the user can expand via "詳しく見る"; other categories have no expandable detail.
 6. "やってみる" opens a completion modal with feedback chips (よかった / 普通 / 合わなかった) and saves a done record.
 7. "スキップして次の提案" records the current suggestion as skipped and re-draws with the same conditions.
@@ -57,14 +57,14 @@ Bottom NavigationBar with exactly 3 tabs. There is **no home screen**; the sugge
 - Tab 1 提案 (suggestion): current-conditions card (selected categories + active detail settings) + "今日のよりみち" suggestion card (title, description, expandable recipe for cook suggestions, tags, subtle estimated-time text, where-to-try text) + info card with a "もっと詳しく" link to the usage page
 - Tab 2 履歴 (history): period selector (今週 / 全期間) + period-linked summary (done count / skipped count / total minutes) + single-select status filters (すべて / 実施 / スキップ) + filtered records list. 今週 means local Monday 00:00 through now. Keep the filter state only while HistoryPage State lives; do not persist it. Distinguish the no-records empty state from a zero-result filter state
 - Tab 3 設定 (settings): Google account row (advanced phase, show as 未連携), suggestion settings row, interest categories, notification time, notification toggle, usage row, history deletion with inline confirm, about
-- Sub screen 提案設定 (suggestion settings): **two-stage** editor — stage 1 category multi-select, stage 2 per-category detail-setting groups — with AppBar back button, reachable from both the suggestion tab and the settings tab
+- Sub screen 提案設定 (suggestion settings): **two-stage** editor — stage 1 category multi-select, stage 2 per-category detail-setting groups — followed by an optional cross-category maximum estimated duration. It has an AppBar back button and is reachable from both the suggestion tab and the settings tab
 - Sub screen 使い方 (usage, advanced phase): static text for the core loop, skipping, reviving a skipped suggestion from history, expanding a cook recipe, and daily notifications. Keep it separate from アプリについて and reachable from both settings and the suggestion info card
 - Onboarding (first launch only): welcome modal → category selection → notification permission dialog (allow / later). Keep exactly 3 steps and show the shared 3-step progress indicator on every screen. Do not add a detail-setting step. Preview that details can be narrowed later. The notification copy identifies 17:00–21:00 as the initial default and says the range can be changed later.
 - Completion modal: ModalBottomSheet after "やってみる" with 3 feedback choices and "これで完了"; after a successful save, show "記録しました"
 
 ## Suggestion Conditions (two-stage)
 
-There is **no difficulty, no universal time condition, and no travel-distance condition** (removed from the old model; the ver6 PDF `difficulty` field is not implemented in this project). Conditions are set in two stages:
+There is **no difficulty, no mandatory universal available-time condition, and no travel-distance condition** (removed from the old model; the ver6 PDF `difficulty` field is not implemented in this project). Conditions are set in two stages, followed by an optional cross-category maximum estimated duration:
 
 1. **Stage 1 — category selection** (multi-select, MVP 4 categories): music 音楽 / cook 料理 / read 読書 / movie 映画. walk 散歩 is an advanced-phase category (definition + data retained in `InterestCategories.developmentCategories`).
 2. **Stage 2 — per-category detail settings** (each group is multi-select; unselected = 指定なし = no filtering). **In the MVP each category exposes a single "genre" group, except cook which has two (genre AND cooking_method, AND'd together):**
@@ -73,6 +73,7 @@ There is **no difficulty, no universal time condition, and no travel-distance co
    - 読書: ジャンル(エッセイ/小説/ノンフィクション/詩集/ミステリー・サスペンス/SF・ファンタジー/ビジネス・自己啓発/歴史・教養)
    - 映画: ジャンル(アクション/コメディ/ドラマ/SF/サスペンス/ファンタジー/恋愛/アニメ/ミステリー) — a single suggestion's `tags` may hold more than one of these values, since one movie can span multiple genres
    - 散歩 (advanced): 目的(気分転換/運動/発見)
+3. **Optional safety limit — maximum estimated duration**: single-select `指定なし / 〜15分 / 〜30分 / 〜60分`. It is stored as nullable `max_estimated_minutes`, applies after category and detail settings, and must never be relaxed automatically.
 
    Advanced-phase detail settings (企画書 ver6 表3 "発展版で追加"): 音楽=言語・気分, 料理=栄養素・ダイエット, 読書=読書時間・入手予算, 映画=上映時間・視聴先. The 料理 cooking_method group is a different axis from 栄養素・ダイエット and was implemented ahead of the advanced phase because it only required tagging existing data, not a new detail-setting group data model.
 
@@ -253,10 +254,11 @@ Rules:
 - Load every path in `suggestionAssetPathsByCategory` and combine the category files into one `List<Suggestion>`.
 - Filter: `category` must be one of the user's selected categories.
 - Filter: for the matched category, for each detail-setting group the user has selected values in, at least one selected value must be in the suggestion's `tags` (OR within a group, AND across groups). Unselected groups do not filter. Across categories the match is OR. There is no budget-based filtering (`budget_yen` was removed from the schema).
+- Filter: when `max_estimated_minutes` is set, `estimated_minutes` must be less than or equal to it.
 - Exclude the last 3 shown suggestion ids (`recent_suggestion_ids`).
 - Select one suggestion by weighted random (`weight`).
-- If no candidates remain, temporarily lift the recent-exclusion (still avoid showing the same suggestion twice in a row).
-- If still no candidates, show a message prompting the user to relax conditions.
+- If no candidates remain, temporarily lift the recent-exclusion (still avoid showing the same suggestion twice in a row), without relaxing the category, detail settings, or maximum duration.
+- If the duration limit alone removes all otherwise matching candidates, say so explicitly and link to 提案設定. Otherwise prompt the user to review categories and detail settings.
 - Keep the first implementation simple. Avoid over-engineering ranking or AI generation before the base flow works.
 
 ## Records and Local Storage
@@ -283,7 +285,7 @@ const settingsStorageKey = 'yorimichi_biyori_settings';
 
 ## Notification Flow
 
-The notification is the entry point that nudges the user to open the app. The suggestion itself is produced from the saved category + detail settings.
+The notification is the entry point that nudges the user to open the app. The suggestion itself is produced from the saved category + detail settings + optional maximum duration.
 
 - The notification wording is a soft invitation that does NOT name a duration, e.g. "暇な時間って存在しますか？" / "ちょっとした空き時間、ありませんか？".
 - There are **no time-selection notification actions** (the old 15 / 30 / 60 minute actions are removed, because time is no longer a universal condition).

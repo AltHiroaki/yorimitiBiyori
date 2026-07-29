@@ -9,7 +9,10 @@ const String defaultNotificationStartTime = '17:00';
 const String defaultNotificationEndTime = '21:00';
 
 /// shared_preferences に保存するユーザー設定 JSON の現行スキーマバージョン。
-const int userSettingsSchemaVersion = 1;
+const int userSettingsSchemaVersion = 2;
+
+/// 提案の所要時間上限として保存できる値（分）。
+const List<int> allowedMaxEstimatedMinutes = [15, 30, 60];
 
 /// テーマモード設定。system は端末の設定に追従する。
 enum ThemeModeSetting {
@@ -42,13 +45,19 @@ class UserSettings {
   const UserSettings({
     this.selectedCategories = defaultSelectedCategoryIds,
     this.detailSettings = const {},
+    this.maxEstimatedMinutes,
     this.notificationEnabled = true,
     this.notificationStartTime = defaultNotificationStartTime,
     this.notificationEndTime = defaultNotificationEndTime,
     this.firstLaunchCompleted = false,
     this.recentSuggestionIds = const [],
     this.themeMode = defaultThemeMode,
-  });
+  }) : assert(
+         maxEstimatedMinutes == null ||
+             maxEstimatedMinutes == 15 ||
+             maxEstimatedMinutes == 30 ||
+             maxEstimatedMinutes == 60,
+       );
 
   /// 選択中の興味カテゴリ id（例：`music`）。
   final List<String> selectedCategories;
@@ -56,6 +65,9 @@ class UserSettings {
   /// カテゴリ id → 詳細設定グループ id → 選択値の一覧。
   /// グループが未設定・空配列の場合は「指定なし」として扱う。
   final Map<String, Map<String, List<String>>> detailSettings;
+
+  /// 提案の目安所要時間の上限（分）。null は「指定なし」。
+  final int? maxEstimatedMinutes;
 
   final bool notificationEnabled;
 
@@ -85,6 +97,9 @@ class UserSettings {
         defaultSelectedCategoryIds,
       ),
       detailSettings: _parseDetailSettings(json['detail_settings']),
+      maxEstimatedMinutes: _parseMaxEstimatedMinutes(
+        json['max_estimated_minutes'],
+      ),
       notificationEnabled: json['notification_enabled'] is bool
           ? json['notification_enabled'] as bool
           : true,
@@ -106,6 +121,7 @@ class UserSettings {
       'version': userSettingsSchemaVersion,
       'selected_categories': selectedCategories,
       'detail_settings': detailSettings,
+      'max_estimated_minutes': maxEstimatedMinutes,
       'notification_enabled': notificationEnabled,
       'notification_start_time': notificationStartTime,
       'notification_end_time': notificationEndTime,
@@ -128,14 +144,29 @@ class UserSettings {
     return UserSettings(
       selectedCategories: selectedCategories ?? this.selectedCategories,
       detailSettings: detailSettings ?? this.detailSettings,
+      maxEstimatedMinutes: maxEstimatedMinutes,
       notificationEnabled: notificationEnabled ?? this.notificationEnabled,
       notificationStartTime:
           notificationStartTime ?? this.notificationStartTime,
       notificationEndTime: notificationEndTime ?? this.notificationEndTime,
-      firstLaunchCompleted:
-          firstLaunchCompleted ?? this.firstLaunchCompleted,
+      firstLaunchCompleted: firstLaunchCompleted ?? this.firstLaunchCompleted,
       recentSuggestionIds: recentSuggestionIds ?? this.recentSuggestionIds,
       themeMode: themeMode ?? this.themeMode,
+    );
+  }
+
+  /// 所要時間上限だけを更新する。null を渡すと「指定なし」へ戻す。
+  UserSettings withMaxEstimatedMinutes(int? maxEstimatedMinutes) {
+    return UserSettings(
+      selectedCategories: selectedCategories,
+      detailSettings: detailSettings,
+      maxEstimatedMinutes: maxEstimatedMinutes,
+      notificationEnabled: notificationEnabled,
+      notificationStartTime: notificationStartTime,
+      notificationEndTime: notificationEndTime,
+      firstLaunchCompleted: firstLaunchCompleted,
+      recentSuggestionIds: recentSuggestionIds,
+      themeMode: themeMode,
     );
   }
 }
@@ -156,7 +187,8 @@ _NotificationRange _parseNotificationRange(Map<String, dynamic> json) {
   final startValue = json['notification_start_time'];
   final endValue = json['notification_end_time'];
   final hasRangeKeys =
-      _isValidNotificationTime(startValue) || _isValidNotificationTime(endValue);
+      _isValidNotificationTime(startValue) ||
+      _isValidNotificationTime(endValue);
 
   String start;
   String end;
@@ -227,4 +259,11 @@ Map<String, Map<String, List<String>>> _parseDetailSettings(dynamic value) {
     parsedDetailSettings[categoryId] = parsedGroups;
   });
   return parsedDetailSettings;
+}
+
+int? _parseMaxEstimatedMinutes(dynamic value) {
+  if (value is int && allowedMaxEstimatedMinutes.contains(value)) {
+    return value;
+  }
+  return null;
 }

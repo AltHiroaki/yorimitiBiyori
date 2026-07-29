@@ -4,6 +4,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 
 import '../features/recommendation/suggestion_flow_service.dart';
+import '../features/recommendation/suggestion_picker.dart';
 import '../models/hour_minute.dart';
 import '../models/interest_category.dart';
 import '../models/suggestion.dart';
@@ -288,9 +289,9 @@ class _SuggestionPageState extends State<SuggestionPage> {
     if (selectedIds.contains(categoryId)) {
       // 提案設定画面と同じく、カテゴリは 1 件以上必須（issue #50）。
       if (selectedIds.length == 1) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text('カテゴリは1つ以上選んでください')),
-        );
+        ScaffoldMessenger.of(
+          context,
+        ).showSnackBar(const SnackBar(content: Text('カテゴリは1つ以上選んでください')));
         return;
       }
       selectedIds.remove(categoryId);
@@ -380,6 +381,10 @@ class _SuggestionPageState extends State<SuggestionPage> {
             else
               _EmptyCard(
                 isCategoryEmpty: _settings.selectedCategories.isEmpty,
+                isDurationLimitCause: isDurationLimitCausingNoCandidates(
+                  _allSuggestions,
+                  _settings,
+                ),
                 onOpenSettings: _openSuggestionSettings,
               ),
             const SizedBox(height: 12),
@@ -567,13 +572,23 @@ class _ConditionCard extends StatelessWidget {
               ),
             Row(
               children: [
-                // 詳細設定の値は長くなりうるため、要約側を可変幅にして折り返す。
                 Expanded(
-                  child: Text(
-                    detailSummary.isEmpty
-                        ? '詳細設定：すべてのジャンルから'
-                        : '詳細設定：$detailSummary',
-                    style: const TextStyle(fontSize: 13),
+                  // 条件値は長くなりうるため、要約側を可変幅にして折り返す。
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        detailSummary.isEmpty
+                            ? '詳細設定：すべてのジャンルから'
+                            : '詳細設定：$detailSummary',
+                        style: const TextStyle(fontSize: 13),
+                      ),
+                      if (settings.maxEstimatedMinutes case final int minutes)
+                        Text(
+                          '時間の上限：〜$minutes分',
+                          style: const TextStyle(fontSize: 13),
+                        ),
+                    ],
                   ),
                 ),
                 TextButton(
@@ -775,14 +790,27 @@ class _CardActionButtons extends StatelessWidget {
 class _EmptyCard extends StatelessWidget {
   const _EmptyCard({
     required this.isCategoryEmpty,
+    required this.isDurationLimitCause,
     required this.onOpenSettings,
   });
 
   final bool isCategoryEmpty;
+  final bool isDurationLimitCause;
   final VoidCallback onOpenSettings;
 
   @override
   Widget build(BuildContext context) {
+    final title = switch ((isCategoryEmpty, isDurationLimitCause)) {
+      (true, _) => 'カテゴリが選ばれていません',
+      (false, true) => '時間の上限に合う提案が見つかりませんでした',
+      _ => '条件に合う提案が見つかりませんでした',
+    };
+    final message = switch ((isCategoryEmpty, isDurationLimitCause)) {
+      (true, _) => '提案設定から、興味のあるカテゴリを選んでみてください。',
+      (false, true) => '時間の上限を広げるか、カテゴリ・詳細設定を見直してください。',
+      _ => 'カテゴリを増やすか、詳細設定を緩めてみてください。',
+    };
+
     return NeumorphicSurface(
       child: Padding(
         padding: const EdgeInsets.all(20),
@@ -790,21 +818,17 @@ class _EmptyCard extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              isCategoryEmpty ? 'カテゴリが選ばれていません' : '条件に合う提案が見つかりませんでした',
+              title,
               style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 8),
-            Text(
-              isCategoryEmpty
-                  ? '提案設定から、興味のあるカテゴリを選んでみてください。'
-                  : 'カテゴリを増やすか、詳細設定を緩めてみてください。',
-            ),
+            Text(message),
             const SizedBox(height: 16),
             NeumorphicButtonFrame(
               isPrimary: true,
               child: FilledButton(
                 onPressed: onOpenSettings,
-                child: const Text('提案設定を開く'),
+                child: Text(isDurationLimitCause ? '提案設定を見直す' : '提案設定を開く'),
               ),
             ),
           ],
