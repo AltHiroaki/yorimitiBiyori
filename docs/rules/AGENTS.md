@@ -59,7 +59,7 @@ Bottom NavigationBar with exactly 3 tabs. There is **no home screen**; the sugge
 - Tab 3 設定 (settings): Google account row (advanced phase, show as 未連携), suggestion settings row, interest categories, notification time, notification toggle, history deletion with inline confirm, about
 - Sub screen 提案設定 (suggestion settings): **two-stage** editor — stage 1 category multi-select, stage 2 per-category detail-setting groups — with AppBar back button, reachable from both the suggestion tab and the settings tab
 - Onboarding (first launch only): welcome modal → category selection → notification permission dialog (allow / later). Keep exactly 3 steps and show the shared 3-step progress indicator on every screen. Do not add a detail-setting step. Preview that details can be narrowed later. The notification copy identifies 17:00–21:00 as the initial default and says the range can be changed later.
-- Completion modal: ModalBottomSheet after "やってみる" with 3 feedback choices and "履歴に保存"
+- Completion modal: ModalBottomSheet after "やってみる" with 3 feedback choices and "これで完了"; after a successful save, show "記録しました"
 
 ## Suggestion Conditions (two-stage)
 

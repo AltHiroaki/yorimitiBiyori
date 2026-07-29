@@ -21,7 +21,8 @@ Future<List<SuggestionFeedback>> _pumpModalOpener(
               onPressed: () {
                 showCompletionModal(
                   context,
-                  onSave: onSave ??
+                  onSave:
+                      onSave ??
                       (feedback) async {
                         savedFeedbackLog.add(feedback);
                       },
@@ -48,18 +49,19 @@ void main() {
     expect(find.text('😊 よかった'), findsOneWidget);
     expect(find.text('🙂 普通'), findsOneWidget);
     expect(find.text('😐 合わなかった'), findsOneWidget);
-    expect(find.text('履歴に保存'), findsOneWidget);
+    expect(find.text('これで完了'), findsOneWidget);
   });
 
-  testWidgets('初期選択のまま保存すると good で保存され、成功 SnackBar が出てモーダルが閉じる',
-      (tester) async {
+  testWidgets('初期選択のまま保存すると good で保存され、成功 SnackBar が出てモーダルが閉じる', (
+    tester,
+  ) async {
     final savedFeedbackLog = await _pumpModalOpener(tester);
 
-    await tester.tap(find.text('履歴に保存'));
+    await tester.tap(find.text('これで完了'));
     await tester.pumpAndSettle();
 
     expect(savedFeedbackLog, [SuggestionFeedback.good]);
-    expect(find.text('履歴に保存しました'), findsOneWidget);
+    expect(find.text('記録しました'), findsOneWidget);
     expect(find.text('おつかれさまです'), findsNothing);
   });
 
@@ -68,7 +70,7 @@ void main() {
 
     await tester.tap(find.text('😐 合わなかった'));
     await tester.pumpAndSettle();
-    await tester.tap(find.text('履歴に保存'));
+    await tester.tap(find.text('これで完了'));
     await tester.pumpAndSettle();
 
     expect(savedFeedbackLog, [SuggestionFeedback.bad]);
@@ -82,7 +84,7 @@ void main() {
     await tester.pumpAndSettle();
 
     expect(savedFeedbackLog, isEmpty);
-    expect(find.text('履歴に保存しました'), findsNothing);
+    expect(find.text('記録しました'), findsNothing);
   });
 
   testWidgets('保存に失敗すると SnackBar を表示し、モーダルは開いたまま再試行できる', (tester) async {
@@ -95,7 +97,7 @@ void main() {
       },
     );
 
-    await tester.tap(find.text('履歴に保存'));
+    await tester.tap(find.text('これで完了'));
     await tester.pumpAndSettle();
 
     expect(attemptCount, 1);
@@ -103,12 +105,12 @@ void main() {
     // モーダルは開いたままで、ボタンが再度有効になっている。
     expect(find.text('おつかれさまです'), findsOneWidget);
     final saveButton = tester.widget<FilledButton>(
-      find.widgetWithText(FilledButton, '履歴に保存'),
+      find.widgetWithText(FilledButton, 'これで完了'),
     );
     expect(saveButton.onPressed, isNotNull);
   });
 
-  testWidgets('保存中は「履歴に保存」が無効化され、連打しても二重登録されない', (tester) async {
+  testWidgets('保存中は「これで完了」が無効化され、連打しても二重登録されない', (tester) async {
     final saveCompleter = Completer<void>();
     var saveCount = 0;
     await _pumpModalOpener(
@@ -120,25 +122,25 @@ void main() {
     );
 
     // 1回目のタップで保存が始まる（未完了のまま保留）。
-    await tester.tap(find.text('履歴に保存'));
+    await tester.tap(find.text('これで完了'));
     await tester.pump();
 
     // 保存中はボタンが無効化されている。
     final saveButton = tester.widget<FilledButton>(
-      find.widgetWithText(FilledButton, '履歴に保存'),
+      find.widgetWithText(FilledButton, 'これで完了'),
     );
     expect(saveButton.onPressed, isNull);
 
     // 連打しても onSave は追加で呼ばれない。
-    await tester.tap(find.text('履歴に保存'), warnIfMissed: false);
+    await tester.tap(find.text('これで完了'), warnIfMissed: false);
     await tester.pump();
-    await tester.tap(find.text('履歴に保存'), warnIfMissed: false);
+    await tester.tap(find.text('これで完了'), warnIfMissed: false);
     await tester.pump();
 
     saveCompleter.complete();
     await tester.pumpAndSettle();
 
     expect(saveCount, 1);
-    expect(find.text('履歴に保存しました'), findsOneWidget);
+    expect(find.text('記録しました'), findsOneWidget);
   });
 }

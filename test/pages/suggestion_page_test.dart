@@ -544,7 +544,7 @@ void main() {
     expect(ongoingRepository.ongoing!.suggestionId, 'music_a');
   });
 
-  testWidgets('実施中の完了→履歴に保存で done レコードが保存され、完了演出後に履歴IDが渡る', (tester) async {
+  testWidgets('実施中の完了→これで完了で done レコードが保存され、完了演出後に履歴IDが渡る', (tester) async {
     final recordsRepository = _FakeRecordsRepository();
     final ongoingRepository = _FakeOngoingSuggestionRepository();
     String? completedRecordId;
@@ -567,7 +567,7 @@ void main() {
 
     await tester.tap(find.text('🙂 普通'));
     await tester.pumpAndSettle();
-    await tester.tap(find.text('履歴に保存'));
+    await tester.tap(find.text('これで完了'));
     await tester.pumpAndSettle();
 
     expect(recordsRepository.addedRecords, hasLength(1));
@@ -583,7 +583,7 @@ void main() {
     expect(ongoingRepository.ongoing, isNull);
     expect(completedRecordId, savedRecord.id);
     // 保存成功のフィードバックとして SnackBar を表示する（issue #44）。
-    expect(find.text('履歴に保存しました'), findsOneWidget);
+    expect(find.text('記録しました'), findsOneWidget);
   });
 
   testWidgets('スキップから復活した実施中を完了すると元のスキップ履歴が削除される', (tester) async {
@@ -618,7 +618,7 @@ void main() {
 
     await tester.tap(find.text('完了'));
     await tester.pumpAndSettle();
-    await tester.tap(find.text('履歴に保存'));
+    await tester.tap(find.text('これで完了'));
     await tester.pumpAndSettle();
 
     // 元のスキップ履歴は消え、done レコードだけが残る。
@@ -793,7 +793,7 @@ void main() {
     expect(skippedRecord.status, SuggestionRecordStatus.skipped);
     expect(skippedRecord.feedback, isNull);
     // スキップはカードの切り替わり自体がフィードバックのため SnackBar は出さない（issue #44）。
-    expect(find.text('履歴に保存しました'), findsNothing);
+    expect(find.text('記録しました'), findsNothing);
   });
 
   testWidgets('提案設定から戻ると条件が再読込されて表示に反映される', (tester) async {
