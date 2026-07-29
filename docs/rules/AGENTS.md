@@ -38,7 +38,7 @@ The core experience is:
 2. In 提案設定, the user picks categories, then sets each category's detail settings.
 3. The app sends one local notification per day at a random time within the user-configured range (default 17:00–21:00). The wording is a soft invitation that does NOT name a duration (e.g. "暇な時間って存在しますか？"). There are no time-selection notification actions.
 4. The user taps the notification body, which opens the suggestion screen (suggestion produced from the saved category + detail settings).
-5. The suggestion screen shows one matching suggestion with title, description, and tags. Cook suggestions additionally carry a `recipe`, which the user can expand via "詳しく見る"; other categories have no expandable detail.
+5. The suggestion screen shows one matching suggestion with title, description, tags, and a subtle "目安 約N分" text line. Estimated time is reference information, not a tag, so never render it as a Chip. Cook suggestions additionally carry a `recipe`, which the user can expand via "詳しく見る"; other categories have no expandable detail.
 6. "やってみる" opens a completion modal with feedback chips (よかった / 普通 / 合わなかった) and saves a done record.
 7. "スキップして次の提案" records the current suggestion as skipped and re-draws with the same conditions.
 
@@ -54,12 +54,12 @@ Do not implement or generate iOS platform files for the MVP unless explicitly re
 
 Bottom NavigationBar with exactly 3 tabs. There is **no home screen**; the suggestion tab is the top screen.
 
-- Tab 1 提案 (suggestion): current-conditions card (selected categories + active detail settings) + "今日のよりみち" suggestion card (title, description, expandable recipe for cook suggestions, tags) + info card
+- Tab 1 提案 (suggestion): current-conditions card (selected categories + active detail settings) + "今日のよりみち" suggestion card (title, description, expandable recipe for cook suggestions, tags, subtle estimated-time text) + info card
 - Tab 2 履歴 (history): summary (done count / skipped count / total minutes) + recent records list; empty state with CTA to the suggestion tab
 - Tab 3 設定 (settings): Google account row (advanced phase, show as 未連携), suggestion settings row, interest categories, notification time, notification toggle, history deletion with inline confirm, about
 - Sub screen 提案設定 (suggestion settings): **two-stage** editor — stage 1 category multi-select, stage 2 per-category detail-setting groups — with AppBar back button, reachable from both the suggestion tab and the settings tab
 - Onboarding (first launch only): welcome modal → category selection → notification permission dialog (allow / later). Keep exactly 3 steps and show the shared 3-step progress indicator on every screen. Do not add a detail-setting step. Preview that details can be narrowed later. The notification copy identifies 17:00–21:00 as the initial default and says the range can be changed later.
-- Completion modal: ModalBottomSheet after "やってみる" with 3 feedback choices and "履歴に保存"
+- Completion modal: ModalBottomSheet after "やってみる" with 3 feedback choices and "これで完了"; after a successful save, show "記録しました"
 
 ## Suggestion Conditions (two-stage)
 

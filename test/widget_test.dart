@@ -118,7 +118,12 @@ void main() {
 
     // やってみる → 実施中カード → 完了 → フィードバックモーダル（issue #48）。
     final tryButton = find.widgetWithText(FilledButton, 'やってみる');
-    await tester.scrollUntilVisible(tryButton, 100);
+    // AppShell の PageView も Scrollable なので、ページ内のリストを名指しする。
+    await tester.scrollUntilVisible(
+      tryButton,
+      100,
+      scrollable: find.byType(Scrollable).last,
+    );
     await tester.tap(tryButton);
     await tester.pumpAndSettle();
     expect(find.text('実施中のよりみち'), findsOneWidget);
@@ -138,7 +143,11 @@ void main() {
     await tester.pumpAndSettle();
     expect(find.text('興味カテゴリ、通知時間帯、履歴を管理します。'), findsOneWidget);
 
-    await tester.scrollUntilVisible(find.text('提案設定を開く'), 200);
+    await tester.scrollUntilVisible(
+      find.text('提案設定を開く'),
+      200,
+      scrollable: find.byType(Scrollable).last,
+    );
     await tester.tap(find.text('提案設定を開く'));
     await tester.pumpAndSettle();
     expect(find.text('この条件で保存'), findsOneWidget);
@@ -245,31 +254,134 @@ void main() {
     expect(find.text('設定'), findsOneWidget);
   });
 
-  testWidgets('タブ切替は200msのフェードで表示を切り替える', (WidgetTester tester) async {
+  testWidgets('隣接タブのタップはスライドで切り替わる', (WidgetTester tester) async {
     await tester.pumpWidget(const YorimichiBiyoriApp());
     await tester.pumpAndSettle();
 
-    final appShellSwitcher = find.byWidgetPredicate((widget) {
-      return widget is AnimatedSwitcher && widget.child is KeyedSubtree;
-    });
-
-    final animatedSwitcher = tester.widget<AnimatedSwitcher>(
-      appShellSwitcher,
-    );
-    expect(animatedSwitcher.duration, const Duration(milliseconds: 200));
-    expect(find.byKey(const ValueKey<int>(0)), findsOneWidget);
+    expect(_pageControllerOf(tester).page, 0);
 
     await tester.tap(find.text('履歴'));
+    // スライドの途中では 0 と 1 の間に位置し、両ページが見えている。
     await tester.pump();
+    await tester.pump(const Duration(milliseconds: 120));
 
-    expect(find.byType(FadeTransition), findsWidgets);
+    final midwayPage = _pageControllerOf(tester).page!;
+    expect(midwayPage, greaterThan(0));
+    expect(midwayPage, lessThan(1));
+    // 飛び越しではないのでフェードは掛からない。
+    expect(_fadeOpacityOf(tester), 1);
 
     await tester.pumpAndSettle();
-    expect(find.byKey(const ValueKey<int>(1)), findsOneWidget);
+    expect(_pageControllerOf(tester).page, 1);
+    expect(_selectedTabIndexOf(tester), 1);
   });
 
-  testWidgets('完了時は履歴タブへ自動遷移し、保存した履歴IDをハイライト対象に渡す',
-      (tester) async {
+  testWidgets('提案 ↔ 設定 の飛び越しは履歴を見せずフェードで切り替わる', (tester) async {
+    await tester.pumpWidget(const YorimichiBiyoriApp());
+    await tester.pumpAndSettle();
+
+    await tester.tap(find.text('設定'));
+    await tester.pump();
+
+    // jumpToPage なので中間の履歴ページを通らない。
+    expect(_pageControllerOf(tester).page, 2);
+    expect(find.text('実施したよりみちと、スキップした提案を確認します。'), findsNothing);
+    expect(_slidePositionOf(tester), Offset.zero);
+
+    await tester.pump(const Duration(milliseconds: 100));
+    expect(_fadeOpacityOf(tester), lessThan(1));
+
+    await tester.pumpAndSettle();
+    expect(_fadeOpacityOf(tester), 1);
+    expect(_selectedTabIndexOf(tester), 2);
+    expect(find.text('興味カテゴリ、通知時間帯、履歴を管理します。'), findsOneWidget);
+  });
+
+  testWidgets('横スワイプで隣のタブへ移動し、下タブの選択状態も追従する', (tester) async {
+    await tester.pumpWidget(const YorimichiBiyoriApp());
+    await tester.pumpAndSettle();
+
+    final pageView = find.byType(PageView);
+
+    // 提案 → 履歴（左へ払う）。
+    await tester.fling(pageView, const Offset(-400, 0), 1000);
+    await tester.pumpAndSettle();
+
+    expect(_pageControllerOf(tester).page, 1);
+    expect(_selectedTabIndexOf(tester), 1);
+    expect(find.text('まだ履歴はありません'), findsOneWidget);
+
+    // 履歴 → 設定。
+    await tester.fling(pageView, const Offset(-400, 0), 1000);
+    await tester.pumpAndSettle();
+
+    expect(_pageControllerOf(tester).page, 2);
+    expect(_selectedTabIndexOf(tester), 2);
+
+    // 設定 → 履歴（右へ払う）。
+    await tester.fling(pageView, const Offset(400, 0), 1000);
+    await tester.pumpAndSettle();
+
+    expect(_pageControllerOf(tester).page, 1);
+    expect(_selectedTabIndexOf(tester), 1);
+  });
+
+  testWidgets('スワイプを途中でやめると履歴は読み込まれない', (tester) async {
+    await tester.pumpWidget(const YorimichiBiyoriApp());
+    await tester.pumpAndSettle();
+
+    // 半分に届かない距離までドラッグして戻す。
+    // 1 回目の移動はドラッグ開始の判定に使われるため、2 回に分けて動かす。
+    final gesture = await tester.startGesture(
+      tester.getCenter(find.byType(PageView)),
+    );
+    await gesture.moveBy(const Offset(-30, 0));
+    await gesture.moveBy(const Offset(-200, 0));
+    await tester.pump();
+
+    // 隣の履歴ページは build されるが、読み込みは走らずローディング表示のまま。
+    expect(_pageControllerOf(tester).page, greaterThan(0));
+    expect(find.byType(HistoryPage), findsOneWidget);
+    expect(
+      tester.widget<HistoryPage>(find.byType(HistoryPage)).isActive,
+      isFalse,
+    );
+    expect(find.text('まだ履歴はありません'), findsNothing);
+    expect(find.byType(CircularProgressIndicator), findsOneWidget);
+
+    await gesture.up();
+    await tester.pumpAndSettle();
+
+    expect(_pageControllerOf(tester).page, 0);
+    expect(_selectedTabIndexOf(tester), 0);
+  });
+
+  testWidgets('reduce motion 有効時はスライドもフェードもせず切り替える', (tester) async {
+    await tester.pumpWidget(
+      const MediaQuery(
+        data: MediaQueryData(disableAnimations: true),
+        child: YorimichiBiyoriApp(),
+      ),
+    );
+    await tester.pumpAndSettle();
+
+    // 隣接（提案 → 履歴）でもスライドせず即座に切り替わる。
+    await tester.tap(find.text('履歴'));
+    await tester.pump();
+    expect(_pageControllerOf(tester).page, 1);
+    expect(_fadeOpacityOf(tester), 1);
+
+    // 飛び越し（提案 → 設定）も同じく即座に切り替わる。
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('提案'));
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('設定'));
+    await tester.pump();
+    expect(_pageControllerOf(tester).page, 2);
+    expect(_fadeOpacityOf(tester), 1);
+  });
+
+  testWidgets('完了時は履歴タブへ自動遷移し、保存した履歴IDをハイライト対象に渡す', (tester) async {
     tester.view.physicalSize = const Size(800, 2400);
     tester.view.devicePixelRatio = 1.0;
     addTearDown(tester.view.reset);
@@ -278,29 +390,38 @@ void main() {
     await tester.pumpAndSettle();
 
     final tryButton = find.widgetWithText(FilledButton, 'やってみる');
-    await tester.scrollUntilVisible(tryButton, 100);
+    // AppShell の PageView も Scrollable なので、ページ内のリストを名指しする。
+    await tester.scrollUntilVisible(
+      tryButton,
+      100,
+      scrollable: find.byType(Scrollable).last,
+    );
     await tester.tap(tryButton);
     await tester.pumpAndSettle();
     await tester.tap(find.widgetWithText(FilledButton, '完了'));
     await tester.pumpAndSettle();
     await tester.tap(find.text('🙂 普通'));
     await tester.pumpAndSettle();
-    await tester.tap(find.text('履歴に保存'));
+    await tester.tap(find.text('これで完了'));
+
+    // 完了演出（チェック → カードの吸い込み）のあとに履歴タブへ切り替わる。
+    // 通常のタブ移動と違い、右から滑り込むスライドが掛かることを確かめる。
+    final completionSlideStart = await _pumpUntilCompletionSlideStarts(tester);
+    expect(completionSlideStart, isNotNull);
+    expect(completionSlideStart!.dx, greaterThan(0));
+    // 飛び越しと同じく中間ページは見せないので、切り替わった時点で履歴にいる。
+    expect(_pageControllerOf(tester).page, 1);
+    expect(_fadeOpacityOf(tester), lessThan(1));
+
     await tester.pumpAndSettle();
 
-    expect(find.byKey(const ValueKey<String>('completion-history')), findsOneWidget);
+    expect(_slidePositionOf(tester), Offset.zero);
+    expect(_fadeOpacityOf(tester), 1);
+    expect(_selectedTabIndexOf(tester), 1);
     expect(find.text('最近の履歴'), findsOneWidget);
 
     final historyPage = tester.widget<HistoryPage>(find.byType(HistoryPage));
     expect(historyPage.highlightedRecordId, isNotNull);
-
-    final appShellSwitcher = find.byWidgetPredicate((widget) {
-      return widget is AnimatedSwitcher && widget.child is KeyedSubtree;
-    });
-    expect(
-      tester.widget<AnimatedSwitcher>(appShellSwitcher).duration,
-      const Duration(milliseconds: 400),
-    );
   });
 
   testWidgets('履歴タブに切り替えると空状態が表示される', (WidgetTester tester) async {
@@ -313,8 +434,7 @@ void main() {
     expect(find.text('まだ履歴はありません'), findsOneWidget);
   });
 
-  testWidgets('スキップ履歴を復活すると提案タブの実施中カードへ自動遷移する',
-      (tester) async {
+  testWidgets('スキップ履歴を復活すると提案タブの実施中カードへ自動遷移する', (tester) async {
     final skippedRecord = SuggestionRecord(
       id: 'record_skipped',
       suggestionId: 'music_jazz_focus',
@@ -349,10 +469,7 @@ void main() {
     expect(find.text('作業用にジャズを1曲だけ流す'), findsOneWidget);
 
     final preferences = await SharedPreferences.getInstance();
-    expect(
-      preferences.getString(ongoingSuggestionPreferenceKey),
-      isNotNull,
-    );
+    expect(preferences.getString(ongoingSuggestionPreferenceKey), isNotNull);
 
     await tester.tap(find.text('履歴'));
     await tester.pumpAndSettle();
@@ -391,7 +508,11 @@ void main() {
     await tester.tap(find.text('設定'));
     await tester.pumpAndSettle();
 
-    await tester.scrollUntilVisible(find.text('削除'), 200);
+    await tester.scrollUntilVisible(
+      find.text('削除'),
+      200,
+      scrollable: find.byType(Scrollable).last,
+    );
     await tester.pumpAndSettle();
     await tester.tap(find.text('削除'));
     await tester.pumpAndSettle();
@@ -422,4 +543,39 @@ void main() {
 
     expect(find.text('空いた時間に、小さなよりみちを。'), findsOneWidget);
   });
+}
+
+PageController _pageControllerOf(WidgetTester tester) {
+  return tester.widget<PageView>(find.byType(PageView)).controller!;
+}
+
+double _fadeOpacityOf(WidgetTester tester) {
+  return tester
+      .widget<FadeTransition>(find.byKey(appShellTabFadeKey))
+      .opacity
+      .value;
+}
+
+Offset _slidePositionOf(WidgetTester tester) {
+  return tester
+      .widget<SlideTransition>(find.byKey(appShellTabSlideKey))
+      .position
+      .value;
+}
+
+int _selectedTabIndexOf(WidgetTester tester) {
+  return tester.widget<NavigationBar>(find.byType(NavigationBar)).selectedIndex;
+}
+
+/// 完了演出が終わってタブ切替のスライドが始まるまでフレームを進め、
+/// 最初に観測したスライド量を返す。見つからなければ null。
+Future<Offset?> _pumpUntilCompletionSlideStarts(WidgetTester tester) async {
+  for (var frame = 0; frame < 240; frame++) {
+    await tester.pump(const Duration(milliseconds: 16));
+    final position = _slidePositionOf(tester);
+    if (position != Offset.zero) {
+      return position;
+    }
+  }
+  return null;
 }

@@ -146,7 +146,12 @@ void main() {
     await tester.tap(find.text('設定'));
     await tester.pumpAndSettle();
 
-    await tester.scrollUntilVisible(find.text('削除'), 200);
+    // AppShell の PageView も Scrollable なので、ページ内のリストを名指しする。
+    await tester.scrollUntilVisible(
+      find.text('削除'),
+      200,
+      scrollable: find.byType(Scrollable).last,
+    );
     await tester.pumpAndSettle();
     await tester.tap(find.text('削除'));
     await tester.pumpAndSettle();
@@ -159,7 +164,11 @@ void main() {
 
     await tester.tap(find.text('設定'));
     await tester.pumpAndSettle();
-    await tester.scrollUntilVisible(find.text('提案設定を開く'), 200);
+    await tester.scrollUntilVisible(
+      find.text('提案設定を開く'),
+      200,
+      scrollable: find.byType(Scrollable).last,
+    );
     await tester.tap(find.text('提案設定を開く'));
     await tester.pumpAndSettle();
 
