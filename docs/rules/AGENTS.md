@@ -54,10 +54,11 @@ Do not implement or generate iOS platform files for the MVP unless explicitly re
 
 Bottom NavigationBar with exactly 3 tabs. There is **no home screen**; the suggestion tab is the top screen.
 
-- Tab 1 提案 (suggestion): current-conditions card (selected categories + active detail settings) + "今日のよりみち" suggestion card (title, description, expandable recipe for cook suggestions, tags, subtle estimated-time text, where-to-try text) + info card
+- Tab 1 提案 (suggestion): current-conditions card (selected categories + active detail settings) + "今日のよりみち" suggestion card (title, description, expandable recipe for cook suggestions, tags, subtle estimated-time text, where-to-try text) + info card with a "もっと詳しく" link to the usage page
 - Tab 2 履歴 (history): period selector (今週 / 全期間) + period-linked summary (done count / skipped count / total minutes) + single-select status filters (すべて / 実施 / スキップ) + filtered records list. 今週 means local Monday 00:00 through now. Keep the filter state only while HistoryPage State lives; do not persist it. Distinguish the no-records empty state from a zero-result filter state
-- Tab 3 設定 (settings): Google account row (advanced phase, show as 未連携), suggestion settings row, interest categories, notification time, notification toggle, history deletion with inline confirm, about
+- Tab 3 設定 (settings): Google account row (advanced phase, show as 未連携), suggestion settings row, interest categories, notification time, notification toggle, usage row, history deletion with inline confirm, about
 - Sub screen 提案設定 (suggestion settings): **two-stage** editor — stage 1 category multi-select, stage 2 per-category detail-setting groups — with AppBar back button, reachable from both the suggestion tab and the settings tab
+- Sub screen 使い方 (usage, advanced phase): static text for the core loop, skipping, reviving a skipped suggestion from history, expanding a cook recipe, and daily notifications. Keep it separate from アプリについて and reachable from both settings and the suggestion info card
 - Onboarding (first launch only): welcome modal → category selection → notification permission dialog (allow / later). Keep exactly 3 steps and show the shared 3-step progress indicator on every screen. Do not add a detail-setting step. Preview that details can be narrowed later. The notification copy identifies 17:00–21:00 as the initial default and says the range can be changed later.
 - Completion modal: ModalBottomSheet after "やってみる" with 3 feedback choices and "これで完了"; after a successful save, show "記録しました"
 
