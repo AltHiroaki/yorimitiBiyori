@@ -418,7 +418,7 @@ void main() {
     expect(_slidePositionOf(tester), Offset.zero);
     expect(_fadeOpacityOf(tester), 1);
     expect(_selectedTabIndexOf(tester), 1);
-    expect(find.text('最近の履歴'), findsOneWidget);
+    expect(find.text('今週の履歴'), findsOneWidget);
 
     final historyPage = tester.widget<HistoryPage>(find.byType(HistoryPage));
     expect(historyPage.highlightedRecordId, isNotNull);
@@ -443,7 +443,7 @@ void main() {
       estimatedMinutes: 5,
       status: SuggestionRecordStatus.skipped,
       feedback: null,
-      createdAt: DateTime.utc(2026, 7, 1, 12),
+      createdAt: DateTime.now(),
     );
     SharedPreferences.setMockInitialValues({
       settingsPreferenceKey: jsonEncode(
@@ -474,7 +474,7 @@ void main() {
     await tester.tap(find.text('履歴'));
     await tester.pumpAndSettle();
     expect(find.text('作業用にジャズを1曲だけ流す'), findsOneWidget);
-    expect(find.text('スキップ'), findsNWidgets(2));
+    expect(find.text('スキップ'), findsNWidgets(3));
   });
 
   testWidgets('設定タブで履歴を削除すると履歴タブが空状態に戻る', (WidgetTester tester) async {
@@ -486,7 +486,7 @@ void main() {
       estimatedMinutes: 5,
       status: SuggestionRecordStatus.done,
       feedback: SuggestionFeedback.good,
-      createdAt: DateTime.utc(2026, 7, 1, 12),
+      createdAt: DateTime.now(),
     );
     SharedPreferences.setMockInitialValues({
       settingsPreferenceKey: jsonEncode(

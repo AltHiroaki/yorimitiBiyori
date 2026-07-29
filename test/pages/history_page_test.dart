@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:yorimichi_biyori/src/features/records/history_filter.dart';
 import 'package:yorimichi_biyori/src/models/ongoing_suggestion.dart';
 import 'package:yorimichi_biyori/src/models/suggestion_record.dart';
 import 'package:yorimichi_biyori/src/pages/history_page.dart';
@@ -87,7 +88,15 @@ Future<void> _pumpPage(
   List<Map<String, dynamic>> suggestions = const [],
   _FakeOngoingSuggestionRepository? ongoingSuggestionRepository,
   bool failSuggestionLoad = false,
+  DateTime? now,
+  bool isActive = true,
 }) async {
+  final latestCreatedAt = records.isEmpty
+      ? DateTime(2026, 7, 29, 12)
+      : records
+            .map((record) => record.createdAt)
+            .reduce((a, b) => a.isAfter(b) ? a : b)
+            .add(const Duration(hours: 1));
   final suggestionRepository = SuggestionRepository(
     assetBundle: _FakeAssetBundle(
       failSuggestionLoad ? null : jsonEncode(suggestions),
@@ -101,11 +110,12 @@ Future<void> _pumpPage(
           recordsRepository: _FakeRecordsRepository(records),
           suggestionRepository: suggestionRepository,
           ongoingSuggestionRepository:
-              ongoingSuggestionRepository ??
-              _FakeOngoingSuggestionRepository(),
+              ongoingSuggestionRepository ?? _FakeOngoingSuggestionRepository(),
           onGoToSuggestions: onGoToSuggestions,
           onSuggestionRevived: onSuggestionRevived,
           highlightedRecordId: highlightedRecordId,
+          isActive: isActive,
+          nowProvider: () => now ?? latestCreatedAt,
         ),
       ),
     ),
@@ -129,8 +139,9 @@ SuggestionRecord _record({
     category: category,
     estimatedMinutes: estimatedMinutes,
     status: status,
-    feedback:
-        status == SuggestionRecordStatus.done ? SuggestionFeedback.good : null,
+    feedback: status == SuggestionRecordStatus.done
+        ? SuggestionFeedback.good
+        : null,
     createdAt: createdAt ?? DateTime(2026, 7, 1),
   );
 }
@@ -183,8 +194,8 @@ void main() {
     expect(find.text('2'), findsOneWidget); // 実施数
     expect(find.text('1'), findsOneWidget); // スキップ数
     expect(find.text('25'), findsOneWidget); // 合計分（done のみ）
-    // サマリーラベルの「実施」＋ done 2件のバッジで計3つ。
-    expect(find.text('実施'), findsNWidgets(3));
+    // サマリーラベル＋フィルタ＋ done 2件のバッジで計4つ。
+    expect(find.text('実施'), findsNWidgets(4));
     expect(find.text('分'), findsOneWidget);
   });
 
@@ -207,7 +218,7 @@ void main() {
       ],
     );
 
-    expect(find.text('最近の履歴'), findsOneWidget);
+    expect(find.text('今週の履歴'), findsOneWidget);
 
     // 新しい順：スキップした「新しい提案」が上に来る。
     final newOffset = tester.getTopLeft(find.text('新しい提案'));
@@ -215,7 +226,7 @@ void main() {
     expect(newOffset.dy, lessThan(oldOffset.dy));
 
     // バッジ（サマリーの「実施」ラベルと合わせて2つ）と日付・カテゴリ・所要時間。
-    expect(find.text('スキップ'), findsNWidgets(2));
+    expect(find.text('スキップ'), findsNWidgets(3));
     expect(find.text('6月7日　音楽・5分'), findsOneWidget);
     expect(find.text('6月5日　音楽・5分'), findsOneWidget);
     // 実施済み・スキップともタップで詳細を開けるため、両行にシェブロンが付く。
@@ -230,6 +241,200 @@ void main() {
     expect(find.text('提案を見てみる'), findsOneWidget);
     expect(find.text('0'), findsNWidgets(3));
     expect(find.text('最近の履歴'), findsNothing);
+  });
+
+  testWidgets('初期状態は今週・すべてで、全期間へ切り替えるとサマリーと一覧が連動する', (tester) async {
+    final now = DateTime(2026, 7, 29, 12);
+    await _pumpPage(
+      tester,
+      now: now,
+      records: [
+        _record(
+          id: 'this-week-done',
+          title: '今週の実施',
+          status: SuggestionRecordStatus.done,
+          estimatedMinutes: 15,
+          createdAt: DateTime(2026, 7, 28),
+        ),
+        _record(
+          id: 'this-week-skipped',
+          title: '今週のスキップ',
+          status: SuggestionRecordStatus.skipped,
+          createdAt: DateTime(2026, 7, 29),
+        ),
+        _record(
+          id: 'old-done',
+          title: '以前の実施',
+          status: SuggestionRecordStatus.done,
+          estimatedMinutes: 10,
+          createdAt: DateTime(2026, 7, 20),
+        ),
+      ],
+    );
+
+    final periodSelector = tester.widget<SegmentedButton<HistoryPeriod>>(
+      find.byType(SegmentedButton<HistoryPeriod>),
+    );
+    expect(periodSelector.selected, {HistoryPeriod.thisWeek});
+    expect(find.text('今週の実施'), findsOneWidget);
+    expect(find.text('今週のスキップ'), findsOneWidget);
+    expect(find.text('以前の実施'), findsNothing);
+    expect(find.text('15'), findsOneWidget);
+
+    await tester.tap(find.byKey(historyAllPeriodSegmentKey));
+    await tester.pumpAndSettle();
+
+    expect(find.text('最近の履歴'), findsOneWidget);
+    await tester.scrollUntilVisible(
+      find.text('以前の実施'),
+      200,
+      scrollable: find.byType(Scrollable).first,
+    );
+    expect(find.text('以前の実施'), findsOneWidget);
+    expect(find.text('25'), findsOneWidget);
+  });
+
+  testWidgets('ステータスで一覧だけを絞り込み、期間サマリーは変えない', (tester) async {
+    await _pumpPage(
+      tester,
+      records: [
+        _record(
+          id: 'done',
+          title: '実施した提案',
+          status: SuggestionRecordStatus.done,
+          estimatedMinutes: 15,
+        ),
+        _record(
+          id: 'skipped',
+          title: 'スキップした提案',
+          status: SuggestionRecordStatus.skipped,
+        ),
+      ],
+    );
+
+    await tester.tap(find.byKey(historyDoneStatusFilterKey));
+    await tester.pumpAndSettle();
+
+    expect(find.text('実施した提案'), findsOneWidget);
+    expect(find.text('スキップした提案'), findsNothing);
+    expect(find.text('15'), findsOneWidget);
+    expect(find.text('1'), findsNWidgets(2));
+
+    await tester.tap(find.byKey(historySkippedStatusFilterKey));
+    await tester.pumpAndSettle();
+
+    expect(find.text('実施した提案'), findsNothing);
+    expect(find.text('スキップした提案'), findsOneWidget);
+    expect(find.text('15'), findsOneWidget);
+    expect(find.text('1'), findsNWidgets(2));
+  });
+
+  testWidgets('通常のタブ非アクティブ化と再読み込みではフィルタ状態を維持する', (tester) async {
+    final records = [
+      _record(id: 'done', title: '実施した提案', status: SuggestionRecordStatus.done),
+      _record(
+        id: 'skipped',
+        title: 'スキップした提案',
+        status: SuggestionRecordStatus.skipped,
+      ),
+    ];
+    await _pumpPage(tester, records: records);
+    await tester.tap(find.byKey(historyDoneStatusFilterKey));
+    await tester.pumpAndSettle();
+
+    await _pumpPage(tester, records: records, isActive: false);
+    await _pumpPage(tester, records: records);
+
+    expect(find.text('実施した提案'), findsOneWidget);
+    expect(find.text('スキップした提案'), findsNothing);
+    final doneFilter = tester.widget<FilterChip>(
+      find.byKey(historyDoneStatusFilterKey),
+    );
+    expect(doneFilter.selected, isTrue);
+  });
+
+  testWidgets('新しいハイライト対象がフィルタに隠れる場合はすべて表示へ補正する', (tester) async {
+    final records = [
+      _record(
+        id: 'done',
+        title: '保存したばかりの提案',
+        status: SuggestionRecordStatus.done,
+      ),
+      _record(
+        id: 'skipped',
+        title: 'スキップした提案',
+        status: SuggestionRecordStatus.skipped,
+      ),
+    ];
+    await _pumpPage(tester, records: records);
+    await tester.tap(find.byKey(historySkippedStatusFilterKey));
+    await tester.pumpAndSettle();
+    expect(find.text('保存したばかりの提案'), findsNothing);
+
+    await _pumpPage(tester, records: records, highlightedRecordId: 'done');
+
+    expect(find.text('保存したばかりの提案'), findsOneWidget);
+    expect(
+      find.byKey(const ValueKey<String>('history-record-done')),
+      findsOneWidget,
+    );
+    expect(
+      find.byWidgetPredicate(
+        (widget) => widget is TweenAnimationBuilder<double>,
+      ),
+      findsOneWidget,
+    );
+    final allFilter = tester.widget<FilterChip>(
+      find.byKey(historyAllStatusFilterKey),
+    );
+    expect(allFilter.selected, isTrue);
+  });
+
+  testWidgets('今週が0件なら全体空状態と区別し、全期間へ切り替えられる', (tester) async {
+    await _pumpPage(
+      tester,
+      now: DateTime(2026, 7, 29, 12),
+      records: [
+        _record(
+          id: 'old',
+          title: '以前の履歴',
+          status: SuggestionRecordStatus.done,
+          createdAt: DateTime(2026, 7, 20),
+        ),
+      ],
+    );
+
+    expect(find.text('今週の履歴はありません'), findsOneWidget);
+    expect(find.text('まだ履歴はありません'), findsNothing);
+
+    await tester.tap(find.text('全期間を見る'));
+    await tester.pumpAndSettle();
+
+    expect(find.text('以前の履歴'), findsOneWidget);
+  });
+
+  testWidgets('ステータスの結果が0件ならすべて表示へ戻せる', (tester) async {
+    await _pumpPage(
+      tester,
+      records: [
+        _record(
+          id: 'done',
+          title: '実施した提案',
+          status: SuggestionRecordStatus.done,
+        ),
+      ],
+    );
+
+    await tester.tap(find.byKey(historySkippedStatusFilterKey));
+    await tester.pumpAndSettle();
+
+    expect(find.text('この条件の履歴はありません'), findsOneWidget);
+    expect(find.text('まだ履歴はありません'), findsNothing);
+
+    await tester.tap(find.text('すべて表示'));
+    await tester.pumpAndSettle();
+
+    expect(find.text('実施した提案'), findsOneWidget);
   });
 
   testWidgets('「提案を見てみる」でコールバックが呼ばれる', (tester) async {
@@ -269,9 +474,7 @@ void main() {
     );
     expect(highlightAnimation, findsOneWidget);
     expect(
-      tester
-          .widget<TweenAnimationBuilder<double>>(highlightAnimation)
-          .duration,
+      tester.widget<TweenAnimationBuilder<double>>(highlightAnimation).duration,
       historyNewRecordHighlightDuration,
     );
     expect(
@@ -284,8 +487,7 @@ void main() {
     );
   });
 
-  testWidgets('スキップ行から詳細と確認を経て実施中へ復活でき、元の履歴は残る',
-      (tester) async {
+  testWidgets('スキップ行から詳細と確認を経て実施中へ復活でき、元の履歴は残る', (tester) async {
     final records = [
       _record(
         id: 'skipped',
@@ -299,9 +501,7 @@ void main() {
     await _pumpPage(
       tester,
       records: records,
-      suggestions: [
-        _suggestionJson(id: 'music_a', title: 'ジャズを1曲流す'),
-      ],
+      suggestions: [_suggestionJson(id: 'music_a', title: 'ジャズを1曲流す')],
       ongoingSuggestionRepository: ongoingRepository,
       onSuggestionRevived: () => wasRevived = true,
     );
@@ -351,9 +551,7 @@ void main() {
           status: SuggestionRecordStatus.skipped,
         ),
       ],
-      suggestions: [
-        _suggestionJson(id: 'music_a', title: 'ジャズを1曲流す'),
-      ],
+      suggestions: [_suggestionJson(id: 'music_a', title: 'ジャズを1曲流す')],
       ongoingSuggestionRepository: ongoingRepository,
     );
 
@@ -362,10 +560,7 @@ void main() {
     await tester.tap(find.widgetWithText(FilledButton, 'やってみる'));
     await tester.pumpAndSettle();
 
-    expect(
-      find.textContaining('実施中の提案と置き換わります。'),
-      findsOneWidget,
-    );
+    expect(find.textContaining('実施中の提案と置き換わります。'), findsOneWidget);
   });
 
   testWidgets('提案IDが現行データにないスキップ履歴は利用不可を表示する', (tester) async {
@@ -400,9 +595,7 @@ void main() {
           createdAt: DateTime(2026, 6, 5),
         ),
       ],
-      suggestions: [
-        _suggestionJson(id: 'music_a', title: 'ジャズを1曲流す'),
-      ],
+      suggestions: [_suggestionJson(id: 'music_a', title: 'ジャズを1曲流す')],
     );
 
     await tester.tap(find.text('ジャズを1曲流す'));
