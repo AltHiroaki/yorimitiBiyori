@@ -33,6 +33,15 @@ void main() {
     expect(ongoing.toJson(), json);
   });
 
+  test('toJson はタイムゾーン付きの開始時刻を UTC で保存する', () {
+    final ongoing = OngoingSuggestion(
+      suggestionId: 'music_jazz_focus',
+      startedAt: DateTime.parse('2026-07-15T17:30:00+09:00'),
+    );
+
+    expect(ongoing.toJson()['started_at'], '2026-07-15T08:30:00.000Z');
+  });
+
   test('必須フィールドが欠けている場合は null を返す（例外を投げない）', () {
     expect(
       OngoingSuggestion.fromJson({'suggestion_id': 'music_jazz_focus'}),

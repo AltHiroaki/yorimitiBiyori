@@ -8,6 +8,8 @@ SuggestionRecord _record({
   required SuggestionRecordStatus status,
   int estimatedMinutes = 10,
   DateTime? createdAt,
+  DateTime? startedAt,
+  DateTime? completedAt,
 }) {
   return SuggestionRecord(
     id: id,
@@ -16,9 +18,12 @@ SuggestionRecord _record({
     category: 'music',
     estimatedMinutes: estimatedMinutes,
     status: status,
-    feedback:
-        status == SuggestionRecordStatus.done ? SuggestionFeedback.good : null,
+    feedback: status == SuggestionRecordStatus.done
+        ? SuggestionFeedback.good
+        : null,
     createdAt: createdAt ?? DateTime.utc(2026, 7, 1),
+    startedAt: startedAt,
+    completedAt: completedAt,
   );
 }
 
@@ -48,6 +53,37 @@ void main() {
     expect(summary.skippedCount, 1);
     // 合計時間は done のみ。skipped の30分は含めない。
     expect(summary.totalDoneMinutes, 20);
+  });
+
+  test('合計時間は正常な実測を優先し、それ以外は目安時間を使う', () {
+    final base = DateTime.utc(2026, 7, 1, 12);
+    final records = [
+      _record(
+        id: 'actual',
+        status: SuggestionRecordStatus.done,
+        estimatedMinutes: 20,
+        startedAt: base,
+        completedAt: base.add(const Duration(minutes: 8)),
+      ),
+      _record(
+        id: 'fallback',
+        status: SuggestionRecordStatus.done,
+        estimatedMinutes: 5,
+      ),
+      _record(
+        id: 'skipped',
+        status: SuggestionRecordStatus.skipped,
+        estimatedMinutes: 30,
+        startedAt: base,
+        completedAt: base.add(const Duration(minutes: 2)),
+      ),
+    ];
+
+    final summary = summarizeRecords(records);
+
+    expect(summary.doneCount, 2);
+    expect(summary.skippedCount, 1);
+    expect(summary.totalDoneMinutes, 13);
   });
 
   test('履歴 0 件のサマリーはすべて 0 になる', () {

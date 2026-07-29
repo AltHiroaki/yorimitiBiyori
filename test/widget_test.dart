@@ -458,7 +458,10 @@ void main() {
 
     await tester.tap(find.text('履歴'));
     await tester.pumpAndSettle();
-    await tester.tap(find.text('作業用にジャズを1曲だけ流す'));
+    final skippedSuggestionTitle = find.text('作業用にジャズを1曲だけ流す');
+    await tester.ensureVisible(skippedSuggestionTitle);
+    await tester.pumpAndSettle();
+    await tester.tap(skippedSuggestionTitle);
     await tester.pumpAndSettle();
     await tester.tap(find.widgetWithText(FilledButton, 'やってみる'));
     await tester.pumpAndSettle();

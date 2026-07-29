@@ -32,7 +32,7 @@ class OngoingSuggestion {
   Map<String, dynamic> toJson() {
     return {
       'suggestion_id': suggestionId,
-      'started_at': startedAt.toIso8601String(),
+      'started_at': startedAt.toUtc().toIso8601String(),
       if (revivedFromRecordId case final String revivedFromRecordId)
         'revived_from_record_id': revivedFromRecordId,
     };

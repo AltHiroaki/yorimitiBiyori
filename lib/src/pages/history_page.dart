@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../features/records/history_filter.dart';
+import '../features/records/record_duration.dart';
 import '../features/records/record_summary.dart';
 import '../models/interest_category.dart';
 import '../models/ongoing_suggestion.dart';
@@ -271,7 +272,7 @@ class _HistoryPageState extends State<HistoryPage> {
     await _ongoingSuggestionRepository.saveOngoingSuggestion(
       OngoingSuggestion(
         suggestionId: suggestion.id,
-        startedAt: DateTime.now(),
+        startedAt: DateTime.now().toUtc(),
         revivedFromRecordId: record.id,
       ),
     );
@@ -427,24 +428,40 @@ class _HistoryPageState extends State<HistoryPage> {
     return NeumorphicSurface(
       child: Padding(
         padding: const EdgeInsets.symmetric(vertical: 20),
-        child: Row(
+        child: Column(
           children: [
-            _buildSummaryItem(
-              value: '${_summary.doneCount}',
-              label: '実施',
-              valueColor: colorScheme.primary,
+            Row(
+              children: [
+                _buildSummaryItem(
+                  value: '${_summary.doneCount}',
+                  label: '実施',
+                  valueColor: colorScheme.primary,
+                ),
+                const SizedBox(height: 48, child: VerticalDivider(width: 1)),
+                _buildSummaryItem(
+                  value: '${_summary.skippedCount}',
+                  label: 'スキップ',
+                  valueColor: colorScheme.tertiary,
+                ),
+                const SizedBox(height: 48, child: VerticalDivider(width: 1)),
+                _buildSummaryItem(
+                  value: '${_summary.totalDoneMinutes}',
+                  label: '分',
+                  valueColor: colorScheme.onSurface,
+                ),
+              ],
             ),
-            const SizedBox(height: 48, child: VerticalDivider(width: 1)),
-            _buildSummaryItem(
-              value: '${_summary.skippedCount}',
-              label: 'スキップ',
-              valueColor: colorScheme.tertiary,
-            ),
-            const SizedBox(height: 48, child: VerticalDivider(width: 1)),
-            _buildSummaryItem(
-              value: '${_summary.totalDoneMinutes}',
-              label: '分',
-              valueColor: colorScheme.onSurface,
+            const SizedBox(height: 12),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16),
+              child: Text(
+                '実測を優先し、記録がない場合は目安で集計',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 12,
+                  color: colorScheme.onSurfaceVariant,
+                ),
+              ),
             ),
           ],
         ),
@@ -510,6 +527,7 @@ class _HistoryPageState extends State<HistoryPage> {
         : colorScheme.onTertiaryContainer;
     final categoryLabel =
         InterestCategories.findById(record.category)?.label ?? record.category;
+    final duration = resolveRecordDuration(record);
 
     return NeumorphicSurface(
       key: ValueKey<String>('history-record-${record.id}'),
@@ -552,7 +570,7 @@ class _HistoryPageState extends State<HistoryPage> {
                       const SizedBox(height: 4),
                       Text(
                         '${_formatRecordDate(record.createdAt)}　'
-                        '$categoryLabel・${record.estimatedMinutes}分',
+                        '$categoryLabel・${duration.displayLabel}',
                         style: const TextStyle(fontSize: 13),
                       ),
                     ],
