@@ -107,6 +107,10 @@ void main() {
     await tester.tap(skipButton);
     await tester.pumpAndSettle();
 
+    // 提案カードはリスト上部にあるため、いったん先頭まで戻してから探す。
+    await tester.drag(find.byType(ListView), const Offset(0, 600));
+    await tester.pumpAndSettle();
+
     final anotherButton = find.text('スキップして次の提案').hitTestable();
     await tester.dragUntilVisible(
       anotherButton,
