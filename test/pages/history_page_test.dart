@@ -535,6 +535,89 @@ void main() {
     expect(find.widgetWithText(FilledButton, '閉じる'), findsOneWidget);
   });
 
+  testWidgets('スキップした料理履歴もレシピを「詳しく見る」で展開・収納できる', (tester) async {
+    await _pumpPage(
+      tester,
+      records: [
+        _record(
+          id: 'skipped-cook',
+          suggestionId: 'cook_a',
+          title: '味噌汁をつくる',
+          status: SuggestionRecordStatus.skipped,
+          category: 'cook',
+        ),
+      ],
+      suggestions: [
+        _suggestionJson(
+          id: 'cook_a',
+          title: '味噌汁をつくる',
+          category: 'cook',
+          tags: const ['和食'],
+          recipe: '1. だしを取る\n2. 具材を煮る\n3. 味噌を溶く',
+        ),
+      ],
+    );
+
+    await tester.tap(find.text('味噌汁をつくる'));
+    await tester.pumpAndSettle();
+
+    expect(find.text('スキップした提案'), findsOneWidget);
+    // 初期状態はレシピ本文を閉じておく。
+    expect(find.text('詳しく見る'), findsOneWidget);
+    expect(
+      find.byKey(const ValueKey<String>('suggestion-recipe-content')),
+      findsNothing,
+    );
+
+    await tester.tap(
+      find.byKey(const ValueKey<String>('suggestion-recipe-toggle')),
+    );
+    await tester.pumpAndSettle();
+
+    expect(find.text('レシピ'), findsOneWidget);
+    expect(find.text('1. だしを取る\n2. 具材を煮る\n3. 味噌を溶く'), findsOneWidget);
+    // 復活フローのボタンはレシピ展開後も残る。
+    expect(find.widgetWithText(FilledButton, 'やってみる'), findsOneWidget);
+
+    await tester.tap(
+      find.byKey(const ValueKey<String>('suggestion-recipe-toggle')),
+    );
+    await tester.pumpAndSettle();
+
+    expect(find.text('詳しく見る'), findsOneWidget);
+    expect(
+      find.byKey(const ValueKey<String>('suggestion-recipe-content')),
+      findsNothing,
+    );
+  });
+
+  testWidgets('レシピを持たないスキップ履歴にはレシピ操作を表示しない', (tester) async {
+    await _pumpPage(
+      tester,
+      records: [
+        _record(
+          id: 'skipped-music',
+          suggestionId: 'music_a',
+          title: 'ジャズを1曲流す',
+          status: SuggestionRecordStatus.skipped,
+        ),
+      ],
+      suggestions: [
+        _suggestionJson(id: 'music_a', title: 'ジャズを1曲流す'),
+      ],
+    );
+
+    await tester.tap(find.text('ジャズを1曲流す'));
+    await tester.pumpAndSettle();
+
+    expect(find.text('スキップした提案'), findsOneWidget);
+    expect(find.text('詳しく見る'), findsNothing);
+    expect(
+      find.byKey(const ValueKey<String>('suggestion-recipe-toggle')),
+      findsNothing,
+    );
+  });
+
   testWidgets('レシピを持たない実施済み履歴にはレシピ操作を表示しない', (tester) async {
     await _pumpPage(
       tester,
