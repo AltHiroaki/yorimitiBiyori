@@ -306,6 +306,7 @@ void main() {
 
     expect(find.text('スキップした提案'), findsOneWidget);
     expect(find.text('ジャズを1曲流すの説明文。'), findsOneWidget);
+    expect(find.text('目安 約5分'), findsOneWidget);
     expect(find.text('やってみる'), findsOneWidget);
     expect(find.text('スキップして次の提案'), findsNothing);
 
@@ -405,6 +406,7 @@ void main() {
     expect(find.text('実施したよりみち'), findsOneWidget);
     expect(find.text('6月5日に実施'), findsOneWidget);
     expect(find.text('ジャズを1曲流すの説明文。'), findsOneWidget);
+    expect(find.text('目安 約5分'), findsOneWidget);
     expect(find.text('感想：😊 よかった'), findsOneWidget);
     // 閲覧専用：復活フローのボタンは出さない。
     expect(find.text('やってみる'), findsNothing);

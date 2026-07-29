@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'neumorphic_surface.dart';
 
 /// 提案カードの共通レイアウト：
-/// ヘッダー → タイトル → 説明 → レシピ → タグ → 補足行 の並び。
+/// ヘッダー → タイトル → 説明 → レシピ → タグ → 目安時間 → 補足行 の並び。
 /// 提案タブのカード・完了演出の飛行カード・復活ダイアログで共用し、
 /// 表示しない要素は null で省く（箇所ごとの差分はパラメータで吸収する）。
 ///
@@ -45,10 +45,11 @@ class SuggestionCardContent extends StatelessWidget {
   /// タグ Chip の一覧。null ならタグ行なし。
   final List<String>? tags;
 
-  /// タグ行の末尾に「約N分」Chip として表示する。null なら表示しない。
+  /// タグとは分けて「目安 約N分」の補助テキストとして表示する。
+  /// null なら表示しない。
   final int? estimatedMinutes;
 
-  /// タグ行の下に表示する補足行（例：実施中カードの「開始：HH:mm」）。
+  /// 目安時間の下に表示する補足行（例：実施中カードの「開始：HH:mm」）。
   final Widget? footnote;
 
   /// ヘッダー・タイトル・説明の間の余白。
@@ -109,11 +110,14 @@ class SuggestionCardContent extends StatelessWidget {
             children: [
               for (final tag in tags)
                 NeumorphicChipFrame(child: Chip(label: Text(tag))),
-              if (estimatedMinutes case final int estimatedMinutes)
-                NeumorphicChipFrame(
-                  child: Chip(label: Text('約$estimatedMinutes分')),
-                ),
             ],
+          ),
+        ],
+        if (estimatedMinutes case final int estimatedMinutes) ...[
+          const SizedBox(height: 8),
+          Text(
+            '目安 約$estimatedMinutes分',
+            style: TextStyle(fontSize: 13, color: colorScheme.onSurfaceVariant),
           ),
         ],
         if (footnote case final Widget footnote) ...[
