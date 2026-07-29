@@ -9,6 +9,7 @@
       "発見",
       "15分以内"
     ],
+    "where_to_try": "自宅や職場の周辺を、そのまま歩いて実践する。",
     "estimated_minutes": 15,
     "weight": 1.2
   },
@@ -21,6 +22,7 @@
       "発見",
       "30分"
     ],
+    "where_to_try": "自宅周辺を散歩しながら、決めたテーマで観察する。",
     "estimated_minutes": 30,
     "weight": 1.0
   },
@@ -33,6 +35,7 @@
       "運動",
       "15分以内"
     ],
+    "where_to_try": "近所を早歩きしながら、その場で試す。",
     "estimated_minutes": 15,
     "weight": 1.0
   }
