@@ -130,6 +130,8 @@ SuggestionRecord _record({
   String? suggestionId,
   int estimatedMinutes = 5,
   DateTime? createdAt,
+  DateTime? startedAt,
+  DateTime? completedAt,
   String category = 'music',
 }) {
   return SuggestionRecord(
@@ -143,6 +145,8 @@ SuggestionRecord _record({
         ? SuggestionFeedback.good
         : null,
     createdAt: createdAt ?? DateTime(2026, 7, 1),
+    startedAt: startedAt,
+    completedAt: completedAt,
   );
 }
 
@@ -195,6 +199,7 @@ void main() {
     expect(find.text('2'), findsOneWidget); // 実施数
     expect(find.text('1'), findsOneWidget); // スキップ数
     expect(find.text('25'), findsOneWidget); // 合計分（done のみ）
+    expect(find.text('実測を優先し、記録がない場合は目安で集計'), findsOneWidget);
     // サマリーラベル＋フィルタ＋ done 2件のバッジで計4つ。
     expect(find.text('実施'), findsNWidgets(4));
     expect(find.text('分'), findsOneWidget);
@@ -228,10 +233,41 @@ void main() {
 
     // バッジ（サマリーの「実施」ラベルと合わせて2つ）と日付・カテゴリ・所要時間。
     expect(find.text('スキップ'), findsNWidgets(3));
-    expect(find.text('6月7日　音楽・5分'), findsOneWidget);
-    expect(find.text('6月5日　音楽・5分'), findsOneWidget);
+    expect(find.text('6月7日　音楽・目安 5分'), findsOneWidget);
+    expect(find.text('6月5日　音楽・目安 5分'), findsOneWidget);
     // 実施済み・スキップともタップで詳細を開けるため、両行にシェブロンが付く。
     expect(find.byIcon(Icons.chevron_right), findsNWidgets(2));
+  });
+
+  testWidgets('履歴行は実測と目安を区別し、サマリーも同じ時間を使う', (tester) async {
+    final base = DateTime.utc(2026, 7, 29, 12);
+    await _pumpPage(
+      tester,
+      now: base,
+      records: [
+        _record(
+          id: 'actual',
+          title: '実測できた提案',
+          status: SuggestionRecordStatus.done,
+          estimatedMinutes: 20,
+          createdAt: base,
+          startedAt: base.subtract(const Duration(minutes: 8)),
+          completedAt: base,
+        ),
+        _record(
+          id: 'estimated',
+          title: '旧形式の提案',
+          status: SuggestionRecordStatus.done,
+          estimatedMinutes: 5,
+          createdAt: base.subtract(const Duration(hours: 1)),
+        ),
+      ],
+    );
+
+    expect(find.text('7月29日　音楽・実測 8分'), findsOneWidget);
+    expect(find.text('7月29日　音楽・目安 5分'), findsOneWidget);
+    expect(find.text('13'), findsOneWidget);
+    expect(find.text('音楽・実測 8分・目安 20分'), findsNothing);
   });
 
   testWidgets('履歴 0 件のときは空状態とサマリー 0 が表示される', (tester) async {
@@ -502,7 +538,9 @@ void main() {
     await _pumpPage(
       tester,
       records: records,
-      suggestions: [_suggestionJson(id: 'music_a', title: 'ジャズを1曲流す')],
+      suggestions: [
+        _suggestionJson(id: 'music_a', title: 'ジャズを1曲流す'),
+      ],
       ongoingSuggestionRepository: ongoingRepository,
       onSuggestionRevived: () => wasRevived = true,
     );
@@ -529,6 +567,7 @@ void main() {
 
     expect(ongoingRepository.ongoing, isNotNull);
     expect(ongoingRepository.ongoing!.suggestionId, 'music_a');
+    expect(ongoingRepository.ongoing!.startedAt.isUtc, isTrue);
     // 完了時に元のスキップ履歴を削除できるよう、復活元の履歴 ID を記録する。
     expect(ongoingRepository.ongoing!.revivedFromRecordId, 'skipped');
     expect(wasRevived, isTrue);
@@ -553,7 +592,9 @@ void main() {
           status: SuggestionRecordStatus.skipped,
         ),
       ],
-      suggestions: [_suggestionJson(id: 'music_a', title: 'ジャズを1曲流す')],
+      suggestions: [
+        _suggestionJson(id: 'music_a', title: 'ジャズを1曲流す'),
+      ],
       ongoingSuggestionRepository: ongoingRepository,
     );
 
@@ -798,9 +839,7 @@ void main() {
           status: SuggestionRecordStatus.skipped,
         ),
       ],
-      suggestions: [
-        _suggestionJson(id: 'music_a', title: 'ジャズを1曲流す'),
-      ],
+      suggestions: [_suggestionJson(id: 'music_a', title: 'ジャズを1曲流す')],
     );
 
     await tester.tap(find.text('ジャズを1曲流す'));
@@ -825,9 +864,7 @@ void main() {
           status: SuggestionRecordStatus.done,
         ),
       ],
-      suggestions: [
-        _suggestionJson(id: 'music_a', title: 'ジャズを1曲流す'),
-      ],
+      suggestions: [_suggestionJson(id: 'music_a', title: 'ジャズを1曲流す')],
     );
 
     await tester.tap(find.text('ジャズを1曲流す'));

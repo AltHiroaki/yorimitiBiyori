@@ -15,6 +15,8 @@ class SuggestionRecord {
     required this.status,
     required this.feedback,
     required this.createdAt,
+    this.startedAt,
+    this.completedAt,
   });
 
   final String id;
@@ -27,6 +29,8 @@ class SuggestionRecord {
   final SuggestionRecordStatus status;
   final SuggestionFeedback? feedback;
   final DateTime createdAt;
+  final DateTime? startedAt;
+  final DateTime? completedAt;
 
   /// 必須フィールドの欠損・型不一致・不正な enum 値・日時パース失敗の場合は
   /// 例外を投げず null を返す。呼び出し側はこの1件をスキップできる。
@@ -41,6 +45,8 @@ class SuggestionRecord {
         status: SuggestionRecordStatus.values.byName(json['status'] as String),
         feedback: _feedbackFromJson(json['feedback'] as String?),
         createdAt: DateTime.parse(json['created_at'] as String),
+        startedAt: _optionalDateTimeFromJson(json['started_at']),
+        completedAt: _optionalDateTimeFromJson(json['completed_at']),
       );
     } catch (_) {
       return null;
@@ -57,6 +63,8 @@ class SuggestionRecord {
       'status': status.name,
       'feedback': feedback?.name,
       'created_at': createdAt.toIso8601String(),
+      'started_at': startedAt?.toUtc().toIso8601String(),
+      'completed_at': completedAt?.toUtc().toIso8601String(),
     };
   }
 }
@@ -66,4 +74,11 @@ SuggestionFeedback? _feedbackFromJson(String? value) {
     return null;
   }
   return SuggestionFeedback.values.byName(value);
+}
+
+DateTime? _optionalDateTimeFromJson(Object? value) {
+  if (value is! String) {
+    return null;
+  }
+  return DateTime.tryParse(value);
 }

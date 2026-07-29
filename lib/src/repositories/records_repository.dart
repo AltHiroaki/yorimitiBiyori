@@ -8,7 +8,7 @@ import '../models/suggestion_record.dart';
 const String recordsPreferenceKey = 'yorimichi_biyori_records';
 
 /// shared_preferences に保存する履歴 JSON の現行スキーマバージョン。
-const int recordsSchemaVersion = 1;
+const int recordsSchemaVersion = 2;
 
 /// 実施・スキップ履歴を shared_preferences に JSON 文字列で保存・復元する repository。
 class RecordsRepository {
@@ -63,13 +63,23 @@ class RecordsRepository {
     );
   }
 
-  static List<SuggestionRecord> _parseRecords(List<dynamic> decodedRecords) {
+  static List<SuggestionRecord> _parseRecords(
+    List<dynamic> decodedRecords, {
+    required bool includesActualDuration,
+  }) {
     final records = <SuggestionRecord>[];
     for (final recordJson in decodedRecords) {
       if (recordJson is! Map<String, dynamic>) {
         continue;
       }
-      final record = SuggestionRecord.fromJson(recordJson);
+      final normalizedJson = includesActualDuration
+          ? recordJson
+          : <String, dynamic>{
+              ...recordJson,
+              'started_at': null,
+              'completed_at': null,
+            };
+      final record = SuggestionRecord.fromJson(normalizedJson);
       if (record != null) {
         records.add(record);
       }
@@ -90,14 +100,18 @@ List<SuggestionRecord> parseRecordsJsonSource(String source) {
 
 List<SuggestionRecord> parseRecordsJson(Object? decodedJson) {
   if (decodedJson is List) {
-    return RecordsRepository._parseRecords(decodedJson);
+    return RecordsRepository._parseRecords(
+      decodedJson,
+      includesActualDuration: false,
+    );
   }
 
   if (decodedJson is! Map<String, dynamic>) {
     return [];
   }
 
-  if (decodedJson['version'] != recordsSchemaVersion) {
+  final version = decodedJson['version'];
+  if (version != 1 && version != recordsSchemaVersion) {
     return [];
   }
 
@@ -105,5 +119,8 @@ List<SuggestionRecord> parseRecordsJson(Object? decodedJson) {
   if (decodedRecords is! List) {
     return [];
   }
-  return RecordsRepository._parseRecords(decodedRecords);
+  return RecordsRepository._parseRecords(
+    decodedRecords,
+    includesActualDuration: version == recordsSchemaVersion,
+  );
 }

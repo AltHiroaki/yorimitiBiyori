@@ -184,24 +184,43 @@ class SuggestionFlowService {
     return updatedSettings;
   }
 
-  /// 提案から履歴レコードを組み立てて保存する。
-  /// タイトル等は提案データ更新後も履歴表示が壊れないよう非正規化して保持する。
-  Future<void> saveRecord(
+  /// 完了した提案を、開始・終了時刻付きの履歴として保存する。
+  Future<void> saveDoneRecord(
     Suggestion suggestion, {
-    required SuggestionRecordStatus status,
-    required SuggestionFeedback? feedback,
+    required SuggestionFeedback feedback,
+    required DateTime startedAt,
+    required DateTime completedAt,
     String? recordId,
   }) async {
-    final now = DateTime.now();
+    final normalizedStartedAt = startedAt.toUtc();
+    final normalizedCompletedAt = completedAt.toUtc();
     final record = SuggestionRecord(
-      id: recordId ?? buildSuggestionRecordId(now),
+      id: recordId ?? buildSuggestionRecordId(normalizedCompletedAt),
       suggestionId: suggestion.id,
       suggestionTitle: suggestion.title,
       category: suggestion.category,
       estimatedMinutes: suggestion.estimatedMinutes,
-      status: status,
+      status: SuggestionRecordStatus.done,
       feedback: feedback,
-      createdAt: now,
+      createdAt: normalizedCompletedAt,
+      startedAt: normalizedStartedAt,
+      completedAt: normalizedCompletedAt,
+    );
+    await _recordsRepository.addRecord(record);
+  }
+
+  /// スキップした提案を、開始・終了時刻なしの履歴として保存する。
+  Future<void> saveSkippedRecord(Suggestion suggestion) async {
+    final createdAt = DateTime.now().toUtc();
+    final record = SuggestionRecord(
+      id: buildSuggestionRecordId(createdAt),
+      suggestionId: suggestion.id,
+      suggestionTitle: suggestion.title,
+      category: suggestion.category,
+      estimatedMinutes: suggestion.estimatedMinutes,
+      status: SuggestionRecordStatus.skipped,
+      feedback: null,
+      createdAt: createdAt,
     );
     await _recordsRepository.addRecord(record);
   }

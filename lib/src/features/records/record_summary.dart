@@ -1,4 +1,5 @@
 import '../../models/suggestion_record.dart';
+import 'record_duration.dart';
 
 /// 履歴サマリー（仕様書 6.5）。実施数・スキップ数・合計時間（分）を保持する。
 class RecordSummary {
@@ -11,7 +12,7 @@ class RecordSummary {
   final int doneCount;
   final int skippedCount;
 
-  /// done レコードの `estimated_minutes` 合計。skipped は含めない。
+  /// done レコードごとに実測を優先し、採用できなければ目安時間を合計する。
   final int totalDoneMinutes;
 }
 
@@ -25,7 +26,7 @@ RecordSummary summarizeRecords(List<SuggestionRecord> records) {
     switch (record.status) {
       case SuggestionRecordStatus.done:
         doneCount += 1;
-        totalDoneMinutes += record.estimatedMinutes;
+        totalDoneMinutes += resolveRecordDuration(record).minutes;
       case SuggestionRecordStatus.skipped:
         skippedCount += 1;
     }

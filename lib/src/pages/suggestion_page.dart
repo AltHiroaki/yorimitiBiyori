@@ -7,7 +7,6 @@ import '../features/recommendation/suggestion_flow_service.dart';
 import '../models/hour_minute.dart';
 import '../models/interest_category.dart';
 import '../models/suggestion.dart';
-import '../models/suggestion_record.dart';
 import '../models/user_settings.dart';
 import '../repositories/current_suggestion_repository.dart';
 import '../repositories/ongoing_suggestion_repository.dart';
@@ -37,6 +36,7 @@ class SuggestionPage extends StatefulWidget {
     this.currentSuggestionRepository,
     this.ongoingSuggestionRepository,
     this.random,
+    this.nowProvider,
     this.historyDestinationKey,
     this.onSuggestionCompleted,
   });
@@ -48,6 +48,7 @@ class SuggestionPage extends StatefulWidget {
   final CurrentSuggestionRepository? currentSuggestionRepository;
   final OngoingSuggestionRepository? ongoingSuggestionRepository;
   final Random? random;
+  final DateTime Function()? nowProvider;
 
   /// カード吸い込み先となる履歴タブのアイコン位置を取得するためのキー。
   final GlobalKey? historyDestinationKey;
@@ -134,7 +135,7 @@ class _SuggestionPageState extends State<SuggestionPage> {
 
   /// やってみる：提案を実施中状態に切り替える（issue #48）。
   void _onTrySuggestion(Suggestion suggestion) {
-    final startedAt = DateTime.now();
+    final startedAt = _currentTime();
     setState(() {
       _ongoingSuggestion = suggestion;
       _ongoingStartedAt = startedAt;
@@ -146,14 +147,17 @@ class _SuggestionPageState extends State<SuggestionPage> {
   /// お祝いを表示して履歴タブへ移る。モーダルを閉じただけなら実施中のまま。
   /// 保存の成否表示・保存中のボタン無効化はモーダル側が担う（issue #44）。
   Future<void> _onCompleteOngoing(Suggestion suggestion) async {
-    final completedRecordId = buildSuggestionRecordId(DateTime.now());
+    final completedAt = _currentTime();
+    final startedAt = (_ongoingStartedAt ?? completedAt).toUtc();
+    final completedRecordId = buildSuggestionRecordId(completedAt);
     final saved = await showCompletionModal(
       context,
       onSave: (feedback) async {
-        await _flowService.saveRecord(
+        await _flowService.saveDoneRecord(
           suggestion,
-          status: SuggestionRecordStatus.done,
           feedback: feedback,
+          startedAt: startedAt,
+          completedAt: completedAt,
           recordId: completedRecordId,
         );
         // スキップからの復活なら、挽回された元のスキップ履歴を削除する。
@@ -239,13 +243,7 @@ class _SuggestionPageState extends State<SuggestionPage> {
   /// 実施中カードのスキップ：skipped として履歴に保存し、実施中を解除して再抽選する。
   Future<void> _onSkipOngoing(Suggestion suggestion) async {
     _settings = _flowService.appendRecentSuggestionId(_settings, suggestion.id);
-    unawaited(
-      _flowService.saveRecord(
-        suggestion,
-        status: SuggestionRecordStatus.skipped,
-        feedback: null,
-      ),
-    );
+    unawaited(_flowService.saveSkippedRecord(suggestion));
     await _clearOngoing();
   }
 
@@ -269,15 +267,13 @@ class _SuggestionPageState extends State<SuggestionPage> {
         _settings,
         suggestion.id,
       );
-      unawaited(
-        _flowService.saveRecord(
-          suggestion,
-          status: SuggestionRecordStatus.skipped,
-          feedback: null,
-        ),
-      );
+      unawaited(_flowService.saveSkippedRecord(suggestion));
     }
     setState(_drawSuggestion);
+  }
+
+  DateTime _currentTime() {
+    return (widget.nowProvider?.call() ?? DateTime.now()).toUtc();
   }
 
   /// 条件カードのカテゴリチップ：選択を切り替えて即保存し、その場で再抽選する

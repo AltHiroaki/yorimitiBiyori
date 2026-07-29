@@ -167,6 +167,7 @@ Future<_FakeSettingsRepository> _pumpPage(
   _FakeCurrentSuggestionRepository? currentSuggestionRepository,
   _FakeOngoingSuggestionRepository? ongoingSuggestionRepository,
   ValueChanged<String>? onSuggestionCompleted,
+  DateTime Function()? nowProvider,
 }) async {
   // ListView の下部（案内カード等）まで描画されるよう縦長の画面にする。
   tester.view.physicalSize = const Size(800, 2400);
@@ -193,6 +194,7 @@ Future<_FakeSettingsRepository> _pumpPage(
               ongoingSuggestionRepository ?? _FakeOngoingSuggestionRepository(),
           random: Random(0),
           onSuggestionCompleted: onSuggestionCompleted,
+          nowProvider: nowProvider,
         ),
       ),
     ),
@@ -560,12 +562,14 @@ void main() {
     );
     expect(ongoingRepository.ongoing, isNotNull);
     expect(ongoingRepository.ongoing!.suggestionId, 'music_a');
+    expect(ongoingRepository.ongoing!.startedAt.isUtc, isTrue);
   });
 
   testWidgets('実施中の完了→これで完了で done レコードが保存され、完了演出後に履歴IDが渡る', (tester) async {
     final recordsRepository = _FakeRecordsRepository();
     final ongoingRepository = _FakeOngoingSuggestionRepository();
     String? completedRecordId;
+    var currentTime = DateTime.utc(2026, 7, 29, 12);
     await _pumpPage(
       tester,
       suggestions: [
@@ -575,14 +579,18 @@ void main() {
       recordsRepository: recordsRepository,
       ongoingSuggestionRepository: ongoingRepository,
       onSuggestionCompleted: (recordId) => completedRecordId = recordId,
+      nowProvider: () => currentTime,
     );
 
     await tester.tap(find.text('やってみる'));
     await tester.pumpAndSettle();
+    currentTime = DateTime.utc(2026, 7, 29, 12, 8);
     await tester.tap(find.text('完了'));
     await tester.pumpAndSettle();
     expect(find.text('おつかれさまです'), findsOneWidget);
 
+    // モーダル操作時間は実測時間に含めない。
+    currentTime = DateTime.utc(2026, 7, 29, 12, 20);
     await tester.tap(find.text('🙂 普通'));
     await tester.pumpAndSettle();
     await tester.tap(find.text('これで完了'));
@@ -596,6 +604,9 @@ void main() {
     expect(savedRecord.estimatedMinutes, 5);
     expect(savedRecord.status, SuggestionRecordStatus.done);
     expect(savedRecord.feedback, SuggestionFeedback.normal);
+    expect(savedRecord.startedAt, DateTime.utc(2026, 7, 29, 12));
+    expect(savedRecord.completedAt, DateTime.utc(2026, 7, 29, 12, 8));
+    expect(savedRecord.createdAt, savedRecord.completedAt);
 
     // 実施中は解除され、保存した履歴 ID がタブ遷移側へ渡る。
     expect(ongoingRepository.ongoing, isNull);
@@ -605,6 +616,7 @@ void main() {
   });
 
   testWidgets('スキップから復活した実施中を完了すると元のスキップ履歴が削除される', (tester) async {
+    final revivedStartedAt = DateTime(2026, 7, 15, 17, 30);
     final skippedRecord = SuggestionRecord(
       id: 'record_skip',
       suggestionId: 'music_a',
@@ -620,7 +632,7 @@ void main() {
     final ongoingRepository = _FakeOngoingSuggestionRepository(
       OngoingSuggestion(
         suggestionId: 'music_a',
-        startedAt: DateTime(2026, 7, 15, 17, 30),
+        startedAt: revivedStartedAt,
         revivedFromRecordId: 'record_skip',
       ),
     );
@@ -644,6 +656,8 @@ void main() {
     final savedRecord = recordsRepository.addedRecords.single;
     expect(savedRecord.status, SuggestionRecordStatus.done);
     expect(savedRecord.suggestionId, 'music_a');
+    expect(savedRecord.startedAt, revivedStartedAt.toUtc());
+    expect(savedRecord.completedAt, isNotNull);
   });
 
   testWidgets('スキップから復活した実施中を再スキップした場合は元のスキップ履歴を残す', (tester) async {
@@ -737,6 +751,8 @@ void main() {
       recordsRepository.addedRecords.single.status,
       SuggestionRecordStatus.skipped,
     );
+    expect(recordsRepository.addedRecords.single.startedAt, isNull);
+    expect(recordsRepository.addedRecords.single.completedAt, isNull);
     expect(ongoingRepository.ongoing, isNull);
     // 実施中カードが消え、通常の提案カードに戻る。
     expect(find.text('実施中のよりみち'), findsNothing);
@@ -810,6 +826,8 @@ void main() {
     expect(skippedRecord.suggestionId, firstWasA ? 'music_a' : 'music_b');
     expect(skippedRecord.status, SuggestionRecordStatus.skipped);
     expect(skippedRecord.feedback, isNull);
+    expect(skippedRecord.startedAt, isNull);
+    expect(skippedRecord.completedAt, isNull);
     // スキップはカードの切り替わり自体がフィードバックのため SnackBar は出さない（issue #44）。
     expect(find.text('記録しました'), findsNothing);
   });

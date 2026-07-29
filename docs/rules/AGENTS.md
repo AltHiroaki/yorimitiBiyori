@@ -213,7 +213,7 @@ When editing suggestion data:
 - every `cook` entry's `tags` must include one of the `cooking_method` options (蒸す/炒める/揚げる/煮る/焼く/生・和える/レンジ・時短) in addition to its 味覚・ジャンル tag — a 料理 entry missing this tag can never be selected once a user filters by cooking method
 - every detail-setting option in `InterestCategories.all` must have at least 50 matching entries in its category
 - `where_to_try` is required on every entry (all categories) and must describe where or how to obtain/practice the suggestion (e.g. a search keyword for a streaming app, a store, a genre shelf)
-- `estimated_minutes` is the rough duration used for history total-minutes aggregation
+- `estimated_minutes` is the rough duration used when a history record has no valid actual duration
 - there is **no** `min_minutes` / `max_minutes` / `intensity` / `location_type` / `detail` / `budget_yen`
 - update Dart models when the JSON structure changes
 
