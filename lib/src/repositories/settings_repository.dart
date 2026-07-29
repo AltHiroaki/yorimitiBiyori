@@ -6,6 +6,7 @@ import '../models/user_settings.dart';
 
 /// shared_preferences の保存キー（仕様書 5.4）。
 const String settingsPreferenceKey = 'yorimichi_biyori_settings';
+const int _legacyUserSettingsSchemaVersion = 1;
 
 /// ユーザー設定を shared_preferences に JSON 文字列で保存・復元する repository。
 class SettingsRepository {
@@ -48,9 +49,22 @@ UserSettings parseSettingsJson(Object? decodedJson) {
   }
 
   final version = decodedJson['version'];
-  if (version == null || version == userSettingsSchemaVersion) {
+  if (version == userSettingsSchemaVersion) {
     return UserSettings.fromJson(decodedJson);
+  }
+  if (version == null || version == _legacyUserSettingsSchemaVersion) {
+    return UserSettings.fromJson(_migrateLegacySettings(decodedJson));
   }
 
   return const UserSettings();
+}
+
+Map<String, dynamic> _migrateLegacySettings(
+  Map<String, dynamic> legacySettings,
+) {
+  return {
+    ...legacySettings,
+    'version': userSettingsSchemaVersion,
+    'max_estimated_minutes': null,
+  };
 }

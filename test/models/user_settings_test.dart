@@ -8,6 +8,7 @@ void main() {
 
     expect(settings.selectedCategories, ['music', 'read', 'movie']);
     expect(settings.detailSettings, isEmpty);
+    expect(settings.maxEstimatedMinutes, isNull);
     expect(settings.notificationEnabled, isTrue);
     expect(settings.notificationStartTime, '17:00');
     expect(settings.notificationEndTime, '21:00');
@@ -26,6 +27,7 @@ void main() {
           'genre': ['ジャズ'],
         },
       },
+      'max_estimated_minutes': 30,
       'notification_enabled': false,
       'notification_start_time': '18:00',
       'notification_end_time': '20:30',
@@ -39,6 +41,24 @@ void main() {
     expect(settings.toJson(), json);
   });
 
+  test('時間の上限は15・30・60だけを読み込む', () {
+    for (final minutes in allowedMaxEstimatedMinutes) {
+      final settings = UserSettings.fromJson({
+        'max_estimated_minutes': minutes,
+      });
+
+      expect(settings.maxEstimatedMinutes, minutes);
+    }
+  });
+
+  test('時間の上限が欠落・null・型違い・許容外なら指定なしになる', () {
+    for (final value in <Object?>[null, '15', 0, 10, 120, 15.0]) {
+      final settings = UserSettings.fromJson({'max_estimated_minutes': value});
+
+      expect(settings.maxEstimatedMinutes, isNull, reason: 'value: $value');
+    }
+  });
+
   test('toJson は旧キー notification_time を出力しない', () {
     const settings = UserSettings();
 
@@ -46,18 +66,14 @@ void main() {
   });
 
   test('旧形式（notification_time のみ）は開始＝終了の縮退範囲として引き継ぐ', () {
-    final settings = UserSettings.fromJson({
-      'notification_time': '12:15',
-    });
+    final settings = UserSettings.fromJson({'notification_time': '12:15'});
 
     expect(settings.notificationStartTime, '12:15');
     expect(settings.notificationEndTime, '12:15');
   });
 
   test('旧形式の notification_time が不正ならデフォルト範囲になる', () {
-    final settings = UserSettings.fromJson({
-      'notification_time': '25:99',
-    });
+    final settings = UserSettings.fromJson({'notification_time': '25:99'});
 
     expect(settings.notificationStartTime, '17:00');
     expect(settings.notificationEndTime, '21:00');
@@ -108,6 +124,7 @@ void main() {
     final settings = UserSettings.fromJson({
       'selected_categories': ['music'],
       'detail_settings': '指定なし',
+      'max_estimated_minutes': '30',
       'notification_enabled': 'yes',
       'notification_start_time': 999,
       'notification_end_time': null,
@@ -118,6 +135,7 @@ void main() {
 
     expect(settings.selectedCategories, ['music']);
     expect(settings.detailSettings, isEmpty);
+    expect(settings.maxEstimatedMinutes, isNull);
     expect(settings.notificationEnabled, isTrue);
     expect(settings.notificationStartTime, '17:00');
     expect(settings.notificationEndTime, '21:00');
@@ -142,12 +160,13 @@ void main() {
   });
 
   test('copyWith で一部フィールドだけ変更できる', () {
-    const settings = UserSettings();
+    const settings = UserSettings(maxEstimatedMinutes: 30);
 
     final updated = settings.copyWith(notificationEnabled: false);
 
     expect(updated.notificationEnabled, isFalse);
     expect(updated.selectedCategories, settings.selectedCategories);
+    expect(updated.maxEstimatedMinutes, 30);
   });
 
   test('copyWith で通知時間帯だけ変更できる', () {
@@ -170,5 +189,17 @@ void main() {
 
     expect(updated.themeMode, ThemeModeSetting.dark);
     expect(updated.notificationEnabled, settings.notificationEnabled);
+  });
+
+  test('withMaxEstimatedMinutes で時間上限を設定・解除できる', () {
+    const settings = UserSettings(notificationEnabled: false);
+
+    final limited = settings.withMaxEstimatedMinutes(30);
+    final cleared = limited.withMaxEstimatedMinutes(null);
+
+    expect(limited.maxEstimatedMinutes, 30);
+    expect(limited.notificationEnabled, isFalse);
+    expect(cleared.maxEstimatedMinutes, isNull);
+    expect(cleared.notificationEnabled, isFalse);
   });
 }

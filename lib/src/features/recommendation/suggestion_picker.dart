@@ -7,7 +7,28 @@ const int recentSuggestionLimit = 3;
 const String noPreferenceOption = '問わない';
 
 /// ユーザー設定に合う提案だけを返す。
+/// カテゴリ → カテゴリ別詳細設定 → 所要時間上限の順で絞り込む。
 List<Suggestion> filterSuggestions(
+  List<Suggestion> suggestions,
+  UserSettings settings,
+) {
+  final categoryAndDetailMatches = filterSuggestionsByCategoryAndDetails(
+    suggestions,
+    settings,
+  );
+  final maxEstimatedMinutes = settings.maxEstimatedMinutes;
+  if (maxEstimatedMinutes == null) {
+    return categoryAndDetailMatches;
+  }
+
+  return categoryAndDetailMatches.where((suggestion) {
+    return suggestion.estimatedMinutes <= maxEstimatedMinutes;
+  }).toList();
+}
+
+/// カテゴリとカテゴリ別詳細設定だけで候補を絞り込む。
+/// 時間上限が0件の原因か判定するときにも同じ条件を再利用する。
+List<Suggestion> filterSuggestionsByCategoryAndDetails(
   List<Suggestion> suggestions,
   UserSettings settings,
 ) {
@@ -22,6 +43,29 @@ List<Suggestion> filterSuggestions(
     }
     return _matchesDetailSettings(suggestion, settings.detailSettings);
   }).toList();
+}
+
+/// 時間上限を外せば候補があるのに、適用後は0件になるかを判定する。
+bool isDurationLimitCausingNoCandidates(
+  List<Suggestion> suggestions,
+  UserSettings settings,
+) {
+  final maxEstimatedMinutes = settings.maxEstimatedMinutes;
+  if (maxEstimatedMinutes == null) {
+    return false;
+  }
+
+  final categoryAndDetailMatches = filterSuggestionsByCategoryAndDetails(
+    suggestions,
+    settings,
+  );
+  if (categoryAndDetailMatches.isEmpty) {
+    return false;
+  }
+
+  return categoryAndDetailMatches.every((suggestion) {
+    return suggestion.estimatedMinutes > maxEstimatedMinutes;
+  });
 }
 
 /// 直近3件を除外する。候補が尽きた場合は直前1件のみ除外に緩和する。

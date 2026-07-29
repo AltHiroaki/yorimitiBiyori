@@ -138,6 +138,7 @@ Map<String, dynamic> _suggestionJson({
   required List<String> tags,
   String? recipe,
   String category = 'music',
+  int estimatedMinutes = 5,
 }) {
   return {
     'id': id,
@@ -145,7 +146,7 @@ Map<String, dynamic> _suggestionJson({
     'description': '$titleの説明文。',
     'category': category,
     'tags': tags,
-    'estimated_minutes': 5,
+    'estimated_minutes': estimatedMinutes,
     'weight': 1.0,
     'recipe': ?recipe,
   };
@@ -214,16 +215,21 @@ void main() {
             'genre': ['ジャズ'],
           },
         },
+        maxEstimatedMinutes: 15,
       ),
     );
 
     // 条件カード：全カテゴリのチップ（選択中のみ selected）＋詳細設定の要約。
     expect(find.text('現在の提案条件'), findsOneWidget);
     expect(find.text('1つ選択中'), findsOneWidget);
-    expect(find.byType(FilterChip), findsNWidgets(InterestCategories.all.length));
+    expect(
+      find.byType(FilterChip),
+      findsNWidgets(InterestCategories.all.length),
+    );
     expect(_filterChipFor(tester, '🎵 音楽').selected, isTrue);
     expect(_filterChipFor(tester, '🍳 料理').selected, isFalse);
     expect(find.text('詳細設定：ジャズ'), findsOneWidget);
+    expect(find.text('時間の上限：〜15分'), findsOneWidget);
     expect(find.text('変更 >'), findsOneWidget);
 
     // 今日のよりみちカード：ジャズ指定なので music_a が確定で選ばれる。
@@ -489,6 +495,62 @@ void main() {
     expect(find.text('カテゴリを増やすか、詳細設定を緩めてみてください。'), findsOneWidget);
     expect(find.text('提案設定を開く'), findsOneWidget);
     expect(find.text('今日のよりみち'), findsNothing);
+  });
+
+  testWidgets('時間上限を指定すると上限以内の提案だけが表示される', (tester) async {
+    await _pumpPage(
+      tester,
+      suggestions: [
+        _suggestionJson(
+          id: 'short',
+          title: '短い提案',
+          tags: ['ポップス'],
+          estimatedMinutes: 15,
+        ),
+        _suggestionJson(
+          id: 'long',
+          title: '長い提案',
+          tags: ['ポップス'],
+          estimatedMinutes: 60,
+        ),
+      ],
+      settings: const UserSettings(
+        selectedCategories: ['music'],
+        maxEstimatedMinutes: 15,
+      ),
+    );
+
+    expect(find.text('短い提案'), findsOneWidget);
+    expect(find.text('長い提案'), findsNothing);
+  });
+
+  testWidgets('時間上限が原因で0件になると原因と見直し方法を表示する', (tester) async {
+    await _pumpPage(
+      tester,
+      suggestions: [
+        _suggestionJson(
+          id: 'long',
+          title: '長い提案',
+          tags: ['ポップス'],
+          estimatedMinutes: 60,
+        ),
+      ],
+      settings: const UserSettings(
+        selectedCategories: ['music'],
+        maxEstimatedMinutes: 30,
+      ),
+    );
+
+    expect(find.text('時間の上限に合う提案が見つかりませんでした'), findsOneWidget);
+    expect(find.text('時間の上限を広げるか、カテゴリ・詳細設定を見直してください。'), findsOneWidget);
+    expect(find.text('提案設定を見直す'), findsOneWidget);
+    expect(find.text('今日のよりみち'), findsNothing);
+
+    await tester.tap(find.text('提案設定を見直す'));
+    await tester.pumpAndSettle();
+
+    expect(find.byType(SuggestionSettingsPage), findsOneWidget);
+    expect(find.text('時間の上限'), findsOneWidget);
   });
 
   testWidgets('カテゴリ未選択のときはカテゴリ設定を促す', (tester) async {
@@ -824,20 +886,23 @@ void main() {
     expect(find.byType(SuggestionSettingsPage), findsOneWidget);
 
     // 提案設定画面での保存に相当する設定変更をフェイクに反映してから戻る。
-    repository.settings = repository.settings.copyWith(
-      selectedCategories: ['music', 'walk'],
-      detailSettings: {
-        'music': {
-          'genre': ['ジャズ'],
-        },
-      },
-    );
+    repository.settings = repository.settings
+        .copyWith(
+          selectedCategories: ['music', 'walk'],
+          detailSettings: {
+            'music': {
+              'genre': ['ジャズ'],
+            },
+          },
+        )
+        .withMaxEstimatedMinutes(30);
     await tester.pageBack();
     await tester.pumpAndSettle();
 
     expect(_filterChipFor(tester, '🚶 散歩').selected, isTrue);
     expect(find.text('2つ選択中'), findsOneWidget);
     expect(find.text('詳細設定：ジャズ'), findsOneWidget);
+    expect(find.text('時間の上限：〜30分'), findsOneWidget);
   });
 
   testWidgets('条件カードのチップをタップするとカテゴリが外れ、保存されて再抽選される', (tester) async {

@@ -22,6 +22,7 @@ void main() {
           'time': ['15分以内'],
         },
       },
+      maxEstimatedMinutes: 30,
       notificationEnabled: false,
       notificationStartTime: '12:15',
       notificationEndTime: '18:45',
@@ -31,9 +32,9 @@ void main() {
 
     await repository.saveSettings(settings);
     final preferences = await SharedPreferences.getInstance();
-    final savedJson = jsonDecode(
-      preferences.getString(settingsPreferenceKey)!,
-    ) as Map<String, dynamic>;
+    final savedJson =
+        jsonDecode(preferences.getString(settingsPreferenceKey)!)
+            as Map<String, dynamic>;
     final loadedSettings = await repository.loadSettings();
 
     expect(savedJson['version'], userSettingsSchemaVersion);
@@ -47,6 +48,7 @@ void main() {
         'time': ['15分以内'],
       },
     });
+    expect(loadedSettings.maxEstimatedMinutes, 30);
     expect(loadedSettings.notificationEnabled, isFalse);
     expect(loadedSettings.notificationStartTime, '12:15');
     expect(loadedSettings.notificationEndTime, '18:45');
@@ -62,6 +64,7 @@ void main() {
 
     expect(loadedSettings.selectedCategories, defaultSelectedCategoryIds);
     expect(loadedSettings.detailSettings, isEmpty);
+    expect(loadedSettings.maxEstimatedMinutes, isNull);
     expect(loadedSettings.notificationEnabled, isTrue);
     expect(loadedSettings.notificationStartTime, defaultNotificationStartTime);
     expect(loadedSettings.notificationEndTime, defaultNotificationEndTime);
@@ -123,6 +126,7 @@ void main() {
       settingsPreferenceKey: jsonEncode({
         'selected_categories': ['cook'],
         'notification_enabled': false,
+        'max_estimated_minutes': 30,
         'unknown_field': 'ignored',
       }),
     });
@@ -132,6 +136,41 @@ void main() {
 
     expect(loadedSettings.selectedCategories, ['cook']);
     expect(loadedSettings.notificationEnabled, isFalse);
+    expect(loadedSettings.maxEstimatedMinutes, isNull);
+  });
+
+  test('version 1 は既存フィールドを保ち時間上限を指定なしへ移行する', () async {
+    SharedPreferences.setMockInitialValues({
+      settingsPreferenceKey: jsonEncode({
+        'version': 1,
+        'selected_categories': ['movie'],
+        'max_estimated_minutes': 30,
+        'theme_mode': 'dark',
+      }),
+    });
+    final repository = SettingsRepository();
+
+    final loadedSettings = await repository.loadSettings();
+
+    expect(loadedSettings.selectedCategories, ['movie']);
+    expect(loadedSettings.maxEstimatedMinutes, isNull);
+    expect(loadedSettings.themeMode, ThemeModeSetting.dark);
+  });
+
+  test('version 2 の不正な時間上限は指定なしへフォールバックする', () async {
+    SharedPreferences.setMockInitialValues({
+      settingsPreferenceKey: jsonEncode({
+        'version': userSettingsSchemaVersion,
+        'selected_categories': ['cook'],
+        'max_estimated_minutes': 45,
+      }),
+    });
+    final repository = SettingsRepository();
+
+    final loadedSettings = await repository.loadSettings();
+
+    expect(loadedSettings.selectedCategories, ['cook']);
+    expect(loadedSettings.maxEstimatedMinutes, isNull);
   });
 
   test('未知の version はデフォルト設定にフォールバックする', () async {
