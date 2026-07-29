@@ -26,6 +26,7 @@ class HistoryPage extends StatefulWidget {
     this.onGoToSuggestions,
     this.onSuggestionRevived,
     this.highlightedRecordId,
+    this.isActive = true,
   });
 
   /// テスト用に差し替え可能。null なら通常の repository を使う。
@@ -41,6 +42,12 @@ class HistoryPage extends StatefulWidget {
 
   /// 完了フローで保存した直後に背景色を強調する履歴 ID。
   final String? highlightedRecordId;
+
+  /// 履歴タブとして表示が確定しているか。`PageView` は横スワイプを始めた時点で
+  /// 隣のページも build するため、false の間は読み込みを走らせない。
+  /// false → true になったタイミングで読み込む（`AppShell` が `onPageChanged`
+  /// 基準で切り替える）。単体で使うときは常に読み込む。
+  final bool isActive;
 
   @override
   State<HistoryPage> createState() => _HistoryPageState();
@@ -64,7 +71,19 @@ class _HistoryPageState extends State<HistoryPage> {
         widget.suggestionRepository ?? SuggestionRepository();
     _ongoingSuggestionRepository =
         widget.ongoingSuggestionRepository ?? OngoingSuggestionRepository();
-    _loadRecords();
+    if (widget.isActive) {
+      _loadRecords();
+    }
+  }
+
+  @override
+  void didUpdateWidget(HistoryPage oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    // スワイプが履歴タブへ確定した時点で読み込む。途中でやめた場合は
+    // isActive が false のままなので、無駄な読み込みは起きない。
+    if (widget.isActive && !oldWidget.isActive) {
+      _loadRecords();
+    }
   }
 
   Future<void> _loadRecords() async {
