@@ -10,6 +10,7 @@ import 'package:yorimichi_biyori/src/models/suggestion_record.dart';
 import 'package:yorimichi_biyori/src/models/user_settings.dart';
 import 'package:yorimichi_biyori/src/pages/suggestion_page.dart';
 import 'package:yorimichi_biyori/src/pages/suggestion_settings_page.dart';
+import 'package:yorimichi_biyori/src/pages/usage_page.dart';
 import 'package:yorimichi_biyori/src/repositories/current_suggestion_repository.dart';
 import 'package:yorimichi_biyori/src/repositories/ongoing_suggestion_repository.dart';
 import 'package:yorimichi_biyori/src/repositories/records_repository.dart';
@@ -242,6 +243,26 @@ void main() {
     expect(find.text('入手先：音楽配信アプリで検索する。'), findsOneWidget);
     expect(find.text('やってみる'), findsOneWidget);
     expect(find.text('スキップして次の提案'), findsOneWidget);
+  });
+
+  testWidgets('使い方カードの「もっと詳しく」から使い方ページへ遷移できる', (tester) async {
+    await _pumpPage(
+      tester,
+      suggestions: [
+        _suggestionJson(id: 'music_a', title: 'ジャズを1曲流す', tags: ['ジャズ']),
+      ],
+      settings: const UserSettings(selectedCategories: ['music']),
+    );
+
+    expect(find.text('使い方'), findsOneWidget);
+    expect(find.text('もっと詳しく'), findsOneWidget);
+
+    await tester.tap(find.text('もっと詳しく'));
+    await tester.pumpAndSettle();
+
+    expect(find.byType(UsagePage), findsOneWidget);
+    expect(find.text('よりみち日和の使い方'), findsOneWidget);
+    expect(find.text('通知について'), findsOneWidget);
   });
 
   testWidgets('提案カードでは主操作を全幅56px、副操作を全幅48pxで下に表示する', (tester) async {

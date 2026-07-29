@@ -9,6 +9,7 @@ import 'package:yorimichi_biyori/src/models/suggestion_record.dart';
 import 'package:yorimichi_biyori/src/models/user_settings.dart';
 import 'package:yorimichi_biyori/src/pages/settings_page.dart';
 import 'package:yorimichi_biyori/src/pages/suggestion_settings_page.dart';
+import 'package:yorimichi_biyori/src/pages/usage_page.dart';
 import 'package:yorimichi_biyori/src/repositories/records_repository.dart';
 import 'package:yorimichi_biyori/src/repositories/settings_repository.dart';
 
@@ -116,6 +117,38 @@ void main() {
     expect(find.byType(SuggestionSettingsPage), findsOneWidget);
     expect(find.widgetWithText(FilterChip, '🎵 音楽'), findsOneWidget);
     expect(find.text('この条件で保存'), findsOneWidget);
+  });
+
+  testWidgets('「使い方」から専用ページへ遷移し、決定済みの5項目を確認できる', (tester) async {
+    await _pumpPage(tester);
+
+    expect(find.text('よりみち日和の基本操作を確認'), findsOneWidget);
+    await tester.tap(find.text('使い方'));
+    await tester.pumpAndSettle();
+
+    expect(find.byType(UsagePage), findsOneWidget);
+    expect(find.text('よりみち日和の使い方'), findsOneWidget);
+    expect(find.text('提案が合わないときは'), findsOneWidget);
+    expect(find.text('スキップした提案をもう一度'), findsOneWidget);
+    expect(find.text('料理のレシピを見る'), findsOneWidget);
+    expect(find.text('通知について'), findsOneWidget);
+    expect(
+      find.text('通知や提案タブによりみちが届きます。「やってみる」で始め、終わったら「完了」すると履歴に残ります。'),
+      findsOneWidget,
+    );
+    expect(
+      find.text('「スキップして次の提案」で次へ進めます。カテゴリやジャンルは提案設定から絞り込めます。'),
+      findsOneWidget,
+    );
+    expect(
+      find.text('履歴のスキップした提案をタップすると、内容を確認してもう一度「やってみる」ことができます。'),
+      findsOneWidget,
+    );
+    expect(find.text('料理の提案は、「詳しく見る」をタップすると材料と手順をその場で確認できます。'), findsOneWidget);
+    expect(
+      find.text('通知をオンにすると、設定した時間帯の中でランダムな時刻に1日1回、よりみちのきっかけが届きます。'),
+      findsOneWidget,
+    );
   });
 
   testWidgets('「削除」をタップするとインライン確認が表示される', (tester) async {

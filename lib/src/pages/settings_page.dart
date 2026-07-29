@@ -9,6 +9,7 @@ import '../repositories/settings_repository.dart';
 import '../widgets/neumorphic_surface.dart';
 import '../widgets/section_card.dart';
 import 'suggestion_settings_page.dart';
+import 'usage_page.dart';
 
 typedef NotificationTimePicker =
     Future<TimeOfDay?> Function(BuildContext context, TimeOfDay initialTime);
@@ -101,6 +102,8 @@ class _SettingsPageState extends State<SettingsPage> {
         _buildThemeCard(),
         const SizedBox(height: 12),
         _buildNotificationCard(),
+        const SizedBox(height: 12),
+        _buildUsageRow(),
         const SizedBox(height: 12),
         _buildDeleteHistoryCard(),
       ],
@@ -464,6 +467,34 @@ class _SettingsPageState extends State<SettingsPage> {
 
   HourMinute _fromTimeOfDay(TimeOfDay time) {
     return HourMinute(hour: time.hour, minute: time.minute);
+  }
+
+  Widget _buildUsageRow() {
+    return NeumorphicSurface(
+      child: Material(
+        type: MaterialType.transparency,
+        child: ListTile(
+          contentPadding: const EdgeInsets.symmetric(
+            horizontal: 20,
+            vertical: 8,
+          ),
+          leading: const Icon(Icons.help_outline),
+          title: const Text(
+            '使い方',
+            style: TextStyle(fontWeight: FontWeight.bold),
+          ),
+          subtitle: const Text('よりみち日和の基本操作を確認'),
+          trailing: const Icon(Icons.chevron_right),
+          onTap: _openUsagePage,
+        ),
+      ),
+    );
+  }
+
+  Future<void> _openUsagePage() {
+    return Navigator.of(
+      context,
+    ).push(MaterialPageRoute<void>(builder: (_) => const UsagePage()));
   }
 
   /// 履歴削除カード：通常時は「削除」ボタン、タップするとインライン確認に切り替わる。

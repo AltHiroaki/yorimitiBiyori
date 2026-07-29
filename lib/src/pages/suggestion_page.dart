@@ -20,6 +20,7 @@ import '../widgets/neumorphic_surface.dart';
 import '../widgets/section_card.dart';
 import '../widgets/suggestion_card_content.dart';
 import 'suggestion_settings_page.dart';
+import 'usage_page.dart';
 
 enum _LoadStatus { loading, loaded, error }
 
@@ -388,14 +389,26 @@ class _SuggestionPageState extends State<SuggestionPage> {
                 onOpenSettings: _openSuggestionSettings,
               ),
             const SizedBox(height: 16),
-            const SectionCard(
+            SectionCard(
               title: '使い方',
               description:
                   'カテゴリは条件カードのチップをタップすると、その場で切り替わります。詳細設定は「変更」から調整できます。通知をタップすると、保存した条件のよりみちが表示されます。',
+              action: TextButton.icon(
+                onPressed: _openUsagePage,
+                icon: const Icon(Icons.arrow_forward),
+                iconAlignment: IconAlignment.end,
+                label: const Text('もっと詳しく'),
+              ),
             ),
           ],
         );
     }
+  }
+
+  Future<void> _openUsagePage() {
+    return Navigator.of(
+      context,
+    ).push(MaterialPageRoute<void>(builder: (_) => const UsagePage()));
   }
 }
 
