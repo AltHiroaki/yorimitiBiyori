@@ -25,7 +25,8 @@ enum _LoadStatus { loading, loaded, error }
 
 /// 提案タブ（トップ画面）。仕様書 3.1 に対応する。
 /// 現在の提案条件カードと「今日のよりみち」カードを表示し、
-/// 「スキップして次の提案」で再抽選、「提案設定 >」で提案設定画面へ遷移する。
+/// 条件カードのカテゴリチップで絞り込みを即時に切り替え、
+/// 「スキップして次の提案」で再抽選、「変更 >」で提案設定画面へ遷移する。
 /// 業務ロジック（読込・抽選・復元・履歴保存）は [SuggestionFlowService] が担う。
 class SuggestionPage extends StatefulWidget {
   const SuggestionPage({
@@ -279,6 +280,44 @@ class _SuggestionPageState extends State<SuggestionPage> {
     setState(_drawSuggestion);
   }
 
+  /// 条件カードのカテゴリチップ：選択を切り替えて即保存し、その場で再抽選する
+  /// （issue #149）。提案設定画面を開かずに絞り込みを変えられるようにする。
+  Future<void> _onToggleCategory(String categoryId) async {
+    final selectedIds = _settings.selectedCategories.toSet();
+    if (selectedIds.contains(categoryId)) {
+      // 提案設定画面と同じく、カテゴリは 1 件以上必須（issue #50）。
+      if (selectedIds.length == 1) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text('カテゴリは1つ以上選んでください')),
+        );
+        return;
+      }
+      selectedIds.remove(categoryId);
+    } else {
+      selectedIds.add(categoryId);
+    }
+
+    // マスター定義の順序に揃え、表示順と保存順を一致させる（提案設定画面と同じ扱い）。
+    // `all` にない発展カテゴリの選択は、この画面で消さずに末尾へ残す。
+    // 詳細設定は選択を外したカテゴリの分も残し、選び直したときに元の絞り込みへ戻す。
+    final coreCategoryIds = [
+      for (final category in InterestCategories.all)
+        if (selectedIds.contains(category.id)) category.id,
+    ];
+    final updatedSettings = _settings.copyWith(
+      selectedCategories: [
+        ...coreCategoryIds,
+        for (final id in selectedIds)
+          if (!coreCategoryIds.contains(id)) id,
+      ],
+    );
+    setState(() {
+      _settings = updatedSettings;
+      _drawSuggestion();
+    });
+    await _settingsRepository.saveSettings(updatedSettings);
+  }
+
   Future<void> _openSuggestionSettings() async {
     await Navigator.of(context).push(
       MaterialPageRoute<void>(
@@ -325,6 +364,7 @@ class _SuggestionPageState extends State<SuggestionPage> {
             const SizedBox(height: 16),
             _ConditionCard(
               settings: _settings,
+              onToggleCategory: _onToggleCategory,
               onOpenSettings: _openSuggestionSettings,
             ),
             const SizedBox(height: 12),
@@ -351,7 +391,7 @@ class _SuggestionPageState extends State<SuggestionPage> {
             const SectionCard(
               title: '使い方',
               description:
-                  'カテゴリと詳細設定を変えたいときは「提案設定」から調整できます。通知をタップすると、保存した条件のよりみちが表示されます。',
+                  'カテゴリは条件カードのチップをタップすると、その場で切り替わります。詳細設定は「変更」から調整できます。通知をタップすると、保存した条件のよりみちが表示されます。',
             ),
           ],
         );
@@ -359,11 +399,18 @@ class _SuggestionPageState extends State<SuggestionPage> {
   }
 }
 
-/// 現在の提案条件カード：選択カテゴリのチップ＋有効な詳細設定の要約。
+/// 現在の提案条件カード：カテゴリのチップ＋有効な詳細設定の要約。
+/// チップは全カテゴリを並べ、タップでその場で絞り込みを切り替える（issue #149）。
+/// 選択肢の多い詳細設定は、要約の右の「変更 >」から提案設定画面で編集する。
 class _ConditionCard extends StatelessWidget {
-  const _ConditionCard({required this.settings, required this.onOpenSettings});
+  const _ConditionCard({
+    required this.settings,
+    required this.onToggleCategory,
+    required this.onOpenSettings,
+  });
 
   final UserSettings settings;
+  final ValueChanged<String> onToggleCategory;
   final VoidCallback onOpenSettings;
 
   /// 有効な詳細設定の選択値を「／」で連結した要約（例：ジャズ／作業向け）。
@@ -381,61 +428,96 @@ class _ConditionCard extends StatelessWidget {
     return selectedValues.join('／');
   }
 
-  @override
-  Widget build(BuildContext context) {
-    final selectedCategories = <InterestCategory>[
+  /// チップとして並べるカテゴリ。MVP のコアカテゴリに加え、`all` に含まれない
+  /// 選択中カテゴリ（発展カテゴリや旧データ）も末尾に足し、外せなくならないようにする。
+  List<InterestCategory> _buildChipCategories() {
+    return [
+      ...InterestCategories.all,
       for (final categoryId in settings.selectedCategories)
         if (InterestCategories.findById(categoryId)
-            case final InterestCategory category)
+            case final InterestCategory category
+            when !InterestCategories.all.any(
+              (coreCategory) => coreCategory.id == categoryId,
+            ))
           category,
     ];
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final selectedCategoryIds = settings.selectedCategories.toSet();
+    final chipCategories = _buildChipCategories();
     final detailSummary = _buildDetailSummary();
 
     return NeumorphicSurface(
       child: Padding(
-        padding: const EdgeInsets.fromLTRB(20, 8, 8, 20),
+        padding: const EdgeInsets.fromLTRB(20, 16, 8, 12),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                // 文字サイズ拡大時に折り返せるよう、タイトル側を可変幅にする。
-                const Expanded(
-                  child: Text(
-                    '現在の提案条件',
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            Padding(
+              padding: const EdgeInsets.only(right: 12),
+              child: Row(
+                children: [
+                  // 文字サイズ拡大時に折り返せるよう、タイトル側を可変幅にする。
+                  const Expanded(
+                    child: Text(
+                      '現在の提案条件',
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
                   ),
-                ),
-                TextButton(
-                  onPressed: onOpenSettings,
-                  child: const Text('提案設定 >'),
-                ),
-              ],
+                  if (selectedCategoryIds.isNotEmpty)
+                    Text(
+                      '${selectedCategoryIds.length}つ選択中',
+                      style: const TextStyle(fontSize: 13),
+                    ),
+                ],
+              ),
             ),
-            if (selectedCategories.isEmpty)
-              const Text('カテゴリが選ばれていません')
-            else ...[
-              Wrap(
+            const SizedBox(height: 8),
+            Padding(
+              padding: const EdgeInsets.only(right: 12),
+              child: Wrap(
                 spacing: 8,
                 runSpacing: 8,
                 children: [
-                  for (final category in selectedCategories)
+                  for (final category in chipCategories)
                     NeumorphicChipFrame(
-                      child: Chip(
+                      isSelected: selectedCategoryIds.contains(category.id),
+                      child: FilterChip(
                         label: Text('${category.emoji} ${category.label}'),
+                        selected: selectedCategoryIds.contains(category.id),
+                        onSelected: (_) => onToggleCategory(category.id),
                       ),
                     ),
                 ],
               ),
-              const SizedBox(height: 8),
-              Text(
-                detailSummary.isEmpty
-                    ? '詳細設定：すべてのジャンルから'
-                    : '詳細設定：$detailSummary',
-                style: const TextStyle(fontSize: 13),
+            ),
+            if (selectedCategoryIds.isEmpty)
+              const Padding(
+                padding: EdgeInsets.only(top: 12, right: 12),
+                child: Text('カテゴリが選ばれていません'),
               ),
-            ],
+            Row(
+              children: [
+                // 詳細設定の値は長くなりうるため、要約側を可変幅にして折り返す。
+                Expanded(
+                  child: Text(
+                    detailSummary.isEmpty
+                        ? '詳細設定：すべてのジャンルから'
+                        : '詳細設定：$detailSummary',
+                    style: const TextStyle(fontSize: 13),
+                  ),
+                ),
+                TextButton(
+                  onPressed: onOpenSettings,
+                  child: const Text('変更 >'),
+                ),
+              ],
+            ),
           ],
         ),
       ),
