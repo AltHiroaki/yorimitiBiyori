@@ -6,6 +6,11 @@ on:
     branches:
       - main
 
+# 公開リポジトリでは fork からの PR でも workflow が動くため、
+# GITHUB_TOKEN の権限を読み取りだけに明示的に絞る。
+permissions:
+  contents: read
+
 jobs:
   check:
     name: analyze & test
