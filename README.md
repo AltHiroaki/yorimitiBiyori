@@ -363,9 +363,9 @@ MVP 完成後、余裕があれば以下を検討します。
 アプリデザイン総合演習 2026
 グループ L1 班
 
-- 信寛昭
-- 久保孝輔
-- 山本竜聖
+- [@AltHiroaki](https://github.com/AltHiroaki)
+- [@s2410099-Kubo-collab](https://github.com/s2410099-Kubo-collab)
+- [@danborubox](https://github.com/danborubox)
 
 ---
 
