@@ -10,7 +10,7 @@
 仕様の正本は以下の 2 つです。リポジトリ内のドキュメントと食い違う場合は、こちらを優先します。
 
 - 企画書（`docs/spec/企画書.md` および提出版 PDF）— コンセプト、データ設計、発展方針
-- `よりみち日和 UIプロトタイプ/` — 画面構成、UI 文言、操作フロー（Figma から書き出した React プロトタイプ。**参照専用**であり、Flutter 実装に React コードを持ち込まないこと）
+- UI プロトタイプ — 画面構成、UI 文言、操作フロー（Figma から書き出した React プロトタイプ。**参照専用**であり、Flutter 実装に React コードを持ち込まないこと）。main には置かず、[`archive-reference-materials`](https://github.com/AltHiroaki/yorimitiBiyori/tree/archive-reference-materials) ブランチの `よりみち日和 UIプロトタイプ/` に退避してある
 
 実装に使うドキュメント：
 

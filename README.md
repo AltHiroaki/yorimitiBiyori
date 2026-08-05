@@ -19,7 +19,7 @@ MVP では **Android 版のみ**を実装・検証対象にします。iOS は M
 | 正本 | 担当する内容 |
 |---|---|
 | 企画書 ver5（[docs/spec/企画書.md](./docs/spec/企画書.md)・提出版 PDF） | コンセプト、二段階方式（カテゴリ → カテゴリ別詳細設定）、データ設計、処理フロー、発展方針 |
-| [よりみち日和 UIプロトタイプ/](./よりみち日和%20UIプロトタイプ/) | 画面構成、UI 文言、操作フロー（Figma 書き出しの React プロトタイプ。**参照専用**。提案設定画面は旧モデルのため要更新） |
+| UI プロトタイプ（[`archive-reference-materials`](https://github.com/AltHiroaki/yorimitiBiyori/tree/archive-reference-materials) ブランチ） | 画面構成、UI 文言、操作フロー（Figma 書き出しの React プロトタイプ。**参照専用**。提案設定画面は旧モデルのため要更新） |
 
 実装の正本は [仕様書](./docs/spec/仕様書.md)、実装者向けの要約は [仕様要約](./docs/spec/仕様要約.md) にまとめています。
 
@@ -147,7 +147,7 @@ AI API キーを Flutter アプリに直接入れないため、Claude API は C
 
 ## 画面構成
 
-UI プロトタイプ（`よりみち日和 UIプロトタイプ/`）の 3 タブ構成に従います。**ホーム画面はありません**（提案タブがトップ画面）。
+UI プロトタイプ（`archive-reference-materials` ブランチ）の 3 タブ構成に従います。**ホーム画面はありません**（提案タブがトップ画面）。
 
 | 画面 | 役割 |
 |---|---|
@@ -218,10 +218,7 @@ yorimichiBiyori/
 │     ├─ iOS導入方針と確認環境の懸念.md
 │     ├─ 製品概要と課題.md
 │     └─ デザイン参考サイト集.md
-├─ よりみち日和 UIプロトタイプ/   ← Figma 書き出しの React プロトタイプ（参照専用）
 ├─ android/                      ← flutter create --platforms=android . で生成
-├─ archive/
-│  └─ old-web-version/
 └─ .github/
    ├─ ISSUE_TEMPLATE/
    └─ pull_request_template.md
@@ -241,9 +238,20 @@ flutter create --platforms=android .
 flutter create --platforms=ios .
 ```
 
-旧Web版の `src/` やGoogle Calendar前提の古い要件書は、現在のFlutter版と混ざらないように `archive/old-web-version/` へ移動しています。通常の開発では、リポジトリ直下の `lib/`、`assets/`、`docs/` を見ます。
+通常の開発では、リポジトリ直下の `lib/`、`assets/`、`docs/` を見ます。
 
-`よりみち日和 UIプロトタイプ/` は Figma から書き出した React プロジェクトで、画面デザイン・文言・操作フローの参照専用です。React のコードや依存を Flutter 実装に持ち込まないでください。
+製品のビルドに使わない参照資料は main に置かず、[`archive-reference-materials`](https://github.com/AltHiroaki/yorimitiBiyori/tree/archive-reference-materials) ブランチへ退避しています。
+
+| 退避したもの | 内容 |
+|---|---|
+| `よりみち日和 UIプロトタイプ/` | Figma から書き出した React プロジェクト。画面デザイン・文言・操作フローの参照専用。React のコードや依存を Flutter 実装に持ち込まないでください |
+| `archive/old-web-version/` | 旧 Web 版の `src/` と、Google Calendar 前提の古い要件書 |
+
+参照するときは以下で取り出せます。
+
+```bash
+git switch archive-reference-materials
+```
 
 ---
 
