@@ -20,7 +20,7 @@ For general coding quality rules, also follow `docs/rules/SKILL.md`.
 The specification source of truth is:
 
 1. The project proposal (企画書 ver6, `docs/spec/企画書.md` and the submitted PDF) — concept, **two-stage model (category → per-category detail settings)**, data catalog design, processing flow, future phases. In ver6 the MVP core categories are 音楽/料理/読書/映画 (4), and each MVP detail setting is a single "genre" group. The ver6 PDF lists a `difficulty` catalog field, but this project does not use it (difficulty is not implemented).
-2. The UI prototype in `よりみち日和 UIプロトタイプ/` — screen structure, UI copy, interaction flow. It is a Figma-exported React project and is **reference only**. Never copy React code or dependencies into the Flutter app.
+2. The UI prototype — screen structure, UI copy, interaction flow. It is a Figma-exported React project and is **reference only**. Never copy React code or dependencies into the Flutter app. It is not on `main`; it lives in `よりみち日和 UIプロトタイプ/` on the [`archive-reference-materials`](https://github.com/AltHiroaki/yorimitiBiyori/tree/archive-reference-materials) branch.
 
 When they conflict, follow the proposal for the suggestion-conditions model (two-stage), data, and logic, and the prototype for other screens and UI text. The implementation spec is `docs/spec/仕様書.md` and the summary is `docs/spec/仕様要約.md`.
 
@@ -126,7 +126,7 @@ Use the Flutter stack:
 - flutter_local_notifications for the MVP notification flow
 - flutter_test for tests
 
-Do not use the old React / Vite / Tailwind / React Router stack for new implementation work. The `よりみち日和 UIプロトタイプ/` folder is a design reference, not an implementation target.
+Do not use the old React / Vite / Tailwind / React Router stack for new implementation work. The UI prototype (on the `archive-reference-materials` branch) is a design reference, not an implementation target.
 
 Do not add new external packages unless explicitly requested or clearly necessary.
 

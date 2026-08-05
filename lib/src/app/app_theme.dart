@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'yorimichi_neumorphic_theme.dart';
 
-/// UI プロトタイプのカラーパレット（`よりみち日和 UIプロトタイプ/` の定数 C に対応）。
+/// UI プロトタイプのカラーパレット（`archive-reference-materials` ブランチの
+/// `よりみち日和 UIプロトタイプ/` の定数 C に対応）。
 const Color _primarySeedColor = Color(0xFF3F6F44);
 const Color _pageBackgroundColor = Color(0xFFF8FBF3);
 const Color _surfaceVariantColor = Color(0xFFEEF5E8);
