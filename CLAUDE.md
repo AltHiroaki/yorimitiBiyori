@@ -16,8 +16,8 @@
 
 - [docs/spec/仕様書.md](./docs/spec/仕様書.md) — 詳細仕様（画面・データ・ロジック・テスト）。実装時はまずここ
 - [docs/spec/仕様要約.md](./docs/spec/仕様要約.md) — 仕様のクイックリファレンス
-- [docs/planning/実装計画.md](./docs/planning/実装計画.md) — マイルストーンとタスク・完了条件
-- [docs/planning/これからやること.md](./docs/planning/これからやること.md) — 直近の作業順
+
+実装計画・工程計画・各機能の検討記録は main には置かず、[`archive-reference-materials`](https://github.com/AltHiroaki/yorimitiBiyori/tree/archive-reference-materials) ブランチの `docs/planning/` にあります。
 
 ## 基本コマンド
 
